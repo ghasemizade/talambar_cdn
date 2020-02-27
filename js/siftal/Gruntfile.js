@@ -20,6 +20,8 @@ var myModuleFiles =
 	'src/libs/dataResponse/dataResponse.js',
 	'src/libs/sortable/Sortable.js',
 	'src/libs/sortable/SortableRunner.js',
+	'src/libs/lazyload/lazyload.min.js',
+	'src/libs/lazyload/lazyloadRunner.js',
 
 	'src/libs/counter/jquery.counterup.js',
 	'src/libs/counter/counterRunner.js',
