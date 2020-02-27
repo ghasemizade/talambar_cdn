@@ -7,6 +7,7 @@ function pushStateSiftal(_direct)
   runInputFileFunc();
   responsiveSidebar();
   // setLanguageURL(_direct);
+  runLazyLoad();
   runSortable();
   // run counter up on each page we have counter
   runCounterUp();
