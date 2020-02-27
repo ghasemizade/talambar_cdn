@@ -354,7 +354,7 @@ function searchForProduct(_key, _value)
 {
   // if is not barcode and not finde02902749
   // d, search and if find, add or update
-  var pSearchURL = "/a/products/api?json=true&" + _key + "=" + _value;
+  var pSearchURL = '/' + getStoreCode() + "/a/products/api?json=true&" + _key + "=" + _value;
   $.get(pSearchURL, function(_productData)
   {
     var myMsg;
@@ -376,6 +376,14 @@ function searchForProduct(_key, _value)
   });
 }
 
+function getStoreCode()
+{
+  if($('meta[name="store-code"]').attr("content"))
+  {
+    return $('meta[name="store-code"]').attr("content");
+  }
+    return '';
+}
 
 
 /**
@@ -814,7 +822,7 @@ function prevFactor(_type, _all)
   {
     _type = 'sale';
   }
-  var lastFactorUrl = '/a/' + _type + '/prev';
+  var lastFactorUrl = '/' + getStoreCode() + '/a/' + _type + '/prev';
   // add id if exist
   if(check_factor() && urlParam('id'))
   {
