@@ -211,10 +211,10 @@ function event_corridor(_e, _self, _key)
         var myPage     = $('body').attr('data-page');
         var factorUrl  = '/' + getStoreCode() + '/a/sale?from='+ myPage;
         var factorType = $('body').attr('data-page');
-        if($('html').attr('lang') !== undefined)
-        {
-          factorUrl = $('html').attr('lang')+ factorUrl;
-        }
+        // if($('html').attr('lang') !== undefined)
+        // {
+        //   factorUrl = $('html').attr('lang')+ factorUrl;
+        // }
         // navigate to add new factor page
         // Navigate({ url: factorUrl });
         if(factorType === 'sale' && check_factor())
