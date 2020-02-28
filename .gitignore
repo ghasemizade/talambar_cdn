@@ -9,6 +9,7 @@ desktop.ini
 *.me.*
 /install.jibres
 /tmp/*
+index.html
 
 node_modules
 .sass-cache
