@@ -86,7 +86,7 @@ function select22FormatDropDownCoutry(_repo)
 
 function select22FillNext(_val, _next, _default)
 {
-  var apiURL = $('meta[name="jibres:api"]').attr('content') + 'v1/location/';
+  var apiURL = $('meta[name="jibres:api"]').attr('content') + 'v2/location/';
   var _el = $(_next);
   if(_next === '#city')
   {
