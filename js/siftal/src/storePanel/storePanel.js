@@ -496,9 +496,9 @@ function beep(_msg, duration, frequency, volume, type, callback)
     logy('close some tabs!');
   }
 
-  _msg =  '/static/sounds/'+ _msg +'.mp4';
+  var myAlert =  $('meta[name="jibres:cdn"]').attr('content') + 'sounds/'+ _msg + '.mp4';
 
-  var audio = new Audio(_msg);
+  var audio = new Audio(myAlert);
   audio.play();
   // try to create sys beep
   sysBeep();
