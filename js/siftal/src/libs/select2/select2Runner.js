@@ -49,8 +49,6 @@ function selectRunner()
 
 $('.select22').on("select22:selecting", function(e, a) {
    // what you would like to happen
-    console.log(e);
-    console.log(a);
 });
 $(".select22").on("select22:select", function (e) {
     console.log(e.params.data.id);
@@ -74,7 +72,7 @@ function select22FormatDropDownCoutry(_repo)
   {
     $container = $(
       "<div class='f align-center'>" +
-        "<div class='c1 pRa10'><img src='" + $('meta[name="jibres:site"]').attr('content') + "/static/img/flags/png100px/" + _repo.id.toLowerCase() + ".png' alt='"+ _repo.text + "' /></div>" +
+        "<div class='c1 pRa10'><img src='" + $('meta[name="jibres:cdn"]').attr('content') + "img/flags/png100px/" + _repo.id.toLowerCase() + ".png' alt='"+ _repo.text + "' /></div>" +
         "<div class='c'>" + _repo.text + "</div>" +
       "</div>"
     );
@@ -96,10 +94,8 @@ function select22FillNext(_val, _next, _default)
   {
     apiURL += 'province?country=' + _val;
   }
-
   $.ajax({
     url: apiURL,
-    dataType: 'json',
     success: function(returnedData)
     {
       if(returnedData && returnedData.result && returnedData.result.length)
