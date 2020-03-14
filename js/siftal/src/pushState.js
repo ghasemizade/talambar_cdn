@@ -93,8 +93,6 @@ $(document).ready(function()
 
   if($('body').attr('data-panel') !== undefined)
   {
-    // bind userprofile to show detail
-    showUserProfile();
     // check for new smile
     checkSmile(true);
   }

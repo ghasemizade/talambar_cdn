@@ -90,53 +90,53 @@ function deleteConfirmer(_this)
 }
 
 
-function showUserProfile()
-{
-  $(document).on('click', '[data-panel] .profileShow', function(_e)
-  {
-    var $this   = $(this);
+// function showUserProfile()
+// {
+//   $(document).on('click', '[data-panel] .profileShow', function(_e)
+//   {
+//     var $this   = $(this);
 
-    var userImg = $this.find('img');
-    // on click
-    say(
-    {
-      html: $this.attr('data-desc'),
-      footer: $this.attr('data-footer'),
-      showCloseButton: true,
-      focusConfirm: false,
-      showCancelButton: true,
-      confirmButtonText: $this.attr('data-confirmTxt'),
-      cancelButtonText: $this.attr('data-cancelTxt'),
+//     var userImg = $this.find('img');
+//     // on click
+//     say(
+//     {
+//       html: $this.attr('data-desc'),
+//       footer: $this.attr('data-footer'),
+//       showCloseButton: true,
+//       focusConfirm: false,
+//       showCancelButton: true,
+//       confirmButtonText: $this.attr('data-confirmTxt'),
+//       cancelButtonText: $this.attr('data-cancelTxt'),
 
-      imageUrl: userImg.attr('src'),
-      imageAlt: userImg.attr('alt'),
-      imageWidth: 100,
-      imageHeight: 100,
+//       imageUrl: userImg.attr('src'),
+//       imageAlt: userImg.attr('alt'),
+//       imageWidth: 100,
+//       imageHeight: 100,
 
-    }).then((myResult) =>
-    {
-      if (myResult.value)
-      {
-        // press profile btn
-        if($this.attr('data-confirmLink'))
-        {
-          Navigate({ url: $this.attr('data-confirmLink') });
-        }
-      }
-      else if (myResult.dismiss === alerty.DismissReason.cancel)
-      {
-        logoutConfirmer($this);
-      }
-    });
+//     }).then((myResult) =>
+//     {
+//       if (myResult.value)
+//       {
+//         // press profile btn
+//         if($this.attr('data-confirmLink'))
+//         {
+//           Navigate({ url: $this.attr('data-confirmLink') });
+//         }
+//       }
+//       else if (myResult.dismiss === alerty.DismissReason.cancel)
+//       {
+//         logoutConfirmer($this);
+//       }
+//     });
 
-  });
+//   });
 
-  $(document).on('click', '[data-panel] .alerty2-footer a', function(_e)
-  {
-    say.close();
-  });
+//   $(document).on('click', '[data-panel] .alerty2-footer a', function(_e)
+//   {
+//     say.close();
+//   });
 
-}
+// }
 
 
 
