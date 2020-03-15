@@ -41,13 +41,13 @@ function responsiveSidebar()
   $('.toggleClean').off('click');
   $('.toggleClean').on('click', function()
   {
-    if($('body').attr('data-clean') === undefined)
+    if($('body').attr('data-panel') === '')
     {
-      $("body").attr('data-clean', '');
+      $("body").attr('data-panel', 'clean');
     }
     else
     {
-      $("body").attr('data-clean', null);
+      $("body").attr('data-panel', '');
       $("body").attr('data-sidebar', null);
     }
   });
