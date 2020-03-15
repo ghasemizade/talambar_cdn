@@ -19,7 +19,7 @@ function pushStateSiftal(_direct)
   watchScroll();
   // run form tools
   formToolsRunner();
-  initTagDetector();
+  // initTagDetector();
   bindUploader();
   dropdownRunner();
   // run select22

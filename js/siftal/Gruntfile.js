@@ -18,8 +18,8 @@ var myModuleFiles =
 	// 'src/libs/cropper/cropper.js',
 	// 'src/libs/cropper/cropperRunner.js',
 	'src/libs/dataResponse/dataResponse.js',
-	'src/libs/sortable/Sortable.js',
-	'src/libs/sortable/SortableRunner.js',
+	// 'src/libs/sortable/Sortable.js',
+	// 'src/libs/sortable/SortableRunner.js',
 	'src/libs/lazyload/lazyload.min.js',
 	'src/libs/lazyload/lazyloadRunner.js',
 
@@ -29,7 +29,7 @@ var myModuleFiles =
 	'src/libs/notif/notif.js',
 	'src/libs/codeReader/codeReader.js',
 	'src/libs/cursor/cursor.js',
-	'src/libs/tagDetector/tagDetector.js',
+	// 'src/libs/tagDetector/tagDetector.js',
 	'src/libs/uploader/uploader.min.js',
 	'src/libs/uploader/uploaderRunner.js',
 	'src/libs/shortkey/shortkey.js',
@@ -86,7 +86,7 @@ var myModuleFiles =
 	'src/utility/noscriptRemover.js',
 	'src/utility/insideIframe.js',
 
-	'src/utility/clock.js',
+	// 'src/utility/clock.js',
 	'src/utility/input-files.js',
 	'src/utility/language.js',
 	'src/utility/responsive.js',
