@@ -33,6 +33,8 @@
 [dir="rtl"] [data-panel][data-clean] #sidebar{right:-250px;left:initial;}
 [data-panel][data-clean] #sidebar figure{margin:2em 0;}
 [data-panel][data-clean] #pageHeader .sidenavHandler{-webkit-box-flex: 0;-webkit-flex: 0 0 auto;-ms-flex: 0 0 auto;-moz-box-flex: 0;flex: 0 0 auto;max-width: initial;display: flex !important;}
+[data-panel][data-clean] #pageHeader{margin:0!important;}
+[data-panel][data-clean] #pageContent{margin:0!important;}
 
 //----------------------------------- slideout mode
 // sidebar
@@ -45,9 +47,6 @@
 // cloner class
 [data-panel] #pageHeader.cloner{position:fixed;z-index:8;top:-100%;width:100%;width:calc( 100% - 250px); -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out; transition: all 200ms cubic-bezier(.694, .0482, .335, 1);transform: translateX(0);}
 [data-panel] #pageHeader.cloner[data-cloner-trigger]{top:0;}
-
-[data-panel][data-clean] #pageHeader.cloner{right:0;left:0;width:100%;}
-
 
 
 
