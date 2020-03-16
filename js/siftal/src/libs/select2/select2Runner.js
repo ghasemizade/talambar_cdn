@@ -16,7 +16,7 @@ function selectRunner()
   $('.select22:not([data-model])').select22({minimumResultsForSearch: 6});
   $('.select22[data-model="country"]').select22({ templateResult2: select22FormatDropDownCoutry, templateSelection: select22FormatDropDownCoutry });
   $('.select22[data-model="tag"]').select22({ tags: true, tokenSeparators: [','] });
-  $('.select22[data-model="html"]').select22({ templateResult: select22FormatDropDownHtml, templateSelection: select22FormatDropDownHtml, delay: 200, minimumInputLength: 2, maximumInputLength: 10, maximumSelectionSize: 1, multiple: true });
+  $('.select22[data-model="html"]').select22({ templateResult: select22FormatDropDownHtml, templateSelection: select22FormatDropDownHtml, minimumInputLength: 2, maximumInputLength: 10, maximumSelectionSize: 1 });
 
 
 
