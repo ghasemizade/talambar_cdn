@@ -2049,8 +2049,6 @@ S2.define('select22/selection/search',[
     this.$selection.on('keydown', '.select22-search--inline', function (evt) {
      switch(evt.which)
      {
-        case 8:
-        case 13:
         case 46:
         case 32:
         case 38:

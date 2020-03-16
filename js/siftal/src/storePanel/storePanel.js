@@ -211,9 +211,7 @@ function bindBtnOnFactor()
       return null;
     }
 
-
-    // $('#productSearch').val('');
-    productBarcodeFinded(_barcode)
+    productBarcodeFinded(_barcode);
     // set focus to productSearch field
     $('#searchInProducts input[type="search"]').val('').trigger("focus");
     $('#searchInProducts #productSearch').select22('close');
