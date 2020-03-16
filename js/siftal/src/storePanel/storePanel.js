@@ -524,7 +524,7 @@ function updateRecord_ProductList(_row, _key, _value)
   {
     case 'count':
       var currentCounter = _row.find('.count');
-      console.log(_value);
+      // console.log(_value);
       if(!_value)
       {
         _value = 1;
