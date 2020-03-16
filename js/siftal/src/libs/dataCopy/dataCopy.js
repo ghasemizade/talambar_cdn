@@ -36,6 +36,7 @@ function dataCopy()
         // copy to clipboard
         document.execCommand('copy');
         targetEl.blur();
+        notif('info', 'Copied!');
 
         // copied animation
         $this.addClass('copied');
