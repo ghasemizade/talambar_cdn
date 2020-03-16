@@ -107,14 +107,14 @@ function event_corridor(_e, _self, _key)
     case '46':              // delete
       if(check_factor())
       {
-        clearDropdown($('.dropdown.barCode'));
+        // clearDropdown($('.dropdown.barCode'));
 
         var selectedRowEl = getSelectedRow(true);
         if(selectedRowEl)
         {
           // var nextSelectedRow = selectedRowEl.prev();
           selectedRowEl.remove();
-          $('.dropdown.barCode input.search').val('').trigger("focus");
+          $('#searchInProducts input[type="search"]').val('').trigger("focus");
           // navigationFactorAddSetSelected(nextSelectedRow, true);
           calcFooterValues();
           _e.preventDefault();
@@ -188,13 +188,13 @@ function event_corridor(_e, _self, _key)
     case '191':             // divider
       if(check_factor())
       {
-        if($(":focus").parents('.dropdown').find('#productSearch'))
+        if($(":focus").parents('#searchInProducts'))
         {
-          $('.dropdown.barCode input.search').trigger("select");
+          $('#searchInProducts input[type="search"]').trigger("select");
         }
         else
         {
-          $('.dropdown.barCode input.search').trigger("select");
+          $('#searchInProducts input[type="search"]').trigger("select");
           _e.preventDefault();
         }
       }
