@@ -206,14 +206,17 @@ function bindBtnOnFactor()
 {
   $('body').on('barcode:detect', function(_e, _barcode)
   {
-    if($('#productSearch').length < 1)
+    if($('#searchInProducts').length < 1)
     {
       return null;
     }
-    $('#productSearch').val('');
+
+
+    // $('#productSearch').val('');
     productBarcodeFinded(_barcode)
     // set focus to productSearch field
-    $('#productSearch').parent().find('input.search').val('').trigger("focus");
+    $('#searchInProducts #productSearch').select22('close');
+    $('#searchInProducts input[type="search"]').val('').trigger("focus");
   });
 
   $(document).on('focus', '#factorAdd table input', function()
@@ -231,7 +234,7 @@ function bindBtnOnFactor()
   });
 
 
-  $(document).on('focus', '#productSearch', function()
+  $(document).on('focus', '#searchInProducts #select22-search__field', function()
   {
     calcFooterValues();
   });
