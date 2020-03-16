@@ -154,13 +154,13 @@ function event_corridor(_e, _self, _key)
     case '187shift':        // plus +
       if(check_factor())
       {
-        if($(":focus").parents('.dropdown').find('#productSearch'))
+        if($(":focus").parents('#searchInProducts'))
         {
-          $('.dropdown.barCode input.search').trigger("select");
+          $('#searchInProducts input[type="search"]').trigger("select");
         }
         else
         {
-          $('.dropdown.barCode input.search').trigger("select");
+          $('#searchInProducts input[type="search"]').trigger("select");
           _e.preventDefault();
         }
       }
