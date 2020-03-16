@@ -215,8 +215,8 @@ function bindBtnOnFactor()
     // $('#productSearch').val('');
     productBarcodeFinded(_barcode)
     // set focus to productSearch field
-    $('#searchInProducts #productSearch').select22('close');
     $('#searchInProducts input[type="search"]').val('').trigger("focus");
+    $('#searchInProducts #productSearch').select22('close');
   });
 
   $(document).on('focus', '#factorAdd table input', function()
@@ -281,7 +281,10 @@ function bindBtnOnFactor()
   {
     if(_selectedProduct)
     {
-      addFindedProduct(_selectedProduct);
+      if(_selectedProduct.price)
+      {
+        addFindedProduct(_selectedProduct);
+      }
     }
     else
     {
