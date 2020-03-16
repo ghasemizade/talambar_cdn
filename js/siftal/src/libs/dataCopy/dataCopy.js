@@ -38,9 +38,9 @@ function dataCopy()
         targetEl.blur();
         notif('info', 'Copied!');
 
-        // copied animation
-        $this.addClass('copied');
-        setTimeout(function() { $this.removeClass('copied'); }, 300);
+        // // copied animation
+        // $this.addClass('copied');
+        // setTimeout(function() { $this.removeClass('copied'); }, 300);
       }
       catch (err)
       {

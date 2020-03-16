@@ -15,8 +15,9 @@ function selectRunner()
   // init simple select22
   $('.select22:not([data-model])').select22({minimumResultsForSearch: 6});
   $('.select22[data-model="country"]').select22({ templateResult2: select22FormatDropDownCoutry, templateSelection: select22FormatDropDownCoutry });
-  $('.select22[data-model="html"]').select22({ templateResult: select22FormatDropDownHtml, templateSelection: select22FormatDropDownHtmlSelection, delay: 200, minimumInputLength: 1 });
   $('.select22[data-model="tag"]').select22({ tags: true, tokenSeparators: [','] });
+  $('.select22[data-model="html"]').select22({ templateResult: select22FormatDropDownHtml, templateSelection: select22FormatDropDownHtml, delay: 200, minimumInputLength: 1, maximumSelectionSize: 1, multiple: true, placeholder: "Search for a movie" });
+
 
 
   $(document).on('focus', '.select22.select22-container', function (e)
@@ -47,11 +48,36 @@ function selectRunner()
     }
   });
 
-$('.select22').on("select22:selecting", function(e, a) {
-   // what you would like to happen
-});
-$(".select22").on("select22:select", function (e) {
-    // console.log(e.params.data.id);
+
+// $('.select22').on("select22:selecting", function(e, a) {
+//    // what you would like to happen
+// });
+// $(".select22").on("select22:select", function (e) {
+//     // console.log(e.params.data.id);
+// });
+// $(".select22").on("select22:open", function() {
+//   // var container = $('.select22-container').last();
+//   // console.log(container);
+//   /*Add some css-class to container or reposition it*/
+// });
+
+
+$(".select22").on("select22:selecting", function(_e)
+{
+  if(_e.params && _e.params.args && _e.params.args.data)
+  {
+    var selectedData = _e.params.args.data;
+    if(selectedData.datalist)
+    {
+      $("body").trigger("dropdown:selected:datalist", selectedData.datalist);
+
+      if($(this).attr('data-selection') === 'clean')
+      {
+        _e.preventDefault();
+        $(this).select22('close');
+      }
+    }
+  }
 });
 
   // fill default value
@@ -74,25 +100,6 @@ function select22FormatDropDownHtml(_repo, _el)
   }
   return $container;
 }
-
-
-function select22FormatDropDownHtmlSelection(_repo, _el)
-{
-  // trigger event for select datalist
-  if(_repo && _repo.datalist)
-  {
-    $("body").trigger("dropdown:selected:datalist", _repo.datalist);
-  }
-
-  if($(_el).attr('data-finish') === 'clean')
-  {
-    // clean choosed element
-
-  }
-
-  return select22FormatDropDownHtml(_repo, _el);
-}
-
 
 
 // fill country elements
