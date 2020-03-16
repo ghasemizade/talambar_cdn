@@ -2047,8 +2047,10 @@ S2.define('select22/selection/search',[
     });
 
     this.$selection.on('keydown', '.select22-search--inline', function (evt) {
-      // evt.stopPropagation();
-
+      if(evt.which === 38 || evt.which === 40)
+      {
+        evt.stopPropagation();
+      }
       self.trigger('keypress', evt);
 
       self._keyUpPrevented = evt.isDefaultPrevented();

@@ -57,7 +57,7 @@ var myModuleFiles =
 	'src/libs/slick/slickRunner.js',
 
 	// select2
-	'src/libs/select2/select2.full.min.js',
+	'src/libs/select2/select2.full.js',
 	'src/libs/select2/fa.js',
 	'src/libs/select2/select2Runner.js',
 
