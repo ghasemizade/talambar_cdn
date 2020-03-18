@@ -14,6 +14,11 @@ function escPressed()
 		$myFocus.trigger("blur");
 		return true;
 	}
+	if($('form').length > 0)
+	{
+		// if we have form disable esc nav
+		return true;
+	}
 
 	// save press counter in sessionStorage
 	var pressCounter = null;
