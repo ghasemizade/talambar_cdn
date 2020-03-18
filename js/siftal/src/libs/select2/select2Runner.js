@@ -20,6 +20,7 @@ function selectRunner()
 
 
 
+  $(document).off('focus', '.select22.select22-container', function (e){});
   $(document).on('focus', '.select22.select22-container', function (e)
   {
     // only open on original attempt - close focus event should not fire open
@@ -29,22 +30,13 @@ function selectRunner()
     }
   });
 
+  $(document).off('change', '.select22', function (_e){});
   $(document).on('change', '.select22', function (_e)
   {
     var nextEl = $(this).attr('data-next');
     if(nextEl)
     {
       select22FillNext($(this).val(), nextEl);
-    }
-    // open option as link
-    if($(this).attr('data-link') !== undefined)
-    {
-      var selectedVal = $(this).val();
-      // we are link inside value, so open link
-      if(selectedVal.indexOf('http') === 0)
-      {
-        Navigate({ url: selectedVal });
-      }
     }
   });
 
@@ -62,6 +54,7 @@ function selectRunner()
 // });
 
 
+$(".select22").off("select22:selecting", function(_e){});
 $(".select22").on("select22:selecting", function(_e)
 {
   if(_e.params && _e.params.args && _e.params.args.data)
@@ -75,6 +68,21 @@ $(".select22").on("select22:selecting", function(_e)
       {
         _e.preventDefault();
         $(this).select22('close');
+      }
+    }
+
+    // open option as link
+    if($(this).attr('data-link') !== undefined)
+    {
+      // var selectedVal = $(this).val();
+      // we are link inside value, so open link
+      if(selectedData && selectedData.id)
+      {
+        var myLink = selectedData.id;
+        if(myLink.indexOf('http') === 0)
+        {
+          Navigate({ url: myLink });
+        }
       }
     }
   }
