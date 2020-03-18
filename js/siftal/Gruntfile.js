@@ -61,13 +61,6 @@ var myModuleFiles =
 	'src/libs/select2/fa.js',
 	'src/libs/select2/select2Runner.js',
 
-	// semantic
-	'src/libs/semantic-ui/api/api.min.js',
-	'src/libs/semantic-ui/transition/transition.min.js',
-	'src/libs/semantic-ui/dropdown/dropdown.min.js',
-	'src/libs/semantic-ui/dropdown/dropdownRunner.js',
-
-
 
 	// tools
 	'src/tools/navigate.js',

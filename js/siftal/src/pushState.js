@@ -21,7 +21,6 @@ function pushStateSiftal(_direct)
   formToolsRunner();
   // initTagDetector();
   bindUploader();
-  dropdownRunner();
   // run select22
   selectRunner();
   // run numeral fn
