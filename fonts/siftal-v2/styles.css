@@ -818,3 +818,18 @@
 .sf-rain-1:before {
   content: "\e279";
 }
+.sf-angle-down:before {
+  content: "\61";
+}
+.sf-angle-left:before {
+  content: "\62";
+}
+.sf-angle-right:before {
+  content: "\63";
+}
+.sf-angle-up:before {
+  content: "\64";
+}
+.sf-check:before {
+  content: "\6b";
+}
