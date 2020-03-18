@@ -266,7 +266,9 @@
           {
             if(_result.responseJSON)
             {
-              var notifResult = notifGenerator(_result.responseJSON);
+              // new way to show result
+              _super.results = _result.responseJSON;
+              var notifResult = $.fn.ajaxify.showResults(_result.responseJSON, $this, _super);
 
               if(notifResult === false)
               {
@@ -364,7 +366,6 @@
     $form.trigger('ajaxify:render:start', data, $form, _super);
     // try to show notif
     var notifResult = notifGenerator(data, $form);
-
     $form.trigger('ajaxify:render:done', data, $form, _super);
 
     if (!notifResult.error && $form.attr('data-clear') !== undefined)
@@ -391,8 +392,9 @@
     }
 
     $form.trigger('ajaxify:render:focus', data, $form, _super);
-
     // $form.trigger('ajaxify:notify', data, $form, _super);
+
+    return notifResult;
   };
 })(jQuery);
 
