@@ -13,5 +13,6 @@ img.banner{
   margin: 1em auto 0;
 }
 .searchBox .select22{
-	min-width: 100px;
+	min-width: 140px;
 }
+.searchBox [data-kerkere=".filterBox"]{min-width: 80px}
