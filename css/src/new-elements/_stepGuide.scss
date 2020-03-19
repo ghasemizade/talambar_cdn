@@ -24,22 +24,23 @@
 	text-align: center;
 	margin:0 auto;
 	border-radius: 50%;
-	border: 3px solid #ecf2f7;
+	border: 3px solid #e0e0e0;
 	background-color: #fff;
 	color: #fff;
-	transition:0.3s;
+	transition: all .2s ease-in-out;
 	z-index: 2;
 }
+// reaction
 .stepGuide .item:hover::after{
-	background-color: rgba(0,0,0,0.05);
-	border-color: #fff;
+	border-color: #bcaaa4;
+	transform: scale(1.1);
 }
 .stepGuide .item:focus::after{
-	background-color: rgba(0,0,0,0.1);
-	border-color: #ddd;
+	border-color: #a1887f;
+	transform: scale(1.2);
 }
 .stepGuide .item:active::after{
-	background-color: rgba(0,0,0,0.2);
+	border-color: #8d6e63;
 }
 .stepGuide .item::before{
 	content: "";
@@ -48,7 +49,7 @@
 	right: 0;
 	left: 0;
 	height: 5px;
-	background-color: #ecf2f7;
+	background-color: #e0e0e0;
 	transition:0.3s;
 	z-index: 1;
 }

@@ -17,8 +17,6 @@
   font-weight: 900;
   background-color: rgba(0,0,0,0.05);
 }
-
-// items
 .setupGuide .item{
 	display: block;
 	padding: 7rem 0.5rem 1rem;
@@ -41,8 +39,7 @@
 	margin:0 auto;
 	border-radius: 50%;
 	border: 3px solid #eee;
-	transition:0.3s;
-	z-index: 2;
+	transition: all .2s ease-in-out;
 }
 .setupGuide .item.complete::after{
 	content: "\6b";
@@ -53,10 +50,12 @@
 .setupGuide .item:hover::after{
 	background-color: rgba(0,0,0,0.05);
 	border-color: #fff;
+	transform: scale(1.1);
 }
 .setupGuide .item:focus::after{
 	background-color: rgba(0,0,0,0.1);
 	border-color: #ddd;
+	transform: scale(1.2);
 }
 .setupGuide .item:active::after{
 	background-color: rgba(0,0,0,0.2);
