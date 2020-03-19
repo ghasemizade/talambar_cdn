@@ -1,0 +1,63 @@
+.setupGuide{
+	position: relative;
+	font-size: 1.4em;
+	margin-bottom: 1rem;
+	background: linear-gradient(-45deg, #ee7750, #e73c7e, #22a6d6, #22d6ab);
+	background-size: 400% 400%;
+	animation: setupGuideGradient 20s ease infinite;
+	color: #fff;
+	text-align: center;
+	border-radius:0.3rem;
+}
+@keyframes setupGuideGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }}
+.setupGuide header{
+  font-size: 1.4em;
+  line-height: 5rem;
+  padding: 0 1em;
+  font-weight: 900;
+  background-color: rgba(0,0,0,0.05);
+}
+
+// items
+.setupGuide .item{
+	display: block;
+	padding: 7rem 0.5rem 1rem;
+	margin: 1rem;
+	line-height: 2rem;
+	min-width: 100px;
+	position: relative;
+	color: #fff;
+}
+.setupGuide .item::after{
+	content: "";
+	position: absolute;
+	top: 1rem;
+	right: 0;
+	left: 0;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	margin:0 auto;
+	border-radius: 50%;
+	border: 3px solid #eee;
+	transition:0.3s;
+	z-index: 2;
+}
+.setupGuide .item.complete::after{
+	content: "\6b";
+	font-family: "siftal" !important;
+	font-size: 20px;
+	background-color: #188a0f;
+}
+.setupGuide .item:hover::after{
+	background-color: rgba(0,0,0,0.05);
+	border-color: #fff;
+}
+.setupGuide .item:focus::after{
+	background-color: rgba(0,0,0,0.1);
+	border-color: #ddd;
+}
+.setupGuide .item:active::after{
+	background-color: rgba(0,0,0,0.2);
+}

@@ -1,63 +1,90 @@
-.setupGuide{
+.stepGuide{
 	position: relative;
-	font-size: 1.4em;
-	margin-bottom: 10px;
-	background: linear-gradient(-45deg, #ee7750, #e73c7e, #22a6d6, #22d6ab);
-	background-size: 400% 400%;
-	animation: setupGuideGradient 20s ease infinite;
-	color: #fff;
+	font-size: 1.2em;
+	margin-bottom: 2rem;
 	text-align: center;
-	border-radius:0.3rem;
 }
-@keyframes setupGuideGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }}
-.setupGuide header{
-  font-size: 1.4em;
-  line-height: 5rem;
-  padding: 0 1em;
-  font-weight: 900;
-  background-color: rgba(0,0,0,0.05);
-}
-.setupGuide section{
-  padding: 1rem;
-}
-.setupGuide section .item{
+.stepGuide .item{
 	display: block;
-	padding: 7rem 0.5rem 1rem;
+	padding: 5rem 0.5rem 1rem;
 	line-height: 2rem;
 	min-width: 100px;
 	position: relative;
-	color: #fff;
+	color: #888;
 }
-.setupGuide section .item:hover::before{
-	background-color: rgba(0,0,0,0.05);
-	border-color: #fff;
+.stepGuide .item.complete{
+	color: #275aa3;
 }
-.setupGuide section .item:focus::before{
-	background-color: rgba(0,0,0,0.1);
-	border-color: #ddd;
+.stepGuide .item.current{
+	color: #275aa3;
 }
-.setupGuide section .item:active::before{
-	background-color: rgba(0,0,0,0.2);
-}
-.setupGuide section .item::before{
+.stepGuide .item::after{
 	content: "";
 	position: absolute;
 	top: 10px;
 	right: 0;
 	left: 0;
-	width: 36px;
-	height: 36px;
-	line-height: 36px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
 	text-align: center;
 	margin:0 auto;
 	border-radius: 50%;
-	border: 3px solid #eee;
+	border: 3px solid #ecf2f7;
+	background-color: #fff;
+	color: #fff;
 	transition:0.3s;
+	z-index: 2;
 }
-// complete
-.setupGuide section .item.complete::before{
+.stepGuide .item.complete::after{
 	content: "\6b";
 	font-family: "siftal" !important;
-	font-size: 20px;
-	background-color: #188a0f;
+	font-size: 14px;
+	background-color: #275aa3;
+	border-color: #275aa3;
+}
+.stepGuide .item.current::after{
+	background-color: #fff;
+	border-color: #275aa3;
+}
+.stepGuide .item:hover::after{
+	background-color: rgba(0,0,0,0.05);
+	border-color: #fff;
+}
+.stepGuide .item:focus::after{
+	background-color: rgba(0,0,0,0.1);
+	border-color: #ddd;
+}
+.stepGuide .item:active::after{
+	background-color: rgba(0,0,0,0.2);
+}
+.stepGuide .item::before{
+	content: "";
+	position: absolute;
+	top: 23px;
+	right: 0;
+	left: 0;
+	height: 5px;
+	background-color: #ecf2f7;
+	transition:0.3s;
+	z-index: 1;
+}
+.stepGuide .item.complete::before{
+	background-color: #275aa3;
+}
+.stepGuide .item.current::before{
+	background-color: #275aa3;
+}
+html[dir="ltr"] .stepGuide .f > div:first-child .item::before{
+	left: 50%;
+}
+html[dir="ltr"] .stepGuide .f > div:last-child .item::before{
+	right: 50%;
+}
+
+html[dir="rtl"] .stepGuide .f > div:first-child .item::before{
+	right: 50%;
+}
+html[dir="rtl"] .stepGuide .f > div:last-child .item::before{
+	left: 50%;
 }
