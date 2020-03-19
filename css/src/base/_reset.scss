@@ -24,7 +24,7 @@ article, aside, figure, figcaption, nav, section, details, menu, summary {
 /* Handle box-sizing while better addressing child elements:
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 /* force a vertical scrollbar to prevent a jumpy page */
-html {
+html[dir="ltr"]{
   margin: 0;
   padding: 0;
   border: 0;
@@ -42,9 +42,30 @@ html {
   font-size:62.5%;
   line-height: 1.15;
   height:100%;
+  direction:ltr;
+}
+html[dir="rtl"]{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  font-size:62.5%;
+  line-height: 1.15;
+  height:100%;
+  direction:rtl;
 }
 
-body{
+[dir="ltr"] body{
   margin: 0;
   padding: 0;
   border: 0;
@@ -54,12 +75,23 @@ body{
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
-  direction:ltr;
   font-family:$fontNameEn;
   @include select-none();
 }
 
-[dir="rtl"] body{direction:rtl;font-family:$fontNameFa;}
+[dir="rtl"] body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  height: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  font-family:$fontNameFa;
+  @include select-none();
+}
 
 
 /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
