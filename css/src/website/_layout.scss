@@ -1,4 +1,4 @@
-body {background-color:$jibresBack;}
+body[data-in="site"] {background-color:$jibresBack;}
 
 // block iframe of jibres
 body[data-iframe]{overflow:hidden;}
