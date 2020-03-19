@@ -11,19 +11,19 @@
 @keyframes setupGuideGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; }}
 .setupGuide header{
   font-size: 1.4em;
-  line-height: 2;
+  line-height: 5rem;
   padding: 0 1em;
   font-weight: 900;
   background-color: rgba(0,0,0,0.05);
 }
-
 .setupGuide section{
   padding: 1rem;
 }
 .setupGuide section .item{
 	display: block;
-	padding: 70px 0.5rem 1rem;
-	min-width: 90px;
+	padding: 7rem 0.5rem 1rem;
+	line-height: 2rem;
+	min-width: 100px;
 	position: relative;
 	color: #fff;
 }
