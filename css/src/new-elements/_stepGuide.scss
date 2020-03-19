@@ -107,3 +107,13 @@ html[dir="rtl"] .stepGuide .f > div:last-child .item::before{
 .stepGuide .item.fail::before{
 	background-color: #ff5722;
 }
+
+// pwa
+html[data-pwa] .stepGuide .item:not(.current){
+	font-size: 0px;
+	line-height: 0;
+	min-width: inherit;
+}
+html[data-pwa] .stepGuide .item::before{
+	background-color: #ddd;
+}
