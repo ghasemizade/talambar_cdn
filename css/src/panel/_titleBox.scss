@@ -1,0 +1,51 @@
+
+.titleBox{
+  margin: 0;
+  min-height: 48px;
+  font-size: 1.2em;
+  position: relative;
+  padding: 10px 0;
+  opacity: 0.95;
+  color: #444;
+  transition:0.3s;
+  user-select:none;
+}
+.titleBox .equalPad{padding: 5px;}
+.titleBox:hover{opacity:1;}
+.titleBox h2{font-weight:400;font-size:2em;line-height:36px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:500px;max-width:50vw}
+.titleBox .actions .btn{padding-left:0.5em;padding-right:0.5em}
+
+.btn.master{font-size:1em;transition: all 150ms ease-out;background-color:#2080d0;color:#fff;background:linear-gradient(to left, #2080d0, #6b7ae0);}
+.btn.master.back{background-color:#333;background:linear-gradient(to left, #302b2b, #2268a5);padding-left:0.5em;padding-right:0.5em;min-width:90px;}
+.btn.master:hover{box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.3rem #2080d0;}
+.btn.master:focus{box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #6b7ae0;}
+.btn.master:active {box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #2080d0;transition-duration: 75ms;}
+.btn.master kbd{font-size:1em;vertical-align:middle;font-family:monospace, sans-serif}
+
+.searchBox{font-size: 1.2em;padding-bottom: 10px}
+.searchBox .input.search input{background-color:#f7f7f7}
+.searchBox .input.search input:hover{background-color:#e2e6ea}
+.searchBox .input.search input:focus{background-color:#fff}
+.searchBox .select22-selection--single{background-color:#f7f7f7;transition: 0.3s;}
+.searchBox .select22-selection--single:hover{background-color:#e2e6ea}
+.searchBox .input.search.apply input{background-color: #e5fbea;border-color: #82e06b;box-shadow: 0 0 3px 0px #82e06b;}
+.searchBox .select22.apply + span.select22 .select22-selection--single{background-color: #e5fbea;border-color: #82e06b;box-shadow: 0 0 3px 0px #82e06b;}
+
+.applyFilters{
+  font-size: 1.2em;
+  overflow: hidden;
+}
+.applyFilters .btn{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.filterBox{
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 1.2em;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
