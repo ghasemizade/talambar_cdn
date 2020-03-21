@@ -2,7 +2,10 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="http://cdn.talambar.local/favicons/mstile-150x150.png?v=6"/>
+            <square70x70logo src="https://cdn.talambar.com/favicons/mstile-70x70.png?v=1"/>
+            <square150x150logo src="https://cdn.talambar.com/favicons/mstile-150x150.png?v=1"/>
+            <square310x310logo src="https://cdn.talambar.com/favicons/mstile-310x310.png?v=1"/>
+            <wide310x150logo src="https://cdn.talambar.com/favicons/mstile-310x150.png?v=1"/>
             <TileColor>#c80a5a</TileColor>
         </tile>
     </msapplication>
