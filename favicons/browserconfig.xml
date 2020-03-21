@@ -2,8 +2,8 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/mstile-150x150.png?v=6"/>
-            <TileColor>#ffc40d</TileColor>
+            <square150x150logo src="http://cdn.talambar.local/favicons/mstile-150x150.png?v=6"/>
+            <TileColor>#c80a5a</TileColor>
         </tile>
     </msapplication>
 </browserconfig>
