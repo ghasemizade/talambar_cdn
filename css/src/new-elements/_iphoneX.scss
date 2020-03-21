@@ -6,6 +6,7 @@
 	display:block;
 	margin:0 auto;
 	padding: 15px 17px 15px;
+	font-size: 1.2em;
 }
 [data-frame='iphone-x']:after{
 	content: "";
@@ -23,4 +24,45 @@
 	z-index: 1;
 	// width: 300px;
 	// height:602px;
+}
+
+
+// splash Page design simulate
+[data-frame='iphone-x'][data-activity='splash']{
+	text-align: center;
+}
+[data-frame='iphone-x'][data-activity='splash'] img{
+	width: 70%;
+	margin-top: 40%;
+	margin-bottom: 10px;
+}
+[data-frame='iphone-x'][data-activity='splash'] h1{
+	font-weight: 900;
+}
+[data-frame='iphone-x'][data-activity='splash'] h2{
+	font-weight: 100;
+}
+[data-frame='iphone-x'][data-activity='splash'] .desc{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	left: 20px;
+}
+[data-frame='iphone-x'][data-activity='splash'][data-color='red']{
+
+}
+[data-frame='iphone-x'][data-activity='splash'][data-color='blue']{
+
+}
+[data-frame='iphone-x'][data-activity='splash'][data-color='green']{
+
+}
+[data-frame='iphone-x'][data-activity='splash'][data-color='yellow']{
+
+}
+[data-frame='iphone-x'][data-activity='splash'][data-color='purple']{
+
+}
+[data-frame='iphone-x'][data-activity='splash'][data-color='black']{
+
 }
