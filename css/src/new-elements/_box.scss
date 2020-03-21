@@ -13,9 +13,9 @@
   font-weight: 900;
   color: #222;
   border: none;
-  box-shadow: none;
   transition: 0.3s;
   background-color: #efefef;
+  overflow: hidden;
 }
 .box header:hover{
   background-color: #eee;
@@ -49,10 +49,23 @@
 }
 .box .body{
   padding: 3rem 3rem;
+  overflow: hidden;
 }
 .box .body.minPad{
   padding: 1rem 1rem;
 }
 .box .body.zeroPad{
   padding: 0;
+}
+
+.box footer{
+  padding: 1rem 1.5rem;
+  color: #222;
+  transition: 0.3s;
+  border-top: 1px solid #efefef;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+.box footer .btn{
+  min-width: 100px;
 }
