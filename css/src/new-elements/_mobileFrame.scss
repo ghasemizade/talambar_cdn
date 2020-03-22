@@ -165,3 +165,20 @@
 	overflow: hidden;
 	padding: 0 10px;
 }
+.mobileFrame[data-intro] nav{
+	font-size: 1.2rem;
+	line-height: 2rem;
+	overflow: hidden;
+	padding: 1rem 1.5rem;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.mobileFrame[data-intro] nav .prev{
+	color: #999;
+}
+.mobileFrame[data-intro] nav .next{
+	color: #0b9ee4;
+}
+
