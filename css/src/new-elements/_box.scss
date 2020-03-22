@@ -62,6 +62,10 @@
 .box .body.zeroPad{
   padding: 0;
 }
+.box .body:empty{
+  padding: 0;
+  display: none;
+}
 
 .box footer{
   padding: 1rem 1.5rem;

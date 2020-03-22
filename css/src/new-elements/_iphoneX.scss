@@ -8,6 +8,12 @@
 	padding: 15px 17px 15px;
 	font-size: 1.2em;
 	border-radius: 10%;
+	// width: 300px;
+	// height:602px;
+}
+[data-frame='iphone-x'][data-size='small']{
+	width: 200px;
+	height:400px;
 }
 [data-frame='iphone-x']:after{
 	content: "";
@@ -23,8 +29,6 @@
     -o-background-size: cover;
     background-size: cover;
 	z-index: 1;
-	// width: 300px;
-	// height:602px;
 }
 
 
