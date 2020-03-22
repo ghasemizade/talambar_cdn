@@ -1,0 +1,124 @@
+.mobileFrame{
+	position: relative;
+	overflow: hidden;
+	width: 250px;
+	height:500px;
+	display:block;
+	margin:0 auto;
+	padding: 15px 17px 15px;
+	font-size: 1.2em;
+	border-radius: 10%;
+	// width: 300px;
+	// height:602px;
+}
+.mobileFrame[data-size='small']{
+	width: 200px;
+	height:400px;
+}
+.mobileFrame:after{
+	content: "";
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	background: url('https://cdn.talambar.ir/img/frame/iphone-x-1.png') no-repeat top center;
+	background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	z-index: 1;
+}
+
+
+// splash Page design simulate
+.mobileFrame[data-activity='splash']{
+	text-align: center;
+	background: linear-gradient(90deg, attr(data-bg-from), attr(data-bg-to));
+}
+.mobileFrame[data-activity='splash'] img{
+	width: 50%;
+	margin-top: 50%;
+	margin-bottom: 10px;
+}
+.mobileFrame[data-activity='splash'] h1{
+	font-weight: 900;
+	font-size: 3rem;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.mobileFrame[data-activity='splash'] h2{
+	font-weight: 100;
+	font-size: 2rem;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.mobileFrame[data-activity='splash'] .desc{
+	position: absolute;
+	bottom: 25px;
+	right: 20px;
+	left: 20px;
+	padding: 0 5px;
+	max-height: 100px;
+	line-height: 15px;
+	overflow: hidden;
+}
+.mobileFrame[data-activity='splash'][data-color='red']{
+
+}
+.mobileFrame[data-activity='splash'][data-color='blue']{
+
+}
+.mobileFrame[data-activity='splash'][data-color='green']{
+
+}
+.mobileFrame[data-activity='splash'][data-color='yellow']{
+
+}
+.mobileFrame[data-activity='splash'][data-color='purple']{
+
+}
+.mobileFrame[data-activity='splash'][data-color='black']{
+
+}
+
+.mobileFrame[data-activity='intro']{
+	text-align: center;
+	background: linear-gradient(90deg, attr(data-bg-from), attr(data-bg-to));
+}
+.mobileFrame[data-activity='intro'] img{
+	width: 50%;
+	margin-top: 50%;
+	margin-bottom: 10px;
+}
+.mobileFrame[data-activity='intro'] h1{
+	font-weight: 900;
+	font-size: 3rem;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.mobileFrame[data-activity='intro'] h2{
+	font-weight: 100;
+	font-size: 2rem;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.mobileFrame[data-activity='intro'] .desc{
+	position: absolute;
+	bottom: 25px;
+	right: 20px;
+	left: 20px;
+	padding: 0 5px;
+	max-height: 100px;
+	line-height: 15px;
+	overflow: hidden;
+}
