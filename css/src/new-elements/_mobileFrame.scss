@@ -11,10 +11,6 @@
 	// width: 300px;
 	// height:602px;
 }
-.mobileFrame[data-size='small']{
-	width: 200px;
-	height:400px;
-}
 .mobileFrame:after{
 	content: "";
 	position: absolute;
@@ -88,6 +84,8 @@
 }
 
 .mobileFrame[data-intro]{
+	width: 200px;
+	height:400px;
 	text-align: center;
 	background: linear-gradient(90deg, attr(data-bg-from), attr(data-bg-to));
 }
