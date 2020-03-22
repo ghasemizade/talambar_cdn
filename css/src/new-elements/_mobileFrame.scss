@@ -33,16 +33,16 @@
 
 
 // splash Page design simulate
-.mobileFrame[data-activity='splash']{
+.mobileFrame[data-splash]{
 	text-align: center;
 	background: linear-gradient(90deg, attr(data-bg-from), attr(data-bg-to));
 }
-.mobileFrame[data-activity='splash'] img{
+.mobileFrame[data-splash] img{
 	width: 50%;
 	margin-top: 50%;
 	margin-bottom: 10px;
 }
-.mobileFrame[data-activity='splash'] h1{
+.mobileFrame[data-splash] h1{
 	font-weight: 900;
 	font-size: 3rem;
 	height: 40px;
@@ -50,7 +50,7 @@
 	overflow: hidden;
 	padding: 0 10px;
 }
-.mobileFrame[data-activity='splash'] h2{
+.mobileFrame[data-splash] h2{
 	font-weight: 100;
 	font-size: 2rem;
 	height: 30px;
@@ -58,7 +58,7 @@
 	overflow: hidden;
 	padding: 0 10px;
 }
-.mobileFrame[data-activity='splash'] .desc{
+.mobileFrame[data-splash] .desc{
 	position: absolute;
 	bottom: 25px;
 	right: 20px;
@@ -68,35 +68,35 @@
 	line-height: 15px;
 	overflow: hidden;
 }
-.mobileFrame[data-activity='splash'][data-color='red']{
+.mobileFrame[data-splash][data-color='red']{
 
 }
-.mobileFrame[data-activity='splash'][data-color='blue']{
+.mobileFrame[data-splash][data-color='blue']{
 
 }
-.mobileFrame[data-activity='splash'][data-color='green']{
+.mobileFrame[data-splash][data-color='green']{
 
 }
-.mobileFrame[data-activity='splash'][data-color='yellow']{
+.mobileFrame[data-splash][data-color='yellow']{
 
 }
-.mobileFrame[data-activity='splash'][data-color='purple']{
+.mobileFrame[data-splash][data-color='purple']{
 
 }
-.mobileFrame[data-activity='splash'][data-color='black']{
+.mobileFrame[data-splash][data-color='black']{
 
 }
 
-.mobileFrame[data-activity='intro']{
+.mobileFrame[data-intro]{
 	text-align: center;
 	background: linear-gradient(90deg, attr(data-bg-from), attr(data-bg-to));
 }
-.mobileFrame[data-activity='intro'] img{
+.mobileFrame[data-intro] img{
 	width: 50%;
 	margin-top: 50%;
 	margin-bottom: 10px;
 }
-.mobileFrame[data-activity='intro'] h1{
+.mobileFrame[data-intro] h1{
 	font-weight: 900;
 	font-size: 3rem;
 	height: 40px;
@@ -104,7 +104,7 @@
 	overflow: hidden;
 	padding: 0 10px;
 }
-.mobileFrame[data-activity='intro'] h2{
+.mobileFrame[data-intro] h2{
 	font-weight: 100;
 	font-size: 2rem;
 	height: 30px;
@@ -112,7 +112,7 @@
 	overflow: hidden;
 	padding: 0 10px;
 }
-.mobileFrame[data-activity='intro'] .desc{
+.mobileFrame[data-intro] .desc{
 	position: absolute;
 	bottom: 25px;
 	right: 20px;
