@@ -3,11 +3,12 @@
 	margin: 5px 1rem 15px;
 	font-size: 1.4rem;
 	line-height: 30px;
-	background-color: #d4edda;
+	background-color: #eee;
 	border-radius: 0.5rem;
 	padding:0 2rem 0 60px;
 	min-width: 200px;
 	border-radius: 2rem;
+	transition: 0.3s;
 }
 .checklist::before{
 	content: "";
@@ -18,7 +19,7 @@
 	height: 40px;
 	border-radius: 50%;
 	transition: all .2s ease-in-out;
-	background-color: #d4edda;
+	background-color: #eee;
 }
 
 .checklist::after{
@@ -35,13 +36,17 @@
 	transition: all .2s ease-in-out;
 	background-color: #fff;
 }
-.checklist[data-okay]::after{
-	content: "\6b";
-	font-family: "siftal" !important;
-	font-size: 20px;
-	color: #188a0f;
+// reaction
+.checklist:hover{
+	opacity: 0.85;
 }
-
+.checklist:focus{
+	opacity: 0.7;
+}
+.checklist:active{
+	opacity: 0.6;
+}
+// rtl
 [dir="rtl"] .checklist{
 	padding:0 60px 0 2rem;
 }
@@ -53,3 +58,43 @@
 	left: initial;
 	right: 3px;
 }
+// okay
+.checklist[data-okay]{
+	background-color: #d4edda;
+}
+.checklist[data-okay]::before{
+	background-color: #d4edda;
+}
+.checklist[data-okay]::after{
+	content: "\6b";
+	font-family: "siftal" !important;
+	font-size: 20px;
+	color: #20b040;
+}
+// warn
+.checklist[data-warn]{
+	background-color: #ffecb3;
+}
+.checklist[data-warn]::before{
+	background-color: #ffecb3;
+}
+.checklist[data-warn]::after{
+	content: "\6b";
+	font-family: "siftal" !important;
+	font-size: 20px;
+	color: #fbc02d;
+}
+// fail
+.checklist[data-fail]{
+	background-color: #f8d7da;
+}
+.checklist[data-fail]::before{
+	background-color: #f8d7da;
+}
+.checklist[data-fail]::after{
+	content: "\6b";
+	font-family: "siftal" !important;
+	font-size: 20px;
+	color: #e02020;
+}
+
