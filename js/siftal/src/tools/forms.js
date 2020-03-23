@@ -151,7 +151,7 @@
 
       if(!_super.noLoading)
       {
-        $('body').addClass('loading-form');
+        $('body').attr('data-loading-form', '');
         callFunc('loading_form', true);
       }
 
@@ -355,7 +355,7 @@
       $('input, button, textarea, [contenteditable], [data-ajaxify]').prop('disabled', false);
     }
 
-    $('body').removeClass('loading-form');
+    $('body').attr('data-loading-form', null);
     $('.submitedForm').removeClass('submitedForm');
     callFunc('loading_form', false);
   }
