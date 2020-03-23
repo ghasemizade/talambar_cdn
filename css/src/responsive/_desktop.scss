@@ -60,8 +60,8 @@
   [dir="rtl"] [data-panel] #main:after{left:initial;right:300px;}
   [data-panel] #pageHeader.cloner{width:calc( 100% - 300px)};
   [data-panel] #sidebar{width:300px;}
-  [dir="ltr"] [data-panel][data-clean] #sidebar {left:-300px;}
-  [dir="rtl"] [data-panel][data-clean] #sidebar{right:-300px;}
+  [dir="ltr"] [data-panel='clean'] #sidebar {left:-300px!important;}
+  [dir="rtl"] [data-panel='clean'] #sidebar{right:-300px!important;}
 
 
 }
