@@ -28,6 +28,7 @@
 	text-align: center;
 	display:inline-block;
 	vertical-align: middle;
+	font-style: normal;
 }
 .ibtn[data-shortkey] kbd{
 	height: 100%;
@@ -60,6 +61,28 @@
 	color:#000;
 }
 .ibtn.disabled{cursor:default;opacity: 0.4;}
+
+// next and prev
+[dir='ltr'] .ibtn i[data-prev]:before{
+	content: "\e0c1";
+	font-family: "siftal"!important;
+	color: #777;
+}
+[dir='ltr'] .ibtn i[data-next]:before{
+	content: "\e0c2";
+	font-family: "siftal"!important;
+	color: #777;
+}
+[dir='rtl'] .ibtn i[data-prev]:before{
+	content: "\e0c2";
+	font-family: "siftal"!important;
+	color: #777;
+}
+[dir='rtl'] .ibtn i[data-next]:before{
+	content: "\e0c1";
+	font-family: "siftal"!important;
+	color: #777;
+}
 
 // sizes
 .ibtn.xs{
