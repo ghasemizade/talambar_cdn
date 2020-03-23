@@ -358,7 +358,7 @@ function searchForProduct(_key, _value)
 {
   // if is not barcode and not finde02902749
   // d, search and if find, add or update
-  var pSearchURL = '/' + getStoreCode() + "/a/products/api?json=true&" + _key + "=" + _value;
+  var pSearchURL = getStoreURL() + "a/products/api?json=true&" + _key + "=" + _value;
   $.get(pSearchURL, function(_productData)
   {
     var myMsg;
@@ -382,11 +382,57 @@ function searchForProduct(_key, _value)
 
 function getStoreCode()
 {
-  if($('meta[name="store-code"]').attr("content"))
+  var myEnv = getEnv();
+  if(myEnv === 'Jibres')
   {
-    return $('meta[name="store-code"]').attr("content");
+    // in Jibres Env
   }
-    return '';
+  else if(myEnv.charAt(0) === '$')
+  {
+    return myEnv;
+  }
+
+  return null;
+}
+
+
+function getJibresSite()
+{
+  var elHeadUrl = $('meta[name="jibres:site"]');
+
+  if(elHeadUrl && elHeadUrl.attr("content"))
+  {
+    return elHeadUrl.attr("content");
+  }
+
+  return null;
+}
+
+
+function getEnv()
+{
+  if($('body[data-env]') !== undefined)
+  {
+    var myEnv = $('body').attr('data-env');
+
+    return myEnv;
+  }
+
+  return null;
+}
+
+
+function getStoreURL()
+{
+  var myStore = getStoreCode();
+
+  if(myStore)
+  {
+    console.log(getJibresSite() + myStore + '/');
+    return getJibresSite() + myStore + '/';
+  }
+
+  return null;
 }
 
 
@@ -826,7 +872,7 @@ function prevFactor(_type, _all)
   {
     _type = 'sale';
   }
-  var lastFactorUrl = '/' + getStoreCode() + '/a/' + _type + '/prev';
+  var lastFactorUrl = getStoreURL() + 'a/' + _type + '/prev';
   // add id if exist
   if(check_factor() && urlParam('id'))
   {

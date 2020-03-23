@@ -209,7 +209,7 @@ function event_corridor(_e, _self, _key)
 
         // set factor url
         var myPage     = $('body').attr('data-page');
-        var factorUrl  = '/' + getStoreCode() + '/a/sale?from='+ myPage;
+        var factorUrl  = getStoreURL() + 'a/sale?from='+ myPage;
         var factorType = $('body').attr('data-page');
         // if($('html').attr('lang') !== undefined)
         // {
