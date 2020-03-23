@@ -412,6 +412,20 @@ function getJibresSiteLang()
 }
 
 
+function getJibresAPI()
+{
+  var elHeadUrl = $('meta[name="jibres:api"]');
+
+  if(elHeadUrl && elHeadUrl.attr("content"))
+  {
+    return elHeadUrl.attr("content");
+  }
+
+  return null;
+}
+
+
+
 function getEnv()
 {
   if($('body[data-env]') !== undefined)
@@ -431,12 +445,25 @@ function getStoreURL()
 
   if(myStore)
   {
-    console.log(getJibresSiteLang() + myStore + '/');
     return getJibresSiteLang() + myStore + '/';
   }
 
   return null;
 }
+
+
+function getStoreApiURL()
+{
+  var myStore = getStoreCode();
+
+  if(myStore)
+  {
+    return getJibresAPI() + myStore + '/v2/';
+  }
+
+  return null;
+}
+
 
 
 /**
