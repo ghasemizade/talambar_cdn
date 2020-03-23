@@ -399,10 +399,9 @@ function getStoreCode()
   return null;
 }
 
-
-function getJibresSite()
+function getJibresSiteLang()
 {
-  var elHeadUrl = $('meta[name="jibres:site"]');
+  var elHeadUrl = $('meta[name="jibres:sitelang"]');
 
   if(elHeadUrl && elHeadUrl.attr("content"))
   {
@@ -432,8 +431,8 @@ function getStoreURL()
 
   if(myStore)
   {
-    console.log(getJibresSite() + myStore + '/');
-    return getJibresSite() + myStore + '/';
+    console.log(getJibresSiteLang() + myStore + '/');
+    return getJibresSiteLang() + myStore + '/';
   }
 
   return null;
