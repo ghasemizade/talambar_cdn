@@ -113,6 +113,8 @@
     {
       $('body').attr('data-page', obj.page);
     }
+    // set environment
+    $('body').attr('data-env', obj.env);
     // set content on each request
     $('body').attr('data-in', obj.content);
     // set subdomain on body
