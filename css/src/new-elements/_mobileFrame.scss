@@ -18,6 +18,12 @@
 	width: 100%;
 	overflow: hidden;
 }
+.mobileFrame iframe{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border:none;
+}
 .mobileFrame:after{
 	content: "";
 	position: absolute;
