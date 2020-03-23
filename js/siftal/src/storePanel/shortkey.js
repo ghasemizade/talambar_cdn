@@ -204,6 +204,10 @@ function event_corridor(_e, _self, _key)
       break;
 
     case '113':             // f2
+        if(!getStoreURL())
+        {
+          return null;
+        }
         // prevent any other change
         _e.preventDefault();
 

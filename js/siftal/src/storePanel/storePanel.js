@@ -356,6 +356,10 @@ function productBarcodeFinded(_barcode)
  */
 function searchForProduct(_key, _value)
 {
+  if(!getStoreURL())
+  {
+    return null;
+  }
   // if is not barcode and not finde02902749
   // d, search and if find, add or update
   var pSearchURL = getStoreURL() + "a/products/api?json=true&" + _key + "=" + _value;
@@ -871,6 +875,10 @@ function prevFactor(_type, _all)
   if(_type === undefined)
   {
     _type = 'sale';
+  }
+  if(!getStoreURL())
+  {
+    return null;
   }
   var lastFactorUrl = getStoreURL() + 'a/' + _type + '/prev';
   // add id if exist
