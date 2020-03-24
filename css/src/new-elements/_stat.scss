@@ -1,0 +1,48 @@
+.stat{
+  position: relative;
+  background-color: #fff;
+  box-shadow: #ddd 0 0 5px;
+  font-size: 1.4rem;
+  margin:0 auto 1rem;
+  display: block;
+  border-radius: 0.25rem;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+  min-height: 10rem;
+}
+.stat:hover{
+	transform: scale(0.9);
+}
+.stat:active{
+	transform: scale(0.8);
+}
+.stat h3{
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #333;
+	line-height: 3rem;
+	height: 3rem;
+	padding: 1rem 1rem 0;
+	margin: 0;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.stat .val{
+	display: block;
+	font-size: 3rem;
+	color: #777;
+	line-height: 5rem;
+	height: 7rem;
+	padding: 1rem 1rem;
+	margin: 0;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.stat footer{
+	display: block;
+	color: #777;
+	line-height: 3rem;
+}
