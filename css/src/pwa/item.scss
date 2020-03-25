@@ -1,13 +1,17 @@
-.pwaItems{background-color: #fff;border-radius:$pwaRadius;font-size:16px;overflow: hidden;margin-top:10px;margin-bottom:10px;}
+.pwaItems{background-color: #fff;border-radius:$pwaRadius;font-size:1.4rem;overflow: hidden;margin-bottom:10px;box-shadow: #ddd 0 0 5px;}
+[data-pwa] .pwaItems{box-shadow:none;font-size:1.6rem;}
 .zeroSide .pwaItems{border-radius:0;}
 .pwaItems li{position: relative;}
 .pwaItems li a{padding: 10px;color: #111!important;transition:0.1s;line-height: $pwaItemHeight;}
+.pwaItems li a:hover .go{transform: scale(0.8);color:#777;}
+.pwaItems li a:focus .go{transform: scale(0.9);color:#333;}
+.pwaItems li a:active .go{transform: scale(1);color:#111;}
 .pwaItems li a:active{background-color: $pwaFocus};
 .pwaItems li img{max-width: $pwaItemHeight;max-height: $pwaItemHeight;}
 .pwaItems li .key{padding:0 10px;}
 .pwaItems li .value{color:#aaa;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto}
-.pwaItems li .go{color:#aaa;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto}
-.pwaItems li .go::after{content: "\e0c2";padding:0 10px;;font-family:siftal!important;vertical-align:middle;color:#ccc;opacity: 0.7;float: right}
+.pwaItems li .go{color:#ccc;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto;transition: 0.2s;}
+.pwaItems li .go::after{content: "\e0c2";padding:0 10px;;font-family:siftal!important;vertical-align:middle;opacity: 0.7;float: right}
 [dir="rtl"] .pwaItems li .go::after{content: "\e0c1";float: left;}
 .pwaItems li .go.detail::after{content: "\e03a"}
 
