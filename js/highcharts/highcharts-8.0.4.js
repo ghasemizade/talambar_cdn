@@ -521,3 +521,71 @@ d.extend;d=a.Chart.prototype;var f=a.getOptions();e(f.lang,{noData:"No data to d
 this.noDataLabel.align(e(this.noDataLabel.getBBox(),b.position),!1,"plotBox"))};d.hideNoData=function(){this.noDataLabel&&(this.noDataLabel=this.noDataLabel.destroy())};d.hasData=function(){for(var a=this.series||[],b=a.length;b--;)if(a[b].hasData()&&!a[b].options.isInternal)return!0;return this.loadingShown};c(a.Chart,"render",function(){this.hasData()?this.hideNoData():this.showNoData()})});c(a,"masters/modules/no-data-to-display.src.js",[],function(){})});
 
 
+
+// persian translation
+if($('html').attr('lang') === 'fa')
+{
+	Highcharts.setOptions(
+	{
+		lang:
+		{
+			contextButtonTitle: "منوی نمودار",
+			decimalPoint: ",",
+			downloadCSV: "دانلود سی‌اس‌وی",
+			downloadJPEG: "دانولد تصویر جی‌پی‌جی",
+			downloadPDF: "دانلود پی‌دی‌اف",
+			downloadPNG: "دانلود تصویر پی‌ان‌جی",
+			downloadSVG: "دانلود اس‌وی‌جی",
+			downloadXLS: "دانلود اکسل",
+			drillUpText: "بازکشت به  {series.name}",
+			invalidDate: "تعریف نشده",
+			loading: "در حال  بارگذاری",
+			months: ["ژانویه", "فوریه", "مارچ", "آپریل", "می", "جون", "جولای", "آگوست", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"],
+			noData: "داده‌ای برای رسم نمودار وجود ندارد",
+			printChart: "پرینت نمودار",
+			resetZoom: "ریست ‌کردن بزرگنمایی",
+			resetZoomTitle: "ریست سطح  بزرگنمایی به ۱:۱",
+			thousandsSep: ",",
+			viewData: "مشاهده جدول اطلاعات",
+		}
+
+	});
+	Highcharts.setOptions(
+		{
+		  credits:
+		  {
+		      text: 'جیبرس',
+		      href: '/',
+		      position:
+		      {
+		          x: -35,
+		          y: -7
+		      },
+		      style: {
+		          fontWeight: 'bold'
+		      }
+		  }
+		}
+	);
+}
+else
+{
+	Highcharts.setOptions(
+		{
+		  credits:
+		  {
+		      text: 'Jibres',
+		      href: '/',
+		      position:
+		      {
+		          x: -35,
+		          y: -7
+		      },
+		      style: {
+		          fontWeight: 'bold'
+		      }
+		  }
+		}
+	);
+}
+
