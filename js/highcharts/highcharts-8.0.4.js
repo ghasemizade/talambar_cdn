@@ -525,67 +525,67 @@ this.noDataLabel.align(e(this.noDataLabel.getBBox(),b.position),!1,"plotBox"))};
 // persian translation
 if($('html').attr('lang') === 'fa')
 {
-	Highcharts.setOptions(
-	{
-		lang:
-		{
-			contextButtonTitle: "منوی نمودار",
-			decimalPoint: ",",
-			downloadCSV: "دانلود سی‌اس‌وی",
-			downloadJPEG: "دانولد تصویر جی‌پی‌جی",
-			downloadPDF: "دانلود پی‌دی‌اف",
-			downloadPNG: "دانلود تصویر پی‌ان‌جی",
-			downloadSVG: "دانلود اس‌وی‌جی",
-			downloadXLS: "دانلود اکسل",
-			drillUpText: "بازکشت به  {series.name}",
-			invalidDate: "تعریف نشده",
-			loading: "در حال  بارگذاری",
-			months: ["ژانویه", "فوریه", "مارچ", "آپریل", "می", "جون", "جولای", "آگوست", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"],
-			noData: "داده‌ای برای رسم نمودار وجود ندارد",
-			printChart: "پرینت نمودار",
-			resetZoom: "ریست ‌کردن بزرگنمایی",
-			resetZoomTitle: "ریست سطح  بزرگنمایی به ۱:۱",
-			thousandsSep: ",",
-			viewData: "مشاهده جدول اطلاعات",
-		}
+  Highcharts.setOptions(
+  {
+    lang:
+    {
+      contextButtonTitle: "منوی نمودار",
+      decimalPoint: ",",
+      downloadCSV: "دانلود سی‌اس‌وی",
+      downloadJPEG: "دانولد تصویر جی‌پی‌جی",
+      downloadPDF: "دانلود پی‌دی‌اف",
+      downloadPNG: "دانلود تصویر پی‌ان‌جی",
+      downloadSVG: "دانلود اس‌وی‌جی",
+      downloadXLS: "دانلود اکسل",
+      drillUpText: "بازکشت به  {series.name}",
+      invalidDate: "تعریف نشده",
+      loading: "در حال  بارگذاری",
+      months: ["ژانویه", "فوریه", "مارچ", "آپریل", "می", "جون", "جولای", "آگوست", "سپتامبر", "اکتبر", "نوامبر", "دسامبر"],
+      noData: "داده‌ای برای رسم نمودار وجود ندارد",
+      printChart: "پرینت نمودار",
+      resetZoom: "ریست ‌کردن بزرگنمایی",
+      resetZoomTitle: "ریست سطح  بزرگنمایی به ۱:۱",
+      thousandsSep: ",",
+      viewData: "مشاهده جدول اطلاعات",
+    }
 
-	});
-	Highcharts.setOptions(
-		{
-		  credits:
-		  {
-		      text: 'جیبرس',
-		      href: 'https://jibres.ir',
-		      style: {
-		          fontWeight: 'bold'
-		      }
-		  }
-		}
-	);
-	Highcharts.setOptions(
-		{
-		  chart:
-		  {
-		      style: {
-		          fontFamily: 'IRANSans, Tahoma, sans-serif'
-		      }
-		  }
-		}
-	);
+  });
+  Highcharts.setOptions(
+    {
+      credits:
+      {
+          text: 'جیبرس',
+          href: 'https://jibres.ir',
+          style: {
+              fontWeight: 'bold'
+          }
+      }
+    }
+  );
+  Highcharts.setOptions(
+    {
+      chart:
+      {
+          style: {
+              fontFamily: 'IRANSans, Tahoma, sans-serif'
+          }
+      },
+    }
+  );
 }
 else
 {
-	Highcharts.setOptions(
-		{
-		  credits:
-		  {
-		      text: 'Jibres',
-		      href: 'https://jibres.com',
-		      style: {
-		          fontWeight: 'bold'
-		      }
-		  }
-		}
-	);
+  Highcharts.setOptions(
+    {
+      credits:
+      {
+          text: 'Jibres',
+          href: 'https://jibres.com',
+          style: {
+              fontWeight: 'bold'
+          }
+      }
+    }
+  );
 }
 
