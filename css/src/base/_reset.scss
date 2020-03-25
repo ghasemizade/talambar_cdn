@@ -73,7 +73,6 @@ html[dir="rtl"]{
   height: 100%;
   font-weight: normal;
   vertical-align: baseline;
-  background: transparent;
   box-sizing: border-box;
   font-family:$fontNameEn;
   @include select-none();
@@ -87,7 +86,6 @@ html[dir="rtl"]{
   height: 100%;
   font-weight: normal;
   vertical-align: baseline;
-  background: transparent;
   box-sizing: border-box;
   font-family:$fontNameFa;
   @include select-none();
