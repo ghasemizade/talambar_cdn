@@ -570,6 +570,11 @@ if($('html').attr('lang') === 'fa')
               fontFamily: 'IRANSans, Tahoma, sans-serif'
           }
       },
+      yAxis:
+      [
+        { title: {useHTML: Highcharts.hasBidiBug} },
+        { title: {useHTML: Highcharts.hasBidiBug} }
+      ]
     }
   );
 }
