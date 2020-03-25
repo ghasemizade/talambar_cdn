@@ -38,7 +38,8 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 // last line
 #jibresLastLine{position:relative;overflow:hidden;background-color:#fff;color: #444;line-height:30px;padding: 20px 0 30px;border-top:1px solid rgba(14,19,24,.15);}
-#jibresLastLine .langlist{}
+#jibresLastLine #jibresCopyright{margin-bottom: 2rem;}
+#jibresLastLine .langlist{margin-bottom: 2rem;}
 #jibresLastLine .langlist a{background-color: rgba(0,0,0,0.03);border-radius:3px;display:inline-block;padding:5px 10px;min-width:70px;text-align: center;margin:0 10px;}
 #jibresLastLine nav.share1 a{display: inline-block;border-radius:50%;}
 // share links
@@ -77,3 +78,10 @@ padding-top: 170px;
 padding-bottom: 32px;
 min-height: 400px;
 }
+
+
+// pwa style
+[data-pwa] #jibresFooter{padding-top: 2rem;}
+[data-pwa] #jibresSupportLine:after{display: none;background:none;}
+[data-pwa] #jibresFooter #footerMenu nav a{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
+
