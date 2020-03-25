@@ -10,12 +10,6 @@
   transition: 0.2s ease-in-out;
   min-height: 10rem;
 }
-.stat:hover{
-	transform: scale(0.9);
-}
-.stat:active{
-	transform: scale(0.8);
-}
 .stat h3{
 	display: block;
 	font-size: 1.4rem;
@@ -28,6 +22,8 @@
     overflow: hidden;
 	text-overflow: ellipsis;
     white-space: nowrap;
+	opacity: 0.5;
+	transition: 0.3s;
 }
 .stat .val{
 	display: block;
@@ -46,3 +42,14 @@
 	color: #777;
 	line-height: 3rem;
 }
+// reaction
+.stat:hover{
+	transform: scale(0.9);
+}
+.stat:focus h3{
+	opacity: 1;
+}
+.stat:active{
+	transform: scale(0.8);
+}
+
