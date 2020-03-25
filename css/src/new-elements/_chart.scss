@@ -1,0 +1,41 @@
+.chart{direction:ltr;width:100%;max-height:600px;user-select:none;}
+[dir="rtl"] .chart{text-align:right}
+
+.chart.x100{overflow:hidden;height:100px;}
+.chart.x150{overflow:hidden;height:150px;}
+.chart.x200{overflow:hidden;height:200px;}
+.chart.x240{overflow:hidden;height:240px;}
+.chart.x250{overflow:hidden;height:250px;}
+.chart.x290{overflow:hidden;height:290px;}
+.chart.x300{overflow:hidden;height:300px;}
+.chart.x350{overflow:hidden;height:350px;}
+.chart.x400{overflow:hidden;height:400px;}
+.chart.x450{overflow:hidden;height:450px;}
+.chart.x500{overflow:hidden;height:500px;}
+
+// highcharts
+.highcharts-root {font-family:IRANSans,Tahoma,sans-serif!important;}
+.highcharts-title {font-weight: bold;}
+.highcharts-tooltip > span {
+    background: rgba(255,255,255,0.85);
+    border: 1px solid silver;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #888;
+    padding: 8px;
+}
+[dir="rtl"] .highcharts-tooltip > span{
+    direction:rtl;
+    text-align:right;
+    unicode-bidi: embed;
+}
+[dir="rtl"] .highcharts-tooltip > span b{
+    display:inline-block;
+    direction:ltr;
+}
+[dir="rtl"] .highcharts-contextmenu{
+    text-align: right;
+}
+.chart .chartServiceLogo{
+    y:calc(100% - 32px);
+    x:calc(100% - 32px);
+}

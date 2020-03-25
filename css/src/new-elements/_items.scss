@@ -18,5 +18,6 @@
 [dir="rtl"] .items li .go::after{content: "\e0c1";float: left;}
 [dir="rtl"] .items li:after{right:20px;left:0;}
 // customize for pwa
-[data-pwa] .items{box-shadow:none;font-size:1.6rem;}
-[data-pwa] .items li a{padding: 10px;}
+[data-pwa] .items{box-shadow:none;font-size:1.6rem;border-radius:$myRadiusPWA;}
+[data-pwa] .items li a{padding: 10px;line-height: $myItemHeightPWA;}
+[data-pwa] .items li img{max-width: $myItemHeightPWA;max-height: $myItemHeightPWA;}

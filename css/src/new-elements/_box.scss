@@ -6,7 +6,7 @@
   font-size: 1.4rem;
   margin:0 auto 1rem;
   display: block;
-  border-radius: 0.25rem;
+  border-radius: $myRadius;
 }
 .box.impact{
   box-shadow: 0 10px 25px #ddd;
