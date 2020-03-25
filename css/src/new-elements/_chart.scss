@@ -8,7 +8,7 @@
     height: 25px;
     background:url('../logo/icon/svg/Jibres-Logo-icon.svg') no-repeat;
 }
-.chart:hover{
+.chart:active{
     transform: scale(0.95);
 }
 [dir="rtl"] .chart{text-align:right}

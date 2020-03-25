@@ -567,7 +567,7 @@ if($('html').attr('lang') === 'fa')
       chart:
       {
           style: {
-              fontFamily: 'IRANSans, Tahoma, sans-serif'
+              fontFamily: 'IRANYekan, Tahoma, sans-serif'
           }
       },
       yAxis:
