@@ -574,7 +574,12 @@ if($('html').attr('lang') === 'fa')
       [
         { title: {useHTML: Highcharts.hasBidiBug} },
         { title: {useHTML: Highcharts.hasBidiBug} }
-      ]
+      ],
+      tooltip: {
+        useHTML: true,
+        borderWidth: 0,
+        shared: true
+      }
     }
   );
 }
