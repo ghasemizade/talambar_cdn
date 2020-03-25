@@ -2,7 +2,8 @@
 [data-pwa] .pwaItems{box-shadow:none;font-size:1.6rem;}
 .zeroSide .pwaItems{border-radius:0;}
 .pwaItems li{position: relative;}
-.pwaItems li a{padding: 10px;color: #111!important;transition:0.1s;line-height: $pwaItemHeight;}
+.pwaItems li a{padding: 5px 10px;color: #111!important;transition:0.1s;line-height: $pwaItemHeight;}
+[data-pwa] .pwaItems li a{padding: 10px;}
 .pwaItems li a:hover .go{transform: scale(0.8);color:#777;}
 .pwaItems li a:focus .go{transform: scale(0.9);color:#333;}
 .pwaItems li a:active .go{transform: scale(1);color:#111;}

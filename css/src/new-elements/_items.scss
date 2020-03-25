@@ -1,0 +1,22 @@
+.items{background-color: #fff;border-radius:$myRadius;font-size:1.4rem;overflow: hidden;margin-bottom:10px;box-shadow: #ddd 0 0 5px;}
+.zeroSide .items{border-radius:0;}
+.items li{position: relative;}
+.items li a{padding: 5px 10px;color: #111!important;transition:0.1s;line-height: $myItemHeight;}
+.items li a:hover .go{transform: scale(0.8);color:#777;}
+.items li a:focus .go{transform: scale(0.9);color:#333;}
+.items li a:active .go{transform: scale(1);color:#111;}
+.items li a:active{background-color: #e6e5eb};
+.items li img{max-width: $myItemHeight;max-height: $myItemHeight;}
+.items li .key{padding:0 10px;}
+.items li .value{color:#aaa;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto}
+.items li .go{color:#ccc;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto;transition: 0.2s;}
+.items li .go::after{content: "\e0c2";padding:0 10px;;font-family:siftal!important;vertical-align:middle;opacity: 0.7;float: right}
+[dir="rtl"] .items li .go::after{content: "\e0c1";float: left;}
+.items li .go.detail::after{content: "\e03a"}
+.items li:after{content:"";position:absolute;width:100%;height:1px;bottom:0;right:0;left:20px;background-color:#eee;}
+[dir="rtl"] .items li:after{right:20px;left:0;}
+
+// customize for pwa
+[data-pwa] .items{box-shadow:none;font-size:1.6rem;}
+[data-pwa] .items li a{padding: 10px;}
+
