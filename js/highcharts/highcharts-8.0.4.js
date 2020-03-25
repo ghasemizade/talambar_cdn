@@ -555,14 +555,19 @@ if($('html').attr('lang') === 'fa')
 		  credits:
 		  {
 		      text: 'جیبرس',
-		      href: '/',
-		      position:
-		      {
-		          x: -35,
-		          y: -7
-		      },
+		      href: 'https://jibres.ir',
 		      style: {
 		          fontWeight: 'bold'
+		      }
+		  }
+		}
+	);
+	Highcharts.setOptions(
+		{
+		  chart:
+		  {
+		      style: {
+		          fontFamily: 'IRANSans, Tahoma, sans-serif'
 		      }
 		  }
 		}
@@ -575,12 +580,7 @@ else
 		  credits:
 		  {
 		      text: 'Jibres',
-		      href: '/',
-		      position:
-		      {
-		          x: -35,
-		          y: -7
-		      },
+		      href: 'https://jibres.com',
 		      style: {
 		          fontWeight: 'bold'
 		      }
