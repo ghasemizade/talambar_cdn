@@ -14,11 +14,11 @@ function escPressed()
 		$myFocus.trigger("blur");
 		return true;
 	}
-	if($('form').length > 0)
-	{
-		// if we have form disable esc nav
-		return true;
-	}
+	// if($('form').length > 0)
+	// {
+	// 	// if we have form disable esc nav
+	// 	return true;
+	// }
 
 	// save press counter in sessionStorage
 	var pressCounter = null;
@@ -33,66 +33,18 @@ function escPressed()
 		sessionStorage.setItem("escCounter", pressCounter);
 	}
 
-	// detect url and try to go one level up
-	var myNewAddr    = window.location.protocol + '//';
-	var myHost       = window.location.host;
-	var myPath       = window.location.pathname;
-	var hardRedirect = null;
-	if(myPath.substring(0, 1) === '/')
+
+	if($('.titleBox a.back').length === 1)
 	{
-		myPath = myPath.substring(1);
-	}
-
-	if(myPath)
-	{
-		var myContent = $('body').attr('data-in');
-		var myPage    = $('body').attr('data-page');
-		// clean value
-		if(myContent === 'site')
-		{
-			myContent = null;
-		}
-		if(myPage === 'home')
-		{
-			myPage = null;
-			return false;
-		}
-
-		// try to remove path if exist
-		if(myPage)
-		{
-			// go to site base in all condition
-			myNewAddr += myHost + '/';
-			if(myContent)
-			{
-				// go to root of this contenct
-				myNewAddr += myContent;
-			}
-		}
-		else
-		{
-			myNewAddr    += myHost + '/';
-			// hardRedirect = true;
-		}
-
+		myNewAddr = $('.titleBox a.back').attr('href');
 	}
 	else
 	{
-		if(myHost.split('.').length > 2)
-		{
-			// we dont have path, try to remove subdomain if exist
-			myNewAddr    += myHost.replace(/^[^.]+\./g, "");
-			// hardRedirect = true;
-		}
-		else
-		{
-			myNewAddr = null;
-		}
+		return false;
 	}
 
 	if(myNewAddr)
 	{
-		console.log('Esc Pressed! Go to ' + myNewAddr + ' - hard is ' + hardRedirect);
 		if(pressCounter === 1)
 		{
 			// show info message
@@ -107,15 +59,8 @@ function escPressed()
 			return true;
 		}
 
-		// try to navigate to new url
-		if(hardRedirect)
-		{
-			location.replace(myNewAddr);
-		}
-		else
-		{
-			Navigate( { url: myNewAddr });
-		}
+		sessionStorage.setItem("escCounter", 0);
+		Navigate( { url: myNewAddr });
 	}
 	else if(typeof(Storage) !== "undefined")
 	{
