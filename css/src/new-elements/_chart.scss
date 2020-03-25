@@ -1,4 +1,13 @@
-.chart{direction:ltr;width:100%;max-height:600px;user-select:none;}
+.chart{direction:ltr;width:100%;max-height:600px;user-select:none;position:relative;}
+.chart::after{
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    right: 11px;
+    width: 25px;
+    height: 25px;
+    background:url('../logo/icon/svg/Jibres-Logo-icon.svg') no-repeat;
+}
 [dir="rtl"] .chart{text-align:right}
 
 .chart.x100{overflow:hidden;height:100px;}

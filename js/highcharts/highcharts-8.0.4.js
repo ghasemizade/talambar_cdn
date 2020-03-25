@@ -591,9 +591,6 @@ else
       {
           text: 'Jibres',
           href: 'https://jibres.com',
-          style: {
-              fontWeight: 'bold'
-          }
       }
     }
   );
