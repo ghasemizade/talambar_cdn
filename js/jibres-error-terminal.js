@@ -89,7 +89,17 @@ function resetForm(withjibres){
 			// 	resetForm(true);
 			// });
 
-			window.location.href = "https://jibres.ir";
+			if($('body').attr('data-reload') !== undefined)
+			{
+				// reload this page
+				window.location.reload();
+			}
+			else
+			{
+				// redirect to jibres.ir
+				window.location.href = "https://jibres.ir";
+			}
+
 		}, (lines.length * 100) + 1000);
 	}
 
