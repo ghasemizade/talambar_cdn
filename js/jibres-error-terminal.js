@@ -27,7 +27,7 @@ $('.four-oh-four-form').on('submit', function(e){
   var val = $(this).children($('.404-input')).val().toLowerCase();
   var href;
 
-  if (val === 'jibres'){
+  if (val === 'jibres' || $val === 'جیبرس'){
     showjibres();
   }else {
     resetForm();
@@ -55,22 +55,15 @@ function resetForm(withjibres){
 	function showjibres(){
 
 		$('.terminal').append("<div class='jibres'>"+
-								 "<p class='prompt'>	                             ,----,         ,----,                                          ,---,</p>" +
-								 "<p class='prompt'>       ,--.                ,/   .`|       ,/   .`|                     ,--.              ,`--.' |</p>" +
-								 "<p class='prompt'>   ,--/  /|    ,---,     ,`   .'  :     ,`   .'  :     ,---,.        ,--.'|   .--.--.    |   :  :</p>" +
-								 "<p class='prompt'>,---,': / ' ,`--.' |   ;    ;     /   ;    ;     /   ,'  .' |    ,--,:  : |  /  /    '.  '   '  ;</p>" +
-								 "<p class='prompt'>:   : '/ /  |   :  : .'___,/    ,'  .'___,/    ,'  ,---.'   | ,`--.'`|  ' : |  :  /`. /  |   |  |</p>" +
-								 "<p class='prompt'>|   '   ,   :   |  ' |    :     |   |    :     |   |   |   .' |   :  :  | | ;  |  |--`   '   :  ;</p>" +
-								 "<p class='prompt'>'   |  /    |   :  | ;    |.';  ;   ;    |.';  ;   :   :  |-, :   |   \\ | : |  :  ;_     |   |  '</p>" +
-								 "<p class='prompt'>|   ;  ;    '   '  ; `----'  |  |   `----'  |  |   :   |  ;/| |   : '  '; |  \\  \\    `.  '   :  |</p>" +
-								 "<p class='prompt'>:   '   \\   |   |  |     '   :  ;       '   :  ;   |   :   .' '   ' ;.    ;   `----.   \\ ;   |  ;</p>" +
-								 "<p class='prompt'>'   : |.  \\ |   |  '     '   :  |       '   :  |   '   :  ;/| '   : |  ; .'  /  /`--'  /  `--..`;  </p>" +
-								 "<p class='prompt'>|   | '_\\.' '   :  |     ;   |.'        ;   |.'    |   |    \\ |   | '`--'   '--'.     /  .--,_   </p>" +
-								 "<p class='prompt'>'   : |     ;   |.'      '---'          '---'      |   :   .' '   : |         `--'---'   |    |`.  </p>" +
-								 "<p class='prompt'>;   |,'     '---'                                  |   | ,'   ;   |.'                    `-- -`, ; </p>" +
-								 "<p class='prompt'>'---'                                              `----'     '---'                        '---`'</p>" +
-								 "<p class='prompt'>                                                              </p></div>");
-
+								 "<p class='prompt'>    /$$$$$ /$$ /$$</p>" +
+								 "<p class='prompt'>   |__  $$|__/| $$</p>" +
+								 "<p class='prompt'>      | $$ /$$| $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$</p>" +
+								 "<p class='prompt'>      | $$| $$| $$__  $$ /$$__  $$ /$$__  $$ /$$_____/</p>" +
+								 "<p class='prompt'> /$$  | $$| $$| $$  \ $$| $$  \__/| $$$$$$$$|  $$$$$$</p>" +
+								 "<p class='prompt'>| $$  | $$| $$| $$  | $$| $$      | $$_____/ \____  $$</p>" +
+								 "<p class='prompt'>|  $$$$$$/| $$| $$$$$$$/| $$      |  $$$$$$$ /$$$$$$$/</p>" +
+								 "<p class='prompt'> \______/ |__/|_______/ |__/       \_______/|_______/</p>" +
+								 "</div>");
 
 		var lines = $('.jibres p');
 		$.each(lines, function(index, line){
@@ -96,7 +89,7 @@ function resetForm(withjibres){
 			// 	resetForm(true);
 			// });
 
-			window.location.href = "https://jibres.com";
+			window.location.href = "https://jibres.ir";
 		}, (lines.length * 100) + 1000);
 	}
 
