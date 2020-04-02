@@ -88,15 +88,15 @@ function resetForm(withjibres){
 		), {duration: 100}
 
 		setTimeout(function(){
-			var gif;
+			// var gif;
 
-			$.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=jibres', function(result){
-				gif = result.data.image_url;
-				$('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
-				resetForm(true);
-			});
+			// $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=jibres', function(result){
+			// 	gif = result.data.image_url;
+			// 	$('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
+			// 	resetForm(true);
+			// });
 
-			// window.location.href = "https://jibres.com";
+			window.location.href = "https://jibres.com";
 		}, (lines.length * 100) + 1000);
 	}
 
