@@ -27,7 +27,7 @@ $('.four-oh-four-form').on('submit', function(e){
   var val = $(this).children($('.404-input')).val().toLowerCase();
   var href;
 
-  if (val === 'jibres' || $val === 'جیبرس'){
+  if (val === 'jibres' || val === 'جیبرس'){
     showjibres();
   }else {
     resetForm();
