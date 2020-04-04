@@ -10,6 +10,8 @@ body .mc-cycle {height:100%;left:0;overflow:hidden;position:fixed;top:0;width:10
 .emergencyMode .bg{background-image:url(../img/bg/jibres-emergency-1.jpg);}
 .botMode .bg{background-image:url(../img/bg/jibres-bot-1.jpg);}
 .unknownMode .bg{background-image:url(../img/bg/jibres-unknown-1.jpg);}
+.soonMode .bg{background-image:url(../img/bg/jibres-soon-1.jpg);}
+.lockMode .bg{background-image:url(../img/bg/jibres-lock-1.jpg);}
 
 
 @-webkit-keyframes pulse {
