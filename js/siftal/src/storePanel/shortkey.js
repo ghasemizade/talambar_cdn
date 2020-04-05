@@ -107,6 +107,8 @@ function event_corridor(_e, _self, _key)
     case '46':              // delete
       if(check_factor())
       {
+        // remove focus
+        // $(":focus").trigger("blur");
         // clearDropdown($('.dropdown.barCode'));
 
         var selectedRowEl = getSelectedRow(true);
