@@ -266,7 +266,7 @@
     var options = $.extend(true, {}, props.ajax,
     {
       url: props.url,
-      headers: { 'x-request-type': 'pushState' }
+      // headers: { 'x-request-type': 'pushState' }
     });
 
     var deferred = new jQuery.Deferred();
