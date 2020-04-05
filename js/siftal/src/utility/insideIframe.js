@@ -5,7 +5,7 @@ function insideIframe()
   {
     $('body').attr('data-iframe', '').html('');
 
-    self.location = $('body[base]').attr('href')+ "/billboard";
+    self.location = window.location.origin + "/billboard";
   }
 };
 
