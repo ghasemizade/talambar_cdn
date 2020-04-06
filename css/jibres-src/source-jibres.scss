@@ -98,6 +98,11 @@ Version       2.0.0
 // @import 'jibres-website/theme_start';
 
 
+// store website
+// @TODO transfer to new file
+@import 'jibres-store/header/header1';
+
+
 // form elements
 @import 'forms/general';
 @import 'forms/input';
