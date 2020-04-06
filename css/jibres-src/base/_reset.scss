@@ -250,6 +250,10 @@ pre {
   font-size: 1em;
   overflow: auto;
   box-sizing: border-box;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 kbd{
   margin: 0;
