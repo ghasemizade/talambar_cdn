@@ -285,6 +285,10 @@
   -webkit-user-select:$val;
   -moz-user-select:$val;
   user-select:$val;
+@if $val == text
+{
+  cursor: text;
+}
 }
 
 @mixin select-none() {
