@@ -195,11 +195,6 @@ body[data-panel]{background-color:#fafbfc;}
 
 
 // for api
-[data-panel][data-in="api"] body{background-color:#eee;}
-[data-panel][data-in="api"] pre{background-color:#333;color:#eee;padding:1em;margin-bottom:1em;@include user-select(text);}
-[data-panel][data-in="api"] code{background-color:rgba(0,0,0,0.4);color:#fff;padding:0 0.5em;}
-[data-panel][data-in="api"] .msg.url{direction:ltr;font-family:monospace, sans-serif;}
-[data-panel][data-in="api"] .msg.url span{@include user-select(text);}
 [data-panel][data-in="api"] .cbox ol{margin:0 2em;}
 [data-panel][data-in="api"] .cbox ol li{padding:0.5em 0 0;}
 

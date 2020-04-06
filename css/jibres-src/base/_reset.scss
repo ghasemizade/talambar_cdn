@@ -1,4 +1,4 @@
-object, iframe, blockquote, pre, abbr, address, cite, code, del, dfn, em, ins, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video{
+object, iframe, blockquote, abbr, address, cite, code, del, dfn, em, ins, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video{
   margin: 0;
   padding: 0;
   border: 0;
@@ -238,7 +238,23 @@ sup {top: -0.5em;}
 sub {middle: -0.25em;}
 
 /* standardize any monospaced elements */
-code, samp {font-family: monospace, sans-serif;font-size: 1em;display:inline-block;direction:ltr;box-sizing: border-box;}
+code {
+  font-family: monospace, sans-serif;
+  font-size: 1em;
+  display:inline-block;
+  direction:ltr;
+  box-sizing: border-box;
+  background-color:rgba(0,0,0,0.4);
+  color:#fff;
+  padding:0 0.5em;
+}
+samp {
+  font-family: monospace, sans-serif;
+  font-size: 1em;
+  display:inline-block;
+  direction:ltr;
+  box-sizing: border-box;
+}
 pre {
   white-space: pre; /* CSS2 */
   white-space: pre-wrap; /* CSS 2.1 */
@@ -249,11 +265,17 @@ pre {
   font-family: monospace, sans-serif;
   font-size: 1em;
   overflow: auto;
+  margin: 0;
+  padding: 1em;
+  border: 0;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
   box-sizing: border-box;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+  @include user-select(text);
+  background-color:#333;
+  color:#eee;
+  margin-bottom:1em;
 }
 kbd{
   margin: 0;

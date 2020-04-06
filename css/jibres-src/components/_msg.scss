@@ -78,3 +78,6 @@
   border-color: rgba(0,0,0,0.2);
   opacity: 0.85;
 }
+
+.msg.url{direction:ltr;font-family:monospace, sans-serif;}
+.msg.url span{@include user-select(text);}
