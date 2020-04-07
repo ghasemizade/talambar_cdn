@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Jibres Domain API",
-    "description": "On this version only IRNIC registrar can be support",
+    "description": "On this version only IRNIC registrar can be support\n\nYou can get PHP-SDK of this API from https://github.com/jibres/jibres-domain-php-sdk",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
