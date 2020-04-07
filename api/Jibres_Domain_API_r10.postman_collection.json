@@ -1,0 +1,240 @@
+{
+  "info": {
+    "name": "Jibres Domain API",
+    "description": "On this version only IRNIC registrar can be support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Contact",
+      "item": [
+        {
+          "name": "Fetch",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "value": "{{appkey}}",
+                "type": "text"
+              },
+              {
+                "key": "apikey",
+                "value": "{{apikey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}contact/fetch",
+              "host": [
+                "{{base_url}}contact"
+              ],
+              "path": [
+                "fetch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Load contact detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}contact?id=B",
+              "host": [
+                "{{base_url}}contact"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete contact",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}contact?id=B",
+              "host": [
+                "{{base_url}}contact"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update contact",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"isdefault\":true, \"title\":\"Sample\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}contact?id=B",
+              "host": [
+                "{{base_url}}contact"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add exists contact",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"contact_id\":\"ex66-xxxx\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}contact/add",
+              "host": [
+                "{{base_url}}contact"
+              ],
+              "path": [
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create new contact",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"firstname\":\"ex66-xxxx\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}contact/create",
+              "host": [
+                "{{base_url}}contact"
+              ],
+              "path": [
+                "create"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    }
+  ],
+  "variable": [
+    {
+      "id": "5bad6a11-91ec-45e1-9c3e-5492539c0cd3",
+      "key": "apikey",
+      "value": "Your api key",
+      "type": "string"
+    },
+    {
+      "id": "123680f4-bbf2-4143-9be2-79e6fa903d56",
+      "key": "appkey",
+      "value": "Your app key",
+      "type": "string"
+    },
+    {
+      "id": "f2501b82-5b16-448b-816e-c24eafe6dba2",
+      "key": "base_url",
+      "value": "https://core.jibres.ir/r10/irnic/",
+      "type": "string"
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
