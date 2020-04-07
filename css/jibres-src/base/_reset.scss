@@ -1,4 +1,4 @@
-object, iframe, blockquote, abbr, address, cite, code, del, dfn, em, ins, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video{
+object, iframe, blockquote, abbr, address, cite, del, dfn, em, ins, q, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video{
   margin: 0;
   padding: 0;
   border: 0;
@@ -239,14 +239,15 @@ sub {middle: -0.25em;}
 
 /* standardize any monospaced elements */
 code {
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
   font-family: monospace, sans-serif;
   font-size: 1em;
   display:inline-block;
   direction:ltr;
-  box-sizing: border-box;
-  background-color:rgba(0,0,0,0.4);
-  color:#fff;
   padding:0 0.5em;
+  margin: 0;
 }
 samp {
   white-space: pre; /* CSS2 */
