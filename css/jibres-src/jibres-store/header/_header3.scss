@@ -1,7 +1,7 @@
 #pageHeader{
 	overflow: hidden;
 }
-.jHeader2{
+.jHeader3{
 	text-align: center;
 	font-size: 1.6rem;
 	user-select: none;
@@ -9,33 +9,33 @@
 	padding: 5rem 0;
 	overflow: hidden;
 }
-.jHeader2 .logo{
+.jHeader3 .logo{
 	display: block;
 	width: 200px;
 	height: 60px;
 	overflow: hidden;
 }
-.jHeader2 .logo img{
+.jHeader3 .logo img{
 	display: block;
 	max-width: 200px;
 	max-height: 60px;
 }
 // enter
-.jHeader2 .enter{
+.jHeader3 .enter{
 	color: #333;
 	display: block;
 }
-.jHeader2 .enter:hover{
+.jHeader3 .enter:hover{
 	color: #777;
 }
-.jHeader2 .enter:focus{
+.jHeader3 .enter:focus{
 	color: #4080c0;
 }
-.jHeader2 .enter:active{
+.jHeader3 .enter:active{
 	color: #4080c0;
 }
 // cart
-.jHeader2 .cart{
+.jHeader3 .cart{
 	display: block;
 	max-width: 200px;
 	max-height: 60px;
@@ -49,7 +49,7 @@
 	position: relative;
 
 }
-.jHeader2 .cart:before{
+.jHeader3 .cart:before{
 	content: "\e125";
 	font-family: "siftal","tahoma" !important;
 	vertical-align: middle;
@@ -57,7 +57,7 @@
 	padding: 0 5px;
 	display: inline-block;
 }
-.jHeader2 .cart:after{
+.jHeader3 .cart:after{
 	content: attr(data-count);
 	vertical-align: middle;
 	background-color: #4080c0;
@@ -74,25 +74,25 @@
 	font-size: 1.4rem;
 	display: inline-block;
 }
-.jHeader2 .cart:hover{
+.jHeader3 .cart:hover{
 	color: #4080c0;
 	background-color: #ddd;
 }
-.jHeader2 .cart:focus{
+.jHeader3 .cart:focus{
 	background-color: #ccc;
 	color: #4080c0;
 }
-.jHeader2 .cart:active{
+.jHeader3 .cart:active{
 	background-color: #bbb;
 	color: #4080c0;
 }
 // search
-.jHeader2 .search{
+.jHeader3 .search{
 	display: block;
 	line-height: 28px;
 	font-size: 2rem;
 }
-.jHeader2 .search:before{
+.jHeader3 .search:before{
 	content: "\e03f";
 	font-family: "siftal","tahoma" !important;
 	vertical-align: middle;
@@ -100,12 +100,12 @@
 	display: inline-block;
 	color: #333;
 }
-.jHeader2 .search:hover{
+.jHeader3 .search:hover{
 	color: #777;
 }
-.jHeader2 .search:focus{
+.jHeader3 .search:focus{
 	color: #4080c0;
 }
-.jHeader2 .search:active{
+.jHeader3 .search:active{
 	color: #4080c0;
 }
