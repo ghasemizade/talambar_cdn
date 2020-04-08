@@ -4,17 +4,19 @@
 }
 .jSlider1 .slick-next {
     z-index: 1;
-    right: 50px;
+    right: 2.5rem;
+    background: transparent;
 }
 [dir='rtl'] .jSlider1 .slick-next{
 	right: auto;
-	left: 50px;
+	left: 2.5rem;
 }
 .jSlider1 .slick-prev {
     z-index: 1;
-    left: 50px;
+    left: 2.5rem;
+    background: transparent;
 }
 [dir='rtl'] .jSlider1 .slick-prev{
 	left: auto;
-	right: 50px;
+	right: 2.5rem;
 }
