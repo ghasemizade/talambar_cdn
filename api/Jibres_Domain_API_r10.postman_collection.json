@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Jibres Domain API",
-    "description": "On this version only IRNIC registrar can be support\n\nYou can get PHP-SDK of this API from https://github.com/jibres/jibres-domain-php-sdk",
+    "description": "# On this version only IRNIC registrar can be support\n\n\n[You can get PHP-SDK of this API from](https://github.com/jibres/jibres-domain-php-sdk)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -25,12 +25,18 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}contact/fetch",
+              "raw": "{{base_url}}contact/fetch?all=1",
               "host": [
                 "{{base_url}}contact"
               ],
               "path": [
                 "fetch"
+              ],
+              "query": [
+                {
+                  "key": "all",
+                  "value": "1"
+                }
               ]
             }
           },
@@ -53,14 +59,14 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}contact?id=B",
+              "raw": "{{base_url}}contact?id=S",
               "host": [
                 "{{base_url}}contact"
               ],
               "query": [
                 {
                   "key": "id",
-                  "value": "B"
+                  "value": "S"
                 }
               ]
             }
@@ -193,7 +199,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"firstname\":\"ex66-xxxx\"}",
+              "raw": "{\"title\": \"Test\",\"firstname\": \"Test\",\"lastname\": \"Test\",\"nationalcode\": \"1234567890\",\"email\": \"Test@test.com\",\"country\": \"Test\",\"province\": \"Test\",\"city\": \"Test\",\"postcode\": \"Test\",\"phone\": \"Test\",\"address\": \"Test\"}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -214,23 +220,291 @@
         }
       ],
       "protocolProfileBehavior": {}
+    },
+    {
+      "name": "DNS",
+      "item": [
+        {
+          "name": "Fetch",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "value": "{{appkey}}",
+                "type": "text"
+              },
+              {
+                "key": "apikey",
+                "value": "{{apikey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}dns/fetch",
+              "host": [
+                "{{base_url}}dns"
+              ],
+              "path": [
+                "fetch"
+              ],
+              "query": [
+                {
+                  "key": "all",
+                  "value": "1",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Load dns detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}dns?id=B",
+              "host": [
+                "{{base_url}}dns"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete contact",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}dns?id=B",
+              "host": [
+                "{{base_url}}dns"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update contact",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"isdefault\":true, \"title\":\"Sample\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}dns?id=B",
+              "host": [
+                "{{base_url}}dns"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create new DNS",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Test\",\"ns1\": \"ns1.jibres.com\",\"ns2\": \"ns2.jibres.com\",\"ip1\": \"192.168.1.1\",\"ip2\": \"192.168.1.2\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}dns/create",
+              "host": [
+                "{{base_url}}dns"
+              ],
+              "path": [
+                "create"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Domain",
+      "item": [
+        {
+          "name": "Domain check",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "value": "{{appkey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}domain/check?domain=sellandenjoy",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "check"
+              ],
+              "query": [
+                {
+                  "key": "domain",
+                  "value": "sellandenjoy"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Poll",
+      "item": [
+        {
+          "name": "Get poll request",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "value": "{{appkey}}",
+                "type": "text"
+              },
+              {
+                "key": "apikey",
+                "value": "{{apikey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}poll",
+              "host": [
+                "{{base_url}}poll"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "2f0b8608-8bd5-43a0-98ec-7868340403a2",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "f77e9a1a-5ed6-4383-973b-1b967575f3da",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
     }
   ],
   "variable": [
     {
-      "id": "5bad6a11-91ec-45e1-9c3e-5492539c0cd3",
-      "key": "apikey",
-      "value": "Your api key",
-      "type": "string"
-    },
-    {
-      "id": "123680f4-bbf2-4143-9be2-79e6fa903d56",
+      "id": "222d8468-57e3-4c02-a4e4-dcd4ba3f23ea",
       "key": "appkey",
       "value": "Your app key",
       "type": "string"
     },
     {
-      "id": "f2501b82-5b16-448b-816e-c24eafe6dba2",
+      "id": "31051f12-d57c-4032-9de1-dd9df69ac9b8",
+      "key": "apikey",
+      "value": "Your api key",
+      "type": "string"
+    },
+    {
+      "id": "daa3bf79-6831-4ceb-a4a6-d5125d95f6b6",
       "key": "base_url",
       "value": "https://core.jibres.ir/r10/irnic/",
       "type": "string"
