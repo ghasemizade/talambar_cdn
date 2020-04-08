@@ -1,0 +1,20 @@
+.jSlider1{
+	overflow: hidden;
+	border-radius: 0.5rem;
+}
+.jSlider1 .slick-next {
+    z-index: 1;
+    right: 50px;
+}
+[dir='rtl'] .jSlider1 .slick-next{
+	right: auto;
+	left: 50px;
+}
+.jSlider1 .slick-prev {
+    z-index: 1;
+    left: 50px;
+}
+[dir='rtl'] .jSlider1 .slick-prev{
+	left: auto;
+	right: 50px;
+}
