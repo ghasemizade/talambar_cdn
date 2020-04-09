@@ -1,10 +1,511 @@
 {
   "info": {
     "name": "Jibres Domain API",
-    "description": "# On this version only IRNIC registrar can be support\n\n\n[You can get PHP-SDK of this API from](https://github.com/jibres/jibres-domain-php-sdk)",
+    "description": "# Jibres APIs\n\n## IRNIC Domain API\n\n> On this version only IRNIC registrar can be support\n\n[You can get PHP-SDK of this API from](https://github.com/jibres/jibres-domain-php-sdk)\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
+    {
+      "name": "Domain",
+      "item": [
+        {
+          "name": "Domain Check",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "value": "{{appkey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}domain/check?domain=sellandenjoy",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "check"
+              ],
+              "query": [
+                {
+                  "key": "domain",
+                  "value": "sellandenjoy"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Fetch",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "value": "{{apikey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}domain/fetch",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "fetch"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Available",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}domain/available?domain=jibres.ir",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "available"
+              ],
+              "query": [
+                {
+                  "key": "domain",
+                  "value": "jibres.ir"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}domain/detail?domain=rezamohiti.ir",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "detail"
+              ],
+              "query": [
+                {
+                  "key": "domain",
+                  "value": "rezamohiti.ir"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Auto renew",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"autorenew\": true}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain?id=S",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "S"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Holder",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"bill\": \"rm1796-irnic\", \"tech\": \"rm1796-irnic\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain/holder?id=S",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "holder"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "S"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Lock / Unlock",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"lock\": true}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain?id=S",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "S"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain DNS",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"ns1\": \"ns1.jibresdns.ir\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain/dns?id=S",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "dns"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "S"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Remove",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain?id=S",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "S"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Action",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://core.jibres.local/fa/r10/irnic/domain/action?id=B",
+              "protocol": "https",
+              "host": [
+                "core",
+                "jibres",
+                "local"
+              ],
+              "path": [
+                "fa",
+                "r10",
+                "irnic",
+                "domain",
+                "action"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "B"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Buy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"agree\" : 1, \"domain\": \"rezamohiti.ir\", \"period\" : \"1year\", \"nic_id\" : \"rm1796-irnic\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain/buy",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "buy"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Renew",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"agree\" : 1, \"domain\": \"rezamohiti.ir\", \"period\" : \"1year\", \"nic_id\" : \"rm1796-irnic\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain/renew",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "renew"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Domain Transfer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "appkey",
+                "type": "text",
+                "value": "{{appkey}}"
+              },
+              {
+                "key": "apikey",
+                "type": "text",
+                "value": "{{apikey}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"agree\" : 1, \"domain\": \"rezamohiti.ir\", \"period\" : \"1year\", \"nic_id\" : \"rm1796-irnic\", \"pin\":\"abc123\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}domain/transfer",
+              "host": [
+                "{{base_url}}domain"
+              ],
+              "path": [
+                "transfer"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
     {
       "name": "Contact",
       "item": [
@@ -402,41 +903,6 @@
       "protocolProfileBehavior": {}
     },
     {
-      "name": "Domain",
-      "item": [
-        {
-          "name": "Domain check",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "appkey",
-                "value": "{{appkey}}",
-                "type": "text"
-              }
-            ],
-            "url": {
-              "raw": "{{base_url}}domain/check?domain=sellandenjoy",
-              "host": [
-                "{{base_url}}domain"
-              ],
-              "path": [
-                "check"
-              ],
-              "query": [
-                {
-                  "key": "domain",
-                  "value": "sellandenjoy"
-                }
-              ]
-            }
-          },
-          "response": []
-        }
-      ],
-      "protocolProfileBehavior": {}
-    },
-    {
       "name": "Poll",
       "item": [
         {
@@ -468,43 +934,21 @@
       "protocolProfileBehavior": {}
     }
   ],
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "id": "2f0b8608-8bd5-43a0-98ec-7868340403a2",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    },
-    {
-      "listen": "test",
-      "script": {
-        "id": "f77e9a1a-5ed6-4383-973b-1b967575f3da",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    }
-  ],
   "variable": [
     {
-      "id": "222d8468-57e3-4c02-a4e4-dcd4ba3f23ea",
+      "id": "9fdc7f7d-16dd-4dc4-97b8-083a396b3cbb",
       "key": "appkey",
       "value": "Your app key",
       "type": "string"
     },
     {
-      "id": "31051f12-d57c-4032-9de1-dd9df69ac9b8",
+      "id": "631407b4-89d5-4144-bc4c-1a8999814614",
       "key": "apikey",
       "value": "Your api key",
       "type": "string"
     },
     {
-      "id": "daa3bf79-6831-4ceb-a4a6-d5125d95f6b6",
+      "id": "a70222cd-f000-40ac-a475-ce895f616caf",
       "key": "base_url",
       "value": "https://core.jibres.ir/r10/irnic/",
       "type": "string"
