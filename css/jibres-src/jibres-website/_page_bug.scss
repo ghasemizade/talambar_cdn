@@ -2,7 +2,7 @@
   background-color:#000;
 }
 [data-in="site"][data-page="bug"] #jibresHeader{
-  background-color:#000;
+  background-color:transparent;
 }
 [data-in="site"][data-page="bug"] #jibresHeader nav a{
   color:#fff;
@@ -11,10 +11,10 @@
   color:#fff;
 }
 [data-in="site"][data-page="bug"] #jibresPageTitle{
-  background-color:#000;
+  background-color:transparent;
 }
 [data-in="site"][data-page="bug"] .jibresBanner::before{
-  background:#000;
+  background:transparent;
 }
 [data-in="site"][data-page="bug"] .jibresBanner .fit.zero.love{
   width: 500px;
@@ -28,3 +28,13 @@
 }
 
 
+#matrix{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index:-1;
+}
