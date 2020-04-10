@@ -19,6 +19,14 @@
 [data-in="site"][data-page="bug"] .jibresBanner .fit.zero.love{
   width: 500px;
 }
+[data-in="site"][data-page="bug"] .jibresBanner .fit{
+  background: #000;
+  color: #aaa;
+  transition:0.3s;
+}
+[data-in="site"][data-page="bug"] .jibresBanner .fit:hover{
+  color: #fff;
+}
 [data-in="site"][data-page="bug"] #jibresSupportLine{
   display: none;
 }
@@ -26,11 +34,20 @@
   background:#000;
   color:#999;
 }
+[data-in="site"][data-page="bug"] .input input{
+  background: rgba(255,255,255,0.1);
+  color: #eee;
+}
+[data-in="site"][data-page="bug"] .txt{
+  background: rgba(255,255,255,0.1);
+  color: #eee;
+}
+
 
 
 #matrix{
   position: fixed;
-  height: 100%;
+  // height: 100%;
   width: 100%;
   top:0;
   bottom: 0;
