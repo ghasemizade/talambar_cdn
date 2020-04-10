@@ -20,18 +20,22 @@
   width: 500px;
 }
 [data-in="site"][data-page="bug"] .jibresBanner .fit{
-  background: #000;
+  background: rgba(0,0,0,0.7);
   color: #aaa;
   transition:0.3s;
 }
 [data-in="site"][data-page="bug"] .jibresBanner .fit:hover{
-  color: #fff;
+  background: rgba(0,0,0,0.8);
+  color: #ccc;
+}
+[data-in="site"][data-page="bug"] .jibresBanner a{
+  color: #eee;
 }
 [data-in="site"][data-page="bug"] #jibresSupportLine{
   display: none;
 }
 [data-in="site"][data-page="bug"] #jibresFooter{
-  background:#000;
+  background:rgba(0,0,0,0.7);
   color:#999;
 }
 [data-in="site"][data-page="bug"] .input input{
