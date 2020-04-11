@@ -8,6 +8,19 @@
     height: 25px;
     background:url('../logo/icon/svg/Jibres-Logo-icon.svg') no-repeat;
 }
+.chart[data-hint]::before{
+    content: attr(data-hint);
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0;
+    width: 70%;
+    line-height: 25px;
+    text-align: center;
+    margin:0 auto;
+    color: #ccc;
+    z-index: 2;
+}
 .chart:active{
     transform: scale(0.95);
 }
