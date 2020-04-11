@@ -60,10 +60,12 @@ function pushStateSiftal(_direct)
     calcProductMargin();
   }
 
-  callFunc('pushState', _direct);
-  callFunc('pushStateFinal', _direct);
-  callFunc('chartDrawer', _direct);
-  callFunc('pushStateGA', _direct);
+  setTimeout(function(){
+    callFunc('pushState', _direct);
+    callFunc('pushStateFinal', _direct);
+    callFunc('chartDrawer', _direct);
+    callFunc('pushStateGA', _direct);
+  }, 50)
 }
 
 
