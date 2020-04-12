@@ -9,7 +9,7 @@
   text-align: center;
   transition: 0.2s ease-in-out;
   height: 10rem;
-  min-width: 5rem;
+  min-width: 7rem;
 }
 .stat.active{
 	transform: scale(0.95);
@@ -24,7 +24,7 @@
 	color: #333;
 	line-height: 2rem;
 	height: 3rem;
-	padding: 1rem 1rem 0;
+	padding: 1rem 0.5rem 0;
 	margin: 0;
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -38,7 +38,7 @@
 	color: #777;
 	line-height: 5rem;
 	height: 7rem;
-	padding: 1rem 1rem;
+	padding: 1rem 0.5em;
 	margin: 0;
   overflow: hidden;
 	text-overflow: ellipsis;
@@ -65,32 +65,54 @@
 	background-color: #e6e5eb;
 	transform: scale(0.8);
 }
-
+// size x70
 .stat.x70{
   height: 7rem;
   font-size: 1.2rem;
+  min-width: 6rem;
 }
 .stat.x70 h3{
-  padding: 0.5rem 0.5rem 0;
+  padding-top: 0.5rem;
 }
 .stat.x70 .val{
 	line-height: 3rem;
 	font-size: 1.5em;
-	padding: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	height: 4rem;
 }
-
+// size x50
 .stat.x50{
   height: 5rem;
   font-size: 1rem;
+  min-width: 5rem;
 }
 .stat.x50 h3{
-  padding: 0 0.5rem;
+  padding-top: 0;
   height: 2rem;
 }
 .stat.x50 .val{
 	line-height: 2rem;
 	font-size: 1.5em;
-	padding: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	height: 3rem;
+}
+// size x120
+.stat.x120{
+  height: 12rem;
+  font-size: 1.8rem;
+  min-width: 8rem;
+}
+.stat.x120 h3{
+  padding-top: 1rem;
+  line-height: 4rem;
+  height: 5rem;
+}
+.stat.x120 .val{
+	line-height: 5rem;
+	font-size: 1.5em;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	height: 7rem;
 }
