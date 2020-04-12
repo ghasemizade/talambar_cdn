@@ -11,6 +11,12 @@
   height: 10rem;
   min-width: 7rem;
 }
+.stat.ok{
+  background-color: #dcedc8;
+}
+.stat.nok{
+  background-color: #ffe082;
+}
 .stat.active{
 	transform: scale(0.95);
 }
