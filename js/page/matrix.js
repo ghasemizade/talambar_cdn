@@ -26,6 +26,6 @@ function runMatrix()
     });
   }
 
-  if (window.screen.width > 720) window.setInterval(matrix, 50);
+  if (window.screen.width >= 300) window.setInterval(matrix, 50);
 }
 runMatrix();
