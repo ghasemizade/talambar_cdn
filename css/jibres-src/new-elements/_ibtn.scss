@@ -9,7 +9,6 @@
 	border-radius:.25rem;
 	white-space:nowrap;
 	vertical-align: middle;
-	border: 1px solid transparent;
 	height:36px;
 	line-height:24px;
 	font-weight:700;
@@ -45,11 +44,10 @@
 	min-width: 62px;
 }
 .ibtn.wide span{
-	min-width: 82px;
+	min-width: 80px;
 }
 .ibtn:hover{
-	background-color:#e2e2e2;
-	border-color: #fff;
+	transform: scale(0.9);
 	color:#222;
 }
 .ibtn:focus{
@@ -85,28 +83,27 @@
 }
 
 // sizes
-.ibtn.xs{
-	height:20px;
-	font-size: 60%;
-	padding: 1px 1em;
+.ibtn.x25{
+	height:2.5rem;
+	font-size: 1rem;
+	line-height:15px;
+}
+.ibtn.x25 i{
+	width: 25px;
+}
+.ibtn.x25.wide span{
+	min-width: 60px;
+}
+.ibtn.x30{
+	height:3rem;
+	font-size: 1.2rem;
 	line-height:18px;
 }
-.ibtn.sm{
-	height:30px;
-	font-size: 75%;
-	padding: 5px 1em;
-	line-height:20px;
+.ibtn.x30 i{
+	width: 30px;
 }
-.ibtn.lg{
-	height:50px;
-	font-size: 120%;
-	padding: 10px 1em;
-	line-height:30px;
+.ibtn.x30.wide span{
+	min-width: 70px;
 }
-.ibtn.xl{
-	height:60px;
-	font-size: 150%;
-	padding: 15px 1em;
-	line-height:30px;
-}
+
 .ibtn.hauto{height:auto;white-space:normal;}
