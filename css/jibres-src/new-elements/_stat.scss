@@ -8,11 +8,16 @@
   border-radius: $myRadius;
   text-align: center;
   transition: 0.2s ease-in-out;
-  min-height: 10rem;
+  height: 10rem;
+  min-width: 5rem;
+}
+.stat.active{
+	transform: scale(0.95);
+	border-bottom: 2px solid #0E6EB8;
 }
 .stat h3{
 	display: block;
-	font-size: 1.4rem;
+	font-size: 1em;
 	font-weight: 700;
 	color: #333;
 	line-height: 2rem;
@@ -27,15 +32,15 @@
 }
 .stat .val{
 	display: block;
-	font-size: 3rem;
+	font-size: 2em;
 	color: #777;
 	line-height: 5rem;
 	height: 7rem;
 	padding: 1rem 1rem;
 	margin: 0;
-    overflow: hidden;
+  overflow: hidden;
 	text-overflow: ellipsis;
-    white-space: nowrap;
+  white-space: nowrap;
 }
 .stat footer{
 	display: block;
@@ -58,3 +63,15 @@
 	transform: scale(0.8);
 }
 
+.stat.x70{
+  height: 7rem;
+  font-size: 1.2rem;
+}
+.stat.x70 h3{
+  padding: 0.5rem 0.5rem 0;
+}
+.stat.x70 .val{
+	line-height: 3rem;
+	padding: 0.5rem;
+	height: 4rem;
+}
