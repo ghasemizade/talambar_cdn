@@ -12,9 +12,14 @@
 [dir="rtl"] .items li .go::after{content: "\e0c1";float: left;}
 [dir="rtl"] .items li:after{right:20px;left:0;}
 // extra icon
-.items li .go.detail::after{content: "\e03a"}
-.items li .go.search::after{content: "\e03f"}
-.items li .go.plus::after{content: "\e03e"}
+.items li .go.detail::after{content:"\e03a";}
+.items li .go.search::after{content:"\e03f";}
+.items li .go.plus::after{content:"\e03e";}
+.items li .go.check::after{content:"\6b";}
+.items li .go.times::after{content:"\e041";}
+.items li .go.stop::after{content:"\e24e";}
+.items li .go.ok::after{color: #4CC790}
+.items li .go.nok::after{color: #ff5722}
 // reaction
 .items li a:hover{background-color: #f6f6f6}
 .items li a:focus{background-color: #efefef}
