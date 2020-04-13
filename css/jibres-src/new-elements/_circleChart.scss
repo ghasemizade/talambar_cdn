@@ -11,13 +11,28 @@
   overflow: hidden;
   padding: 0.5rem;
 }
+// reaction
+a.circularChartBox:hover{
+	transform: scale(0.9);
+	background-color: #f9f9f9;
+}
+.circularChartBox:focus{
+	background-color: #f6f6f6;
+}
+.circularChartBox:focus h3{
+	opacity: 1;
+}
+.circularChartBox:active{
+	background-color: #e6e5eb;
+	transform: scale(0.8);
+}
 .circularChartBox h3{
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
 	color: #333;
-	line-height: 3rem;
-	height: 3rem;
+	line-height: 2rem;
+	height: 2rem;
 	padding: 0;
 	margin: 0;
   overflow: hidden;
@@ -27,14 +42,21 @@
 	transition: 0.3s;
 }
 .circularChart{
-	width: 15rem;
-	height: 15rem;
+	width: 10rem;
+	height: 10rem;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
 	margin: 1rem auto;
 }
-
+.circularChart.x150{
+	width: 15rem;
+	height: 15rem;
+}
+.circularChart.x200{
+	width: 20rem;
+	height: 20rem;
+}
 .circularChart svg {
   display: block;
   margin: 0 auto;
