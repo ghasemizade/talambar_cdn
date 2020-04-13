@@ -43,7 +43,7 @@ a.circularChartBox:hover{
 }
 .circularChart{
 	width: 10rem;
-	height: 10rem;
+	min-height: 10rem;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -61,9 +61,6 @@ a.circularChartBox:hover{
   display: block;
   margin: 0 auto;
 }
-.circularChart svg.orange .circle {stroke: #ff9f00;}
-.circularChart svg.green .circle {stroke: #4CC790;}
-.circularChart svg.blue .circle {stroke: #3c9ee5;}
 .circularChart .percentage {
   fill: #aaa;
   font-family: sans-serif;
@@ -77,8 +74,15 @@ a.circularChartBox:hover{
 }
 .circularChart .circle {
   fill: none;
+  stroke: #000;
   stroke-width: 2.8;
   stroke-linecap: round;
   animation: circularChartProgress 1s ease-out forwards;
 }
 @keyframes circularChartProgress { 0% { stroke-dasharray: 0 100; }}
+.circularChart[data-color='red'] .circle {stroke: #dc2d2d;}
+.circularChart[data-color='green'] .circle {stroke: #4CC790;}
+.circularChart[data-color='blue'] .circle {stroke: #3c9ee5;}
+.circularChart[data-color='orange'] .circle {stroke: #ff9f00;}
+.circularChart[data-color='yellow'] .circle {stroke: #fdd835;}
+
