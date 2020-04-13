@@ -1,5 +1,5 @@
 
-function pushStateFinal()
+function pageScript()
 {
   $('[data-page="android_splash"] input[type=radio][name=theme]').change(function() {
     var myColors = this.value.split('_');
@@ -43,3 +43,5 @@ function pushStateFinal()
   applySplashColors();
 
 }
+
+pageScript();

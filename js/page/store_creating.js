@@ -1,4 +1,4 @@
-function pushStateFinal()
+function pageScript()
 {
 	$.ajax(
 	{
@@ -27,3 +27,6 @@ function pushStateFinal()
 
 	$("#linkmhe").delay( (60 * 1000) ).fadeIn( 400 );
 }
+
+
+pageScript();

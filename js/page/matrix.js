@@ -1,4 +1,4 @@
-function runMatrix()
+function pageScript()
 {
   const c = document.getElementById('matrix');
   const r = document.getElementById('root');
@@ -28,4 +28,4 @@ function runMatrix()
 
   if (window.screen.width >= 300) window.setInterval(matrix, 50);
 }
-runMatrix();
+pageScript();

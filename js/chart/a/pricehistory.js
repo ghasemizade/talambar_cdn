@@ -1,8 +1,8 @@
-function chartDrawer()
+function myChart()
 {
   if($("#chartdiv").length == 1){myChartProductPrice();}
 }
-
+myChart();
 
 
 
