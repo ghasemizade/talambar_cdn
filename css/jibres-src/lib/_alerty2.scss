@@ -237,7 +237,8 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 .alerty2-popup .alerty2-close{position:absolute;top:0;right:0;justify-content:center;width:1.2em;height:1.2em;padding:0;transition:color .1s ease-out;border:none;border-radius:0;background:transparent;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer;overflow:hidden}
 .alerty2-popup .alerty2-close:hover{-webkit-transform:none;transform:none;color:#f27474}
 .alerty2-popup > .alerty2-input,.alerty2-popup > .alerty2-file,.alerty2-popup > .alerty2-textarea,.alerty2-popup > .alerty2-select,.alerty2-popup > .alerty2-radio,.alerty2-popup > .alerty2-checkbox{display:none}
-.alerty2-popup .alerty2-content{justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:300;line-height:normal;z-index:1;word-wrap:break-word}
+.alerty2-popup .alerty2-content{justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;line-height:normal;z-index:1;word-wrap:break-word}
+[dir='rtl'] .alerty2-popup .alerty2-content{line-height: 1.7;}
 .alerty2-popup #alerty2-content{text-align:center}
 .alerty2-popup .alerty2-input,.alerty2-popup .alerty2-file,.alerty2-popup .alerty2-textarea,.alerty2-popup .alerty2-select,.alerty2-popup .alerty2-radio,.alerty2-popup .alerty2-checkbox{margin:1em auto}
 .alerty2-popup .alerty2-input,.alerty2-popup .alerty2-file,.alerty2-popup .alerty2-textarea{width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;font-size:1.125em;box-shadow:inset 0 1px 1px rgba(0,0,0,0.06);box-sizing:border-box}
