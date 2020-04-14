@@ -42,11 +42,13 @@
   background-color: #ddd;
 }
 .box header h2{
-  display: inline-block;
   font-size: 1.6rem;
   line-height: 50px;
   font-weight: 900;
   margin: 0;
+}
+.box header h2:not(.f){
+  display: inline-block;
 }
 .box header h3{
   display: inline-block;
