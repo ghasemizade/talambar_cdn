@@ -5,7 +5,10 @@ function myChart()
   if($("#chartdiv").length == 1){chartdiv();}
 
 }
-myChart();
+
+$(document).ready(function(){
+  myChart();
+});
 
 
 

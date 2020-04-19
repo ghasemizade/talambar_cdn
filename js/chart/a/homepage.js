@@ -3,7 +3,10 @@ function myChart()
   if($("#chartdiv").length == 1){highChart();}
 }
 
-myChart();
+$(document).ready(function(){
+  myChart();
+});
+
 
 
 

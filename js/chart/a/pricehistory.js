@@ -2,7 +2,11 @@ function myChart()
 {
   if($("#chartdiv").length == 1){myChartProductPrice();}
 }
-myChart();
+
+$(document).ready(function(){
+  myChart();
+});
+
 
 
 
