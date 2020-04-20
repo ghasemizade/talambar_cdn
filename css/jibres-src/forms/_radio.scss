@@ -38,7 +38,7 @@
 .radio1 input:not(:checked):focus+label:first-of-type::before{border-color:rgba(128, 192, 208, 0.9)}
 .radio1 input:checked:focus+label:first-of-type::before{opacity: 0.7}
 .radio1 input:disabled+label:first-of-type{color:#bbb;cursor:auto}
-.radio1 input:disabled+label:first-of-type::before{background-color:#ddd}
+.radio1 input:disabled+label:first-of-type::before{background-color:rgba(0,0,0,0.1)}
 [dir="rtl"] .radio1 label:first-of-type::before{margin-right:0;margin-left:10px;}
 [dir="rtl"] .radio1 label:first-of-type::after{left:0;right:13px;}
 
