@@ -17,6 +17,12 @@
 .stat.nok{
   background-color: #ffe082;
 }
+.stat.available{
+  background-color: #d4edda;
+}
+.stat.unavailable{
+  background-color: #f8d7da;
+}
 .stat.active{
 	transform: scale(0.95);
 }
