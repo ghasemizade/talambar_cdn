@@ -17,12 +17,21 @@
 .stat.nok{
   background-color: #ffe082;
 }
-.stat.available{
-  background-color: #d4edda;
+// available
+.stat.available h3{
+  color: #2e7d32;
 }
-.stat.unavailable{
-  background-color: #f8d7da;
+.stat.available .val{
+	border-bottom: 2px solid #20b040;
 }
+// unavailable
+.stat.unavailable h3{
+  color: #fa4444;
+}
+.stat.unavailable .val{
+	border-bottom: 2px solid #fa4444;
+}
+// active
 .stat.active{
 	transform: scale(0.95);
 }
