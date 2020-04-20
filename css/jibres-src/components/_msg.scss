@@ -25,6 +25,7 @@
   background-color:#f7f7f7;
   color: #333;
 }
+.msg.glass{opacity: 0.5;}
 [dir="rtl"] .msg{
   line-height: 2;
 }
@@ -81,3 +82,4 @@
 
 .msg.url{direction:ltr;font-family:monospace, sans-serif;}
 .msg.url span{@include user-select(text);}
+

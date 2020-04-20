@@ -24,8 +24,9 @@
 [data-in='enter'] .logo a:active img{background-color:rgba(0,0,0,0.3);}
 [data-in='enter'] .logo img{display:block;max-width:100%;height:90px;width:90px;margin:0 auto;transition:0.3s;overflow:hidden;text-align:center;background-color:rgba(0,0,0,0.05);padding:2px;border-radius:50%;}
 [data-in='enter'] .logo span{display:none !important}
-[data-in='enter'] #enterBox h2{font-size:1.4em;overflow:hidden;margin:10px 0;text-align:center;color:#fff;line-height:1.7em;}
+[data-in='enter'] #enterBox h2{font-size:1.3rem;overflow:hidden;margin:10px 0;text-align:center;color:#fff;line-height:1.7em;}
 [data-in='enter'] #enterBox h2 abbr{cursor:pointer;}
+[data-in='enter'] #enterBox .msg{font-size: 1.1rem;}
 [data-in='enter'] .text p{transition:0.3s;padding:0.5em}
 [data-in='enter'] .text p:hover{background-color:rgba(0,0,0,0.1);}
 [data-in='enter'] .text a{color:#eee;padding:1em 0.5em;display:inline-block;transition:0.3s;}
