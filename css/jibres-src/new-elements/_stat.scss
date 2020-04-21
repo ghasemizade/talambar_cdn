@@ -72,20 +72,12 @@
 	line-height: 3rem;
 }
 // reaction
-.stat:hover{
-	transform: scale(0.9);
-	background-color: #f6f6f6;
-}
-.stat:focus{
-	background-color: #efefef;
-}
-.stat:focus h3{
-	opacity: 1;
-}
-.stat:active{
-	background-color: #e6e5eb;
-	transform: scale(0.8);
-}
+a.stat:hover{transform: scale(0.9);}
+.stat:hover{background-color: #f6f6f6;}
+.stat:focus{background-color: #efefef;}
+.stat:focus h3{opacity: 1;}
+a.stat:active{transform: scale(0.8);}
+.stat:active{background-color: #e6e5eb;}
 // size x70
 .stat.x70{
   height: 7rem;
