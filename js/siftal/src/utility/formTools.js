@@ -1,38 +1,9 @@
 function formToolsRunner()
 {
-  rangeSlider1();
   toggleRadio();
+  radioSave();
 }
 
-var rangeSlider1 = function()
-{
-  var mySlider = $('.rangeSlider1');
-  if(mySlider.length < 1)
-  {
-    return;
-  }
-  var range  = $('.rangeSlider1 input');
-  var value  = $('.rangeSlider1 output');
-
-  mySlider.each(function()
-  {
-    value.each(function()
-    {
-      var value = $(this).prev().attr('value');
-      console.log(value);
-      if(!value)
-      {
-        value = '-';
-      }
-      $(this).html(value);
-    });
-
-    range.on('input', function()
-    {
-      $(this).next(value).html(this.value);
-    });
-  });
-};
 
 
 function toggleRadio()
@@ -55,4 +26,34 @@ function toggleRadio()
       }, 1000)
     }
   });
+}
+
+
+function radioSave()
+{
+  $('form[data-patch] input[type=radio]').on("click", function(event)
+  {
+    var myForm = $(this).parents('form[data-patch]');
+    if(myForm.length === 1)
+    {
+      $(myForm).ajaxify();
+    }
+  });
+
+  $('form[data-patch] input[type=radio]').keydown(function(_e)
+  {
+    var arrowKeys = [37, 38, 39, 40];
+    if (arrowKeys.indexOf(_e.which) !== -1)
+    {
+      if(_e.shiftKey === true)
+      {
+
+      }
+      else
+      {
+        return false;
+      }
+    }
+  });
+
 }
