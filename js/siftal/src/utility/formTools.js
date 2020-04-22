@@ -2,6 +2,7 @@ function formToolsRunner()
 {
   toggleRadio();
   radioSave();
+  checkboxSave();
 }
 
 
@@ -55,5 +56,19 @@ function radioSave()
       }
     }
   });
-
 }
+
+
+
+function checkboxSave()
+{
+  $('form[data-patch] input[type=checkbox]').on("click", function(event)
+  {
+    var myForm = $(this).parents('form[data-patch]');
+    if(myForm.length === 1)
+    {
+      $(myForm).ajaxify();
+    }
+  });
+}
+
