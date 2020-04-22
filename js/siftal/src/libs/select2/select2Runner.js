@@ -33,10 +33,17 @@ function selectRunner()
   $(document).off('change', '.select22', function (_e){});
   $(document).on('change', '.select22', function (_e)
   {
-    var nextEl = $(this).attr('data-next');
+    var $mySelect = $(this);
+    var nextEl = $mySelect.attr('data-next');
     if(nextEl)
     {
-      select22FillNext($(this).val(), nextEl);
+      select22FillNext($mySelect.val(), nextEl);
+    }
+
+    if($mySelect.attr('data-save') !== undefined)
+    {
+      var myForm = $(this).parents('form');
+      $(myForm).ajaxify();
     }
   });
 
