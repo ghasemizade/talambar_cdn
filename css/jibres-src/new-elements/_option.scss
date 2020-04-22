@@ -1,7 +1,7 @@
 [data-option]{
 	position: relative;
 	font-size: 1.4rem;
-	margin: 1em auto;
+	margin: 1rem auto 2rem;
 	border:1px solid #d5d7d8;
 	overflow: hidden;
 	border-radius: 0.5rem;
@@ -38,6 +38,9 @@
 }
 [data-option] p+p{
 	margin-top: 1em;
+}
+[data-option] .radio1{
+	margin: 0.5rem 1rem;
 }
 [data-option] .body{
 	font-size: 1.6rem;
