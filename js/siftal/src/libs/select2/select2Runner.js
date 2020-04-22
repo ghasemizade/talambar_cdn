@@ -40,9 +40,9 @@ function selectRunner()
       select22FillNext($mySelect.val(), nextEl);
     }
 
-    if($mySelect.attr('data-save') !== undefined)
+    var myForm = $(this).parents('form[data-patch]');
+    if(myForm.length === 1)
     {
-      var myForm = $(this).parents('form');
       $(myForm).ajaxify();
     }
   });
