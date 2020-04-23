@@ -177,6 +177,14 @@ function runHtmlNotif()
   {
     getNotifData($(this));
   });
+
+
+  var htmlNotif = $('#pageNotif').html();
+  if(htmlNotif)
+  {
+    var myNotifJson = JSON.parse(htmlNotif);
+    notifGenerator(myNotifJson);
+  }
 }
 
 
