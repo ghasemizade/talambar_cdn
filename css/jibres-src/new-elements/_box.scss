@@ -22,7 +22,7 @@
   border: 1rem solid #fff;
   box-shadow: #ddd 0px -5px 10px 0;
 }
-.box header{
+.box > header{
   padding: 0 1.5rem;
   min-height: 36px;
   font-weight: 900;
@@ -32,32 +32,32 @@
   background-color: #efefef;
   overflow: hidden;
 }
-.box header:hover{
+.box > header:hover{
   background-color: #eee;
 }
-.box:hover header{
+.box:hover > header{
   background-color: #e0e0e0;
 }
-.box header[data-kerkere-status="close"]{
+.box > header[data-kerkere-status="close"]{
   background-color: #ddd;
 }
-.box header h2{
+.box > header h2{
   font-size: 1.6rem;
   line-height: 50px;
   font-weight: 900;
   margin: 0;
 }
-.box header h2:not(.f){
+.box > header h2:not(.f){
   display: inline-block;
 }
-.box header h3{
+.box > header h3{
   display: inline-block;
   font-size: 1.5rem;
   line-height: 40px;
   font-weight: 800;
   margin: 0;
 }
-.box header h4{
+.box > header h4{
   display: inline-block;
   font-size: 1.4rem;
   line-height: 36px;
