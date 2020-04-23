@@ -70,22 +70,4 @@ function calcDomainPrice()
   console.log(myBudget);
   console.log(useMyBudget);
   console.log(myPayable);
-
-
 }
-
-  pageScript();
-
-  console.log('hi');
-
-function pushStateFinal()
-{
-
-  console.log('hi pushStateFinal');
-  pageScript();
-
-}
-
-$(document).ready(function(){
-  console.log('hi ready');
-});
