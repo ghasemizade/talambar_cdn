@@ -24,29 +24,64 @@
 .giftcard header .c5{
 	border-left: 3px solid #eee;
 }
-
+.giftcard header h3{
+	color: #aaa;
+}
 .giftcard .body{
-	background-color: #aaa;
+	background-color: #ccc;
+	color: #fff;
 	height: 40rem;
 	position: relative;
 }
-.giftcard .body .circle{
-	width: 20rem;
-	height: 20rem;
-	background-color: rgba(255,255,255,0.5);
+.giftcard .body img{
+	width: 100%;
+	max-height: initial;
+	display: block;
+}
+.giftcard .body .code{
 	position: absolute;
-	bottom: -7rem;
+	top: 7rem;
+	right: 0;
+	left: 0;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 2em;
+}
+.giftcard .body .code abbr{
+	font-size: 2em;
+	display: block;
+	margin-bottom: 1rem;
+}
+.giftcard .body .circle{
+	width: 25rem;
+	height: 25rem;
+	background-color: rgba(255,255,255,0.2);
+	position: absolute;
+	bottom: -10rem;
 	right: 0;
 	left: 0;
 	margin: 0 auto;
 	color: #fff;
 	overflow: hidden;
 	text-align: center;
-	padding:5rem 2rem;
+	padding:4rem 2rem 0;
 	font-size: 2em;
+	border-radius: 50%;
+}
+.giftcard .body .circle::after{
+	content: "";
+	width: 22rem;
+	height: 22rem;
+	border: 5px solid rgba(255,255,255,0.5);
+	position: absolute;
+	top:1rem;
+	bottom:1rem;
+	right: 1rem;
+	left: 1rem;
+	border-radius: 50%;
 }
 .giftcard .body .circle .percent{
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 
