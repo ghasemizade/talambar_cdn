@@ -9,6 +9,7 @@ function formToolsRunner()
 
 function toggleRadio()
 {
+  $('.togglable input[type=radio]').off("click");
   $('.togglable input[type=radio]').on("click", function(event)
   {
     var $thisRadio = $(this);
@@ -32,6 +33,7 @@ function toggleRadio()
 
 function radioSave()
 {
+  $('form[data-patch] input[type=radio]').off("click");
   $('form[data-patch] input[type=radio]').on("click", function(event)
   {
     var myForm = $(this).parents('form[data-patch]');
@@ -41,7 +43,8 @@ function radioSave()
     }
   });
 
-  $('form[data-patch] input[type=radio]').keydown(function(_e)
+  $('form[data-patch] input[type=radio]').off("keydown");
+  $('form[data-patch] input[type=radio]').on("keydown", function(_e)
   {
     var arrowKeys = [37, 38, 39, 40];
     if (arrowKeys.indexOf(_e.which) !== -1)
@@ -62,6 +65,7 @@ function radioSave()
 
 function checkboxSave()
 {
+  $('form[data-patch] input[type=checkbox]').off("click");
   $('form[data-patch] input[type=checkbox]').on("click", function(event)
   {
     var myForm = $(this).parents('form[data-patch]');

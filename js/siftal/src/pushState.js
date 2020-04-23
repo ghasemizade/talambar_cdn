@@ -17,8 +17,6 @@ function pushStateSiftal(_direct)
   scrollSmoothDetector(_direct);
   // run watchScroll func to watch all elements
   watchScroll();
-  // run form tools
-  formToolsRunner();
   // initTagDetector();
   bindUploader();
   // run select22
@@ -88,6 +86,8 @@ $(document).ready(function()
   noscriptRemover();
   // run cloner
   cloner();
+  // run form tools
+  formToolsRunner();
   pingiRunner();
   // try to register service worker
   registerServiceWorker();
