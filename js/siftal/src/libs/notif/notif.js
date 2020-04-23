@@ -183,6 +183,7 @@ function runHtmlNotif()
   if(htmlNotif)
   {
     var myNotifJson = JSON.parse(htmlNotif);
+    $('#pageNotif').remove();
     notifGenerator(myNotifJson);
   }
 }
