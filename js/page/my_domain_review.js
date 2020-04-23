@@ -74,6 +74,10 @@ function calcDomainPrice()
 
 }
 
-$(document).ready(function(){
   pageScript();
+
+  console.log('hi');
+
+$(document).ready(function(){
+  console.log('hi 2');
 });
