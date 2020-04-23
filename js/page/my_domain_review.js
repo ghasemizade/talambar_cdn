@@ -78,6 +78,14 @@ function calcDomainPrice()
 
   console.log('hi');
 
+pushStateFinal()
+{
+
+  console.log('hi pushStateFinal');
+  pageScript();
+
+}
+
 $(document).ready(function(){
   console.log('hi 2');
 });
