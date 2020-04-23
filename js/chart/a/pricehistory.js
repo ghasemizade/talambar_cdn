@@ -1,11 +1,8 @@
-function myChart()
+function pageChart()
 {
   if($("#chartdiv").length == 1){myChartProductPrice();}
 }
 
-$(document).ready(function(){
-  myChart();
-});
 
 
 

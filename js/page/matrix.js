@@ -28,7 +28,3 @@ function pageScript()
 
   if (window.screen.width >= 300) window.setInterval(matrix, 50);
 }
-
-$(document).ready(function(){
-  pageScript();
-});

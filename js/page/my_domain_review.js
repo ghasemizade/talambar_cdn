@@ -65,9 +65,4 @@ function calcDomainPrice()
     $payable.text(fitNumber(myPayable));
   }
 
-  console.log(myPrice);
-  console.log(myGift);
-  console.log(myBudget);
-  console.log(useMyBudget);
-  console.log(myPayable);
 }

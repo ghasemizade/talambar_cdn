@@ -1,20 +1,9 @@
-function myChart()
+function pageChart()
 {
 
   if($("#chartdiv").length == 1){chartdiv();}
 
 }
-
-$(document).ready(function(){
-  myChart();
-});
-
-
-
-
-
-
-
 
 
 

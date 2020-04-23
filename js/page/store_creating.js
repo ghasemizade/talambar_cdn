@@ -29,7 +29,3 @@ function pageScript()
 }
 
 
-
-$(document).ready(function(){
-  pageScript();
-});

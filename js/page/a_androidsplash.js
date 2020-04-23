@@ -43,7 +43,3 @@ function pageScript()
   applySplashColors();
 
 }
-
-$(document).ready(function(){
-  pageScript();
-});

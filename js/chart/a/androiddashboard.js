@@ -1,14 +1,10 @@
 
-function myChart()
+function pageChart()
 {
 
   if($("#chartdiv").length == 1){highChart();}
   if($("#charttotaldownload").length == 1){highChart2();}
 }
-
-$(document).ready(function(){
-  myChart();
-});
 
 
 

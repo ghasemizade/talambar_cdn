@@ -1,11 +1,7 @@
-function myChart()
+function pageChart()
 {
   if($("#chartdiv").length == 1){highChart();}
 }
-
-$(document).ready(function(){
-  myChart();
-});
 
 
 
