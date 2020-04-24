@@ -24,7 +24,7 @@
 // reaction
 .items li a:hover{background-color: #f6f6f6}
 .items li a:focus{background-color: #efefef}
-.items li a:focus .go:not(.ok):not(.nok)::after{color:#000;padding:0;}
+.items li a:focus .go.next::after{color:#000;padding:0;}
 .items li a:active{background-color: #e6e5eb};
 // item reaction
 .items li .item:hover{background-color: #f6f6f6}
