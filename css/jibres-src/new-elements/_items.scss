@@ -33,4 +33,4 @@
 // customize for pwa
 [data-pwa] .items{box-shadow:none;font-size:1.6rem;border-radius:$myRadiusPWA;}
 [data-pwa] .items li a{padding: 10px;line-height: $myItemHeightPWA;}
-[data-pwa] .items li img{max-width: $myItemHeightPWA;max-height: $myItemHeightPWA;}
+[data-pwa] .items li img{overflow:hidden;max-width: $myItemHeightPWA;max-height: $myItemHeightPWA;}
