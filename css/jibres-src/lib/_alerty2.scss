@@ -321,7 +321,8 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
   body.alerty2-shown:not(.alerty2-no-backdrop):not(.alerty2-toast-shown) .alerty2-container{position:initial!important}
 }
 
-
-
-
+.alerty2-shown #sidebar{filter: blur(8px);}
+.alerty2-shown #pageHeader{filter: blur(8px);}
+.alerty2-shown #pageContent{filter: blur(8px);}
+.alerty2-shown #pageFooter{filter: blur(8px);}
 

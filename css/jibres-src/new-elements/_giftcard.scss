@@ -21,13 +21,16 @@
 .giftcard header .logo{
 	height: 10rem;
 }
-.giftcard header .cauto.os{
+.giftcard header .meta{
 	border-left: 5px solid #eee;
-	min-width: 25rem;
+	min-width: 30rem;
 }
-[dir="rtl"] .giftcard header .cauto.os{
+[dir="rtl"] .giftcard header .meta{
 	border-left: none;
 	border-right: 5px solid #eee;
+}
+.giftcard header .meta abbr{
+	color: #777
 }
 .giftcard header h3{
 	color: #aaa;
