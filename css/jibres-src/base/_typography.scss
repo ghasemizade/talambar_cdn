@@ -28,6 +28,9 @@ p{
 
 
 
+a:visited{
+  color: #6737b7;
+}
 a:hover {
   color: #3077c0;
   text-decoration: none;
@@ -40,6 +43,7 @@ a:focus{
 a:active{
 	outline:0;
 }
+
 a[data-ajaxify]{
   cursor: pointer;
 }
