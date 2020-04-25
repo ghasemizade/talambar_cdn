@@ -158,15 +158,6 @@ span.input{
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
-[dir="rtl"] .input:not(.fix) > :first-child{
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-[dir="rtl"] .input:not(.fix) > :not(div):last-child{
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
 // for border
 [dir="ltr"] .input > .addon:first-child{
 	border-right-width: 0;
@@ -177,25 +168,66 @@ span.input{
 [dir="ltr"] .input > .addon:not(:first-child):not(:last-child){
 	border-left-width: 0;
 }
-// rtl
-[dir="rtl"] .input:not(.fix) > .addon:first-child{
-	border-left-width: 0;
-}
-[dir="rtl"] .input:not(.fix) > .addon:last-child{
-	border-right-width: 0;
-}
-[dir="rtl"] .input:not(.fix) > .addon:not(:first-child):not(:last-child){
-	border-right-width: 0;
-}
-
 // for all inputs
 [dir="ltr"] .input > :not(:first-child):not(:last-child){
 	border-radius: 0;
 	border-right-width:0;
 }
-[dir="rtl"] .input:not(.fix) > :not(:first-child):not(:last-child){
+
+// rtl
+[dir="rtl"] .input > :first-child{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+[dir="rtl"] .input > :not(div):last-child{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+//  for border
+[dir="rtl"] .input > .addon:first-child{
+	border-left-width: 0;
+}
+[dir="rtl"] .input > .addon:last-child{
+	border-right-width: 0;
+}
+[dir="rtl"] .input > .addon:not(:first-child):not(:last-child){
+	border-right-width: 0;
+}
+// for all inputs
+[dir="rtl"] .input > :not(:first-child):not(:last-child){
 	border-radius: 0;
 	border-left-width:0;
+}
+
+// force ltr
+.input.ltr > :first-child{
+	border-top-right-radius: 0!important;
+	border-bottom-right-radius: 0!important;
+	border-top-left-radius: 0.25rem!important;
+	border-bottom-left-radius: 0.25rem!important;
+}
+.input.ltr > :not(div):last-child{
+	border-top-left-radius: 0!important;
+	border-bottom-left-radius: 0!important;
+	border-top-right-radius: 0.25rem!important;
+	border-bottom-right-radius: 0.25rem!important;
+}
+// for border
+.input.ltr > .addon:first-child{
+	border-right-width: 0!important;
+	border-left-width: 1px!important;
+}
+.input.ltr > .addon:last-child{
+	border-left-width: 0!important;
+	border-right-width: 1px!important;
+}
+.input.ltr > .addon:not(:first-child):not(:last-child){
+	border-left-width: 0!important;
+}
+// for all inputs
+.input.ltr > :not(:first-child):not(:last-child){
+	border-radius: 0!important;
+	border-right-width:0!important;
 }
 
 
