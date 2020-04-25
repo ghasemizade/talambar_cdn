@@ -34,7 +34,26 @@ function checkSmile(_register)
     },
     success:function(smileResult)
     {
-      var notifResult = notifGenerator(smileResult);
+      // show new notif message only one time
+      if(typeof(Storage) !== "undefined")
+      {
+        newNotif = parseInt(sessionStorage.getItem("newNotif"));
+        if(isNaN(newNotif))
+        {
+          newNotif = 0;
+        }
+
+        if(smileResult.result && smileResult.result.notifCount)
+        {
+          var myNewCount = smileResult.result.notifCount;
+          if(newNotif !== myNewCount)
+          {
+            sessionStorage.setItem("newNotif", myNewCount);
+            notifGenerator(smileResult);
+          }
+        }
+      }
+
 
       // if user is loginned on this page, try to check logout
       if($('meta[name="user-Jibres"]').attr("content"))
