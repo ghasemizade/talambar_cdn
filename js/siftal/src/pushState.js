@@ -39,6 +39,8 @@ function pushStateSiftal(_direct)
   typeTitles();
   // Run draw barcode lib
   JsBarcodeRunner();
+  // run form tools
+  formToolsRunner();
 
   if($('body').attr('data-in') === 'enter')
   {
@@ -88,8 +90,6 @@ $(document).ready(function()
   noscriptRemover();
   // run cloner
   cloner();
-  // run form tools
-  formToolsRunner();
   pingiRunner();
   // try to register service worker
   registerServiceWorker();
