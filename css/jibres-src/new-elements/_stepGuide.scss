@@ -12,7 +12,7 @@
 	position: relative;
 	color: #888;
 }
-.stepGuide a.item{
+.stepGuide a[href].item{
 	cursor:pointer;
 }
 .stepGuide .item::after{
