@@ -2,7 +2,6 @@
   position: relative;
   background-color: #fff;
   box-shadow: #ddd 0 0 5px;
-  font-size: 1.4rem;
   margin:0 auto 1rem;
   display: block;
   border-radius: $myRadius;
@@ -27,7 +26,7 @@ a.circularChartBox:hover{
 }
 .circularChartBox h3{
 	display: block;
-	font-size: 1em;
+	font-size: 1.4rem;
 	font-weight: 700;
 	color: #999;
 	line-height: 2rem;
@@ -48,6 +47,7 @@ a.circularChartBox:hover{
 	text-align: center;
 	transition:0.3s;
 	margin: 1rem 0 0;
+	font-size: 1.2rem;
 	padding: 0 3%;
 	line-height: 2rem;
 }
