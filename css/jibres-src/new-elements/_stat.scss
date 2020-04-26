@@ -31,6 +31,10 @@
 .stat.unavailable .val{
 	border-bottom: 2px solid #fa4444;
 }
+// colors
+.stat.green .val{
+  color: #016936;
+}
 // active
 .stat.active{
 	transform: scale(0.95);
