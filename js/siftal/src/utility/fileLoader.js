@@ -1,20 +1,33 @@
 
-function fileLoader(_src, _fn)
+function fileLoader(_source)
 {
+  console.log('load file');
+  console.log(_source);
+  var _src = _source.url;
+  if(!_src)
+  {
+    return false;
+  }
+
   var $scriptExist = $('script[src="' + _src + '"]');
 
   if(!$scriptExist.length)
   {
+    console.log('load file - new ' + _src);
     var newScript = document.createElement("script");
     // append to page js section
     $('.js').append(newScript);
 
-    // add on load function
-    newScript.onload = function()
+    if(_source.fn)
     {
-      console.log('load fn ' + _fn );
-      callFunc(_fn, 'fileLoader');
-    };
+      console.log('load file - fn ' + _source.fn);
+      // add on load function
+      newScript.onload = function()
+      {
+        console.log('load fn ' + _source.fn );
+        callFunc(_source.fn, 'fileLoader');
+      };
+    }
 
     // show error message if we are problem on load process
     newScript.onerror = function(){ console.log('error or load script ' + _src);};
