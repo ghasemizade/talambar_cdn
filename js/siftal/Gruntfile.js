@@ -78,6 +78,7 @@ var myModuleFiles =
 	'src/utility/table.js',
 	'src/utility/noscriptRemover.js',
 	'src/utility/insideIframe.js',
+	'src/utility/fileLoader.js',
 
 	// 'src/utility/clock.js',
 	'src/utility/input-files.js',

@@ -188,25 +188,13 @@
     if(obj.js)
     {
       var scripts = obj.js;
-      $window.trigger('navigate:render:scripts:before', obj.js);
+      // $window.trigger('navigate:render:scripts:before', obj.js);
 
       scripts.forEach(function(src)
       {
-        var $script = $('script[src="' + src + '"]');
-
-        if(!$script.length)
-        {
-          $script = $('<script></script>');
-          $script.prop('async', true);
-          $script.prop('src', src);
-          $window.trigger('navigate:render:script:created', $script);
-
-          $('.js').append($script);
-
-          $window.trigger('navigate:render:script:appended', $script);
-        }
+        fileLoader(src);
       });
-      $window.trigger('navigate:render:scripts:done');
+      // $window.trigger('navigate:render:scripts:done');
     }
 
     // on navigate if in new page we have autofocus field, set focus to it
