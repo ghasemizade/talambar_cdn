@@ -201,7 +201,7 @@
           $script.prop('src', src);
           $window.trigger('navigate:render:script:created', $script);
 
-          $(document.body).append($script);
+          $('.js').append($script);
 
           $window.trigger('navigate:render:script:appended', $script);
         }
@@ -214,7 +214,8 @@
     {
       // if page content is not changed, do nothing...
       // logy(10);
-      console.log('page is not changed, need hard redirect');
+      // console.log('page is not changed, need hard redirect');
+      console.log('page is not changed');
       // location.replace(obj.url);
     }
     // if we have input with autofocus, set focus to first of it
