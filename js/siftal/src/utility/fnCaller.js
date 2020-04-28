@@ -23,6 +23,10 @@ function callFunc(_funcName, _arg, _onlyCheckExist)
       }
     }
   }
+  else
+  {
+    // console.log('function ' + _funcName + ' not exist!');
+  }
   return isExist;
 }
 

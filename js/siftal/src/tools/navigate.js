@@ -189,10 +189,9 @@
     {
       var scripts = obj.js;
       // $window.trigger('navigate:render:scripts:before', obj.js);
-
-      scripts.forEach(function(src)
+      $.each(scripts, function( _src, _fn )
       {
-        fileLoader(src);
+        fileLoader(_src, _fn);
       });
       // $window.trigger('navigate:render:scripts:done');
     }
