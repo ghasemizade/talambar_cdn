@@ -1,4 +1,4 @@
-function pageChart()
+function chart_ipg_home()
 {
 
   if($("#chartdiv").length == 1){chartdiv();}

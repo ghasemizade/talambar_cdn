@@ -1,4 +1,4 @@
-function pageChart()
+function chart_homepage()
 {
   if($("#chartdiv").length == 1){highChart();}
 }
