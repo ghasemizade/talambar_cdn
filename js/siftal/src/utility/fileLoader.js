@@ -50,14 +50,25 @@ function readPageChart(_url, _force)
 
   if(myChartURL)
   {
-    myChartURL = urlJibres('cdn') + "js/chart/" + myChartURL;
+    var fnName       = myChartURL;
     var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
-    fileLoader(highChartUrl, myChartURL, true);
+    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL;
+    fnName = fnName.replace('.js', '');
+    if(fnName.lastIndexOf('/'))
+    {
+      fnName = fnName.substr(fnName.lastIndexOf('/') + 1);
+    }
+    if(fnName)
+    {
+      fnName = 'chart_' + fnName;
+    }
+
+    fileLoader(highChartUrl, fnName, true, myChartURL);
   }
 }
 
 
-function fileLoader(_url, _nextAction, _forceCallFn)
+function fileLoader(_url, _fn, _forceCallFn, _file)
 {
   if(!_url)
   {
@@ -70,7 +81,7 @@ function fileLoader(_url, _nextAction, _forceCallFn)
   {
     if(_forceCallFn)
     {
-      afterFileLoaded(_nextAction, 'fileLoaderForce', true);
+      afterFileLoaded(_fn, 'fileLoaderForce', _file);
     }
   }
   else
@@ -82,7 +93,7 @@ function fileLoader(_url, _nextAction, _forceCallFn)
     // add on load function
     newScript.onload = function()
     {
-      afterFileLoaded(_nextAction, 'fileLoader');
+      afterFileLoaded(_fn, 'fileLoader', _file);
     };
 
     // show error message if we are problem on load process
@@ -97,18 +108,18 @@ function fileLoader(_url, _nextAction, _forceCallFn)
 
 
 
-function afterFileLoaded(_action, _param, _force)
+function afterFileLoaded(_func, _param, _file)
 {
-  if(urlCorrect(_action))
+  if(urlCorrect(_file))
   {
     // load script of this chart
-    fileLoader(_action, 'pageChart', _force);
+    fileLoader(_file, _func, true);
     return;
   }
 
-  if(_action)
+  if(_func)
   {
-    callFunc(_action, _param);
+    callFunc(_func, _param);
   }
 }
 
