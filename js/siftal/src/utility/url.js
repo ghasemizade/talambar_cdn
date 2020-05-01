@@ -73,6 +73,11 @@ function urlEnv()
 
 function urlCorrect(_url)
 {
+  if(!_url)
+  {
+    return null;
+  }
+
   if(_url.indexOf('://') > 0)
   {
     return true;
