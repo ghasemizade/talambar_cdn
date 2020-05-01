@@ -1,7 +1,7 @@
 
 function pageScript()
 {
-  $('[data-page="android_splash"] input[type=radio][name=theme]').change(function() {
+  $('[data-page="android_splash"] input[type=radio][name=theme]').off("change.theme").on("change.theme", function() {
     var myColors = this.value.split('_');
     if(myColors.length != 4)
     {
