@@ -1,7 +1,7 @@
 
 function fileLoader(_url, _type, _fn, _forceCallFn)
 {
-  if(!_url)
+  if(!_url || !_type)
   {
     return false;
   }
@@ -52,7 +52,7 @@ function readScript(_url, _fn)
   if(myScriptURL)
   {
     $('.js [data-pagescript]').remove();
-    fileLoader(myScriptURL, 'page', true);
+    fileLoader(myScriptURL, 'page');
   }
   readChart();
 }
@@ -64,7 +64,7 @@ function readChart()
   if(myChartURL)
   {
     $('.js [data-script-chart]').remove();
-    fileLoader(myChartURL, 'chart' , true);
+    fileLoader(myChartURL, 'chart');
   }
 }
 
