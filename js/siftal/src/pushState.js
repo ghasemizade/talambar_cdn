@@ -73,6 +73,7 @@ function pushStateSiftal(_direct)
 // run for the first time
 $(document).ready(function()
 {
+  showWarnHack();
   pushStateSiftal(true);
 
   // call some static function without need to run with pushState

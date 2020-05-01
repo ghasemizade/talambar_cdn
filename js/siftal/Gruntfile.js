@@ -79,6 +79,7 @@ var myModuleFiles =
 	'src/utility/noscriptRemover.js',
 	'src/utility/insideIframe.js',
 	'src/utility/fileLoader.js',
+	'src/utility/consoleMsg.js',
 
 	// 'src/utility/clock.js',
 	'src/utility/input-files.js',
