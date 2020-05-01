@@ -1,5 +1,13 @@
 function pageScript()
 {
+  $(document).off("keydown.test1").on("keydown.test1", function(e) {
+    console.log(e.which);
+  });
+
+  $(document).one("keypress", function(e) {
+    console.log('press only one character');
+  });
+
   const c = document.getElementById('matrix');
   const r = document.getElementById('root');
   const s = window.screen;
