@@ -63,7 +63,6 @@ function pushStateSiftal(_direct)
   setTimeout(function(){
     callFunc('pushState', _direct);
     callFunc('pushStateFinal', _direct);
-    callFunc('pageScript', _direct);
     callFunc('pageChart', _direct);
     callFunc('chartDrawer', _direct);
     callFunc('pushStateGA', _direct);
@@ -103,7 +102,9 @@ $(document).ready(function()
   // run once on ready
   bindBtnOnFactor();
   // bind shortkey on each page
-  callFunc('bindShortkey')
+  callFunc('bindShortkey');
+  // read page script if exist
+  readScript();
 });
 
 
