@@ -48,10 +48,23 @@ function readScript(_url, _fn)
   var myScriptURL = $('.js [data-pagescript]').attr('data-pagescript');
   if(myScriptURL)
   {
-    $('.js [data-pagescript]').attr('data-pagescript', null);
+    $('.js [data-pagescript]').remove();
+    fileLoader(myScriptURL, true);
+  }
+  readChart();
+}
+
+
+function readChart()
+{
+  var myScriptURL = $('.js [data-script-chart]').attr('data-script-chart');
+  if(myScriptURL)
+  {
+    $('.js [data-script-chart]').remove();
     fileLoader(myScriptURL, true);
   }
 }
+
 
 
 function loc(_page, _in, _env)
