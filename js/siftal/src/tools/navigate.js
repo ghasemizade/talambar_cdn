@@ -191,9 +191,16 @@
       // $window.trigger('navigate:render:scripts:before', obj.js);
       $.each(scripts, function(_key, _source)
       {
-        fileLoader(_source);
+        if(_source.url)
+        {
+          fileLoader(_source.url, _source.fn);
+        }
       });
       // $window.trigger('navigate:render:scripts:done');
+    }
+    if(obj.pageScript)
+    {
+      fileLoader(obj.pageScript, true);
     }
 
     // on navigate if in new page we have autofocus field, set focus to it

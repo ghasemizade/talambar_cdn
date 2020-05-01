@@ -1,5 +1,18 @@
+console.log('matrix loaded.');
 function pageScript()
 {
+  console.log('matrix page script');
+
+  var myPage = $('body').attr('data-page');
+  if(myPage === 'bug')
+  {
+    $(document).keydown(function(event){
+      console.log(event.which);
+    });
+  }
+
+
+
   const c = document.getElementById('matrix');
   const r = document.getElementById('root');
   const s = window.screen;
@@ -28,3 +41,4 @@ function pageScript()
 
   if (window.screen.width >= 300) window.setInterval(matrix, 50);
 }
+
