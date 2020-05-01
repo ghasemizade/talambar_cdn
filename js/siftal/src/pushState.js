@@ -105,7 +105,7 @@ $(document).ready(function()
   // bind shortkey on each page
   callFunc('bindShortkey');
   // read page script if exist
-  readScript();
+  readPageAllScripts();
 });
 
 

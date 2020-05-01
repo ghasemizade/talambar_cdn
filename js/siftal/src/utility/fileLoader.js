@@ -69,25 +69,48 @@ function afterFileLoaded(_fn, _fnParam)
 }
 
 
-function readScript(_url, _fn)
+function readPageAllScripts(_url)
 {
-  var myScriptURL = $('.js [data-pagescript]').attr('data-pagescript');
-  if(myScriptURL)
-  {
-    $('.js [data-pagescript]').remove();
-    fileLoader(myScriptURL, 'page');
-  }
-  readChart();
+  readPageScript();
+  readPageChart();
 }
 
 
-function readChart()
+function readPageScript(_url)
 {
-  var myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
+  var myScriptURL;
+  if(_url)
+  {
+    myScriptURL = _url;
+  }
+  else
+  {
+    myScriptURL = $('.js [data-pagescript]').attr('data-pagescript');
+    $('.js [data-pagescript]').remove();
+  }
+
+  if(myScriptURL)
+  {
+    fileLoader(myScriptURL, 'page');
+  }
+}
+
+
+function readPageChart(_url)
+{
+  var myChartURL;
+  if(_url)
+  {
+  }
+  else
+  {
+    myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
+    $('.js [data-script-chart]').remove();
+  }
+
   if(myChartURL)
   {
     var highChartUrl = 'highcharts-8.0.4.js';
-    $('.js [data-script-chart]').remove();
     fileLoader(highChartUrl, 'highcharts', myChartURL);
   }
 }
