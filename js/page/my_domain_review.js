@@ -1,7 +1,7 @@
 
 function pageScript()
 {
-  $('[data-budget] input[type="checkbox"]').on("click", function(event)
+  $('[data-budget] input[type="checkbox"]').off('click.budget').on("click.budget", function(event)
   {
     calcDomainPrice();
   });
