@@ -200,7 +200,7 @@
     }
     if(obj.pageScript)
     {
-      fileLoader(obj.pageScript, true);
+      fileLoader(obj.pageScript, true, true);
     }
 
     // on navigate if in new page we have autofocus field, set focus to it
