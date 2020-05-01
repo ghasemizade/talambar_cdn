@@ -1,5 +1,5 @@
 
-function jibresURL(_type)
+function urlJibres(_type)
 {
   if(!_type)
   {
@@ -22,7 +22,7 @@ function urlStore()
 
   if(myStore)
   {
-    return jibresURL('sitelang') + myStore + '/';
+    return urlJibres('sitelang') + myStore + '/';
   }
 
   return null;
@@ -35,7 +35,7 @@ function urlStoreAPI()
 
   if(myStore)
   {
-    return jibresURL('api') + myStore + '/v2/';
+    return urlJibres('api') + myStore + '/v2/';
   }
 
   return null;
