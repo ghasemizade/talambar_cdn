@@ -162,7 +162,7 @@ function flagDetectAndSet(_code, _flagImg)
   var flagDetected = barcode_country(_code).toLowerCase();
   if(flagDetected)
   {
-    var imgSrc = $('meta[name="jibres:cdn"]').attr('content') + "img/flags/svg/" + flagDetected + ".svg";
+    var imgSrc = jibresURL('cdn') + "img/flags/svg/" + flagDetected + ".svg";
     _flagImg.attr('src', imgSrc).attr('alt', flagDetected).attr('title', flagDetected);
     _flagImg.parent().removeClass('none');
   }

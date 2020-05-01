@@ -10,7 +10,7 @@ function fileLoader(_url, _fn, _forceCallFn)
   {
     _fn = 'pageScript';
   }
-  _url = cdn('js/chart/') + _url;
+  _url = jibresURL('cdn') + "'js/chart/" + _url;
   console.log(_url);
 
   var $scriptExist = $('script[src="' + _url + '"]');

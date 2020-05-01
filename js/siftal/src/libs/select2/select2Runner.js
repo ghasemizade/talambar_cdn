@@ -130,7 +130,7 @@ function select22FormatDropDownCoutry(_repo)
   {
     $container = $(
       "<div class='f align-center'>" +
-        "<div class='c1 pRa10'><img src='" + $('meta[name="jibres:cdn"]').attr('content') + "img/flags/png100px/" + _repo.id.toLowerCase() + ".png' alt='"+ _repo.text + "' /></div>" +
+        "<div class='c1 pRa10'><img src='" + jibresURL('cdn') + "img/flags/png100px/" + _repo.id.toLowerCase() + ".png' alt='"+ _repo.text + "' /></div>" +
         "<div class='c'>" + _repo.text + "</div>" +
       "</div>"
     );

@@ -16,23 +16,6 @@ function jibresURL(_type)
 }
 
 
-function cdn(_path)
-{
-  var fullPath = '';
-  if (_path.indexOf('://') > 0)
-  {
-    // this is absolute path
-  }
-  else
-  {
-    fullPath = jibresURL('cdn');
-  }
-
-  fullPath += _path;
-  return fullPath;
-}
-
-
 function isAddr(_page, _in, _env)
 {
   var $body    = $('body');

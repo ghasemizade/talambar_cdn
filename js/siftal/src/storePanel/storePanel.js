@@ -576,7 +576,7 @@ function beep(_msg, duration, frequency, volume, type, callback)
     logy('close some tabs!');
   }
 
-  var myAlert =  $('meta[name="jibres:cdn"]').attr('content') + 'sounds/'+ _msg + '.mp4';
+  var myAlert =  jibresURL('cdn') + 'sounds/'+ _msg + '.mp4';
 
   var audio = new Audio(myAlert);
   audio.play();
