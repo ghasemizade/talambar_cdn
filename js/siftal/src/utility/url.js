@@ -71,7 +71,7 @@ function urlEnv()
 }
 
 
-function isAddr(_page, _in, _env)
+function urlVerify(_page, _in, _env)
 {
   var $body    = $('body');
   var bodyPage = $body.attr('data-page');
