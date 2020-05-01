@@ -206,7 +206,7 @@ function event_corridor(_e, _self, _key)
       break;
 
     case '113':             // f2
-        if(!getStoreURL())
+        if(!urlStore())
         {
           return null;
         }
@@ -215,7 +215,7 @@ function event_corridor(_e, _self, _key)
 
         // set factor url
         var myPage     = $('body').attr('data-page');
-        var factorUrl  = getStoreURL() + 'a/sale?from='+ myPage;
+        var factorUrl  = urlStore() + 'a/sale?from='+ myPage;
         var factorType = $('body').attr('data-page');
         // if($('html').attr('lang') !== undefined)
         // {

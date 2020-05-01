@@ -16,6 +16,19 @@ function jibresURL(_type)
 }
 
 
+function urlStore()
+{
+  var myStore = getStoreCode();
+
+  if(myStore)
+  {
+    return jibresURL('sitelang') + myStore + '/';
+  }
+
+  return null;
+}
+
+
 function isAddr(_page, _in, _env)
 {
   var $body    = $('body');
