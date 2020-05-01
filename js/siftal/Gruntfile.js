@@ -67,6 +67,7 @@ var myModuleFiles =
 	'src/tools/forms.js',
 
 	// use some utitlity
+	'src/utility/addr.js',
 	'src/utility/fnCaller.js',
 	'src/utility/fitNumber.js',
 	'src/utility/urlParam.js',

@@ -10,6 +10,8 @@ function fileLoader(_url, _fn, _forceCallFn)
   {
     _fn = 'pageScript';
   }
+  _url = cdn('js/chart/') + _url;
+  console.log(_url);
 
   var $scriptExist = $('script[src="' + _url + '"]');
 
@@ -57,62 +59,11 @@ function readScript(_url, _fn)
 
 function readChart()
 {
-  var myScriptURL = $('.js [data-script-chart]').attr('data-script-chart');
-  if(myScriptURL)
+  var myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
+  if(myChartURL)
   {
     $('.js [data-script-chart]').remove();
-    fileLoader(myScriptURL, true);
+    fileLoader(myChartURL, true);
   }
 }
 
-
-
-function loc(_page, _in, _env)
-{
-  var $body    = $('body');
-  var bodyPage = $body.attr('data-page');
-  var bodyIn   = $body.attr('data-in');
-  var bodyEnv  = $body.attr('data-env');
-  var result;
-
-  if(_page)
-  {
-    if(_page === bodyPage)
-    {
-      result = true;
-    }
-    else
-    {
-      return false;
-    }
-  }
-
-  if(_in)
-  {
-    if(_in === bodyIn)
-    {
-      result = true;
-    }
-    else
-    {
-      return false;
-    }
-  }
-
-  if(_env)
-  {
-    if(_env === bodyEnv)
-    {
-      result = true;
-    }
-    else
-    {
-      return false;
-    }
-  }
-
-  if(result === true)
-  {
-    return true;
-  }
-}
