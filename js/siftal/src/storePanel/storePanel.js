@@ -400,19 +400,6 @@ function getStoreCode()
 }
 
 
-function getJibresAPI()
-{
-  var elHeadUrl = $('meta[name="jibres:api"]');
-
-  if(elHeadUrl && elHeadUrl.attr("content"))
-  {
-    return elHeadUrl.attr("content");
-  }
-
-  return null;
-}
-
-
 
 function getEnv()
 {
@@ -435,7 +422,7 @@ function getStoreApiURL()
 
   if(myStore)
   {
-    return getJibresAPI() + myStore + '/v2/';
+    return jibresURL('api') + myStore + '/v2/';
   }
 
   return null;
