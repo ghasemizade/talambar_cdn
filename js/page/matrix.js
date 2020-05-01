@@ -21,7 +21,7 @@ function pageScript()
   ctx.fillRect(0, 0, w, h);
 
   function matrix () {
-    if(!loc('bug', 'site'))
+    if(!urlVerify('bug', 'site'))
     {
       return;
     }

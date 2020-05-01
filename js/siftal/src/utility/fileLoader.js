@@ -1,5 +1,5 @@
 
-function fileLoader(_url, _fn, _forceCallFn)
+function fileLoader(_url, _type, _fn, _forceCallFn)
 {
   if(!_url)
   {
@@ -10,7 +10,8 @@ function fileLoader(_url, _fn, _forceCallFn)
   {
     _fn = 'pageScript';
   }
-  _url = urlJibres('cdn') + "'js/chart/" + _url;
+
+  _url = urlJibres('cdn') + "js/" + _type + "/" + _url;
   console.log(_url);
 
   var $scriptExist = $('script[src="' + _url + '"]');
@@ -51,7 +52,7 @@ function readScript(_url, _fn)
   if(myScriptURL)
   {
     $('.js [data-pagescript]').remove();
-    fileLoader(myScriptURL, true);
+    fileLoader(myScriptURL, 'page', true);
   }
   readChart();
 }
@@ -63,7 +64,7 @@ function readChart()
   if(myChartURL)
   {
     $('.js [data-script-chart]').remove();
-    fileLoader(myChartURL, true);
+    fileLoader(myChartURL, 'chart' , true);
   }
 }
 
