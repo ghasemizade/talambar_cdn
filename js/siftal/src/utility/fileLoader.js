@@ -50,7 +50,7 @@ function readPageChart(_url, _force)
   if(myChartURL)
   {
     myChartURL = urlJibres('cdn') + "js/chart/" + myChartURL;
-    var highChartUrl = urlJibres('cdn') + 'highcharts/highcharts-8.0.4.js';
+    var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
     fileLoader(highChartUrl, myChartURL, _force);
   }
 }
