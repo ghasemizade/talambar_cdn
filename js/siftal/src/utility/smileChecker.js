@@ -26,7 +26,7 @@ function checkSmile(_register)
   {
     url:'/' + lang + "/hook/smile",
     method:"POST",
-    timeout: 1000,
+    timeout: 3000,
     dataType:"json",
     data:
     {
