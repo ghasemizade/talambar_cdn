@@ -198,9 +198,9 @@
     //   });
     //   // $window.trigger('navigate:render:scripts:done');
     // }
-    if(obj.pageScript)
+    if(obj.scriptPage)
     {
-      fileLoader(obj.pageScript, 'page', true, true);
+      fileLoader(obj.scriptPage, 'page', true, true);
     }
 
     // on navigate if in new page we have autofocus field, set focus to it
