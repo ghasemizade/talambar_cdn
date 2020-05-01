@@ -1,14 +1,12 @@
 
-function fileLoader(_url, _type, _fn, _forceCallFn)
+function fileLoader(_url, _type, _nextAction, _forceCallFn)
 {
+  console.log(_url);
+  console.log(_type);
+  console.log(_nextAction);
   if(!_url || !_type)
   {
     return false;
-  }
-  // fix fn name
-  if(_fn === true)
-  {
-    _fn = 'pageScript';
   }
 
   _url = urlJibres('cdn') + "js/" + _type + "/" + _url;
@@ -16,21 +14,25 @@ function fileLoader(_url, _type, _fn, _forceCallFn)
 
   var $scriptExist = $('script[src="' + _url + '"]');
 
-  if(!$scriptExist.length)
+
+  if($scriptExist.length)
   {
-    _forceCallFn = false;
+    if(_forceCallFn)
+    {
+      afterFileLoaded(_nextAction, 'fileLoaderForce');
+    }
+  }
+  else
+  {
     var newScript = document.createElement("script");
     // append to page js section
     $('.js').append(newScript);
 
-    if(_fn)
+    // add on load function
+    newScript.onload = function()
     {
-      // add on load function
-      newScript.onload = function()
-      {
-        callFunc(_fn, 'fileLoader');
-      };
-    }
+      afterFileLoaded(_nextAction, 'fileLoader');
+    };
 
     // show error message if we are problem on load process
     newScript.onerror = function(){ console.warn('error or load script ' + _url);};
@@ -39,9 +41,30 @@ function fileLoader(_url, _type, _fn, _forceCallFn)
     newScript.src = _url;
   }
 
-  if(_forceCallFn)
+}
+
+
+function afterFileLoaded(_fn, _fnParam)
+{
+  console.log(_fn);
+
+  if(urlCorrect(_fn))
   {
-    callFunc(_fn, 'fileLoaderForce');
+    console.log('is url');
+    // load script of this chart
+    fileLoader(_fn, 'charts', 'pageChart');
+    return;
+  }
+
+  // fix fn name
+  if(_fn === true)
+  {
+    _fn = 'pageScript';
+  }
+
+  if(_fn)
+  {
+    callFunc(_fn, _fnParam);
   }
 }
 
@@ -63,8 +86,9 @@ function readChart()
   var myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
   if(myChartURL)
   {
+    var highChartUrl = 'highcharts-8.0.4.js';
     $('.js [data-script-chart]').remove();
-    fileLoader(myChartURL, 'chart');
+    fileLoader(highChartUrl, 'highcharts', myChartURL);
   }
 }
 

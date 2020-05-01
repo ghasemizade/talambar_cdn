@@ -187,7 +187,7 @@
 
     if(obj.scriptPage)
     {
-      fileLoader(obj.scriptPage, 'page', true);
+      fileLoader(obj.scriptPage, 'page', null, true);
     }
 
     // on navigate if in new page we have autofocus field, set focus to it

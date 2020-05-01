@@ -71,6 +71,16 @@ function urlEnv()
 }
 
 
+function urlCorrect(_url)
+{
+  if(_url.indexOf('://') > 0)
+  {
+    return true;
+  }
+    return false;
+}
+
+
 function urlVerify(_page, _in, _env)
 {
   var $body    = $('body');
