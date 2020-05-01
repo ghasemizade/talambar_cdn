@@ -18,7 +18,7 @@ function jibresURL(_type)
 
 function urlStore()
 {
-  var myStore = getStoreCode();
+  var myStore = urlStoreCode();
 
   if(myStore)
   {
@@ -28,13 +28,43 @@ function urlStore()
   return null;
 }
 
+
 function urlStoreAPI()
 {
-  var myStore = getStoreCode();
+  var myStore = urlStoreCode();
 
   if(myStore)
   {
     return jibresURL('api') + myStore + '/v2/';
+  }
+
+  return null;
+}
+
+
+function urlStoreCode()
+{
+  var myEnv = urlEnv();
+  if(myEnv === 'Jibres')
+  {
+    // in Jibres Env
+  }
+  else if(myEnv.charAt(0) === '$')
+  {
+    return myEnv;
+  }
+
+  return null;
+}
+
+
+function urlEnv()
+{
+  if($('body[data-env]') !== undefined)
+  {
+    var myEnv = $('body').attr('data-env');
+
+    return myEnv;
   }
 
   return null;

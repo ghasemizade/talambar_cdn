@@ -384,34 +384,6 @@ function searchForProduct(_key, _value)
   });
 }
 
-function getStoreCode()
-{
-  var myEnv = getEnv();
-  if(myEnv === 'Jibres')
-  {
-    // in Jibres Env
-  }
-  else if(myEnv.charAt(0) === '$')
-  {
-    return myEnv;
-  }
-
-  return null;
-}
-
-
-
-function getEnv()
-{
-  if($('body[data-env]') !== undefined)
-  {
-    var myEnv = $('body').attr('data-env');
-
-    return myEnv;
-  }
-
-  return null;
-}
 
 
 
