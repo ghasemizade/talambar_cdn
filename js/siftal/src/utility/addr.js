@@ -28,6 +28,18 @@ function urlStore()
   return null;
 }
 
+function urlStoreAPI()
+{
+  var myStore = getStoreCode();
+
+  if(myStore)
+  {
+    return jibresURL('api') + myStore + '/v2/';
+  }
+
+  return null;
+}
+
 
 function isAddr(_page, _in, _env)
 {

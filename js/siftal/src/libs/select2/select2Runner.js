@@ -142,7 +142,7 @@ function select22FormatDropDownCoutry(_repo)
 
 function select22FillNext(_val, _next, _default)
 {
-  var apiURL = getStoreApiURL() + 'location/';
+  var apiURL = urlStoreAPI() + 'location/';
   var _el = $(_next);
   if(_next === '#city')
   {

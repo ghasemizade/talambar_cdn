@@ -416,20 +416,6 @@ function getEnv()
 
 
 
-function getStoreApiURL()
-{
-  var myStore = getStoreCode();
-
-  if(myStore)
-  {
-    return jibresURL('api') + myStore + '/v2/';
-  }
-
-  return null;
-}
-
-
-
 /**
  * final function to add record of product
  * @param {[type]} _product [description]
