@@ -40,6 +40,7 @@ function readPageChart(_url, _force)
   var myChartURL;
   if(_url)
   {
+    myChartURL = _url;
   }
   else
   {
@@ -51,17 +52,13 @@ function readPageChart(_url, _force)
   {
     myChartURL = urlJibres('cdn') + "js/chart/" + myChartURL;
     var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
-    fileLoader(highChartUrl, myChartURL, _force);
+    fileLoader(highChartUrl, myChartURL, true);
   }
 }
 
 
-
-
 function fileLoader(_url, _nextAction, _forceCallFn)
 {
-  console.log(_url);
-  console.log(_nextAction);
   if(!_url)
   {
     return false;
@@ -73,7 +70,7 @@ function fileLoader(_url, _nextAction, _forceCallFn)
   {
     if(_forceCallFn)
     {
-      afterFileLoaded(_nextAction, 'fileLoaderForce');
+      afterFileLoaded(_nextAction, 'fileLoaderForce', true);
     }
   }
   else
@@ -100,21 +97,18 @@ function fileLoader(_url, _nextAction, _forceCallFn)
 
 
 
-function afterFileLoaded(_fn, _fnParam)
+function afterFileLoaded(_action, _param, _force)
 {
-  console.log(_fn);
-
-  if(urlCorrect(_fn))
+  if(urlCorrect(_action))
   {
-    console.log('is url');
     // load script of this chart
-    fileLoader(_fn, 'charts', 'pageChart');
+    fileLoader(_action, 'pageChart', _force);
     return;
   }
 
-  if(_fn)
+  if(_action)
   {
-    callFunc(_fn, _fnParam);
+    callFunc(_action, _param);
   }
 }
 
