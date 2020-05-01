@@ -1,19 +1,73 @@
 
-function fileLoader(_url, _type, _nextAction, _forceCallFn)
+
+function readPageAllScripts(_page, _chart)
+{
+  var force = null;
+  if(_page || _chart)
+  {
+    // from pushState, force call fn
+    force = true;
+  }
+  // run each script if exist
+  readPageScript(_page, force);
+  readPageChart(_chart, force);
+}
+
+
+function readPageScript(_url, _force)
+{
+  var myScriptURL;
+  if(_url)
+  {
+    myScriptURL = _url;
+  }
+  else
+  {
+    myScriptURL = $('.js [data-pagescript]').attr('data-pagescript');
+    $('.js [data-pagescript]').remove();
+  }
+
+  if(myScriptURL)
+  {
+    myScriptURL = urlJibres('cdn') + "js/page/" + myScriptURL;
+    fileLoader(myScriptURL, 'pageScript', _force);
+  }
+}
+
+
+function readPageChart(_url, _force)
+{
+  var myChartURL;
+  if(_url)
+  {
+  }
+  else
+  {
+    myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
+    $('.js [data-script-chart]').remove();
+  }
+
+  if(myChartURL)
+  {
+    myChartURL = urlJibres('cdn') + "js/chart/" + myChartURL;
+    var highChartUrl = urlJibres('cdn') + 'highcharts/highcharts-8.0.4.js';
+    fileLoader(highChartUrl, myChartURL, _force);
+  }
+}
+
+
+
+
+function fileLoader(_url, _nextAction, _forceCallFn)
 {
   console.log(_url);
-  console.log(_type);
   console.log(_nextAction);
-  if(!_url || !_type)
+  if(!_url)
   {
     return false;
   }
 
-  _url = urlJibres('cdn') + "js/" + _type + "/" + _url;
-  console.log(_url);
-
   var $scriptExist = $('script[src="' + _url + '"]');
-
 
   if($scriptExist.length)
   {
@@ -44,6 +98,8 @@ function fileLoader(_url, _type, _nextAction, _forceCallFn)
 }
 
 
+
+
 function afterFileLoaded(_fn, _fnParam)
 {
   console.log(_fn);
@@ -56,62 +112,10 @@ function afterFileLoaded(_fn, _fnParam)
     return;
   }
 
-  // fix fn name
-  if(_fn === true)
-  {
-    _fn = 'pageScript';
-  }
-
   if(_fn)
   {
     callFunc(_fn, _fnParam);
   }
 }
 
-
-function readPageAllScripts(_url)
-{
-  readPageScript();
-  readPageChart();
-}
-
-
-function readPageScript(_url)
-{
-  var myScriptURL;
-  if(_url)
-  {
-    myScriptURL = _url;
-  }
-  else
-  {
-    myScriptURL = $('.js [data-pagescript]').attr('data-pagescript');
-    $('.js [data-pagescript]').remove();
-  }
-
-  if(myScriptURL)
-  {
-    fileLoader(myScriptURL, 'page');
-  }
-}
-
-
-function readPageChart(_url)
-{
-  var myChartURL;
-  if(_url)
-  {
-  }
-  else
-  {
-    myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
-    $('.js [data-script-chart]').remove();
-  }
-
-  if(myChartURL)
-  {
-    var highChartUrl = 'highcharts-8.0.4.js';
-    fileLoader(highChartUrl, 'highcharts', myChartURL);
-  }
-}
 

@@ -185,10 +185,8 @@
       $('head title').text($title.text());
     }
 
-    if(obj.scriptPage)
-    {
-      fileLoader(obj.scriptPage, 'page', null, true);
-    }
+    // read all scripts of page if exist
+    readPageAllScripts(obj.scriptPage, obj.scriptChart)
 
     // on navigate if in new page we have autofocus field, set focus to it
     if(!pageContentChanged)
