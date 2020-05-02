@@ -80,8 +80,4 @@ min-height: 400px;
 
 // pwa style
 [data-pwa] #jibresSupportLine:after{display: none;background:none;}
-[data-pwa] #jibresFooter{padding-top: 2rem;}
-[data-pwa] #jibresFooter #footerMenu nav a{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-moz-box;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}
-[data-pwa] #jibresLastLine #jibresCopyright{margin-bottom: 2rem;}
-[data-pwa] #jibresLastLine .langlist{margin-bottom: 2rem;}
 
