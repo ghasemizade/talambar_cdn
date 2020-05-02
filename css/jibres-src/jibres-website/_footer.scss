@@ -28,10 +28,8 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 #jibresFooter figure img{height: 120px;display:block;padding:10px; margin: 0 auto;}
 #jibresFooter figure figcaption{padding: 0 1.5em;}
 // footer nav links
-#jibresFooter #footerMenu nav{margin-bottom: 40px;}
+#jibresFooter #footerMenu nav{margin-bottom: 40px;background-color:transparent;}
 #jibresFooter #footerMenu nav h3{border-bottom: 1px solid #eee;display: block;color: #777;padding:5px 0;font-weight:900;font-size:1em;}
-#jibresFooter #footerMenu nav a{display: block;padding:4px 7px;margin-bottom:5px;}
-#jibresFooter #footerMenu nav a:hover{background-color:rgba(0,0,0,0.02)};
 #jibresFooter a{color: #777;transition:0.3s;}
 #jibresFooter a:hover{color: $jibres;}
 #jibresFooter a:focus{color: $jibresMono;}
