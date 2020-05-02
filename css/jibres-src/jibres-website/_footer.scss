@@ -1,13 +1,15 @@
 
 // certificates
-#jibresCertificates{position: relative;overflow: hidden;background-color: $black;color:$white;font-size: 1.4rem;padding: 50px 0;border-radius2: 0 0 100px 100px;}
+#jibresCertificates{position: relative;overflow: hidden;background-color: $black;color:$white;font-size: 1.4rem;padding: 50px 0;border-radius2: 0 0 100px 100px;transition: 0.3s;}
 #jibresCertificates h2{color:#fff;text-align: center;border-bottom: 1px solid #fff;line-height: 50px;font-weight: 100;margin-bottom: 50px;}
-#jibresCertificates:hover img{opacity:0.6;}
-#jibresCertificates a{display: block;overflow: hidden;}
-#jibresCertificates a:focus img{opacity:0.8};
-#jibresCertificates a:active img{opacity:1};
-#jibresCertificates img{display: block;margin:0 auto;margin-bottom: 20px;opacity:1;transition:0.2s;}
-#jibresCertificates img:hover{opacity:0.7};
+#jibresCertificates h2 a:hover{color:#efefef;}
+#jibresCertificates h2 a:focus{color:#eee;}
+#jibresCertificates:hover{background-color: #111;}
+#jibresCertificates a{display: block;overflow: hidden;margin-bottom: 20px;}
+#jibresCertificates img{display: block;margin:0 auto;transition:0.2s;}
+#jibresCertificates img:hover{transform: scale(1.05);};
+#jibresCertificates img:focus{transform: scale(1.1);};
+#jibresCertificates img:active{transform: scale(1);};
 svg.circle-bottom-left{width: 400px;height:400px;fill:#f7f7f9;position:absolute;left:0;bottom:0;pointer-events:none;z-index: 2;}
 svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute;right:0;bottom:0;pointer-events:none;z-index: 2;}
 
