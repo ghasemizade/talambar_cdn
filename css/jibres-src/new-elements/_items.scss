@@ -38,5 +38,5 @@
 .items.long li a{line-height: $myItemHeightLong;}
 .items.long li .item{line-height: $myItemHeightLong;}
 // simple mode
-.items.simple li:after{display:none;}
 .items.simple{box-shadow: none;}
+.items.simple li a{padding: 0 1rem;margin-bottom: 5px;}

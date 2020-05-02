@@ -30,7 +30,7 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 // footer nav links
 #jibresFooter #footerMenu nav{margin-bottom: 40px;background-color:transparent;}
 #jibresFooter #footerMenu nav h3{border-bottom: 1px solid #eee;display: block;color: #777;padding:5px 0;font-weight:900;font-size:1em;}
-#jibresFooter a{color: #777;transition:0.3s;}
+#jibresFooter a{color: #777!important;transition:0.3s;}
 #jibresFooter a:hover{color: $jibres;}
 #jibresFooter a:focus{color: $jibresMono;}
 #jibresFooter a:active{color: $jibresDark;}
