@@ -22,7 +22,7 @@ function readPageScript(_force, _url)
     $('.js [data-pagescript]').remove();
   }
 
-  if(myScriptURL.length == 0)
+  if(!myScriptURL)
   {
     return;
   }
@@ -36,7 +36,7 @@ function readPageChart()
 {
   var myChartURL = $('.chart[data-abc]').attr('data-abc');
 
-  if(myChartURL.length == 0)
+  if(!myChartURL)
   {
     return;
   }
@@ -58,15 +58,15 @@ function readPageChart()
 function readPageEditor()
 {
   var myEditors = $('.txt[data-editor]');
-
-  if(myEditors.length == 0)
+  if(!myEditors)
   {
     return;
   }
 
   myEditorURL = urlJibres('cdn') + "js/medium-editor/medium-editor.min.js";
-  fileLoader(myEditorURL, 'pageScript', _force);
+  fileLoader(myEditorURL, 'runEditor');
 }
+
 
 function fileLoader(_url, _fn, _forceCallFn, _file)
 {
