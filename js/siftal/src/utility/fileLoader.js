@@ -1,20 +1,14 @@
 
 
-function readPageAllScripts(_page, _chart)
+function readPageAllScripts(_force, _page)
 {
-  var force = null;
-  if(_page || _chart)
-  {
-    // from pushState, force call fn
-    force = true;
-  }
   // run each script if exist
-  readPageScript(_page, force);
-  readPageChart(_chart, force);
+  readPageScript(_force, _page);
+  readPageChart(_force);
 }
 
 
-function readPageScript(_url, _force)
+function readPageScript(_force, _url)
 {
   var myScriptURL;
   if(_url)
@@ -35,34 +29,23 @@ function readPageScript(_url, _force)
 }
 
 
-function readPageChart(_url, _force)
+function readPageChart(_force)
 {
-  var myChartURL;
-  if(_url)
-  {
-    myChartURL = _url;
-  }
-  else
-  {
-    myChartURL = $('.js [data-script-chart]').attr('data-script-chart');
-    $('.js [data-script-chart]').remove();
-  }
+  var myChartURL = $('.chart[data-abc]').attr('data-abc');
+  // $('.js [data-script-chart]').remove();
 
   if(myChartURL)
   {
     var fnName       = myChartURL;
     var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
-    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL;
-    fnName = fnName.replace('.js', '');
+    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
+
     fnName = fnName.replace('/', '_');
-    // if(fnName.lastIndexOf('/'))
-    // {
-    //   fnName = fnName.substr(fnName.lastIndexOf('/') + 1);
-    // }
     if(fnName)
     {
       fnName = 'chart_' + fnName;
     }
+
     fileLoader(highChartUrl, fnName, true, myChartURL);
   }
 }

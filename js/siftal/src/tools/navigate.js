@@ -186,7 +186,7 @@
     }
 
     // read all scripts of page if exist
-    readPageAllScripts(obj.scriptPage, obj.scriptChart)
+    readPageAllScripts(true, obj.scriptPage)
 
     // on navigate if in new page we have autofocus field, set focus to it
     if(!pageContentChanged)
