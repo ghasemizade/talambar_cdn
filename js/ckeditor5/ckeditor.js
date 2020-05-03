@@ -62,6 +62,13 @@ function editorRunner(_el)
 				'mergeTableCells'
 			]
 		},
+        ckfinder: {
+            // Upload the images to the server using the CKFinder QuickUpload command.
+            uploadUrl: 'http://jibres.local/fa/cms/posts/edit?id=s',
+            options: {
+                resourceType: 'Images'
+            },
+        },
 		licenseKey: '',
 
 	} )
