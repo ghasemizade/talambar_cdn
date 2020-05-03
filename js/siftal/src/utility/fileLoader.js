@@ -54,7 +54,6 @@ function readPageChart()
 function readPageEditor()
 {
   var myEditors = $('.txt[data-editor]');
-  console.log(myEditors);
 
   if(myEditors && myEditors.length > 0)
   {

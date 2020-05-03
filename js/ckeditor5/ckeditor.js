@@ -11,7 +11,6 @@
 function runEditor()
 {
 	// var editor = new MediumEditor('[data-editor]');
-	console.log('run Editor');
 	$('[data-editor]').each(function(_el)
 	{
 		editorRunner($(this));
@@ -21,7 +20,6 @@ function runEditor()
 
 function editorRunner(_el)
 {
-	console.log('run for one editor');
 	ClassicEditor.create( document.querySelector( '[data-editor]' ), {
 
 		toolbar: {
