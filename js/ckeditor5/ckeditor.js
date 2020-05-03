@@ -22,7 +22,6 @@ function runEditor()
 function editorRunner(_el)
 {
 	var myLang = urlLang();
-	console.log(myLang);
 	ClassicEditor.create( document.querySelector( '[data-editor]' ), {
 
 		toolbar: {
@@ -55,6 +54,35 @@ function editorRunner(_el)
 				'imageStyle:side'
 			]
 		},
+		link: {
+            // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+            addTargetToExternalLinks: true,
+            decorators: {
+                detectDownloadable: {
+                    mode: 'automatic',
+                    callback: url => url.endsWith( '.pdf' ),
+                    attributes: {
+                        download: 'file.pdf'
+                    }
+                },
+                // toggleDownloadable: {
+                //     mode: 'manual',
+                //     label: 'Downloadable',
+                //     attributes: {
+                //         download: 'file'
+                //     }
+                // },
+                // openInNewTab: {
+                //     mode: 'manual',
+                //     label: 'Open in a new tab',
+                //     defaultValue: true,			// This option will be selected by default.
+                //     attributes: {
+                //         target: '_blank',
+                //         rel: 'noopener noreferrer'
+                //     }
+                // }
+            }
+        },
 		table: {
 			contentToolbar: [
 				'tableColumn',
