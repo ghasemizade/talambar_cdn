@@ -21,33 +21,36 @@ function readPageScript(_force, _url)
     $('.js [data-pagescript]').remove();
   }
 
-  if(myScriptURL)
+  if(myScriptURL.length == 0)
   {
-    myScriptURL = urlJibres('cdn') + "js/page/" + myScriptURL;
-    fileLoader(myScriptURL, 'pageScript', _force);
+    return;
   }
+
+  myScriptURL = urlJibres('cdn') + "js/page/" + myScriptURL;
+  fileLoader(myScriptURL, 'pageScript', _force);
 }
 
 
 function readPageChart(_force)
 {
   var myChartURL = $('.chart[data-abc]').attr('data-abc');
-  // $('.js [data-script-chart]').remove();
 
-  if(myChartURL)
+  if(myChartURL.length == 0)
   {
-    var fnName       = myChartURL;
-    var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
-    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
-
-    fnName = fnName.replace('/', '_');
-    if(fnName)
-    {
-      fnName = 'chart_' + fnName;
-    }
-
-    fileLoader(highChartUrl, fnName, true, myChartURL);
+    return;
   }
+
+  var fnName       = myChartURL;
+  var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
+  myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
+
+  fnName = fnName.replace('/', '_');
+  if(fnName)
+  {
+    fnName = 'chart_' + fnName;
+  }
+
+  fileLoader(highChartUrl, fnName, true, myChartURL);
 }
 
 
