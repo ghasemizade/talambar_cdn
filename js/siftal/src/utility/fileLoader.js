@@ -4,7 +4,8 @@ function readPageAllScripts(_force, _page)
 {
   // run each script if exist
   readPageScript(_force, _page);
-  readPageChart(_force);
+  readPageChart();
+  readPageEditor();
 }
 
 
@@ -31,7 +32,7 @@ function readPageScript(_force, _url)
 }
 
 
-function readPageChart(_force)
+function readPageChart()
 {
   var myChartURL = $('.chart[data-abc]').attr('data-abc');
 
@@ -53,6 +54,19 @@ function readPageChart(_force)
   fileLoader(highChartUrl, fnName, true, myChartURL);
 }
 
+
+function readPageEditor()
+{
+  var myEditors = $('.txt[data-editor]');
+
+  if(myEditors.length == 0)
+  {
+    return;
+  }
+
+  myEditorURL = urlJibres('cdn') + "js/medium-editor/medium-editor.min.js";
+  fileLoader(myEditorURL, 'pageScript', _force);
+}
 
 function fileLoader(_url, _fn, _forceCallFn, _file)
 {
