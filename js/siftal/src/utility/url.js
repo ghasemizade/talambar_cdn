@@ -137,3 +137,29 @@ function urlVerify(_page, _in, _env)
 }
 
 
+
+function urlLang()
+{
+  var lang = $('html').attr('lang');
+
+  if(!lang)
+  {
+    lang = 'en';
+  }
+
+  return lang;
+}
+
+
+function urlDir()
+{
+  var _dir = $('html').attr('dir');
+
+  if(!_dir)
+  {
+    _dir = 'en';
+  }
+
+  return _dir;
+}
+
