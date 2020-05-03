@@ -1,4 +1,4 @@
-function chart_domainhomepage()
+function chart_management_domainhomepage()
 {
 
   if($("#chartdivdomain").length == 1){chartdivdomain();}

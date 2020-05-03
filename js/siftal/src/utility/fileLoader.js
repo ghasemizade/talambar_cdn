@@ -54,15 +54,15 @@ function readPageChart(_url, _force)
     var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
     myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL;
     fnName = fnName.replace('.js', '');
-    if(fnName.lastIndexOf('/'))
-    {
-      fnName = fnName.substr(fnName.lastIndexOf('/') + 1);
-    }
+    fnName = fnName.replace('/', '_');
+    // if(fnName.lastIndexOf('/'))
+    // {
+    //   fnName = fnName.substr(fnName.lastIndexOf('/') + 1);
+    // }
     if(fnName)
     {
       fnName = 'chart_' + fnName;
     }
-
     fileLoader(highChartUrl, fnName, true, myChartURL);
   }
 }

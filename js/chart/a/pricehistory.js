@@ -1,4 +1,4 @@
-function chart_pricehistory()
+function chart_a_pricehistory()
 {
   if($("#chartdiv").length == 1){myChartProductPrice();}
 }

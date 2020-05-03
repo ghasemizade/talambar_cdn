@@ -1,5 +1,5 @@
 
-function chart_androiddashboard()
+function chart_a_androiddashboard()
 {
 
   if($("#chartdiv").length == 1){highChart();}
