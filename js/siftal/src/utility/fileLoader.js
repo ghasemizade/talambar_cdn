@@ -22,13 +22,11 @@ function readPageScript(_force, _url)
     $('.js [data-pagescript]').remove();
   }
 
-  if(!myScriptURL)
+  if(myScriptURL && myScriptURL.length > 0)
   {
-    return;
+    myScriptURL = urlJibres('cdn') + "js/page/" + myScriptURL;
+    fileLoader(myScriptURL, 'pageScript', _force);
   }
-
-  myScriptURL = urlJibres('cdn') + "js/page/" + myScriptURL;
-  fileLoader(myScriptURL, 'pageScript', _force);
 }
 
 
@@ -36,35 +34,33 @@ function readPageChart()
 {
   var myChartURL = $('.chart[data-abc]').attr('data-abc');
 
-  if(!myChartURL)
+  if(myChartURL && myChartURL.length > 0)
   {
-    return;
+    var fnName       = myChartURL;
+    var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
+    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
+
+    fnName = fnName.replace('/', '_');
+    if(fnName)
+    {
+      fnName = 'chart_' + fnName;
+    }
+
+    fileLoader(highChartUrl, fnName, true, myChartURL);
   }
-
-  var fnName       = myChartURL;
-  var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.0.4.js';
-  myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
-
-  fnName = fnName.replace('/', '_');
-  if(fnName)
-  {
-    fnName = 'chart_' + fnName;
-  }
-
-  fileLoader(highChartUrl, fnName, true, myChartURL);
 }
 
 
 function readPageEditor()
 {
   var myEditors = $('.txt[data-editor]');
-  if(!myEditors)
-  {
-    return;
-  }
+  console.log(myEditors);
 
-  myEditorURL = urlJibres('cdn') + "js/medium-editor/medium-editor.min.js";
-  fileLoader(myEditorURL, 'runEditor');
+  if(myEditors && myEditors.length > 0)
+  {
+    myEditorURL = urlJibres('cdn') + "js/ckeditor5/ckeditor.js";
+    fileLoader(myEditorURL, 'runEditor', true);
+  }
 }
 
 
