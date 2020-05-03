@@ -64,7 +64,7 @@ function editorRunner(_el)
 		},
         ckfinder: {
             // Upload the images to the server using the CKFinder QuickUpload command.
-            uploadUrl: 'http://jibres.local/fa/cms/posts/edit?id=s',
+            uploadUrl: window.location.href,
             options: {
                 resourceType: 'Images'
             },
