@@ -27,6 +27,15 @@
 #quote .title h4{font-weight:400;line-height:1.6em;margin-bottom:2em}
 #quote .title h5{font-weight:400;font-size:1.1em;color:#ddd;}
 
+#jibresQuote{position:relative;overflow: hidden;font-size: 1.5rem;padding: 10rem 0 5rem;background-color: #fff;color: #415161}
+#jibresQuote h2{text-align: center;font-weight: 900;font-size: 3.5rem;margin-bottom: 5rem;position: relative;}
+#jibresQuote h2:after{content: "";width: 7%; border-top:3px solid #ff5151;display:block;margin: 2rem auto 0; }
+#jibresQuote .item{box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);border-radius: 2rem;padding: 8%;height: 100%;transition:0.3s}
+#jibresQuote .item:hover{background-color: rgba(255,255,255,0.72);box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.09)}
+#jibresQuote img{width:5rem;height:5rem;overflow: hidden;border-radius: 50%;}
+
+
+
 
 #keepitsimple{background:#3850cc;background:-webkit-linear-gradient(left,#3230a0, #4895ff 70%,#aabbff);background:linear-gradient(90deg,#3230a0, #4895ff 70%,#aabbff);color:#fff;position:relative;}
 #keepitsimple .title{font-size:2em;text-align:center;padding:7em 5px;}
