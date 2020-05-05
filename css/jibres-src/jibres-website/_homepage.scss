@@ -21,15 +21,17 @@
 @keyframes pulse { 0%{opacity:.2} 50%{opacity:.7} 100%{opacity:.2}}
 
 
-#quote{min-height:500px;background-position:top left;background-repeat:no-repeat;background-size:cover;position:relative;color:#fff;overflow: hidden;}
-#quote .title{position:absolute;top:0;bottom:0;width:40%;min-width:280px;max-width:400px;margin:0 auto;right:10%;font-size:1.5em;text-align:center;background-color:rgba(255,255,255,0.1);padding:5em 1em 0;transition:0.3s;}
-#quote:hover .title{text-shadow: 0 0 5px #fff}
-#quote .title h4{font-weight:400;line-height:1.6em;margin-bottom:2em}
-#quote .title h5{font-weight:400;font-size:1.1em;color:#ddd;}
+#jibresRoadmap{position:relative;overflow: hidden;font-size: 1.5rem;padding: 10rem 0 10rem;background-color: #f5f5f5;color: #afafaf;text-align: center}
+#jibresRoadmap h3{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 5rem;position: relative;color: #B29F7B;line-height: 5rem}
+#jibresRoadmap h3:after{content: "";width: 7%; border-top:3px solid #B29F7B;display:block;margin: 2.2rem auto 0;transition:0.3s}
+#jibresRoadmap:hover h3:after{width: 10%;}
+#jibresRoadmap:active h3:after{width: 15%;}
+#jibresRoadmap h2{font-size:5rem;margin:0 auto;}
+
 
 #jibresQuote{position:relative;overflow: hidden;font-size: 1.5rem;padding: 10rem 0 10rem;background-color: #fff;color: #415161}
-#jibresQuote h2{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 5rem;position: relative;}
-#jibresQuote h2:after{content: "";width: 7%; border-top:3px solid #ff5151;display:block;margin: 2rem auto 0;transition:0.3s}
+#jibresQuote h2{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 5rem;position: relative;line-height: 5rem}
+#jibresQuote h2:after{content: "";width: 7%; border-top:3px solid #ff5151;display:block;margin: 2.2rem auto 0;transition:0.3s}
 #jibresQuote:hover h2:after{width: 10%;}
 #jibresQuote:active h2:after{width: 15%;}
 #jibresQuote .item{box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);border-radius: 2rem;padding: 8%;height: 100%;transition:0.3s}
