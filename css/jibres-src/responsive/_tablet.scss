@@ -23,6 +23,9 @@
 
   [data-panel] #pageHeader{margin:0!important;}
   [data-panel] #pageContent{margin:0!important;}
+
+  .items.simple li:after{display:none;}
+  .items.simple li .go{display: none;}
 }
 
 
