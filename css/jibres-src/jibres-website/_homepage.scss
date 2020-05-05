@@ -31,7 +31,7 @@
 #jibresQuote p{min-height: 100px;}
 #jibresQuote .fiveStar{font-family: "siftal";position: relative;overflow: hidden;color: #ff5a44;font-size: 1.7rem;line-height:20px;height: 30px;min-height: 30px;max-height: 30px;padding:5px 0;margin-bottom:1rem;}
 #jibresQuote .fiveStar span:after{content:"\5c";padding:0 1px;}
-#jibresQuote footer{height: 60px;padding:5px 0}
+#jibresQuote footer{min-height: 60px;padding:5px 0;overflow: hidden;}
 #jibresQuote footer .position{margin-top:5px;}
 #jibresQuote img{width:5rem;height:5rem;overflow: hidden;border-radius: 50%;display: block;}
 
