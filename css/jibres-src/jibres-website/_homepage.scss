@@ -3,10 +3,9 @@
 
 #saleChannels{padding: 20px 0 50px;font-size: 1.4em;text-align: center;position:relative;}
 #saleChannels h2{font-size: 3em;color:#444;font-weight: 700;}
-#saleChannels .title{margin-bottom: 50px;}
 #saleChannels h3{font-size: 1.3em;color: #333;font-weight: 700;}
 [dir="rtl"] #saleChannels h3{font-size: 1.1em;font-weight: 800;}
-#saleChannels .item{margin:1em 0.8em;background-color: #ffffff;border-radius: 0.5em;box-shadow: 0 0 1.5em rgba(220,90,90,0.15);padding: 40px 10px;-webkit-transition: all 0.3s linear 0s;transition: all 0.3s linear 0s;overflow: hidden;}
+#saleChannels .item{background-color: #ffffff;border-radius: 0.5em;box-shadow: 0 0 1.5em rgba(220,90,90,0.15);padding: 20px 10px 10px;-webkit-transition: all 0.3s linear 0s;transition: all 0.3s linear 0s;overflow: hidden;height: 100%;}
 #saleChannels .item:hover{box-shadow: 0 0 2em rgba(220,90,90,0.3);}
 #saleChannels .item:active{box-shadow: 0 0 2em rgba(220,90,90,0.4);}
 #saleChannels .item img{display: block;min-height: 75px;max-height: 200px;margin:0 auto 20px;}
