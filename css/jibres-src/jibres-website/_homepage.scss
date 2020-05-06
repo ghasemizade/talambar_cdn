@@ -1,5 +1,9 @@
 
 
+#jibresDomain{
+	background:linear-gradient(to right, rgb(6, 77, 105), rgb(56, 127, 155), rgb(6, 77, 105));
+	min-height: 300px;
+}
 
 #saleChannels{padding: 20px 0 50px;font-size: 1.4em;text-align: center;position:relative;}
 #saleChannels h2{font-size: 3em;color:#444;font-weight: 700;}
@@ -41,13 +45,24 @@
 
 
 #keepitsimple{background:#3850cc;background:-webkit-linear-gradient(left,#3230a0, #4895ff 70%,#aabbff);background:linear-gradient(90deg,#3230a0, #4895ff 70%,#aabbff);color:#fff;position:relative;}
-#keepitsimple .title{font-size:2em;text-align:center;padding:7em 5px;}
+#keepitsimple .title{font-size:2em;text-align:center;padding:10rem 5px 15rem;}
 #keepitsimple .title h2{font-weight:900;font-size:3em;line-height:2;margin-bottom:0;position:relative;margin-bottom:1em;}
 #keepitsimple .title h2:after{content:"";position:absolute;bottom:0;right:0;left:0;width:50px;height:1px;margin:0 auto;background-color:#ddd;transition:0.3s;}
 #keepitsimple:hover .title h2:after{background-color:#fff;width:100px;}
 #keepitsimple .title h3{font-weight:100;font-size:1em;color:#eee;}
 #keepitsimple .title h3 span{opacity:0;transition:0.3s}
 #keepitsimple .title h3:hover span{opacity:1}
+#keepitsimple .waves {position: absolute;right: 0;left: 0;bottom: 0px;width: 100%;margin-bottom:-7px;height:100px;}
+#keepitsimple .parallax > use {animation: simpleWave 25s cubic-bezier(.55,.5,.45,.5) infinite;}
+#keepitsimple .parallax > use:nth-child(1) {animation-delay: -2s;animation-duration: 7s;}
+#keepitsimple .parallax > use:nth-child(2) {animation-delay: -5s;animation-duration: 10s;}
+#keepitsimple .parallax > use:nth-child(3) {animation-delay: -4s;animation-duration: 15s;}
+#keepitsimple .parallax > use:nth-child(4) {animation-delay: -5s;animation-duration: 20s;}
+@keyframes simpleWave { 0% { transform: translate3d(-90px,0,0); } 100% { transform: translate3d(85px,0,0); }}
+/*Shrinking for mobile*/
+@media (max-width: 768px) { .waves { height:40px; min-height:40px; } }
+
+
 
 
 #pricingPlans{font-size: 1.6em;text-align: center;margin: 80px 0;}
