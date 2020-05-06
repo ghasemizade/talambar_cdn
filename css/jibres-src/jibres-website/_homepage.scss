@@ -1,9 +1,21 @@
 
 
 #jibresDomain{
-	background:linear-gradient(to right, rgb(6, 77, 105), rgb(56, 127, 155), rgb(6, 77, 105));
+  // background-color: #FD940A;
+  // background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
+  background: #f5f5f5;
+  color: #000;
 	min-height: 300px;
 }
+
+#jibresDomain{position:relative;overflow: hidden;font-size: 1.5rem;padding: 5rem 0 10rem;background-color: #f7f7f9;color: #415161}
+#jibresDomain h2{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 5rem;position: relative;line-height: 5rem}
+#jibresDomain h2:after{content: "";width: 7%;min-width:50px; border-top:3px solid #ff5151;display:block;margin: 2.2rem auto 0;transition:0.3s}
+#jibresDomain h2 a{transition:0.3s;}
+#jibresDomain:hover h2:after{width: 10%;}
+#jibresDomain:active h2:after{width: 15%;}
+#jibresDomain .domainQuickBuy{background-color: #eee;color:#415161}
+
 
 #saleChannels{padding: 20px 0 50px;font-size: 1.4em;text-align: center;position:relative;}
 #saleChannels h2{font-size: 3em;color:#444;font-weight: 700;}
