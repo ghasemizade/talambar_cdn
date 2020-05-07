@@ -1,69 +1,62 @@
 .container {
+  position: relative;
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  position: relative;
   width: 100%;
-  padding-right: 15rem;
-  padding-left: 15rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 480px) {
-  .container, .container-sm {
+  .container {
+    max-width: 440px;
+  }
+  .container-sm {
     max-width: 440px;
   }
 }
 
 @media (min-width: 768px) {
-  .container, .container-sm, .container-md {
+  .container {
+    max-width: 720px;
+  }
+  .container-md {
     max-width: 720px;
   }
 }
 
 @media (min-width: 980px) {
-  .container, .container-sm, .container-md, .container-lg {
+  .container {
+    max-width: 950px;
+  }
+  .container-lg {
     max-width: 950px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
+  .container {
+    max-width: 1140px;
+  }
+  .container-xl {
     max-width: 1140px;
   }
 }
 
 @media (min-width: 1800px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1200px;
+  .container{
+    max-width: 1250px;
+  }
+  .container-xxl {
+    max-width: 1250px;
   }
 }
