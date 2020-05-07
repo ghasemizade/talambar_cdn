@@ -4,10 +4,7 @@ body[data-in="site"] {background-color:$jibresBack;}
 body[data-iframe]{overflow:hidden;}
 body[data-iframe]::after{content: "";position: fixed;top: 0;bottom: 0;right: 0;left: 0;width: 100%;background-color: $jibres;background: $jibres url(../logo/icon-white/svg/Jibres-Logo-icon-white.svg) no-repeat center center;background-size: 70vh}
 
-.fit-sm{position:relative;padding:0;width:88%;margin:0 auto;max-width:700px;}
-.fit-md{position:relative;padding:0;width:90%;margin:0 auto;max-width:900px;}
 .fit{position:relative;padding:0;width:92%;margin:0 auto;max-width:1100px;}
-.fit-lg{position:relative;padding:0;width:95%;margin:0 auto;max-width:1200px;}
 
 .jibresBanner{position: relative;min-height:300px;padding: 20px 0 20px;font-size:1.6em;}
 [dir='rtl'] .jibresBanner{font-size:1.4em;}
@@ -16,6 +13,14 @@ body[data-iframe]::after{content: "";position: fixed;top: 0;bottom: 0;right: 0;l
 .jibresBanner .fit.zero{padding: 0;}
 .jibresBanner .fit.zero img{transition: 0.2s;}
 .jibresBanner .fit.zero img:hover{transform: scale(1.05);}
+
+.jibresBanner .avand{position: relative;overflow: hidden;background-color: $white;border-radius: 10px;padding: 50px 20px 50px;margin-bottom:40px;box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.08), 0px 20px 30px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);}
+.jibresBanner .avand-md{position: relative;overflow: hidden;background-color: $white;border-radius: 10px;padding: 50px 20px 50px;margin-bottom:40px;box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.08), 0px 20px 30px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);}
+.jibresBanner .avand.zero{padding: 0;}
+.jibresBanner .avand.zero img{transition: 0.2s;}
+.jibresBanner .avand.zero img:hover{transform: scale(1.05);}
+
+
 
 /* static pages design*/
 .page-title{padding:15em 0;text-align:center;overflow:hidden;background-color:#222;}
