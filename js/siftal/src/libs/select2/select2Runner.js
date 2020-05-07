@@ -20,7 +20,7 @@ function selectRunner()
 
 
 
-  $(document).off('focus.select22').on('focus.select22', '.select22.select22-container', function (e)
+  $('.select22.select22-container').off('focus.select22').on('focus.select22', function (e)
   {
     // only open on original attempt - close focus event should not fire open
     if (e.originalEvent && $(this).find(".select22-selection--single").length > 0)
@@ -29,7 +29,7 @@ function selectRunner()
     }
   });
 
-  $(document).off('change.select22').on('change.select22', '.select22', function (_e)
+  $('.select22').off('change.select22').on('change.select22', function (_e)
   {
     var $mySelect = $(this);
     var nextEl = $mySelect.attr('data-next');
@@ -59,8 +59,7 @@ function selectRunner()
 // });
 
 
-$(".select22").off("select22:selecting", function(_e){});
-$(".select22").on("select22:selecting", function(_e)
+$(".select22").off("select22:selecting").on("select22:selecting", function(_e)
 {
   if(_e.params && _e.params.args && _e.params.args.data)
   {
