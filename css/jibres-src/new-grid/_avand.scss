@@ -6,14 +6,19 @@
   margin-right: auto;
   margin-left: auto;
 }
-
-.avand-fluid, .avand-sm, .avand-md, .avand-lg, .avand-xl, .avand-xxl {
+.avand.zero{
+  padding: 0;
+}
+[class^="avand-"]{
   position: relative;
   width: 100%;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
+}
+[class^="avand-"].zero{
+  padding: 0;
 }
 
 @media (min-width: 480px) {
