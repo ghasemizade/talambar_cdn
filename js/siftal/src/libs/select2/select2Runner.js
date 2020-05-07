@@ -20,8 +20,7 @@ function selectRunner()
 
 
 
-  $(document).off('focus', '.select22.select22-container', function (e){});
-  $(document).on('focus', '.select22.select22-container', function (e)
+  $(document).off('focus.select22').on('focus.select22', '.select22.select22-container', function (e)
   {
     // only open on original attempt - close focus event should not fire open
     if (e.originalEvent && $(this).find(".select22-selection--single").length > 0)
@@ -30,8 +29,7 @@ function selectRunner()
     }
   });
 
-  $(document).off('change', '.select22', function (_e){});
-  $(document).on('change', '.select22', function (_e)
+  $(document).off('change.select22').on('change.select22', '.select22', function (_e)
   {
     var $mySelect = $(this);
     var nextEl = $mySelect.attr('data-next');
