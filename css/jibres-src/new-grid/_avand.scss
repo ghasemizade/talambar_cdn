@@ -1,4 +1,4 @@
-.container {
+.avand {
   position: relative;
   width: 100%;
   padding-right: 1.5rem;
@@ -7,7 +7,7 @@
   margin-left: auto;
 }
 
-.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+.avand-fluid, .avand-sm, .avand-md, .avand-lg, .avand-xl, .avand-xxl {
   position: relative;
   width: 100%;
   padding-right: 1.5rem;
@@ -17,46 +17,46 @@
 }
 
 @media (min-width: 480px) {
-  .container {
+  .avand {
     max-width: 440px;
   }
-  .container-sm {
+  .avand-sm {
     max-width: 440px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .avand {
     max-width: 720px;
   }
-  .container-md {
+  .avand-md {
     max-width: 720px;
   }
 }
 
 @media (min-width: 980px) {
-  .container {
+  .avand {
     max-width: 950px;
   }
-  .container-lg {
+  .avand-lg {
     max-width: 950px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .avand {
     max-width: 1140px;
   }
-  .container-xl {
+  .avand-xl {
     max-width: 1140px;
   }
 }
 
 @media (min-width: 1800px) {
-  .container{
+  .avand{
     max-width: 1250px;
   }
-  .container-xxl {
+  .avand-xxl {
     max-width: 1250px;
   }
 }
