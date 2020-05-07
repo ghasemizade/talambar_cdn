@@ -202,6 +202,15 @@ Version       2.0.0
 @import 'responsive/print';
 @import 'responsive/standalone';
 
+// new responsive
+@import 'responsive-new/xs';
+@import 'responsive-new/sm';
+@import 'responsive-new/md';
+@import 'responsive-new/lg';
+@import 'responsive-new/xl';
+@import 'responsive-new/xxl';
+
+
 // add shame style temporary
 @import 'tools/shame';
 
