@@ -18,12 +18,35 @@
 	border-radius: 50%;
 	z-index: -1;
 }
-#jHeader100 .shine{
+#jHeader100 .action{
 	position: relative;
 	background: rgba(255,255,255,0.9);
 	box-shadow: 0 1rem 3rem rgba(60,60,90,.1), 0 0 3px rgba(0,0,0,.05);
 	border-radius: 0.5rem;
 	margin-bottom: 1rem;
+	padding: 1rem 2%;
+}
+#jHeader100 nav{
+	position: relative;
+	background: rgba(255,255,255,0.9);
+	box-shadow: 0 1rem 3rem rgba(60,60,90,.1), 0 0 3px rgba(0,0,0,.05);
+	border-radius: 0.5rem;
+	padding: 0 2%;
+	line-height: 4rem;
+}
+#jHeader100 nav a{
+	display: inline-block;
+	color: #666;
+	padding: 0.5rem 1rem;
+}
+#jHeader100 nav a:hover{
+	color: #444;
+}
+#jHeader100 nav a:focus{
+	color: #111;
+}
+#jHeader100 nav a:active{
+	color: #000;
 }
 #jHeader100 .logo{
 	display: block;
