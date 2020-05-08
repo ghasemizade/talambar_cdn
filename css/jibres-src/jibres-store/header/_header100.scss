@@ -1,17 +1,9 @@
 
-.jHeader100{
-	text-align: center;
+#jHeader100{
 	font-size: 1.6rem;
-	user-select: none;
 	margin: 3rem auto 3rem;
-	padding: 0 2em;
-	min-height: 100px;
-	border-radius: 0.5rem;
-	position: relative;
-	background: rgba(255,255,255,0.9);
-	box-shadow: 0 1rem 3rem rgba(60,60,90,.1), 0 0 3px rgba(0,0,0,.05);
 }
-.jHeader100.circleEffect:before{
+#jHeader100[data-circleEffect]:before{
 	content: '';
 	display: block;
 	position: absolute;
@@ -26,33 +18,40 @@
 	border-radius: 50%;
 	z-index: -1;
 }
-.jHeader100 .logo{
+#jHeader100 .shine{
+	position: relative;
+	background: rgba(255,255,255,0.9);
+	box-shadow: 0 1rem 3rem rgba(60,60,90,.1), 0 0 3px rgba(0,0,0,.05);
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+}
+#jHeader100 .logo{
 	display: block;
 	width: 200px;
 	height: 60px;
 	overflow: hidden;
 }
-.jHeader100 .logo img{
+#jHeader100 .logo img{
 	display: block;
 	max-width: 200px;
 	max-height: 60px;
 }
 // enter
-.jHeader100 .enter{
+#jHeader100 .enter{
 	color: #333;
 	display: block;
 }
-.jHeader100 .enter:hover{
+#jHeader100 .enter:hover{
 	color: #777;
 }
-.jHeader100 .enter:focus{
+#jHeader100 .enter:focus{
 	color: #4080c0;
 }
-.jHeader100 .enter:active{
+#jHeader100 .enter:active{
 	color: #4080c0;
 }
 // cart
-.jHeader100 .cart{
+#jHeader100 .cart{
 	display: block;
 	max-width: 200px;
 	max-height: 60px;
@@ -66,7 +65,7 @@
 	position: relative;
 
 }
-.jHeader100 .cart:before{
+#jHeader100 .cart:before{
 	content: "\e125";
 	font-family: "siftal","tahoma" !important;
 	vertical-align: middle;
@@ -74,7 +73,7 @@
 	padding: 0 5px;
 	display: inline-block;
 }
-.jHeader100 .cart:after{
+#jHeader100 .cart:after{
 	content: attr(data-count);
 	vertical-align: middle;
 	background-color: #4080c0;
@@ -91,25 +90,25 @@
 	font-size: 1.4rem;
 	display: inline-block;
 }
-.jHeader100 .cart:hover{
+#jHeader100 .cart:hover{
 	color: #4080c0;
 	background-color: #ddd;
 }
-.jHeader100 .cart:focus{
+#jHeader100 .cart:focus{
 	background-color: #ccc;
 	color: #4080c0;
 }
-.jHeader100 .cart:active{
+#jHeader100 .cart:active{
 	background-color: #bbb;
 	color: #4080c0;
 }
 // search
-.jHeader100 .search{
+#jHeader100 .search{
 	display: block;
 	line-height: 28px;
 	font-size: 2rem;
 }
-.jHeader100 .search:before{
+#jHeader100 .search:before{
 	content: "\e03f";
 	font-family: "siftal","tahoma" !important;
 	vertical-align: middle;
@@ -117,12 +116,12 @@
 	display: inline-block;
 	color: #333;
 }
-.jHeader100 .search:hover{
+#jHeader100 .search:hover{
 	color: #777;
 }
-.jHeader100 .search:focus{
+#jHeader100 .search:focus{
 	color: #4080c0;
 }
-.jHeader100 .search:active{
+#jHeader100 .search:active{
 	color: #4080c0;
 }
