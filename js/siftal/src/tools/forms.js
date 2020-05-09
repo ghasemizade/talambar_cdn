@@ -383,7 +383,7 @@
         {
           $form.find('input[data-get-focus]').get(0).select();
         }
-        else if(_super.lockForm)
+        else if(_super && _super.lockForm)
         {
           $('[data-hasFocus]').trigger("focus");
           $('[data-hasFocus]').attr('data-hasFocus', null);
