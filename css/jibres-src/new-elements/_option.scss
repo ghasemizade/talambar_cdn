@@ -21,6 +21,12 @@
 	align-items: center;
 	justify-content: center;
 }
+[data-option] .action.dropzone{
+	flex-direction: column;
+}
+[data-option] .action.dropzone .progress{
+	min-width: 100%;
+}
 [dir='rtl'] [data-option] .action{
 	border: none;
 	border-right:1px solid #d5d7d8;
