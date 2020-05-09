@@ -84,7 +84,7 @@
 	border:none;
 	line-height: 25px;
 	color: #444;
-	background-color: #e0e0e0;
+	background-color: #e8ebf8;
 	transition: 0.3s;
 	overflow: hidden;
 	position: relative;
@@ -101,7 +101,7 @@
 #jHeader100 .cart:after{
 	content: attr(data-count);
 	vertical-align: middle;
-	background-color: #4080c0;
+	background-color: #24b7c6;
 	color: #fff;
 	text-align: center;
 	line-height: 28px;
@@ -117,14 +117,14 @@
 }
 #jHeader100 .cart:hover{
 	color: #4080c0;
-	background-color: #ddd;
+	background-color: #e8eaf6;
 }
 #jHeader100 .cart:focus{
-	background-color: #ccc;
+	background-color: #e3f2fd;
 	color: #4080c0;
 }
 #jHeader100 .cart:active{
-	background-color: #bbb;
+	background-color: #d4e9f9;
 	color: #4080c0;
 }
 // search
