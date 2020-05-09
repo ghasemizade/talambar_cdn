@@ -1,6 +1,6 @@
 function bindUploader()
 {
-  $('#gallery').uploader({
+  $('.dropzone input[type="file"]').uploader({
     url: window.location.href,
     dataType: 'json',
 
