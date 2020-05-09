@@ -9,7 +9,7 @@
 	color: #333;
 }
 [data-option] .data{
-	padding: 2em;
+	padding: 3rem;
 }
 [data-option] .action{
 	border-left:1px solid #d5d7d8;
@@ -51,6 +51,9 @@
 [data-option] .body{
 	font-size: 1.6rem;
 	color: #555;
+}
+[dir="rtl"] [data-option] .body{
+	font-size: 1.4rem;
 }
 [data-option] .meta{
 	font-size: 1em;
