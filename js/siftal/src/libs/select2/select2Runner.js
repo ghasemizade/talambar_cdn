@@ -29,7 +29,7 @@ function selectRunner()
     }
   });
 
-  $('.select22').off('change.select22').on('change.select22', function (_e)
+  $('.select22').off('change.select2').on('change.select2', function (_e)
   {
     var $mySelect = $(this);
     var nextEl = $mySelect.attr('data-next');
@@ -59,38 +59,38 @@ function selectRunner()
 // });
 
 
-$(".select22").off("select22:selecting").on("select22:selecting", function(_e)
-{
-  if(_e.params && _e.params.args && _e.params.args.data)
+  $(".select22").off("select22:selecting").on("select22:selecting", function(_e)
   {
-    var selectedData = _e.params.args.data;
-    if(selectedData.datalist)
+    if(_e.params && _e.params.args && _e.params.args.data)
     {
-      $("body").trigger("dropdown:selected:datalist", selectedData.datalist);
-
-      if($(this).attr('data-selection') === 'clean')
+      var selectedData = _e.params.args.data;
+      if(selectedData.datalist)
       {
-        _e.preventDefault();
-        $(this).select22('close');
-      }
-    }
+        $("body").trigger("dropdown:selected:datalist", selectedData.datalist);
 
-    // open option as link
-    if($(this).attr('data-link') !== undefined)
-    {
-      // var selectedVal = $(this).val();
-      // we are link inside value, so open link
-      if(selectedData && selectedData.id)
-      {
-        var myLink = selectedData.id;
-        if(myLink.indexOf('http') === 0)
+        if($(this).attr('data-selection') === 'clean')
         {
-          Navigate({ url: myLink });
+          _e.preventDefault();
+          $(this).select22('close');
+        }
+      }
+
+      // open option as link
+      if($(this).attr('data-link') !== undefined)
+      {
+        // var selectedVal = $(this).val();
+        // we are link inside value, so open link
+        if(selectedData && selectedData.id)
+        {
+          var myLink = selectedData.id;
+          if(myLink.indexOf('http') === 0)
+          {
+            Navigate({ url: myLink });
+          }
         }
       }
     }
-  }
-});
+  });
 
   // fill default value
   select22FillDefault();
