@@ -55,14 +55,14 @@ function shortkey_corridor(_e, _self, _key)
   // logy(mytxt, 'info');
 
   var elShortkey = $('[data-shortkey="'+ mytxt +'"]');
-  var $focused = $(':focus');
 
   // on editor disable shortkey
-  if($focused.parents('.ck-editor').length > 0) return;
+  if($(':focus').parents('.ck-editor').length > 0) return;
 
   // try to search for combine mode
   if(elShortkey.length == 0)
   {
+    var $focused = $(':focus');
     if(lastKeyPressed && !$focused.is('input'))
     {
       var mytxt2 = lastKeyPressed + "+" + mytxt;
