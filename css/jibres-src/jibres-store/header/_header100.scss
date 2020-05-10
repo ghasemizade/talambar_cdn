@@ -51,14 +51,24 @@
 }
 #jHeader100 .logo{
 	display: block;
-	width: 200px;
-	height: 60px;
+	height: 6rem;
 	overflow: hidden;
 }
 #jHeader100 .logo img{
 	display: block;
-	max-width: 200px;
-	max-height: 60px;
+	max-width: 20rem;
+	max-height: 6rem;
+}
+#jHeader100 .logo h1{
+	font-size: 3rem;
+	margin: 0;
+	padding: 0 1rem;
+	line-height: 6rem;
+	font-weight: 900;
+	height: 6rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 // enter
 #jHeader100 .enter{
@@ -77,12 +87,12 @@
 // cart
 #jHeader100 .cart{
 	display: block;
-	max-width: 200px;
-	max-height: 60px;
-	border-radius: 50px;
+	max-width: 20rem;
+	max-height: 6rem;
+	border-radius: 5rem;
 	padding: 1rem 1em;
 	border:none;
-	line-height: 25px;
+	line-height: 2.5rem;
 	color: #444;
 	background-color: #e8ebf8;
 	transition: 0.3s;
@@ -105,13 +115,13 @@
 	color: #fff;
 	text-align: center;
 	line-height: 28px;
-	height: 25px;
+	height: 2.5rem;
 	overflow: hidden;
-	border-radius: 50px;
+	border-radius: 5rem;
 	min-width: 19px;
 	padding: 0 3px;
 	margin: 0;
-	margin-right: 10px;
+	margin-right: 1rem;
 	font-size: 1.4rem;
 	display: inline-block;
 }
