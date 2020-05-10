@@ -45,6 +45,7 @@ $(document).ready(function()
     }
 
     if($(this).hasAttr('data-action')) return;
+    if($(this).hasClass('ck')) return;
 
     e.preventDefault();
     $(this).ajaxify();
@@ -217,7 +218,7 @@ $(document).ready(function()
       {
         return;
       }
-    if($this.parents('.medium-editor-element').length > 0) return;
+    if($this.parents('.ck-editor').length > 0) return;
 
     e.preventDefault();
 
