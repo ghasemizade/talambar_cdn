@@ -2,11 +2,15 @@
   position: relative;
   background-color: #fff;
   border: 1px solid #eee;
-  box-shadow: #ddd 0 0 5px;
+  box-shadow: 0px 0px 1.5rem 0px rgba(0,0,0,0.05);
   font-size: 1.4rem;
   margin:0 auto 1rem;
   display: block;
   border-radius: $myRadius;
+  transition: 0.3s;
+}
+.box:hover{
+  box-shadow: 0px 0px 0.5rem 0px rgba(0,0,0,0.1);
 }
 .box.hasCover{
   margin-top: 10rem;
@@ -34,9 +38,6 @@
 }
 .box > header:hover{
   background-color: #eee;
-}
-.box:hover > header{
-  background-color: #e0e0e0;
 }
 .box > header[data-kerkere-status="close"]{
   background-color: #ddd;
