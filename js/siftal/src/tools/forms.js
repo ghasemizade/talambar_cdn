@@ -293,7 +293,7 @@
                 notif('fatal', 'Server result is invalid', 'Ajax is failed!');
               }
 
-              if($('html').attr('data-debugger') !== undefined && _textStatus == 'error')
+              if(urlDebugger() && _textStatus == 'error')
               {
                 alert(JSON.stringify( _result ));
               }

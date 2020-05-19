@@ -163,3 +163,14 @@ function urlDir()
   return _dir;
 }
 
+
+function urlDebugger()
+{
+  if($('html').attr('data-debugger') !== undefined)
+  {
+    return true;
+  }
+
+  return false;
+}
+

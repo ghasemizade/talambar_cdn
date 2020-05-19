@@ -87,7 +87,7 @@
     //     }
     //     else
     //     {
-    //       if($('html').attr('data-debugger') !== undefined)
+    //       if(urlDebugger())
     //       {
     //         // do nothing
     //       }
