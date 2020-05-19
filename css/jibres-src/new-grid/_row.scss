@@ -1,21 +1,23 @@
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -1.5rem;
-    margin-left: -1.5rem
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
 }
-.justify-content-between {
-    justify-content: space-between!important
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
 }
-
+.no-gutters > .c,
+.no-gutters > [class*="c-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
 .no-gutters {
     margin-right: 0;
     margin-left: 0
-}
-
-.no-gutters>.c, .no-gutters>[class*=c-] {
-    padding-right: 0;
-    padding-left: 0
 }
 .c, [class*=c-]{
     position: relative;
