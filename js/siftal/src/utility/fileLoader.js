@@ -71,6 +71,10 @@ function readPageSortable()
 
   if(mySortable && mySortable.length > 0)
   {
+    // load style
+    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css");
+
+    // load script
     mySortableURL = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js";
     fileLoader(mySortableURL, 'runSortable', true);
   }
@@ -96,9 +100,7 @@ function fileLoader(_url, _fn, _forceCallFn, _file)
     return false;
   }
 
-  var $scriptExist = $('script[src="' + _url + '"]');
-
-  if($scriptExist.length)
+  if($('script[src="' + _url + '"]').length)
   {
     if(_forceCallFn)
     {
@@ -126,6 +128,33 @@ function fileLoader(_url, _fn, _forceCallFn, _file)
 
 }
 
+
+function StyleLoader(_url)
+{
+  if(!_url)
+  {
+    return false;
+  }
+
+  if($('link[href="' + _url + '"]').length)
+  {
+    // do nothing
+  }
+  else
+  {
+    var newStyle = document.createElement("link");
+    // append to page js section
+    $('.js').append(newStyle);
+
+    // show error message if we are problem on load process
+    newStyle.onerror = function(){ console.warn('error or load style ' + _url);};
+
+    // set source of file
+    newStyle.rel = "stylesheet";
+    newStyle.src = _url;
+  }
+
+}
 
 
 
