@@ -1,22 +1,22 @@
-@include fontPack();
+@include fontPack("");
 
 // responsive
 @media (min-width: 480px) {
-@include fontPack(sm);
+@include fontPack("sm");
 }
 
 @media (min-width: 768px) {
-@include fontPack(md);
+@include fontPack("md");
 }
 
 @media (min-width: 980px) {
-@include fontPack(lg);
+@include fontPack("lg");
 }
 
 @media (min-width: 1200px) {
-@include fontPack(xl);
+@include fontPack("xl");
 }
 
 @media (min-width: 1800px) {
-@include fontPack(xxl);
+@include fontPack("xxl");
 }
