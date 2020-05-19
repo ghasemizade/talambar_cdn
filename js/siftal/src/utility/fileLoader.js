@@ -7,6 +7,7 @@ function readPageAllScripts(_force, _page)
   readPageChart();
   readPageEditor();
   readPageSortable();
+  readPageCropper();
 }
 
 
@@ -63,6 +64,7 @@ function readPageEditor()
   }
 }
 
+
 function readPageSortable()
 {
   var mySortable = $('[data-sortable]');
@@ -71,6 +73,18 @@ function readPageSortable()
   {
     mySortableURL = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js";
     fileLoader(mySortableURL, 'runSortable', true);
+  }
+}
+
+
+function readPageCropper()
+{
+  var myCropper = $('[data-cropper]');
+
+  if(myCropper && myCropper.length > 0)
+  {
+    myCropperURL = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js";
+    fileLoader(myCropperURL, 'runCropper', true);
   }
 }
 
