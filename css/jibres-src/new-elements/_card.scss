@@ -25,11 +25,17 @@
 	padding: 0;
 	width:100%;
 	height: auto;
-	transition: 0.3s;
+	opacity: 1;
+	transition: .3s ease-in-out;
 }
 .card img:hover{
-	transform: scale(1.1);
+	-webkit-animation: flashByOpacity .5s;
+	animation: flashByOpacity .5s;
+	// transform: scale(1.05);
 }
+@-webkit-keyframes flashByOpacity { 0% { opacity:1; } 40% { opacity: .7; } 100% { opacity:1; } }
+@keyframes flashByOpacity {0% { opacity:1; } 40% { opacity: .7; } 100% { opacity:1; } }
+
 .card .body{
 	margin: 0;
 	padding: 1rem 1rem;

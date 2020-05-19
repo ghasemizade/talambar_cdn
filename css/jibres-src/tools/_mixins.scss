@@ -365,3 +365,16 @@
   }
 }
 
+
+@mixin fontPack($val) {
+  $size : '';
+  @if not ($val == '') {
+    $size : '-' + $val;
+  }
+
+  @for $i from 10 through 50 {
+    .font#{$size}-#{$i} { font-size: #{$i}rem; }
+  }
+}
+
+
