@@ -18,6 +18,7 @@
 .avand.impact{
   background-color: $white;
   border-radius: 1rem;
+  overflow: hidden;
   padding: 5rem 2rem;
   margin-bottom:4rem;
   box-shadow: 0px 1rem 1.4rem -7px rgba(0, 0, 0, 0.08), 0px 2rem 3rem 3px rgba(0, 0, 0, 0.09), 0px 8px 2rem 7px rgba(0, 0, 0, 0.02);
@@ -25,6 +26,7 @@
 [class^="avand-"].impact{
   background-color: $white;
   border-radius: 1rem;
+  overflow: hidden;
   padding: 5rem 2rem;
   margin-bottom:4rem;
   box-shadow: 0px 1rem 1.4rem -7px rgba(0, 0, 0, 0.08), 0px 2rem 3rem 3px rgba(0, 0, 0, 0.09), 0px 8px 2rem 7px rgba(0, 0, 0, 0.02);
