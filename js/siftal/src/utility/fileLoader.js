@@ -6,6 +6,7 @@ function readPageAllScripts(_force, _page)
   readPageScript(_force, _page);
   readPageChart();
   readPageEditor();
+  readPageSortable();
 }
 
 
@@ -59,6 +60,17 @@ function readPageEditor()
   {
     myEditorURL = urlJibres('cdn') + "js/ckeditor5/ckeditor.js";
     fileLoader(myEditorURL, 'runEditor', true);
+  }
+}
+
+function readPageSortable()
+{
+  var mySortable = $('[data-sortable]');
+
+  if(mySortable && mySortable.length > 0)
+  {
+    mySortableURL = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js";
+    fileLoader(mySortableURL, 'runSortable', true);
   }
 }
 
