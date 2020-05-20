@@ -8,6 +8,7 @@ function readPageAllScripts(_force, _page)
   readPageEditor();
   readPageSortable();
   readPageCropper();
+  readPageUploader();
 }
 
 
@@ -55,39 +56,53 @@ function readPageChart()
 
 function readPageEditor()
 {
-  var myEditors = $('.txt[data-editor]');
+  var myEl = $('.txt[data-editor]');
 
-  if(myEditors && myEditors.length > 0)
+  if(myEl && myEl.length > 0)
   {
-    myEditorURL = urlJibres('cdn') + "js/ckeditor5/ckeditor.js";
-    fileLoader(myEditorURL, 'runEditor', true);
+    myUrl = urlJibres('cdn') + "js/ckeditor5/ckeditor.js";
+    fileLoader(myUrl, 'runEditor', true);
   }
 }
 
 
 function readPageSortable()
 {
-  var mySortable = $('[data-sortable]');
+  var myEl = $('[data-sortable]');
 
-  if(mySortable && mySortable.length > 0)
+  if(myEl && myEl.length > 0)
   {
     // load script
-    mySortableURL = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js";
-    fileLoader(mySortableURL, 'runSortable', true);
+    myUrl = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js";
+    fileLoader(myUrl, 'runSortable', true);
   }
 }
 
 
 function readPageCropper()
 {
-  var myCropper = $('[data-cropper]');
+  var myEl = $('[data-cropper]');
 
-  if(myCropper && myCropper.length > 0)
+  if(myEl && myEl.length > 0)
   {
     // load style
     StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css");
-    myCropperURL = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js";
-    fileLoader(myCropperURL, 'runCropper', true);
+    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js";
+    fileLoader(myUrl, 'runCropper', true);
+  }
+}
+
+
+function readPageUploader()
+{
+  var myEl = $('[data-uploader]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load style
+    StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
+    myUrl = urlJibres('cdn') + "js/uploader/uploader-1-min.js";
+    fileLoader(myUrl, 'runUploader', true);
   }
 }
 
