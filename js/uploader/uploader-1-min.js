@@ -63,7 +63,79 @@ function runUploader()
   // catch drop file
   myUploaderFrame.off('drop').on('drop', function(_e)
   {
-    showFiles( _e.dataTransfer.files, myInput, myLabel);
+    myDataTransfer = _e.originalEvent.dataTransfer;
+    console.log(myDataTransfer);
+    console.log(myDataTransfer.files);
+    setInputText(myDataTransfer.files, myInput, myLabel);
+  });
+
+  function setDropEffect(dataTransfer, effect)
+  {
+    // is in try catch as IE11 will throw error if not
+    try {
+      dataTransfer.effectAllowed = effect;
+      dataTransfer.dropEffect = effect;
+    } catch (e) {}
+  };
+
+
+  // add drag events
+  [ 'drag', 'dragstart'].forEach( function(_event)
+  {
+    $(document).off(_event).on(_event, function(_e)
+    {
+      // preventing the unwanted behaviours
+      _e.preventDefault();
+      _e.stopPropagation();
+    });
+  });
+  // on dragover show class
+  [ 'dragover', 'dragenter' ].forEach( function( _event )
+  {
+    $(document).off(_event).on(_event, function(_e)
+    {
+      myDataTransfer = _e.originalEvent.dataTransfer;
+      // _e.dataTransfer.dropEffect = 'none';
+      // add dragging to body
+      if($('body').attr('dragging') !== '')
+      {
+        $('body').attr('dragging', '');
+      }
+
+      if($(_e.target).is('label'))
+      {
+        setDropEffect(myDataTransfer, 'copy');
+        if(myUploaderFrame.attr('data-dragover') !== 'zone')
+        {
+          myUploaderFrame.attr('data-dragover', 'zone');
+        }
+      }
+      else
+      {
+        setDropEffect(myDataTransfer, 'none');
+        if(myUploaderFrame.attr('data-dragover') !== '')
+        {
+          myUploaderFrame.attr('data-dragover', '');
+        }
+      }
+      // preventing the unwanted behaviours
+      _e.preventDefault();
+      _e.stopPropagation();
+    });
+  });
+  // on draglease remvoe class
+  [ 'dragleave', 'dragend', 'drop' ].forEach( function( _event )
+  {
+    $(document).off(_event).on(_event, function(_e)
+    {
+      // add dragging to body
+      $('body').attr('dragging', null);
+
+      // preventing the unwanted behaviours
+      _e.preventDefault();
+      _e.stopPropagation();
+      myUploaderFrame.attr('data-dragover', null);
+    });
   });
 
 }

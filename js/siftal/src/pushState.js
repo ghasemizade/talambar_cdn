@@ -78,6 +78,8 @@ $(document).ready(function()
 
   // call some static function without need to run with pushState
   inputChecker();
+  // handle drag status
+  handleDrag();
   // check we are in iframe of not!
   insideIframe();
   // check requirements of form and highlight them
