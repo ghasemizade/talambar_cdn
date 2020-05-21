@@ -5,20 +5,20 @@
     overflow: hidden;
 	outline: 2px dashed #92b0b3;
     outline-offset: -10px;
-    -webkit-transition: outline-offset .2s ease-in-out, background-color .15s linear;
-    transition: outline-offset .2s ease-in-out, background-color .15s linear;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
     min-height: 120px;
     transition: 0.3s ease-in-out;
 
 }
 [data-uploader][data-dragover]{
-	outline-offset: -15px;
-	box-shadow: inset 0 0 1rem 0 #777;
+	/*outline-offset: -15px;*/
+	box-shadow: inset 0 0 1.5rem 0 #777;
 	cursor: -webkit-grab;
 	cursor: grab;
 }
 [data-uploader][data-dragover="zone"]{
-	outline-offset: -20px;
+	outline-offset: -15px;
 	cursor: copy;
 	cursor: -webkit-grabbing;
 	cursor: grabbing;

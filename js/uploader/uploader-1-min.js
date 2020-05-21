@@ -78,17 +78,6 @@ function runUploader()
     } catch (e) {}
   };
 
-
-  // add drag events
-  [ 'drag', 'dragstart'].forEach( function(_event)
-  {
-    $(document).off(_event).on(_event, function(_e)
-    {
-      // preventing the unwanted behaviours
-      _e.preventDefault();
-      _e.stopPropagation();
-    });
-  });
   // on dragover show class
   [ 'dragover', 'dragenter' ].forEach( function( _event )
   {
@@ -123,6 +112,7 @@ function runUploader()
       _e.stopPropagation();
     });
   });
+
   // on draglease remvoe class
   [ 'dragleave', 'dragend', 'drop' ].forEach( function( _event )
   {
