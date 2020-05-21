@@ -32,7 +32,7 @@ function runUploader()
     var labelText = "";
     if(_files.length > 1)
     {
-      multipleCaption = _input.getAttribute( 'data-multiple-caption') || '{count} files selected';
+      multipleCaption = _input.get(0).getAttribute( 'data-multiple-caption') || '{count} files selected';
       labelText = multipleCaption.replace( '{count}', _files.length );
     }
     else if(_files.length === 1)
@@ -55,9 +55,15 @@ function runUploader()
   }
 
 
-  myInput.off('change').on('change', function(_e){
-    setInputText(_e.target.files, this, myLabel)
+  // catch file change manually
+  myInput.off('change').on('change', function(_e)
+  {
+    setInputText(_e.target.files, myInput, myLabel);
   })
-
+  // catch drop file
+  myUploaderFrame.off('drop').on('drop', function(_e)
+  {
+    showFiles( _e.dataTransfer.files, myInput, myLabel);
+  });
 
 }
