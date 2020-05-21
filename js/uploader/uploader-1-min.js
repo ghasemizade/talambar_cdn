@@ -14,12 +14,18 @@ function runUploader()
 {
   console.log('run uploader');
   // define variables
-  var myUploaderFrame = $('[data-uploader]');
-  var myForm          = myUploaderFrame.parents('form');
-  var myInput         = $('[data-uploader] input[type="file"]');
-  var myLabel         = $('[data-uploader] input[type="file"] + label');
-  var myLabel         = $('[data-uploader] input[type="file"] + label');
-  var droppedFiles    = false;
+  var myUploaderFrame  = $('[data-uploader]');
+  if(!myUploaderFrame)
+  {
+    return false;
+  }
+
+  var myUploadFileName = myUploaderFrame.attr('data-name');
+  var myForm           = myUploaderFrame.parents('form');
+  var myInput          = $('[data-uploader] input[type="file"]');
+  var myLabel          = $('[data-uploader] input[type="file"] + label');
+  var myLabel          = $('[data-uploader] input[type="file"] + label');
+  var droppedFiles     = false;
 
 
 
@@ -89,7 +95,7 @@ function runUploader()
   {
     // set file detail
     setInputText(_files, myInput, myLabel);
-    appendFileToForm(_files);
+    appendFileToForm(_files, myUploadFileName);
     if(_files.length > 0)
     {
       // open crop modal
@@ -115,14 +121,14 @@ function runUploader()
     }
   }
 
-  function appendFileToForm(_files)
+  function appendFileToForm(_files, _uploaderFileName)
   {
     if(!_files)
     {
       return false;
     }
-
-    myForm.prop('droppedFiles', _files);
+    // add to prop of frame element
+    myUploaderFrame.prop('droppedFiles', _files);
     return true;
   }
 
