@@ -83,18 +83,29 @@
           var fd = new FormData();
         }
 
+
         // attach files with drag and drop if exist
-        var droppedFiles = $this.prop('droppedFiles');
-        console.log(droppedFiles);
-        if(droppedFiles)
+        $this.find('[data-uploader]').each(function()
         {
-          Array.prototype.forEach.call( droppedFiles, function( _file )
+          var $myUploader      = $(this);
+          var droppedFiles     = $myUploader.prop('droppedFiles');
+          var droppedFilesName = $myUploader.attr('data-name');
+          if(!droppedFilesName)
           {
-            fd.append('image', _file );
-          });
-          $this.prop('droppedFiles', null);
-        }
-        // myForm.prop('files'
+            droppedFilesName = 'droppedFiles';
+          }
+
+          // console.log(droppedFiles);
+          if(droppedFiles)
+          {
+            Array.prototype.forEach.call( droppedFiles, function( _file )
+            {
+              fd.append(droppedFilesName, _file );
+            });
+            $this.prop('droppedFiles', null);
+          }
+        });
+
 
         $this.find('button[name][data-clicked]').each(function()
         {
