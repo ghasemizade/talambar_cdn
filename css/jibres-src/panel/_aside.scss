@@ -20,7 +20,7 @@
 
 [data-debugger] [data-panel] #sidebar figure .avatar:before{border-color:#f69900}
 
-#sidebar .toggleClean{position:absolute;top:0;left:0;color:#fff;padding:5px;margin:5px;font-size:2em;z-index:-1;opacity:0;transition:0.3s;}
+#sidebar .toggleClean{position:absolute;top:0;left:0;color:#fff;padding:5px;margin:5px;font-size:2em;z-index:-1;opacity:0;transition:0.3s;text-decoration: none;cursor:pointer;}
 #sidebar:hover .toggleClean{z-index:1;opacity:1;}
 
 /* change avatar placeholder on page loading */
