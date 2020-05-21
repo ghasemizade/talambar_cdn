@@ -2,10 +2,10 @@
 
 // feature detection for drag&drop upload
 var isAdvancedUpload = function()
-  {
-    var div = document.createElement( 'div' );
-    return ( ( 'draggable' in div ) || ( 'ondragstart' in div && 'ondrop' in div ) ) && 'FormData' in window && 'FileReader' in window;
-  }();
+{
+  var div = document.createElement( 'div' );
+  return ( ( 'draggable' in div ) || ( 'ondragstart' in div && 'ondrop' in div ) ) && 'FormData' in window && 'FileReader' in window;
+}();
 
 
 // applying the effect for every form
