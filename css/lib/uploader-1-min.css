@@ -48,6 +48,10 @@ body.dragging{
 	text-align: center;
 	color: #4c4e53;
 	transition: 0.3s;
+	direction: ltr;
+	overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
 }
 [data-uploader]:hover{
 	background-color: #f6f6f6;

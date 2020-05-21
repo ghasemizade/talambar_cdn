@@ -1,5 +1,3 @@
-
-
 // feature detection for drag&drop upload
 var isAdvancedUpload = function()
 {

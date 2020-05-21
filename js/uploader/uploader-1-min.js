@@ -4,8 +4,10 @@ function runUploader()
   console.log('run uploader');
   // define variables
   var myUploaderFrame = $('[data-uploader]');
-  var myInput = $('[data-uploader] input[type="file"]')
-  var myLabel = $('[data-uploader] input[type="file"] + label')
+  var myInput = $('[data-uploader] input[type="file"]');
+  var myLabel = $('[data-uploader] input[type="file"] + label');
+  var droppedFiles = false;
+
 
 
   // check advance upload is enable or not
@@ -23,6 +25,7 @@ function runUploader()
   // show file Content
   function setInputText(_files, _input, _label)
   {
+    console.log(_files);
     // set default if is not set
     if(!_label.prop('defaultText'))
     {
@@ -30,6 +33,7 @@ function runUploader()
     }
 
     var labelText = "";
+    var fileSize = false;
     if(_files.length > 1)
     {
       multipleCaption = _input.get(0).getAttribute( 'data-multiple-caption') || '{count} files selected';
@@ -45,6 +49,10 @@ function runUploader()
       {
         labelText = "File Without Name!";
       }
+      if(_files[0].size)
+      {
+        fileSize = _files[0].size;
+      }
     }
     else
     {
@@ -52,6 +60,11 @@ function runUploader()
     }
 
     _label.html(labelText);
+    if(fileSize && fileSize > 0)
+    {
+      fileSize = Math.round(fileSize/1024);
+      _label.attr('data-file-size', fileSize);
+    }
   }
 
 
@@ -63,10 +76,10 @@ function runUploader()
   // catch drop file
   myUploaderFrame.off('drop').on('drop', function(_e)
   {
-    myDataTransfer = _e.originalEvent.dataTransfer;
-    console.log(myDataTransfer);
-    console.log(myDataTransfer.files);
-    setInputText(myDataTransfer.files, myInput, myLabel);
+    // set dropped files to use on form submit
+    droppedFiles = _e.originalEvent.dataTransfer.files;
+
+    setInputText(droppedFiles, myInput, myLabel);
   });
 
   function setDropEffect(dataTransfer, effect)
@@ -84,12 +97,6 @@ function runUploader()
     $(document).off(_event).on(_event, function(_e)
     {
       myDataTransfer = _e.originalEvent.dataTransfer;
-      // _e.dataTransfer.dropEffect = 'none';
-      // add dragging to body
-      // if($('body').attr('dragging') !== '')
-      // {
-      //   $('body').attr('dragging', '');
-      // }
 
       if($(_e.target).parents('[data-uploader]').length)
       {
@@ -118,14 +125,22 @@ function runUploader()
   {
     $(document).off(_event).on(_event, function(_e)
     {
-      // add dragging to body
-      // $('body').attr('dragging', null);
-
       // preventing the unwanted behaviours
       _e.preventDefault();
       _e.stopPropagation();
       myUploaderFrame.attr('data-dragover', null);
     });
   });
+
+  function setFiles()
+  {
+      if( droppedFiles )
+      {
+        Array.prototype.forEach.call( droppedFiles, function( file )
+        {
+          ajaxData.append( input.getAttribute( 'name' ), file );
+        });
+      }
+  }
 
 }
