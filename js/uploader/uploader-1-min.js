@@ -275,9 +275,8 @@ function runUploader()
       preConfirm: (login) =>
       {
         console.log('pre');
-        console.log(cropperObj);
-        console.log(cropperObj.getCroppedCanvas().toDataURL());
-
+        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
+        $('#finalImage').attr('src', myCroppedImage);
       },
     })
     .then((result) =>
