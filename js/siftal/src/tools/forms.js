@@ -63,7 +63,7 @@
         if($this.is('form'))
         {
           // try to detect empty input file and disabled them because
-          // we have problem on safari ajax request with erro 400!
+          // we have problem on safari ajax request with error 400!
           var $fileInputs = $('input[type="file"]:not([disabled])', $this)
           $fileInputs.each(function(a, myFileInput)
           {
