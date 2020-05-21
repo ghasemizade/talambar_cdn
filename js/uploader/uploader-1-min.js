@@ -97,12 +97,12 @@ function runUploader()
       myDataTransfer = _e.originalEvent.dataTransfer;
       // _e.dataTransfer.dropEffect = 'none';
       // add dragging to body
-      if($('body').attr('dragging') !== '')
-      {
-        $('body').attr('dragging', '');
-      }
+      // if($('body').attr('dragging') !== '')
+      // {
+      //   $('body').attr('dragging', '');
+      // }
 
-      if($(_e.target).is('label'))
+      if($(_e.target).parents('[data-uploader]').length)
       {
         setDropEffect(myDataTransfer, 'copy');
         if(myUploaderFrame.attr('data-dragover') !== 'zone')
@@ -129,7 +129,7 @@ function runUploader()
     $(document).off(_event).on(_event, function(_e)
     {
       // add dragging to body
-      $('body').attr('dragging', null);
+      // $('body').attr('dragging', null);
 
       // preventing the unwanted behaviours
       _e.preventDefault();

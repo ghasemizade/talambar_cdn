@@ -5,8 +5,8 @@
     overflow: hidden;
 	outline: 2px dashed #92b0b3;
     outline-offset: -10px;
-    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    -webkit-transition: outline-offset .2s ease-in-out, background-color .15s linear;
+    transition: outline-offset .2s ease-in-out, background-color .15s linear;
     min-height: 120px;
     transition: 0.3s ease-in-out;
 
