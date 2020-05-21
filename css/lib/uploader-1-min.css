@@ -8,7 +8,7 @@
     transition: outline-offset .15s ease-in-out, background-color .15s linear;
     min-height: 120px;
     transition: 0.3s ease-in-out;
-
+    min-width: 250px;
 }
 [data-uploader][data-dragover]{
 	/*outline-offset: -15px;*/
@@ -32,18 +32,30 @@ body.dragging{
 	font-family: "siftal" !important;
 	content: "\e145";
 	display: block;
-	font-size: 2em;
-	line-height: 1;
+	font-size: 30px;
+	line-height: 30px;
 	padding: 1rem 0;
 	text-align: center;
 	font-weight: normal;
 	vertical-align: middle;
+	transition: 0.3s;
+}
+[data-uploader] input[type='file'] + label::after{
+	content: attr(data-file-size);
+	display: block;
+	font-size: 1.2rem;
+	font-family: monospace;
+	color: #777;
+	line-height: 1;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
 }
 [data-uploader] input[type='file'] + label{
 	display: block;
 	margin: 0;
 	padding: 2.5rem 2rem;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	line-height: 2rem;
 	text-align: center;
 	color: #4c4e53;
@@ -52,6 +64,10 @@ body.dragging{
 	overflow: hidden;
 	white-space: nowrap;
     text-overflow: ellipsis;
+    transition: 0.3s;
+}
+[data-uploader] input[type='file'] + label[data-file-size]{
+	font-family: monospace;
 }
 [data-uploader]:hover{
 	background-color: #f6f6f6;

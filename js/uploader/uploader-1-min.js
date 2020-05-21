@@ -63,7 +63,11 @@ function runUploader()
     if(fileSize && fileSize > 0)
     {
       fileSize = Math.round(fileSize/1024);
-      _label.attr('data-file-size', fileSize);
+      _label.attr('data-file-size', fileSize + ' KB');
+    }
+    else
+    {
+      _label.attr('data-file-size', null);
     }
   }
 
