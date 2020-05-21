@@ -12,7 +12,7 @@
 
 function runUploader()
 {
-  console.log('run uploader');
+  // console.log('run uploader');
   // define variables
   var myUploaderFrame  = $('[data-uploader]');
   if(!myUploaderFrame)
@@ -26,6 +26,7 @@ function runUploader()
   var myLabel          = $('[data-uploader] input[type="file"] + label');
   var myLabel          = $('[data-uploader] input[type="file"] + label');
   var droppedFiles     = false;
+  var cropperObj   = false;
 
 
 
@@ -160,7 +161,7 @@ function runUploader()
     }
 
     // draw new one
-    const cropper = new Cropper(myImg,
+    cropperObj = new Cropper(myImg,
     {
       viewMode:2,
       autoCropArea:1,
@@ -170,7 +171,7 @@ function runUploader()
       initialAspectRatio: 16 / 9,
       aspectRatio: myRatio,
       crop(event) {
-        console.log(event.detail.x);
+        // console.log(event.detail.x);
         // console.log(event.detail.y);
         // console.log(event.detail.width);
         // console.log(event.detail.height);
@@ -260,38 +261,46 @@ function runUploader()
 
 
 
-}
-
-
-
-function cropFullScreen()
-{
-
-  say({
-    title: "",
-    html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
-    focusConfirm: true,
-    showConfirmButton: true,
-    showCancelButton: true,
-    // showCloseButton:true,
-    grow: "fullscreen",
-  }).then((result) =>
+  function cropFullScreen()
   {
-    // detroy cropper
-    //
-    //
-    // $image.cropper('destroy');
 
+    say({
+      title: "",
+      html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
+      focusConfirm: true,
+      showConfirmButton: true,
+      showCancelButton: true,
+      // showCloseButton:true,
+      grow: "fullscreen",
+      preConfirm: (login) =>
+      {
+        console.log('pre');
+        console.log(cropperObj);
+        console.log(cropperObj.getCroppedCanvas().toDataURL());
 
-    console.log(result);
-    if (result.value)
+      },
+    })
+    .then((result) =>
     {
+      console.log('then');
+      // detroy cropper
+      //
+      //
+      // $image.cropper('destroy');
 
-    }
-    else if (result.dismiss === alerty.DismissReason.cancel)
-    {
-      // do nothing
-    }
-  });
+
+      // console.log(result);
+      if (result.value)
+      {
+      }
+      else if (result.dismiss === alerty.DismissReason.cancel)
+      {
+        // do nothing
+      }
+    });
+  }
 }
+
+
+
 
