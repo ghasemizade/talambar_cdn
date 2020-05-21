@@ -98,9 +98,17 @@
           // console.log(droppedFiles);
           if(droppedFiles)
           {
+            var i = 0;
             Array.prototype.forEach.call( droppedFiles, function( _file )
             {
-              fd.append(droppedFilesName, _file );
+              var fileName = droppedFilesName;
+              // for number 2+ add counter on file name
+              i++;
+              if(i > 1)
+              {
+                fileName = droppedFilesName + i;
+              }
+              fd.append(fileName, _file );
             });
             $this.prop('droppedFiles', null);
           }
