@@ -88,10 +88,13 @@ function runUploader()
   {
     // set file detail
     setInputText(_files, myInput, myLabel);
-    // open crop modal
-    cropFullScreen();
-    // try to load file
-    loadImageFile(_files);
+    if(_files.length > 0)
+    {
+      // open crop modal
+      cropFullScreen();
+      // try to load file
+      loadImageFile(_files);
+    }
   }
 
 
@@ -141,7 +144,7 @@ function runUploader()
     const cropper = new Cropper(myImg,
     {
       viewMode:2,
-      autoCropArea:0.9,
+      autoCropArea:1,
       // zoomable:false,
       minCropBoxWidth:250,
       minCropBoxHeight:250,
@@ -246,13 +249,13 @@ function cropFullScreen()
 {
 
   say({
-    title: "Please Crop Your Photo",
+    title: "",
     html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
-    focusConfirm: false,
-    showConfirmButton: false,
-    showCloseButton:true,
+    focusConfirm: true,
+    showConfirmButton: true,
+    showCancelButton: true,
+    // showCloseButton:true,
     grow: "fullscreen",
-    showCancelButton: false
   }).then((result) =>
   {
     // detroy cropper
