@@ -17,6 +17,7 @@ function runUploader()
   var myUploaderFrame = $('[data-uploader]');
   var myInput = $('[data-uploader] input[type="file"]');
   var myLabel = $('[data-uploader] input[type="file"] + label');
+  var myLabel = $('[data-uploader] input[type="file"] + label');
   var droppedFiles = false;
 
 
@@ -85,35 +86,60 @@ function runUploader()
 
   function startCropProcess(_files)
   {
+    // set file detail
     setInputText(_files, myInput, myLabel);
+    // open crop modal
     cropFullScreen();
-    // if modal is visible run cropper
-    setTimeout(function(){
-      if(say.isVisible())
-      {
-        console.log('modal is loaded');
-        var myImg = $('.alerty2-grow-fullscreen .alerty2-content .cropBox img');
-        myImg = myImg.get(0);
-
-        const cropper = new Cropper(myImg, {
-          aspectRatio: 16 / 9,
-          crop(event) {
-            console.log(event.detail.x);
-            console.log(event.detail.y);
-            console.log(event.detail.width);
-            console.log(event.detail.height);
-          },
-        });
-
-      }
-      else
-      {
-        console.warn('modal is not loaded');
-      }
-
-    }, 100);
+    // try to load file
+    loadImageFile(_files);
   }
 
+
+  function loadImageFile(_file)
+  {
+    if (_file && _file[0])
+    {
+      var myReader = new FileReader();
+      myReader.onload = function (_e)
+      {
+        console.log('file is created');
+        fillCropperImg(this.result);
+      };
+      // read as data
+      myReader.readAsDataURL(_file[0]);
+    }
+  }
+
+
+  function fillCropperImg(_imgSrc)
+  {
+    // if modal is visible run cropper
+    if(!say.isVisible())
+    {
+      console.warn('modal is not loaded!');
+      return;
+    }
+
+    // load image
+    var $image = $('.alerty2-content .cropBox img');
+    // set my img
+    var myImg = $image.get(0);
+    // set image src
+    $image.attr('src', _imgSrc);
+
+    // draw new one
+    const cropper = new Cropper(myImg,
+    {
+      aspectRatio: 16 / 9,
+      crop(event) {
+        console.log(event.detail.x);
+        console.log(event.detail.y);
+        console.log(event.detail.width);
+        console.log(event.detail.height);
+      },
+    });
+
+  }
 
 
   // catch file change manually
@@ -205,7 +231,7 @@ function cropFullScreen()
 
   say({
     title: "Please Crop Your Photo",
-    html: '<div class="cropBox"><img src="http://cloud.talambar.local/jb2jw/202005/15-0c78b8a994f01716a451cad5d7f2ca28.jpg" alt="cropBox"></div>',
+    html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
     focusConfirm: false,
     showConfirmButton: false,
     showCloseButton:true,
@@ -213,20 +239,15 @@ function cropFullScreen()
     showCancelButton: false
   }).then((result) =>
   {
+    // detroy cropper
+    //
+    //
+    // $image.cropper('destroy');
+
+
     console.log(result);
     if (result.value)
     {
-      say(
-      {
-        type: 'success',
-        html: myLogoutTxt,
-        showConfirmButton: false,
-        timer: 1000,
-        onClose: () =>
-        {
-          location.replace(myLogouturl);
-        }
-      });
 
     }
     else if (result.dismiss === alerty.DismissReason.cancel)
