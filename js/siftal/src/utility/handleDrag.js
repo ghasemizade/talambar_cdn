@@ -2,16 +2,29 @@
 
 function handleDrag()
 {
-  // document.body.addEventListener('dragover', function(e)
-  // {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  // }, false);
+  // disallow drag
+  [ 'drag', 'dragstart'].forEach( function(_event)
+  {
+    $(document).off(_event).on(_event, function(_e)
+    {
+      // preventing the unwanted behaviours
+      _e.preventDefault();
+      _e.stopPropagation();
+    });
+  });
 
-  // document.body.addEventListener('drop', function(e)
-  // {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  // }, false);
+  // disallow dragover
+  [ 'dragover', 'dragenter' ].forEach( function( _event )
+  {
+    $(document).off(_event).on(_event, function(_e)
+    {
+      _e.originalEvent.dataTransfer.effectAllowed = 'none';
+      _e.originalEvent.dataTransfer.dropEffect = 'none';
+
+      // preventing the unwanted behaviours
+      _e.preventDefault();
+      _e.stopPropagation();
+    });
+  });
 }
 
