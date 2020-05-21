@@ -45,7 +45,7 @@ function runUploader()
   // show file Content
   function setInputText(_files, _input, _label)
   {
-    console.log(_files);
+    // console.log(_files);
     // set default if is not set
     if(!_label.prop('defaultText'))
     {
@@ -124,6 +124,7 @@ function runUploader()
 
   function appendFileToForm(_files, _uploaderFileName)
   {
+    console.log(_files);
     if(!_files)
     {
       return false;
@@ -269,26 +270,21 @@ function runUploader()
       html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
       focusConfirm: true,
       showConfirmButton: true,
-      showCancelButton: true,
+      showCancelButton: false,
       // showCloseButton:true,
       grow: "fullscreen",
       preConfirm: (login) =>
       {
-        console.log('pre');
         var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
+        var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob) {
+          appendFileToForm(_blob, myUploadFileName);
+        });
+
         $('#finalImage').attr('src', myCroppedImage);
       },
     })
     .then((result) =>
     {
-      console.log('then');
-      // detroy cropper
-      //
-      //
-      // $image.cropper('destroy');
-
-
-      // console.log(result);
       if (result.value)
       {
       }
