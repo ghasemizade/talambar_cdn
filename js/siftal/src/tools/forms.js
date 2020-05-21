@@ -90,14 +90,18 @@
           var $myUploader      = $(this);
           var droppedFiles     = $myUploader.prop('droppedFiles');
           var droppedFilesName = $myUploader.attr('data-name');
+
           if(!droppedFilesName)
           {
             droppedFilesName = 'droppedFiles';
           }
 
-          // console.log(droppedFiles);
           if(droppedFiles)
           {
+            if(!$.isArray(droppedFiles))
+            {
+              droppedFiles = [droppedFiles];
+            }
             var i = 0;
             Array.prototype.forEach.call( droppedFiles, function( _file )
             {
