@@ -15,10 +15,11 @@ function runUploader()
   console.log('run uploader');
   // define variables
   var myUploaderFrame = $('[data-uploader]');
-  var myInput = $('[data-uploader] input[type="file"]');
-  var myLabel = $('[data-uploader] input[type="file"] + label');
-  var myLabel = $('[data-uploader] input[type="file"] + label');
-  var droppedFiles = false;
+  var myForm          = myUploaderFrame.parents('form');
+  var myInput         = $('[data-uploader] input[type="file"]');
+  var myLabel         = $('[data-uploader] input[type="file"] + label');
+  var myLabel         = $('[data-uploader] input[type="file"] + label');
+  var droppedFiles    = false;
 
 
 
@@ -88,6 +89,7 @@ function runUploader()
   {
     // set file detail
     setInputText(_files, myInput, myLabel);
+    appendFileToForm(_files);
     if(_files.length > 0)
     {
       // open crop modal
@@ -111,6 +113,17 @@ function runUploader()
       // read as data
       myReader.readAsDataURL(_file[0]);
     }
+  }
+
+  function appendFileToForm(_files)
+  {
+    if(!_files)
+    {
+      return false;
+    }
+
+    myForm.prop('droppedFiles', _files);
+    return true;
   }
 
 

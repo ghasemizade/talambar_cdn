@@ -83,6 +83,19 @@
           var fd = new FormData();
         }
 
+        // attach files with drag and drop if exist
+        var droppedFiles = $this.prop('droppedFiles');
+        console.log(droppedFiles);
+        if(droppedFiles)
+        {
+          Array.prototype.forEach.call( droppedFiles, function( _file )
+          {
+            fd.append('image', _file );
+          });
+          $this.prop('droppedFiles', null);
+        }
+        // myForm.prop('files'
+
         $this.find('button[name][data-clicked]').each(function()
         {
           if(this.getAttribute('name'))
