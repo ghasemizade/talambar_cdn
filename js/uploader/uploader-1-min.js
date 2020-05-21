@@ -127,15 +127,31 @@ function runUploader()
     // set image src
     $image.attr('src', _imgSrc);
 
+    myRatio = myUploaderFrame.attr('data-ratio');
+    if(myRatio && myRatio > 0)
+    {
+      // do nothing
+    }
+    else
+    {
+      myRatio = 16 / 9;
+    }
+
     // draw new one
     const cropper = new Cropper(myImg,
     {
-      aspectRatio: 16 / 9,
+      viewMode:2,
+      autoCropArea:0.9,
+      // zoomable:false,
+      minCropBoxWidth:250,
+      minCropBoxHeight:250,
+      initialAspectRatio: 16 / 9,
+      aspectRatio: myRatio,
       crop(event) {
         console.log(event.detail.x);
-        console.log(event.detail.y);
-        console.log(event.detail.width);
-        console.log(event.detail.height);
+        // console.log(event.detail.y);
+        // console.log(event.detail.width);
+        // console.log(event.detail.height);
       },
     });
 
