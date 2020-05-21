@@ -72,19 +72,27 @@ function runUploader()
   }
 
 
+  function startCropProcess(_files)
+  {
+    setInputText(_files, myInput, myLabel);
+    cropFullScreen();
+  }
+
+
+
   // catch file change manually
   myInput.off('change').on('change', function(_e)
   {
-    setInputText(_e.target.files, myInput, myLabel);
+    startCropProcess(_e.target.files)
   })
   // catch drop file
   myUploaderFrame.off('drop').on('drop', function(_e)
   {
     // set dropped files to use on form submit
     droppedFiles = _e.originalEvent.dataTransfer.files;
-
-    setInputText(droppedFiles, myInput, myLabel);
+    startCropProcess(droppedFiles)
   });
+
 
   function setDropEffect(dataTransfer, effect)
   {
@@ -147,4 +155,48 @@ function runUploader()
       }
   }
 
+
+
+
+
+
 }
+
+
+
+function cropFullScreen()
+{
+
+  say({
+    title: "",
+    html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
+    focusConfirm: false,
+    showConfirmButton: false,
+    showCloseButton:true,
+    grow: "fullscreen",
+    showCancelButton: false
+  }).then((result) =>
+  {
+    console.log(result);
+    if (result.value)
+    {
+      say(
+      {
+        type: 'success',
+        html: myLogoutTxt,
+        showConfirmButton: false,
+        timer: 1000,
+        onClose: () =>
+        {
+          location.replace(myLogouturl);
+        }
+      });
+
+    }
+    else if (result.dismiss === alerty.DismissReason.cancel)
+    {
+      // do nothing
+    }
+  });
+}
+
