@@ -68,7 +68,7 @@ function runUploader()
     if(_files.length > 0)
     {
       // if img
-      if(1)
+      if(isImgExt(fileInfo.ext))
       {
         // open crop modal
         cropFullScreen(fileInfo);
@@ -137,6 +137,33 @@ function runUploader()
     }
 
     return true;
+  }
+
+  function isImgExt(_ext)
+  {
+    if(!_ext)
+    {
+      return null;
+    }
+
+    switch (_ext)
+    {
+      case 'gif':
+        return _ext;
+        break;
+
+      case 'png':
+        return _ext;
+        break;
+
+      case 'jpg':
+      case 'jpeg':
+      case 'jfif':
+        return _ext;
+        break;
+    }
+
+    return false;
   }
 
 
