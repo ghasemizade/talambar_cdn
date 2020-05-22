@@ -313,7 +313,18 @@ function runUploader()
           newType = _fileInfo.type;
         }
 
-        var myNewImg = cropperObj.getCroppedCanvas();
+        var cropOption =
+        {
+          width: 1200,
+          height: 300,
+
+          // minWidth : 200,
+          // minHeight : 200,
+          maxWidth : 1200,
+          maxHeight : 1200
+        }
+
+        var myNewImg = cropperObj.getCroppedCanvas(cropOption);
         if(myNewImg)
         {
           var imgBlob  = myNewImg.toBlob(function (_blob)
