@@ -102,9 +102,20 @@ function runUploader()
     fileChooseNone: "Please select one file!",
     fileChooseOnlyOne: "Please choose only one file!",
     fileUltraMaxSize: "Please select file with less than 10 MB!",
-    fileMaxSize: "Please select file with less than 10 MB!",
-
+    fileMaxSize: "Please select file with less than 2 MB!",
   }
+
+  if(urlLang() === 'fa')
+  {
+    fileErrorMSG =
+    {
+      fileChooseNone: "لطفا فایلی را انتخاب کنید!",
+      fileChooseOnlyOne: "لطفا تنها یک فایل را امتخاب کنید",
+      fileUltraMaxSize: "فایل انتخابی باید کمتر از ۱۰ مگ داشته ابشد.",
+      fileMaxSize: "فایل شما باید  کمتر از ۲ مگ باشد.",
+    }
+  }
+
 
   function checkFileFace(_files)
   {
@@ -132,16 +143,28 @@ function runUploader()
   {
     var fileSizeMB = Math.round( (Math.round(_file.size / 1024) / 1024) * 100) / 100;
     var fileUltraMaxSize = 10;
+    var fileMaxSize = 1;
 
     // get from form if exist
     if(myUploaderFrame.attr('data-file-ultra-size'))
     {
       fileUltraMaxSize = parseInt(myUploaderFrame.attr('data-file-ultra-size'));
     }
+    // get from form if exist
+    if(myUploaderFrame.attr('data-file-max-size'))
+    {
+      fileMaxSize = parseInt(myUploaderFrame.attr('data-file-max-size'));
+    }
     // if more than 10 MB
     if(fileSizeMB > fileUltraMaxSize)
     {
       say({title: fileErrorMSG.fileUltraMaxSize , type: 'error'});
+      return false;
+    }
+    // if more than 2 MB
+    if(fileSizeMB > fileMaxSize)
+    {
+      say({title: fileErrorMSG.fileMaxSize , type: 'error'});
       return false;
     }
 

@@ -1,5 +1,5 @@
 
-if($('html').attr('lang') === 'fa')
+if(urlLang() === 'fa')
 {
   say = alerty.mixin(
   {
@@ -29,7 +29,6 @@ function deleteConfirmer(_this)
     _title = _this.attr('data-title');
     _text  = _this.attr('data-msg');
   }
-  var myLang = $('html').attr('lang');
 
   if(_data === undefined)
   {
@@ -38,7 +37,7 @@ function deleteConfirmer(_this)
   }
   if(!_title)
   {
-    if(myLang === 'fa')
+    if(urlLang() === 'fa')
     {
       _title = 'آیا تایید می‌کنید؟';
     }
