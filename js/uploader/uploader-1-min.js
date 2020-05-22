@@ -50,6 +50,9 @@ function runUploader()
   myInput.off('click.uploader').on('click.uploader', function(_e)
   {
     console.log('click');
+    // empty value of input
+    this.value = null;
+    // reset label
     resetUploaderLabel(myLabel);
   });
   // catch drop file
