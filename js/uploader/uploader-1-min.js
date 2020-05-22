@@ -198,6 +198,14 @@ function runUploader()
       _label.attr('data-file-size', null);
     }
 
+    // set ext
+    if(fileInfo['name'])
+    {
+      var fileName = fileInfo['name'];
+      fileInfo['ext'] = fileName.substr(fileName.lastIndexOf('.') + 1, fileName.length);
+
+    }
+
     return fileInfo;
   }
 
@@ -250,6 +258,10 @@ function runUploader()
             if(_blob.size)
             {
               _blob.KB_after = Math.round(_blob.size / 1024);
+            }
+            if(_fileInfo.ext)
+            {
+              _blob.ext = _fileInfo.ext;
             }
 
             appendFileToForm(_blob);
