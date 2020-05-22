@@ -301,6 +301,7 @@ function runUploader()
             if(_blob.size)
             {
               _blob.KB_after = Math.round(_blob.size / 1024);
+              myLabel.attr('data-file-size', _blob.KB_after);
             }
             if(_fileInfo.ext)
             {
