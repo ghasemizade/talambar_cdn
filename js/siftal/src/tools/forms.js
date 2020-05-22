@@ -112,6 +112,8 @@
               {
                 fileName = droppedFilesName + i;
               }
+              console.log('filename : ' + fileName);
+              console.log(_file);
               fd.append(fileName, _file );
             });
             $this.prop('droppedFiles', null);
@@ -230,7 +232,7 @@
 
       $form.trigger('ajaxify:send:ajax:start', ajaxOptions);
 
-
+      console.log(ajaxOptions);
       var myXhr = $.ajax(ajaxOptions)
       .done(function(data, status, xhr)
       {

@@ -64,7 +64,7 @@ function runUploader()
       if(1)
       {
         // open crop modal
-        cropFullScreen();
+        cropFullScreen(fileInfo);
         if (_files && _files[0])
         {
           // try to load file
@@ -92,8 +92,9 @@ function runUploader()
     }
 
     var labelText = "";
-    var fileInfo = false;
+    var fileInfo = [];
     var fileSize = false;
+
     if(_files.length > 1)
     {
       multipleCaption = _input.get(0).getAttribute( 'data-multiple-caption') || '{count} files selected';
@@ -137,9 +138,8 @@ function runUploader()
 
 
 
-  function cropFullScreen()
+  function cropFullScreen(_fileInfo)
   {
-
     say({
       title: "",
       html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
@@ -153,10 +153,20 @@ function runUploader()
         var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
         var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob)
         {
-          console.log('blob is');
-          console.log(_blob);
-          _blob.name = 'salam.jpg';
-          console.log(_blob);
+          if(_fileInfo.name)
+          {
+            _blob.name = _fileInfo.name;
+          }
+          else
+          {
+            _blob.name = 'my-photo.jpg';
+          }
+          _blob.size_KB = Math.round(_blob.size / 1024);
+          if(_fileInfo.size)
+          {
+            _blob.sizeBefore = _fileInfo.size;
+            _blob.sizeBefore_KB = Math.round(_fileInfo.size / 1024);
+          }
           appendFileToForm(_blob);
         });
 
@@ -178,6 +188,7 @@ function runUploader()
 
   function appendFileToForm(_files)
   {
+    console.log('append file');
     console.log(_files);
     if(!_files)
     {
