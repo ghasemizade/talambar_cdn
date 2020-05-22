@@ -65,10 +65,10 @@ function runUploader()
       {
         // open crop modal
         cropFullScreen();
-        if (_file && _file[0])
+        if (_files && _files[0])
         {
           // try to load file
-          loadImageFile(_file[0]);
+          loadImageFile(_files[0]);
 
         }
       }
@@ -151,7 +151,8 @@ function runUploader()
       preConfirm: (login) =>
       {
         var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
-        var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob) {
+        var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob)
+        {
           console.log('blob is');
           console.log(_blob);
           _blob.name = 'salam.jpg';
@@ -173,7 +174,6 @@ function runUploader()
       }
     });
   }
-}
 
 
   function appendFileToForm(_files)
@@ -248,8 +248,12 @@ function runUploader()
         // console.log(event.detail.height);
       },
     });
-
   }
+
+
+
+}
+
 
 
 
