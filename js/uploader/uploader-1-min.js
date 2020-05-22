@@ -143,7 +143,7 @@ function runUploader()
   {
     var fileSizeMB = Math.round( (Math.round(_file.size / 1024) / 1024) * 100) / 100;
     var fileUltraMaxSize = 10;
-    var fileMaxSize = 1;
+    var fileMaxSize = 2;
 
     // get from form if exist
     if(myUploaderFrame.attr('data-file-ultra-size'))
