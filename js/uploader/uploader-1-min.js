@@ -44,12 +44,10 @@ function runUploader()
   // catch file change manually
   myInput.off('change.uploader').on('change.uploader', function(_e)
   {
-    console.log('change');
     startHandleFileProcess(_e.target.files)
   });
   myInput.off('click.uploader').on('click.uploader', function(_e)
   {
-    console.log('click');
     // empty value of input
     this.value = null;
     // reset label
@@ -85,13 +83,12 @@ function runUploader()
         {
           // try to load file
           loadImageFile(_files[0]);
-
         }
       }
       else
       {
         // on other ext append file to form
-        appendFileToForm(_files);
+        appendFileToForm(_files, fileInfo.size);
       }
     }
   }
@@ -143,17 +140,11 @@ function runUploader()
   {
     var fileSizeMB = Math.round( (Math.round(_file.size / 1024) / 1024) * 100) / 100;
     var fileUltraMaxSize = 10;
-    var fileMaxSize = 2;
 
     // get from form if exist
     if(myUploaderFrame.attr('data-file-ultra-size'))
     {
       fileUltraMaxSize = parseInt(myUploaderFrame.attr('data-file-ultra-size'));
-    }
-    // get from form if exist
-    if(myUploaderFrame.attr('data-file-max-size'))
-    {
-      fileMaxSize = parseInt(myUploaderFrame.attr('data-file-max-size'));
     }
     // if more than 10 MB
     if(fileSizeMB > fileUltraMaxSize)
@@ -161,7 +152,26 @@ function runUploader()
       say({title: fileErrorMSG.fileUltraMaxSize , type: 'error'});
       return false;
     }
-    // if more than 2 MB
+
+    return true;
+  }
+
+  function OneFileMaxSizeOkay(_fileSize)
+  {
+    if(!_fileSize)
+    {
+      return null;
+    }
+
+    var fileSizeMB = Math.round( (Math.round(_fileSize / 1024) / 1024) * 100) / 100;
+    var fileMaxSize = 1;
+    // get from form if exist
+    if(myUploaderFrame.attr('data-file-max-size'))
+    {
+      fileMaxSize = parseInt(myUploaderFrame.attr('data-file-max-size'));
+    }
+
+    // if more than 1 MB
     if(fileSizeMB > fileMaxSize)
     {
       say({title: fileErrorMSG.fileMaxSize , type: 'error'});
@@ -331,10 +341,10 @@ function runUploader()
               _blob.ext = _fileInfo.ext;
             }
 
-            appendFileToForm(_blob);
+            appendFileToForm(_blob, _blob.size);
+
           }, newType, quality);
 
-          console.log(myUploaderFinalResult);
           if(myUploaderFinalResult.length > 0)
           {
             myUploaderFinalResult.attr('src', myNewImg.toDataURL(newType, quality));
@@ -355,8 +365,13 @@ function runUploader()
   }
 
 
-  function appendFileToForm(_files)
+  function appendFileToForm(_files, _size)
   {
+    if(OneFileMaxSizeOkay(_size))
+    {
+      return;
+    }
+
     console.log(_files);
     if(!_files)
     {
