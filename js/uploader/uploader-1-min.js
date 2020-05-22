@@ -42,20 +42,20 @@ function runUploader()
 
 
   // catch file change manually
-  myInput.off('change').on('change', function(_e)
+  myInput.off('change.uploader').on('change.uploader', function(_e)
   {
-    startCropProcess(_e.target.files)
+    startHandleFileProcess(_e.target.files)
   })
   // catch drop file
-  myUploaderFrame.off('drop').on('drop', function(_e)
+  myUploaderFrame.off('drop.uploader').on('drop.uploader', function(_e)
   {
     // set dropped files to use on form submit
     droppedFiles = _e.originalEvent.dataTransfer.files;
-    startCropProcess(droppedFiles)
+    startHandleFileProcess(droppedFiles)
   });
 
 
-  function startCropProcess(_files)
+  function startHandleFileProcess(_files)
   {
     // set file detail
     var fileInfo = setInputText(_files, myInput, myLabel);
@@ -221,42 +221,45 @@ function runUploader()
       grow: "fullscreen",
       preConfirm: (login) =>
       {
+
         var newType = 'image/jpeg';
         var quality = 0.75;
         if(_fileInfo.type)
         {
           newType = _fileInfo.type;
         }
-        // console.log(_fileInfo);
-        // console.log(newType);
-        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL(newType, quality);
-        var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob)
-        {
-          if(_fileInfo.name)
-          {
-            _blob.name = _fileInfo.name;
-          }
-          else
-          {
-            _blob.name = 'my-photo.jpg';
-          }
-          if(_fileInfo.size)
-          {
-            _blob.sizeBefore = _fileInfo.size;
-            _blob.KB_before = Math.round(_fileInfo.size / 1024);
-          }
-          if(_blob.size)
-          {
-            _blob.KB_after = Math.round(_blob.size / 1024);
-          }
 
-          appendFileToForm(_blob);
-        }, newType, quality);
-
-        console.log(myUploaderFinalResult);
-        if(myUploaderFinalResult.length > 0)
+        var myNewImg = cropperObj.getCroppedCanvas();
+        if(myNewImg)
         {
-          myUploaderFinalResult.attr('src', myCroppedImage);
+          var imgBlob  = myNewImg.toBlob(function (_blob)
+          {
+            if(_fileInfo.name)
+            {
+              _blob.name = _fileInfo.name;
+            }
+            else
+            {
+              _blob.name = 'my-photo.jpg';
+            }
+            if(_fileInfo.size)
+            {
+              _blob.sizeBefore = _fileInfo.size;
+              _blob.KB_before = Math.round(_fileInfo.size / 1024);
+            }
+            if(_blob.size)
+            {
+              _blob.KB_after = Math.round(_blob.size / 1024);
+            }
+
+            appendFileToForm(_blob);
+          }, newType, quality);
+
+          console.log(myUploaderFinalResult);
+          if(myUploaderFinalResult.length > 0)
+          {
+            myUploaderFinalResult.attr('src', myNewImg.toDataURL(newType, quality));
+          }
         }
       },
     })
@@ -357,13 +360,6 @@ function runUploader()
     });
   }
 
-
-
-}
-
-
-
-
   function setDropEffect(dataTransfer, effect)
   {
     // is in try catch as IE11 will throw error if not
@@ -426,10 +422,5 @@ function runUploader()
   }
 
 
-
-
-
-
-
-
+}
 
