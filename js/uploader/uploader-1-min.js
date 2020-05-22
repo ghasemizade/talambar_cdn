@@ -161,12 +161,16 @@ function runUploader()
           {
             _blob.name = 'my-photo.jpg';
           }
-          _blob.size_KB = Math.round(_blob.size / 1024);
           if(_fileInfo.size)
           {
             _blob.sizeBefore = _fileInfo.size;
-            _blob.sizeBefore_KB = Math.round(_fileInfo.size / 1024);
+            _blob.KB_before = Math.round(_fileInfo.size / 1024);
           }
+          if(_blob.size)
+          {
+            _blob.KB_after = Math.round(_blob.size / 1024);
+          }
+
           appendFileToForm(_blob);
         });
 
