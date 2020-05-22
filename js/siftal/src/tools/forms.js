@@ -112,9 +112,22 @@
               {
                 fileName = droppedFilesName + i;
               }
-              console.log('filename : ' + fileName);
-              console.log(_file);
-              fd.append(fileName, _file );
+              if ('Blob' in window && _file instanceof Blob)
+              {
+                if(_file.name)
+                {
+                  fd.append(fileName, _file, _file.name);
+                }
+                else
+                {
+                  fd.append(fileName, _file);
+                }
+              }
+              else
+              {
+                fd.append(fileName, _file);
+              }
+
             });
             $this.prop('droppedFiles', null);
           }
