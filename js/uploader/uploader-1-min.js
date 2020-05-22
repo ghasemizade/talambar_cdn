@@ -109,13 +109,21 @@ function runUploader()
       }
       else
       {
-        labelText = "File Without Name!";
+        labelText = "File_Without_Name.jpg";
+        fileInfo['name'] = 'File_Without_Name.jpg';
       }
+
+      if(_files[0].type)
+      {
+        fileInfo['type'] = _files[0].type;
+      }
+
       if(_files[0].size)
       {
         fileSize = _files[0].size;
         fileInfo['size'] = _files[0].size;
       }
+
     }
     else
     {
@@ -123,10 +131,9 @@ function runUploader()
     }
 
     _label.html(labelText);
-    if(fileSize && fileSize > 0)
+    if(fileInfo['size'] && fileInfo['size'] > 0)
     {
-      fileSize = Math.round(fileSize / 1024);
-      _label.attr('data-file-size', fileSize + ' KB');
+      _label.attr('data-file-size', Math.round(fileInfo['size'] / 1024) + ' KB');
     }
     else
     {
@@ -150,7 +157,14 @@ function runUploader()
       grow: "fullscreen",
       preConfirm: (login) =>
       {
-        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
+        var newType = 'image/jpeg';
+        if(_fileInfo.type)
+        {
+          newType = _fileInfo.type;
+        }
+        console.log(_fileInfo);
+        console.log(newType);
+        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL(newType, 0.9);
         var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob)
         {
           if(_fileInfo.name)
@@ -172,7 +186,7 @@ function runUploader()
           }
 
           appendFileToForm(_blob);
-        });
+        }, newType, 0.9);
 
         $('#finalImage').attr('src', myCroppedImage);
       },
@@ -192,7 +206,6 @@ function runUploader()
 
   function appendFileToForm(_files)
   {
-    console.log('append file');
     console.log(_files);
     if(!_files)
     {
@@ -211,7 +224,6 @@ function runUploader()
       var myReader = new FileReader();
       myReader.onload = function (_e)
       {
-        console.log('file is created');
         fillCropperImg(this.result);
       };
       // read as data
