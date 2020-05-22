@@ -20,7 +20,7 @@ function runUploader()
     return false;
   }
 
-  var myUploaderPreview = $(myUploaderFrame.attr('data-preview'));
+  var myUploaderFinalResult = $(myUploaderFrame.attr('data-final'));
   var myInput           = $('[data-uploader] input[type="file"]');
   var myLabel           = $('[data-uploader] input[type="file"] + label');
   var droppedFiles      = false;
@@ -247,10 +247,10 @@ function runUploader()
           appendFileToForm(_blob);
         }, newType, quality);
 
-        console.log(myUploaderPreview);
-        if(myUploaderPreview.length > 0)
+        console.log(myUploaderFinalResult);
+        if(myUploaderFinalResult.length > 0)
         {
-          myUploaderPreview.attr('src', myCroppedImage);
+          myUploaderFinalResult.attr('src', myCroppedImage);
         }
       },
     })
