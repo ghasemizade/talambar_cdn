@@ -313,15 +313,14 @@ function runUploader()
           newType = _fileInfo.type;
         }
 
-        var cropOption =
+        var cropOption = {};
+        if(myUploaderFrame.attr('data-max-w') !== undefined)
         {
-          width: 1200,
-          height: 300,
-
-          // minWidth : 200,
-          // minHeight : 200,
-          maxWidth : 1200,
-          maxHeight : 1200
+          cropOption.width = myUploaderFrame.attr('data-max-w');
+        }
+        if(myUploaderFrame.attr('data-max-h') !== undefined)
+        {
+          cropOption.height = myUploaderFrame.attr('data-max-h');
         }
 
         var myNewImg = cropperObj.getCroppedCanvas(cropOption);
