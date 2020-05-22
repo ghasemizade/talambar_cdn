@@ -14,18 +14,15 @@ function runUploader()
 {
   // console.log('run uploader');
   // define variables
-  var myUploaderFrame  = $('[data-uploader]');
+  var myUploaderFrame = $('[data-uploader]');
   if(!myUploaderFrame)
   {
     return false;
   }
 
-  var myUploadFileName = myUploaderFrame.attr('data-name');
-  var myForm           = myUploaderFrame.parents('form');
-  var myInput          = $('[data-uploader] input[type="file"]');
-  var myLabel          = $('[data-uploader] input[type="file"] + label');
-  var myLabel          = $('[data-uploader] input[type="file"] + label');
-  var droppedFiles     = false;
+  var myInput      = $('[data-uploader] input[type="file"]');
+  var myLabel      = $('[data-uploader] input[type="file"] + label');
+  var droppedFiles = false;
   var cropperObj   = false;
 
 
@@ -42,6 +39,48 @@ function runUploader()
   //   return false;
   // }
 
+
+  // catch file change manually
+  myInput.off('change').on('change', function(_e)
+  {
+    startCropProcess(_e.target.files)
+  })
+  // catch drop file
+  myUploaderFrame.off('drop').on('drop', function(_e)
+  {
+    // set dropped files to use on form submit
+    droppedFiles = _e.originalEvent.dataTransfer.files;
+    startCropProcess(droppedFiles)
+  });
+
+
+  function startCropProcess(_files)
+  {
+    // set file detail
+    var fileInfo = setInputText(_files, myInput, myLabel);
+    if(_files.length > 0)
+    {
+      // if img
+      if(1)
+      {
+        // open crop modal
+        cropFullScreen();
+        if (_file && _file[0])
+        {
+          // try to load file
+          loadImageFile(_file[0]);
+
+        }
+      }
+      else
+      {
+        // on other ext append file to form
+        appendFileToForm(_files);
+      }
+    }
+  }
+
+
   // show file Content
   function setInputText(_files, _input, _label)
   {
@@ -53,6 +92,7 @@ function runUploader()
     }
 
     var labelText = "";
+    var fileInfo = false;
     var fileSize = false;
     if(_files.length > 1)
     {
@@ -64,6 +104,7 @@ function runUploader()
       if(_files[0].name)
       {
         labelText = _files[0].name;
+        fileInfo['name'] = _files[0].name;
       }
       else
       {
@@ -72,6 +113,7 @@ function runUploader()
       if(_files[0].size)
       {
         fileSize = _files[0].size;
+        fileInfo['size'] = _files[0].size;
       }
     }
     else
@@ -82,47 +124,59 @@ function runUploader()
     _label.html(labelText);
     if(fileSize && fileSize > 0)
     {
-      fileSize = Math.round(fileSize/1024);
+      fileSize = Math.round(fileSize / 1024);
       _label.attr('data-file-size', fileSize + ' KB');
     }
     else
     {
       _label.attr('data-file-size', null);
     }
+
+    return fileInfo;
   }
 
 
-  function startCropProcess(_files)
-  {
-    // set file detail
-    setInputText(_files, myInput, myLabel);
-    appendFileToForm(_files, myUploadFileName);
-    if(_files.length > 0)
-    {
-      // open crop modal
-      cropFullScreen();
-      // try to load file
-      loadImageFile(_files);
-    }
-  }
 
-
-  function loadImageFile(_file)
+  function cropFullScreen()
   {
-    if (_file && _file[0])
-    {
-      var myReader = new FileReader();
-      myReader.onload = function (_e)
+
+    say({
+      title: "",
+      html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
+      focusConfirm: true,
+      showConfirmButton: true,
+      showCancelButton: false,
+      // showCloseButton:true,
+      grow: "fullscreen",
+      preConfirm: (login) =>
       {
-        console.log('file is created');
-        fillCropperImg(this.result);
-      };
-      // read as data
-      myReader.readAsDataURL(_file[0]);
-    }
-  }
+        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
+        var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob) {
+          console.log('blob is');
+          console.log(_blob);
+          _blob.name = 'salam.jpg';
+          console.log(_blob);
+          appendFileToForm(_blob);
+        });
 
-  function appendFileToForm(_files, _uploaderFileName)
+        $('#finalImage').attr('src', myCroppedImage);
+      },
+    })
+    .then((result) =>
+    {
+      if (result.value)
+      {
+      }
+      else if (result.dismiss === alerty.DismissReason.cancel)
+      {
+        // do nothing
+      }
+    });
+  }
+}
+
+
+  function appendFileToForm(_files)
   {
     console.log(_files);
     if(!_files)
@@ -132,6 +186,22 @@ function runUploader()
     // add to prop of frame element
     myUploaderFrame.prop('droppedFiles', _files);
     return true;
+  }
+
+
+  function loadImageFile(_file)
+  {
+    if (_file)
+    {
+      var myReader = new FileReader();
+      myReader.onload = function (_e)
+      {
+        console.log('file is created');
+        fillCropperImg(this.result);
+      };
+      // read as data
+      myReader.readAsDataURL(_file);
+    }
   }
 
 
@@ -181,19 +251,6 @@ function runUploader()
 
   }
 
-
-  // catch file change manually
-  myInput.off('change').on('change', function(_e)
-  {
-    startCropProcess(_e.target.files)
-  })
-  // catch drop file
-  myUploaderFrame.off('drop').on('drop', function(_e)
-  {
-    // set dropped files to use on form submit
-    droppedFiles = _e.originalEvent.dataTransfer.files;
-    startCropProcess(droppedFiles)
-  });
 
 
   function setDropEffect(dataTransfer, effect)
@@ -261,40 +318,6 @@ function runUploader()
 
 
 
-
-  function cropFullScreen()
-  {
-
-    say({
-      title: "",
-      html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
-      focusConfirm: true,
-      showConfirmButton: true,
-      showCancelButton: false,
-      // showCloseButton:true,
-      grow: "fullscreen",
-      preConfirm: (login) =>
-      {
-        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL();
-        var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob) {
-          appendFileToForm(_blob, myUploadFileName);
-        });
-
-        $('#finalImage').attr('src', myCroppedImage);
-      },
-    })
-    .then((result) =>
-    {
-      if (result.value)
-      {
-      }
-      else if (result.dismiss === alerty.DismissReason.cancel)
-      {
-        // do nothing
-      }
-    });
-  }
-}
 
 
 
