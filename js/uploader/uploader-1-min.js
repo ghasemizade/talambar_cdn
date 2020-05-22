@@ -58,6 +58,12 @@ function runUploader()
   {
     // set file detail
     var fileInfo = setInputText(_files, myInput, myLabel);
+
+    if(!checkFileFace(_files))
+    {
+      return false;
+    }
+
     if(_files.length > 0)
     {
       // if img
@@ -77,6 +83,53 @@ function runUploader()
         // on other ext append file to form
         appendFileToForm(_files);
       }
+    }
+  }
+
+
+  var fileErrorMSG =
+  {
+    fileChooseNone: "Please select one file!",
+    fileChooseOnlyOne: "Please choose only one file!",
+    fileUltraMaxSize: "Please select file with less than 10 MB!",
+    fileMaxSize: "Please select file with less than 10 MB!",
+
+  }
+
+  function checkFileFace(_files)
+  {
+    console.log(_files);
+    if(_files.length == 1)
+    {
+      checkOneFileFace(_files[0]);
+
+    }
+    else if(_files.length > 1)
+    {
+      say({title: fileErrorMSG.fileChooseOnlyOne , type: 'error'});
+    }
+    else
+    {
+      notif('info', fileErrorMSG.fileChooseNone);
+      // choose one file
+    }
+    return true;
+  }
+
+
+  function checkOneFileFace(_file)
+  {
+    var fileSizeMB = Math.round(_file.size / 1024 / 1024);
+    var fileUltraMaxSize = 10;
+    // get from form if exist
+    if(myUploaderFrame.attr('data-file-ultra-size'))
+    {
+      fileUltraMaxSize = parseInt(myUploaderFrame.attr('data-file-ultra-size'));
+    }
+    // if more than 10 MB
+    if(fileSizeMB > fileUltraMaxSize)
+    {
+      say({title: fileErrorMSG.fileUltraMaxSize , type: 'error'});
     }
   }
 
