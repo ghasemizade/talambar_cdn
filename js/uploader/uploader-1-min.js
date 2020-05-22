@@ -282,6 +282,17 @@ function runUploader()
     }
     // add to prop of frame element
     myUploaderFrame.prop('droppedFiles', _files);
+
+    if(myUploaderFrame.attr('data-autoSend') !== undefined)
+    {
+      // submit form
+      myForm = myUploaderFrame.parents('form');
+      if(myForm.length)
+      {
+        console.log('submit form');
+        myForm.submit();
+      }
+    }
     return true;
   }
 
