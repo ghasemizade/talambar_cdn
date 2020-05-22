@@ -158,13 +158,14 @@ function runUploader()
       preConfirm: (login) =>
       {
         var newType = 'image/jpeg';
+        var quality = 0.75;
         if(_fileInfo.type)
         {
           newType = _fileInfo.type;
         }
         console.log(_fileInfo);
         console.log(newType);
-        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL(newType, 0.9);
+        var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL(newType, quality);
         var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob)
         {
           if(_fileInfo.name)
@@ -186,7 +187,7 @@ function runUploader()
           }
 
           appendFileToForm(_blob);
-        }, newType, 0.9);
+        }, newType, quality);
 
         $('#finalImage').attr('src', myCroppedImage);
       },
