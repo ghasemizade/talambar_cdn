@@ -205,9 +205,15 @@ function runUploader()
 
   function cropFullScreen(_fileInfo)
   {
+    var previewCircle = "";
+    if(myUploaderFrame.attr('data-preview-circle') !== undefined)
+    {
+      previewCircle = 'data-preview-circle';
+    }
+
     say({
       title: "",
-      html: '<div class="cropBox"><img src="" alt="cropBox"></div>',
+      html: '<div class="cropBox" ' + previewCircle + '><img src="" alt="cropBox"></div>',
       focusConfirm: true,
       showConfirmButton: true,
       showCancelButton: false,

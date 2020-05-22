@@ -391,3 +391,22 @@ body.dragging{
 .cropper-disabled .cropper-point {
   cursor: not-allowed;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-preview-circle] .cropper-view-box {
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #39f;
+    outline: 0;
+}
