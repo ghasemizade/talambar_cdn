@@ -445,14 +445,27 @@ function runUploader()
       myRatio = 16 / 9;
     }
 
+    var minCropWidth = 250;
+    var minCropHeight = 250;
+
+    if(myUploaderFrame.attr('data-min-w') !== undefined)
+    {
+      minCropWidth = myUploaderFrame.attr('data-min-w');
+    }
+
+    // if(myUploaderFrame.attr('data-min-h') !== undefined)
+    // {
+    //   minCropHeight = myUploaderFrame.attr('data-min-h');
+    // }
+
     // draw new one
     cropperObj = new Cropper(myImg,
     {
       viewMode:2,
       autoCropArea:1,
       // zoomable:false,
-      minCropBoxWidth:250,
-      minCropBoxHeight:250,
+      minCropBoxWidth:minCropWidth,
+      minCropBoxHeight:minCropHeight,
       initialAspectRatio: 16 / 9,
       aspectRatio: myRatio,
       crop(event) {
