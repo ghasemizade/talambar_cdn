@@ -20,10 +20,11 @@ function runUploader()
     return false;
   }
 
-  var myInput      = $('[data-uploader] input[type="file"]');
-  var myLabel      = $('[data-uploader] input[type="file"] + label');
-  var droppedFiles = false;
-  var cropperObj   = false;
+  var myUploaderPreview = $(myUploaderFrame.attr('data-preview'));
+  var myInput           = $('[data-uploader] input[type="file"]');
+  var myLabel           = $('[data-uploader] input[type="file"] + label');
+  var droppedFiles      = false;
+  var cropperObj        = false;
 
 
 
@@ -98,20 +99,21 @@ function runUploader()
 
   function checkFileFace(_files)
   {
-    console.log(_files);
+    // console.log(_files);
     if(_files.length == 1)
     {
-      checkOneFileFace(_files[0]);
-
+      return checkOneFileFace(_files[0]);
     }
     else if(_files.length > 1)
     {
       say({title: fileErrorMSG.fileChooseOnlyOne , type: 'error'});
+      return false;
     }
     else
     {
       notif('info', fileErrorMSG.fileChooseNone);
       // choose one file
+      return false;
     }
     return true;
   }
@@ -119,8 +121,9 @@ function runUploader()
 
   function checkOneFileFace(_file)
   {
-    var fileSizeMB = Math.round(_file.size / 1024 / 1024);
+    var fileSizeMB = Math.round( (Math.round(_file.size / 1024) / 1024) * 100) / 100;
     var fileUltraMaxSize = 10;
+
     // get from form if exist
     if(myUploaderFrame.attr('data-file-ultra-size'))
     {
@@ -130,14 +133,16 @@ function runUploader()
     if(fileSizeMB > fileUltraMaxSize)
     {
       say({title: fileErrorMSG.fileUltraMaxSize , type: 'error'});
+      return false;
     }
+
+    return true;
   }
 
 
   // show file Content
   function setInputText(_files, _input, _label)
   {
-    // console.log(_files);
     // set default if is not set
     if(!_label.prop('defaultText'))
     {
@@ -216,8 +221,8 @@ function runUploader()
         {
           newType = _fileInfo.type;
         }
-        console.log(_fileInfo);
-        console.log(newType);
+        // console.log(_fileInfo);
+        // console.log(newType);
         var myCroppedImage = cropperObj.getCroppedCanvas().toDataURL(newType, quality);
         var imgBlob = cropperObj.getCroppedCanvas().toBlob(function (_blob)
         {
@@ -242,7 +247,11 @@ function runUploader()
           appendFileToForm(_blob);
         }, newType, quality);
 
-        $('#finalImage').attr('src', myCroppedImage);
+        console.log(myUploaderPreview);
+        if(myUploaderPreview.length > 0)
+        {
+          myUploaderPreview.attr('src', myCroppedImage);
+        }
       },
     })
     .then((result) =>
