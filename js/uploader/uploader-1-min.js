@@ -44,8 +44,14 @@ function runUploader()
   // catch file change manually
   myInput.off('change.uploader').on('change.uploader', function(_e)
   {
+    console.log('change');
     startHandleFileProcess(_e.target.files)
-  })
+  });
+  myInput.off('click.uploader').on('click.uploader', function(_e)
+  {
+    console.log('click');
+    resetUploaderLabel(myLabel);
+  });
   // catch drop file
   myUploaderFrame.off('drop.uploader').on('drop.uploader', function(_e)
   {
@@ -166,9 +172,7 @@ function runUploader()
     return false;
   }
 
-
-  // show file Content
-  function setInputText(_files, _input, _label)
+  function resetUploaderLabel(_label)
   {
     // set default if is not set
     if(!_label.prop('defaultText'))
@@ -176,16 +180,25 @@ function runUploader()
       _label.prop('defaultText', _label.html());
     }
 
+    labelText = _label.prop('defaultText');
+    _label.html(labelText);
+
+    return labelText;
+  }
+
+  // show file Content
+  function setInputText(_files, _input, _label)
+  {
     var labelText = "";
     var fileInfo = [];
     var fileSize = false;
 
-    if(_files.length > 1)
+    if(_files && _files.length > 1)
     {
       multipleCaption = _input.get(0).getAttribute( 'data-multiple-caption') || '{count} files selected';
       labelText = multipleCaption.replace( '{count}', _files.length );
     }
-    else if(_files.length === 1)
+    else if(_files && _files.length === 1)
     {
       if(_files[0].name)
       {
@@ -212,7 +225,7 @@ function runUploader()
     }
     else
     {
-      labelText = _label.prop('defaultText');
+      labelText = resetUploaderLabel(_label);
     }
 
     _label.html(labelText);
