@@ -100,7 +100,8 @@ function readPageUploader()
   if(myEl && myEl.length > 0)
   {
     // load style
-    StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
+    // StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
+    // load script
     myUrl = urlJibres('cdn') + "js/uploader/uploader-1-min.js";
     fileLoader(myUrl, 'runUploader', true);
   }
