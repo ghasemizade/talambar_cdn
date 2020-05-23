@@ -1,6 +1,7 @@
 [data-in="site"][data-page="bug"]{
   background-color:#000;
 }
+[data-in="site"][data-page="bug"] #jibresGoToFa{background-color: rgba(255, 193, 7, 0.7)}
 [data-in="site"][data-page="bug"] #jibresHeader{
   background-color:transparent;
 }
@@ -16,15 +17,15 @@
 [data-in="site"][data-page="bug"] .jibresBanner::before{
   background:transparent;
 }
-[data-in="site"][data-page="bug"] .jibresBanner .fit.zero.love{
+[data-in="site"][data-page="bug"] .jibresBanner .avand.zero.love{
   max-width: 500px;
 }
-[data-in="site"][data-page="bug"] .jibresBanner .fit{
+[data-in="site"][data-page="bug"] .jibresBanner .avand{
   background: rgba(0,0,0,0.7);
   color: #aaa;
   transition:0.3s;
 }
-[data-in="site"][data-page="bug"] .jibresBanner .fit:hover{
+[data-in="site"][data-page="bug"] .jibresBanner .avand:hover{
   background: rgba(0,0,0,0.8);
   color: #ccc;
 }
