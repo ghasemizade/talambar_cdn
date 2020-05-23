@@ -92,6 +92,14 @@
   min-width: 100px;
   transition: 0.2s;
 }
+.box footer .btn.linkDel{
+  min-width: 60px;
+}
+.box footer .btn.linkDel:focus{
+  background-color: #eee;
+}
+
+
 .box .mediaBox{position:relative;overflow:hidden;margin:0 auto;text-align:center;}
 .box .mediaBox img{display:block;margin: 0 auto;max-height:300px;}
 .box .mediaBox::before {
