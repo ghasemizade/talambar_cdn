@@ -160,6 +160,7 @@ function runUploader()
   {
     if(!_fileSize)
     {
+      console.log('file size is not set!');
       return null;
     }
 
@@ -377,12 +378,11 @@ function runUploader()
 
   function appendFileToForm(_files, _size)
   {
-    if(OneFileMaxSizeOkay(_size))
+    if(!OneFileMaxSizeOkay(_size))
     {
-      return;
+      return false;
     }
 
-    console.log(_files);
     if(!_files)
     {
       return false;
@@ -396,10 +396,15 @@ function runUploader()
       myForm = myUploaderFrame.parents('form');
       if(myForm.length)
       {
-        console.log('submit form');
+        console.log('auto send form');
         myForm.submit();
       }
+      else
+      {
+        console.log('form is not exist for autoSend!');
+      }
     }
+
     return true;
   }
 
