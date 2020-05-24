@@ -240,12 +240,10 @@ function runUploader()
       if(_files[0].name)
       {
         labelText = _files[0].name;
-        fileInfo['name'] = _files[0].name;
       }
       else
       {
         labelText = "File_Without_Name.jpg";
-        fileInfo['name'] = 'File_Without_Name.jpg';
       }
 
       if(_files[0].type)
@@ -265,6 +263,12 @@ function runUploader()
       labelText = resetUploaderLabel(_label);
     }
 
+
+    // clear labelText from xss!
+    labelText.replace('<', '').replace('>', '').replace('"', '').replace("'", '').replace('/', '').replace('\\', '');
+    // save name
+    fileInfo['name'] = labelText;
+
     _label.html(labelText);
     if(fileInfo['size'] && fileInfo['size'] > 0)
     {
@@ -280,7 +284,6 @@ function runUploader()
     {
       var fileName = fileInfo['name'];
       fileInfo['ext'] = fileName.substr(fileName.lastIndexOf('.') + 1, fileName.length);
-
     }
 
     return fileInfo;
