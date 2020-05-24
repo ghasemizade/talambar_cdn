@@ -265,7 +265,7 @@ function runUploader()
 
 
     // clear labelText from xss!
-    labelText.replace('<', '').replace('>', '').replace('"', '').replace("'", '').replace('/', '').replace('\\', '');
+    labelText = labelText.replace('<', '').replace('>', '').replace('"', '').replace("'", '').replace('/', '').replace('\\', '');
     // save name
     fileInfo['name'] = labelText;
 
