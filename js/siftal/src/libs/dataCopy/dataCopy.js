@@ -1,8 +1,7 @@
 
 function dataCopy()
 {
-  $('[data-copy]').off('click');
-  $('[data-copy]').on('click', function()
+  $('[data-copy]').off('click.copy').on('click.copy', function()
   {
     var copyAttr = $(this).attr('data-copy');
     if(copyAttr)
