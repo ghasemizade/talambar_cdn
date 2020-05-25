@@ -9,6 +9,7 @@ function readPageAllScripts(_force, _page)
   readPageSortable();
   readPageCropper();
   readPageUploader();
+  readPageGtag();
 }
 
 
@@ -106,6 +107,21 @@ function readPageUploader()
     fileLoader(myUrl, 'runUploader', true);
   }
 }
+
+
+function readPageGtag()
+{
+  var myEl = $('meta[name="gtag"]');
+  var myGtag = myEl.attr('content');
+
+  if(myEl && myEl.length > 0 && myGtag)
+  {
+    // load script
+    myUrl = "https://www.googletagmanager.com/gtag/js?id=" + myGtag;
+    fileLoader(myUrl, 'runGtag', true);
+  }
+}
+
 
 
 function fileLoader(_url, _fn, _forceCallFn, _file)
