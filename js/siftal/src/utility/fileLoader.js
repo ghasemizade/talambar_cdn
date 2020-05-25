@@ -113,7 +113,6 @@ function readPageGtag()
 {
   var myEl = $('meta[name="gtag"]');
   var myGtag = myEl.attr('content');
-
   if(myEl && myEl.length > 0 && myGtag)
   {
     // load script
