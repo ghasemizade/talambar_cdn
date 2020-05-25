@@ -65,7 +65,6 @@ function pushStateSiftal(_direct)
     callFunc('pushStateFinal', _direct);
     callFunc('pageChart', _direct);
     callFunc('chartDrawer', _direct);
-    callFunc('pushStateGA', _direct);
   }, 50)
 }
 
