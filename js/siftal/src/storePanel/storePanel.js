@@ -790,7 +790,7 @@ function shortkey_toggleDiscount(_status)
         currentVal = null;
       }
       $(this).attr('data-discount', currentVal);
-      $(this).val('');
+      $(this).val(0);
     }
     else
     {
