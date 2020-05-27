@@ -201,11 +201,7 @@
       var refresh = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
       var autoClose = ajaxOptions.autoClose || $this.attr('data-autoClose') !== undefined;
       var autoScroll = ajaxOptions.autoScroll || $this.attr('data-autoScroll');
-      if($(autoScroll).length === 1)
-      {
-        autoScroll = $(autoScroll);
-      }
-      else
+      if($(autoScroll).length !== 1)
       {
         autoScroll = null;
       }
@@ -278,15 +274,19 @@
         }
         // unlock form
         unlockForm(_super.lockForm, data);
+        console.log(1000);
         if(data && data.redirect)
         {
+          console.log(1001);
           var a = $('<a href="' + data.redirect + '"></a>');
           if(a.isAbsoluteURL() || data.direct)
           {
+          console.log(1002);
             location.replace(data.redirect);
           }
           else
           {
+          console.log(1003);
             Navigate({
               url: data.redirect,
               autoScroll: autoScroll
@@ -297,6 +297,7 @@
 
         if(refresh)
         {
+          console.log(1004);
           Navigate({
             url: location.href,
             autoScroll: autoScroll,
