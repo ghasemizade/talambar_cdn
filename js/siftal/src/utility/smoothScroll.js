@@ -213,13 +213,5 @@ function scrollSmoothDetector(_direct)
   {
     scrollSmooth(hashtagFake, null, 1000);
   }
-  else if(_direct != true)
-  {
-    findPushStateScroll();
-  }
 }
-
-
-
-
 

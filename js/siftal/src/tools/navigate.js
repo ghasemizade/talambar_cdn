@@ -228,6 +228,8 @@
       document.title = obj.title;
     }
 
+    // set scroll
+    findPushStateScroll();
 
     // call pushState function if exist
     callFunc('pushStateSiftal', false);
