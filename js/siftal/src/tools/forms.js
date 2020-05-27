@@ -15,6 +15,7 @@
       cache: false,
       timeout: 30000,
       abort: false,
+      autoScroll: false,
       async: true,
       beforeSend: function (request)
       {
@@ -199,6 +200,15 @@
 
       var refresh = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
       var autoClose = ajaxOptions.autoClose || $this.attr('data-autoClose') !== undefined;
+      var autoScroll = ajaxOptions.autoScroll || $this.attr('data-autoScroll');
+      if($(autoScroll).length === 1)
+      {
+        autoScroll = $(autoScroll);
+      }
+      else
+      {
+        autoScroll = null;
+      }
 
       if(!_super.noLoading)
       {
@@ -245,7 +255,6 @@
 
       $form.trigger('ajaxify:send:ajax:start', ajaxOptions);
 
-      console.log(ajaxOptions);
       var myXhr = $.ajax(ajaxOptions)
       .done(function(data, status, xhr)
       {
@@ -269,7 +278,6 @@
         }
         // unlock form
         unlockForm(_super.lockForm, data);
-
         if(data && data.redirect)
         {
           var a = $('<a href="' + data.redirect + '"></a>');
@@ -280,7 +288,8 @@
           else
           {
             Navigate({
-              url: data.redirect
+              url: data.redirect,
+              autoScroll: autoScroll
             });
           }
           return;
@@ -290,6 +299,7 @@
         {
           Navigate({
             url: location.href,
+            autoScroll: autoScroll,
             replace: true
           });
         }
