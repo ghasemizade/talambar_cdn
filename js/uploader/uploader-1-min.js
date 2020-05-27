@@ -444,14 +444,21 @@ function runUploader()
     // set image src
     $image.attr('src', _imgSrc);
 
-    myRatio = myUploaderFrame.attr('data-ratio');
-    if(myRatio && myRatio > 0)
+    var myInitRatio = myUploaderFrame.attr('data-ratio');
+    if(myInitRatio && myInitRatio > 0)
     {
       // do nothing
     }
     else
     {
-      myRatio = 16 / 9;
+      myInitRatio = 16 / 9;
+    }
+
+    // define ratio as same as init ratio
+    var myRatio = myInitRatio;
+    if(myUploaderFrame.attr('data-ratio-free') === undefined)
+    {
+      myRatio = NaN;
     }
 
     var minCropWidth = 250;
@@ -475,7 +482,7 @@ function runUploader()
       // zoomable:false,
       minCropBoxWidth:minCropWidth,
       minCropBoxHeight:minCropHeight,
-      initialAspectRatio: 16 / 9,
+      initialAspectRatio: myInitRatio,
       aspectRatio: myRatio,
       crop(event) {
         // console.log(event.detail.x);
