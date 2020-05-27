@@ -218,7 +218,7 @@ function runUploader()
     }
 
     labelText = _label.prop('defaultText');
-    _label.html(labelText);
+    _label.html(labelText).attr('data-file-size', null);
 
     return labelText;
   }
