@@ -11,6 +11,7 @@
     title: null,
     url: '/',
     replace: false,
+    autoScroll: false,
     filter: null,
     fake: false,
     data: false,
@@ -229,7 +230,14 @@
     }
 
     // set scroll
-    findPushStateScroll();
+    if(obj.autoScroll && $(obj.autoScroll).length === 1)
+    {
+      scrollSmoothTo($(obj.autoScroll));
+    }
+    else
+    {
+      findPushStateScroll();
+    }
 
     // call pushState function if exist
     callFunc('pushStateSiftal', false);
