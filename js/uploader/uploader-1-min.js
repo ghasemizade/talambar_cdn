@@ -456,7 +456,7 @@ function runUploader()
 
     // define ratio as same as init ratio
     var myRatio = myInitRatio;
-    if(myUploaderFrame.attr('data-ratio-free') === undefined)
+    if(myUploaderFrame.attr('data-ratio-free') !== undefined)
     {
       myRatio = NaN;
     }
