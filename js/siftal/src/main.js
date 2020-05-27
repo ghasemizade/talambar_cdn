@@ -64,14 +64,11 @@ $(document).ready(function()
       callFunc($(this).attr('data-fn'), this);
     }
     // send as ajaxify
-    if($(this).attr('data-refresh'))
-    {
-      $(this).ajaxify({link: true, refresh: true});
-    }
-    else
-    {
-      $(this).ajaxify({link: true});
-    }
+    var refreshMode = $(this).attr('data-refresh') !== undefined;
+    var autoScrollMode = $(this).attr('data-autoScroll');
+
+    $(this).ajaxify({link: true, refresh: refreshMode, autoScroll: autoScrollMode});
+
   });
 
   $(document).on('click', '[data-confirm]', function(e)
