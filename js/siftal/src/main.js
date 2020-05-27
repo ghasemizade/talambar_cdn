@@ -64,7 +64,14 @@ $(document).ready(function()
       callFunc($(this).attr('data-fn'), this);
     }
     // send as ajaxify
-    $(this).ajaxify({link: true});
+    if($(this).attr('data-refresh'))
+    {
+      $(this).ajaxify({link: true, refresh: true});
+    }
+    else
+    {
+      $(this).ajaxify({link: true});
+    }
   });
 
   $(document).on('click', '[data-confirm]', function(e)
