@@ -303,6 +303,7 @@ function runUploader()
       title: "",
       html: '<div class="cropBox" ' + previewCircle + '><img src="" alt="cropBox"></div>',
       focusConfirm: true,
+      animation: false,
       showConfirmButton: true,
       showCancelButton: false,
       // showCloseButton:true,
