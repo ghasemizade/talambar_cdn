@@ -3,6 +3,7 @@
 [data-pwa] #pageHeader > div{display: inline-block;height: 100%;position:relative;overflow: hidden;}
 [data-pwa][dir='ltr'] #pageHeader > div {float: left;}
 [data-pwa][dir='rtl'] #pageHeader > div {float: right;}
+[data-pwa][dir='rtl'] #pageHeader button {cursor: pointer;display:inline-block;outline:none;border:none;color: #0a7ce7 !important;height: 40px;overflow: hidden;background-color: transparent;font-size: 1.2em; padding:0 1rem;font-weight:bold}
 [data-pwa] #pageHeader .back{width:30%;}
 [data-pwa] #pageHeader .title{width:40%;font-weight:700;text-align: center;font-size:1.4rem;}
 [data-pwa] #pageHeader .action{width:30%;}
