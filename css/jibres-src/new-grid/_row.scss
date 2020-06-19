@@ -15,10 +15,7 @@
   padding-right: 0;
   padding-left: 0;
 }
-.no-gutters {
-    margin-right: 0;
-    margin-left: 0
-}
+
 // flex custom modes
 .flex-column {
   -ms-flex-direction: column !important;
@@ -30,6 +27,10 @@
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem
+}
+.row.padLess .c, .row.padLess [class*=c-]{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem
 }
 .c {
   -ms-flex-preferred-size: 0;
