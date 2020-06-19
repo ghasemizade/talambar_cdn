@@ -68,12 +68,18 @@
   font-weight: 700;
   margin: 0;
 }
+.box > header .btn{
+
+}
 .box .body{
   padding: 2rem;
   overflow: hidden;
 }
 .box .body.maxPad{
   padding: 3rem 3rem;
+}
+.box .body.lessPad{
+  padding: 0.5rem;
 }
 .box .body.zeroPad{
   padding: 0;
