@@ -26,7 +26,10 @@
 .txt:focus{
 	border-color: #80c0d0;
 }
-
+.txt[data-editor]{
+	min-height: 238px;
+	margin:0;
+}
 .txt[rows]{
 	resize: none;
 }
