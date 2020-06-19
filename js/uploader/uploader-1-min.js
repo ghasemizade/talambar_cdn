@@ -362,7 +362,7 @@ function runUploader()
 
           if(myUploaderFinalResult.length > 0)
           {
-            myUploaderFinalResult.attr('src', myNewImg.toDataURL(newType, quality));
+            myUploaderFinalResult.attr('src', myNewImg.toDataURL(newType, quality)).attr('data-fill', '');
           }
         }
       },
