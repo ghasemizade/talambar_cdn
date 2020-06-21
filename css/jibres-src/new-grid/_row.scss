@@ -46,7 +46,7 @@
 .c-auto {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: auto;
+  width: auto!important;
   max-width: 100%;
 }
 .c-1 {
@@ -122,7 +122,7 @@
   .c-xs-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: auto;
+    width: auto!important;
     max-width: 100%;
   }
   .c-xs-1 {
@@ -206,7 +206,7 @@
   .c-sm-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: auto;
+    width: auto!important;
     max-width: 100%;
   }
   .c-sm-1 {
@@ -290,7 +290,7 @@
   .c-md-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: auto;
+    width: auto!important;
     max-width: 100%;
   }
   .c-md-1 {
@@ -374,7 +374,7 @@
   .c-lg-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: auto;
+    width: auto!important;
     max-width: 100%;
   }
   .c-lg-1 {
@@ -458,7 +458,7 @@
   .c-xl-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: auto;
+    width: auto!important;
     max-width: 100%;
   }
   .c-xl-1 {
@@ -542,7 +542,7 @@
   .c-xxl-auto {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: auto;
+    width: auto!important;
     max-width: 100%;
   }
   .c-xxl-1 {
