@@ -3,6 +3,7 @@ function chart_management_domainhomepage()
 
   if($("#chartdivdomain").length == 1){chartdivdomain();}
   if($("#chartdiv").length == 1){chartdiv();}
+  if($("#chartdivonlinenic").length == 1){chartdivonlinenic();}
 
 }
 
@@ -63,11 +64,6 @@ function chartdivdomain()
 
 
 
-
-
-
-
-
 function chartdiv()
 {
 
@@ -84,6 +80,41 @@ function chartdiv()
       {
         name: $("#charttitlelog").text(),
         data: $.parseJSON($("#chartlogcount").text()),
+        type: 'area',
+        showInLegend: false,
+        tooltip: {
+          valueSuffix: ' ' + $("#charttitlecount").text()
+        }
+      }
+    ]
+  });
+}
+
+
+
+
+
+
+
+
+
+
+function chartdivonlinenic()
+{
+
+  Highcharts.chart('chartdivonlinenic',
+  {
+    title: { text: $("#chartonlineniclogtitle").text() },
+    xAxis: [{
+      categories: $.parseJSON($("#chartonlineniclogcategory").text()),
+      crosshair: true
+    }],
+    yAxis: [{ title: false }],
+    series:
+    [
+      {
+        name: $("#charttitlelog").text(),
+        data: $.parseJSON($("#chartonlineniclogcount").text()),
         type: 'area',
         showInLegend: false,
         tooltip: {
