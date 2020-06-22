@@ -3,5 +3,70 @@
 }
 .productPage h1{
 	font-size: 2rem;
+	margin: 0;
 }
 
+
+// style to show price with unit
+.priceShow{
+	position: relative;
+	padding: 0.5rem 1rem;
+}
+.priceShow .price{
+	display: inline-block;
+}
+.priceShow .unit{
+	display: inline-block;
+}
+
+
+.priceLine{
+	padding: 0.5rem 0;
+}
+.priceLine .priceShow{
+	display: inline-block
+}
+.productPage .priceShow .price{
+	font-size: 3rem;
+	line-height: 4rem;
+	color: #e91e63;
+}
+.productPage .priceShow .unit{
+	color: #777;
+}
+
+.productPage .addToCart{
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	padding: 0 2rem;
+	text-decoration:none;
+	text-align:center;
+	transition:.2s ease-out;
+	border-radius:.7rem;
+	white-space:nowrap;
+	vertical-align: middle;
+	user-select:none;
+	border: 1px solid transparent;
+	height:50px;
+	line-height:50px;
+	font-weight:700;
+	background-color:#fc464a;
+	color:#fff;
+	overflow: hidden;
+	font-size:1.8rem;
+	max-width:100%;
+	min-width: 150px;
+	text-overflow:ellipsis;
+	box-shadow: 0 4px 20px rgba(252, 69, 75, 0.5)
+}
+.productPage .addToCart:hover{
+	background-color: #fa121a;
+}
+.productPage .addToCart:focus{
+	box-shadow: 0 0 8px rgba(252, 69, 75, 0.5);
+	background-color: #d81b60;
+}
+.productPage .addToCart:active{
+	background-color: #c2185b;
+}
