@@ -139,10 +139,22 @@
 .productReview progress::-webkit-progress-value {
 	background: #ffce00;
 	background: linear-gradient(to bottom,#ffce00,#ffa700);
- }
- .productReview .percentVal{
- 	display: inline-block;
- 	width: 5rem;
- }
+}
+.productReview .percentVal{
+	display: inline-block;
+	width: 5rem;
+}
 
+.productReview .commnetList{
+	margin-top: 3rem;
+}
+.productReview .commnetList .customerImg{
+	width: 10rem;
+	height: 10rem;
+	border-radius: 1rem;
+	display: block;
+}
+.productAddReview{
+
+}
 
