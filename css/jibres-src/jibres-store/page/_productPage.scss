@@ -26,10 +26,20 @@
 	display: inline-block
 }
 .productPage .priceShow .price{
+
+}
+.productPage [data-first] .priceShow .price{
+	text-decoration: line-through;
+}
+.productPage [data-discount] .priceShow .price{
+	color: #00796b;
+}
+.productPage [data-final] .priceShow .price{
 	font-size: 3rem;
 	line-height: 4rem;
 	color: #e91e63;
 }
+
 .productPage .priceShow .unit{
 	color: #777;
 }
@@ -72,5 +82,14 @@
 }
 
 
+.featureBullets{margin-top: 2rem;}
 .featureBullets ul{list-style:square outside none;line-height:1.5em;margin:2rem 0;}
+.featureBullets.ltr ul{margin-left:2rem;}
+.featureBullets.rtl ul{margin-right:2rem;}
 .featureBullets ul li{margin:0.5rem 0}
+
+.productInfo{
+
+}
+
+
