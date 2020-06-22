@@ -21,7 +21,6 @@
 
 
 .priceLine{
-	padding: 0.5rem 0;
 }
 .priceLine .priceShow{
 	display: inline-block
@@ -56,9 +55,10 @@
 	overflow: hidden;
 	font-size:1.8rem;
 	max-width:100%;
-	min-width: 150px;
+	width: 100%;
+	min-width: 15rem;
 	text-overflow:ellipsis;
-	box-shadow: 0 4px 20px rgba(252, 69, 75, 0.5)
+	box-shadow: 0 4px 2rem rgba(252, 69, 75, 0.5)
 }
 .productPage .addToCart:hover{
 	background-color: #fa121a;
@@ -70,3 +70,7 @@
 .productPage .addToCart:active{
 	background-color: #c2185b;
 }
+
+
+.featureBullets ul{list-style:square outside none;line-height:1.5em;margin:2rem 0;}
+.featureBullets ul li{margin:0.5rem 0}
