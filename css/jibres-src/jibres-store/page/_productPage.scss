@@ -94,3 +94,55 @@
 }
 
 
+.productReview{
+	line-height: 25px;
+}
+.productReview .ratingAvg{
+	font-size: 10rem;
+	line-height: 12rem;
+	height: 12rem;
+	width: 15rem;
+	display: block;
+	margin:0 2rem;
+}
+.productReview .rating > div{
+	margin-bottom: 0.5rem;
+}
+.productReview progress{
+	height: 25px;
+}
+.productReview .rating .sf-star{
+	width: 5rem;
+	display: inline-block;
+}
+.productReview .rating .sf-star:before{
+	padding: 0 5px;
+}
+.productReview .ratingSummary{
+	line-height: 25px;
+	text-align: center;
+	direction: ltr;
+}
+.productReview .ratingSummary i{
+	display: inline-block;
+	color: #ffa700;
+	color: linear-gradient(to bottom,#ffce00,#ffa700);
+}
+.productReview .ratingSummary span{
+	display: inline-block;
+	padding: 0 0.5rem;
+}
+.productReview progress::-moz-progress-bar{
+	background: #ffce00;
+	background: linear-gradient(to bottom,#ffce00,#ffa700);
+}
+.productReview progress::-webkit-progress-value {
+	background: #ffce00;
+	background: linear-gradient(to bottom,#ffce00,#ffa700);
+ }
+ .productReview .percentVal{
+ 	display: inline-block;
+ 	width: 5rem;
+ }
+
+
