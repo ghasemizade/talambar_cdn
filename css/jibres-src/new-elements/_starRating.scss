@@ -1,0 +1,63 @@
+.starRating {
+  margin: 2rem auto;
+}
+.starRating > fieldset {
+  border: none;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  width: 20rem;
+}
+.starRating > fieldset > label{
+  transition: 0.1s;
+}
+.starRating > fieldset:not(:checked) > input {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.starRating > fieldset:not(:checked) > label {
+  float: right;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #fbc02d;
+}
+.starRating > fieldset label:before{
+  font-family: 'siftal';
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.starRating > fieldset:not(:checked) > label:before {
+  content: "\e002  ";
+}
+.starRating > fieldset:not(:checked) > label:hover,
+.starRating > fieldset:not(:checked) > label:hover ~ label {
+  color: #ffa700;
+  text-shadow: 0 0 3px #ffa700;
+}
+.starRating > fieldset:not(:checked) > label:hover:before,
+.starRating > fieldset:not(:checked) > label:hover ~ label:before {
+  content: "\5c  ";
+}
+.starRating > fieldset > input:checked ~ label:before {
+  content: "\5c  ";
+}
+.starRating > fieldset > label:active {
+  // position: relative;
+  // top: 2px;
+  padding-top: 3px;
+}
+
