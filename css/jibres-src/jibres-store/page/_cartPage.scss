@@ -5,37 +5,37 @@
 .cartPage .box{
 	padding: 1.5rem;
 }
-.cartPage .item{
+.cartPage .cartItem{
 	padding: 1rem 0;
 }
-.cartPage .item + .item{
+.cartPage .cartItem + .cartItem{
 	border-top: 1px solid #eee;
 }
-.cartPage .item .title{
+.cartPage .cartItem .title{
 	line-height: 1.6;
 }
-.cartPage .item .title a{
+.cartPage .cartItem .title a{
 	display: inline-block;
 }
-.cartPage .item img{
+.cartPage .cartItem img{
 	width: 15rem;
 	height: 15rem;
 	overflow: hidden;
 	display: block;
 }
-.cartPage .item .availability{
+.cartPage .cartItem .availability{
 	margin:1rem 0;
 }
-.cartPage .item .availability[data-type='stock']{
+.cartPage .cartItem .availability[data-type='stock']{
 	color: #007600;
 }
-.cartPage .item .productCountLine{
+.cartPage .cartItem .productCountLine{
 	line-height: 36px;
 }
-.cartPage .item .productCount{
+.cartPage .cartItem .productCount{
 	width: 15rem;
 }
-.cartPage .item .productDel{
+.cartPage .cartItem .productDel{
 	display: inline-block;
 }
 
