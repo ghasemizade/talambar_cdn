@@ -42,7 +42,7 @@
   font-size: 3rem;
 }
 .starRating > fieldset:not(:checked) > label:before {
-  content: "\e002  ";
+  content: "\e002";
 }
 .starRating > fieldset:not(:checked) > label:hover,
 .starRating > fieldset:not(:checked) > label:hover ~ label {
@@ -53,10 +53,10 @@
 }
 .starRating > fieldset:not(:checked) > label:hover:before,
 .starRating > fieldset:not(:checked) > label:hover ~ label:before {
-  content: "\5c  ";
+  content: "\5c";
 }
 .starRating > fieldset > input:checked ~ label:before {
-  content: "\5c  ";
+  content: "\5c";
 }
 .starRating > fieldset > label:active {
   // position: relative;
@@ -64,3 +64,61 @@
   padding-top: 3px;
 }
 
+// preview star
+.starRating[data-star] {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 10rem;
+  height: 2rem;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+.starRating[data-star][data-gold] i{
+  color: #ffa700;
+}
+.starRating[data-star] i {
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0;
+  font-style: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #17a087;
+}
+.starRating[data-star] i:before{
+  font-family: 'siftal';
+  content: "\e002";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.starRating[data-star="1"] i:nth-child(1):before{
+  content: "\5c";
+}
+.starRating[data-star="2"] i:nth-child(1):before,
+.starRating[data-star="2"] i:nth-child(2):before,{
+  content: "\5c";
+}
+.starRating[data-star="3"] i:nth-child(1):before,
+.starRating[data-star="3"] i:nth-child(2):before,
+.starRating[data-star="3"] i:nth-child(3):before,{
+  content: "\5c";
+}
+.starRating[data-star="4"] i:nth-child(1):before,
+.starRating[data-star="4"] i:nth-child(2):before,
+.starRating[data-star="4"] i:nth-child(3):before,
+.starRating[data-star="4"] i:nth-child(4):before,{
+  content: "\5c";
+}
+.starRating[data-star="5"] i:nth-child(1):before,
+.starRating[data-star="5"] i:nth-child(2):before,
+.starRating[data-star="5"] i:nth-child(3):before,
+.starRating[data-star="5"] i:nth-child(4):before,
+.starRating[data-star="5"] i:nth-child(5):before,{
+  content: "\5c";
+}

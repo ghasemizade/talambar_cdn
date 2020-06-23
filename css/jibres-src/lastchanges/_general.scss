@@ -1,6 +1,6 @@
 // type of displays
 .block{display:block;width:100%;}
-.compact{display:inline-block}
+.compact{display:inline-block!important}
 
 // border radius
 .circle{@include border-radius(50%)}

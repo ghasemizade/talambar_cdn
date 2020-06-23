@@ -119,19 +119,11 @@
 	padding: 0 5px;
 }
 .productReview .ratingSummary{
-	line-height: 25px;
+	line-height: 20px;
 	text-align: center;
 	direction: ltr;
 }
-.productReview .ratingSummary i{
-	display: inline-block;
-	color: #ffa700;
-	color: linear-gradient(to bottom,#ffce00,#ffa700);
-}
-.productReview .ratingSummary span{
-	display: inline-block;
-	padding: 0 0.5rem;
-}
+
 .productReview progress::-moz-progress-bar{
 	background: #ffce00;
 	background: linear-gradient(to bottom,#ffce00,#ffa700);
