@@ -5,3 +5,20 @@
 .cartPage .box{
 	padding: 1.5rem;
 }
+.cartPage .item{
+	margin: 1rem 0;
+}
+.cartPage .item + .item{
+	border-top: 1px solid #eee;
+}
+.cartPage .item .title{
+	line-height: 1.6;
+}
+.cartPage .item img{
+	width: 15rem;
+	height: 15rem;
+	overflow: hidden;
+	display: block;
+}
+
+
