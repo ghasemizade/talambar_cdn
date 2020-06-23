@@ -78,7 +78,7 @@
   color: #ffa700;
 }
 .starRating[data-star] i {
-  float: right;
+  float: left;
   width: 2rem;
   height: 2rem;
   line-height: 2rem;
@@ -97,28 +97,40 @@
   text-align: center;
   font-size: 1.5rem;
 }
-.starRating[data-star="1"] i:nth-child(1):before{
+.starRating[data-star^="1"] i:nth-child(1):before{
   content: "\5c";
 }
-.starRating[data-star="2"] i:nth-child(1):before,
-.starRating[data-star="2"] i:nth-child(2):before,{
+.starRating[data-star="1.5"] i:nth-child(2):before{
+  content: "\e001";
+}
+.starRating[data-star^="2"] i:nth-child(1):before,
+.starRating[data-star^="2"] i:nth-child(2):before,{
   content: "\5c";
 }
-.starRating[data-star="3"] i:nth-child(1):before,
-.starRating[data-star="3"] i:nth-child(2):before,
-.starRating[data-star="3"] i:nth-child(3):before,{
+.starRating[data-star="2.5"] i:nth-child(3):before{
+  content: "\e001";
+}
+.starRating[data-star^="3"] i:nth-child(1):before,
+.starRating[data-star^="3"] i:nth-child(2):before,
+.starRating[data-star^="3"] i:nth-child(3):before,{
   content: "\5c";
 }
-.starRating[data-star="4"] i:nth-child(1):before,
-.starRating[data-star="4"] i:nth-child(2):before,
-.starRating[data-star="4"] i:nth-child(3):before,
-.starRating[data-star="4"] i:nth-child(4):before,{
+.starRating[data-star="3.5"] i:nth-child(4):before{
+  content: "\e001";
+}
+.starRating[data-star^="4"] i:nth-child(1):before,
+.starRating[data-star^="4"] i:nth-child(2):before,
+.starRating[data-star^="4"] i:nth-child(3):before,
+.starRating[data-star^="4"] i:nth-child(4):before,{
   content: "\5c";
 }
-.starRating[data-star="5"] i:nth-child(1):before,
-.starRating[data-star="5"] i:nth-child(2):before,
-.starRating[data-star="5"] i:nth-child(3):before,
-.starRating[data-star="5"] i:nth-child(4):before,
-.starRating[data-star="5"] i:nth-child(5):before,{
+.starRating[data-star="4.5"] i:nth-child(5):before{
+  content: "\e001";
+}
+.starRating[data-star^="5"] i:nth-child(1):before,
+.starRating[data-star^="5"] i:nth-child(2):before,
+.starRating[data-star^="5"] i:nth-child(3):before,
+.starRating[data-star^="5"] i:nth-child(4):before,
+.starRating[data-star^="5"] i:nth-child(5):before,{
   content: "\5c";
 }
