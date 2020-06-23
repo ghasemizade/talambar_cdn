@@ -30,6 +30,7 @@
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
+  // color: #17a087;
   color: #fbc02d;
 }
 .starRating > fieldset label:before{
@@ -45,6 +46,8 @@
 }
 .starRating > fieldset:not(:checked) > label:hover,
 .starRating > fieldset:not(:checked) > label:hover ~ label {
+  // color: #1cbc9c;
+  // text-shadow: 0 0 3px #1abc9c;
   color: #ffa700;
   text-shadow: 0 0 3px #ffa700;
 }
