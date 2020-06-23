@@ -6,7 +6,7 @@
 	padding: 1.5rem;
 }
 .cartPage .item{
-	margin: 1rem 0;
+	padding: 1rem 0;
 }
 .cartPage .item + .item{
 	border-top: 1px solid #eee;
@@ -14,11 +14,28 @@
 .cartPage .item .title{
 	line-height: 1.6;
 }
+.cartPage .item .title a{
+	display: inline-block;
+}
 .cartPage .item img{
 	width: 15rem;
 	height: 15rem;
 	overflow: hidden;
 	display: block;
 }
-
+.cartPage .item .availability{
+	margin:1rem 0;
+}
+.cartPage .item .availability[data-type='stock']{
+	color: #007600;
+}
+.cartPage .item .productCountLine{
+	line-height: 36px;
+}
+.cartPage .item .productCount{
+	width: 15rem;
+}
+.cartPage .item .productDel{
+	display: inline-block;
+}
 
