@@ -38,4 +38,21 @@
 .cartPage .cartItem .productDel{
 	display: inline-block;
 }
+.cartPage .cartEmpty{
+
+}
+.cartPage .cartEmpty img{
+	width: 300px;
+	display: block;
+	border-radius: 1rem;
+	margin: 2rem auto 5rem;
+}
+.cartPage .cartEmpty h2{
+	font-weight: 900;
+	text-align: center;
+}
+.cartPage .cartEmpty p{
+	text-align: center;
+	font-size: 1.6rem;
+}
 
