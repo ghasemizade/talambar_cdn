@@ -1,25 +1,9 @@
 #factorAdd .cbox{margin-bottom:10px;padding:0.5em}
 
 /*final price*/
-[data-panel] .priceBox{font-size:1.4em;margin:0 auto 10px;padding:0;border-radius:0.25rem;background-color:#5bbbdb;color:#eee;text-align:center;max-width:400px;min-width:170px;transition:0.3s opacity;overflow:hidden;}
-[data-panel] .priceBox h3{font-size:1em;padding:1em;margin:0}
-[data-panel] .priceBox div span{font-weight:bold;color:#fff;display:inline-block;}
-[data-panel] .priceBox div{transition: color 0.3s;}
-[data-panel] .priceBox div:hover{color:#fff}
-[data-panel] .priceBox .final{padding:0;background-color:#50a0c0;color:#fff;font-size:2.5em;margin-bottom:10px;height:70px;}
-[data-panel] .priceBox .final span{line-height:75px;height:70px;}
-[data-panel] .priceBox .final abbr{font-size:1rem;display:inline-block;transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);vertical-align:middle;}
-[data-panel] .priceBox .desc{padding:0.4em 0.2em;color:#fff;font-size:1.1rem;font-weight:100;min-height:30px;line-height:1.4}
-[dir="ltr"] [data-panel] .priceBox .desc{display:none;}
-[data-panel] .priceBox .detail{padding:0.5em;text-align:initial;}
-[data-panel] .priceBox .detail span{float:right;font-size:1.2em;}
-[dir="rtl"] [data-panel] .priceBox .detail span{float:left;}
-[data-panel] .priceBox .count{display:none;}
-[data-panel] .priceBox .discount{background-color:#50aacc;cursor:pointer;display:none;overflow:hidden;}
-[data-panel] .priceBox .discountPercent{display:none;}
-[data-page="buy"][data-panel] .priceBox{background-color:#a03030}
-[data-page="buy"][data-panel] .priceBox .final{background-color:#702020;}
-[data-page="buy"][data-panel] .priceBox .discount{background-color:#703030;}
+[data-page="buy"] .priceBox{background-color:#a03030}
+[data-page="buy"] .priceBox .final{background-color:#702020;}
+[data-page="buy"] .priceBox .discount{background-color:#703030;}
 [data-panel] kbd{font-family:monospace;}
 
 [data-panel] .tbl1.productList[data-item='0']{display:none}
