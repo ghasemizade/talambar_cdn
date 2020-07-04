@@ -10,6 +10,7 @@
 #jibresCertificates img:hover{transform: scale(1.05);};
 #jibresCertificates img:focus{transform: scale(1.1);};
 #jibresCertificates img:active{transform: scale(1);};
+#jibresCertificates [data-open]{cursor: pointer;}
 svg.circle-bottom-left{width: 400px;height:400px;fill:#f7f7f9;position:absolute;left:0;bottom:0;pointer-events:none;z-index: 2;}
 svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute;right:0;bottom:0;pointer-events:none;z-index: 2;}
 
