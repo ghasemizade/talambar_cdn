@@ -237,5 +237,16 @@ $(document).ready(function()
       fake: !!$this.attr('data-fake')
     });
   });
+
+
+  $(document).on("click", '#samandehiCert', function(e){
+    var myUrl = $(this).attr('data-open');
+    if(myUrl)
+    {
+      window.open(myUrl, "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=460, height=600, top=30");
+    }
+  });
+
+
 });
 

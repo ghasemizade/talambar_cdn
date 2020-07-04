@@ -123,6 +123,12 @@
     // set panel
     $('body').attr('data-panel', obj.panel);
 
+    // clear all history on logout
+    if(obj.content === 'enter' && obj.page === 'logout')
+    {
+      console.log('you are successfully logged out.')
+    }
+
     $window.trigger('navigate:render:filter:before', obj.filter);
 
     var filter = _.isArray(obj.filter) ?
