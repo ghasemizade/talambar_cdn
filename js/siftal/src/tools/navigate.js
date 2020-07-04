@@ -123,12 +123,6 @@
     // set panel
     $('body').attr('data-panel', obj.panel);
 
-    // clear all history on logout
-    if(obj.content === 'enter' && obj.page === 'logout')
-    {
-      console.log('you are successfully logged out.')
-    }
-
     $window.trigger('navigate:render:filter:before', obj.filter);
 
     var filter = _.isArray(obj.filter) ?
@@ -459,9 +453,8 @@
     if(!state) return true;
     e.preventDefault();
 
-    if(!state.html)
+    if(!state.html || getCookieValue('login') !== 'yes')
     {
-      // logy(state);
       fetch(state).then(function(data)
       {
         var props = _.extend(true, {}, state, data.json);
