@@ -53,3 +53,15 @@
 	font-size: 1em;
 	font-weight: 400;
 }
+
+.avand.productLine{
+	overflow: hidden;
+}
+.horizontalScroll{
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
