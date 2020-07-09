@@ -84,6 +84,9 @@
     .slick-initialized & {
         display: block;
     }
+    .slick-initialized & img{
+        width: 100%;
+    }
 
     .slick-loading & {
         visibility: hidden;
