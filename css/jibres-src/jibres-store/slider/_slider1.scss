@@ -21,3 +21,14 @@
 	left: auto;
 	right: 2.5rem;
 }
+
+.imgLine a {
+	display: block;
+}
+.imgLine a img{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	display: block;
+}
