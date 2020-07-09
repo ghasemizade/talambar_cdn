@@ -8,6 +8,7 @@ function readPageAllScripts(_force, _page)
   readPageEditor();
   readPageSortable();
   readPageCropper();
+  readPageFancyBox();
   readPageUploader();
   readPageGtag();
 }
@@ -93,6 +94,18 @@ function readPageCropper()
   }
 }
 
+
+function readPageFancyBox()
+{
+  var myEl = $('[data-fancybox]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    myUrl = urlJibres('cdn') + "js/fancybox/jquery.fancybox-3.5.7.min.js";
+    fileLoader(myUrl, 'runFancybox', true);
+  }
+}
 
 function readPageUploader()
 {
