@@ -25,30 +25,40 @@
 	padding: 1rem;
 }
 .jProduct1 footer{
-	padding: 2rem 0;
+	padding: 1rem 1rem;
+	line-height: 2.5rem;
+	direction: ltr;
 }
 .jProduct1 .title{
 	height: 4rem;
 	line-height: 2rem;
 	padding: 0 5%;
 	overflow: hidden;
-	text-overflow: ellipsis;
 	color: #444;
 }
 .jProduct1 .price{
 	height: 2.5rem;
 	line-height: 2.5rem;
+	text-align: left;
 	padding: 0 5%;
 	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	font-size: 1.2em;
+	font-size: 1.5rem;
 	font-weight: 700;
 	color: #000;
 }
-.jProduct1 .price .unit{
-	font-size: 1em;
+.jProduct1 .unit{
+	font-size: 1rem;
 	font-weight: 400;
+	color: #999;
+}
+.jProduct1 .compareAtPrice{
+	font-size: 1.2rem;
+	color: #999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 50px;
+	text-decoration-color:#ff4747;
 }
 .jProduct1 .discount{
 	position: absolute;
