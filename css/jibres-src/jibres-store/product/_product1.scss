@@ -4,12 +4,10 @@
 	margin:0 auto 1rem;
 	position: relative;
 	display: block;
-	overflow: hidden;
 	background-color: #fff;
 	font-size: 1.4rem;
 	border-radius: 0.5rem;
 	transition: 0.3s;
-	text-align: center;
 }
 .jProduct1:hover{
 	box-shadow: 0 1px 10px rgba(0,0,0,.12);
@@ -51,6 +49,23 @@
 .jProduct1 .price .unit{
 	font-size: 1em;
 	font-weight: 400;
+}
+.jProduct1 .discount{
+	position: absolute;
+	overflow: hidden;
+	width: 100px;
+	height: 40px;
+	right: -37px;
+	top: -8px;
+	transform: rotate(45deg);
+	background-color: #ff4747;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5rem;
+	padding-top: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 .avand.productLine{
