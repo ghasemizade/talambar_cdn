@@ -7,16 +7,15 @@
 	overflow: hidden;
 	background-color: #fff;
 	font-size: 1.4rem;
-	border: 1px solid #e2e2e2;
 	border-radius: 0.5rem;
 	transition: 0.3s;
 	text-align: center;
 }
 .jProduct1:hover{
-	border-color: #777;
+	box-shadow: 0 1px 10px rgba(0,0,0,.12);
 }
 .jProduct1:focus{
-	border-color: #98b0f0;
+	box-shadow: 0 1px 15px rgba(0,0,0,.2);
 }
 .jProduct1 img{
 	position: relative;
