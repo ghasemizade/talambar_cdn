@@ -8,6 +8,9 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 .fancybox-wrap, .fancybox-thumbs {
    direction: ltr;
 }
+[dir='ltr'] body.compensate-for-scrollbar{
+	overflow: auto;
+}
 [dir='rtl'] .compensate-for-scrollbar{
 	margin-right: 17px!important
 }
