@@ -104,6 +104,7 @@ function readPageFancyBox()
   if(myEl && myEl.length > 0)
   {
     // load script
+    StyleLoader(urlJibres('cdn') + "css/lib/jquery.fancybox-3.5.7.min.css");
     myUrl = urlJibres('cdn') + "js/fancybox/jquery.fancybox-3.5.7.min.js";
     fileLoader(myUrl, 'runFancybox', true);
   }
