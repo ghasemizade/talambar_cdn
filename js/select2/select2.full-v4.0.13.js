@@ -6981,8 +6981,8 @@ function select22FormatDropDownCoutry(_repo)
   if(_repo.id)
   {
     $container = $(
-      "<div class='f align-center'>" +
-        "<div class='c1 pRa10'><img src='" + urlJibres('cdn') + "img/flags/png100px/" + _repo.id.toLowerCase() + ".png' alt='"+ _repo.text + "' /></div>" +
+      "<div class='f'>" +
+        "<div class='cauto pRa10'><img src='" + urlJibres('cdn') + "img/flags/png100px/" + _repo.id.toLowerCase() + ".png' alt='"+ _repo.text + "' /></div>" +
         "<div class='c'>" + _repo.text + "</div>" +
       "</div>"
     );

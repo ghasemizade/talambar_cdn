@@ -172,6 +172,11 @@ select.select22, select.select22-country{
 select.select22-country img{
   box-shadow: 0px 0px 5px #aaa;
 }
+#select22-country-container img{
+  display: block;
+  height: 34px;
+  padding: 7px 0;
+}
 .select22-hidden-accessible{
   border:0!important;
   clip:rect(0 0 0 0)!important;
