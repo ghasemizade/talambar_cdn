@@ -107,6 +107,20 @@ function readPageFancyBox()
   }
 }
 
+
+function readPageSlick()
+{
+  var myEl = $('[data-slider]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    myUrl = urlJibres('cdn') + "js/slick/slick-1.8.1.min.js";
+    fileLoader(myUrl, 'runPageSlider', true);
+  }
+}
+
+
 function readPageUploader()
 {
   var myEl = $('[data-uploader]');
