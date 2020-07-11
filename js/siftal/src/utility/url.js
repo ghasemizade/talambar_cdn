@@ -37,6 +37,10 @@ function urlStoreAPI()
   {
     return urlJibres('api') + myStore + '/v2/';
   }
+  else
+  {
+    return urlJibres('api') + 'v2/';
+  }
 
   return null;
 }
