@@ -155,6 +155,17 @@ function urlLang()
 }
 
 
+function urlLangFa()
+{
+  if(urlLang() === 'fa')
+  {
+    return true;
+  }
+
+  return false;
+}
+
+
 function urlDir()
 {
   var _dir = $('html').attr('dir');
