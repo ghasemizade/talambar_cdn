@@ -172,10 +172,21 @@ function urlDir()
 
   if(!_dir)
   {
-    _dir = 'en';
+    _dir = 'ltr';
   }
 
   return _dir;
+}
+
+
+function urlDirRtl()
+{
+  if(urlDir() === 'rtl')
+  {
+    return true;
+  }
+
+  return false;
 }
 
 
