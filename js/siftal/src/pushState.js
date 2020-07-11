@@ -19,8 +19,6 @@ function pushStateSiftal(_direct)
   watchScroll();
   // initTagDetector();
   bindUploader();
-  // run select22
-  selectRunner();
   // run numeral fn
   cleaveRunner();
   // check navigate is done or not

@@ -9,6 +9,8 @@ function readPageAllScripts(_force, _page)
   readPageSortable();
   readPageCropper();
   readPageFancyBox();
+  readPageSlick();
+  readPageSelect2();
   readPageUploader();
   readPageGtag();
 }
@@ -117,6 +119,19 @@ function readPageSlick()
     // load script
     myUrl = urlJibres('cdn') + "js/slick/slick-1.8.1.min.js";
     fileLoader(myUrl, 'runPageSlider', true);
+  }
+}
+
+
+function readPageSelect2()
+{
+  var myEl = $('.select22');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    myUrl = urlJibres('cdn') + "js/select2/select2.full-v4.0.13.js";
+    fileLoader(myUrl, 'runPageSelect2', true);
   }
 }
 

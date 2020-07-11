@@ -52,13 +52,6 @@ var myModuleFiles =
 	'src/libs/cleave/cleave.min.js',
 	'src/libs/cleave/cleaveRunner.js',
 
-
-	// select2
-	'src/libs/select2/select2.full.js',
-	'src/libs/select2/fa.js',
-	'src/libs/select2/select2Runner.js',
-
-
 	// tools
 	'src/tools/navigate.js',
 	'src/tools/forms.js',
