@@ -2,6 +2,7 @@
 	position: relative;
 	max-height: 350px;
 	min-height: 200px;
+	overflow: hidden;
 }
 [data-slider="product"]:not(.slick-initialized){
 	height: 300px;
