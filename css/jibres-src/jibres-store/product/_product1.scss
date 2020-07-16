@@ -91,6 +91,19 @@
 }
 
 
+[data-pwa] .jProduct1{
+	font-size: 1.2rem;
+	height: 100%;
+}
+[data-pwa] .jProduct1 .title{
+
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	white-space: initial;
+	overflow: hidden;
+}
 [data-pwa] .jProduct1 img{
 	padding: 0 0 1rem;
 }
