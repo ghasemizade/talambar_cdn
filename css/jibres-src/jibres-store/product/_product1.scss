@@ -1,10 +1,56 @@
+[data-slider="product"]{
+	position: relative;
+	max-height: 350px;
+	min-height: 200px;
+}
+[data-slider="product"]::before{
+	content: "";
+	background-color: #f9f9f9;
+	position: absolute;
+	top:0;
+	right: 0;
+	left: 0;
+	bottom:0;
+	z-index: 1;
+}
+[data-slider="product"]::after{
+	content: "Loading...";
+	position: absolute;
+	top:50%;
+	right: 0;
+	left: 0;
+	display: block;
+	margin:0 auto;
+	font-size: 1.4rem;
+	line-height: 3rem;
+	margin-top: -1.5rem;
+	text-align: center;
+	animation: blinkText 1s linear infinite;
+	z-index: 2;
+}
+[lang="fa"] [data-slider="product"]::after{
+	content: "در حال بارگذاری";
+}
+@keyframes blinkText{ 0%{opacity: 1;} 50%{opacity: .5;} 100%{opacity: 1;} }
+[data-slider="product"].slick-initialized::before{
+	opacity: 0;
+	display: none;
+}
+[data-slider="product"].slick-initialized::after{
+	opacity: 0;
+	display: none;
+}
+.productBox{
+	padding: 1rem 0.5rem;
+	max-width: 200px;
+}
 .jProduct1{
 	overflow: hidden;
 	border-radius: 0.5rem;
-	margin:0 auto 1rem;
+	margin:0 auto 0;
 	position: relative;
 	display: block;
-	background-color: #fff;
+	background-color: #fafafa;
 	font-size: 1.4rem;
 	border-radius: 0.5rem;
 	transition: 0.3s;
@@ -28,7 +74,6 @@
 	width: 100%;
 	// padding-top: (1 / 1) * 100%;
 	padding-top: 100%;
-	background-color: #f1f1f1;
 }
 .jProduct1 .cover img{
 	width: 100%;
@@ -37,7 +82,6 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	padding: 1rem;
 }
 .jProduct1 footer{
 	padding: 1rem 1rem;
@@ -45,9 +89,9 @@
 	direction: ltr;
 }
 .jProduct1 .title{
-	height: 4rem;
+	height: 5rem;
 	line-height: 2rem;
-	padding: 0 5%;
+	padding: 1rem 5% 0;
 	overflow: hidden;
 	color: #444;
 }
@@ -120,6 +164,4 @@
 	text-overflow: ellipsis;
 	white-space: initial;
 	overflow: hidden;
-	padding-top: 5px;
-	height: 4.5rem;
 }
