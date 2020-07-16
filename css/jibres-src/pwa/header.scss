@@ -1,4 +1,6 @@
 [data-pwa] #pageHeader{position: fixed;z-index:10;top:0;right:0;left:0;background-color:$pwaBg;line-height:40px;padding:5px 5px;font-size:1.2rem;width: 100%;height: 50px;border-bottom:1px solid transparent;overflow:hidden;}
+[data-pwa] #pageHeader:empty{height:0;border-top:none;background-color:#c80a5a;padding:0;border:none;}
+[data-pwa] #pageHeader:empty + #pageContent{padding-top: 1rem;}
 [data-pwa] #pageHeader.border{border-bottom-color: #c5c4c9;}
 [data-pwa] #pageHeader > div{display: inline-block;height: 100%;position:relative;overflow: hidden;}
 [data-pwa][dir='ltr'] #pageHeader > div {float: left;}
