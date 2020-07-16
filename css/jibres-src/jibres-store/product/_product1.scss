@@ -85,6 +85,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 1;
 }
 .jProduct1 footer{
 	padding: 1rem 1rem;
@@ -139,8 +140,34 @@
 	line-height: 20px;
 	font-weight: 700;
 	letter-spacing: 1px;
+	z-index: 2;
 }
-
+.jProduct1 .addToCart{
+	position: absolute;
+	display: block;
+	top: 1rem;
+	bottom: 0;
+	left: 1rem;
+	width: 3.6rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	font-size: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	content: "+";
+	text-align: center;
+	background-color: #00bfd5;
+	color: #fff;
+	opacity: 0;
+	transition: 0.1s;
+	z-index: 2;
+}
+.jProduct1:hover .addToCart{
+	opacity: 1;
+}
+[data-pwa] .jProduct1 .addToCart{
+	opacity: 1;
+}
 .avand.productLine{
 	overflow: hidden;
 }
