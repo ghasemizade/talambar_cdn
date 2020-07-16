@@ -15,13 +15,28 @@
 .jProduct1:focus{
 	box-shadow: 0 1px 15px rgba(0,0,0,.2);
 }
-.jProduct1 img{
+.jProduct1 .cover{
 	position: relative;
 	display: block;
 	overflow: hidden;
 	border-radius: 0.5rem 0.5rem 0 0;
 	max-height: 300px;
+}
+.jProduct1 .cover::before{
+	content: "";
+	display: block;
 	width: 100%;
+	// padding-top: (1 / 1) * 100%;
+	padding-top: 100%;
+	background-color: #f1f1f1;
+}
+.jProduct1 .cover img{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	padding: 1rem;
 }
 .jProduct1 footer{
@@ -94,13 +109,8 @@
 [data-pwa] .jProduct1{
 	font-size: 1.2rem;
 	height: 100%;
-	@include flexbox;
-	@include flex-direction(column);
 }
-[data-pwa] .jProduct1 img{
-	-webkit-box-flex:1;
-	-ms-flex-positive:1;
-	flex-grow:1;
+[data-pwa] .jProduct1 .cover img{
 	padding: 0;
 }
 [data-pwa] .jProduct1 .title{
