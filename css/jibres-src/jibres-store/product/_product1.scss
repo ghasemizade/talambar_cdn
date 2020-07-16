@@ -3,6 +3,9 @@
 	max-height: 350px;
 	min-height: 200px;
 }
+[data-slider="product"]:not(.slick-initialized){
+	height: 300px;
+}
 [data-slider="product"]::before{
 	content: "";
 	background-color: #f9f9f9;
