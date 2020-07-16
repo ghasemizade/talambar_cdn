@@ -103,6 +103,7 @@
 .jProduct1 .price{
 	height: 2.5rem;
 	line-height: 2.5rem;
+	min-width: 80px;
 	text-align: left;
 	padding: 0 5%;
 	overflow: hidden;
@@ -166,9 +167,6 @@
 .jProduct1:hover .addToCart{
 	opacity: 1;
 }
-[data-pwa] .jProduct1 .addToCart{
-	opacity: 1;
-}
 .avand.productLine{
 	overflow: hidden;
 }
@@ -195,4 +193,16 @@
 	text-overflow: ellipsis;
 	white-space: initial;
 	overflow: hidden;
+}
+[data-pwa] .jProduct1 .addToCart{
+	opacity: 1;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 0.5rem;
+}
+[data-pwa] .jProduct1 .compareAtPrice{
+	display: none;
 }
