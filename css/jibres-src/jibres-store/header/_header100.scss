@@ -2,6 +2,7 @@
 #jHeader100{
 	font-size: 1.6rem;
 	padding-top: 3rem;
+	margin-bottom: 3rem;
 }
 #jHeader100[data-circleEffect]:before{
 	content: '';
@@ -25,7 +26,7 @@
 	border-radius: 0.5rem;
 	padding: 1rem 2%;
 	line-height: 4rem;
-	margin: 0 auto 3rem;
+	margin: 0 auto 1rem;
 }
 #jHeader100 .menuBar{
 	position: relative;
@@ -34,6 +35,7 @@
 	border-radius: 0.5rem;
 	padding: 0 2%;
 	line-height: 4rem;
+	margin: 1rem auto 1rem;
 }
 #jHeader100 nav a{
 	display: inline-block;
