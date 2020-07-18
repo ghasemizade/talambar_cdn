@@ -1,3 +1,9 @@
+// hide pwa header on desktop
+// hide desktop header on pwa
+[data-pwa] #pageHeader .desktop{display: none;}
+[data-desktop] #pageHeader .pwa{display: none;}
+
+
 [data-pwa] #pageContent{padding:50px 0;overflow:hidden;}
 
 [data-pwa] [data-in="site"] h1{font-size:32px;line-height:2;margin-top:20px;margin-bottom:10px;font-weight:900;}
