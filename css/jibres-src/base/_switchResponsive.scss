@@ -1,5 +1,6 @@
 // header
 
+#pageHeader{position: relative;}
 // hide pwa header on desktop
 [data-pwa] #pageHeader .desktop{display: none;}
 // hide desktop header on pwa
