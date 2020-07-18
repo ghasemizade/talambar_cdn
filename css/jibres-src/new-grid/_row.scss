@@ -49,6 +49,10 @@
   width: auto!important;
   max-width: 100%;
 }
+.row .c-auto:empty {
+  padding-right: 0;
+  padding-left: 0;
+}
 .c-1 {
   -ms-flex: 0 0 8.333333%;
   flex: 0 0 8.333333%;
