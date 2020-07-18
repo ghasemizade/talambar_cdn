@@ -9,7 +9,7 @@
 
 
 // footer
-
+#pageFooter{position: relative;}
 // hide pwa footer on desktop
 [data-pwa] #pageFooter .desktop{display: none;}
 // hide desktop footer on pwa

@@ -1,9 +1,9 @@
-[data-pwa] #pageFooter{position: fixed;z-index:10;background-color:#f8f8f8;bottom:0;right:0;left:0;width: 100%;height: 50px;overflow:hidden;text-align: center;transition:0.3s;}
-[data-pwa] #pageFooter:empty{height:0;background-color:#c80a5a}
-[data-pwa] #pageFooter a{display:block;color: #959595!important;overflow:hidden;}
-[data-pwa] #pageFooter .selected{color: #2ea5ff!important}
-[data-pwa] #pageFooter .icon{display: block;width:100%;overflow:hidden;height: 30px;line-height: 1;font-size: 20px;padding-top:5px;}
-[data-pwa] #pageFooter .title{display: block;width:100%;overflow:hidden;height: 20px;line-height: 1;font-size:11px;}
+#pageFooter .pwa{position: fixed;z-index:10;background-color:#f8f8f8;bottom:0;right:0;left:0;width: 100%;height: 50px;overflow:hidden;text-align: center;transition:0.3s;}
+#pageFooter .pwa:empty{height:0;background-color:#c80a5a}
+#pageFooter .pwa a{display:block;color: #444!important;overflow:hidden;}
+#pageFooter .pwa .selected{color: #2ea5ff!important}
+#pageFooter .pwa .icon{display: block;width:100%;overflow:hidden;height: 30px;line-height: 1;font-size: 20px;padding-top:5px;}
+#pageFooter .pwa .title{display: block;width:100%;overflow:hidden;height: 20px;line-height: 1;font-size:11px;}
 
-[data-pwa] #pageFooter .pwafooterAddToCart .title{background: #fff1f1;color: #ff4747;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
-[data-pwa] #pageFooter .pwafooterBuy .title{background: #ff4747;color:#fff;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
+#pageFooter .pwa .pwafooterAddToCart .title{background: #fff1f1;color: #ff4747;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
+#pageFooter .pwa .pwafooterBuy .title{background: #ff4747;color:#fff;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
