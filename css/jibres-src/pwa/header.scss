@@ -7,15 +7,29 @@
 #pageHeader .pwa .square{width: 40px;min-width:40px;max-width:40px;font-size: 2rem;text-align:center;display:inline-block;color: #444!important;overflow:hidden;}
 #pageHeader .pwa .square::before{width: 40px;font-family:siftal!important;vertical-align:middle;display:block;}
 
-// icons
+// icons - right
 #pageHeader .pwa .search::before{content: "\e03f";}
+#pageHeader .pwa .cart::before{content: "\e125";}
 #pageHeader .pwa .menu::before{content: "\43";}
 #pageHeader .pwa .back::before{content: "\e0c1";}
 [dir="rtl"]  #pageHeader .pwa .back::before{content: "\e0c2";}
 
+// ltr margin
+[dir="ltr"] #pageHeader .pwa .back{margin-right:auto;}
+[dir="ltr"] #pageHeader .pwa .search{margin-left:auto;}
+[dir="ltr"] #pageHeader .pwa .cart{margin-left:auto;}
+[dir="ltr"] #pageHeader .pwa .menu{margin-left:auto;}
+
+// rtl margin
+[dir="rtl"] #pageHeader .pwa .back{margin-left:auto;}
+[dir="rtl"] #pageHeader .pwa .search{margin-right:auto;}
+[dir="rtl"] #pageHeader .pwa .cart{margin-right:auto;}
+[dir="rtl"] #pageHeader .pwa .menu{margin-right:auto;}
+
+
+
 // title
-#pageHeader .pwa .title{font-weight:700;text-align: center;font-size:1.4rem;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
-}
+#pageHeader .pwa .title{-webkit-flex-grow:1;flex-grow: 1;font-weight:700;font-size:1.4rem;padding:0 0.5rem; text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 
 // v1 - three part 30% - 40%- 30%
 #pageHeader .pwa.v1 > div{display: inline-block;height: 100%;position:relative;overflow: hidden;}
