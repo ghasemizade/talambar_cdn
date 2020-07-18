@@ -55,12 +55,15 @@
 	overflow: hidden;
 }
 #jHeader100 .logo img{
-	display: block;
+	display: inline-block;
 	max-width: 20rem;
 	max-height: 6rem;
 }
+#jHeader100 .logo img + h1{
+	display: inline-block;
+}
 #jHeader100 .logo h1{
-	font-size: 3rem;
+	font-size: 2.4rem;
 	margin: 0;
 	padding: 0 1rem;
 	line-height: 6rem;
@@ -162,4 +165,17 @@
 }
 #jHeader100 .search:active{
 	color: #4080c0;
+}
+
+
+@include media("<lg") {
+	#jHeader100{
+		font-size: 1.4rem;
+		padding: 0;
+	}
+
+	#jHeader100 .logo h1{
+		font-size: 1.5rem;
+	}
+
 }
