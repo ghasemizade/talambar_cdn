@@ -126,6 +126,7 @@
 	transition: 0.1s;
 	display: block;
 	cursor: pointer;
+	overflow: hidden;
 	width: 60px;
 	height: 60px;
 }
@@ -136,7 +137,7 @@
 .productPage .thumbs .thumb img{
 	display: block;
 	width: 100%;
-	max-height: 100px;
+	border-radius: 0.5rem;
 }
 
 .productInfo .tbl1 tr th{
