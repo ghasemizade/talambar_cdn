@@ -85,6 +85,8 @@ $(document).ready(function()
   tbl1Openable();
   // remove noscript tag
   noscriptRemover();
+  // detect resize screen width
+  resizeDetector();
   // run cloner
   cloner();
   pingiRunner();
