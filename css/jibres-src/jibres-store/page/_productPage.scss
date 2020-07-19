@@ -39,34 +39,47 @@
 	margin: 0 1rem;
 }
 // style to show price with unit
-.priceLine{
-	margin: 3rem 0;
-}
-.priceLine .priceShow{
+.productPage .priceShow{
 	position: relative;
 	padding: 0.5rem 1rem;
-	display: inline-block
+	display: inline-block;
+	line-height: 2rem;
 }
-.priceLine .priceShow .price{
+.productPage .priceShow .price{
 	display: inline-block;
 }
-.priceLine .priceShow[data-first] .price{
+.productPage .priceShow[data-first] .price{
 	text-decoration: line-through;
+	text-decoration-color: #ff5722;
+	color: #999;
 }
-.priceLine .priceShow[data-discount] .price{
-	color: #00796b;
+.productPage .priceShow[data-discount]{
+  display: inline-block;
+  padding: 0.5em 0.7em;
+	font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 1.5rem;
+  background-color: #e91e63;
+  color: #fff;
+  transition: background-color 0.3s;
+	min-width: 3rem;
+	height: 2rem;
 }
-.priceLine .priceShow[data-final] .price{
+.productPage .priceShow[data-final] .price{
 	font-size: 3rem;
 	line-height: 4rem;
 	color: #e91e63;
 }
-.priceLine .priceShow[data-cart] .price{
+.productPage .priceShow[data-cart] .price{
 	font-size: 2rem;
 	line-height: 3rem;
 	color: #e91e63;
 }
-.priceLine .priceShow .unit{
+.productPage .priceShow .unit{
 	display: inline-block;
 	color: #777;
 }
@@ -112,11 +125,12 @@
 }
 
 
-.featureBullets{margin-top: 2rem;}
-.featureBullets ul{list-style:square outside none;line-height:1.5em;margin:2rem 0;}
-.featureBullets.ltr ul{margin-left:2rem;}
-.featureBullets.rtl ul{margin-right:2rem;}
-.featureBullets ul li{margin:0.5rem 0}
+.featureBullets{list-style:square inside none;line-height:1.5em;margin:1rem 0;max-width:400px;font-size: 1.2rem;}
+[data-pwa] .featureBullets{max-width:100%;}
+.featureBullets.ltr{margin-left:2rem;}
+.featureBullets.rtl{margin-right:2rem;}
+.featureBullets li{padding:0.5rem 0.5rem;transition: 0.3s}
+.featureBullets li:hover{background-color: #f9f9f9;}
 
 .productPage .featureImgBlock{
 	display: inline-block;
