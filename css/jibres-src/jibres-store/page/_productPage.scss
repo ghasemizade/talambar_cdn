@@ -94,6 +94,9 @@
 	text-overflow:ellipsis;
 	box-shadow: 0 4px 2rem rgba(252, 69, 75, 0.5)
 }
+[data-pwa] .productPage .addToCart{
+	display: none;
+}
 .productPage .addToCart:hover{
 	background-color: #fa121a;
 }

@@ -144,7 +144,7 @@
 	letter-spacing: 1px;
 	z-index: 2;
 }
-.jProduct1 .addToCart{
+.jProduct1 .btnAddCart{
 	position: absolute;
 	display: block;
 	top: 1rem;
@@ -164,7 +164,7 @@
 	transition: 0.1s;
 	z-index: 2;
 }
-.jProduct1:hover .addToCart{
+.jProduct1:hover .btnAddCart{
 	opacity: 1;
 }
 .avand.productLine{
@@ -194,7 +194,7 @@
 	white-space: initial;
 	overflow: hidden;
 }
-[data-pwa] .jProduct1 .addToCart{
+[data-pwa] .jProduct1 .btnAddCart{
 	opacity: 1;
 	top: 0.5rem;
 	left: 0.5rem;
