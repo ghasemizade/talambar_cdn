@@ -2,6 +2,9 @@
 	padding: 1.5rem;
 	border-radius:.5rem;
 }
+.productPage .box+.box{
+	margin-top: 2rem;
+}
 .productPage h1{
 	font-size: 1.8rem;
 	line-height: 3rem;
@@ -171,7 +174,9 @@
 	width: 100%;
 	border-radius: 0.5rem;
 }
-
+.productInfo .tbl1{
+	margin: 0;
+}
 .productInfo .tbl1 tr th{
 	color: #757575;
 	font-weight: normal;
@@ -236,7 +241,7 @@
 	border-radius: 1rem;
 	display: block;
 }
-.productAddReview{
-
+.productPage #productAddReview .btn{
+	min-width: 100px;
 }
 
