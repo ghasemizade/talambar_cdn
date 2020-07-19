@@ -69,21 +69,21 @@ function resizeDetector(_data, _forceArray)
       // in desktop mode
 
       // detect fullscreen mode
-      if(
-          (window.fullScreen) ||
-          (window.innerWidth == screen.width && window.innerHeight == screen.height)
-        )
-      {
-        $('html').attr('data-fullscreen', '');
-      }
-      else if (!window.screenTop && !window.screenY)
-      {
-        $('html').attr('data-fullscreen', '');
-      }
-      else
-      {
-        $('html').attr('data-fullscreen', null);
-      }
+      // if(
+      //     (window.fullScreen) ||
+      //     (window.innerWidth == screen.width && window.innerHeight == screen.height)
+      //   )
+      // {
+      //   $('html').attr('data-fullscreen', '');
+      // }
+      // else if (!window.screenTop && !window.screenY)
+      // {
+      //   $('html').attr('data-fullscreen', '');
+      // }
+      // else
+      // {
+      //   $('html').attr('data-fullscreen', null);
+      // }
     }
   });
 
