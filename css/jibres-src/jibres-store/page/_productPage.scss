@@ -1,5 +1,6 @@
 .productPage .box{
 	padding: 1.5rem;
+	border-radius:.5rem;
 }
 .productPage h1{
 	font-size: 1.8rem;
@@ -119,6 +120,10 @@
 	max-width: 100%;
 	float: right;
 }
+[data-pwa] .productPage .featureImgBlock{
+	width: initial;
+	height: auto;
+}
 [dir='rtl'] .productPage .featureImgBlock{
 	float: left;
 }
@@ -126,6 +131,7 @@
 	display: block;
 }
 .productPage .featureImgBlock a img{
+	border-radius:.7rem;
 	display: block;
 }
 .productPage .thumbs{
