@@ -84,11 +84,11 @@
 	color: #777;
 }
 
-.productPage .addToCart{
+.productPage .btnBuy{
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
-	padding: 0 2rem;
+	padding: 0 1rem;
 	text-decoration:none;
 	text-align:center;
 	transition:.2s ease-out;
@@ -97,33 +97,50 @@
 	vertical-align: middle;
 	user-select:none;
 	border: 1px solid transparent;
-	height:50px;
-	line-height:50px;
+	height:4rem;
+	line-height:4rem;
 	font-weight:700;
 	background-color:#fc464a;
 	color:#fff;
 	overflow: hidden;
-	font-size:1.8rem;
+	font-size:1.6rem;
 	max-width:100%;
-	min-width: 15rem;
-	margin: 0 2rem;
+	min-width: 14rem;
+	margin: 0.5rem 0.5rem;
 	text-overflow:ellipsis;
 	box-shadow: 0 4px 2rem rgba(252, 69, 75, 0.5)
 }
-[data-pwa] .productPage .addToCart{
+[dir='rtl'] .productPage .btnBuy{
+	font-size:1.5rem;
+	min-width: 15rem;
+}
+[data-pwa] .productPage .btnBuy{
 	display: none;
 }
-.productPage .addToCart:hover{
+.productPage .btnBuy:hover{
 	background-color: #fa121a;
 }
-.productPage .addToCart:focus{
+.productPage .btnBuy:focus{
 	box-shadow: 0 0 8px rgba(252, 69, 75, 0.5);
 	background-color: #d81b60;
 }
-.productPage .addToCart:active{
+.productPage .btnBuy:active{
 	background-color: #c2185b;
 }
-
+// add to cart btn
+.productPage .btnBuy[data-card]{
+	background-color:#ff9800;
+}
+.productPage .btnBuy[data-card]:hover{
+	background-color: #ffaa00;
+}
+.productPage .btnBuy[data-card]:focus{
+	box-shadow: 0 0 8px rgba(252, 69, 75, 0.5);
+	background-color: #ffbb00;
+}
+.productPage .btnBuy[data-card]:active{
+	background-color: #fb8c00;
+}
 
 .featureBullets{list-style:square inside none;line-height:1.5em;margin:1rem 0;max-width:400px;font-size: 1.2rem;}
 [data-pwa] .featureBullets{max-width:100%;}
@@ -132,6 +149,9 @@
 .featureBullets li{padding:0.5rem 0.5rem;transition: 0.3s}
 .featureBullets li:hover{background-color: #f9f9f9;}
 
+.productPage .globalMsg{
+	margin-top: 1rem;
+}
 .productPage .featureImgBlock{
 	display: inline-block;
 	width: 300px;
