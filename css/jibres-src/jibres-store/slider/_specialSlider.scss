@@ -1,5 +1,5 @@
-.roundedBox .ovelay{overflow: hidden;display: block;}
-.roundedBox .ovelay figure:after{
+.roundedBox .overlay{overflow: hidden;display: block;}
+.roundedBox .overlay figure:after{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -13,7 +13,7 @@
 	opacity: 0.7;
 	z-index: 1;
 }
-.roundedBox .ovelay figure:hover:after{opacity: 1;}
+.roundedBox .overlay figure:hover:after{opacity: 1;}
 .roundedBox figure{display: block;overflow: hidden;border-radius: 10px;position: relative;user-select: none;}
 .roundedBox figure a{display: block}
 .roundedBox figure img{display:block; transition: 0.3s;transform: scale(1);width:100%;}
@@ -31,5 +31,20 @@
 }
 .roundedBox a:hover figcaption{padding-bottom: 2em;}
 .roundedBox h2{
-	font-size: 1.5em;
+	font-size: 1.2em;
+	font-weight: 700;
+	margin: 0;
+	max-height: 50px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	white-space: initial;
+}
+.roundedBox .jSlider1{
+	margin: 0;
+}
+.roundedBox .jSlider1 h2{
+	font-size: 1.4em;
 }
