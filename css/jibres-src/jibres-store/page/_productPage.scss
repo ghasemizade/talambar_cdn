@@ -229,12 +229,14 @@
 	height:50px;
 }
 
+[data-pwa] .productInfo.box{
+	font-size: 1.2rem;
+}
 .productInfo .tbl1{
 	margin: 0;
 }
 [data-pwa] .tbl1.responsive tr{
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	padding: 0;
 }
 .productInfo .tbl1 tr th{
 	color: #757575;
