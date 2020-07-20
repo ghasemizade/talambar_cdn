@@ -31,10 +31,6 @@
 	line-height: 2rem;
 	margin-bottom:1rem;
 }
-[data-pwa] .productPage .msg{
-	padding-top: 0.2rem;
-	padding-bottom: 0.2rem;
-}
 [data-pwa] .productPage .tbl1.v5 tbody tr{
 	border:none;
 	margin-bottom: 0.5rem;
@@ -232,8 +228,17 @@
 [data-pwa] .productInfo.box{
 	font-size: 1.2rem;
 }
+[data-pwa] .productInfo .msg{
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	border-radius: 1rem;
+}
+[data-pwa] .productInfo .tbl1.v5{
+	padding: 0;
+}
 .productInfo .tbl1{
 	margin: 0;
+	line-height: 1.7rem;
 }
 [data-pwa] .tbl1.responsive tr{
 	padding: 0;
@@ -243,6 +248,9 @@
 	font-weight: normal;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+}
+[data-pwa] .productInfo .tbl1 tr th{
+	color: #999;
 }
 .productInfo .tbl1 tr td{
 	color: #333;
@@ -312,6 +320,9 @@
 	margin: 0.5rem auto 0.5rem;
 }
 .productPage #productAddReview .btn{
-	min-width: 100px;
+	min-width: 10rem;
+}
+.productPage #productAddReview .input .addon{
+	min-width: 7rem;
 }
 
