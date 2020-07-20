@@ -4,8 +4,10 @@ function insideIframe()
   if (top.location != self.location)
   {
     $('body').attr('data-iframe', '').html('');
-
-    self.location = window.location.origin + "/billboard";
+    if(window.top.$('body').attr('data-env') !== 'Jibres')
+    {
+      self.location = window.location.origin + "/billboard";
+    }
   }
 };
 
