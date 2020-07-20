@@ -1,9 +1,6 @@
 .roundedBox{
 	max-height: 400px;
 }
-[data-pwa].roundedBox{
-	max-height: 120px;
-}
 .roundedBox .overlay{
 	overflow: hidden;
 	display: block;
@@ -74,6 +71,18 @@
 }
 .roundedBox .jSlider1{
 	margin: 0;
+	margin-bottom: 0.5rem;
+	border-radius: 1rem;
+}
+.roundedBox .jSlider1:hover img{
+	transform: scale(1.1);
+}
+[data-pwa] .roundedBox .jSlider1{
+	margin-bottom: 1rem;
+}
+.roundedBox .jSlider1 .overlay{
+	margin:0;
+	border-radius: 0;
 }
 .roundedBox .jSlider1 h2{
 	font-size: 1.5em;
