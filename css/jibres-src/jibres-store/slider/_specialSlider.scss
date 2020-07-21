@@ -1,7 +1,9 @@
 .roundedBox{
 	max-height: 400px;
+	position: relative;
 }
 .roundedBox .overlay{
+	position: relative;
 	overflow: hidden;
 	display: block;
 	border-radius: 1rem;
