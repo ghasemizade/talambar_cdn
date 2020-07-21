@@ -88,7 +88,13 @@
 	display: inline-block;
 	color: #777;
 }
-
+.productPage .productQty{
+	width: 14rem;
+	margin:0 0.5rem 0.5rem;
+}
+[dir='rtl'] .productPage .btnBuy{
+	width: 15rem;
+}
 .productPage .btnBuy{
 	cursor: pointer;
 	display: inline-block;

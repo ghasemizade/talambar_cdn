@@ -6872,6 +6872,7 @@ function runPageSelect2()
   $('.select22[data-model="country"]').select22({ templateResult2: select22FormatDropDownCoutry, templateSelection: select22FormatDropDownCoutry });
   $('.select22[data-model="tag"]').select22({ tags: true, tokenSeparators: [','] });
   $('.select22[data-model="html"]').select22({ templateResult: select22FormatDropDownHtml, templateSelection: select22FormatDropDownHtml, minimumInputLength: 2, maximumInputLength: 40, maximumSelectionSize: 1 });
+  $('.select22[data-model="productItem"]').select22({minimumResultsForSearch: 31, templateSelection: select22ProductQty});
 
 
 
@@ -6949,6 +6950,17 @@ function runPageSelect2()
 
   // fill default value
   select22FillDefault();
+}
+
+
+function select22ProductQty(_state, _el)
+{
+  var preTxt = 'Qty ';
+  if(urlLangFa())
+  {
+    preTxt = 'تعداد '
+  }
+  return preTxt + _state.text;
 }
 
 
