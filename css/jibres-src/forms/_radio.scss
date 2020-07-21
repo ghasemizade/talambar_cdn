@@ -76,30 +76,6 @@
 
 
 
-
-/* radio type 2*/
-.radio2{background-color:#f7f7f7;border-radius:3px;}
-.radio2 label[for]{cursor:pointer}
-.radio2 input[type="radio"]{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
-.radio2 input[type="radio"]+label{position:relative;display:block;color:#777;font-size:1em;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:35px 5px 0;line-height:25px;text-align:center;}
-.radio2 input[type="radio"]+label::before{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:20px;height:20px;border-radius:50%;background-color:#999;border:0 solid #999;font-size:0;position:absolute;top:0;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
-.radio2 input[type="radio"]+label::after{-webkit-transition:all 250ms cubic-bezier(.4,.25,.3,1);transition:all 250ms cubic-bezier(.4,.25,.3,1);content:"";width:0;height:0;border-radius:50%;background-color:#999;position:absolute;top:0;left:50%;-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
-.radio2 input[type="radio"]+label:hover::before{background-color:#4090d0;}
-.radio2 input[type="radio"]:checked+label::before{background-color:transparent;width:30px;height:30px;border-width:2px;top:-10px;}
-.radio2 input[type="radio"]:checked+label::after{width:20px;height:20px;background-color:#4090d0}
-.radio2 input[type="radio"]:checked+label:hover::before{border-color:#4090d0}
-.radio2 input[type="radio"]:focus+label::before{box-shadow:0 0 0 3px rgba(0,0,0,0.2)}
-.radio2 img{max-width: 120px;max-height: 120px;}
-/* radio type 1 - vertical*/
-.radio2.v input[type="radio"]+label{padding:0 20px;line-height:50px;padding-left:40px;text-align:left;height:50px;}
-.radio2.v input[type="radio"]+label::before{bottom:25px;left:20px;}
-.radio2.v input[type="radio"]+label::after{bottom:25px;left:20px;}
-[dir="rtl"] .radio2.v input[type="radio"]+label{padding-left:5px;padding-right:40px;text-align:right;}
-[dir="rtl"] .radio2.v input[type="radio"]+label::before{left:initial;right:20px;-webkit-transform:translate(50%,50%);transform:translate(50%,50%);}
-[dir="rtl"] .radio2.v input[type="radio"]+label::after{left:initial;right:20px;-webkit-transform:translate(50%,50%);transform:translate(50%,50%);}
-
-
-
 // radio 3
 .radio3{padding:0;position:relative;min-width: 80px;}
 .radio3 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
@@ -120,6 +96,24 @@
 .radio3.colored{min-width: 125px;display: inline-block;margin: 5px;}
 .radio3.colored label{ border:none!important;}
 .radio3.colored label::before{border-radius: 0;}
+
+// radio4
+.radio4{margin:0 0.5rem;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;}
+.radio4 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
+.radio4 label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:100%;height:auto;border-radius:0.25rem;padding:1rem;}
+.radio4 img{width:100%;height:auto;}
+.radio4 input:checked+label{border-color:#1f8fff;background-color:#fff;}
+.radio4 input:hover+label{opacity:0.8;border-color:#1f8fff;}
+.radio4 input:focus+label{background-color:#fff;}
+.radio4 input+label:after{font-family:"siftal", "tahoma" !important;content:"\e022";width:20px;height:20px;line-height:20px;font-size:10px;text-align:center;background-color:#1f8fff;color:#fff;position:absolute;top:-7px;border-radius:50%;-webkit-transform: scale(0);-moz-transform: scale(0);-ms-transform: scale(0);-o-transform: scale(0);transform: scale(0);-webkit-transition: all .25s cubic-bezier(.2,1,.2,1);-moz-transition: all .25s cubic-bezier(.2,1,.2,1);-o-transition: all .25s cubic-bezier(.2,1,.2,1);transition: all .25s cubic-bezier(.2,1,.2,1)}
+[dir="ltr"] .radio4 input+label:after{left:-7px;}
+[dir="rtl"] .radio4 input+label:after{right:-7px;}
+.radio4 input:checked+label:after{-webkit-transform:scale(1);-moz-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);transform: scale(1);}
+
+.radio4.blink label::before{content: "";position: absolute;top:0;width:5px;height:5px;border-radius:50%;animation:pulseOn 1.25s infinite cubic-bezier(0.66,0,0,1);box-shadow:0 0 0 0 rgba(108,166,15,0.7);}
+[dir="ltr"] .radio4.blink label::before{left:0}
+[dir="rtl"] .radio4.blink label::before{right:0}
+
 
 
 // radio gateway
