@@ -20,6 +20,10 @@
 	font-size: 1.4rem;
 	margin-bottom: 1rem;
 }
+[data-pwa] .cartPage .cartItem .title{
+	font-size: 1.2rem;
+	margin-bottom: 0rem;
+}
 .cartPage .cartItem .title a{
 	display: inline-block;
 	font-weight: 400;
@@ -139,4 +143,6 @@
 	font-size: 2rem;
 	font-weight: 700;
 }
-
+[data-pwa] .cartPage .orderSummary .btn.danger{
+	display: none;
+}
