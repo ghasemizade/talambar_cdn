@@ -19,7 +19,7 @@
   margin-right: -0.5rem;
   margin-left: -0.5rem;
 }
-.row.padLess .c, .row.padLess [class*=c-]{
+.row.padLess > .c, .row.padLess > [class*=c-]{
     padding-right: 0.5rem;
     padding-left: 0.5rem
 }
@@ -30,7 +30,7 @@
   flex-direction: column !important;
 }
 
-.row .c, .row [class*=c-]{
+.row > .c, .row > [class*=c-]{
     position: relative;
     width: 100%;
     padding-right: 1.5rem;
