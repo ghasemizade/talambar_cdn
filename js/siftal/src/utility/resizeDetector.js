@@ -9,12 +9,12 @@ function resizeDetector(_data, _forceArray)
     if(this.resizeTO) clearTimeout(this.resizeTO);
     this.resizeTO = setTimeout(function()
     {
-      $(this).trigger('resizeEnd');
+      $(this).trigger('resizeWin');
     }, 50);
 
   });
 
-  $(window).bind('resizeEnd', function()
+  $(window).bind('resizeWin', function()
   {
     //do something, window hasn't changed size in 100ms
     var myWidth = document.body.clientWidth;
@@ -87,5 +87,6 @@ function resizeDetector(_data, _forceArray)
     }
   });
 
+  $(window).trigger('resizeWin');
 }
 
