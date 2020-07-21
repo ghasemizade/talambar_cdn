@@ -44,21 +44,22 @@
 	margin: 0 1rem;
 }
 // style to show price with unit
-.productPage .priceShow{
+.priceShow{
 	position: relative;
 	padding: 0.5rem 1rem;
 	display: inline-block;
 	line-height: 2rem;
 }
-.productPage .priceShow .price{
+.priceShow .price{
 	display: inline-block;
 }
-.productPage .priceShow[data-first] .price{
+.priceShow[data-first] .price{
 	text-decoration: line-through;
 	text-decoration-color: #ff5722;
 	color: #999;
 }
-.productPage .priceShow[data-discount]{
+
+.priceShow[data-discount]{
   display: inline-block;
   padding: 0.5em 0.7em;
 	font-size: 1.2rem;
@@ -74,21 +75,27 @@
 	min-width: 3rem;
 	height: 2rem;
 }
-.productPage .priceShow[data-final] .price{
+.priceShow[data-final] .price{
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 4rem;
 	color: #e91e63;
 }
-.productPage .priceShow[data-cart] .price{
-	font-size: 2rem;
-	line-height: 3rem;
-	color: #e91e63;
-}
-.productPage .priceShow .unit{
+.priceShow .unit{
 	display: inline-block;
 	color: #777;
 }
+.priceShow[data-cart]{
+	display: block;
+}
+.priceShow[data-cart] .price{
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 3rem;
+	color: #000;
+}
+
+
 .productPage .productQty{
 	width: 10rem;
 	margin:0 0.5rem 0;

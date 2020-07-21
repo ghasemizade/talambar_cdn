@@ -9,22 +9,31 @@
 	padding: 1.5rem;
 }
 .cartPage .cartItem{
-	padding: 1rem 0;
 }
 .cartPage .cartItem + .cartItem{
 	border-top: 1px solid #eee;
+	margin-top: 1rem;
+	padding-top: 1rem;
 }
 .cartPage .cartItem .title{
-	line-height: 1.6;
+	line-height: 2rem;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
 }
 .cartPage .cartItem .title a{
 	display: inline-block;
+	font-weight: 400;
 }
 .cartPage .cartItem img{
-	width: 15rem;
-	height: 15rem;
+	width: 10rem;
+	height: 10rem;
 	overflow: hidden;
 	display: block;
+	border-radius: 0.5rem;
+}
+[data-pwa] .cartPage .cartItem img{
+	width: 8rem;
+	height: 8rem;
 }
 .cartPage .cartItem .availability{
 	margin:1rem 0;
@@ -40,9 +49,28 @@
 }
 .cartPage .cartItem .productCount{
 	width: 15rem;
+	text-align: center;
+}
+.cartPage .cartItem .productCount .input{
+	margin: 1rem 0.5rem;
 }
 .cartPage .cartItem .productDel{
 	display: inline-block;
+	font-size: 2rem;
+	width: 4rem;
+	line-height: 3.6rem;
+	text-align: center;
+	transition: 0.1s;
+	color: #777;
+}
+.cartPage .cartItem .productDel:hover{
+	color: #e02020;
+}
+.cartPage .cartItem .productDel:active{
+	color: #b71c1c;
+}
+.cartPage .cartItem .productDel i{
+	display: block;
 }
 .cartPage .cartEmpty{
 
