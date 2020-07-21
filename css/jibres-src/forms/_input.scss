@@ -115,6 +115,7 @@ span.input{
 	align-items:center;
 	width: auto;
 	overflow: hidden;
+	text-align: center;
 }
 .input .addon.small{
 	font-size:70%;
@@ -171,7 +172,7 @@ span.input{
 // for all inputs
 [dir="ltr"] .input > :not(:first-child):not(:last-child){
 	border-radius: 0;
-	border-right-width:0;
+	// border-right-width:0;
 }
 
 // rtl
@@ -196,7 +197,7 @@ span.input{
 // for all inputs
 [dir="rtl"] .input > :not(:first-child):not(:last-child){
 	border-radius: 0;
-	border-left-width:0;
+	// border-left-width:0;
 }
 
 // force ltr
