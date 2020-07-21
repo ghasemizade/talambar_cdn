@@ -234,11 +234,6 @@
 [data-pwa] .productInfo.box{
 	font-size: 1.2rem;
 }
-.productInfo .msg{
-	padding-top: 0.2rem;
-	padding-bottom: 0.2rem;
-	border-radius: 1rem;
-}
 [data-pwa] .productInfo .tbl1.v5{
 	padding: 0;
 }
@@ -246,8 +241,23 @@
 	margin: 0;
 	line-height: 1.7rem;
 }
+[dir='rtl'] .productInfo .tbl1{
+	line-height: 2rem;
+}
 [data-pwa] .tbl1.responsive tr{
 	padding: 0;
+}
+.productInfo .tbl1 .group th{
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	border-radius: 1rem;
+	background-color: #d1ecf1;
+	color: #0c5460;
+	font-weight: 700;
+	line-height: 4rem;
+}
+.productInfo .tbl1 .group th:hover{
+	opacity: 0.9;
 }
 .productInfo .tbl1 tr th{
 	color: #757575;
