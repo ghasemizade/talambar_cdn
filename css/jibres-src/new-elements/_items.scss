@@ -6,7 +6,7 @@
 .items li .item{padding: 5px 10px;color: #111!important;transition:0.2s ease-in-out;line-height: $myItemHeight;}
 .items li img{overflow:hidden;max-width: $myItemHeight;max-height: $myItemHeight;}
 .items li .key{padding:0 10px;}
-.items li .value{color:#aaa;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto}
+.items li .value{color:#aaa;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto;padding:0 0.5rem;}
 .items li .go{color:#ccc;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto;transition: 0.2s;}
 .items li .go::after{content: "\e0c2";padding:0 10px;min-width:20px;text-align:center;font-family:siftal!important;vertical-align:middle;opacity: 0.7;float: right;transition:0.2s ease-in-out;}
 // rtl
