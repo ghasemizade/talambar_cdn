@@ -48,18 +48,29 @@
 .cartPage .cartItem .availability[data-red]{
 	color: #B12704;
 }
-.cartPage .cartItem .productCountLine{
-	line-height: 36px;
+.cartPage .cartItem .itemOperation{
+	position: relative;
+	overflow: hidden;
+	width: 200px;
+	margin: 1rem 0.5rem 0;
 }
 .cartPage .cartItem .productCount{
-	width: 15rem;
-	text-align: center;
+	width: 12rem;
+	max-width: 20rem;
+	display: inline-block;
+	vertical-align: middle;
 }
 .cartPage .cartItem .productCount .input{
-	margin: 1rem 0.5rem;
+}
+.cartPage .cartItem .productCount .input input{
+	text-align: center;
+}
+.cartPage .cartItem .productCount .input .addon{
+	cursor: pointer;
 }
 .cartPage .cartItem .productDel{
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 2rem;
 	width: 4rem;
 	line-height: 3.6rem;
@@ -74,6 +85,9 @@
 	color: #b71c1c;
 }
 .cartPage .cartItem .productDel i{
+	display: block;
+}
+.cartPage .cartItem .productDel i::before{
 	display: block;
 }
 .cartPage .cartEmpty{
