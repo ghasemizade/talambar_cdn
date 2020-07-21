@@ -127,10 +127,10 @@
 	margin:0;
 }
 
-.cartPage .orderSummary h3{
+.orderSummary h3{
 	font-weight: 900;
 }
-.cartPage .orderSummary dl{
+.orderSummary dl{
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -142,27 +142,27 @@
   margin: 1rem 0;
   line-height: 2rem;
 }
-.cartPage .orderSummary dl.total{
+.orderSummary dl.total{
   border-top: 1px solid #f2f2f2;
   margin-bottom: 2rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
 }
-.cartPage .orderSummary dl.total dt{
+.orderSummary dl.total dt{
 	-ms-flex: 1 1;
 	/* flex: 1 1; */
 	font-size: 14px;
 	font-weight: 700;
 }
-.cartPage .orderSummary dl.total dd{
+.orderSummary dl.total dd{
 	margin: 0;
 	padding: 0.5rem;
 	font-size: 2rem;
 	font-weight: 700;
 }
-[data-pwa] .cartPage .orderSummary dl.total{
+[data-pwa] .orderSummary dl.total{
 	margin-bottom: 0;
 }
-[data-pwa] .cartPage .orderSummary .btn.danger{
+[data-pwa] .orderSummary .btn.danger{
 	display: none;
 }
