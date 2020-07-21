@@ -97,3 +97,13 @@
 	display: block;
 	font-size: 1.2rem;
 }
+.roundedBox.category figcaption{
+	text-shadow: 0px 3px 3px #777;
+}
+.roundedBox.category .overlay figure::after{
+	background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.3) 100%);
+}
+[data-pwa] .roundedBox.category h2{
+	display: block;
+}
+
