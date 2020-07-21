@@ -6958,7 +6958,7 @@ function select22ProductQty(_state, _el)
   var preTxt = 'Qty ';
   if(urlLangFa())
   {
-    preTxt = 'تعداد '
+    preTxt = ''
   }
   return preTxt + _state.text;
 }

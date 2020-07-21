@@ -89,11 +89,11 @@
 	color: #777;
 }
 .productPage .productQty{
-	width: 14rem;
-	margin:0 0.5rem 0.5rem;
-}
-[dir='rtl'] .productPage .btnBuy{
-	width: 15rem;
+	width: 10rem;
+	margin:0 0.5rem 0;
+	padding: 0.2rem 0;
+	display: inline-block;
+	vertical-align: middle;
 }
 .productPage .btnBuy{
 	cursor: pointer;
@@ -139,18 +139,18 @@
 	background-color: #c2185b;
 }
 // add to cart btn
-.productPage .btnBuy[data-card]{
-	background-color:#ff9800;
+.productPage .btnBuy[data-update]{
+	background-color:#66bb6a;
+	box-shadow: none;
 }
-.productPage .btnBuy[data-card]:hover{
-	background-color: #ffaa00;
+.productPage .btnBuy[data-update]:hover{
+	box-shadow: 0 2px 1rem #4CAF50;
 }
-.productPage .btnBuy[data-card]:focus{
-	box-shadow: 0 0 8px rgba(252, 69, 75, 0.5);
-	background-color: #ffbb00;
+.productPage .btnBuy[data-update]:focus{
+	background-color: #4caf50;
 }
-.productPage .btnBuy[data-card]:active{
-	background-color: #fb8c00;
+.productPage .btnBuy[data-update]:active{
+	background-color: #43a047;
 }
 
 .featureBullets{list-style:square inside none;line-height:1.5em;margin:1rem 0;max-width:400px;font-size: 1.2rem;}
