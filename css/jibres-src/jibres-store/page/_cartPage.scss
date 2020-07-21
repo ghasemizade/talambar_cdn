@@ -52,7 +52,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 200px;
-	margin: 1rem 0.5rem 0;
+	margin: 1rem 0 0;
 }
 .cartPage .cartItem .productCount{
 	width: 12rem;
@@ -66,7 +66,10 @@
 	text-align: center;
 }
 .cartPage .cartItem .productCount .input .addon{
-	cursor: pointer;
+	font-size: 2rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	width: 34px;
 }
 .cartPage .cartItem .productDel{
 	display: inline-block;
@@ -156,6 +159,9 @@
 	padding: 0.5rem;
 	font-size: 2rem;
 	font-weight: 700;
+}
+[data-pwa] .cartPage .orderSummary dl.total{
+	margin-bottom: 0;
 }
 [data-pwa] .cartPage .orderSummary .btn.danger{
 	display: none;
