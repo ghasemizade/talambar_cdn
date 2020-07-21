@@ -76,6 +76,7 @@
 }
 .productPage .priceShow[data-final] .price{
 	font-size: 3rem;
+	font-weight: 700;
 	line-height: 4rem;
 	color: #e91e63;
 }
@@ -229,6 +230,14 @@
 	margin:0;
 	width:50px;
 	height:50px;
+}
+
+.productPage .productDesc p{
+	text-align: justify;
+
+}
+.productPage .productDesc p:last-child{
+	margin-bottom: 0;
 }
 
 [data-pwa] .productInfo.box{
