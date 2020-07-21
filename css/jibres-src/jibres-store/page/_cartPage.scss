@@ -2,6 +2,9 @@
 	font-size: 2rem;
 	margin-bottom:1rem;
 }
+[data-pwa] .cartPage h1{
+	font-size: 1.5rem;
+}
 .cartPage .box{
 	padding: 1.5rem;
 }
@@ -50,13 +53,29 @@
 	border-radius: 1rem;
 	margin: 2rem auto 5rem;
 }
+[data-pwa] .cartPage .cartEmpty img{
+	width: 20rem;
+	margin: 0 auto 2rem;
+}
 .cartPage .cartEmpty h2{
 	font-weight: 900;
 	text-align: center;
 }
+[data-pwa] .cartPage .cartEmpty h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
 .cartPage .cartEmpty p{
 	text-align: center;
 	font-size: 1.6rem;
+}
+[data-pwa] .cartPage .cartEmpty p{
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+[data-pwa] .cartPage .cartEmpty .msg{
+	font-size: 1.2rem;
+	margin:0;
 }
 
 .cartPage .orderSummary h3{
