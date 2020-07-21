@@ -8,7 +8,10 @@
 
 #pageFooter .pwa .pwafooterBuy .title{background: #fff1f1;color: #ff4747;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
 #pageFooter .pwa .pwafooterAddToCart .title{background: #ff4747;color:#fff;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
+#pageFooter .pwa .pwafooterGoShipping .title{background: #ff4747;color:#fff;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
 #pageFooter .pwa .pwafooterGoToCart .title{background: #66bb6a;color:#fff;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;}
+#pageFooter .pwa .pwafooterPay button{background: #1e88e5;color:#fff;line-height: 50px;height:50px;font-size: 1.4rem;font-weight: 700;width: 100%;border:none}
+
 
 #pageFooter .pwa [data-key="cart"] .icon i::after{
 	content: attr(data-item);

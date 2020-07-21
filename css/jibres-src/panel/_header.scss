@@ -11,6 +11,8 @@
 }
 [dir='ltr'] [data-panel] #pageHeader {margin-left: 250px;}
 [dir='rtl'] [data-panel] #pageHeader {margin-right: 250px;}
+[data-pwa] [data-panel] #pageHeader{height: 0;}
+[data-pwa] [data-panel] #content{padding-top: 0;}
 
 [data-panel] #pageHeader:hover{overflow:visible;}
 [data-panel] #pageHeader .sidenavHandler{width:50px;text-align:center;font-size:1.2em;cursor:pointer!important;}
