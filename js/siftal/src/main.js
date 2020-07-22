@@ -53,16 +53,6 @@ $(document).ready(function()
   });
 
 
-  $(document).on('click', '[data-confirm]', function(e)
-  {
-    e.preventDefault();
-    e.stopPropagation();
-    deleteConfirmer($(this));
-    return false;
-  });
-
-
-
   $(document).on('click', 'button[name]', function(e)
   {
       // $("input[type=submit]", $(this).parents("form")).prop("clicked", false);
@@ -195,7 +185,7 @@ $(document).ready(function()
 
     var exactlyClickedEl = $(_e.target);
     // if element inside another element don't do anything for parent a
-    if(exactlyClickedEl.hasAttr('data-ajaxify'))
+    if(exactlyClickedEl.hasAttr('data-ajaxify') || exactlyClickedEl.hasAttr('data-confirm'))
     {
       return;
     }
@@ -245,6 +235,15 @@ $(document).ready(function()
     var autoScrollMode = $(this).attr('data-autoScroll');
 
     $(this).ajaxify({link: true, refresh: refreshMode, autoScroll: autoScrollMode});
+  });
+
+
+  $(document).on('click', '[data-confirm]', function(e)
+  {
+    e.preventDefault();
+    e.stopPropagation();
+    deleteConfirmer($(this));
+    return false;
   });
 
 
