@@ -46,11 +46,32 @@
       $form.addClass('submitedForm');
       $form.trigger('ajaxify:send:before', _super);
 
-      var elementOptions =
+      var elementOptions = { type: 'post', url: location.href};
+
+      // set url for link or normal mode;
+      if(_super.link)
       {
-        type: _super.link ? $this.attr('data-method') || 'get' : $this.prop('method') || $this.attr('data-method'),
-        url: (_super.link ? $this.prop('href') : $this.prop('action')  || $this.attr('data-action')) || location.href
-      };
+        elementOptions.type = $this.attr('data-method') || 'post';
+        elementOptions.url  = $this.prop('href') || $this.attr('data-action');
+      }
+      else
+      {
+        elementOptions.type = $this.prop('method') || $this.attr('data-method');
+        elementOptions.url  = $this.prop('action') || $this.attr('data-action');
+      }
+
+      // set default url
+      if(!elementOptions.url)
+      {
+        elementOptions.url = location.href;
+      }
+      // set default url
+      if(!elementOptions.type)
+      {
+        elementOptions.type = 'post';
+      }
+
+
       if(_super.type === 'post')
       {
         elementOptions.type = 'post';
