@@ -229,9 +229,9 @@
       document.title = obj.title;
     }
 
-    // set scroll
     if(obj.autoScroll && $(obj.autoScroll).length === 1)
     {
+      // set scroll
       scrollSmoothTo($(obj.autoScroll));
     }
     else

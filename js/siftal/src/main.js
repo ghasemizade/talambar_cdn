@@ -52,24 +52,6 @@ $(document).ready(function()
 
   });
 
-  $(document).on('click', '[data-ajaxify]', function(e)
-  {
-    if($(this).attr('data-continue') === undefined)
-    {
-      e.preventDefault();
-    }
-    // if need to run special function, run it
-    if($(this).attr('data-fn') !== undefined)
-    {
-      callFunc($(this).attr('data-fn'), this);
-    }
-    // send as ajaxify
-    var refreshMode = $(this).attr('data-refresh') !== undefined;
-    var autoScrollMode = $(this).attr('data-autoScroll');
-
-    $(this).ajaxify({link: true, refresh: refreshMode, autoScroll: autoScrollMode});
-
-  });
 
   $(document).on('click', '[data-confirm]', function(e)
   {
@@ -200,7 +182,7 @@ $(document).ready(function()
   // :not([data-ajaxify])\
   // :not([data-action])\
   // :not([data-modal])',
-  $(document.body).on('click', 'a', function(e)
+  $(document.body).on('click', 'a', function(_e)
   {
     var $this = $(this);
 
@@ -208,6 +190,13 @@ $(document).ready(function()
     if($('[data-xhr]').length === 0)
     {
       // if we dont have xhr on current page use hard change location
+      return;
+    }
+
+    var exactlyClickedEl = $(_e.target);
+    // if element inside another element don't do anything for parent a
+    if(exactlyClickedEl.hasAttr('data-ajaxify'))
+    {
       return;
     }
 
@@ -224,7 +213,7 @@ $(document).ready(function()
       }
     if($this.parents('.ck-editor').length > 0) return;
 
-    e.preventDefault();
+    _e.preventDefault();
 
     if(!$this.attr('href') || $this.attr('href').indexOf('#') > -1) return;
 
@@ -236,6 +225,26 @@ $(document).ready(function()
       url: href,
       fake: !!$this.attr('data-fake')
     });
+  });
+
+
+  $(document).on('click', '[data-ajaxify]', function(e)
+  {
+    if($(this).attr('data-continue') === undefined)
+    {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    // if need to run special function, run it
+    if($(this).attr('data-fn') !== undefined)
+    {
+      callFunc($(this).attr('data-fn'), this);
+    }
+    // send as ajaxify
+    var refreshMode = $(this).attr('data-refresh') !== undefined;
+    var autoScrollMode = $(this).attr('data-autoScroll');
+
+    $(this).ajaxify({link: true, refresh: refreshMode, autoScroll: autoScrollMode});
   });
 
 
