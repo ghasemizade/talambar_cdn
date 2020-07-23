@@ -155,8 +155,7 @@
           }
         });
 
-
-        $this.find('button[name][data-clicked]').each(function()
+        $('button[name][data-clicked]').each(function()
         {
           if(this.getAttribute('name'))
           {
