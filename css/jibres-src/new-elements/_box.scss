@@ -13,7 +13,7 @@
   box-shadow: 0px 0px 0.5rem 0px rgba(0,0,0,0.1);
 }
 .box + .box{
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .box.hasCover{
   margin-top: 10rem;
@@ -36,18 +36,18 @@
   color: #222;
   border: none;
   transition: 0.3s;
-  background-color: #efefef;
+  background-color: #e3f2fd;
   overflow: hidden;
 }
 .box > header:hover{
-  background-color: #eee;
+  background-color: #bbdefb;
 }
 .box > header[data-kerkere-status="close"]{
-  background-color: #ddd;
+  background-color: #cfd8dc;
 }
 .box > header h2{
   font-size: 1.4rem;
-  line-height: 50px;
+  line-height: 36px;
   font-weight: 900;
   margin: 0;
 }
@@ -70,6 +70,13 @@
 }
 .box > header .btn{
 
+}
+.box .pad{
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+}
+[data-pwa] .box .pad{
+  padding: 1rem 1rem;
 }
 .box .body{
   padding: 2rem;
