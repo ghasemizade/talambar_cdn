@@ -42,7 +42,7 @@
 	transform: scale(1);
 	width:100%;
 }
-.roundedBox figure:hover img{
+[data-desktop] .roundedBox figure:hover img{
 	transform: scale(1.1);
 }
 .roundedBox figcaption{
@@ -76,7 +76,7 @@
 	margin-bottom: 0.5rem;
 	border-radius: 1rem;
 }
-.roundedBox .jSlider1:hover img{
+[data-desktop] .roundedBox .jSlider1:hover img{
 	transform: scale(1.1);
 }
 [data-pwa] .roundedBox .jSlider1{
