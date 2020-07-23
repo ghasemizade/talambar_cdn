@@ -24,7 +24,7 @@
 	background: rgba(255,255,255,0.9);
 	box-shadow: 0 1rem 3rem rgba(60,60,90,.1), 0 0 3px rgba(0,0,0,.05);
 	border-radius: 0.5rem;
-	padding: 1rem 2%;
+	padding: 1rem 0;
 	line-height: 4rem;
 	margin: 0 auto 1rem;
 }
@@ -60,6 +60,7 @@
 	display: inline-block;
 	max-width: 20rem;
 	max-height: 6rem;
+	border-radius: 0.5rem;
 }
 #jHeader100 .logo img + h1{
 	display: inline-block;
