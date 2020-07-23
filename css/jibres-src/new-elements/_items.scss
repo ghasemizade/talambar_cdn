@@ -1,10 +1,11 @@
-.items{background-color: #fff;border-radius:$myRadius;font-size:1.4rem;overflow: hidden;margin-bottom:10px;box-shadow: #ddd 0 0 5px;}
+.items{background-color: #fff;border-radius:$myRadius;font-size:1.4rem;overflow: hidden;margin-bottom:1rem;box-shadow: #ddd 0 0 5px;}
 .zeroSide .items{border-radius:0;}
 .items li{position: relative;}
 .items li:after{content:"";position:absolute;width:100%;height:1px;bottom:0;right:0;left:20px;background-color:#eee;}
 .items li a{padding: 5px 10px;color: #111!important;transition:0.2s ease-in-out;line-height: $myItemHeight;}
 .items li .item{padding: 5px 10px;color: #111!important;transition:0.2s ease-in-out;line-height: $myItemHeight;}
-.items li a i{display: inline-block;height:$myItemHeight;font-size: 1.5rem;}
+.items li a i{display: inline-block;height:$myItemHeight;}
+.items li a i::before{font-size: 1.8rem;}
 [dir="ltr"] .items li a i{margin-right:1rem}
 [dir="rtl"] .items li a i{margin-left:1rem}
 .items li img{overflow:hidden;max-width: $myItemHeight;max-height: $myItemHeight;}
@@ -40,7 +41,7 @@
 .items.long{font-size:1.2rem;}
 .items.long li a{line-height: $myItemHeightLong;height:4rem;}
 .items.long li .item{line-height: $myItemHeightLong;}
-.items.long li a i{line-height: $myItemHeightLong;height: $myItemHeightLong;font-size: 1.5rem;}
+.items.long li a i{line-height: $myItemHeightLong;height: $myItemHeightLong;}
 .items.long li .go::after{padding: 0 0;}
 // simple mode
 .items.simple{box-shadow: none;}
