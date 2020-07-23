@@ -47,6 +47,9 @@ span.input{
 	-ms-flex-align:center;
 	align-items:center;
 }
+.input input::placeholder{
+	color: rgba(0,0,0,0.4);
+}
 .input input:hover{
 	border-color:rgba(0,0,0,0.15);
 }
