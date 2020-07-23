@@ -169,6 +169,13 @@ select.select22, select.select22-country{
   display: block;
   border: 1px solid rgba(0,0,0,0.1);
 }
+select.select22[multiple]{
+  height: 38px;
+}
+[dir="rtl"] .select22 ul{
+  line-height: 24px;
+  font-size: 1.2rem;
+}
 select.select22-country img{
   box-shadow: 0px 0px 5px #aaa;
 }
