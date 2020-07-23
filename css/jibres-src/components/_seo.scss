@@ -1,12 +1,15 @@
 .seoPreview{
   direction: ltr;
   position: relative;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 .seoPreview img{
   width: 100px;
-  margin: 5px 0 10px;
+  margin: 0.5rem 0 0 auto;
   filter:grayscale(100%);
   transition: 0.3s;
+  display: block;
 }
 .seoPreview:hover img{
   filter:none;
@@ -19,7 +22,7 @@
   max-width: 640px;
 }
 .seoPreview h3{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 2.4rem;
   margin: 0;
   padding: 0;
@@ -32,6 +35,9 @@
 [dir="rtl"] .seoPreview h3{
   direction: rtl;
 }
+[data-pwa] .seoPreview h3{
+  white-space: initial;
+}
 .seoPreview a h3{
   color:#1a0dab;
 }
@@ -43,21 +49,19 @@
 }
 .seoPreview cite{
   margin: 0;
-  font-size: 1.3rem;
   font-style:normal;
-  line-height: 2rem;
   color: #006621;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+[data-pwa] .seoPreview cite{
+  white-space: initial;
+}
 .seoPreview .desc{
   display: block;
   max-width: 640px;
-  font-size: 1.3rem;
-  line-height: 2rem;
   overflow: hidden;
   margin: 0;
   text-overflow: ellipsis;

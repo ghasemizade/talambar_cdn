@@ -59,8 +59,8 @@ body.dragging{
 [data-uploader] input[type='file'] + label{
 	display: block;
 	margin: 0;
-	padding: 2.5rem 2rem;
-	font-size: 1.4em;
+	padding: 2rem 2rem;
+	font-size: 1.2em;
 	line-height: 2rem;
   font-weight: normal;
 	text-align: center;
@@ -188,7 +188,7 @@ body.dragging{
 }
 
 [data-uploader] .previewList{
-  margin: 0 1rem 1rem;
+  margin: 0 1.5rem 1rem;
 }
 [data-uploader] .previewList .fileItem{
   width: 10rem;
