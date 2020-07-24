@@ -243,14 +243,10 @@
       Settings.showSpinner = false;
     }
 
-
     var bar      = progress.querySelector(Settings.barSelector),
         perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
         parent   = document.querySelector(Settings.parent),
         spinner;
-
-    console.log(111);
-    console.log(bar);
 
     css(bar, {
       transition: 'all 0 linear',
