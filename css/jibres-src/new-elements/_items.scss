@@ -8,7 +8,7 @@
 .items li a i::before{font-size: 1.8rem;}
 [dir="ltr"] .items li a i{margin-right:1rem}
 [dir="rtl"] .items li a i{margin-left:1rem}
-.items li img{overflow:hidden;max-width: $myItemHeight;max-height: $myItemHeight;}
+.items li img{overflow:hidden;max-width: $myItemHeight;max-height: $myItemHeight;border-radius: 0.5rem;}
 .items li .key{padding:0 10px;height:$myItemHeight;overflow: hidden;}
 .items li .value{color:#aaa;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto;padding:0 0.5rem;}
 .items li .go{color:#ccc;-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;-moz-box-flex:0;flex:0 0 auto;width:auto;transition: 0.2s;}
