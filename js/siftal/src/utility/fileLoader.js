@@ -160,13 +160,13 @@ function readPageGtag()
   {
     // load script
     myUrl = "https://www.googletagmanager.com/gtag/js?id=" + myGtag;
-    fileLoader(myUrl, 'runGtag', true);
+    fileLoader(myUrl, 'runGtag', true, undefined, 'defer');
   }
 }
 
 
 
-function fileLoader(_url, _fn, _forceCallFn, _file)
+function fileLoader(_url, _fn, _forceCallFn, _file, _scriptType)
 {
   if(!_url)
   {
@@ -182,7 +182,19 @@ function fileLoader(_url, _fn, _forceCallFn, _file)
   }
   else
   {
+    if(_scriptType === undefined)
+    {
+     _scriptType = 'async';
+    }
     var newScript = document.createElement("script");
+    if(_scriptType === 'defer')
+    {
+      newScript.defer = true;
+    }
+    if(_scriptType === 'async')
+    {
+      newScript.async = true;
+    }
     // append to page js section
     $('.js').append(newScript);
 
