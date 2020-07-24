@@ -199,7 +199,9 @@
 
         if(_super.lockForm)
         {
-          $this.find('input, button, textarea, [contenteditable], [data-ajaxify]').attr('disabled', '');
+          $this.find('input, textarea, [contenteditable]').attr('disabled', '');
+          $('[data-ajaxify]').attr('disabled', '');
+          $('button').attr('disabled', '');
         }
       }
       else
