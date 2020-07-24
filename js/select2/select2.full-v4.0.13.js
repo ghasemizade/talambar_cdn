@@ -6871,7 +6871,27 @@ function runPageSelect2()
   $('.select22:not([data-model])').select22({minimumResultsForSearch: 7});
   $('.select22[data-model="country"]').select22({ templateResult2: select22FormatDropDownCoutry, templateSelection: select22FormatDropDownCoutry });
   $('.select22[data-model="tag"]').select22({ tags: true, tokenSeparators: [','] });
-  $('.select22[data-model="html"]').select22({ templateResult: select22FormatDropDownHtml, templateSelection: select22FormatDropDownHtml, minimumInputLength: 2, maximumInputLength: 40, maximumSelectionSize: 1 });
+  $('.select22[data-model="html"]').select22(
+  {
+    templateResult: select22FormatDropDownHtml,
+    templateSelection: select22FormatDropDownHtml,
+    minimumInputLength: 2,
+    maximumInputLength: 40,
+    maximumSelectionSize: 1,
+    ajax:
+    {
+      delay: 100, // wait 100 milliseconds before triggering the request
+      beforeSend : function()
+      {
+        console.log(555);
+        NProgress.configure({ animationModel: 'form' }).start();
+      },
+      complete : function(jqXHR)
+      {
+        NProgress.done(true);
+      }
+    }
+  });
   $('.select22[data-model="productItem"]').select22({minimumResultsForSearch: 31, templateSelection: select22ProductQty});
 
 
