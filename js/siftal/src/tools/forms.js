@@ -300,8 +300,7 @@
             window.close();
           }, closeAfter);
         }
-        // unlock form
-        unlockForm(_super.lockForm, data);
+
         if(data && data.redirect)
         {
           var a = $('<a href="' + data.redirect + '"></a>');
@@ -318,6 +317,9 @@
           }
           return;
         }
+
+        // unlock form
+        unlockForm(_super.lockForm, data);
 
         if(refresh)
         {
