@@ -24,8 +24,7 @@
     trickle: true,
     trickleSpeed: 200,
     animationModel: null,
-    showTrickle: true,
-    showSpinner: true,
+    showSpinner: false,
     barSelector: '[role="bar"]',
     spinnerSelector: '[role="spinner"]',
     parent: 'body',
@@ -232,12 +231,16 @@
     var progress = document.createElement('div');
     progress.id = 'nprogress';
     progress.innerHTML = Settings.template;
-    // progress.innerHTML = Settings.templateForm;
+
 
     if(Settings.animationModel === 'form')
     {
       progress.innerHTML = Settings.templateForm;
       Settings.showSpinner = true;
+    }
+    else if(Settings.animationModel === 'navigate')
+    {
+      Settings.showSpinner = false;
     }
 
 

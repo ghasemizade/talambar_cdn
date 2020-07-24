@@ -269,8 +269,8 @@
     // add progress to navigates
     options.beforeSend = function()
     {
-      NProgress.configure({ showSpinner: false, showTrickle: true }).start();
-      NProgress.configure({ showSpinner: false, showTrickle: true }).inc();
+      NProgress.configure({ animationModel: 'navigate' }).start();
+      NProgress.configure({ animationModel: 'navigate' }).inc();
     };
     options.complete = function(jqXHR)
     {
