@@ -43,21 +43,21 @@
   display: block;
   position: fixed;
   z-index: 1031;
-  top: 15px;
+  bottom: 15px;
   right: 15px;
 }
 [dir="rtl"] #nprogress .spinner {
   right: initial;
   left: 15px;
 }
-[data-panel] #nprogress .spinner
-{
-  right: 50px;
-}
-[dir="rtl"] [data-panel] #nprogress .spinner {
-  right: initial;
-  left: 50px;
-}
+// [data-panel] #nprogress .spinner
+// {
+//   right: 50px;
+// }
+// [dir="rtl"] [data-panel] #nprogress .spinner {
+//   right: initial;
+//   left: 50px;
+// }
 
 #nprogress .spinner-icon {
   width: 18px;
