@@ -23,13 +23,14 @@
     speed: 500,
     trickle: true,
     trickleSpeed: 200,
+    animationModel: null,
     showTrickle: true,
     showSpinner: true,
     barSelector: '[role="bar"]',
     spinnerSelector: '[role="spinner"]',
     parent: 'body',
     template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>',
-    templateForm: '<div class="bar" role="bar" data-form><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+    templateForm: '<div class="bar" role="bar" data-template="form"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
   };
 
   /**
@@ -231,13 +232,22 @@
     var progress = document.createElement('div');
     progress.id = 'nprogress';
     progress.innerHTML = Settings.template;
-    progress.innerHTML = Settings.templateForm;
+    // progress.innerHTML = Settings.templateForm;
+
+    if(Settings.animationModel === 'form')
+    {
+      progress.innerHTML = Settings.templateForm;
+      Settings.showSpinner = true;
+    }
 
 
     var bar      = progress.querySelector(Settings.barSelector),
         perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
         parent   = document.querySelector(Settings.parent),
         spinner;
+
+    console.log(111);
+    console.log(bar);
 
     css(bar, {
       transition: 'all 0 linear',

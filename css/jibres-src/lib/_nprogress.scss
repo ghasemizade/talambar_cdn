@@ -18,6 +18,9 @@
   left: initial;
   right: 0;
 }
+#nprogress .bar[data-template="form"]{
+  display: none;
+}
 
 /* Fancy blur effect */
 #nprogress .peg {

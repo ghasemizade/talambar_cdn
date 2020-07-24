@@ -249,7 +249,7 @@
       // add progress to all ajaify forms
       ajaxOptions.beforeSend = function()
       {
-        NProgress.configure({ showSpinner: true, showTrickle: false }).start();
+        NProgress.configure({ animationModel: 'form' }).start();
       };
       ajaxOptions.xhr = function ()
       {
