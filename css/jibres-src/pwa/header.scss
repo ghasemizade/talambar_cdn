@@ -16,6 +16,9 @@
 #pageHeader .pwa .search::before{content: "\e03f";}
 #pageHeader .pwa .cart::before{content: "\e125";}
 #pageHeader .pwa .menu::before{content: "\43";}
+#pageHeader .pwa .add::before{content: "\e03e";}
+#pageHeader .pwa .setting::before{content: "\e04b";}
+#pageHeader .pwa .help::before{content: "\e0f5";}
 #pageHeader .pwa .back::before{content: "\e0c1";}
 [dir="rtl"]  #pageHeader .pwa .back::before{content: "\e0c2";}
 
