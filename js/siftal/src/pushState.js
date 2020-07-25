@@ -1,8 +1,6 @@
 // on start
 function pushStateSiftal(_direct)
 {
-  // run modal
-  modalOpenClose();
   runDataResponse();
   runInputFileFunc();
   responsiveSidebar();

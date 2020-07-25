@@ -11,7 +11,6 @@ var myModuleFiles =
 	'src/libs/jquery/jquery-fn.js',
 
 	'src/libs/localstorage.js',
-	'src/libs/modal/modal.js',
 	'src/libs/utils.js',
 	'src/libs/underscore.js',
 
