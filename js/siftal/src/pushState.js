@@ -17,8 +17,6 @@ function pushStateSiftal(_direct)
   scrollSmoothDetector(_direct);
   // run watchScroll func to watch all elements
   watchScroll();
-  // initTagDetector();
-  bindUploader();
   // run numeral fn
   cleaveRunner();
   // check navigate is done or not
