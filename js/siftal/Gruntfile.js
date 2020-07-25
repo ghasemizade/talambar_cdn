@@ -15,8 +15,6 @@ var myModuleFiles =
 	'src/libs/utils.js',
 	'src/libs/underscore.js',
 
-	// 'src/libs/cropper/cropper.js',
-	// 'src/libs/cropper/cropperRunner.js',
 	'src/libs/dataResponse/dataResponse.js',
 	// 'src/libs/sortable/Sortable.js',
 	// 'src/libs/sortable/SortableRunner.js',
@@ -29,9 +27,7 @@ var myModuleFiles =
 	'src/libs/notif/notif.js',
 	'src/libs/codeReader/codeReader.js',
 	'src/libs/cursor/cursor.js',
-	// 'src/libs/tagDetector/tagDetector.js',
-	'src/libs/uploader/uploader.min.js',
-	'src/libs/uploader/uploaderRunner.js',
+
 	'src/libs/shortkey/shortkey.js',
 	'src/libs/nprogress/nprogress.js',
 	'src/libs/pingi/pingi.js',
@@ -75,7 +71,6 @@ var myModuleFiles =
 	'src/utility/gtag.js',
 	'src/utility/resizeDetector.js',
 
-	// 'src/utility/clock.js',
 	'src/utility/input-files.js',
 	'src/utility/language.js',
 	'src/utility/responsive.js',
