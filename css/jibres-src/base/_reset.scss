@@ -75,6 +75,7 @@ html[dir="rtl"]{
   vertical-align: baseline;
   box-sizing: border-box;
   font-family:$fontNameEn;
+  overflow-x: hidden;
   @include select-none();
 }
 
@@ -88,6 +89,7 @@ html[dir="rtl"]{
   vertical-align: baseline;
   box-sizing: border-box;
   font-family:$fontNameFa;
+  overflow-x: hidden;
   @include select-none();
 }
 
@@ -118,18 +120,18 @@ img {
 }
 
 
-main{
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-weight: normal;
-  vertical-align: baseline;
-  background: transparent;
-  box-sizing: border-box;
-  overflow-x:hidden;
-}
+// main{
+//   display: block;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   font-size: 100%;
+//   font-weight: normal;
+//   vertical-align: baseline;
+//   background: transparent;
+//   box-sizing: border-box;
+//   overflow-x:hidden;
+// }
 header{
   display: block;
   margin: 0;
