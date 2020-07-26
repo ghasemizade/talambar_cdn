@@ -22,16 +22,16 @@
 	height:1px;
 	top:0;
 	right:0;
-	left:2rem;
+	left:4rem;
 	background-color:#eee;
 }
 [dir="rtl"] .items li + li::before{
-	right:2rem;
+	right:4rem;
 	left:0;
 }
 .items li .item, .items li a{
 	padding: 0.5rem;
-	color: #111!important;
+	color: #333!important;
 	transition:0.2s ease-in-out;
 }
 .items li img{
@@ -58,10 +58,9 @@
 	height:$myItemLineHeight;
 	padding:0 1rem;
 	overflow: hidden;
-	color:#777;
 }
 .items li .value{
-	color:#aaa;
+	color:#999;
 	-webkit-box-flex:0;
 	-webkit-flex:0 0 auto;
 	-ms-flex:0 0 auto;
