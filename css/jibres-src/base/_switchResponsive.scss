@@ -20,8 +20,9 @@
 // #pageContent{}
 #pageContent{
 	height: 100%;
-	// touch-action: pan-y;
+	overflow: auto;
 }
+[data-pwa] body{overflow: hidden!important}
 
 [data-pwa] #pageHeader{display: none;}
 [data-pwa] #pageFooter{display: none;}
