@@ -64,6 +64,7 @@ body .ltr .items li + li::before{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	height: $myItemLineHeight;
 }
 .items li .key + .key{
 	padding: 0 0.5rem;
@@ -80,6 +81,7 @@ body .ltr .items li + li::before{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	height: $myItemLineHeight;
 }
 .items li .go{
 	color:#ccc;
@@ -171,6 +173,9 @@ body .rtl .items li .go::after{
 .items.long li .key{
 	height:$myItemLineHeight_Long;
 }
+.items.long li .value{
+	height:$myItemLineHeight_Long;
+}
 
 
 // simple mode
@@ -203,6 +208,9 @@ body .rtl .items li .go::after{
 	max-height: $myItemLineHeight_PWA;
 }
 [data-pwa] .items li .key{
+	height:$myItemLineHeight_PWA;
+}
+[data-pwa] .items li .value{
 	height:$myItemLineHeight_PWA;
 }
 [data-pwa] .items li .go::after{
