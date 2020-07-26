@@ -55,9 +55,10 @@
 	margin-left:1rem
 }
 .items li .key{
-	padding:0 1rem;
 	height:$myItemLineHeight;
+	padding:0 1rem;
 	overflow: hidden;
+	color:#777;
 }
 .items li .value{
 	color:#aaa;
@@ -83,65 +84,56 @@
 	content: "\e0c2";
 	padding:0 1rem;
 	min-width:2rem;
+	width:$myItemLineHeight;
 	text-align:center;
 	font-family:siftal!important;
 	vertical-align:middle;
-	opacity: 0.7;
-	float: right;
 	transition:0.2s ease-in-out;
+	opacity: 0.7;
+}
+.ltr .items li .go::after{
+	content: "\e0c2"!important;
+}
+.rtl .items li .go::after{
+	content: "\e0c1"!important;
+}
+.items li .go.padLess::after{
+	width:$myItemLineHeight_Long;
+	padding:0 0.5rem;
 }
 // rtl
 [dir="rtl"] .items li .go::after{
 	content: "\e0c1";
-	float: left;
+}
+.items li:hover .go::after{
+	opacity: 1;
 }
 // extra icon
-.items li .go.detail::after{
-	content:"\e03a";
-}
-.items li .go.search::after{
-	content:"\e03f";
-}
-.items li .go.plus::after{
-	content:"\e03e";
-}
-.items li .go.check::after{
-	content:"\6b";
-}
-.items li .go.times::after{
-	content:"\e041";
-}
-.items li .go.stop::after{
-	content:"\e24e";
-}
-.items li .ok::after{
-	color: #4CC790
-}
-.items li .nok::after{
-	color: #ff5722
-}
+.items li .go.detail::after{content:"\e03a";}
+.items li .go.search::after{content:"\e03f";}
+.items li .go.plus::after{content:"\e03e";}
+.items li .go.check::after{content:"\6b";}
+.items li .go.times::after{content:"\e041";}
+.items li .go.stop::after{content:"\e24e";}
+.items li .ok::after{color: #4CC790}
+.items li .nok::after{color: #ff5722}
+
 // reaction
-.items li a:hover{
+.items li .item:hover, .items li a:hover{
 	background-color: #f6f6f6
 }
-.items li a:focus{
+.items li .item:focus, .items li a:focus{
 	background-color: #efefef
 }
-.items li a:focus .go.next::after{
+.items li .item:focus .go.next::after, .items li a:focus .go.next::after{
 	color:#000;
 	padding:0;
 }
-.items li a:active{
+.items li .item:active, .items li a:active{
 	background-color: #e6e5eb
 };
 
-// item reaction
-.items li .item:hover{
-	background-color: #f6f6f6
-}
-.items li .item:active{
-	background-color: #e6e5eb
-};
+
 
 
 
@@ -153,7 +145,7 @@
 	height: $myItemHeight_Long;
 	line-height: $myItemLineHeight_Long;
 }
-.items li img{
+.items.long li img{
 	max-width: $myItemLineHeight_Long;
 	max-height: $myItemLineHeight_Long;
 }
@@ -167,6 +159,8 @@
 .items.long li .key{
 	height:$myItemLineHeight_Long;
 }
+
+
 // simple mode
 .items.simple{
 	box-shadow: none;
@@ -197,4 +191,6 @@
 	max-width: $myItemHeight_PWA;
 	max-height: $myItemHeight_PWA;
 }
-
+[data-pwa] .items li .key{
+	height:$myItemLineHeight_PWA;
+}
