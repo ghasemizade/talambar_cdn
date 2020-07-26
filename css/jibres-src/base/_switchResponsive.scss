@@ -17,5 +17,5 @@
 
 
 
-#pageContent{position: relative;touch-action: manipulation;-ms-touch-action: manipulation;}
-[data-pwa] #pageContent{position:fixed;top:50px;left:0;right: 0;bottom:50px;height: auto;min-height:auto;padding: 0;}
+#pageContent{position: relative;touch-action: pan-y;}
+[data-pwa] #pageContent{}
