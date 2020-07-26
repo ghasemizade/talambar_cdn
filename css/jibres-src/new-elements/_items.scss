@@ -44,19 +44,27 @@ body .ltr .items li + li::before{
 	max-height: $myItemLineHeight;
 	border-radius: 0.5rem;
 }
-.items li .item i, .items li a i{
-	display: inline-block;
+.items li .item i{
 	height:$myItemLineHeight;
+	-webkit-box-flex:0;
+	-webkit-flex:0 0 auto;
+	-ms-flex:0 0 auto;
+	-moz-box-flex:0;
+	flex:0 0 auto;
+	width:auto;
+}
+.items li .item i::before{
+	display: block;
+	padding:0;
+	min-width:$myItemLineHeight;
+	max-width:$myItemLineHeight;
+	text-align:center;
+	font-family:siftal!important;
 	vertical-align:middle;
-}
-.items li a i::before{
+	transition:0.2s ease-in-out;
+	opacity: 0.7;
 	font-size: 1.8rem;
-}
-[dir="ltr"] .items li a i{
-	margin-right:1rem
-}
-[dir="rtl"] .items li a i{
-	margin-left:1rem
+	line-height: $myItemLineHeight;
 }
 .items li .key{
 	height:$myItemLineHeight;
@@ -65,6 +73,9 @@ body .ltr .items li + li::before{
 	white-space: nowrap;
 	overflow: hidden;
 	height: $myItemLineHeight;
+}
+.items li .item i + .key{
+	padding:0 0.5rem;
 }
 .items li .key + .key{
 	padding: 0 0.5rem;
@@ -91,7 +102,6 @@ body .ltr .items li + li::before{
 	-moz-box-flex:0;
 	flex:0 0 auto;
 	width:auto;
-	transition: 0.2s;
 }
 .items li .go::after{
 	content: "\e0c2";
@@ -166,10 +176,10 @@ body .rtl .items li .go::after{
 	max-width: $myItemLineHeight_Long;
 	max-height: $myItemLineHeight_Long;
 }
-.items.long li a i{
-	line-height: $myItemLineHeight_Long;
-	height: $myItemLineHeight_Long;
-}
+// .items.long li a i{
+// 	line-height: $myItemLineHeight_Long;
+// 	height: $myItemLineHeight_Long;
+// }
 .items.long li .go::after{
 	padding: 0;
 }
