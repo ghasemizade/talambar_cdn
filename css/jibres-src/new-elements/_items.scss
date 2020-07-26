@@ -83,6 +83,10 @@ body .ltr .items li + li::before{
 .items li .key + .key{
 	padding: 0 0.5rem;
 }
+.items li .key.shrink{
+}
+.items li .key.fit{
+}
 .items li .value{
 	color:#999;
 	-webkit-box-flex:0;
