@@ -128,6 +128,9 @@ body .rtl .items li .go::after{
 .items li .go.plus::after{content:"\e03e"!important;}
 .items li .go.check::after{content:"\6b"!important;}
 .items li .go.times::after{content:"\e041"!important;}
+.items li .go.premium::after{content:"\e0cd"!important;}
+.items li .go.invalid::after{content:"\e040"!important;}
+.items li .go.ban::after{content:"\e070"!important;}
 .items li .go.stop::after{content:"\e24e"!important;}
 .items li .ok::after{color: #4CC790}
 .items li .nok::after{color: #ff5722}
