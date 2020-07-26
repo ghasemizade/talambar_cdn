@@ -9,7 +9,7 @@
   // header
   #jibresPageTitle {font-size:18px;}
 
-  [data-panel] #pageHeader{margin:0!important;}
+  [data-panel] #pageHeader .desktop{margin:0!important;}
   [data-panel] #pageContent{margin:0!important;}
 
 
@@ -36,7 +36,7 @@
 
   [dir="ltr"] [data-panel] #main{margin-left:0}
   [dir="rtl"] [data-panel] #main{margin-right:0}
-  [data-panel] #pageHeader.cloner{width:100%;}
+  [data-panel] #pageHeader.cloner .desktop{width:100%;}
   // sidebar
   [dir="ltr"] [data-panel] #sidebar{left:-250px;}
   [dir="rtl"] [data-panel] #sidebar{right:-250px;}

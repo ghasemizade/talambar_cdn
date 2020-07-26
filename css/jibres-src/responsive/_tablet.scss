@@ -10,7 +10,7 @@
   // sidebar
   [dir="ltr"] [data-panel] #sidebar{left:-250px;}
   [dir="rtl"] [data-panel] #sidebar{right:-250px;}
-  [data-panel] #pageHeader.cloner{width:100%;}
+  [data-panel] #pageHeader.cloner .desktop{width:100%;}
   [data-panel] .toggleClean{display:none}
 
   // padding and margin
@@ -21,7 +21,7 @@
   .pricingQuick .col2{border: none!important;}
   #landing .title .h2{font-size:3em;}
 
-  [data-panel] #pageHeader{margin:0!important;}
+  [data-panel] #pageHeader .desktop{margin:0!important;}
   [data-panel] #pageContent{margin:0!important;}
 
   .items.simple li:after{display:none;}

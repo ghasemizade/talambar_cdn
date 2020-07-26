@@ -30,7 +30,7 @@
   body[data-panel]{background-color:transparent;}
   [data-panel] #main:after{display:none}
   [data-panel] #sidebar{display:none;}
-  [data-panel] #pageHeader{display:none;}
+  [data-panel] #pageHeader .desktop{display:none;}
   [data-panel] .scr::-webkit-scrollbar{display:none;}
   ::-webkit-scrollbar {display: none;}
   .highcharts-button{display: none;}

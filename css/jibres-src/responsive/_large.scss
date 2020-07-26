@@ -7,14 +7,14 @@
   .xp0{padding:0}
   .xm0{padding:0}
 
-  [dir='ltr'] [data-panel] #pageHeader{margin-left: 300px;}
-  [dir='rtl'] [data-panel] #pageHeader{margin-right: 300px;}
+  [dir='ltr'] [data-panel] #pageHeader .desktop{margin-left: 300px;}
+  [dir='rtl'] [data-panel] #pageHeader .desktop{margin-right: 300px;}
   [dir='ltr'] [data-panel] #pageContent{margin-left: 300px;}
   [dir='rtl'] [data-panel] #pageContent{margin-right: 300px;}
 
   [dir="ltr"] [data-panel] #main:after{left:300px;right:initial;}
   [dir="rtl"] [data-panel] #main:after{left:initial;right:300px;}
-  [data-panel] #pageHeader.cloner{width:calc( 100% - 300px)};
+  [data-panel] #pageHeader.cloner .desktop{width:calc( 100% - 300px)};
   [data-panel] #sidebar{width:300px;}
   [dir="ltr"] [data-panel='clean'] #sidebar {left:-300px!important;}
   [dir="rtl"] [data-panel='clean'] #sidebar{right:-300px!important;}
