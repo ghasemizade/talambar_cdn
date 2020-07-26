@@ -82,9 +82,10 @@
 }
 .items li .go::after{
 	content: "\e0c2";
+	display: block;
 	padding:0 1rem;
-	min-width:2rem;
-	width:$myItemLineHeight;
+	min-width:$myItemLineHeight;
+	max-width:$myItemLineHeight;
 	text-align:center;
 	font-family:siftal!important;
 	vertical-align:middle;
@@ -154,7 +155,7 @@
 	height: $myItemLineHeight_Long;
 }
 .items.long li .go::after{
-	padding: 0 0;
+	padding: 0;
 }
 .items.long li .key{
 	height:$myItemLineHeight_Long;
@@ -188,9 +189,14 @@
 	height: $myItemHeight_PWA;
 }
 [data-pwa] .items li img{
-	max-width: $myItemHeight_PWA;
-	max-height: $myItemHeight_PWA;
+	max-width: $myItemLineHeight_PWA;
+	max-height: $myItemLineHeight_PWA;
 }
 [data-pwa] .items li .key{
 	height:$myItemLineHeight_PWA;
+}
+[data-pwa] .items li .go::after{
+	min-width:$myItemLineHeight_PWA;
+	max-width:$myItemLineHeight_PWA;
+	padding: 0;
 }
