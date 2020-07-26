@@ -34,6 +34,9 @@ $(document).ready(function()
       }
   });
 
+  // try to disable touch whole window
+  $(window).bind('touchmove', function(e) { e.preventDefault();});
+
   // Ajaxify links and forms
   $(document).on('submit', 'form', function(e)
   {
