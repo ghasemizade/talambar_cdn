@@ -1,4 +1,6 @@
-[data-pwa] body{background-color: $pwaBg!important;position:relative;}
+[data-pwa] body{background-color: $pwaBg!important;
+	// position:relative;
+}
 
 // design for apps in enter
 [data-pwa] #sidebar{display:none!important}
