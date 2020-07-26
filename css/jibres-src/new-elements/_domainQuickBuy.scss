@@ -4,7 +4,7 @@
   color: #fff;
   padding: 2rem 5%;
   text-align: center;
-  border-radius: .25rem;
+  border-radius: .5rem;
 }
 .domainQuickBuy h3{
 	font-size: 1.2em;
@@ -30,4 +30,7 @@
 	border-radius: 4rem!important;
 	border-color: transparent!important;
 	color: #fff;
+}
+[data-pwa] .domainQuickBuy{
+	font-size: 1.1rem;
 }
