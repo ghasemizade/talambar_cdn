@@ -29,6 +29,10 @@
 	right:4rem;
 	left:0;
 }
+body .ltr .items li + li::before{
+	right:0;
+	left:4rem;
+}
 .items li .item, .items li a{
 	padding: 0.5rem;
 	color: #333!important;
@@ -57,7 +61,12 @@
 .items li .key{
 	height:$myItemLineHeight;
 	padding:0 1rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	overflow: hidden;
+}
+.items li .key + .key{
+	padding: 0 0.5rem;
 }
 .items li .value{
 	color:#999;
@@ -68,6 +77,9 @@
 	flex:0 0 auto;
 	width:auto;
 	padding:0 0.5rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .items li .go{
 	color:#ccc;
@@ -82,7 +94,7 @@
 .items li .go::after{
 	content: "\e0c2";
 	display: block;
-	padding:0 1rem;
+	padding:0;
 	min-width:$myItemLineHeight;
 	max-width:$myItemLineHeight;
 	text-align:center;
@@ -91,11 +103,11 @@
 	transition:0.2s ease-in-out;
 	opacity: 0.7;
 }
-.ltr .items li .go::after{
-	content: "\e0c2"!important;
+body .ltr .items li .go::after{
+	content: "\e0c2";
 }
-.rtl .items li .go::after{
-	content: "\e0c1"!important;
+body .rtl .items li .go::after{
+	content: "\e0c1";
 }
 .items li .go.padLess::after{
 	width:$myItemLineHeight_Long;
@@ -109,12 +121,12 @@
 	opacity: 1;
 }
 // extra icon
-.items li .go.detail::after{content:"\e03a";}
-.items li .go.search::after{content:"\e03f";}
-.items li .go.plus::after{content:"\e03e";}
-.items li .go.check::after{content:"\6b";}
-.items li .go.times::after{content:"\e041";}
-.items li .go.stop::after{content:"\e24e";}
+.items li .go.detail::after{content:"\e03a"!important;}
+.items li .go.search::after{content:"\e03f"!important;}
+.items li .go.plus::after{content:"\e03e"!important;}
+.items li .go.check::after{content:"\6b"!important;}
+.items li .go.times::after{content:"\e041"!important;}
+.items li .go.stop::after{content:"\e24e"!important;}
 .items li .ok::after{color: #4CC790}
 .items li .nok::after{color: #ff5722}
 
