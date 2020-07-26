@@ -18,5 +18,8 @@
 
 
 // #pageContent{touch-action: pan-y;}
+#pageContent{overflow: auto!important;height: 100%;}
 [data-pwa]{overflow: hidden!important}
+[data-pwa] body{overflow: hidden!important}
+
 
