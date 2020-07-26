@@ -54,17 +54,20 @@ body .ltr .items li + li::before{
 	width:auto;
 }
 .items li .item i::before{
-	display: block;
-	padding:0;
 	min-width:$myItemLineHeight;
 	max-width:$myItemLineHeight;
+	line-height: $myItemLineHeight;
+	display: block;
+	padding:0;
 	text-align:center;
 	font-family:siftal!important;
 	vertical-align:middle;
 	transition:0.2s ease-in-out;
-	opacity: 0.7;
+	opacity: 0.8;
 	font-size: 1.8rem;
-	line-height: $myItemLineHeight;
+}
+.item li:hover .item i::before{
+	opacity: 1;
 }
 .items li .key{
 	height:$myItemLineHeight;
@@ -176,11 +179,17 @@ body .rtl .items li .go::after{
 	max-width: $myItemLineHeight_Long;
 	max-height: $myItemLineHeight_Long;
 }
-// .items.long li a i{
-// 	line-height: $myItemLineHeight_Long;
-// 	height: $myItemLineHeight_Long;
-// }
+.items.long li .item i{
+	height:$myItemLineHeight_Long;
+}
+.items.long li .item i::before{
+	min-width:$myItemLineHeight_Long;
+	max-width:$myItemLineHeight_Long;
+	line-height: $myItemLineHeight_Long;
+}
 .items.long li .go::after{
+	min-width:$myItemLineHeight_Long;
+	max-width:$myItemLineHeight_Long;
 	padding: 0;
 }
 .items.long li .key{
@@ -219,6 +228,14 @@ body .rtl .items li .go::after{
 [data-pwa] .items li img{
 	max-width: $myItemLineHeight_PWA;
 	max-height: $myItemLineHeight_PWA;
+}
+[data-pwa] .items li .item i{
+	height:$myItemLineHeight_PWA;
+}
+[data-pwa] .items li .item i::before{
+	min-width:$myItemLineHeight_PWA;
+	max-width:$myItemLineHeight_PWA;
+	line-height: $myItemLineHeight_PWA;
 }
 [data-pwa] .items li .key{
 	height:$myItemLineHeight_PWA;
