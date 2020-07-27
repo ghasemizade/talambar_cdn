@@ -280,14 +280,13 @@
 	font-weight: normal;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
-}
-[data-pwa] .productInfo .tbl1 tr th{
-	color: #999;
-}
-.productInfo .tbl1 tr th{
 	width: 1px;
 	max-width: 250px;
   white-space: nowrap;
+}
+[data-pwa] .productInfo .tbl1 tr th{
+	color: #999;
+	max-width: 100%;
 }
 .productInfo .tbl1 tr td{
 	color: #333;
