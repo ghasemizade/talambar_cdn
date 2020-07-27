@@ -13,7 +13,7 @@
       contentType: false,
       dataType: 'json',
       cache: false,
-      timeout: 30000,
+      timeout: 60000,
       abort: false,
       autoScroll: false,
       async: true,
@@ -406,6 +406,9 @@
       })
       .always(function(a1, a2, a3)
       {
+        // always finish progress
+        NProgress.done(true);
+
         $form.trigger('ajaxify:complete', a1, a2, a3);
 
         // if(_super.noLoading) return;
@@ -448,7 +451,7 @@
     {
       $('input, button, textarea, [contenteditable], [data-ajaxify]').prop('disabled', false);
     }
-    unlockFormLoadingPage()();
+    unlockFormLoadingPage();
     $('.submitedForm').removeClass('submitedForm');
     callFunc('loading_form', false);
   }
