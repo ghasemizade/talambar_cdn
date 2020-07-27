@@ -301,6 +301,7 @@
           }, closeAfter);
         }
 
+        unlockFormLoadingPage();
         if(data && data.redirect)
         {
           var a = $('<a href="' + data.redirect + '"></a>');
@@ -429,6 +430,12 @@
   };
 
 
+  function unlockFormLoadingPage()
+  {
+    $('body').attr('data-loading-form', null);
+  }
+
+
   function unlockForm(_locked, _data)
   {
     var unlockAll = true;
@@ -441,11 +448,11 @@
     {
       $('input, button, textarea, [contenteditable], [data-ajaxify]').prop('disabled', false);
     }
-
-    $('body').attr('data-loading-form', null);
+    unlockFormLoadingPage()();
     $('.submitedForm').removeClass('submitedForm');
     callFunc('loading_form', false);
   }
+
 
 
   $.fn.ajaxify.showResults = function(data, $form, _super)
