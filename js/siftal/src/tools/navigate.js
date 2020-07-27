@@ -234,9 +234,17 @@
       // set scroll
       scrollSmoothTo($(obj.autoScroll));
     }
-    else
+    else if($("body").attr('data-in') === 'site')
     {
       findPushStateScroll();
+    }
+    else if($("body").attr('data-in') === 'support')
+    {
+      findPushStateScroll();
+    }
+    else
+    {
+      // do nothing on other pages, we need to freeze scroll
     }
 
     // call pushState function if exist
