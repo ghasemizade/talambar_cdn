@@ -15,6 +15,9 @@
 	position: relative;
 	overflow: hidden;
 }
+.items li.multiLine{
+	height: auto;
+}
 // line between items
 .items li + li::before{
 	content:"";
@@ -32,6 +35,21 @@
 body .ltr .items li + li::before{
 	right:0;
 	left:4rem;
+}
+.items li .item{
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	-ms-flex-align:center;
+	-moz-box-align:center;
+	align-items:center;
+	// wrap element
+	-webkit-flex-wrap:nowrap;
+	-ms-flex-wrap:nowrap;
+	flex-wrap:nowrap;
+
+	padding: 0.5rem;
+	color: #333!important;
+	transition:0.2s ease-in-out;
 }
 .items li .item, .items li a{
 	padding: 0.5rem;
@@ -75,7 +93,11 @@ body .ltr .items li + li::before{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	height: $myItemLineHeight;
+}
+.items li.multiLine .key{
+	height: auto;
+	white-space: initial;
+	line-height: 2rem;
 }
 .items li .item i + .key{
 	padding:0 0.5rem;
@@ -83,9 +105,11 @@ body .ltr .items li + li::before{
 .items li .key + .key{
 	padding: 0 0.5rem;
 }
-.items li .key.shrink{
-}
 .items li .key.fit{
+	flex-basis: 10%;
+}
+.items li .key.grow{
+	flex-basis: 50%;
 }
 .items li .value{
 	color:#999;
