@@ -10,13 +10,14 @@
 	border-radius:0;
 }
 .items li{
+	min-height: $myItemHeight;
 	height: $myItemHeight;
 	line-height: $myItemLineHeight;
 	position: relative;
 	overflow: hidden;
 }
 .items li.multiLine{
-	height: auto;
+	height: auto!important;
 }
 // line between items
 .items li + li::before{
@@ -51,7 +52,7 @@ body .ltr .items li + li::before{
 	color: #333!important;
 	transition:0.2s ease-in-out;
 }
-.items li .item, .items li a{
+.items li a{
 	padding: 0.5rem;
 	color: #333!important;
 	transition:0.2s ease-in-out;
@@ -89,15 +90,19 @@ body .ltr .items li + li::before{
 }
 .items li .key{
 	height:$myItemLineHeight;
+	min-height:$myItemLineHeight;
 	padding:0 1rem;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 }
 .items li.multiLine .key{
-	height: auto;
+	height: auto!important;
 	white-space: initial;
-	line-height: 2rem;
+}
+[data-desktop] .items li.multiLine .key{
+	min-height: initial!important;
+	line-height: 2rem!important;
 }
 .items li .item i + .key{
 	padding:0 0.5rem;
@@ -106,7 +111,8 @@ body .ltr .items li + li::before{
 	padding: 0 0.5rem;
 }
 .items li .key.fit{
-	flex-basis: 10%;
+	flex-basis: 10rem;
+	flex-shrink: 0;
 }
 .items li .key.grow{
 	flex-basis: 50%;
@@ -124,6 +130,7 @@ body .ltr .items li + li::before{
 	white-space: nowrap;
 	overflow: hidden;
 	height: $myItemLineHeight;
+	min-height: $myItemLineHeight;
 }
 .items li .go{
 	color:#ccc;
@@ -200,6 +207,7 @@ body .rtl .items li .go::after{
 	font-size:1.2rem;
 }
 .items.long li{
+	min-height: $myItemHeight_Long;
 	height: $myItemHeight_Long;
 	line-height: $myItemLineHeight_Long;
 }
@@ -208,6 +216,7 @@ body .rtl .items li .go::after{
 	max-height: $myItemLineHeight_Long;
 }
 .items.long li .item i{
+	min-height:$myItemLineHeight_Long;
 	height:$myItemLineHeight_Long;
 }
 .items.long li .item i::before{
@@ -221,9 +230,11 @@ body .rtl .items li .go::after{
 	padding: 0;
 }
 .items.long li .key{
+	min-height:$myItemLineHeight_Long;
 	height:$myItemLineHeight_Long;
 }
 .items.long li .value{
+	min-height:$myItemLineHeight_Long;
 	height:$myItemLineHeight_Long;
 }
 
@@ -252,6 +263,7 @@ body .rtl .items li .go::after{
 [data-pwa] .items li, [data-pwa] .items li{
 	line-height: $myItemLineHeight_PWA;
 	height: $myItemHeight_PWA;
+	min-height: $myItemHeight_PWA;
 }
 [data-pwa] .items li img{
 	max-width: $myItemLineHeight_PWA;
@@ -259,6 +271,7 @@ body .rtl .items li .go::after{
 }
 [data-pwa] .items li .item i{
 	height:$myItemLineHeight_PWA;
+	min-height:$myItemLineHeight_PWA;
 }
 [data-pwa] .items li .item i::before{
 	min-width:$myItemLineHeight_PWA;
@@ -267,9 +280,11 @@ body .rtl .items li .go::after{
 }
 [data-pwa] .items li .key{
 	height:$myItemLineHeight_PWA;
+	min-height:$myItemLineHeight_PWA;
 }
 [data-pwa] .items li .value{
 	height:$myItemLineHeight_PWA;
+	min-height:$myItemLineHeight_PWA;
 }
 [data-pwa] .items li .go::after{
 	min-width:$myItemLineHeight_PWA;
