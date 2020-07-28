@@ -143,6 +143,7 @@ header{
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;
 }
 footer{
   position: relative;
@@ -155,6 +156,7 @@ footer{
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;
 }
 
 /*
@@ -189,6 +191,7 @@ a {
 
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  -webkit-tap-highlight-color:transparent;
 
   color: #1a0aaa;
   text-decoration:none;
