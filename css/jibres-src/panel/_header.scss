@@ -17,7 +17,7 @@
 	margin-right: 250px;
 }
 [data-pwa] [data-panel] #pageHeader .desktop{
-	height: 0;
+	display: none;
 }
 
 [data-panel] #pageHeader .desktop:hover{

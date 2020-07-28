@@ -133,6 +133,7 @@ img {
 //   overflow-x:hidden;
 // }
 header{
+  position: relative;
   display: block;
   margin: 0;
   padding: 0;
@@ -144,6 +145,7 @@ header{
   box-sizing: border-box;
 }
 footer{
+  position: relative;
   display: block;
   margin: 0;
   padding: 0;
