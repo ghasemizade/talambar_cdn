@@ -366,17 +366,28 @@
     })
     .fail(function(_result, _textStatus, _error)
     {
+      unlockForm(true);
+
       if(_textStatus === 'timeout')
       {
         notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-hourglass-o'});
         pingi();
       }
-      if(_textStatus === 'error' && _result.readyState == 0 && _error == "")
+      else if(_textStatus === 'error')
       {
-        // probably network is failed like internet connection
-        console.log("Network error detected");
-        // check with pingi
-        pingi();
+        if(_result.readyState == 0 && _error == "")
+        {
+          // probably network is failed like internet connection
+          console.log("Network error detected");
+          // check with pingi
+          pingi();
+        }
+        else
+        {
+          var statusCode = _result.status;
+
+          notif('fatal', statusCode + ' ' + _error, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-hourglass-o'});
+        }
       }
 
 

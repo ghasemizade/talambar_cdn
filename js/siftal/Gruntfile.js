@@ -48,6 +48,7 @@ var myModuleFiles =
 	'src/libs/cleave/cleaveRunner.js',
 
 	// tools
+	'src/tools/forms-unlock.js',
 	'src/tools/navigate.js',
 	'src/tools/forms.js',
 
