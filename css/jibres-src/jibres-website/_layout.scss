@@ -3,10 +3,7 @@ body[data-in="site"] {background-color:$jibresBack;}
 // block iframe of jibres
 html[data-iframe]{overflow:hidden;}
 html[data-iframe="block"]::after{content: "";position: fixed;top: 0;bottom: 0;right: 0;left: 0;width: 100%;background-color: $jibres;background: $jibres url(../logo/icon-white/svg/Jibres-Logo-icon-white.svg) no-repeat center center;background-size: 70vh}
-html[data-iframe]::-webkit-scrollbar{
-  width: 0px;
-  background: transparent;
-}
+html[data-iframe]::-webkit-scrollbar{width: 0px;background: transparent;}
 
 .fit{position:relative;padding:0;width:92%;margin:0 auto;max-width:1100px;}
 
