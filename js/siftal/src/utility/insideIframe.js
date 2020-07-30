@@ -12,7 +12,11 @@ function insideIframe()
       }
     }
 
-    if(!allowIframe)
+    if(allowIframe)
+    {
+      $('body').attr('data-iframe', 'preview');
+    }
+    else
     {
       $('body').attr('data-iframe', '').html('');
     }
