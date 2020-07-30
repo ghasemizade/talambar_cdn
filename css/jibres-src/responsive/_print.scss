@@ -61,11 +61,14 @@
   [data-panel] #content{padding:0;}
   .factor.printArea{color:#000!important;}
 
-  #pageHeader {display: none;}
-  #pageFooter {display: none;}
-  #pageContent {padding: 0!important}
+  body #sidebar {display: none!important;}
+  body #pageHeader {display: none!important;}
+  body #pageFooter {display: none!important;}
+  body #pageContent {padding: 0!important;margin:0!important;}
   [data-panel] #content{padding: 0!important}
   [data-pwa] body{background-color: transparent!important}
+  [data-panel] body{background-color: transparent!important}
+  body .printArea{padding:0!important;margin:0 auto!important;}
 }
 
 @page {
