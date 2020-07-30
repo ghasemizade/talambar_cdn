@@ -14,11 +14,11 @@ function insideIframe()
 
     if(allowIframe)
     {
-      $('body').attr('data-iframe', 'preview');
+      $('html').attr('data-iframe', 'preview');
     }
     else
     {
-      $('body').attr('data-iframe', '').html('');
+      $('html').attr('data-iframe', 'block').html('');
     }
 
     // if(window.top.$('body').attr('data-env') !== 'Jibres')
