@@ -1,6 +1,8 @@
 body {
-  color: #171421;
-  background: #efefef;
+  background-color: #efefef!important;
+}
+[data-pwa] body {
+  background-color: #efefef!important;
 }
 a {
   color: #181934;
@@ -17,6 +19,10 @@ a:hover {
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  color: #171421;
+}
+[data-pwa] #pageContent {
+  align-items: start;
 }
 #pageContent .visitBox {
   margin: 10px;
@@ -30,6 +36,12 @@ a:hover {
   overflow: hidden;
   box-shadow: 0 1rem 3rem rgba(107,124,147,.15);
 }
+[data-pwa] #pageContent .visitBox{
+  height: auto;
+  width: 25rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
 #pageContent .info {
   max-width: 45rem;
   height: 100%;
@@ -38,47 +50,57 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
+  padding: 0 1rem;
 }
 #pageContent .info h1 {
   font-size: 2em;
   line-height: 2em;
   font-weight: 700;
   padding: 0 5%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
-
+[data-pwa] #pageContent .info h1{
+  font-size: 1.5em;
+}
 #pageContent .info h2 {
   font-size: 1em;
+  line-height: 2em;
+  max-height: 6em;
   padding: 0 5%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: initial;
 }
-
 #pageContent .avatarImg {
-  float: left;
   position: relative;
   display: inline-block;
   overflow: hidden;
   height: 25rem;
   border-radius: 12.5rem;
   overflow: hidden;
+  text-align: center;
 }
-
 #pageContent .social {
-  margin-top: 2rem;
+  margin: 1rem auto;
 }
-
 #pageContent .social a {
   text-decoration: none;
   display: inline-block;
   opacity: 0.75;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   width: 3rem;
   height: 3rem;
   overflow: hidden;
 }
-
 #pageContent .social a:hover {
   opacity: 0.95;
 }
-
 #pageContent .social img {
   display: block;
   width: 3rem;
@@ -86,41 +108,20 @@ a:hover {
   border-radius: 50%;
   overflow: hidden;
 }
-
 #pageContent .social .telegram {
   border-radius: 50%;
 }
 
-
-/* Smartphones (portrait) ----------- */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 850px) and (orientation: portrait) {
-  #pageContent .avatarImg {
-    float: none;
-    text-align: center;
-    box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.07), 0 4px 25px 0px rgba(0, 0, 0, 0.07), 0 8px 10px -5px rgba(0, 0, 0, 0.09);
-  }
-  #pageContent .info {
-    margin: 10px auto 0;
-  }
-  #pageContent .visitBox {
-    height: auto;
-    background: none;
-    box-shadow: none;
-  }
-  #pageContent .br {
-    display: none;
-  }
+[data-pwa] #pageContent .avatarImg {
+  box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.07), 0 4px 25px 0px rgba(0, 0, 0, 0.07), 0 8px 10px -5px rgba(0, 0, 0, 0.09);
+}
+[data-pwa] #pageContent .info {
+  margin: 10px auto 0;
+}
+[data-pwa] #pageContent .info {
+  font-size: 1.4rem;
 }
 
-/* Smartphones (landscape) ----------- */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 850px) and (orientation: landscape) {
-  #pageContent .avatarImg {
-    float: none;
-    box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.07), 0 4px 25px 0px rgba(0, 0, 0, 0.07), 0 8px 10px -5px rgba(0, 0, 0, 0.09);
-  }*/
-  #pageContent .info {
-    font-size: 1.4rem;
-  }
-}
+#pageHeader{display: none!important;}
+#pageFooter{display: none!important;}
