@@ -1,6 +1,10 @@
 [data-pwa] #pageHeader{
 	height: 50px;
 }
+[data-pwa] #pageHeader:empty{
+	height: 0;
+	display: none;
+}
 #pageHeader .pwa{
 	position: fixed;
 	z-index:10;

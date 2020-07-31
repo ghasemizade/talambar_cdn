@@ -1,6 +1,10 @@
 [data-pwa] #pageFooter{
 	height: 50px;
 }
+[data-pwa] #pageFooter:empty{
+	height: 0;
+	display: none;
+}
 #pageFooter .pwa{
 	position: fixed;
 	z-index:10;
