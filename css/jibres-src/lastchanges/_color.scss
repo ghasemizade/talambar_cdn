@@ -140,28 +140,28 @@
 
 
 // info btn
-.info{
+.btn.info{
 	background-color: #00b0aa;
 	color: #fff;
 }
-.info.outline{
+.btn.info.outline{
 	background-color: transparent;
 	border-color:#00b0aa;
 	color: #00b0aa;
 }
-.info:hover{
+.btn.info:hover{
 	background-color: #00a0a0;
 	color: #fff;
 }
-.info:focus{
+.btn.info:focus{
 	background-color: #009090;
 	color: #fff;
 }
-.info:active, .info.active{
+.btn.info:active, .btn.info.active{
 	background-color: #008080;
 	color: #fff;
 }
-.info > a{
+.btn.info > a{
 	@include links(#fff, #fff, #fff, #fff);
 }
 
