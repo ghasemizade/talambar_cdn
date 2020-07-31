@@ -96,7 +96,7 @@ a:hover {
   text-align: center;
 }
 [data-pwa] #pageContent .avatarImg {
-  box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.07), 0 4px 25px 0px rgba(0, 0, 0, 0.07), 0 8px 1rem -5px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2.5rem 8rem -1.2rem rgba(0, 0, 0, 0.07), 0 0.5rem 2.5rem 0px rgba(0, 0, 0, 0.07), 0 0.8rem 1rem -0.5rem rgba(0, 0, 0, 0.09);
 }
 #pageContent .social {
   margin: 1rem auto;
