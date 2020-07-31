@@ -25,7 +25,7 @@ a:hover {
   align-items: start;
 }
 #pageContent .visitBox {
-  margin: 10px;
+  margin: 1rem;
   background: #FFFFFF;
   background: -webkit-linear-gradient(to bottom, #FFFFFF, #efefef);
   background: linear-gradient(to bottom, #FFFFFF, #efefef);
@@ -52,6 +52,10 @@ a:hover {
   font-size: 1.6rem;
   padding: 0 1rem;
 }
+[data-pwa] #pageContent .info {
+  margin: 1rem auto 0;
+  font-size: 1.4rem;
+}
 #pageContent .info h1 {
   font-size: 2em;
   line-height: 2em;
@@ -64,6 +68,7 @@ a:hover {
 }
 [data-pwa] #pageContent .info h1{
   font-size: 1.5em;
+  white-space: initial;
 }
 #pageContent .info h2 {
   font-size: 1em;
@@ -77,6 +82,10 @@ a:hover {
   text-overflow: ellipsis;
   white-space: initial;
 }
+[data-pwa] #pageContent .info h2{
+  -webkit-line-clamp: 5;
+  max-height: initial;
+}
 #pageContent .avatarImg {
   position: relative;
   display: inline-block;
@@ -85,6 +94,9 @@ a:hover {
   border-radius: 12.5rem;
   overflow: hidden;
   text-align: center;
+}
+[data-pwa] #pageContent .avatarImg {
+  box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.07), 0 4px 25px 0px rgba(0, 0, 0, 0.07), 0 8px 1rem -5px rgba(0, 0, 0, 0.09);
 }
 #pageContent .social {
   margin: 1rem auto;
@@ -96,6 +108,7 @@ a:hover {
   margin: 0.5rem;
   width: 3rem;
   height: 3rem;
+  border-radius: 50%;
   overflow: hidden;
 }
 #pageContent .social a:hover {
@@ -107,19 +120,6 @@ a:hover {
   height: 3rem;
   border-radius: 50%;
   overflow: hidden;
-}
-#pageContent .social .telegram {
-  border-radius: 50%;
-}
-
-[data-pwa] #pageContent .avatarImg {
-  box-shadow: 0 25px 80px -12px rgba(0, 0, 0, 0.07), 0 4px 25px 0px rgba(0, 0, 0, 0.07), 0 8px 10px -5px rgba(0, 0, 0, 0.09);
-}
-[data-pwa] #pageContent .info {
-  margin: 10px auto 0;
-}
-[data-pwa] #pageContent .info {
-  font-size: 1.4rem;
 }
 
 
