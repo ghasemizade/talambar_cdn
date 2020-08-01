@@ -120,20 +120,26 @@ a:hover {
 #pageContent .social a {
   text-decoration: none;
   display: inline-block;
-  opacity: 0.75;
-  margin: 0.5rem;
-  width: 3rem;
-  height: 3rem;
+  opacity: 0.8;
+  margin: 0.2rem;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   overflow: hidden;
+  transition: .2s;
 }
 #pageContent .social a:hover {
-  opacity: 0.95;
+  opacity: 1;
+  transform: scale(1.4);
+}
+#pageContent .social a:active {
+  transform: scale(1.2);
 }
 #pageContent .social img {
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0.2rem;
   border-radius: 50%;
   overflow: hidden;
 }
