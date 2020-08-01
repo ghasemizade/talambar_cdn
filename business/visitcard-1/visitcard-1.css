@@ -34,7 +34,14 @@ a:hover {
   width: 70rem;
   border-radius: 12.5rem;
   overflow: hidden;
+  transition: 0.3s;
   box-shadow: 0 1rem 3rem rgba(107,124,147,.15);
+}
+#pageContent .visitBox:hover{
+  box-shadow: 0 1.5rem 3rem rgba(107,124,147,.2);
+}
+#pageContent .visitBox:active{
+  box-shadow: 0 2rem 3rem rgba(107,124,147,.3);
 }
 [data-pwa] #pageContent .visitBox{
   height: auto;
