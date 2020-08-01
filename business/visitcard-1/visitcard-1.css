@@ -1,6 +1,9 @@
 body {
   background-color: #efefef!important;
 }
+[dir='ltr'] body{
+  font-family: 'Quicksand',LatoLatinWeb,IRANYekan,"Segoe UI",Helvetica,sans-serif
+}
 [data-pwa] body {
   background-color: #efefef!important;
 }
