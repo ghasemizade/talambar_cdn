@@ -5,7 +5,7 @@ body {
   background-color: #efefef!important;
 }
 a {
-  color: #181934;
+  color: #191934;
   text-decoration: none;
   transition: all 100ms;
 }
@@ -19,10 +19,7 @@ a:hover {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  color: #171421;
-}
-[data-pwa] #pageContent {
-  align-items: start;
+  color: #171520;
 }
 #pageContent .visitBox {
   margin: 1rem;
@@ -45,9 +42,9 @@ a:hover {
 }
 [data-pwa] #pageContent .visitBox{
   height: auto;
-  width: 25rem;
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
 }
 #pageContent .info {
   max-width: 45rem;
@@ -58,13 +55,14 @@ a:hover {
   justify-content: center;
   font-size: 1.6rem;
   padding: 0 1rem;
+  overflow: hidden;
 }
 [data-pwa] #pageContent .info {
   margin: 1rem auto 0;
-  font-size: 1.4rem;
+  padding: 0;
 }
 #pageContent .info h1 {
-  font-size: 2em;
+  font-size: 3.6rem;
   line-height: 2em;
   font-weight: 700;
   padding: 0 5%;
@@ -74,10 +72,12 @@ a:hover {
   max-width: 100%;
 }
 [data-pwa] #pageContent .info h1{
-  font-size: 1.5em;
+  padding: 0;
+  font-size: 3rem;
   white-space: initial;
 }
 #pageContent .info h2 {
+  font-size: 1.6rem;
   font-size: 1em;
   line-height: 2em;
   max-height: 6em;
@@ -90,6 +90,7 @@ a:hover {
   white-space: initial;
 }
 [data-pwa] #pageContent .info h2{
+  padding: 0;
   -webkit-line-clamp: 5;
   max-height: initial;
 }
