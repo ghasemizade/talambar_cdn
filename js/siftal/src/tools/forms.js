@@ -226,8 +226,11 @@
         }
       }
 
-      var refresh = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
-      var autoClose = ajaxOptions.autoClose || $this.attr('data-autoClose') !== undefined;
+      var autoCloseAttr  = $this.attr('data-autoClose');
+      var autoScrollAttr = $this.attr('data-autoScroll');
+
+      var refresh        = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
+      var autoClose      = ajaxOptions.autoClose || autoCloseAttr !== undefined;
 
       if(!_super.noLoading)
       {
@@ -285,9 +288,9 @@
         if(autoClose)
         {
           var closeAfter = 0;
-          if($this.attr('data-autoClose'))
+          if(autoCloseAttr)
           {
-            closeAfter = $this.attr('data-autoClose');
+            closeAfter = autoCloseAttr;
           }
           notif('info', 'Auto close');
           setTimeout (function()
@@ -300,9 +303,9 @@
         if(data && data.redirect)
         {
           var autoScroll = true;
-          if($this.attr('data-autoScroll'))
+          if(autoScrollAttr)
           {
-            autoScroll = $this.attr('data-autoScroll');
+            autoScroll = autoScrollAttr;
           }
 
           var a = $('<a href="' + data.redirect + '"></a>');
@@ -326,11 +329,11 @@
         if(refresh)
         {
           var autoScroll = false;
-          if($this.attr('data-autoScroll'))
+          if(autoScrollAttr)
           {
-            autoScroll = $this.attr('data-autoScroll');
+            autoScroll = autoScrollAttr;
           }
-          else if($this.attr('data-autoScroll') !== undefined)
+          else if(autoScrollAttr !== undefined)
           {
             autoScroll = true;
           }
@@ -341,7 +344,7 @@
             replace: true
           });
         }
-        else if($this.attr('data-autoScroll') !== undefined)
+        else if(autoScrollAttr !== undefined)
         {
           findPushStateScroll();
         }
