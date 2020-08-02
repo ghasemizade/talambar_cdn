@@ -44,6 +44,11 @@
   user-select: none;
   min-height: 54px;
 }
+[data-pwa] .iziToast {
+  min-height: 36px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .iziToast > .iziToast-progressbar {
   position: absolute;
   left: 0;
@@ -328,7 +333,7 @@
   text-align: center;
 }
 [data-pwa] .iziToast-wrapper-bottomCenter{
-  margin-bottom: 60px;
+  margin-bottom: 5rem;
 }
 .iziToast-wrapper-center {
   top: 0;
