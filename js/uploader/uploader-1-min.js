@@ -99,7 +99,8 @@ function runUploader()
     fileChooseNone: "Please select one file!",
     fileChooseOnlyOne: "Please choose only one file!",
     fileUltraMaxSize: "Please select file with less than 10 MB!",
-    fileMaxSize: "Please select file with less than 2 MB!",
+    fileMaxSizeInit: "Please select file with less than 2 MB!",
+    fileMaxSize: "Please select file with less than 1 MB!",
   }
 
   if(urlLang() === 'fa')
@@ -108,8 +109,9 @@ function runUploader()
     {
       fileChooseNone: "لطفا فایلی را انتخاب کنید!",
       fileChooseOnlyOne: "لطفا تنها یک فایل را امتخاب کنید",
-      fileUltraMaxSize: "فایل انتخابی باید کمتر از ۱۰ مگ داشته ابشد.",
-      fileMaxSize: "فایل شما باید  کمتر از ۲ مگ باشد.",
+      fileUltraMaxSize: "فایل انتخابی باید کمتر از ۱۰ مگ داشته باشد",
+      fileMaxSizeInit: "حجم فایل شما باید کمتر از ۲ مگ باشد.",
+      fileMaxSize: "حجم فایل شما باید کمتر از ۱ مگ باشد.",
     }
   }
 
