@@ -20,8 +20,9 @@
 .btn.master{font-size:1em;transition: all 150ms ease-out;background-color:#2080d0;color:#fff;background:linear-gradient(to left, #2080d0, #6b7ae0);}
 .btn.master.back{background:#eceff1;color:#333;padding-left:0.5em;padding-right:0.5em;min-width:90px;}
 [data-pwa] .titleBox .btn.master.back{display: none;}
-.btn.master.save{background:#20d077;background:linear-gradient(to left, #20d087, #3fb33d);padding-left:1rem;padding-right:1rem;min-width:100px;font-size: 1.4rem;}
+.btn.master.save{background:#20d087;background:linear-gradient(to left, #20d087, #3fb33d);padding-left:1rem;padding-right:1rem;min-width:100px;font-size: 1.4rem;}
 [data-pwa] .titleBox .btnSave{display: none;}
+.btn.master.add{background:#d02092;background:linear-gradient(to left, #d02092, #b33d63);padding-left:1rem;padding-right:1rem;min-width:100px;font-size: 1.4rem;}
 .btn.master:hover{box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.3rem #2080d0;}
 .btn.master:focus{box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #6b7ae0;}
 .btn.master:active {box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #2080d0;transition-duration: 75ms;}
