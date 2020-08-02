@@ -261,7 +261,7 @@ body .rtl .items li .go::after{
 	border-radius:$myRadiusPWA;
 	font-size: 1.2rem;
 }
-[data-pwa] .items li, [data-pwa] .items li{
+[data-pwa] .items li{
 	line-height: $myItemLineHeight_PWA;
 	height: $myItemHeight_PWA;
 	min-height: $myItemHeight_PWA;
@@ -292,3 +292,33 @@ body .rtl .items li .go::after{
 	max-width:$myItemLineHeight_PWA;
 	padding: 0;
 }
+
+
+.items.pwaMultiLine{
+	font-size: 1.2rem;
+}
+.items.pwaMultiLine li{
+	line-height: 2rem;
+	min-height: 5rem;
+	height: 5rem;
+}
+.items.pwaMultiLine li img {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+.items.pwaMultiLine li .key{
+	height: 4rem;
+	min-height: 4rem;
+}
+.items.pwaMultiLine li .key div{
+	height: 2rem;
+	min-height: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.items.pwaMultiLine li .key .line2{
+	color: #999;
+}
+
+
