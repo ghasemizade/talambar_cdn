@@ -308,6 +308,7 @@ function runUploader()
     {
       var fileName = fileInfo['name'];
       fileInfo['ext'] = fileName.substr(fileName.lastIndexOf('.') + 1, fileName.length);
+      fileInfo['ext'] = fileInfo['ext'].toLowerCase();
     }
 
     return fileInfo;
