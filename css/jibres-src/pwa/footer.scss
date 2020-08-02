@@ -9,7 +9,7 @@
 	position: fixed;
 	z-index:10;
 	background-color:#f8f8f8;
-	bottom:0;
+	bottom:-1px;
 	right:0;
 	left:0;
 	width: 100%;
@@ -56,9 +56,8 @@
 	width:100%;
 	overflow:hidden;
 	height: 2rem;
-	line-height: 1;
-	font-size:11px;
-
+	line-height: 1.5rem;
+	font-size:1rem;
 }
 
 #pageFooter .pwa .pwafooterBuy .title{
