@@ -226,11 +226,11 @@
         }
       }
 
-      var autoCloseAttr  = $this.attr('data-autoClose');
-      var autoScrollAttr = $this.attr('data-autoScroll');
+      var autoCloseAttr     = $this.attr('data-autoClose');
+      var autoScrollAttr    = $this.attr('data-autoScroll');
 
-      var refresh        = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
-      var autoClose      = ajaxOptions.autoClose || autoCloseAttr !== undefined;
+      var refresh   = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
+      var autoClose = ajaxOptions.autoClose || autoCloseAttr !== undefined;
 
       if(!_super.noLoading)
       {
@@ -242,6 +242,15 @@
       if($this.attr('data-timeout'))
       {
         ajaxOptions.timeout = $this.attr('data-timeout');
+      }
+
+      if($this.attr('data-removeElement'))
+      {
+        $this.remove();
+      }
+      else if($this.parents('[data-removeElement]'))
+      {
+        $this.parents('[data-removeElement]').remove()
       }
 
       // add progress to all ajaify forms
