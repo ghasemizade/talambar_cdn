@@ -259,6 +259,7 @@ body .rtl .items li .go::after{
 [data-pwa] .items{
 	box-shadow:none;
 	border-radius:$myRadiusPWA;
+	font-size: 1.2rem;
 }
 [data-pwa] .items li, [data-pwa] .items li{
 	line-height: $myItemLineHeight_PWA;
