@@ -206,6 +206,7 @@ body.dragging{
 [data-uploader] .previewList{
   margin: 0 1.5rem 1rem;
 }
+
 [data-uploader] .previewList .fileItem{
   width: 10rem;
   min-height: 10rem;
@@ -217,7 +218,7 @@ body.dragging{
   display: inline-block;
 }
 [data-pwa] [data-uploader] .previewList .fileItem{
-  width: 8rem;
+
 }
 [data-uploader] .previewList .fileItem img{
   display: block;
