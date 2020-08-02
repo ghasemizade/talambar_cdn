@@ -138,6 +138,9 @@ a:hover {
   overflow: hidden;
   transition: .2s;
 }
+[data-pwa] #pageContent .social a{
+  margin: 0;
+}
 #pageContent .social a:hover {
   opacity: 1;
   transform: scale(1.3);
