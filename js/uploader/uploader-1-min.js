@@ -216,6 +216,7 @@ function runUploader()
     switch (_ext)
     {
       case 'gif':
+        return false;
         return _ext;
         break;
 
@@ -293,7 +294,7 @@ function runUploader()
     // save name
     fileInfo['name'] = labelText;
 
-    _label.html(labelText);
+    _label.find('div').html(labelText);
     if(fileInfo['size'] && fileInfo['size'] > 0)
     {
       _label.attr('data-file-size', Math.round(fileInfo['size'] / 1024) + ' KB');
@@ -374,7 +375,7 @@ function runUploader()
             if(_blob.size)
             {
               _blob.KB_after = Math.round(_blob.size / 1024);
-              myLabel.attr('data-file-size', _blob.KB_after);
+              myLabel.attr('data-file-size', _blob.KB_after + ' KB');
             }
             if(_fileInfo.ext)
             {
