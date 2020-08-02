@@ -229,7 +229,13 @@
       document.title = obj.title;
     }
 
-    if(obj.autoScroll && $(obj.autoScroll).length === 1)
+
+    if(obj.autoScroll === true)
+    {
+      // force scroll to top of page
+      findPushStateScroll();
+    }
+    else if(obj.autoScroll && $(obj.autoScroll).length === 1)
     {
       // set scroll
       scrollSmoothTo($(obj.autoScroll));

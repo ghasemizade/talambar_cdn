@@ -228,11 +228,6 @@
 
       var refresh = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
       var autoClose = ajaxOptions.autoClose || $this.attr('data-autoClose') !== undefined;
-      var autoScroll = ajaxOptions.autoScroll || $this.attr('data-autoScroll');
-      if($(autoScroll).length !== 1)
-      {
-        autoScroll = null;
-      }
 
       if(!_super.noLoading)
       {
@@ -304,6 +299,12 @@
         unlockFormLoadingPage();
         if(data && data.redirect)
         {
+          var autoScroll = true;
+          if($this.attr('data-autoScroll'))
+          {
+            autoScroll = $this.attr('data-autoScroll');
+          }
+
           var a = $('<a href="' + data.redirect + '"></a>');
           if(a.isAbsoluteURL() || data.direct)
           {
@@ -324,11 +325,25 @@
 
         if(refresh)
         {
+          var autoScroll = false;
+          if($this.attr('data-autoScroll'))
+          {
+            autoScroll = $this.attr('data-autoScroll');
+          }
+          else if($this.attr('data-autoScroll') !== undefined)
+          {
+            autoScroll = true;
+          }
+
           Navigate({
             url: location.href,
             autoScroll: autoScroll,
             replace: true
           });
+        }
+        else if($this.attr('data-autoScroll') !== undefined)
+        {
+          findPushStateScroll();
         }
 
 
