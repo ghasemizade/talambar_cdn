@@ -158,7 +158,7 @@ function runUploader()
     return true;
   }
 
-  function OneFileMaxSizeOkay(_fileSize)
+  function OneFileMaxSizeOkay(_fileSize, _type)
   {
     if(!_fileSize)
     {
@@ -167,19 +167,41 @@ function runUploader()
     }
 
     var fileSizeMB = Math.round( (Math.round(_fileSize / 1024) / 1024) * 100) / 100;
-    var fileMaxSize = 1;
-    // get from form if exist
-    if(myUploaderFrame.attr('data-file-max-size'))
+
+    if(_type === 'init')
     {
-      fileMaxSize = parseInt(myUploaderFrame.attr('data-file-max-size'));
+      // check later
+      var fileMaxSizeInit = 2;
+      // get from form if exist
+      if(myUploaderFrame.attr('data-file-max-size-init'))
+      {
+        fileMaxSizeInit = parseInt(myUploaderFrame.attr('data-file-max-size-init'));
+      }
+
+      // if more than 2 MB
+      if(fileSizeMB > fileMaxSizeInit)
+      {
+        say({title: fileErrorMSG.fileMaxSizeInit , type: 'error'});
+        return false;
+      }
+    }
+    else
+    {
+      var fileMaxSize = 1;
+      // get from form if exist
+      if(myUploaderFrame.attr('data-file-max-size'))
+      {
+        fileMaxSize = parseInt(myUploaderFrame.attr('data-file-max-size'));
+      }
+
+      // if more than 1 MB
+      if(fileSizeMB > fileMaxSize)
+      {
+        say({title: fileErrorMSG.fileMaxSize , type: 'error'});
+        return false;
+      }
     }
 
-    // if more than 1 MB
-    if(fileSizeMB > fileMaxSize)
-    {
-      say({title: fileErrorMSG.fileMaxSize , type: 'error'});
-      return false;
-    }
 
     return true;
   }
