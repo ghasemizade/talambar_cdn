@@ -370,8 +370,14 @@
 
       if(_textStatus === 'timeout')
       {
-        notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-hourglass-o'});
+        notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
         pingi();
+      }
+
+
+      if(_result && _result.responseJSON)
+      {
+        notifGenerator(_result.responseJSON);
       }
       else if(_textStatus === 'error')
       {
@@ -386,14 +392,8 @@
         {
           var statusCode = _result.status;
 
-          notif('fatal', statusCode + ' ' + _error, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-hourglass-o'});
+          notif('fatal', statusCode + ' ' + _error, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
         }
-      }
-
-
-      if(_result && _result.responseJSON)
-      {
-        notifGenerator(_result.responseJSON);
       }
 
       // remove loading
