@@ -55,17 +55,17 @@
 }
 
 // icons - right
-#pageHeader .pwa .search::before{content: "\e03f";}
-#pageHeader .pwa .cart::before{content: "\e125";}
-#pageHeader .pwa .menu::before{content: "\43";}
-#pageHeader .pwa .add::before{content: "\e03e";}
-#pageHeader .pwa .setting::before{content: "\e04b";}
-#pageHeader .pwa .duplicate::before{content: "\75";}
-#pageHeader .pwa .save::before{content: "\e084";}
-#pageHeader .pwa .preview::before{content: "\e0af";}
-#pageHeader .pwa .view::before{content: "\e1ac";}
-#pageHeader .pwa .help::before{content: "\e0f5";}
-#pageHeader .pwa .back::before{content: "\e0c1";}
+#pageHeader .pwa .square.search::before{content: "\e03f";}
+#pageHeader .pwa .square.cart::before{content: "\e125";}
+#pageHeader .pwa .square.menu::before{content: "\43";}
+#pageHeader .pwa .square.add::before{content: "\e03e";}
+#pageHeader .pwa .square.setting::before{content: "\e04b";}
+#pageHeader .pwa .square.duplicate::before{content: "\75";}
+#pageHeader .pwa .square.save::before{content: "\e084";}
+#pageHeader .pwa .square.preview::before{content: "\e0af";}
+#pageHeader .pwa .square.view::before{content: "\e1ac";}
+#pageHeader .pwa .square.help::before{content: "\e0f5";}
+#pageHeader .pwa .square.back::before{content: "\e0c1";}
 [dir="rtl"]  #pageHeader .pwa .back::before{content: "\e0c2";}
 
 // title
@@ -95,11 +95,23 @@
 	margin: 0;
 }
 
+// simple button
+#pageHeader .pwa button{
+	cursor: pointer;
+	color: #00796b !important;
+	min-width: 5rem;
+	line-height: 4rem;
+	border:none;
+	background-color: transparent;
+	font-weight: 700;
+	padding: 0;
+	font-size: 1.6rem;
+}
 
 // extra
 [dir="ltr"] #pageHeader .pwa .action{text-align: right;padding-right:5px;font-weight: 700;}
 [dir="rtl"] #pageHeader .pwa .action{text-align: left;padding-left:5px;font-weight: 700;}
-[dir='rtl'] #pageHeader .pwa button {cursor: pointer;color: #0a7ce7 !important;font-weight:700;}
+[dir='rtl'] #pageHeader .pwa button {font-weight:700;}
 #pageHeader .pwa img{max-height:4rem;display:inline-block}
 
 
