@@ -294,7 +294,7 @@ function runUploader()
     // save name
     fileInfo['name'] = labelText;
 
-    _label.find('div').html(labelText);
+    _label.find('abbr').html(labelText);
     if(fileInfo['size'] && fileInfo['size'] > 0)
     {
       _label.attr('data-file-size', Math.round(fileInfo['size'] / 1024) + ' KB');

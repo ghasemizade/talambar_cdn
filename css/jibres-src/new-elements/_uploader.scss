@@ -76,7 +76,7 @@ body.dragging{
 [data-pwa] [data-uploader] input[type='file'] + label{
   white-space: initial;
 }
-[data-uploader] input[type='file'] + label[data-file-size] div{
+[data-uploader] input[type='file'] + label[data-file-size] abbr{
   direction: ltr;
   font-family: monospace;
 }
