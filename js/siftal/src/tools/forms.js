@@ -356,7 +356,7 @@
       {
         if(_textStatus === 'timeout')
         {
-          if($('html').attr('lang') === 'fa')
+          if(urlLangFa())
           {
             notif('fatal', 'مهلت درخواست  به پایان رسید', 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-history'});
           }
@@ -378,7 +378,7 @@
 
               if(notifResult === false)
               {
-                if($('html').attr('lang') === 'fa')
+                if(urlLangFa())
                 {
                   notif('fatal', 'خطا در دریافت اطلاعات از سرور', 'درخواست ناموفق بود!');
                 }
@@ -390,7 +390,7 @@
             }
             else
             {
-              if($('html').attr('lang') === 'fa')
+              if(urlLangFa())
               {
                 notif('fatal', 'نتیجه دریافتی از سرور نامعتبر است', 'درخواست ناموفق بود!');
               }
@@ -407,7 +407,7 @@
           }
           else
           {
-            if($('html').attr('lang') === 'fa')
+            if(urlLangFa())
             {
               notif('fatal', 'هیچ پاسخی از سرور  دریافت نشد', 'درخواست ناموفق بود!');
             }
