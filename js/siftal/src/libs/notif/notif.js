@@ -45,8 +45,13 @@ function notif(_type, _msg, _title, _timeout, _opt)
   }
 
   notifOpt.transitionOut = 'fadeOutRight';
+
+  // override on pwa
+  notifOpt.transitionInMobile = 'bounceInDown';
+  notifOpt.transitionOutMobile = 'fadeOutLeft';
+
   // rtl design
-  if($('html').attr('dir') === 'rtl')
+  if(urlDirRtl())
   {
     notifOpt.rtl = true;
     notifOpt.transitionOut = 'fadeOutLeft';
@@ -67,7 +72,18 @@ function notif(_type, _msg, _title, _timeout, _opt)
     {
       notifOpt.transitionIn = 'fadeInRight';
     }
+
+    // override on pwa
+    // notifOpt.transitionInMobile = 'bounceInDown';
+    notifOpt.transitionOutMobile = 'fadeOutRight';
   }
+
+  if(isPagePWA())
+  {
+  notifOpt.position = 'topCenter';
+
+  }
+
 
   // add message
   if(_msg)
@@ -145,6 +161,10 @@ function notif(_type, _msg, _title, _timeout, _opt)
 
   // change some default options
   notifOpt.layout = 2;
+  if(isPagePWA())
+  {
+    notifOpt.layout = 1;
+  }
 
   // run if exist
   if(typeof iziToast[_type] === 'function')

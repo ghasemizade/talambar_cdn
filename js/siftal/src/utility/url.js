@@ -179,6 +179,27 @@ function urlDir()
 }
 
 
+function isPagePWA()
+{
+  if($('html').attr('data-pwa') !== undefined)
+  {
+    return true
+  }
+
+  return false;
+}
+
+
+function isPageDesktop()
+{
+  if($('html').attr('data-desktop') !== undefined)
+  {
+    return true
+  }
+
+  return false;
+}
+
 function urlDirRtl()
 {
   if(urlDir() === 'rtl')
