@@ -126,4 +126,13 @@
 	color: #fff;
 	padding: 0;
 	margin: 0;
+	opacity: 1;
+	transition:0.3s;
 }
+#pageFooter .pwa [data-key="cart"] .icon i[data-item="۰"]::after{
+	opacity: 0;
+}
+#pageFooter .pwa [data-key="cart"] .icon i[data-item="0"]::after{
+	opacity: 0;
+}
+
