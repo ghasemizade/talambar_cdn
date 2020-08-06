@@ -147,10 +147,19 @@
           if($(this).html() !== $targetOnOldPage.html())
           {
             pageContentChanged = true;
-            // add content after old one - simple replace
-            $targetOnOldPage.after(this);
-            // remove old one
-            $targetOnOldPage.remove();
+
+            if(myNewXhrName === 'loadMore')
+            {
+              // add content after old one - simple replace
+              $targetOnOldPage.after($(this).html());
+            }
+            else
+            {
+              // add content after old one - simple replace
+              $targetOnOldPage.after(this);
+              // remove old one
+              $targetOnOldPage.remove();
+            }
           }
 
         }
