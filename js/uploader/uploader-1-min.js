@@ -349,10 +349,19 @@ function runUploader()
         {
           cropOption.width = myUploaderFrame.attr('data-max-w');
         }
+        else
+        {
+          cropOption.width = 2000;
+        }
         if(myUploaderFrame.attr('data-max-h') !== undefined)
         {
           cropOption.height = myUploaderFrame.attr('data-max-h');
         }
+        else
+        {
+          cropOption.height = 2000;
+        }
+
 
         var myNewImg = cropperObj.getCroppedCanvas(cropOption);
         if(myNewImg)
