@@ -7,9 +7,16 @@ function handleDrag()
   {
     $(document).off(_event).on(_event, function(_e)
     {
-      // preventing the unwanted behaviours
-      _e.preventDefault();
-      _e.stopPropagation();
+      if(_e.target && $(_e.target).parents('[data-sortable]'))
+      {
+        // do nothing
+      }
+      else
+      {
+        // preventing the unwanted behaviours
+        _e.preventDefault();
+        _e.stopPropagation();
+      }
     });
   });
 
