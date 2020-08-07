@@ -427,6 +427,12 @@ function runUploader()
     {
       return false;
     }
+    // if input simple file, use only key zero
+    if(_files.length === 1)
+    {
+      _files = _files[0];
+    }
+
     // add to prop of frame element
     myUploaderFrame.prop('droppedFiles', _files);
 
