@@ -18,6 +18,8 @@ function insideIframe()
     }
     else
     {
+      console.log(top.location);
+      console.log(self.location);
       $('html').attr('data-iframe', 'block').html('');
     }
 
