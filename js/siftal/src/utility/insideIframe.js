@@ -1,7 +1,7 @@
 
 function insideIframe()
 {
-  if (top.location != self.location)
+  if (top.location.hostname != self.location.hostname)
   {
     var allowIframe = null;
     if($('body').attr('data-env') === 'Jibres')
@@ -18,8 +18,6 @@ function insideIframe()
     }
     else
     {
-      console.log(top.location);
-      console.log(self.location);
       $('html').attr('data-iframe', 'block').html('');
     }
 
