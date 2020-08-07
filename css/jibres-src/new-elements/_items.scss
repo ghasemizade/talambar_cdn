@@ -63,6 +63,9 @@ body .ltr .items li + li::before{
 	max-height: $myItemLineHeight;
 	border-radius: 0.5rem;
 }
+.items li img[data-size='16x9']{
+	max-width: $myItemLineHeight16x9;
+}
 .items li .item i{
 	height:$myItemLineHeight;
 	-webkit-box-flex:0;
@@ -269,6 +272,9 @@ body .rtl .items li .go::after{
 [data-pwa] .items li img{
 	max-width: $myItemLineHeight_PWA;
 	max-height: $myItemLineHeight_PWA;
+}
+[data-pwa] .items li img[data-size='16x9']{
+	max-width: $myItemLineHeight16x9_PWA;
 }
 [data-pwa] .items li .item i{
 	height:$myItemLineHeight_PWA;
