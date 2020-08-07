@@ -1,7 +1,7 @@
 .jProduct2{
 	min-height: 14rem;
-	max-height: 18rem;
-	max-width: 18rem;
+	max-height: 25rem;
+	max-width: 25rem;
 	margin: 0 auto 1rem;
 	position: relative;
 	display: block;
@@ -11,6 +11,7 @@
 	overflow: hidden;
 	display: block;
 	border-radius: 1rem;
+	min-height: 14rem;
 	height: 100%;
 }
 [data-pwa] .jProduct2 .overlay{
