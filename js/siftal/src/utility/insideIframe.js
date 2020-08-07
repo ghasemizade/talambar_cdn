@@ -1,7 +1,7 @@
 
 function insideIframe()
 {
-  if (top.location.hostname != self.location.hostname)
+  if (top.location != self.location)
   {
     var allowIframe = null;
     if($('body').attr('data-env') === 'Jibres')
@@ -18,7 +18,14 @@ function insideIframe()
     }
     else
     {
-      $('html').attr('data-iframe', 'block').html('');
+      if (top.location.hostname === self.location.hostname)
+      {
+        $('html').attr('data-iframe', 'preview');
+      }
+      else
+      {
+        $('html').attr('data-iframe', 'block').html('');
+      }
     }
 
     // if(window.top.$('body').attr('data-env') !== 'Jibres')
