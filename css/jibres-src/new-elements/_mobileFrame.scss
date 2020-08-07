@@ -42,8 +42,11 @@
     -o-background-size: cover;
     background-size: cover;
 	z-index: 3;
+	transition: 0.3s;
 }
-
+.mobileFrame:hover:after{
+	z-index: -1;
+}
 
 // splash Page design simulate
 .mobileFrame[data-splash]{
