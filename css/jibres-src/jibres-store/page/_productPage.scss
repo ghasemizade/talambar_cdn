@@ -181,8 +181,9 @@
 	float: right;
 }
 [data-pwa] .productPage .featureImgBlock{
-	width: initial;
+	width: 100%;
 	height: auto;
+	float: none;
 }
 [dir='rtl'] .productPage .featureImgBlock{
 	float: left;
