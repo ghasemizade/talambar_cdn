@@ -174,7 +174,8 @@
 .productPage .featureImgBlock{
 	display: inline-block;
 	width: 300px;
-	height: 300px;
+	max-height: 300px;
+	overflow: hidden;
 	margin: 0 auto;
 	max-width: 100%;
 	float: right;
@@ -192,6 +193,13 @@
 .productPage .featureImgBlock a img{
 	border-radius:.7rem;
 	display: block;
+	margin: 0 auto;
+}
+.productPage .featureImgBlock a video{
+	border-radius:.7rem;
+	display: block;
+	margin: 0 auto;
+	max-height: 300px;
 }
 .productPage .thumbs{
 	width: 55px;
