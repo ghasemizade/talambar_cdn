@@ -1,13 +1,14 @@
 .jProduct2{
-	max-height: 400px;
+	height: 18rem;
 	position: relative;
+	display: block;
 }
 .jProduct2 .overlay{
 	position: relative;
 	overflow: hidden;
 	display: block;
 	border-radius: 1rem;
-	margin-bottom: 0.5rem;
+	height: 100%;
 }
 [data-pwa] .jProduct2 .overlay{
 	margin-bottom: 1rem;
@@ -40,25 +41,66 @@
 [data-desktop] .jProduct2 .overlay:hover img{
 	transform: scale(1.1);
 }
-.jProduct2 figcaption{
+.jProduct2 footer{
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	width: 100%;
-	padding: 0 5% 1em;
+	padding: 0 1rem 0.5em;
 	transition: 0.3s;
 	z-index: 2;
 	color: #fff;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	overflow: hidden;
 }
-.jProduct2 a:hover figcaption{
+.jProduct2 footer > .f{
+	direction: ltr;
+}
+.jProduct2 a:hover footer{
 	padding-bottom: 2em;
 }
-.jProduct2 h2{
-	font-size: 1.3em;
-	font-weight: 700;
-	margin: 0;
+
+.jProduct2 figcaption{
 	max-height: 6rem;
+	opacity: 0;
+	transition: 0.2s;
+	line-height: 1.5rem;
+}
+.jProduct2:hover figcaption{
+	opacity: 1;
+}
+.jProduct2 .price{
+	height: 2.5rem;
+	line-height: 2.5rem;
+	min-width: 80px;
+	text-align: left;
+	padding: 0 5%;
+	overflow: hidden;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #fff;
+}
+.jProduct2 .unit{
+	font-size: 1rem;
+	font-weight: 400;
+	color: #ddd;
+}
+.jProduct2 .compareAtPrice{
+	font-size: 1.2rem;
+	color: #ddd;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 50px;
+	text-decoration-color:#ff4747;
+}
+
+
+.jProduct2 h2{
+	margin: 0;
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
@@ -96,9 +138,6 @@
 }
 .category .jProduct2 figcaption{
 	text-shadow: 0px 3px 3px #777;
-}
-.category .jProduct2 .overlay::after{
-	background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.3) 100%);
 }
 [data-pwa] .category .jProduct2 h2{
 	display: block;
