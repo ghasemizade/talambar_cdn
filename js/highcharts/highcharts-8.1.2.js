@@ -552,6 +552,42 @@ this.noDataLabel.align(e(this.noDataLabel.getBBox(),b.position),!1,"plotBox"))};
 
 
 
+// default option
+Highcharts.setOptions(
+  {
+    credits:
+    {
+        text: 'Jibres',
+        href: 'https://jibres.com',
+    },
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 768
+            },
+            chartOptions: {
+                legend: {
+                    enabled: false
+                },
+                yAxis: {
+                    labels: {
+                        align: 'left',
+                        x: 0,
+                        y: -5
+                    },
+                    title: {
+                        text: null
+                    }
+                },
+                subtitle: {
+                    text: null
+                },
+            }
+        }]
+    }
+  }
+);
+
 // persian translation
 if($('html').attr('lang') === 'fa')
 {
@@ -609,18 +645,6 @@ if($('html').attr('lang') === 'fa')
         useHTML: true,
         borderWidth: 0,
         shared: true
-      }
-    }
-  );
-}
-else
-{
-  Highcharts.setOptions(
-    {
-      credits:
-      {
-          text: 'Jibres',
-          href: 'https://jibres.com',
       }
     }
   );
