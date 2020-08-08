@@ -38,6 +38,9 @@
 
 .jProduct2 .overlay a{
 	display: block}
+.jProduct2 .overlay[data-gr] img{
+	opacity: 0.4;
+}
 .jProduct2 .overlay img{
 	display:block; transition: 0.3s;
 	transform: scale(1);
