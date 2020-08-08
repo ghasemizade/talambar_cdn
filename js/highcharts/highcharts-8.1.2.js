@@ -563,7 +563,7 @@ Highcharts.setOptions(
     responsive: {
         rules: [{
             condition: {
-                maxWidth: 768
+                maxWidth: 480
             },
             chartOptions: {
                 legend: {
@@ -641,6 +641,12 @@ if($('html').attr('lang') === 'fa')
         { title: {useHTML: Highcharts.hasBidiBug} },
         { title: {useHTML: Highcharts.hasBidiBug} }
       ],
+      title: {
+        useHTML: true
+      },
+      legend: {
+        useHTML: true
+      },
       tooltip: {
         useHTML: true,
         borderWidth: 0,
