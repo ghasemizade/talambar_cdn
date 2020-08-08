@@ -8,6 +8,12 @@
     height: 25px;
     background:url('../logo/icon/svg/Jibres-Logo-icon.svg') no-repeat;
 }
+[data-pwa] .chart::after{
+    width: 20px;
+    height: 20px;
+    bottom: 12px;
+    right: 14px;
+}
 .chart[data-hint]::before{
     content: attr(data-hint);
     position: absolute;
