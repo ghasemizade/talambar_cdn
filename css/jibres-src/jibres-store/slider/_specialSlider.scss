@@ -2,16 +2,17 @@
 	max-height: 400px;
 	position: relative;
 	overflow: hidden;
+	margin-bottom: 0.5rem;
+	display: block;
+	border-radius: 1rem;
+}
+[data-pwa] .roundedBox{
+	margin-bottom: 1rem;
 }
 .roundedBox .overlay{
 	position: relative;
 	overflow: hidden;
 	display: block;
-	border-radius: 1rem;
-	margin-bottom: 0.5rem;
-}
-[data-pwa] .roundedBox .overlay{
-	margin-bottom: 1rem;
 }
 .roundedBox .overlay:after{
 	content: "";
@@ -67,31 +68,29 @@
 	text-overflow: ellipsis;
 	white-space: initial;
 }
-.roundedBox .jSlider1{
-	margin: 0;
-	margin-bottom: 0.5rem;
-	border-radius: 1rem;
-}
-[data-desktop] .roundedBox .jSlider1:hover img{
+[data-desktop] .jSlider1:hover .roundedBox img{
 	transform: scale(1.1);
 }
-[data-pwa] .roundedBox .jSlider1{
+[data-pwa] .jSlider1{
 	margin-bottom: 1rem;
 }
-.roundedBox .jSlider1 .overlay{
+.jSlider1 .roundedBox .overlay{
 	margin:0;
 	border-radius: 0;
 }
-.roundedBox .jSlider1 h2{
+.jSlider1 .roundedBox h2{
 	font-size: 1.5em;
 }
-
 [data-pwa] .roundedBox h2{
 	font-size: 1rem;
 	-webkit-line-clamp: 2;
 	display: none;
 }
-[data-pwa] .roundedBox .jSlider1 h2{
+[data-pwa] .jSlider1 .roundedBox{
+	margin: 0;
+	border-radius: 0;
+}
+[data-pwa] .jSlider1 .roundedBox h2{
 	display: block;
 	font-size: 1.2rem;
 }
