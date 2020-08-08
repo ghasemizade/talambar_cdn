@@ -6,6 +6,9 @@
 	display: block;
 	border-radius: 1rem;
 }
+.roundedBox[data-gr] img{
+	opacity: 0.3;
+}
 [data-pwa] .roundedBox{
 	margin-bottom: 1rem;
 }
