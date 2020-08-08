@@ -74,6 +74,9 @@
 	transition: 0.2s;
 	line-height: 1.5rem;
 }
+[data-desktop] .jProduct2 figcaption{
+	opacity: 0.8;
+}
 .jProduct2:hover figcaption{
 	opacity: 1;
 }
