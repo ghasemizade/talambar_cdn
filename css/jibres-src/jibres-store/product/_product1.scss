@@ -72,6 +72,9 @@
 	border-radius: 0.5rem 0.5rem 0 0;
 	max-height: 300px;
 }
+.jProduct1 .cover[data-gr] img{
+	opacity: 0.1;
+}
 .jProduct1 .cover::before{
 	content: "";
 	display: block;
