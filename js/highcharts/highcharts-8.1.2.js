@@ -579,6 +579,11 @@ Highcharts.setOptions(
                         text: null
                     }
                 },
+                title: {
+                    style:{
+                      fontSize: '12px'
+                    }
+                },
                 subtitle: {
                     text: null
                 },
