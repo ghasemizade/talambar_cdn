@@ -44,7 +44,7 @@
 	z-index: 3;
 	transition: 0.3s;
 }
-.mobileFrame:hover:after{
+[data-page='app'] .mobileFrame:hover:after{
 	z-index: -1;
 }
 
