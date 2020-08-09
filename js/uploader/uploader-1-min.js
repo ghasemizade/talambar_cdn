@@ -181,6 +181,7 @@ function runUploader()
       // if more than 2 MB
       if(fileSizeMB > fileMaxSizeInit)
       {
+        console.log('Your file size is ' + fileSizeMB);
         say({title: fileErrorMSG.fileMaxSizeInit , type: 'error'});
         return false;
       }
@@ -197,6 +198,7 @@ function runUploader()
       // if more than 1 MB
       if(fileSizeMB > fileMaxSize)
       {
+        console.log('Your file size is ' + fileSizeMB);
         say({title: fileErrorMSG.fileMaxSize , type: 'error'});
         return false;
       }
