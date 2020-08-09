@@ -9,6 +9,7 @@ function readPageAllScripts(_force, _page)
   readPageSortable();
   readPageCropper();
   readPageFancyBox();
+  readPageJsTree();
   readPageSlick();
   readPageSelect2();
   readPageUploader();
@@ -107,6 +108,20 @@ function readPageFancyBox()
     StyleLoader(urlJibres('cdn') + "css/lib/jquery.fancybox-3.5.7.min.css");
     myUrl = urlJibres('cdn') + "js/fancybox/jquery.fancybox-3.5.7.min.js";
     fileLoader(myUrl, 'runFancybox', true);
+  }
+}
+
+
+function readPageJsTree()
+{
+  var myEl = $('[data-jstree]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css");
+    myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js";
+    fileLoader(myUrl, 'runJstree', true);
   }
 }
 
