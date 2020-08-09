@@ -161,7 +161,7 @@ function readPageUploader()
     // load style
     // StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
     // load script
-    myUrl = urlJibres('cdn') + "js/uploader/uploader-1-min.js";
+    myUrl = urlJibres('cdn') + "js/uploader/uploader-1-min.js?v=1";
     fileLoader(myUrl, 'runUploader', true);
   }
 }
