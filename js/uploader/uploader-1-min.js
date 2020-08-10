@@ -98,7 +98,7 @@ function runUploader()
   {
     fileChooseNone: "Please select one file!",
     fileChooseOnlyOne: "Please choose only one file!",
-    fileUltraMaxSize: "Please select file with less than 10 MB!",
+    fileUltraMaxSize: "Please select file with less than 20 MB!",
     fileMaxSizeInit: "Please select file with less than 2 MB!",
     fileMaxSize: "Please select file with less than 1 MB!",
   }
@@ -109,7 +109,7 @@ function runUploader()
     {
       fileChooseNone: "لطفا فایلی را انتخاب کنید!",
       fileChooseOnlyOne: "لطفا تنها یک فایل را امتخاب کنید",
-      fileUltraMaxSize: "فایل انتخابی باید کمتر از ۱۰ مگ داشته باشد",
+      fileUltraMaxSize: "فایل انتخابی باید کمتر از ۲۰ مگ داشته باشد",
       fileMaxSizeInit: "حجم فایل شما باید کمتر از ۲ مگ باشد.",
       fileMaxSize: "حجم فایل شما باید کمتر از ۱ مگ باشد.",
     }
@@ -141,7 +141,7 @@ function runUploader()
   function checkOneFileFace(_file)
   {
     var fileSizeMB = Math.round( (Math.round(_file.size / 1024) / 1024) * 100) / 100;
-    var fileUltraMaxSize = 10;
+    var fileUltraMaxSize = 20;
 
     // get from form if exist
     if(myUploaderFrame.attr('data-file-ultra-size'))
