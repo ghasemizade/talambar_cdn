@@ -102,6 +102,7 @@ function runUploader()
     fileUltraMaxSize: "Please select file with less than 20 MB!",
     fileMaxSizeInit: "Please select file with less than 2 MB!",
     fileMaxSize: "Please select file with less than 1 MB!",
+    yourFileSize: "Your file size is ",
   }
 
   if(urlLang() === 'fa')
@@ -113,6 +114,7 @@ function runUploader()
       fileUltraMaxSize: "فایل انتخابی باید کمتر از ۲۰ مگ داشته باشد",
       fileMaxSizeInit: "حجم فایل شما باید کمتر از ۲ مگ باشد.",
       fileMaxSize: "حجم فایل شما باید کمتر از ۱ مگ باشد.",
+      yourFileSize: "اندازه فایل شما برابر است با ",
     }
   }
 
@@ -183,7 +185,7 @@ function runUploader()
       if(fileSizeMB > fileMaxSizeInit)
       {
         console.log('Your file size is ' + fileSizeMB);
-        say({title: fileErrorMSG.fileMaxSizeInit , type: 'error'});
+        say({title: fileErrorMSG.fileMaxSizeInit , type: 'error', text: fileErrorMSG.yourFileSize + fileSizeMB+ "MB"});
         return false;
       }
     }
@@ -200,7 +202,7 @@ function runUploader()
       if(fileSizeMB > fileMaxSize)
       {
         console.log('Your file size is ' + fileSizeMB);
-        say({title: fileErrorMSG.fileMaxSize , type: 'error'});
+        say({title: fileErrorMSG.fileMaxSize , type: 'error', text: fileErrorMSG.yourFileSize + fileSizeMB + "MB"});
         return false;
       }
     }
@@ -376,6 +378,7 @@ function runUploader()
           && Math.round(myCropData.width) == Math.round(myImgData.naturalWidth)
           // if filesize is less than 200kb don't crop
           && _fileInfo.size / 1000 < 500
+          // && false
           )
         {
           console.log('100% without crop ' + _fileInfo.size);
@@ -418,6 +421,12 @@ function runUploader()
               _blob.ext = _fileInfo.ext;
             }
 
+            if(_blob.KB_after > _blob.KB_before)
+            {
+              console.log('image size is increased from ' + _blob.KB_before + ' to ' + _blob.KB_after + 'KB:/');
+            }
+
+            console.log(_blob);
             appendFileToForm(_blob, _blob.size);
 
           }, newType, quality);
