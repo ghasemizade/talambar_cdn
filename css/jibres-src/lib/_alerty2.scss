@@ -218,7 +218,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 .alerty2-popup:focus{outline:none}
 .alerty2-popup.alerty2-loading{overflow-y:hidden}
 .alerty2-popup .alerty2-header{display:flex;flex-direction:column;align-items:center}
-.alerty2-popup .alerty2-title{display:block;position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}
+.alerty2-popup .alerty2-title{display:block;position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.7em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}
 .alerty2-popup .alerty2-actions{flex-wrap:wrap;align-items:center;justify-content:center;margin:1.25em auto 0;z-index:1}
 .alerty2-popup .alerty2-actions:not(.alerty2-loading) .alerty2-styled[disabled]{opacity:.4}
 .alerty2-popup .alerty2-actions:not(.alerty2-loading) .alerty2-styled:hover{background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1))}
