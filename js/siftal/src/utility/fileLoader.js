@@ -45,8 +45,8 @@ function readPageChart()
   if(myChartURL && myChartURL.length > 0)
   {
     var fnName       = myChartURL;
-    var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.1.2.js';
-    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
+    var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.1.2.js?v=1';
+    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js?v=1';
 
     fnName = fnName.replace('/', '_');
     if(fnName)
@@ -65,7 +65,7 @@ function readPageEditor()
 
   if(myEl && myEl.length > 0)
   {
-    myUrl = urlJibres('cdn') + "js/ckeditor5/ckeditor.js";
+    myUrl = urlJibres('cdn') + "js/ckeditor5/ckeditor.js?v=1";
     fileLoader(myUrl, 'runEditor', true);
   }
 }
@@ -78,7 +78,7 @@ function readPageSortable()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js";
+    myUrl = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js?v=1";
     fileLoader(myUrl, 'runSortable', true);
   }
 }
@@ -91,8 +91,8 @@ function readPageCropper()
   if(myEl && myEl.length > 0)
   {
     // load style
-    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css");
-    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js";
+    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css?v=1");
+    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js?v=1";
     fileLoader(myUrl, 'runCropper', true);
   }
 }
@@ -105,8 +105,8 @@ function readPageFancyBox()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "css/lib/jquery.fancybox-3.5.7.min.css");
-    myUrl = urlJibres('cdn') + "js/fancybox/jquery.fancybox-3.5.7.min.js";
+    StyleLoader(urlJibres('cdn') + "css/lib/jquery.fancybox-3.5.7.min.css?v=1");
+    myUrl = urlJibres('cdn') + "js/fancybox/jquery.fancybox-3.5.7.min.js?v=1";
     fileLoader(myUrl, 'runFancybox', true);
   }
 }
@@ -119,8 +119,8 @@ function readPageJsTree()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css");
-    myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js";
+    StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css?v=1");
+    myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js?v=1";
     fileLoader(myUrl, 'runJstree', true);
   }
 }
@@ -133,7 +133,7 @@ function readPageSlick()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "js/slick/slick-1.8.1.min.js";
+    myUrl = urlJibres('cdn') + "js/slick/slick-1.8.1.min.js?v=1";
     fileLoader(myUrl, 'runPageSlider', true);
   }
 }
@@ -146,7 +146,7 @@ function readPageSelect2()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "js/select2/select2.full-v4.0.13.js";
+    myUrl = urlJibres('cdn') + "js/select2/select2.full-v4.0.13.js?v=1";
     fileLoader(myUrl, 'runPageSelect2', true);
   }
 }
