@@ -78,7 +78,8 @@ function runUploader()
       if(isImgExt(fileInfo.ext))
       {
         // open crop modal
-        cropFullScreen(fileInfo);
+        cropFullScreen(fileInfo, _files);
+
         if (_files && _files[0])
         {
           // try to load file
@@ -319,7 +320,7 @@ function runUploader()
 
 
 
-  function cropFullScreen(_fileInfo)
+  function cropFullScreen(_fileInfo, _file)
   {
     var previewCircle = "";
     if(myUploaderFrame.attr('data-preview-circle') !== undefined)
@@ -364,6 +365,30 @@ function runUploader()
           cropOption.height = 2000;
         }
 
+
+        var myCropData = cropperObj.getData();
+        var myImgData = cropperObj.getImageData();
+
+        if(  myCropData.x == 0
+          && myCropData.y == 0
+          && myCropData.rotate == 0
+          && Math.round(myCropData.height) == Math.round(myImgData.naturalHeight)
+          && Math.round(myCropData.width) == Math.round(myImgData.naturalWidth)
+          // if filesize is less than 200kb don't crop
+          && _fileInfo.size / 1000 < 500
+          )
+        {
+          console.log('100% without crop ' + _fileInfo.size);
+          // on other ext append file to form
+          appendFileToForm(_file, _fileInfo.size);
+
+          if(myUploaderFinalResult.prop('selectedFileSrc'))
+          {
+            myUploaderFinalResult.attr('src', myUploaderFinalResult.prop('selectedFileSrc'));
+            myUploaderFrame.attr('data-fill', '');
+          }
+          return;
+        }
 
         var myNewImg = cropperObj.getCroppedCanvas(cropOption);
         if(myNewImg)
@@ -487,6 +512,10 @@ function runUploader()
     var myImg = $image.get(0);
     // set image src
     $image.attr('src', _imgSrc);
+    if(myUploaderFinalResult.length > 0)
+    {
+      myUploaderFinalResult.prop('selectedFileSrc', _imgSrc);
+    }
 
     var myInitRatio = myUploaderFrame.attr('data-ratio');
     if(myInitRatio && myInitRatio > 0)
