@@ -91,8 +91,8 @@ function readPageCropper()
   if(myEl && myEl.length > 0)
   {
     // load style
-    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css?v=1");
-    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css?v=2");
+    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js?v=2";
     fileLoader(myUrl, 'runCropper', true);
   }
 }
