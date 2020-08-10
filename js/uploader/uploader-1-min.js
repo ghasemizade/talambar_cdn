@@ -377,8 +377,7 @@ function runUploader()
           && Math.round(myCropData.height) == Math.round(myImgData.naturalHeight)
           && Math.round(myCropData.width) == Math.round(myImgData.naturalWidth)
           // if filesize is less than 200kb don't crop
-          && _fileInfo.size / 1000 < 500
-          // && false
+          && _fileInfo.size / 1000 < 200
           )
         {
           console.log('100% without crop ' + _fileInfo.size);
@@ -426,7 +425,6 @@ function runUploader()
               console.log('image size is increased from ' + _blob.KB_before + ' to ' + _blob.KB_after + 'KB:/');
             }
 
-            console.log(_blob);
             appendFileToForm(_blob, _blob.size);
 
           }, newType, quality);
