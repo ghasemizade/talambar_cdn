@@ -6868,9 +6868,9 @@ function runPageSelect2()
   // $.fn.select22.defaults.set("minimumResultsForSearch", "6");
 
   // init simple select22
-  $('.select22:not([data-model])').select22({minimumResultsForSearch: 7});
+  $('.select22:not([data-model])').select22({minimumResultsForSearch: 10});
   $('.select22[data-model="country"]').select22({ templateResult2: select22FormatDropDownCoutry, templateSelection: select22FormatDropDownCoutry });
-  $('.select22[data-model="tag"]').select22({ tags: true, tokenSeparators: [','] });
+  $('.select22[data-model="tag"]').select22({ tags: true, tokenSeparators: [','], createTag: select22CreateTag});
   $('.select22[data-model="html"]').select22(
   {
     templateResult: select22FormatDropDownHtml,
@@ -7000,6 +7000,26 @@ function select22FormatDropDownHtml(_repo, _el)
   return $container;
 }
 
+function select22CreateTag(_input)
+{
+    var term = $.trim(_input.term);
+
+    if (term === '')
+    {
+      return null;
+    }
+    var prefix = 'Add ';
+    if(urlLangFa())
+    {
+        prefix = 'افزودن ';
+    }
+
+    return {
+      id: term,
+      text: prefix + term,
+      newTag: true // add additional parameters
+    }
+}
 
 // fill country elements
 function select22FormatDropDownCoutry(_repo)
