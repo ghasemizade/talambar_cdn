@@ -95,6 +95,13 @@
   padding: 0;
   display: none;
 }
+// video inside box
+.box video.infoVideo{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
 
 .box footer{
   padding: 1rem 1.5rem;
