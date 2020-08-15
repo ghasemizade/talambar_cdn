@@ -137,8 +137,8 @@
 }
 
 
-#pageFooter .pwa [data-key="messages"] .icon i[data-item]::after{
-	content: attr(data-item);
+#pageFooter .pwa [data-key="messages"] .icon i[data-count]::after{
+	content: attr(data-count);
 	vertical-align: middle;
 	overflow: hidden;
 	display: block;
@@ -158,10 +158,10 @@
 	opacity: 1;
 	transition:0.3s;
 }
-#pageFooter .pwa [data-key="messages"] .icon i[data-item="۰"]::after{
+#pageFooter .pwa [data-key="messages"] .icon i[data-count="۰"]::after{
 	opacity: 0;
 }
-#pageFooter .pwa [data-key="messages"] .icon i[data-item="0"]::after{
+#pageFooter .pwa [data-key="messages"] .icon i[data-count="0"]::after{
 	opacity: 0;
 }
 

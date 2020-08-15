@@ -34,6 +34,12 @@ function checkSmile(_register)
     },
     success:function(smileResult)
     {
+      var notifCount = null;
+      if(smileResult.result && smileResult.result.notifCount)
+      {
+        notifCount = smileResult.result.notifCount;
+      }
+
       // show new notif message only one time
       if(typeof(Storage) !== "undefined")
       {
@@ -43,12 +49,11 @@ function checkSmile(_register)
           newNotif = 0;
         }
 
-        if(smileResult.result && smileResult.result.notifCount)
+        if(notifCount)
         {
-          var myNewCount = smileResult.result.notifCount;
-          if(newNotif !== myNewCount)
+          if(newNotif !== notifCount)
           {
-            sessionStorage.setItem("newNotif", myNewCount);
+            sessionStorage.setItem("newNotif", notifCount);
             notifGenerator(smileResult);
           }
         }
@@ -128,6 +133,7 @@ function checkSmileRedirect(_data)
 function checkNewNotification(_data)
 {
   var notifEl = $('[data-panel] #pageHeader .notification');
+  var pwaFooterEl = $('#pageFooter .pwa [data-key="messages"] i')
   if(_data.result && _data.result.notifNew)
   {
     if(notifEl.attr('data-new') === undefined)
@@ -136,10 +142,24 @@ function checkNewNotification(_data)
     }
 
     notifEl.attr('data-new', '');
+    pwaFooterEl.attr('data-new', '');
   }
   else
   {
     notifEl.attr('data-new', null);
+    pwaFooterEl.attr('data-new', null);
   }
+
+  if(_data.result && _data.result.notifCount)
+  {
+    notifEl.attr('data-count', _data.result.notifCount);
+    pwaFooterEl.attr('data-count', _data.result.notifCount);
+  }
+  else
+  {
+    notifEl.attr('data-count', null);
+    pwaFooterEl.attr('data-count', null);
+  }
+
 }
 
