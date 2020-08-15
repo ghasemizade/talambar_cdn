@@ -132,32 +132,33 @@ function checkSmileRedirect(_data)
 
 function checkNewNotification(_data)
 {
-  var notifEl = $('[data-panel] #pageHeader .notification');
-  var pwaFooterEl = $('#pageFooter .pwa [data-key="messages"] i')
+  var panelHeaderEl = $('[data-panel] #pageHeader .notification i');
+  var pwaFooterEl   = $('#pageFooter .pwa [data-key="messages"] i');
+
   if(_data.result && _data.result.notifNew)
   {
-    if(notifEl.attr('data-new') === undefined)
+    if(panelHeaderEl.attr('data-new') === undefined)
     {
       // new notif and does not exist before it
     }
 
-    notifEl.attr('data-new', '');
+    panelHeaderEl.attr('data-new', '');
     pwaFooterEl.attr('data-new', '');
   }
   else
   {
-    notifEl.attr('data-new', null);
+    panelHeaderEl.attr('data-new', null);
     pwaFooterEl.attr('data-new', null);
   }
 
   if(_data.result && _data.result.notifCount)
   {
-    notifEl.attr('data-count', _data.result.notifCount);
+    panelHeaderEl.attr('data-count', _data.result.notifCount);
     pwaFooterEl.attr('data-count', _data.result.notifCount);
   }
   else
   {
-    notifEl.attr('data-count', null);
+    panelHeaderEl.attr('data-count', null);
     pwaFooterEl.attr('data-count', null);
   }
 
