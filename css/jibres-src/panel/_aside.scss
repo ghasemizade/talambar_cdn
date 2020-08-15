@@ -133,6 +133,12 @@ body[data-reloading] #sidebar .avatar:before{animation-duration:1s;-webkit-anima
 	padding: 0.5rem;
 	vertical-align: top;
 }
+[data-panel] #sidebar nav hr{
+	width:80%;
+	border-top:1px solid #777;
+	border-top:1px solid rgba(255,255,255,0.2);
+	margin: 1rem auto;
+}
 [data-panel] #sidebar nav a[data-active]{background-color:rgba(0,0,0,0.8);color:#fff}
 [data-panel] #sidebar nav a[data-active='1']{background-color:rgba(255,255,255,0.1);color:#fff;}
 
