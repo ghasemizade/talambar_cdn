@@ -64,6 +64,8 @@ body[data-reloading] #sidebar .avatar:before{animation-duration:1s;-webkit-anima
 [dir="ltr"] [data-panel] #sidebar .activeContent{border-left: 7px solid #fff;}
 [dir="rtl"] [data-panel] #sidebar .activeContent{border-right: 7px solid #fff;}
 
+
+
 [dir="ltr"] [data-panel] #sidebar #ermileBadge{padding-right:0;}
 [dir="rtl"] [data-panel] #sidebar #ermileBadge{padding-left:0;}
 
@@ -92,4 +94,45 @@ body[data-reloading] #sidebar .avatar:before{animation-duration:1s;-webkit-anima
 	animation:pulseSlow 0.5s infinite ease-in-out;
 }
 @keyframes pulseSlow { 0%{opacity:.3} 70%{opacity:.5} 100%{opacity:.3}}
+
+
+
+
+
+// new sidebar with nav
+[data-panel] #sidebar nav{
+	font-size:1.2rem;
+	color:#d5d5d5;
+}
+[data-panel] #sidebar nav a{
+	position:relative;
+	display:block;
+	min-width: initial;
+	text-align: initial;
+	line-height:4rem;
+	padding:0.5rem 5%;
+	color:#d5d5d5;
+	cursor:pointer;
+	margin:0 auto;
+	transition:0.3s;
+}
+[data-panel] #sidebar nav a::before{
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	font-size: 2rem;
+	vertical-align: top;
+	overflow: hidden;
+}
+[data-panel] #sidebar nav a[data-active]{background-color:rgba(0,0,0,0.8);color:#fff}
+[data-panel] #sidebar nav a[data-active='1']{background-color:rgba(255,255,255,0.1);color:#fff;}
+
+[data-panel] #sidebar nav a:hover{background-color:rgba(0,0,0,0.3);color:#eee;}
+[data-panel] #sidebar nav a:focus{background-color:rgba(0,0,0,0.7);color:#efefef;}
+[data-panel] #sidebar nav a:active{background-color:rgba(0,0,0,0.7);color:#fff;}
+
+
+
 
