@@ -238,7 +238,6 @@
       document.title = obj.title;
     }
 
-
     if(obj.autoScroll === true)
     {
       // force scroll to top of page
@@ -260,6 +259,9 @@
     else
     {
       // do nothing on other pages, we need to freeze scroll
+      // no, this is not good
+      // try to scroll on all contents
+      findPushStateScroll();
     }
 
     // call pushState function if exist
