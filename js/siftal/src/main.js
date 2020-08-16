@@ -248,6 +248,20 @@ $(document).ready(function()
   });
 
 
+  $(document).on('click', '[data-removeElTrigger]', function(e)
+  {
+    $this = $(this);
+    if($this.attr('data-removeElement'))
+    {
+      $this.remove();
+    }
+    else if($this.parents('[data-removeElement]'))
+    {
+      $this.parents('[data-removeElement]').remove();
+    }
+  });
+
+
   $(document).on("click", '#samandehiCert', function(e){
     var myUrl = $(this).attr('data-open');
     if(myUrl)
