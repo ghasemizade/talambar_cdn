@@ -18,8 +18,16 @@ function runGtag()
 
 		var origin = window.location.protocol + '//' + window.location.host;
 		var pathname = window.location.href.substr(origin.length);
+
 		// gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=None;Secure'});
-		gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure'});
+		if(myUID)
+		{
+			gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure;HttpOnly', 'user_id': myUID});
+		}
+		else
+		{
+			gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure;HttpOnly'});
+		}
 	}
 }
 // function gtag
