@@ -252,6 +252,10 @@
       {
         $this.parents('[data-removeElement]').remove()
       }
+      else if($this.parents('[data-removeElement]'))
+      {
+        $this.parents('[data-removeElement]').remove()
+      }
 
       // add progress to all ajaify forms
       ajaxOptions.beforeSend = function()
