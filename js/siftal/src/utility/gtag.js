@@ -17,7 +17,7 @@ function runGtag()
 
 		var origin = window.location.protocol + '//' + window.location.host;
 		var pathname = window.location.href.substr(origin.length);
-		gtag('config', myUA, {'page_path': pathname});
+		gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=None;Secure'});
 	}
 }
 // function gtag
