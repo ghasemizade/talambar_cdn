@@ -22,11 +22,11 @@ function runGtag()
 		// gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=None;Secure'});
 		if(myUID)
 		{
-			gtag('config', myUA, {'page_path': pathname, cookie_prefix: 'jib', cookie_flags: 'SameSite=Strict;Secure', 'user_id': myUID});
+			gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure', 'user_id': myUID});
 		}
 		else
 		{
-			gtag('config', myUA, {'page_path': pathname, cookie_prefix: 'jib', cookie_flags: 'SameSite=Strict;Secure'});
+			gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure'});
 		}
 	}
 }
