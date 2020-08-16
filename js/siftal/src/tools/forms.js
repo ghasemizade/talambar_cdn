@@ -403,7 +403,7 @@
             }
             else
             {
-              if(_result.status === 200)
+              if(_result.status === 200 && !_result.responseText)
               {
                 notif('info', 'Ok');
               }
