@@ -153,8 +153,8 @@ function checkNewNotification(_data)
 
   if(_data.result && _data.result.notifCount)
   {
-    panelHeaderEl.attr('data-count', _data.result.notifCount);
-    pwaFooterEl.attr('data-count', _data.result.notifCount);
+    panelHeaderEl.attr('data-count', fitNumber(_data.result.notifCount));
+    pwaFooterEl.attr('data-count', fitNumber(_data.result.notifCount));
   }
   else
   {
