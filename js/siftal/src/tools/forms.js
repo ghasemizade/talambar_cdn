@@ -403,18 +403,25 @@
             }
             else
             {
-              if(urlLangFa())
+              if(_result.status === 200)
               {
-                notif('fatal', 'نتیجه دریافتی از سرور نامعتبر است', 'درخواست ناموفق بود!');
+                notif('info', 'Ok');
               }
               else
               {
-                notif('fatal', 'Server result is invalid', 'Ajax is failed!');
-              }
+                if(urlLangFa())
+                {
+                  notif('fatal', 'نتیجه دریافتی از سرور نامعتبر است', 'درخواست ناموفق بود!');
+                }
+                else
+                {
+                  notif('fatal', 'Server result is invalid', 'Ajax is failed!');
+                }
 
-              if(urlDebugger() && _textStatus == 'error')
-              {
-                alert(JSON.stringify( _result ));
+                if(urlDebugger() && _textStatus == 'error')
+                {
+                  alert(JSON.stringify( _result ));
+                }
               }
             }
           }
