@@ -73,6 +73,13 @@ function cleaveRunner()
         opt.delimiterLazyShow = true;
         break;
 
+      case "mobile-enter":
+        opt.numeral = true;
+        opt.numeralDecimalScale = 0;
+        opt.numeralPositiveOnly = true;
+        opt.numeralThousandsGroupStyle = 'none';
+        break;
+
       case "phone-12":
         opt.numericOnly = true;
         opt.blocks = [0, 3, 0, 4, 4];
