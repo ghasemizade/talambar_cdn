@@ -202,6 +202,9 @@ select.select22-country img{
   border:1px solid rgba(0,0,0,0.1);
   border-radius:0.25rem
 }
+.select22-container.error .select22-selection{
+  border-color:rgba(255,0,0,0.5);
+}
 .select22-container--default.select22-container--open .select22-selection--single{
   border-color:rgba(128,192,208,0.9);
   border-bottom-color: transparent;
