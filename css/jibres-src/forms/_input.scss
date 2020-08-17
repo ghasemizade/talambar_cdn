@@ -321,17 +321,18 @@ select:-webkit-autofill:focus {
 
 
 label{
-	padding:5px 0;
-	line-height:1.5;
+	padding:0;
+	line-height:2.5rem;
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 90%;
+	font-size: 1.2rem;
 }
 label+.input{
 	margin-bottom: 10px;
 }
 label small{
-	font-size: 90%;
+	display: inline-block;
+	font-size: 1rem;
 	color: #666;
 }
 .input label{
