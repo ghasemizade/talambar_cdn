@@ -7008,10 +7008,10 @@ function select22CreateTag(_input)
     {
       return null;
     }
-    var prefix = 'Add New - ';
+    var prefix = 'New - ';
     if(urlLangFa())
     {
-        prefix = 'افزودن جدید - ';
+        prefix = 'جدید - ';
     }
 
     return {
