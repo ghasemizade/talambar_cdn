@@ -3,6 +3,52 @@ svg.barcodePrev{
 }
 
 
+// style for loading jstree
+[data-jstree][data-preloading]{
+  max-height: 300px;
+  overflow: hidden;
+}
+[data-jstree][data-preloading].jstree{
+  max-height: auto;
+}
+[data-jstree][data-preloading]::before{
+  content: "";
+  background-color: #f1f1f1;
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom:0;
+  z-index: 11;
+}
+[data-jstree][data-preloading]::after{
+  content: "Loading...";
+  position: absolute;
+  top:50%;
+  right: 0;
+  left: 0;
+  display: block;
+  margin:0 auto;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  margin-top: -1.5rem;
+  text-align: center;
+  animation: blinkText 1s linear infinite;
+  z-index: 12;
+}
+[lang="fa"] [data-jstree][data-preloading]::after{
+  content: "در حال بارگذاری";
+}
+[data-jstree][data-preloading].jstree::before{
+  opacity: 0;
+  display: none;
+}
+[data-jstree][data-preloading].jstree::after{
+  opacity: 0;
+  display: none;
+}
+
+
 .Test-describe {
     font-size: 1.5em;
     margin: 60px 0 20px;
