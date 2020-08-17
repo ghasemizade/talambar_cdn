@@ -9,7 +9,7 @@ svg.barcodePrev{
   overflow: hidden;
 }
 [data-jstree][data-preloading].jstree{
-  max-height: auto;
+  max-height: initial;
 }
 [data-jstree][data-preloading]::before{
   content: "";
