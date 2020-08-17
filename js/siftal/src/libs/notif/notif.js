@@ -292,8 +292,6 @@ function notifGenerator(_data, $_form)
       // highlight some field for forms
       if($_form)
       {
-        console.log(222);
-        console.log($_form);
         // remove error sign of each element if exist
         $_form.find('input').removeClass('error warn ok').parent().removeClass('error warn ok');
         $_form.find('select').removeClass('error warn ok');
@@ -321,9 +319,6 @@ function notifGenerator(_data, $_form)
             (_.isArray(myElementHighlight) ? myElementHighlight : [myElementHighlight]).forEach(function(_e)
             {
               var $el = $_form.find('input[name="' + _e + '"]');
-              console.log(333);
-              console.log($el);
-              console.log(_e);
               // if parent is .input, highlihgt it
               if($el.parent().is('.input'))
               {
@@ -336,6 +331,14 @@ function notifGenerator(_data, $_form)
               if($el.length === 0)
               {
                 $el = $_form.find('select[name="' + _e + '"]');
+                if($el.parent().find('span.select22').length === 1)
+                {
+                  $el = $el.parent().find('span.select22');
+                }
+                if($el.parent().find('span.select2').length === 1)
+                {
+                  $el = $el.parent().find('span.select2');
+                }
               }
               if($el.length === 0)
               {
