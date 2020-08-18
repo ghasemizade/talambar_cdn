@@ -54,7 +54,9 @@
   #main {overflow: auto;}
   #content {overflow: auto;}
   [data-panel] #content .tbox{display: none}
-  [data-panel] #content .titleBox{display: none}
+  [data-panel] #content .titleBox a{display: none}
+  [data-panel] #content .titleBox .btn{display: none}
+  [data-panel] #content .titleBox h2{color: #000;}
   .tbl1{color:#000!important;font-size:1.2em}
   .tbl1 thead{background-color:#ddd;color:#000}
   .tbl1 tfoot{background-color:#ddd;font-size:1.1em}
