@@ -56,7 +56,7 @@
   [data-panel] #content .tbox{display: none}
   [data-panel] #content .titleBox a{display: none}
   [data-panel] #content .titleBox .btn{display: none}
-  [data-panel] #content .titleBox h2{color: #000;}
+  [data-panel] #content .titleBox h2{color: #000;font-weight: 700;}
   .tbl1{color:#000!important;font-size:1.2em}
   .tbl1 thead{background-color:#ddd;color:#000}
   .tbl1 tfoot{background-color:#ddd;font-size:1.1em}
@@ -72,6 +72,29 @@
   [data-pwa] body{background-color: transparent!important}
   [data-panel] body{background-color: transparent!important}
   body .printArea{padding:0!important;margin:0 auto!important;}
+
+
+  // accounting doc print receipt
+  [data-page="accounting_doc_edit"][data-panel] #content .titleBox{
+    margin-top: 2rem;
+  }
+  [data-page="accounting_doc_edit"][data-panel] #content .titleBox h2{
+    font-size: 3rem;
+  }
+  [data-page="accounting_doc_edit"][data-panel] #content{
+    padding: 1rem 10% 0;
+  }
+  [data-page="accounting_doc_edit"] .box {
+    margin-bottom: 4rem!important;
+  }
+  [data-page="accounting_doc_edit"] label{
+    margin-top: 1rem!important;
+  }
+  [data-page="accounting_doc_edit"] td {
+    border:solid #ddd !important;
+    border-width:0 1px 1px 0 !important;
+  }
+
 }
 
 @page {
