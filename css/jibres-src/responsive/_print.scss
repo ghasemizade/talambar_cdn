@@ -91,9 +91,17 @@
   [data-page="accounting_doc_edit"] label{
     margin-top: 0.5rem!important;
   }
-  [data-page="accounting_doc_edit"] th, [data-page="accounting_doc_edit"] td {
+  [data-page="accounting_doc_edit"] td {
+  	border:solid #aaa !important;
+    border-width:0 0 1px 0 !important;
+  }
+  [data-page="accounting_doc_edit"] td {
     border:solid #aaa !important;
-    border-width:0 1px 1px 0 !important;
+    border-width:0 0 1px 1px !important;
+  }
+  [data-page="accounting_doc_edit"] tfoot td {
+    border:solid #aaa !important;
+    border-width:5px 0 0 1px !important;
   }
   [data-page="accounting_doc_edit"] .font-12{
   	font-size: 1rem!important;
