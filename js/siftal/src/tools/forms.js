@@ -388,6 +388,8 @@
                 }
               }
             }
+
+            unlockFormRedirect(_result, autoScrollAttr);
           }
           else
           {
