@@ -76,13 +76,13 @@
 
   // accounting doc print receipt
   [data-page="accounting_doc_edit"][data-panel] #content .titleBox{
-    margin-top: 2rem;
+    margin-top: 2rem!important;
   }
   [data-page="accounting_doc_edit"][data-panel] #content .titleBox h2{
-    font-size: 3rem;
+    font-size: 3rem!important;
   }
   [data-page="accounting_doc_edit"][data-panel] #content{
-    padding: 1rem 10% 0;
+    padding: 1rem 10% 0!important;
   }
   [data-page="accounting_doc_edit"] .box {
     margin-bottom: 4rem!important;
