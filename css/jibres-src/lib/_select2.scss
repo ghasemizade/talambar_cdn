@@ -442,7 +442,8 @@ select.select22-country img{
 .select22-container--default .select22-results__group{
   cursor:default;
   display:block;
-  padding:6px
+  padding: 0 6px;
+  background-color: #F5F5F5;
 }
 
 .select22-container--classic .select22-selection--single{
