@@ -32,8 +32,9 @@ function cleaveRunner()
         break;
 
       case "date":
-        opt.date = true;
-        opt.datePattern = ['Y', 'm', 'd'];
+        opt.numericOnly = true;
+        opt.blocks = [4, 2, 2];
+        opt.delimiters = ["/", "/"];
         break;
 
       case "time":
