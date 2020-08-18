@@ -313,55 +313,19 @@
         }
 
         unlockFormLoadingPage();
-        if(data && data.redirect)
-        {
-          var autoScroll = true;
-          if(autoScrollAttr)
-          {
-            autoScroll = autoScrollAttr;
-          }
-
-          var a = $('<a href="' + data.redirect + '"></a>');
-          if(a.isAbsoluteURL() || data.direct)
-          {
-            location.replace(data.redirect);
-          }
-          else
-          {
-            Navigate({
-              url: data.redirect,
-              autoScroll: autoScroll
-            });
-          }
-          return;
-        }
+        unlockFormRedirect(data, autoScrollAttr);
 
         // unlock form
         unlockForm(_super.lockForm, data);
 
         if(refresh)
         {
-          var autoScroll = false;
-          if(autoScrollAttr)
-          {
-            autoScroll = autoScrollAttr;
-          }
-          else if(autoScrollAttr !== undefined)
-          {
-            autoScroll = true;
-          }
-
-          Navigate({
-            url: location.href,
-            autoScroll: autoScroll,
-            replace: true
-          });
+          unlockFormRedirectRefresh(autoScrollAttr);
         }
         else if(autoScrollAttr !== undefined)
         {
           findPushStateScroll();
         }
-
 
         $form.trigger('ajaxify:success', data, status, xhr);
       })
