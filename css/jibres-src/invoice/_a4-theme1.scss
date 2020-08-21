@@ -1,2 +1,34 @@
 
+.printEmptyBox{
+  border: 1px solid #777;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.printEmptyBox.size50{width: 50px;}
+.printEmptyBox.size100{width: 100px;}
+.printEmptyBox.size150{width: 150px;}
+.printEmptyBox.size200{width: 200px;}
+
+
+.printArea .invoice{
+  padding: 0.5rem;
+}
+.printArea .invoice[data-theme="1"] .logo img{
+  max-height: 7rem;
+  display: block;
+  margin: 0.5rem auto;
+}
+.printArea .invoice[data-theme="1"] h1{
+  font-size: 4rem;
+  line-height: 8rem;
+  margin: 0;
+  font-weight: 900;
+  color: #0d47a1;
+}
+
 
