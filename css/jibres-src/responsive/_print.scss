@@ -60,13 +60,15 @@
   [data-panel] #content .titleBox h2{color: #000;font-weight: 700;}
   .tbl1{color:#000!important;font-size:1.2em}
   .tbl1 thead{background-color:#ddd;color:#000}
-  .tbl1 tfoot{background-color:#ddd;font-size:1.1em}
 
   [data-panel] #content{padding:0;}
   .invoice.printArea{color:#000!important;}
   [data-panel] .tbl1{color:#000!important;font-size:1.2rem}
   [data-panel] .tbl1 thead{background-color:#ddd;color:#000}
-  [data-panel] .tbl1 tfoot{background-color:#ddd;font-size:1.1rem}
+
+  // v11 style for print
+  .tbl1.v11 thead{background-color:#ccc;color:#000}
+  .tbl1.v11 tfoot{background-color:#ccc;color:#000}
 
 
 
@@ -111,15 +113,6 @@
   }
   [data-page="accounting_doc_edit"] label{
     margin-top: 0.5rem!important;
-  }
-  .tbl1.v6 td {
-  	border:solid #aaa !important;
-    border-width:0 1px 1px 1px !important;
-  }
-  .tbl1.v6 tfoot td {
-    border:solid #aaa !important;
-    border-width:5px 1px 0 1px !important;
-    color: #000;
   }
   [data-page="accounting_doc_edit"] .font-11{
   	font-size: 1rem!important;

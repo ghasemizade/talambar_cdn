@@ -7,7 +7,7 @@
   font-size: 1.8rem;
   display: inline-block;
   vertical-align: middle;
-  margin-bottom: 1mm;
+  margin-bottom: 0.5rem;
   text-align: center;
   letter-spacing: 3px;
   color: red;
@@ -16,7 +16,7 @@
 .printArea .invoice[data-theme="1"] .logo img{
   max-height: 6rem;
   display: block;
-  margin: 1mm 1rem;
+  margin: 0.5rem 1rem;
 }
 .printArea .invoice[data-theme="1"] h1{
   font-size: 4rem;
@@ -31,7 +31,7 @@
   border: 1px solid #777;
   border-radius: 0.2rem;
   background-color: #f1f1f1;
-  margin-bottom: 1mm;
+  margin-bottom: 0.5rem;
 }
 .printArea .invoice[data-theme="1"] .oneSide .title{
   font-weight: 900;
@@ -41,7 +41,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  padding-top: 1mm;
+  padding-top: 0.5rem;
   line-height: 2.5rem;
   height: 100%;
   background-color: #ddd;
@@ -63,4 +63,7 @@
 
 .printArea .invoice[data-theme="1"] .productTitle{
   width: 30%;
+}
+.printArea .invoice[data-theme="1"] table{
+  margin-top: 1.5rem;
 }
