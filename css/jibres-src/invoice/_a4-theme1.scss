@@ -39,7 +39,7 @@
 .printArea .invoice[data-theme="1"] .oneSide h2{
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
   padding-top: 1mm;
   line-height: 2.5rem;
@@ -61,3 +61,6 @@
 
 }
 
+.printArea .invoice[data-theme="1"] .productTitle{
+  width: 30%;
+}
