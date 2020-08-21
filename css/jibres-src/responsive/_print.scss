@@ -1,7 +1,5 @@
 /* Design for print */
 @media print {
-
-
   html{
     height:auto;
     min-height:initial;
@@ -79,7 +77,7 @@
   [data-panel] #content{padding: 0!important}
   [data-pwa] body{background-color: transparent!important}
   [data-panel] body{background-color: transparent!important}
-  body .printArea{padding:0!important;margin:0 auto!important;}
+  body .printArea{margin:0 auto!important;}
 
 
   // accounting doc print receipt
