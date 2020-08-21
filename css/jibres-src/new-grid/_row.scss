@@ -3,8 +3,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
 }
 .no-gutters {
   margin-right: 0;
@@ -24,14 +24,14 @@
     padding-right: 0.5rem;
     padding-left: 0.5rem
 }
-// padLess
-.row.padLess{
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+// padMore
+.row.padMore{
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
 }
-.row.padLess > .c, .row.padLess > [class*=c-]{
-    padding-right: 0.5rem;
-    padding-left: 0.5rem
+.row.padMore > .c, .row.padMore > [class*=c-]{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem
 }
 
 // flex custom modes
@@ -43,8 +43,8 @@
 .row > .c, .row > [class*=c-]{
     position: relative;
     width: 100%;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem
+    padding-right: 0.5rem;
+    padding-left: 0.5rem
 }
 .c {
   -ms-flex-preferred-size: 0;
