@@ -1,5 +1,7 @@
 /* Design for print */
 @media print {
+
+
   html{
     height:auto;
     min-height:initial;
@@ -63,7 +65,12 @@
   .tbl1 tfoot{background-color:#ddd;font-size:1.1em}
 
   [data-panel] #content{padding:0;}
-  .factor.printArea{color:#000!important;}
+  .invoice.printArea{color:#000!important;}
+  [data-panel] .tbl1{color:#000!important;font-size:1.2rem}
+  [data-panel] .tbl1 thead{background-color:#ddd;color:#000}
+  [data-panel] .tbl1 tfoot{background-color:#ddd;font-size:1.1rem}
+
+
 
   body #sidebar {display: none!important;}
   body #pageHeader {display: none!important;}

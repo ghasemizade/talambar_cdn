@@ -25,31 +25,6 @@
 
 
 
-[data-panel] .factor .logo.midSize{width: 50%;margin:0 auto;}
-[data-panel] .factor .storeDetail h1{font-weight: bold;font-size: 2em}
-[data-panel] .factor .storeDetail address{font-style: normal;line-height: 1.5em;}
-[data-panel] .factor .storeDetail address .phone{font-weight:bold}
-[data-panel] .factor .storeDetail .logo img{width: 80px;height:auto;max-width:80px;max-height:80px;border-radius:3px;overflow:hidden;}
-[data-panel] .factor .storeDetail .desc{line-height:1.5em}
-
-[data-panel] .factor .factorDetail{padding-top:1em;border-top:2px solid #333}
-[data-panel] .factor .factorDetail .datetime .time{font-weight:700}
-[data-panel] .factor .factorDetail code{font-size: 1.5em;background-color:#eee;border-radius:3px;padding:3px 5px;min-width:50px;text-align:center;}
-[data-panel] .factor .barcodePrev{height: 40px;width:140px;}
-[data-panel] .factor .barcodePrev.wide{height: auto;width:100%;}
-[data-panel] .factor .tbl1{color:#000}
-[data-panel] .factor .tbl1 thead th{border-bottom-color: #000;padding-top:1em;padding-bottom:1em; }
-[data-panel] .factor .tbl1 tbody td{line-height:1.4em;}
-[data-panel] .factor .tbl1 .productTitle{width:50%;font-size:0.9em;}
-[data-panel] .factor .tbl1 td{vertical-align: middle;}
-[data-panel] .factor .tbl1 tfoot th{border-top:1px dotted #000;font-weight:bold}
-[data-panel] .factor .factorResult th{vertical-align: middle;}
-[data-panel] .factor .factorResult .collapsing{font-weight:bold;font-size: 1.2em;}
-[data-panel] .factor .factorResult .factorSum{font-size: 1.2em;color:#000!important;}
-
-
-
-
 
 
 @media (max-width: 767px) {
@@ -65,31 +40,4 @@
   [data-panel] #factorAdd .tbl1.productList .input.discountCn{width:60px;}
   [data-panel] #factorAdd .tbl1.productList .input.discountCn .addon.small{display:none!important}
 }
-
-
-
-
-
-/*style for print*/
-@page {
-  margin:0.2cm;
-}
-
-@media print {
-  html{overflow: auto}
-  body{overflow: auto;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  #main{overflow: auto;}
-  #content{overflow: auto;}
-  [data-panel] #content .tbox{display: none}
-  [data-panel] .tbl1{color:#000!important;font-size:1.2em}
-  [data-panel] .tbl1 thead{background-color:#ddd;color:#000}
-  [data-panel] .tbl1 tfoot{background-color:#ddd;font-size:1.1em}
-
-  [data-panel] #content{padding:0;}
-  [data-panel] .factor.printArea{color:#000!important;}
-
-}
-
-
-
 
