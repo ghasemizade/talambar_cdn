@@ -8,9 +8,6 @@
 	margin-bottom: 1em;
 	border-collapse: collapse;
 }
-.tbl2 .repeatHead{
-	-fs-table-paginate: paginate;
-}
 [dir="rtl"] .tbl2{
 	line-height: 2
 }
@@ -18,31 +15,18 @@
 	font-size:1.2rem;
 	display: table-row-group;
 }
-.tbl2.repeatHead thead{
-	display: table-header-group;
-}
+
 
 .tbl2 th {
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-right: 1rem;
-	text-align:left;
+	padding: 0.5rem 0.5rem;
 	max-width:600px;
 	text-overflow: ellipsis;
 }
-[dir="ltr"] .tbl2 th.collapsing, [dir="ltr"] .tbl2 td.collapsing{
+.tbl2 th.collapsing, .tbl2 td.collapsing{
 	width:1px;
 	white-space: nowrap;
 }
-[dir="rtl"] .tbl2 th.collapsing, [dir="rtl"] .tbl2 td.collapsing{
-	width:1px;
-	white-space: nowrap;
-}
-[dir="rtl"] .tbl2 th {
-	text-align:right;
-	padding-right: 0;
-	padding-left: 1rem;
-}
+
 .tbl2 tr{
 	transition:0.3s;
 }
@@ -56,38 +40,10 @@
 	background-color:rgba(0,0,0,0.1);
 }
 .tbl2 tbody td {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	padding-right: 1rem;
+	padding: 0.5rem 0.5rem;
 	color: #808080;
 	transition:0.3s;
 }
-.tbl2.minimal thead tr{
-	font-size: 1rem;
-}
-.tbl2.minimal td {
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-}
-.tbl2 td.breakWord {
-	word-break:break-word;
-}
-.tbl2 td.breakAll {
-	word-break:break-all;
-}
-
-[dir="rtl"] .tbl2 td {
-	text-align:right;
-	padding-right: 0;
-	padding-left: 1rem;
-}
-[dir="ltr"] .tbl2 tr th:first-of-type, [dir="ltr"] .tbl2 tr td:first-of-type{
-	padding-left: 3rem;
-}
-[dir="rtl"] .tbl2 tr th:first-of-type, [dir="rtl"] .tbl2 tr td:first-of-type{
-	padding-right: 3rem;
-}
-
 .tbl2 tr th{
 	width: 200px;
 }
@@ -97,48 +53,72 @@
 	text-align: center;
 }
 
-/*================================================================== [ v11 ]*/
-.tbl2.v11 {
-	border-radius: 1rem;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+// repeatHead
+.tbl2 .repeatHead{
+	-fs-table-paginate: paginate;
 }
-.tbl2.v11 thead {
+.tbl2.repeatHead thead{
+	display: table-header-group;
+}
+
+// minimal
+.tbl2.minimal thead tr{
+	font-size: 1rem;
+}
+.tbl2.minimal td {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.tbl2 tr th:first-of-type, .tbl2 tr td:first-of-type{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+// break
+.tbl2 td.breakWord {
+	word-break:break-word;
+}
+.tbl2 td.breakAll {
+	word-break:break-all;
+}
+
+
+/*================================================================== [ v1 ]*/
+.tbl2.v1 {
+	border-radius: 0.5rem;
+}
+.tbl2.v1 thead {
 	color: #fff;
 	background-color: #36304a;
 }
-.tbl2.v11 thead th {
+.tbl2.v1 thead th {
   border:solid #aaa;
-  border-width:0 1px 3px 1px;
+  border-width:1px 1px 3px 1px;
 }
-.tbl2.v11 tfoot {
+.tbl2.v1 tfoot {
 	color: #fff;
 	background-color: #36304a;
 }
-.tbl2.v11 tfoot td {
+.tbl2.v1 tfoot td {
 	padding-top: 1em;
 	padding-bottom: 1em;
   border:solid #aaa;
-  border-width:5px 1px 0 1px;
+  border-width:5px 1px 1px 1px;
 	max-width:600px;
 	text-overflow: ellipsis;
 }
-.tbl2.v11 tbody tr:nth-child(even) {
+.tbl2.v1 tbody tr:nth-child(even) {
 	background-color: #f5f5f5;
 }
-.tbl2.v11 tbody tr:hover{
+.tbl2.v1 tbody tr:hover{
 	background-color:rgba(0,0,0,0.1);
 }
-.tbl2.v11 td {
+.tbl2.v1 td {
 	border:solid #aaa;
   border-width:0 1px 1px 1px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.tbl2.v11 th{
+.tbl2.v1 th{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }

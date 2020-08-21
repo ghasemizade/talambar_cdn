@@ -61,9 +61,12 @@
 
 }
 
-.printArea .invoice[data-theme="1"] .productTitle{
-  width: 30%;
-}
 .printArea .invoice[data-theme="1"] table{
   margin-top: 1.5rem;
+}
+.printArea .invoice[data-theme="1"] table .productTitle{
+  width: 35%;
+}
+.printArea .invoice[data-theme="1"] table .lastCol{
+  width: 15%;
 }
