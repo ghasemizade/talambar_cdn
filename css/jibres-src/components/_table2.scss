@@ -30,6 +30,9 @@
 .tbl2 tr{
 	transition:0.3s;
 }
+.tbl2 tbody{
+	color: #808080;
+}
 .tbl2 tbody tr:hover{
 	background-color:rgba(0,0,0,0.05);
 }
@@ -41,7 +44,6 @@
 }
 .tbl2 tbody td {
 	padding: 0.5rem 0.5rem;
-	color: #808080;
 	transition:0.3s;
 }
 .tbl2 tr th{
