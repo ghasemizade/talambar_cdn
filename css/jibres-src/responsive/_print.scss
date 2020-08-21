@@ -54,6 +54,7 @@
   #main {overflow: auto;}
   #content {overflow: auto;}
   [data-panel] #content .tbox{display: none}
+  [data-panel] #content .titleBox{display: none}
   [data-panel] #content .titleBox a{display: none}
   [data-panel] #content .titleBox .btn{display: none}
   [data-panel] #content .titleBox h2{color: #000;font-weight: 700;}
@@ -77,6 +78,7 @@
   // accounting doc print receipt
   [data-page="accounting_doc_edit"][data-panel] #content .titleBox{
     margin-top: 2rem!important;
+    display: block;
   }
   [data-page="accounting_doc_edit"][data-panel] #content .titleBox h2{
     font-size: 3rem!important;
