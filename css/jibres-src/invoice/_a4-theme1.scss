@@ -50,12 +50,15 @@
   display: inline-block;
 }
 .printArea .invoice[data-theme="1"] .oneSide code{
+  float: right;
   line-height: 2rem;
   font-size: 1.3rem;
   letter-spacing: 1px;
-  float: left;
   direction: ltr;
   text-align: left;
+}
+[dir="rtl"] .printArea .invoice[data-theme="1"] .oneSide code{
+  float: left;
 }
 .printArea .invoice[data-theme="1"] .oneSide b{
 
