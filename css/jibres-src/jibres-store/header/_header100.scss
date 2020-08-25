@@ -7,7 +7,7 @@
 #jHeader100[data-circleEffect]:before{
 	content: '';
 	display: block;
-	position: absolute;
+	position: fixed;
 	max-width: 70vw;
 	height: 70vw;
 	background-color: rgba(0,0,0,0.1);
