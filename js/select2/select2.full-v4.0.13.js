@@ -6909,9 +6909,10 @@ function runPageSelect2()
   {
     var $mySelect = $(this);
     var nextEl = $mySelect.attr('data-next');
+    var nextType = $mySelect.attr('data-next-type');
     if(nextEl)
     {
-      select22FillNext($mySelect.val(), nextEl);
+      select22FillNext($mySelect.val(), nextEl, nextType);
     }
 
     var myForm = $(this).parents('form[data-patch]');
@@ -7044,7 +7045,7 @@ function select22FormatDropDownCoutry(_repo)
 }
 
 
-function select22FillNext(_val, _next, _default)
+function select22FillNext(_val, _next, _nextType, _default)
 {
   var apiURL = urlJibres('core') + 'r10/' + 'location/';
   var _el = $(_next);
@@ -7056,6 +7057,20 @@ function select22FillNext(_val, _next, _default)
   {
     apiURL += 'province?country=' + _val;
   }
+  else
+  {
+    if(_nextType === 'city')
+    {
+    apiURL += 'city?province=' + _val;
+    }
+    else if(_nextType === 'province')
+    {
+    apiURL += 'province?country=' + _val;
+    }
+  }
+
+
+
   $.ajax({
     url: apiURL,
     success: function(returnedData)
@@ -7098,13 +7113,14 @@ function select22FillDefault()
 
   $('.select22[data-next-default]').each(function(_el)
   {
-    var myDefault = $(this).attr('data-next-default');
-    var myNextEl  = $(this).attr('data-next');
-    var myVal     = $(this).val();
+    var myDefault  = $(this).attr('data-next-default');
+    var myNextEl   = $(this).attr('data-next');
+    var myNextType = $(this).attr('data-next-type');
+    var myVal      = $(this).val();
 
     if(myVal && myNextEl && myDefault)
     {
-      select22FillNext(myVal, myNextEl, myDefault);
+      select22FillNext(myVal, myNextEl, myNextType, myDefault);
     }
   });
 }
