@@ -146,7 +146,7 @@ function readPageSelect2()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "js/select2/select2.full-v4.0.13.js?v=2";
+    myUrl = urlJibres('cdn') + "js/select2/select2.full-v4.0.13.js?v=3";
     fileLoader(myUrl, 'runPageSelect2', true);
   }
 }
