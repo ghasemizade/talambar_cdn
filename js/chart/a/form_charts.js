@@ -196,49 +196,50 @@ function highChart_map()
   var data = $.parseJSON($("#chartdata").text());
   // Create the chart
   Highcharts.mapChart('chartdivmap', {
-      chart: {
-          map: 'countries/ir/ir-all',
-          zoomType: 'x',
-          style: {
-            fontFamily: 'IRANSans, Tahoma, sans-serif'
-          }
-      },
+    chart: {
+        map: 'countries/ir/ir-all',
+        zoomType: 'x',
+        style: {
+          fontFamily: 'IRANSans, Tahoma, sans-serif'
+        }
+    },
     title: false,
-      tooltip: {
-        useHTML: true,
-        borderWidth: 0,
-        shared: true
-      },
-      mapNavigation: {
-          enabled: true,
-          buttonOptions: {
-              verticalAlign: 'bottom'
+    tooltip: {
+      useHTML: true,
+      borderWidth: 0,
+      shared: true
+    },
+    credits: false,
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+
+    colorAxis: {
+        min: 0
+    },
+
+    series: [{
+      data: data,
+      name: 'Registered',
+      states: {
+          hover: {
+              color: '#BADA55'
           }
       },
-
-      colorAxis: {
-          min: 0
-      },
-
-      series: [{
-          data: data,
-          name: 'Registered',
-          states: {
-              hover: {
-                  color: '#BADA55'
-              }
+      dataLabels: {
+          style:
+          {
+             textOutline: false
           },
-          dataLabels: {
-              style:
-              {
-                 textOutline: false
-              },
-              useHTML : true,
-              shadow : false,
-              enabled: true,
-              useHTML: Highcharts.hasBidiBug,
-              format: '{point.name}'
-          }
-      }]
+          useHTML : true,
+          shadow : false,
+          enabled: true,
+          useHTML: Highcharts.hasBidiBug,
+          format: '{point.name}'
+      }
+    }]
   });
 }
