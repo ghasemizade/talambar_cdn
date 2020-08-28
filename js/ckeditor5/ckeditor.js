@@ -16,6 +16,11 @@ function runEditor()
 	{
 		editorRunner($(this));
 	});
+
+  $('[data-editor-simple]').each(function(_el)
+  {
+    editorSimpleRunner($(this));
+  });
 }
 
 
@@ -109,5 +114,48 @@ function editorRunner(_el)
 		console.error( 'Oops, something gone wrong for editor!' );
 		console.error( error );
 	} );
+
+}
+
+
+function editorSimpleRunner(_el)
+{
+  var myLang = urlLang();
+  var myEl = _el.get(0);
+  ClassicEditor.create( myEl,
+  {
+
+    toolbar: {
+      items: [
+        'bold',
+        'italic',
+        'link',
+        'alignment',
+      ]
+    },
+    language: myLang,
+    link: {
+            // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+            addTargetToExternalLinks: true,
+            decorators: {
+                detectDownloadable: {
+                    mode: 'automatic',
+                    callback: url => url.endsWith( '.pdf' ),
+                    attributes: {
+                        download: 'file.pdf'
+                    }
+                },
+            }
+        },
+    licenseKey: '',
+
+  } )
+  .then( editor => {
+    window.editor = editor;
+  } )
+  .catch( error => {
+    console.error( 'Oops, something gone wrong for editor!' );
+    console.error( error );
+  } );
 
 }
