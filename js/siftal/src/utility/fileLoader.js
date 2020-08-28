@@ -45,7 +45,7 @@ function readPageChart()
   if(myChartURL && myChartURL.length > 0)
   {
     var fnName       = myChartURL;
-    var highChartUrl = urlJibres('cdn') + 'js/highcharts/highcharts-8.1.2.js?v=1';
+    var highChartUrl = urlJibres('cdn') + 'lib/highcharts/highcharts-8.2.0.js?v=1';
     myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js?v=1';
 
     fnName = fnName.replace('/', '_');
