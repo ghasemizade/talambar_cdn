@@ -12,6 +12,9 @@
 [data-panel] [data-option] .data{
 	padding: 3rem;
 }
+[data-pwa] [data-panel] [data-option] .data{
+	padding: 1rem;
+}
 [data-panel] [data-option] .action{
 	border-left:1px solid #d5d7d8;
 	background-color: #f7f7f8;
@@ -37,8 +40,13 @@
 }
 [data-panel] [data-option] h3{
 	font-size: 2rem;
+	line-height: 3rem;
 	font-weight: 700;
 	margin-bottom: 0.5em;
+}
+[data-panel] [data-option] h3{
+	font-size: 1.8rem;
+	line-height: 2.2rem;
 }
 [data-panel] [data-option] p{
 	margin-bottom: 0;
@@ -53,8 +61,15 @@
 	font-size: 1.6rem;
 	color: #555;
 }
-[dir="rtl"] [data-panel][data-option] .body{
+[data-pwa] [data-panel] [data-option] .body{
 	font-size: 1.4rem;
+}
+[dir="rtl"] [data-panel] [data-option] .body{
+	font-size: 1.4rem;
+}
+[dir="rtl"][data-pwa] [data-panel] [data-option] .body{
+	font-size: 1.2rem;
+	text-align: justify;
 }
 [data-panel] [data-option] .meta{
 	font-size: 1em;
