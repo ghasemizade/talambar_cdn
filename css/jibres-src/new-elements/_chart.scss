@@ -30,10 +30,7 @@
 .chart:active{
     transform: scale(0.95);
 }
-.chart.x300:active{transform: none;}
-.chart.x350:active{transform: none;}
-.chart.x400:active{transform: none;}
-.chart.x500:active{transform: none;}
+.chart.notActive:active{transform: none;}
 [dir="rtl"] .chart{text-align:right}
 
 .chart.x100{height:100px;}
@@ -51,6 +48,8 @@
 .chart.x400{height:400px;}
 .chart.x450{height:450px;}
 .chart.x500{height:500px;}
+.chart.x600{height:600px;}
+.chart.x700{height:700px;}
 
 // highcharts
 // .highcharts-root {font-family:IRANSans,Tahoma,sans-serif!important;}
