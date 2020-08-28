@@ -27,7 +27,7 @@
 [data-in='enter'] #enterBox h2{font-size:1.3rem;overflow:hidden;margin:10px 0;text-align:center;color:#fff;line-height:1.7em;}
 [data-in='enter'] #enterBox h2 abbr{cursor:pointer;}
 [data-in='enter'] #enterBox .msg{font-size: 1.1rem;}
-[data-pwa] [data-in='enter'] #enterBox .msg{font-size: 1rem;}
+[data-pwa] [data-in='enter'] #enterBox .msg{font-size: 1rem;padding:0.5rem 0.5rem;}
 [data-in='enter'] .text p{transition:0.3s;padding:0.5em}
 [data-in='enter'] .text p:hover{background-color:rgba(0,0,0,0.1);}
 [data-in='enter'] .text a{color:#eee;padding:1em 0.5em;display:inline-block;transition:0.3s;}
