@@ -193,22 +193,51 @@ function highChart_bar()
 
 function highChart_map()
 {
+  var data = $.parseJSON($("#chartdata").text());
+  // Create the chart
+  Highcharts.mapChart('chartdivmap', {
+      chart: {
+          map: 'countries/ir/ir-all',
+          zoomType: 'x',
+          style: {
+            fontFamily: 'IRANSans, Tahoma, sans-serif'
+          }
+      },
+      tooltip: {
+        useHTML: true,
+        borderWidth: 0,
+        shared: true
+      },
+      mapNavigation: {
+          enabled: true,
+          buttonOptions: {
+              verticalAlign: 'bottom'
+          }
+      },
 
-var data = $.parseJSON($("#chartdata").text()); //{{chartProvinceData |raw}};
-// Create the chart
-Highcharts.mapChart('chartdivmap', {
-    chart: {
-        map: 'countries/ir/ir-all',
-        zoomType: 'x',
-        style: {
-          fontFamily: 'IRANSans, Tahoma, sans-serif'
-        }
-    },
-    series: [{
-        data: data,
-    }]
-});
+      colorAxis: {
+          min: 0
+      },
 
-console.log(data);
-
+      series: [{
+          data: data,
+          name: 'Registered',
+          states: {
+              hover: {
+                  color: '#BADA55'
+              }
+          },
+          dataLabels: {
+              style:
+              {
+                 textOutline: false
+              },
+              useHTML : true,
+              shadow : false,
+              enabled: true,
+              useHTML: Highcharts.hasBidiBug,
+              format: '{point.name}'
+          }
+      }]
+  });
 }
