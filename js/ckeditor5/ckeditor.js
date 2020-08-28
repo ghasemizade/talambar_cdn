@@ -22,7 +22,9 @@ function runEditor()
 function editorRunner(_el)
 {
 	var myLang = urlLang();
-	ClassicEditor.create( document.querySelector( '[data-editor]' ), {
+  var myEl = _el.get(0);
+	ClassicEditor.create( myEl,
+  {
 
 		toolbar: {
 			items: [
