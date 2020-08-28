@@ -30,6 +30,10 @@
 .chart:active{
     transform: scale(0.95);
 }
+.chart.x300:active{transform: none;}
+.chart.x350:active{transform: none;}
+.chart.x400:active{transform: none;}
+.chart.x500:active{transform: none;}
 [dir="rtl"] .chart{text-align:right}
 
 .chart.x100{height:100px;}
