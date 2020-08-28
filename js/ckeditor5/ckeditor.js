@@ -14,13 +14,16 @@ function runEditor()
 	// var editor = new MediumEditor('[data-editor]');
 	$('[data-editor]').each(function(_el)
 	{
-		editorRunner($(this));
+    $this = $(this);
+    if($this.attr('data-editor') === 'simple')
+    {
+      editorSimpleRunner($this);
+    }
+    else
+    {
+		  editorRunner($this);
+    }
 	});
-
-  $('[data-editor-simple]').each(function(_el)
-  {
-    editorSimpleRunner($(this));
-  });
 }
 
 
@@ -130,7 +133,6 @@ function editorSimpleRunner(_el)
         'bold',
         'italic',
         'link',
-        'alignment',
       ]
     },
     language: myLang,
