@@ -59,18 +59,15 @@ v(b,"masters/modules/sunburst.src.js",[],function(){})});
 
 function chart_a_form_compare()
 {
-  console.log(1111);
   if($("#chartdivcompare").length == 1){highChart_compare();}
 }
 
 
 function highChart_compare()
 {
-  console.log(1111);
+  Highcharts.getOptions().colors.splice(0, 0, 'transparent');
 
   var data = $.parseJSON($("#chartdata").text());
-
-
 
   Highcharts.chart('chartdivcompare', {
 
