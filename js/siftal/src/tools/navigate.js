@@ -323,10 +323,21 @@
       // redirect it's okay and we have redirect
       if(res.ok === true && res.redirect)
       {
-        Navigate(
+        if(res.replaceState)
         {
-          url: res.redirect
-        });
+          Navigate(
+          {
+            url: res.redirect,
+            replace: true
+          });
+        }
+        else
+        {
+          Navigate(
+          {
+            url: res.redirect
+          });
+        }
         return;
       }
 

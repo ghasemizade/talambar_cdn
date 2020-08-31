@@ -229,7 +229,7 @@
       var autoCloseAttr     = $this.attr('data-autoClose');
       var autoScrollAttr    = $this.attr('data-autoScroll');
 
-      var refresh   = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
+      // var refresh   = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
       var autoClose = ajaxOptions.autoClose || autoCloseAttr !== undefined;
 
       if(!_super.noLoading)
@@ -318,11 +318,7 @@
         // unlock form
         unlockForm(_super.lockForm, data);
 
-        if(refresh)
-        {
-          unlockFormRedirectRefresh(autoScrollAttr);
-        }
-        else if(autoScrollAttr !== undefined)
+        if(autoScrollAttr !== undefined)
         {
           findPushStateScroll();
         }

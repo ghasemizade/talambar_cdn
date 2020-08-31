@@ -41,33 +41,28 @@ function unlockFormRedirect(_data, _autoScrollAttr)
     }
     else
     {
-      Navigate({
-        url: _data.redirect,
-        autoScroll: autoScroll
-      });
+      if(_data.replaceState)
+      {
+        if(_data.replaceState === 'top')
+        {
+          autoScroll = true;
+        }
+
+        Navigate({
+          url: _data.redirect,
+          autoScroll: autoScroll,
+          replace: true
+        });
+      }
+      else
+      {
+        Navigate({
+          url: _data.redirect,
+          autoScroll: autoScroll
+        });
+      }
     }
     return;
   }
 }
-
-
-function unlockFormRedirectRefresh(_autoScrollAttr)
-{
-  var autoScroll = false;
-  if(_autoScrollAttr)
-  {
-    autoScroll = _autoScrollAttr;
-  }
-  else if(_autoScrollAttr !== undefined)
-  {
-    autoScroll = true;
-  }
-
-  Navigate({
-    url: location.href,
-    autoScroll: autoScroll,
-    replace: true
-  });
-}
-
 
