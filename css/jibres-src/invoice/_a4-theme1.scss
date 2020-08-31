@@ -70,6 +70,11 @@
 .printArea .invoice[data-theme="1"] table .productTitle{
   width: 35%;
 }
+.printArea .invoice[data-theme="1"] table .valPrice{
+  direction: ltr;
+  text-align: left;
+  font-size: 1.2rem;
+}
 .printArea .invoice[data-theme="1"] table .lastCol{
   width: 15%;
   font-weight: 700;
