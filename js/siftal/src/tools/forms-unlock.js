@@ -47,7 +47,10 @@ function unlockFormRedirect(_data, _autoScrollAttr)
         {
           autoScroll = true;
         }
-
+        else if(_data.replaceState)
+        {
+          autoScroll = false;
+        }
         Navigate({
           url: _data.redirect,
           autoScroll: autoScroll,

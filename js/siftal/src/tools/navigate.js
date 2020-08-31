@@ -248,13 +248,9 @@
       // set scroll
       scrollSmoothTo($(obj.autoScroll));
     }
-    else if($("body").attr('data-in') === 'site')
+    else if(obj.autoScroll === false)
     {
-      findPushStateScroll();
-    }
-    else if($("body").attr('data-in') === 'support')
-    {
-      findPushStateScroll();
+      // do nothing if set to false
     }
     else
     {
