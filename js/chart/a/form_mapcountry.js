@@ -132,7 +132,7 @@ function highChart_mapcountry()
     },
 
     title: {
-      text: 'Zoom in on country by double click'
+      text: ''
     },
 
     mapNavigation: {
@@ -149,7 +149,6 @@ function highChart_mapcountry()
     series: [{
       data: data,
       joinBy: ['iso-a3', 'code3'],
-      name: 'Population density',
       states: {
         hover: {
           color: '#a4edba'
