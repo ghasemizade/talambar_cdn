@@ -1,7 +1,7 @@
 .stat{
   position: relative;
   background-color: #fff;
-  box-shadow: #ddd 0 0 5px;
+  box-shadow: #eee 0 0 0.5rem;
   font-size: 1.4rem;
   margin:0 auto 1rem;
   display: block;
@@ -37,7 +37,7 @@
 }
 // active
 .stat.active{
-	transform: scale(0.95);
+	transform: scale(0.97);
 }
 .stat.active .val{
 	border-bottom: 2px solid #0E6EB8;
@@ -51,16 +51,16 @@
 	height: 3rem;
 	padding: 1rem 0.5rem 0;
 	margin: 0;
-    overflow: hidden;
+  overflow: hidden;
 	text-overflow: ellipsis;
-    white-space: nowrap;
+	white-space: nowrap;
 	opacity: 0.5;
 	transition: 0.3s;
 }
 .stat .val{
 	display: block;
 	font-size: 2em;
-	color: #777;
+	color: #333;
 	line-height: 5rem;
 	height: 7rem;
 	padding: 1rem 0.5em;
@@ -76,11 +76,11 @@
 	line-height: 3rem;
 }
 // reaction
-a.stat:hover{transform: scale(0.9);}
-.stat:hover{background-color: #f6f6f6;}
-.stat:focus{background-color: #efefef;}
+a.stat:hover{transform: scale(0.95);}
+.stat:hover{background-color: #f7f7f7;}
+.stat:focus{box-shadow: 0 0 1rem #ddd;}
 .stat:focus h3{opacity: 1;}
-a.stat:active{transform: scale(0.8);}
+a.stat:active{transform: scale(0.9);}
 .stat:active{background-color: #e6e5eb;}
 // size x70
 .stat.x70{
