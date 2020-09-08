@@ -49,6 +49,7 @@ var myModuleFiles =
 
 	// tools
 	'src/tools/forms-unlock.js',
+	'src/tools/navigate-tools.js',
 	'src/tools/navigate.js',
 	'src/tools/forms.js',
 

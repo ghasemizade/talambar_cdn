@@ -316,6 +316,9 @@
     {
       $window.trigger('navigate:fetch:ajax:start', options);
 
+      var resultJSON = analyseAjaxResponse(res, deferred, props);
+
+
       // redirect it's okay and we have redirect
       if(res.ok === true && res.redirect)
       {
@@ -337,56 +340,10 @@
         return;
       }
 
-      var json, html;
 
-      var jsonExpected = res[0] === '{';
-      try
-      {
-        var n        = res.indexOf('\n');
-        n            = n === -1 ? undefined : n;
-        json         = JSON.parse(res.slice(0, n));
-
-        if(json && json.debug)
-        {
-          notifGenerator(json.debug);
-        }
-
-        // if(json.getFromCache) {
-          // json = LS.get(props.md5);
-        // } else {
-          html = res.slice(n);
-          // if(json.md5) {
-            // LS.set(props.url, json.md5);
-            // LS.set(json.md5, _.extend(json, {html: html}));
-            _.extend(json, {html: html});
-          // }
-        // }
-
-        if(json.options)
-        {
-          var $options = $('#options-meta');
-          $options.putData(json.options);
-        }
-      }
-      catch(e) {
-        if (jsonExpected)
-        {
-          notif('error', 'There was an error in parsing JSON!');
-        }
-        deferred.reject();
-        return location.replace(props.url);
-      }
-
-      $window.trigger('navigate:fetch:ajax:done', json)
-             .trigger('navigate:fetch:done', json);
-      deferred.resolve(json);
-      // remove loading
-      setTimeout (function()
-      {
-        $('body').attr('data-reloading', null);
-      }, 500);
-      callFunc('loading_page', false);
-
+      $window.trigger('navigate:fetch:ajax:done', resultJSON)
+             .trigger('navigate:fetch:done', resultJSON);
+      deferred.resolve(resultJSON);
     })
     .fail(function(_result, _textStatus, _error)
     {
@@ -421,10 +378,6 @@
         }
         else
         {
-          console.log(_result);
-          console.log(_result.status);
-          console.log(_error);
-
           var statusCode = _result.status;
           if(urlLangFa())
           {
@@ -438,18 +391,22 @@
         }
       }
 
+      $window.trigger('navigate:fetch:ajax:error', _result, _textStatus, _error);
+    })
+    .always(function(_result, _textStatus, _error)
+    {
+
       // remove loading
       setTimeout (function()
       {
         $('body').attr('data-reloading', null);
       }, 500);
       callFunc('loading_page', false);
-
-      $window.trigger('navigate:fetch:ajax:error', _result, _textStatus, _error);
     });
 
     return deferred.promise();
   }
+
 
   function Navigate(obj)
   {
