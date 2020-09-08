@@ -394,7 +394,14 @@
 
       if(_textStatus === 'timeout')
       {
-        notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
+        if(urlLangFa())
+        {
+          notif('fatal', 'مهلت درخواست به پایان رسید', 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-history'});
+        }
+        else
+        {
+          notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
+        }
         pingi();
       }
 
@@ -414,9 +421,20 @@
         }
         else
         {
-          var statusCode = _result.status;
+          console.log(_result);
+          console.log(_result.status);
+          console.log(_error);
 
-          notif('fatal', statusCode + ' ' + _error, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
+          var statusCode = _result.status;
+          if(urlLangFa())
+          {
+            notif('fatal', statusCode + ' ' + _error, 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
+
+          }
+          else
+          {
+            notif('fatal', statusCode + ' ' + _error, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
+          }
         }
       }
 
