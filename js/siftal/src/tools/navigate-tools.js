@@ -21,7 +21,11 @@ function analyseAjaxResponse(_data, _deferred, _props)
         json  = JSON.parse(_data.slice(0, newLinePoint));
         // get html
         html = _data.slice(newLinePoint);
-        _.extend(json, {html: html});
+        if(html)
+        {
+          html = html.trim();
+          _.extend(json, {html: html});
+        }
       }
       catch(e)
       {

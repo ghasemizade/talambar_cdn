@@ -317,16 +317,12 @@
     options.timeout = 30000;
 
 
-
-
     var myXhr = $.ajax(options)
     .done(function(_data, _textStatus, _jqXHR)
     {
       $window.trigger('navigate:fetch:ajax:start', options);
       // analyse result as json
       var resultJSON = analyseAjaxResponse(_data, deferred, props);
-      console.log('done');
-      console.log(resultJSON);
       // check for redirect if needed
       analyseAjaxRedirect(resultJSON);
 
@@ -338,16 +334,24 @@
     {
       // unlock form
       unlockForm(true);
+      var myResponseRaw = {};
+      if(_jqXHR && _jqXHR.responseText)
+      {
+        myResponseRaw = _jqXHR.responseText;
+      }
       // analyse result as json
-      var resultJSON = analyseAjaxResponse(_jqXHR, deferred, props);
-      console.log(_jqXHR);
-      console.log(resultJSON);
+      var resultJSON = analyseAjaxResponse(myResponseRaw, deferred, props);
+
       // check for redirect if needed
       analyseAjaxRedirect(resultJSON);
       // analyse error
       analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
 
       $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);
+      if(resultJSON)
+      {
+        deferred.resolve(resultJSON);
+      }
     })
     .always(function(_result, _textStatus, _error)
     {
