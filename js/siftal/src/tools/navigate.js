@@ -65,7 +65,15 @@
       obj.url = '/';
     }
 
-    var html = obj.html.trim();
+    var html = obj.html;
+    if(html)
+    {
+      html = html.trim();
+    }
+    else
+    {
+      html = '';
+    }
     if(html.indexOf('data-xhr') === false)
     {
       console.log('hard refresh! without xhr');
@@ -315,30 +323,12 @@
     .done(function(res)
     {
       $window.trigger('navigate:fetch:ajax:start', options);
-
+      // analyse result as json
       var resultJSON = analyseAjaxResponse(res, deferred, props);
+      // check for redirect if needed
+      analyseAjaxRedirect(resultJSON);
 
 
-      // redirect it's okay and we have redirect
-      if(res.ok === true && res.redirect)
-      {
-        if(res.replaceState)
-        {
-          Navigate(
-          {
-            url: res.redirect,
-            replace: true
-          });
-        }
-        else
-        {
-          Navigate(
-          {
-            url: res.redirect
-          });
-        }
-        return;
-      }
 
 
       $window.trigger('navigate:fetch:ajax:done', resultJSON)
