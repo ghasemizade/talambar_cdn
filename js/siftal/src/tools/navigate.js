@@ -328,13 +328,14 @@
 
       $window.trigger('navigate:fetch:ajax:done', resultJSON)
              .trigger('navigate:fetch:done', resultJSON);
+
       deferred.resolve(resultJSON);
     })
     .fail(function(_jqXHR, _textStatus, _errorThrown)
     {
       // unlock form
       unlockForm(true);
-      var myResponseRaw = {};
+      var myResponseRaw = null;
       if(_jqXHR && _jqXHR.responseText)
       {
         myResponseRaw = _jqXHR.responseText;
@@ -352,7 +353,6 @@
         // analyse error
         analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
       }
-
 
       $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);
       if(resultJSON)
