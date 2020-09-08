@@ -342,10 +342,17 @@
       // analyse result as json
       var resultJSON = analyseAjaxResponse(myResponseRaw, deferred, props);
 
-      // check for redirect if needed
-      analyseAjaxRedirect(resultJSON);
-      // analyse error
-      analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
+      if(resultJSON)
+      {
+        // check for redirect if needed
+        analyseAjaxRedirect(resultJSON);
+      }
+      else
+      {
+        // analyse error
+        analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
+      }
+
 
       $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);
       if(resultJSON)
