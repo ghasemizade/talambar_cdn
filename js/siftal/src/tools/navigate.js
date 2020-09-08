@@ -320,72 +320,37 @@
 
 
     var myXhr = $.ajax(options)
-    .done(function(res)
+    .done(function(_data, _textStatus, _jqXHR)
     {
       $window.trigger('navigate:fetch:ajax:start', options);
       // analyse result as json
-      var resultJSON = analyseAjaxResponse(res, deferred, props);
+      var resultJSON = analyseAjaxResponse(_data, deferred, props);
+      console.log('done');
+      console.log(resultJSON);
       // check for redirect if needed
       analyseAjaxRedirect(resultJSON);
-
-
-
 
       $window.trigger('navigate:fetch:ajax:done', resultJSON)
              .trigger('navigate:fetch:done', resultJSON);
       deferred.resolve(resultJSON);
     })
-    .fail(function(_result, _textStatus, _error)
+    .fail(function(_jqXHR, _textStatus, _errorThrown)
     {
+      // unlock form
       unlockForm(true);
+      // analyse result as json
+      var resultJSON = analyseAjaxResponse(_jqXHR, deferred, props);
+      console.log(_jqXHR);
+      console.log(resultJSON);
+      // check for redirect if needed
+      analyseAjaxRedirect(resultJSON);
+      // analyse error
+      analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
 
-      if(_textStatus === 'timeout')
-      {
-        if(urlLangFa())
-        {
-          notif('fatal', 'مهلت درخواست به پایان رسید', 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-history'});
-        }
-        else
-        {
-          notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
-        }
-        pingi();
-      }
-
-
-      if(_result && _result.responseJSON)
-      {
-        notifGenerator(_result.responseJSON);
-      }
-      else if(_textStatus === 'error')
-      {
-        if(_result.readyState == 0 && _error == "")
-        {
-          // probably network is failed like internet connection
-          console.log("Network error detected");
-          // check with pingi
-          pingi();
-        }
-        else
-        {
-          var statusCode = _result.status;
-          if(urlLangFa())
-          {
-            notif('fatal', statusCode + ' ' + _error, 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
-
-          }
-          else
-          {
-            notif('fatal', statusCode + ' ' + _error, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
-          }
-        }
-      }
-
-      $window.trigger('navigate:fetch:ajax:error', _result, _textStatus, _error);
+      $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);
     })
     .always(function(_result, _textStatus, _error)
     {
-
       // remove loading
       setTimeout (function()
       {

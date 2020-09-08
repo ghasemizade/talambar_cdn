@@ -3,11 +3,11 @@ function analyseAjaxResponse(_data, _deferred, _props)
 {
   var json;
   var html;
-
   if(typeof _data === 'object')
   {
     // it's json
     json = _data;
+
   }
   else
   {
@@ -16,11 +16,11 @@ function analyseAjaxResponse(_data, _deferred, _props)
     {
       try
       {
-        var n = _data.indexOf('\n');
-        n     = n === -1 ? undefined : n;
-        json  = JSON.parse(_data.slice(0, n));
+        var newLinePoint = _data.indexOf('\n');
+        newLinePoint     = newLinePoint === -1 ? undefined : newLinePoint;
+        json  = JSON.parse(_data.slice(0, newLinePoint));
         // get html
-        html = res.slice(n);
+        html = _data.slice(newLinePoint);
         _.extend(json, {html: html});
       }
       catch(e)
@@ -52,7 +52,7 @@ function analyseAjaxResponse(_data, _deferred, _props)
 function analyseAjaxRedirect(_result)
 {
  // redirect it's okay and we have redirect
-  if(_result.ok === true && _result.redirect)
+  if(_result && _result.ok === true && _result.redirect)
   {
     if(_result.replaceState)
     {
@@ -74,4 +74,50 @@ function analyseAjaxRedirect(_result)
   }
   return false;
 }
+
+
+function analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
+{
+  if(_textStatus === 'timeout')
+  {
+    if(urlLangFa())
+    {
+      notif('fatal', 'مهلت درخواست به پایان رسید', 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-history'});
+    }
+    else
+    {
+      notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
+    }
+    pingi();
+  }
+
+  if(_jqXHR && _jqXHR.responseJSON)
+  {
+    notifGenerator(_jqXHR.responseJSON);
+  }
+  else if(_textStatus === 'error')
+  {
+    if(_jqXHR.readyState == 0 && _errorThrown == "")
+    {
+      // probably network is failed like internet connection
+      console.log("Network error detected");
+      // check with pingi
+      pingi();
+    }
+    else
+    {
+      var statusCode = _jqXHR.status;
+      if(urlLangFa())
+      {
+        notif('fatal', statusCode + ' ' + _errorThrown, 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
+
+      }
+      else
+      {
+        notif('fatal', statusCode + ' ' + _errorThrown, 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-exclamation-triangle'});
+      }
+    }
+  }
+}
+
 
