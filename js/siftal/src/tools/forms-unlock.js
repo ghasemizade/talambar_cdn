@@ -231,10 +231,13 @@ function ajaxResponseToJSON(_jqXHR, _data)
         newLinePoint     = newLinePoint === -1 ? undefined : newLinePoint;
         resultJSON  = JSON.parse(_data.slice(0, newLinePoint));
         // get html
-        var html = _data.slice(newLinePoint);
-        if(html)
+        if(newLinePoint)
         {
-          resultJSON.html = html.trim();
+          var html = _data.slice(newLinePoint);
+          if(html)
+          {
+            resultJSON.html = html.trim();
+          }
         }
       }
       catch(e)

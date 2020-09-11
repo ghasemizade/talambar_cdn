@@ -357,6 +357,11 @@
           // check for redirect if needed
           analyseAjaxRedirect(resultJSON);
         }
+        else if(resultJSON.msg)
+        {
+          // we have message, show it
+          analyseAjaxError(_jqXHR, _textStatus, _errorThrown);
+        }
         else
         {
           deferred.resolve(resultJSON);
@@ -365,7 +370,7 @@
       else
       {
         // analyse error
-        analyseAjaxError(_jqXHR, _textStatus, _errorThrown)
+        analyseAjaxError(_jqXHR, _textStatus, _errorThrown);
       }
 
       $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);

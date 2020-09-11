@@ -2,7 +2,6 @@
 function analyseAjaxResponse(_data, _deferred, _props)
 {
   var json;
-  var html;
   if(typeof _data === 'object')
   {
     // it's json
@@ -20,11 +19,13 @@ function analyseAjaxResponse(_data, _deferred, _props)
         newLinePoint     = newLinePoint === -1 ? undefined : newLinePoint;
         json  = JSON.parse(_data.slice(0, newLinePoint));
         // get html
-        html = _data.slice(newLinePoint);
-        if(html)
+        if(newLinePoint)
         {
-          html = html.trim();
-          _.extend(json, {html: html});
+          var html = _data.slice(newLinePoint);
+          if(html)
+          {
+            json.html = html.trim();
+          }
         }
       }
       catch(e)
@@ -42,7 +43,6 @@ function analyseAjaxResponse(_data, _deferred, _props)
       }
     }
   }
-
 
   if(json && json.debug)
   {
