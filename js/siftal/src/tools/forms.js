@@ -226,11 +226,11 @@
         }
       }
 
-      var autoCloseAttr     = $this.attr('data-autoClose');
+      var autoCloseTimeout  = $this.attr('data-autoClose');
       var autoScrollAttr    = $this.attr('data-autoScroll');
 
       // var refresh   = ajaxOptions.refresh || $this.attr('data-refresh') !== undefined;
-      var autoClose = ajaxOptions.autoClose || autoCloseAttr !== undefined;
+      var autoClose = ajaxOptions.autoClose || autoCloseTimeout !== undefined;
 
       if(!_super.noLoading)
       {
@@ -296,21 +296,6 @@
         _super.results = data;
 
         $.fn.ajaxify.showResults(data, $this, _super);
-
-        // if need to autoClose tab on some special condition, close windows
-        if(autoClose)
-        {
-          var closeAfter = 0;
-          if(autoCloseAttr)
-          {
-            closeAfter = autoCloseAttr;
-          }
-          notif('info', 'Auto close');
-          setTimeout (function()
-          {
-            window.close();
-          }, closeAfter);
-        }
 
         unlockFormLoadingPage();
         unlockFormRedirect(data, autoScrollAttr);
@@ -415,6 +400,8 @@
         // unlockForm(_super.lockForm);
         // use in fail and success seperately
         // because sometimes always is not called!
+
+        checkAutoClosePage(autoClose, autoCloseTimeout);
       });
 
       // logy(ajaxOptions.abort);

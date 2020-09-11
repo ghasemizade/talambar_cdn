@@ -69,3 +69,23 @@ function unlockFormRedirect(_data, _autoScrollAttr)
   }
 }
 
+
+function checkAutoClosePage(_timeout)
+{
+  // if need to autoClose tab on some special condition, close windows
+  if(autoClose)
+  {
+    var closeAfter = 0;
+    if(_timeout)
+    {
+      closeAfter = _timeout;
+    }
+    notif('info', 'Auto close');
+    setTimeout (function()
+    {
+      window.close();
+    }, closeAfter);
+  }
+}
+
+
