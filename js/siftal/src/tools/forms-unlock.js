@@ -65,15 +65,16 @@ function unlockFormRedirect(_data, _autoScrollAttr)
         });
       }
     }
-    return;
+    return true;
   }
+  return null;
 }
 
 
-function checkAutoClosePage(_timeout)
+function checkAutoClosePage(_autoClose, _timeout)
 {
   // if need to autoClose tab on some special condition, close windows
-  if(autoClose)
+  if(_autoClose)
   {
     var closeAfter = 0;
     if(_timeout)
@@ -88,4 +89,112 @@ function checkAutoClosePage(_timeout)
   }
 }
 
+
+function analyseAjaxFormResponse(_data, _$this, _super, _autoScrollAttr)
+{
+  _super.results = _data;
+
+  var notifResult = $.fn.ajaxify.showResults(_data, _$this, _super);
+  console.log(notifResult);
+
+  unlockFormLoadingPage();
+  var redirectStatus = unlockFormRedirect(_data, _autoScrollAttr);
+  console.log(222);
+  console.log(_data);
+  console.log(_autoScrollAttr);
+  console.log(redirectStatus);
+  if(redirectStatus === null)
+  {
+    // unlock form
+    unlockForm(_super.lockForm, _data);
+
+    if(_autoScrollAttr !== undefined)
+    {
+      findPushStateScroll();
+    }
+  }
+}
+
+
+function analyseAjaxFormError(_jqXHR, _textStatus, _errorThrown, _$this, _super, _autoScroll)
+{
+  if(_textStatus === 'timeout')
+  {
+    if(urlLangFa())
+    {
+      notif('fatal', 'مهلت درخواست  به پایان رسید', 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-history'});
+    }
+    else
+    {
+      notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
+    }
+    pingi();
+  }
+  else
+  {
+    if(_jqXHR)
+    {
+
+      if(_jqXHR.responseJSON)
+      {
+        // new way to show result
+        if(_super)
+        {
+          _super.results = _jqXHR.responseJSON;
+        }
+        var notifResult = $.fn.ajaxify.showResults(_jqXHR.responseJSON, _$this, _super);
+
+        unlockFormRedirect(_jqXHR, _autoScroll);
+
+        if(notifResult === false)
+        {
+          if(urlLangFa())
+          {
+            notif('fatal', 'خطا در دریافت اطلاعات از سرور', 'درخواست ناموفق بود!');
+          }
+          else
+          {
+            notif('fatal', 'Error in detect server result', 'Ajax is failed!');
+          }
+        }
+      }
+      else
+      {
+        unlockFormRedirect(_jqXHR, _autoScroll);
+
+        if(_jqXHR.status === 200 && !_jqXHR.responseText)
+        {
+          notif('info', 'Ok');
+        }
+        else
+        {
+          if(urlLangFa())
+          {
+            notif('fatal', 'نتیجه دریافتی از سرور نامعتبر است', 'درخواست ناموفق بود!');
+          }
+          else
+          {
+            notif('fatal', 'Server result is invalid', 'Ajax is failed!');
+          }
+
+          if(urlDebugger() && _textStatus == 'error')
+          {
+            alert(JSON.stringify( _jqXHR ));
+          }
+        }
+      }
+    }
+    else
+    {
+      if(urlLangFa())
+      {
+        notif('fatal', 'هیچ پاسخی از سرور  دریافت نشد', 'درخواست ناموفق بود!');
+      }
+      else
+      {
+        notif('fatal', 'No result from server', 'Ajax is failed!');
+      }
+    }
+  }
+}
 

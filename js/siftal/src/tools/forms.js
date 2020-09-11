@@ -293,101 +293,17 @@
       var myXhr = $.ajax(ajaxOptions)
       .done(function(data, status, xhr)
       {
-        _super.results = data;
-
-        $.fn.ajaxify.showResults(data, $this, _super);
-
-        unlockFormLoadingPage();
-        unlockFormRedirect(data, autoScrollAttr);
-
-        // unlock form
-        unlockForm(_super.lockForm, data);
-
-        if(autoScrollAttr !== undefined)
-        {
-          findPushStateScroll();
-        }
+        analyseAjaxFormResponse(data, $this, _super, autoScrollAttr);
 
         $form.trigger('ajaxify:success', data, status, xhr);
       })
       .fail(function(_result, _textStatus, _error)
       {
-        if(_textStatus === 'timeout')
-        {
-          if(urlLangFa())
-          {
-            notif('fatal', 'مهلت درخواست  به پایان رسید', 'درخواست ناموفق', 5000, {'position':'topCenter', 'icon':'sf-history'});
-          }
-          else
-          {
-            notif('fatal', 'Failed from timeout', 'Request failed', 5000, {'position':'topCenter', 'icon':'sf-history'});
-          }
-          pingi();
-        }
-        else
-        {
-          if(_result)
-          {
-            if(_result.responseJSON)
-            {
-              // new way to show result
-              _super.results = _result.responseJSON;
-              var notifResult = $.fn.ajaxify.showResults(_result.responseJSON, $this, _super);
+        analyseAjaxFormResponse(_result, $this, _super, autoScrollAttr);
 
-              if(notifResult === false)
-              {
-                if(urlLangFa())
-                {
-                  notif('fatal', 'خطا در دریافت اطلاعات از سرور', 'درخواست ناموفق بود!');
-                }
-                else
-                {
-                  notif('fatal', 'Error in detect server result', 'Ajax is failed!');
-                }
-              }
-            }
-            else
-            {
-              if(_result.status === 200 && !_result.responseText)
-              {
-                notif('info', 'Ok');
-              }
-              else
-              {
-                if(urlLangFa())
-                {
-                  notif('fatal', 'نتیجه دریافتی از سرور نامعتبر است', 'درخواست ناموفق بود!');
-                }
-                else
-                {
-                  notif('fatal', 'Server result is invalid', 'Ajax is failed!');
-                }
-
-                if(urlDebugger() && _textStatus == 'error')
-                {
-                  alert(JSON.stringify( _result ));
-                }
-              }
-            }
-
-            unlockFormRedirect(_result, autoScrollAttr);
-          }
-          else
-          {
-            if(urlLangFa())
-            {
-              notif('fatal', 'هیچ پاسخی از سرور  دریافت نشد', 'درخواست ناموفق بود!');
-            }
-            else
-            {
-              notif('fatal', 'No result from server', 'Ajax is failed!');
-            }
-          }
-        }
-
+        analyseAjaxFormError(_result, _textStatus, _error, $this, _super, autoScrollAttr);
 
         $form.trigger('ajaxify:fail', _result, _textStatus, _error);
-        unlockForm(_super.lockForm);
       })
       .always(function(a1, a2, a3)
       {
