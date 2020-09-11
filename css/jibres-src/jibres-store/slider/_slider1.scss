@@ -2,6 +2,26 @@
 	overflow: hidden;
 	margin-bottom: 0.5rem;
 	border-radius: 1rem;
+	transition:0.2s;
+}
+.jSlider1[data-slider-ratio="1.78"]{
+	height: 0;
+	padding-top: 56.25%;
+}
+.jSlider1[data-slider-ratio="1.33"]{
+	height: 0;
+	padding-top: 75%;
+}
+.jSlider1.slick-initialized{
+	height: auto;
+	padding-top: 0;
+}
+.jSlider1[data-slider-ratio] .roundedBox:first-child{
+	position: absolute;
+	top: 0;
+}
+.jSlider1.slick-initialized[data-slider-ratio] .roundedBox{
+	position: initial;
 }
 .jSlider1 .slick-next {
     z-index: 1;
@@ -21,7 +41,6 @@
 	left: auto;
 	right: 2%;
 }
-
 .imgLine a {
 	display: block;
 }
