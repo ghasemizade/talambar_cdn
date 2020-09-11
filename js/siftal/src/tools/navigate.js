@@ -11,7 +11,7 @@
     title: null,
     url: '/',
     replace: false,
-    autoScroll: false,
+    autoScroll: null,
     filter: null,
     fake: false,
     data: false,
@@ -40,7 +40,7 @@
     {
         $.xhrPool.push(jqXHR);
     },
-    complete: function(jqXHR)
+    always: function(jqXHR)
     {
        var index = $.xhrPool.indexOf(jqXHR);
        if (index > -1)
@@ -256,6 +256,18 @@
       // set scroll
       scrollSmoothTo($(obj.autoScroll));
     }
+    else if($("body").attr('data-in') === 'site')
+    {
+      findPushStateScroll();
+    }
+    else if($("body").attr('data-in') === 'business')
+    {
+      findPushStateScroll();
+    }
+    else if($("body").attr('data-in') === 'support')
+    {
+      findPushStateScroll();
+    }
     else if(obj.autoScroll === false)
     {
       // do nothing if set to false
@@ -300,17 +312,6 @@
     {
       NProgress.configure({ animationModel: 'navigate' }).start();
       NProgress.configure({ animationModel: 'navigate' }).inc();
-    };
-    options.complete = function(jqXHR)
-    {
-      if(jqXHR.responseJSON && jqXHR.responseJSON.ok === true && jqXHR.responseJSON.redirect)
-      {
-        // do nothing because we have another navigate
-      }
-      else
-      {
-        NProgress.done(true);
-      }
     };
 
     // set timeout for fetch page
@@ -369,8 +370,17 @@
 
       $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);
     })
-    .always(function(_result, _textStatus, _error)
+    .always(function(_jqXHR, _textStatus, _error)
     {
+      if(_jqXHR.responseJSON && _jqXHR.responseJSON.ok === true && _jqXHR.responseJSON.redirect)
+      {
+        // do nothing because we have another navigate
+      }
+      else
+      {
+        NProgress.done(true);
+      }
+
       // remove loading
       setTimeout (function()
       {
