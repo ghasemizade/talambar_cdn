@@ -297,13 +297,17 @@
 
         $form.trigger('ajaxify:success', data, status, xhr);
       })
-      .fail(function(_result, _textStatus, _error)
+      .fail(function(_jqXHR, _textStatus, _errorThrown)
       {
-        analyseAjaxFormResponse(_result, $this, _super, autoScrollAttr);
+        var responseJSON = ajaxResponseToJSON(_jqXHR);
 
-        analyseAjaxFormError(_result, _textStatus, _error, $this, _super, autoScrollAttr);
+        var myResult = analyseAjaxFormResponse(responseJSON, $this, _super, autoScrollAttr);
+        if(myResult === null)
+        {
+          analyseAjaxFormError(_jqXHR, _textStatus, _super);
+        }
 
-        $form.trigger('ajaxify:fail', _result, _textStatus, _error);
+        $form.trigger('ajaxify:fail', _jqXHR, _textStatus, _errorThrown);
       })
       .always(function(a1, a2, a3)
       {

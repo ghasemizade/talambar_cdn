@@ -95,28 +95,31 @@ function analyseAjaxFormResponse(_data, _$this, _super, _autoScrollAttr)
   _super.results = _data;
 
   var notifResult = $.fn.ajaxify.showResults(_data, _$this, _super);
-  console.log(notifResult);
 
   unlockFormLoadingPage();
-  var redirectStatus = unlockFormRedirect(_data, _autoScrollAttr);
-  console.log(222);
-  console.log(_data);
-  console.log(_autoScrollAttr);
-  console.log(redirectStatus);
-  if(redirectStatus === null)
+  if(unlockFormRedirect(_data, _autoScrollAttr))
   {
-    // unlock form
-    unlockForm(_super.lockForm, _data);
-
-    if(_autoScrollAttr !== undefined)
-    {
-      findPushStateScroll();
-    }
+    return true;
   }
+  // if we are not have redirect, unlock form and return false
+  // unlock form
+  unlockForm(_super.lockForm, _data);
+
+  if(_autoScrollAttr !== undefined)
+  {
+    findPushStateScroll();
+  }
+
+  if(notifResult)
+  {
+    return false;
+  }
+
+  return null;
 }
 
 
-function analyseAjaxFormError(_jqXHR, _textStatus, _errorThrown, _$this, _super, _autoScroll)
+function analyseAjaxFormError(_jqXHR, _textStatus, _super)
 {
   if(_textStatus === 'timeout')
   {
@@ -137,31 +140,18 @@ function analyseAjaxFormError(_jqXHR, _textStatus, _errorThrown, _$this, _super,
 
       if(_jqXHR.responseJSON)
       {
-        // new way to show result
-        if(_super)
+
+        if(urlLangFa())
         {
-          _super.results = _jqXHR.responseJSON;
+          notif('fatal', 'خطا در دریافت اطلاعات از سرور', 'درخواست ناموفق بود!');
         }
-        var notifResult = $.fn.ajaxify.showResults(_jqXHR.responseJSON, _$this, _super);
-
-        unlockFormRedirect(_jqXHR, _autoScroll);
-
-        if(notifResult === false)
+        else
         {
-          if(urlLangFa())
-          {
-            notif('fatal', 'خطا در دریافت اطلاعات از سرور', 'درخواست ناموفق بود!');
-          }
-          else
-          {
-            notif('fatal', 'Error in detect server result', 'Ajax is failed!');
-          }
+          notif('fatal', 'Error in detect server result', 'Ajax is failed!');
         }
       }
       else
       {
-        unlockFormRedirect(_jqXHR, _autoScroll);
-
         if(_jqXHR.status === 200 && !_jqXHR.responseText)
         {
           notif('info', 'Ok');
@@ -196,5 +186,68 @@ function analyseAjaxFormError(_jqXHR, _textStatus, _errorThrown, _$this, _super,
       }
     }
   }
+}
+
+
+
+function ajaxResponseToJSON(_jqXHR, _data)
+{
+  // check empty result
+  if(!_jqXHR)
+  {
+    return null;
+  }
+  // check for prepared json
+  if(_jqXHR.responseJSON)
+  {
+    return _jqXHR.responseJSON;
+  }
+
+  // convert text to json
+  var myResponseRaw = null;
+  if(_jqXHR.responseText)
+  {
+    myResponseRaw = _jqXHR.responseText;
+  }
+  if(!myResponseRaw)
+  {
+    return null;
+  }
+  // try to convert text to json
+  var resultJSON = null;
+  if(typeof _data === 'object')
+  {
+    // it's json
+    resultJSON = _data;
+  }
+  else
+  {
+    var jsonExpected = _data[0] === '{';
+    if(jsonExpected)
+    {
+      try
+      {
+        var newLinePoint = _data.indexOf('\n');
+        newLinePoint     = newLinePoint === -1 ? undefined : newLinePoint;
+        resultJSON  = JSON.parse(_data.slice(0, newLinePoint));
+        // get html
+        var html = _data.slice(newLinePoint);
+        if(html)
+        {
+          resultJSON.html = html.trim();
+        }
+      }
+      catch(e)
+      {
+        if (jsonExpected)
+        {
+          notif('error', 'There was an error in parsing JSON!');
+        }
+        return null;
+      }
+    }
+  }
+
+  return resultJSON;
 }
 
