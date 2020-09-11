@@ -443,7 +443,14 @@
       }
       if(!props.data)
       {
-        render(_.extend({}, props, {html: data.html}));
+        if(data)
+        {
+          render(_.extend({}, props, {html: data.html}));
+        }
+        else
+        {
+          render(_.extend({}, props));
+        }
       }
 
       $window.trigger('statechange');
