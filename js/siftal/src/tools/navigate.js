@@ -324,12 +324,18 @@
       // analyse result as json
       var resultJSON = analyseAjaxResponse(_data, deferred, props);
       // check for redirect if needed
-      analyseAjaxRedirect(resultJSON);
+      if(resultJSON && resultJSON.ok === true && resultJSON.redirect)
+      {
+        // start redirect process
+        analyseAjaxRedirect(resultJSON);
+      }
+      else
+      {
+        deferred.resolve(resultJSON);
+      }
 
       $window.trigger('navigate:fetch:ajax:done', resultJSON)
              .trigger('navigate:fetch:done', resultJSON);
-
-      deferred.resolve(resultJSON);
     })
     .fail(function(_jqXHR, _textStatus, _errorThrown)
     {
@@ -345,8 +351,15 @@
 
       if(resultJSON)
       {
-        // check for redirect if needed
-        analyseAjaxRedirect(resultJSON);
+        if(resultJSON.ok === true && resultJSON.redirect)
+        {
+          // check for redirect if needed
+          analyseAjaxRedirect(resultJSON);
+        }
+        else
+        {
+          deferred.resolve(resultJSON);
+        }
       }
       else
       {
@@ -355,10 +368,6 @@
       }
 
       $window.trigger('navigate:fetch:ajax:error', _jqXHR, _textStatus, _errorThrown);
-      if(resultJSON)
-      {
-        deferred.resolve(resultJSON);
-      }
     })
     .always(function(_result, _textStatus, _error)
     {
