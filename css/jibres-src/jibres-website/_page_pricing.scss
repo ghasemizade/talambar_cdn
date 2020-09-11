@@ -106,35 +106,35 @@ body[data-page="pricing"] .page-title h2{
 .pricingQuick ul li:last-child {
   border-bottom: 1px solid #e0f0ff;
 }
-.pricingQuick .priceBox {
+.pricingQuick .priceItemBox {
   text-transform: initial;
   font-size: 1.2rem;
 }
-.pricingQuick .priceBox > div{
+.pricingQuick .priceItemBox > div{
   padding: 0.5em 1em;
   transition: 0.3s;
 }
-.pricingQuick .priceBox > div:hover{
+.pricingQuick .priceItemBox > div:hover{
   background-color: #e2f0ff;
 }
-.pricingQuick .priceBox .annually1{
+.pricingQuick .priceItemBox .annually1{
   border-radius: 0;
   background-color: #e0f0ff;
   border: 1px solid #48aaff;
 }
-.pricingQuick .priceBox .period{
+.pricingQuick .priceItemBox .period{
   font-size: 1rem;
 }
-.pricingQuick .priceBox .period span{
+.pricingQuick .priceItemBox .period span{
 }
-.pricingQuick .priceBox .price{
+.pricingQuick .priceItemBox .price{
   color: #016FF9;
   font-size: 3rem;
   font-weight: 700;
 }
 .pricingQuick .annually .price{
 }
-.pricingQuick .priceBox .unit{
+.pricingQuick .priceItemBox .unit{
   font-size: 1rem;
 }
 .pricingQuick a {
