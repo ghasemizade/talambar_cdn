@@ -11,6 +11,7 @@ function cleaveRunner()
       case "number":
         opt.numeral = true;
         opt.numeralPositiveOnly = true;
+        opt.numeralDecimalScale = 3;
         break;
 
       case "int":
