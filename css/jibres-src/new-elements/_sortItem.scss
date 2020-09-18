@@ -1,15 +1,11 @@
 // sortItem
 .sortItem{
-	margin:0 1rem;
+	margin:0.5rem 0;
 	position:relative;
-	cursor:move;
-	width:100%;
 	background-color:#fff;
 	border:2px solid #f8f8f8;
 	opacity:0.9;
-	transition:0.3s;
-	width:100%;
-	height:8rem;
+	height:7.5rem;
 	border-radius:0.5rem;
 	font-size: 1.2rem;
 	line-height: 2rem;
@@ -17,6 +13,8 @@
 	text-overflow: ellipsis;
 	// white-space: nowrap;
 	overflow: hidden;
+	cursor:move!important;
+	transition:0.2s!important;
 }
 .sortItem:hover{
 	opacity:0.8;
