@@ -47,7 +47,24 @@
 	background-color: #fff;
 	border-color: #fff;
 }
+.jFooter201 .certifications{
 
+}
+.jFooter201 .cert{
+	background-color: #fff;
+	border-radius: 0.5rem;
+	width: 12rem;
+	height: 12rem;
+	overflow: hidden;
+	display: inline-block;
+	cursor: pointer;
+	margin: 0.5rem;
+	padding: 0.5rem;
+}
+.jFooter201 .cert img{
+	display: block;
+	margin: 0 auto;
+}
 .jFooter201 h4{
 	color: #eae7f3;
 	margin: 4rem 0 2rem;
