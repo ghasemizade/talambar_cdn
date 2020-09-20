@@ -39,7 +39,8 @@ function highChart_analyze()
     series: {
       dataLabels: {
         enabled: true,
-        format: '<b>{point.name}</b> {point.y:,.0f}',
+        format: '<span>{point.name}</span> {point.y:,.0f}',
+      useHTML: true,
         softConnector: true
       },
       center: ['40%', '50%'],
