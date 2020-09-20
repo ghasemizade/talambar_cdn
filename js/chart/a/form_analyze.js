@@ -33,13 +33,13 @@ function highChart_analyze()
     type: 'funnel'
   },
   title: {
-    text: 'Sales funnel'
+    text: $("#charttitle").text()
   },
   plotOptions: {
     series: {
       dataLabels: {
         enabled: true,
-        format: '<b>{point.name}</b> ({point.y:,.0f})',
+        format: '<b>{point.name}</b> {point.y:,.0f}',
         softConnector: true
       },
       center: ['40%', '50%'],
@@ -52,7 +52,7 @@ function highChart_analyze()
     enabled: false
   },
   series: [{
-    name: 'Unique users',
+    name: $("#chartunit").text(),
     data: data
   }],
 
