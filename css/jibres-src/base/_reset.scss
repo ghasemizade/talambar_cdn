@@ -39,6 +39,7 @@ html[dir="ltr"]{
   -webkit-text-size-adjust:100%;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
+  scroll-behavior: smooth;
   font-size:62.5%;
   line-height: 1.15;
   min-height: 100%;
@@ -60,6 +61,7 @@ html[dir="rtl"]{
   -webkit-text-size-adjust:100%;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
+  scroll-behavior: smooth;
   font-size:62.5%;
   line-height: 1.15;
   min-height: 100%;
