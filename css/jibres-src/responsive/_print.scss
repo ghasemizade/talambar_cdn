@@ -95,6 +95,44 @@
   [data-page="accounting_doc_edit"][data-panel] #content{
     padding: 1rem 10% 0!important;
   }
+  [data-page="accounting_doc_edit"] .box {
+    margin-bottom: 2rem!important;
+    font-size: 1rem;
+  }
+  [data-page="accounting_doc_edit"] label{
+    margin-top: 0.5rem!important;
+  }
+  [data-page="accounting_doc_edit"] .font-11{
+  	font-size: 1rem!important;
+  }
+  [data-page="accounting_doc_edit"] .font-12{
+  	font-size: 1rem!important;
+  }
+  // style for print all
+  [data-page="accounting_doc_printall"][data-panel] #content .titleBox{
+    margin-top: 2rem!important;
+    display: block;
+  }
+  [data-page="accounting_doc_printall"][data-panel] #content .titleBox h2{
+    font-size: 3rem!important;
+  }
+  [data-page="accounting_doc_printall"][data-panel] #content{
+    padding: 1rem 10% 0!important;
+  }
+  [data-page="accounting_doc_printall"] .box {
+    margin-bottom: 2rem!important;
+    font-size: 1rem;
+  }
+  [data-page="accounting_doc_printall"] label{
+    margin-top: 0.5rem!important;
+  }
+  [data-page="accounting_doc_printall"] .font-11{
+    font-size: 1rem!important;
+  }
+  [data-page="accounting_doc_printall"] .font-12{
+    font-size: 1rem!important;
+  }
+
   // [data-panel] #content::after{
   // 	content: "Integrated Ecommerce Platform Software - Jibres.com";
   // 	position: fixed;
@@ -109,19 +147,6 @@
   // [lang="fa"] [data-panel] #content::after{
   // 	content: "پلتفرم تجارت الکترونیک یکپارچه جیبرس - Jibres.ir";
   // }
-  [data-page="accounting_doc_edit"] .box {
-    margin-bottom: 2rem!important;
-    font-size: 1rem;
-  }
-  [data-page="accounting_doc_edit"] label{
-    margin-top: 0.5rem!important;
-  }
-  [data-page="accounting_doc_edit"] .font-11{
-  	font-size: 1rem!important;
-  }
-  [data-page="accounting_doc_edit"] .font-12{
-  	font-size: 1rem!important;
-  }
 
 }
 
