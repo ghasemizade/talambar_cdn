@@ -32,6 +32,7 @@
 // print all printArea with color
 .printArea{
 	-webkit-print-color-adjust: exact;
+  page-break-after: always;
 }
 // minimum padding
 .printArea[data-size='A4']               { padding: 3mm;}
