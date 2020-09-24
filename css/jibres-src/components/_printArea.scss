@@ -34,6 +34,9 @@
 	-webkit-print-color-adjust: exact;
 }
 .pageBreak{page-break-after: always;}
+.pageBreakBefore{page-break-before: always;}
+.keepTogether{page-break-inside: avoid;}
+
 // minimum padding
 .printArea[data-size='A4']               { padding: 3mm;}
 .printArea[data-size='A4.landscape']     { padding: 3mm;}
