@@ -12,7 +12,7 @@
 	margin-bottom: 1em;
 	border-collapse: collapse;
 }
-.tbl1 .repeatHead{
+.tbl1.repeatHead{
 	-fs-table-paginate: paginate;
 }
 [dir="rtl"] .tbl1{
@@ -31,6 +31,12 @@
 }
 .tbl1.repeatHead thead{
 	display: table-header-group;
+}
+.tbl1.repeatFoot tfoot{
+	display: table-footer-group;
+}
+.tbl1 tfoot.dontRepeatFoot{
+	display: table-row-group;
 }
 
 .tbl1 th {

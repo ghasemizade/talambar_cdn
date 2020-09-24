@@ -56,13 +56,19 @@
 }
 
 // repeatHead
-.tbl2 .repeatHead{
+.tbl2.repeatHead{
 	-fs-table-paginate: paginate;
 }
 .tbl2.repeatHead thead{
 	display: table-header-group;
 }
-
+// repeatFoot
+.tbl1.repeatFoot tfoot{
+	display: table-footer-group;
+}
+.tbl1 tfoot.dontRepeatFoot{
+	display: table-row-group;
+}
 // minimal
 .tbl2.minimal thead tr{
 	font-size: 1rem;
