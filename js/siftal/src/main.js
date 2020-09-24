@@ -190,6 +190,14 @@ $(document).ready(function()
     {
       return;
     }
+    if($this.attr('href') === '#')
+    {
+      return;
+    }
+    if($this.is('a[href*="#"]'))
+    {
+      return;
+    }
 
     if(
         $this.attr('target') === '_blank' ||

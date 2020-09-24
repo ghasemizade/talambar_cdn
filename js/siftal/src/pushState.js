@@ -12,9 +12,9 @@ function pushStateSiftal(_direct)
   // run notif from html
   runHtmlNotif();
   // detect id and try to scroll to it
-  scrollSmoothDetector(_direct);
+  // scrollSmoothDetector(_direct);
   // run watchScroll func to watch all elements
-  watchScroll();
+  // watchScroll();
   // run numeral fn
   cleaveRunner();
   // check navigate is done or not
