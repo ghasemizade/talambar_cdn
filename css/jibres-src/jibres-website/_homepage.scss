@@ -143,4 +143,22 @@
 #jibresApp .text{
 	padding-top: 10rem;
 }
-
+#jibresApp h1{
+	font-size: 4rem;
+}
+#jibresApp .dl a{
+	display: inline-block;
+	background-color: rgba(0,0,0,0.1);
+	border:1px solid #fff;
+	border-radius: 0.5rem;
+	max-width: 18rem;
+	margin: 0.5rem;
+	transition: 0.3s;
+}
+#jibresApp .dl a:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+#jibresApp .dl a img{
+	display: block;
+	width: 100%;
+}
