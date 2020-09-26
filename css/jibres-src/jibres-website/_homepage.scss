@@ -143,6 +143,16 @@
 #jibresApp .text{
 	padding-top: 10rem;
 }
+[data-pwa] #jibresApp .text{
+	padding: 5rem 0;
+	text-align: center;
+}
+[data-pwa] #jibresApp h1{
+	font-size: 2.5rem;
+}
+[data-pwa] #jibresApp p{
+	font-size: 1.2rem;
+}
 #jibresApp h1{
 	font-size: 4rem;
 }
@@ -154,6 +164,9 @@
 	max-width: 18rem;
 	margin: 0.5rem;
 	transition: 0.3s;
+}
+[data-pwa] #jibresApp .dl a{
+	max-width: 15rem;
 }
 #jibresApp .dl a:hover{
 	background-color: rgba(0,0,0,0.2);
