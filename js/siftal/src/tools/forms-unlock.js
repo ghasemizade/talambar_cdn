@@ -167,10 +167,10 @@ function analyseAjaxFormError(_jqXHR, _textStatus, _super)
             notif('fatal', 'Server result is invalid', 'Ajax is failed!');
           }
 
-          if(urlDebugger() && _textStatus == 'error')
-          {
-            alert(JSON.stringify( _jqXHR ));
-          }
+          // if(urlDebugger() && _textStatus == 'error')
+          // {
+          //   alert(JSON.stringify( _jqXHR ));
+          // }
         }
       }
     }
@@ -213,6 +213,11 @@ function ajaxResponseToJSON(_jqXHR, _data)
   {
     return null;
   }
+  if(_data === undefined)
+  {
+    _data = myResponseRaw;
+  }
+
   // try to convert text to json
   var resultJSON = null;
   if(typeof _data === 'object')
@@ -220,7 +225,7 @@ function ajaxResponseToJSON(_jqXHR, _data)
     // it's json
     resultJSON = _data;
   }
-  else
+  else if (_data)
   {
     var jsonExpected = _data[0] === '{';
     if(jsonExpected)
@@ -249,6 +254,10 @@ function ajaxResponseToJSON(_jqXHR, _data)
         return null;
       }
     }
+  }
+  else
+  {
+
   }
 
   return resultJSON;
