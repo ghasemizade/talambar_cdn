@@ -42,7 +42,8 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 #jibresFooter a:hover{color: $jibres;}
 #jibresFooter a:focus{color: $jibresMono;}
 #jibresFooter a:active{color: $jibresDark;}
-[data-pwa] #jibresFooter .items li+li::before{display: none;}
+#jibresFooter .items li+li::before{display: none;}
+#jibresFooter .items a{padding-right: 0;padding-left: 0;}
 
 
 
