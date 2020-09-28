@@ -8,19 +8,19 @@ function pageScript()
 	 dataType: 'json',
 	 success : function()
 	 {
-	  Navigate({ url: $("#urlthis").text() + "/opening" });
+	  Navigate({ url: $("#urlthisopening").text() });
 	 },
 	 done : function()
 	 {
-	  Navigate({ url: $("#urlthis").text() + "/opening" });
+	  Navigate({ url: $("#urlthisopening").text() });
 	 },
 	 fail : function()
 	 {
-	  Navigate({ url: $("#urlthis").text() + "/error" });
+	  Navigate({ url: $("#urlthiserror").text() });
 	 },
 	 statusCode: {
 	  501: function() {
-	    Navigate({ url: $("#urlthis").text() + "/error" });
+	    Navigate({ url: $("#urlthiserror").text() });
 	  }
 	 }
 	});
