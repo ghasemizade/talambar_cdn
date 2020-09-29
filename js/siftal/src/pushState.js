@@ -9,6 +9,8 @@ function pushStateSiftal(_direct)
   // runSortable();
   // run counter up on each page we have counter
   runCounterUp();
+  // try to crawl from digikala
+  digikalaCrawlMasterRunner();
   // run notif from html
   runHtmlNotif();
   // detect id and try to scroll to it

@@ -37,6 +37,7 @@ var myModuleFiles =
 	'src/libs/escNav/escNav.js',
 	'src/libs/kerkere/kerkere.js',
 	'src/libs/dataCopy/dataCopy.js',
+	'src/libs/digikalaCrawlMaster/digikalaCrawlMaster.js',
 
 	// JsBarcode
 	'src/libs/JsBarcode/JsBarcode.all.min.js',

@@ -1,11 +1,15 @@
 
-function pageScript()
+function digikalaCrawlMasterRunner()
 {
-  var $showEl = $('#poofImageFetch');
+  $('[data-digikala-crawl]').each(function()
+  {
+    var $showEl = $(this);
 
-  // get data from digikala and convert it to array
-  searchResult = readDigiKalaList($showEl.attr('data-title'), $showEl);
+    // get data from digikala and convert it to array
+    searchResult = readDigiKalaList($showEl.attr('data-digikala-crawl'), $showEl);
+  });
 }
+
 
 
 function readDigiKalaList(_q, _target)
