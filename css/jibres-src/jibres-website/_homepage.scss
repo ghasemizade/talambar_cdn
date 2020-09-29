@@ -30,60 +30,10 @@
 
 .jibresChannel{
 	font-size: 2rem;
-	padding: 1.5rem 0;
+	padding: 3rem 0;
 	background-color: #f5f5f7;
 }
-.jibresChannel .bigCart{
-	min-height: 60rem;
-	border-radius: 2rem;
-	padding: 6rem;
-	margin: 0;
-	overflow: hidden;
-	background-color: #fff;
-	color: #1d1d1f;
-}
-[data-pwa] .jibresChannel .bigCart{
-	min-height: 0;
-	padding: 10rem 2rem 5rem;
-}
-.jibresChannel .bigCart.bgBlue{
-	background-color: #0071e3;
-	color: #f5f5f7;
-}
-.jibresChannel .bigCart.bgBlack{
-	background-color: #1d1d1f;
-	color: #fff;
-}
-.jibresChannel .bigCart.bgJibres{
-	background-color: #c8095a;
-	color: #fff;
-}
 
-.jibresChannel h2{
-	font-size: 7rem;
-	line-height: 1.1!important;
-	font-weight: 700;
-}
-.jibresChannel h3{
-	font-size: 4.5rem;
-	line-height: 1.1!important;
-	font-weight: 400;
-}
-[dir='rtl'] .jibresChannel h3{
-	font-size: 3.5rem;
-	line-height: 1.7;
-}
-// pwa
-[data-pwa] .jibresChannel h2{
-	font-size: 6rem!important;
-}
-[data-pwa] .jibresChannel h3{
-	font-size: 4rem!important;
-	font-weight: 400!important;
-}
-[data-pwa][dir='rtl'] .jibresChannel h3{
-	font-size: 3rem!important;
-}
 
 #jibresQuote{position:relative;overflow: hidden;font-size: 1.5rem;padding: 10rem 0 10rem;background-color:#f7fafc;color: #415161}
 [dir='rtl'] #jibresQuote{font-size: 1.4rem;}
