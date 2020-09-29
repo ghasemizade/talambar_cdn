@@ -71,6 +71,18 @@ function readPageEditor()
 }
 
 
+function readPageEditor()
+{
+  var myEl = $('[data-digikala-crawl]');
+
+  if(myEl && myEl.length > 0)
+  {
+    myUrl = urlJibres('cdn') + "lib/digikalaCrawlMaster/digikalaCrawlMaster.js?v=1";
+    fileLoader(myUrl, 'runDigiKalaCrawlMaster', true);
+  }
+}
+
+
 function readPageSortable()
 {
   var myEl = $('[data-sortable]');
