@@ -19,44 +19,74 @@ function pageScript()
   {
     // Convert the HTML string into a document object
     var parser = new DOMParser();
-    var doc    = parser.parseFromString(html, 'text/html');
-    var images = $(doc).find('.c-listing__items .js-product-item img');
-    var mySrc, myTitle, myPrice, compareAtPrice, data, myEl;
+    if(!parser)
+    {
+      console.log('parser is not defined!');
+      return false;
+    }
+    var doc = parser.parseFromString(html, 'text/html');
+    if(!doc)
+    {
+      console.log('doc is not recognized');
+      return false;
+    }
+
+    var myProductList = $(doc).find('.c-listing__items');
+    var eachItem = myProductList.find('.c-product-box');
+    // var images = myProductList.find('.js-product-item img');
+    var pTitle, pUnit, pPrice, pCompareAtPrice, pImg, data, newEl;
 
 
-    images.each(function(index) {
-      var mySrc = $(this).attr('src');
-      if(mySrc)
+
+    eachItem.each(function(index)
+    {
+      $this  = $(this);
+      pTitle = $this.find('.c-product-box__title a').text();
+      pUnit  = $this.find('.c-price .c-price__value-wrapper .c-price__currency').text();
+      pPrice = $this.find('.c-price .c-price__value-wrapper').text().replace(pUnit, '').trim();
+      pCompareAtPrice = $this.find('.c-price del').text();
+
+      // pImg = $(this).attr('src');
+      pImg = $this.find('.c-product-box__img img').attr('src');
+
+      if(pImg)
       {
-        data = '{"url":"' + mySrc + '"}';
-
         // create product Element
-        myEl  = "<div class='c-2'>";
+        newEl  = "<div class='c-2'>";
         {
-          myEl += "<div class='jProduct2' data-data='" + data + "'>";
+          newEl += "<div class='jProduct2' data-data='" + '{"url":"' + pImg + '"}' + "'>";
           {
-            myEl += "<figure class='overlay'>"
+            newEl += "<figure class='overlay'>"
             {
-              myEl += '<img src=' + mySrc + ' alt="poof">'
-              myEl += "<footer>";
+              newEl += '<img src=' + pImg + ' alt="poof">'
+              newEl += "<footer>";
               {
-                myEl += "<figcaption>" + myTitle + "</figcaption>";
-                myEl += "<div class='f align-center'>"
-                myEl += "<span class='unit cauto'></span>";
-                myEl += "<span class='price c'>"+ myPrice +"</span>";
-                myEl += "<del class='compareAtPrice cauto os'>" + compareAtPrice +"</del>";
-                myEl += "</div>"
+                newEl += "<figcaption>" + pTitle + "</figcaption>";
+                newEl += "<div class='f align-center'>"
+                if(pUnit)
+                {
+                  newEl += "<span class='unit cauto'>" + pUnit + "</span>";
+                }
+                if(pPrice)
+                {
+                  newEl += "<span class='price c'>"+ pPrice +"</span>";
+                }
+                if(pCompareAtPrice)
+                {
+                  newEl += "<del class='compareAtPrice cauto os'>" + pCompareAtPrice +"</del>";
+                }
+                newEl += "</div>"
               }
-              myEl += "</footer>";
+              newEl += "</footer>";
             }
 
-            myEl += '</figure>';
+            newEl += '</figure>';
           }
-          myEl += '</div>';
+          newEl += '</div>';
         }
-        myEl += '</div>';
+        newEl += '</div>';
 
-        $showEl.append(myEl);
+        $showEl.append(newEl);
       }
     });
   }).catch(function (err) {
