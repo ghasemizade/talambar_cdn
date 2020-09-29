@@ -136,8 +136,6 @@ function readDigiKalaList(_q)
 
     var myResult = {};
 
-
-
     myProductList.each(function(index)
     {
       var myItem = {};
@@ -152,13 +150,67 @@ function readDigiKalaList(_q)
       myResult[index] = myItem;
     });
 
-    console.log('finish');
-    console.log(myResult);
-    return myResult();
+    return myResult;
 
   }).catch(function (err) {
     // There was an error
-    console.warn('Something went wrong.', err);
+    console.warn('Something went wrong on catch data.', err);
   });
 }
 
+
+function readDigiKalaList(_datalist, _target)
+{
+  if(!_datalist)
+  {
+    console.log('digikala data list is null');
+    return false;
+  }
+  if(!_target)
+  {
+    console.log('target to show digikala converted list is empty');
+    return false;
+  }
+
+  $.each( _datalist, function( key, item)
+  {
+    {
+      // create product Element
+      newEl  = "<div class='c-2'>";
+      {
+        newEl += "<div class='jProduct2' data-data='" + '{"url":"' + item.img + '"}' + "'>";
+        {
+          newEl += "<figure class='overlay'>"
+          {
+            newEl += '<img src=' + item.img + ' alt="poof">'
+            newEl += "<footer>";
+            {
+              newEl += "<figcaption>" + item.title + "</figcaption>";
+              newEl += "<div class='f align-center'>"
+              if(item.unit)
+              {
+                newEl += "<span class='unit cauto'>" + item.unit + "</span>";
+              }
+              if(item.price)
+              {
+                newEl += "<span class='price c'>"+ item.price +"</span>";
+              }
+              if(item.CompareAtPrice)
+              {
+                newEl += "<del class='compareAtPrice cauto os'>" + item.CompareAtPrice +"</del>";
+              }
+              newEl += "</div>"
+            }
+            newEl += "</footer>";
+          }
+
+          newEl += '</figure>';
+        }
+        newEl += '</div>';
+      }
+      newEl += '</div>';
+
+      _target.append(newEl);
+    }
+  });
+}
