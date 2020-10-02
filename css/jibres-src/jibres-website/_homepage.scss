@@ -1,4 +1,53 @@
 
+#homeLanding{
+	color: #fff;
+}
+#homeLanding .input{
+	width: 100%;
+	height: 5rem;
+	line-height: 4.8rem;
+	box-shadow: 0 0 0 1px #6b7177;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+}
+#homeLanding h1{
+	font-size: 6rem;
+}
+#homeLanding .btn3{
+	height: 5rem;
+	display: block;
+	width: 100%;
+	padding: 1rem 1.8rem;
+	margin-bottom: 1rem;
+	border-radius: 4px;
+	font-family: ShopifySans, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 1.133;
+	-webkit-font-smoothing: antialiased;
+	transition: 1.5s ease;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 0.5rem 1.5rem 0 rgba(0,0,0,0.15);
+	background-color: #c8095a;
+	color: #fff;
+	border: 1px solid transparent;
+}
+#homeLanding .btn3:hover{
+	box-shadow: 0 5px 25px 0 rgba(0,0,0,0.25);
+}
+#homeLanding .btn3:focus{
+	box-shadow: 0 0 0.18em 0.18em rgba(0,128,96,0.5);
+}
+#homeLanding .btn3:active{
+	background-color: #002e25;
+	color: #ffffff;
+	border-color: #002e25;
+}
+#homeLanding p{
+	margin: 0;
+}
+
 
 #jibresDomain{
   // background-color: #FD940A;

@@ -190,6 +190,7 @@ a {
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
+  touch-action: manipulation;
 
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -407,6 +408,7 @@ select{
   line-height: 1.15;
   text-transform: none;
   outline: none;
+  touch-action: manipulation;
 }
 
 optgroup{
@@ -430,6 +432,7 @@ button{
   cursor: pointer;
   text-transform: none;
   -webkit-appearance: button;
+  touch-action: manipulation;
   outline: none;
 }
 
@@ -443,6 +446,7 @@ textarea{
   box-sizing: border-box;
   margin: 0;
   outline: none;
+  touch-action: manipulation;
 }
 
 /**
