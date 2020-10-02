@@ -6,7 +6,7 @@ html[data-iframe="block"]::after{content: "";position: fixed;top: 0;bottom: 0;ri
 html[data-iframe]::-webkit-scrollbar{width: 0px;background: transparent;}
 
 
-.jibresBanner{position: relative;min-height:300px;padding: 20px 0 20px;font-size:1.6em;}
+.jibresBanner{position: relative;min-height:300px;padding: 2rem 0 7rem;font-size:1.6em;}
 [dir='rtl'] .jibresBanner{font-size:1.4em;}
 .jibresBanner::before{content: '';min-height: 300px; background: $jibres;background: linear-gradient(to bottom, $jibres 0%, $jibresDark 100%);position: absolute;left: 0;right: 0;top: 0;width: 100%;z-index: -1;}
 .jibresBanner::after{
