@@ -6,6 +6,7 @@ function readPageAllScripts(_force, _page)
   readPageScript(_force, _page);
   readPageChart();
   readPageEditor();
+  readDigikalaCrawler();
   readPageSortable();
   readPageCropper();
   readPageFancyBox();
@@ -71,7 +72,7 @@ function readPageEditor()
 }
 
 
-function readPageEditor()
+function readDigikalaCrawler()
 {
   var myEl = $('[data-digikala-crawl]');
 
