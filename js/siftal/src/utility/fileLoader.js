@@ -78,7 +78,7 @@ function readDigikalaCrawler()
 
   if(myEl && myEl.length > 0)
   {
-    myUrl = urlJibres('cdn') + "lib/digikalaCrawlMaster/digikalaCrawlMaster.js?v=3";
+    myUrl = urlJibres('cdn') + "lib/digikalaCrawlMaster/digikalaCrawlMaster.js?v=4";
     fileLoader(myUrl, 'runDigiKalaCrawlMaster', true);
   }
 }

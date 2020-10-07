@@ -31,7 +31,11 @@
 	opacity: 0.7;
 	z-index: 1;
 }
-.jProduct2.dark .overlay:after{
+.jProduct2.darker{
+	border-radius: 1rem;
+	overflow: hidden;
+}
+.jProduct2.darker .overlay:after{
 	background:linear-gradient(to bottom, transparent 31%, rgba(0,0,0,0.32) 55%, #000 100%);
 }
 .jProduct2 .overlay:hover:after{
