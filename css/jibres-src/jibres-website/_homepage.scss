@@ -1,8 +1,8 @@
 
 #homeLanding{
 	color: #fff;
-	min-height: 400px;
-	padding: 10rem 0 0;
+	min-height: 35rem;
+	padding: 7rem 0 0;
 	position: relative;
 	font-size: 1.6rem;
 	background-color: #c80a5a;
@@ -97,6 +97,9 @@
 #jibresChannel{
 	font-size: 1.8rem;
 	padding: 0rem 0 7rem;
+}
+[dir='rtl'] #jibresChannel{
+	font-size: 1.4rem;
 }
 #jibresChannel .row>[class*=c-]{
 	padding-bottom: 1.5rem;
