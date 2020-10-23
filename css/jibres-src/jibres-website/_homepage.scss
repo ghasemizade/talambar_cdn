@@ -38,13 +38,13 @@
 	border-radius: 0.5rem;
 	margin-bottom: 1rem;
 }
-#homeLanding h1{
+#homeLanding h2{
 	min-height: 7rem;
 	font-size: 4.2rem;
 	line-height: 5rem;
 	margin: 0 0 1rem;
 }
-[dir='rtl'] #homeLanding h1{
+[dir='rtl'] #homeLanding h2{
 	font-size: 3.5rem;
 }
 
@@ -52,10 +52,10 @@
 [data-pwa] #homeLanding{
 	padding: 5rem 0 0;
 }
-[data-pwa] #homeLanding h1{
+[data-pwa] #homeLanding h2{
 	font-size: 3.5rem;
 }
-[data-pwa][dir='rtl'] #homeLanding h1{
+[data-pwa][dir='rtl'] #homeLanding h2{
 	font-size: 2.5rem;
 }
 
@@ -221,6 +221,42 @@
 #statistic:hover h2 span{opacity:1}
 
 
+#jibresInvoice{
+	font-size: 1.6rem;
+	background-color: #eff7fe;
+	padding: 10rem 0;
+	position: relative;
+}
+[data-pwa] #jibresInvoice{
+	font-size: 1.4rem;
+	padding: 5rem 0;
+}
+#jibresInvoice::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	border-left:1rem dashed #0d83dd;
+	border-right:1rem dashed #0d83dd;
+}
+#jibresInvoice h2{
+	font-size: 6rem;
+	color: #0d83dd;
+	font-weight: 900;
+}
+[data-pwa] #jibresInvoice h2{
+	font-size: 2rem;
+}
+#jibresInvoice h3{
+	font-size: 3rem;
+	color: #1565c0;
+	font-weight: 900;
+}
+#jibresInvoice p{
+	color: #343444;
+}
 
 #jibresFeatures{
 	padding: 10rem 0 15rem;
@@ -328,14 +364,14 @@
 	padding: 7rem 0;
 	text-align: center;
 }
-[data-pwa] #jibresApp h1{
+#jibresApp h2{
+	font-size: 4rem;
+}
+[data-pwa] #jibresApp h2{
 	font-size: 2.5rem;
 }
 [data-pwa] #jibresApp p{
 	font-size: 1.2rem;
-}
-#jibresApp h1{
-	font-size: 4rem;
 }
 #jibresApp .dl a{
 	display: inline-block;
