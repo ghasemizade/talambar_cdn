@@ -4,9 +4,9 @@
 
 // certificates
 #jibresCertificates{position: relative;overflow: hidden;background-color: #24292e;color:$white;font-size: 1.4rem;padding: 5rem 0;border-radius2: 0 0 100px 100px;transition: 0.3s;}
-#jibresCertificates h2{color:#fff;text-align: center;border-bottom: 1px solid #fff;line-height: 5rem;font-weight: 100;margin-bottom: 5rem;}
-#jibresCertificates h2 a:hover{color:#efefef;}
-#jibresCertificates h2 a:focus{color:#eee;}
+#jibresCertificates h3{color:#fff;text-align: center;border-bottom: 1px solid #fff;line-height: 5rem;font-weight: 100;margin-bottom: 5rem;}
+#jibresCertificates h3 a:hover{color:#efefef;}
+#jibresCertificates h3 a:focus{color:#eee;}
 // #jibresCertificates:hover{background-color: #111;}
 #jibresCertificates a{display: block;overflow: hidden;margin-bottom: 2rem;}
 #jibresCertificates img{display: block;margin:0 auto;transition:0.2s;}
@@ -37,7 +37,7 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 // footer nav links
 #jibresFooter #footerMenu nav{margin-bottom: 4rem;background-color:transparent;}
 [data-pwa] #jibresFooter #footerMenu nav{margin-bottom: 2rem;}
-#jibresFooter #footerMenu nav h3{border-bottom: 1px solid #eee;display: block;color: #555;padding:5px 0;font-weight:900;font-size:1em;margin:0; }
+#jibresFooter #footerMenu nav li.title{border-bottom: 1px solid #eee;display: block;color: #555;padding:5px 0;font-weight:900;font-size:1em;margin:0 0 1rem; }
 #jibresFooter a{color: #555!important;transition:0.3s;}
 #jibresFooter a:hover{color: $jibres;}
 #jibresFooter a:focus{color: $jibresMono;}
