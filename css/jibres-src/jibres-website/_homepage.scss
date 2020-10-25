@@ -133,7 +133,7 @@
 #jibresChannel .channel:hover {
    box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
     color: #32325d!important;
-    transform: translateY(-2px);
+    // transform: translateY(-2px);
 }
 #jibresChannel .channel:active {
 	box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
@@ -147,9 +147,15 @@
 	margin: 0;
 }
 #jibresChannel .channel h2{
+	position: relative;
+	transition: 0.2s;
 	font-size: 3rem;
 	margin: 0;
+	top: 0;
 	font-weight: 900;
+}
+#jibresChannel .channel:hover h2{
+	top: -1rem;
 }
 #jibresChannel .channel[data-type='website'] h2{
 	color: #6772e5;
