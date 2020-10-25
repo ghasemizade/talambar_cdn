@@ -312,16 +312,16 @@
 	font-size: 1.4rem;
 	padding: 5rem 0;
 }
-#jibresInvoice::before{
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left:0;
-	right: 0;
-	border-left:1rem dashed #0d83dd;
-	border-right:1rem dashed #0d83dd;
-}
+// #jibresInvoice::before{
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left:0;
+// 	right: 0;
+// 	border-left:1rem dashed #0d83dd;
+// 	border-right:1rem dashed #0d83dd;
+// }
 #jibresInvoice h2{
 	font-size: 6rem;
 	color: #0d83dd;
@@ -473,3 +473,59 @@
 	display: block;
 	width: 100%;
 }
+
+#jibresPrivacy{
+	background-color: #171717;
+	color: #a1a1a7;
+	text-align: center;
+	padding: 10rem 0;
+	font-size: 1.6rem;
+}
+#jibresPrivacy .securitySign{
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 5rem;
+	background-color: #f7fafc;
+	overflow: hidden;
+}
+#jibresPrivacy .securitySign::before{
+	content: "\e124";
+	font-family: "siftal","tahoma" !important;
+	display: block;
+	margin: 0 auto;
+	line-height: 20rem;
+	font-size: 10rem;
+	color: #171717;
+	border-radius: 50%;
+	transition: transform .2s;
+	// will-change: transform;
+}
+
+#jibresPrivacy:hover .securitySign::before{
+	transform: scale(1.2);
+}
+#jibresPrivacy:active .securitySign::before{
+	content: "\e039";
+}
+#jibresPrivacy h2{
+	font-size: 6rem;
+	font-weight: 900;
+}
+[dir="rtl"] #jibresPrivacy h2{
+	font-size: 5rem;
+}
+#jibresPrivacy h2 a{
+	color: #f5f5f7!important;
+}
+#jibresPrivacy p{
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0;
+}
+[dir="rtl"] #jibresPrivacy p{
+	font-size: 1.8rem;
+}
+
+
