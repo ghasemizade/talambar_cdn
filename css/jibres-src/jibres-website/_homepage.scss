@@ -30,6 +30,9 @@
 	right: -15rem;
 	top: 10rem;
 }
+#homeLanding [class^="avand-"]{
+	z-index: 1;
+}
 #homeLanding .input{
 	width: 100%;
 	height: 5rem;
