@@ -12,7 +12,7 @@ var myModuleFiles =
 
 	'src/libs/localstorage.js',
 	'src/libs/utils.js',
-	'src/libs/underscore.js',
+	'src/libs/underscore/underscore-min-v1.11.0.js',
 
 	'src/libs/dataResponse/dataResponse.js',
 	// 'src/libs/sortable/Sortable.js',
