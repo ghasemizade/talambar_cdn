@@ -115,20 +115,20 @@ module.exports = function (grunt)
 				sourceMap: false,
 				mangle: false
 			},
-			siftal:
+			jibres:
 			{
 				files:
 				{
-					'../siftal.min.js': myModuleFiles,
+					'../jibres.min.js': myModuleFiles,
 				}
 			}
 		},
 		watch:
 		{
-			siftal:
+			jibres:
 			{
 				files: myModuleFiles,
-				tasks: ['uglify:siftal']
+				tasks: ['uglify:jibres']
 			},
 			scripts:
 			{
