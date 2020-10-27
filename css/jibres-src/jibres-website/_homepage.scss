@@ -118,6 +118,9 @@
 	box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
 	transition: .15s;
 }
+[data-pwa] #jibresChannel .channel{
+	padding: 2rem;
+}
 #jibresChannel .channel:after{
 	content: "";
 	position: absolute;
@@ -157,6 +160,10 @@
 	top: 0;
 	font-weight: 900;
 	color: #c8095a;
+}
+
+[data-pwa] #jibresChannel .channel h2{
+	font-size: 2rem;
 }
 #jibresChannel .channel:hover h2{
 	// top: 1rem;
@@ -265,7 +272,8 @@
 
 #keepitsimple{background:#3850cc;background:-webkit-linear-gradient(left,#3230a0, #4895ff 70%,#aabbff);background:linear-gradient(90deg,#3230a0, #4895ff 70%,#aabbff);color:#fff;position:relative;}
 #keepitsimple .title{font-size:2em;text-align:center;padding:10rem 5px 15rem;}
-#keepitsimple .title h3{font-weight:900;font-size:3em;line-height:2;margin-bottom:0;position:relative;margin-bottom:1em;}
+#keepitsimple .title h3{font-weight:900;font-size:5em;line-height:2;margin-bottom:0;position:relative;margin-bottom:1em;}
+[data-pwa] #keepitsimple .title h3{font-size:3rem;}
 #keepitsimple .title h3:after{content:"";position:absolute;bottom:0;right:0;left:0;width:5rem;height:1px;margin:0 auto;background-color:#ddd;transition:0.3s;}
 #keepitsimple:hover .title h3:after{background-color:#fff;width:10rem;}
 #keepitsimple:active .title h3:after{background-color:#fff;width:15rem;}
@@ -369,6 +377,7 @@
 }
 
 #jibresFeatures h3{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 5rem;position: relative;line-height: 5rem;color: #091c4d;}
+[data-pwa] #jibresFeatures h3{font-size: 2rem;line-height: 4rem;}
 #jibresFeatures h3:after{content: "";width: 7%;min-width:5rem; border-top:3px solid #ff5151;display:block;margin: 2.2rem auto 0;transition:0.3s}
 #jibresFeatures h3 a{transition:0.3s;}
 #jibresFeatures:hover h3:after{width: 10%;}
@@ -553,6 +562,9 @@
 [dir="rtl"] #jibresPrivacy h3{
 	font-size: 5rem;
 }
+[data-pwa] #jibresPrivacy h3{
+	font-size: 3rem!important;
+}
 #jibresPrivacy h3 a{
 	color: #f5f5f7!important;
 }
@@ -564,5 +576,7 @@
 [dir="rtl"] #jibresPrivacy p{
 	font-size: 1.8rem;
 }
-
+[data-pwa] #jibresPrivacy p{
+	font-size: 1.4rem!important;
+}
 
