@@ -430,6 +430,11 @@
 	height: 60rem;
 	position: relative;
 	z-index: 1;
+	transition: 0.3s;
+	will-change: transform;
+}
+#jibresApp:hover figure img{
+	transform: scale(0.9);
 }
 #jibresApp .text{
 	padding-top: 10rem;
