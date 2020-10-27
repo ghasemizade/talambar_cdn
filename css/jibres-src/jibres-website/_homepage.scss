@@ -305,16 +305,6 @@
 	font-size: 1.4rem;
 	padding: 5rem 0;
 }
-// #jibresInvoice::before{
-// 	content: "";
-// 	position: absolute;
-// 	top: 0;
-// 	bottom: 0;
-// 	left:0;
-// 	right: 0;
-// 	border-left:1rem dashed #0d83dd;
-// 	border-right:1rem dashed #0d83dd;
-// }
 #jibresInvoice h3{
 	font-size: 6rem;
 	color: #0d83dd;
@@ -331,6 +321,43 @@
 #jibresInvoice p{
 	color: #343444;
 }
+
+
+
+#jibresForm{
+	font-size: 1.8rem;
+	background-color: #ffcc00;
+	background-color: #F4EDF8;
+	padding: 10rem 0;
+	position: relative;
+}
+[dir='rtl'] #jibresForm{
+	font-size: 1.6rem;
+}
+[data-pwa] #jibresForm{
+	font-size: 1.4rem;
+	padding: 5rem 0;
+}
+#jibresForm h2{
+	font-size: 5rem;
+	font-weight: 900;
+	text-align: center;
+}
+[data-pwa] #jibresForm h2{
+	font-size: 2rem;
+}
+#jibresForm h3{
+	font-size: 2.8rem;
+	// color: #1565c0;
+	font-weight: 700;
+}
+#jibresForm p{
+	color: #343444;
+}
+
+
+
+
 
 #jibresFeatures{
 	padding: 10rem 0 15rem;
