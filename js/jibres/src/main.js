@@ -211,6 +211,12 @@ $(document).ready(function()
         return;
       }
     if($this.parents('.ck-editor').length > 0) return;
+    // check exec commands
+    if($this.attr('data-exec') === 'print')
+    {
+      window.print();
+      return;
+    }
 
     _e.preventDefault();
 
