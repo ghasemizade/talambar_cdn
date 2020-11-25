@@ -13,61 +13,57 @@
 function runUploader()
 {
   // console.log('run uploader');
-  // define variables
-  var myUploaderFrame = $('[data-uploader]');
-  if(!myUploaderFrame)
+  $('[data-uploader]').each(function(_el)
   {
-    return false;
-  }
+    var $this = $(this);
 
-  var myUploaderFinalResult = $(myUploaderFrame.attr('data-final'));
-  var myInput           = $('[data-uploader] input[type="file"]');
-  var myLabel           = $('[data-uploader] input[type="file"] + label');
-  var droppedFiles      = false;
-  var cropperObj        = false;
+    // define variables
+    var myInput               = $this.find('input[type="file"]');
+    var myLabel               = $this.find('input[type="file"] + label:first');
+    var droppedFiles          = false;
+    var cropperObj            = false;
 
+    // check advance upload is enable or not
+    // function isAdvancedUpload(_el)
+    // {
+    //   return ( ('draggable' in _el ) || ( 'ondragstart' in _el && 'ondrop' in _el ) ) && 'FormData' in window && 'FileReader' in window;
+    // }
 
+    // if(!isAdvancedUpload($this))
+    // {
+    //   console.log('Advance upload features is not enable on browser.');
+    //   return false;
+    // }
 
-  // check advance upload is enable or not
-  // function isAdvancedUpload(_el)
-  // {
-  //   return ( ('draggable' in _el ) || ( 'ondragstart' in _el && 'ondrop' in _el ) ) && 'FormData' in window && 'FileReader' in window;
-  // }
+    // catch file change manually
+    myInput.off('change.uploader').on('change.uploader', function(_e)
+    {
+      startHandleFileProcess($this, _e.target.files, myInput, myLabel)
+    });
+    myInput.off('click.uploader').on('click.uploader', function(_e)
+    {
+      // empty value of input
+      this.value = null;
+      // reset label
+      resetUploaderLabel(myLabel);
+    });
+    // catch drop file
+    $this.off('drop.uploader').on('drop.uploader', function(_e)
+    {
+      // set dropped files to use on form submit
+      droppedFiles = _e.originalEvent.dataTransfer.files;
+      startHandleFileProcess($this, droppedFiles, myInput, myLabel)
+    });
 
-  // if(!isAdvancedUpload(myUploaderFrame))
-  // {
-  //   console.log('Advance upload features is not enable on browser.');
-  //   return false;
-  // }
-
-
-  // catch file change manually
-  myInput.off('change.uploader').on('change.uploader', function(_e)
-  {
-    startHandleFileProcess(_e.target.files)
-  });
-  myInput.off('click.uploader').on('click.uploader', function(_e)
-  {
-    // empty value of input
-    this.value = null;
-    // reset label
-    resetUploaderLabel(myLabel);
-  });
-  // catch drop file
-  myUploaderFrame.off('drop.uploader').on('drop.uploader', function(_e)
-  {
-    // set dropped files to use on form submit
-    droppedFiles = _e.originalEvent.dataTransfer.files;
-    startHandleFileProcess(droppedFiles)
   });
 
 
-  function startHandleFileProcess(_files)
+  function startHandleFileProcess(_myUploaderEl, _files, _input, _label)
   {
     // set file detail
-    var fileInfo = setInputText(_files, myInput, myLabel);
+    var fileInfo = setInputText(_files, _input, _label);
 
-    if(!checkFileFace(_files))
+    if(!checkFileFace(_myUploaderEl, _files))
     {
       return false;
     }
@@ -78,18 +74,18 @@ function runUploader()
       if(isImgExt(fileInfo.ext))
       {
         // open crop modal
-        cropFullScreen(fileInfo, _files);
+        cropFullScreen(_myUploaderEl, _label, fileInfo, _files);
 
         if (_files && _files[0])
         {
           // try to load file
-          loadImageFile(_files[0]);
+          loadImageFile(_myUploaderEl, _files[0]);
         }
       }
       else
       {
         // on other ext append file to form
-        appendFileToForm(_files, fileInfo.size);
+        appendFileToForm(_myUploaderEl, _files, fileInfo.size);
       }
     }
   }
@@ -119,12 +115,11 @@ function runUploader()
   }
 
 
-  function checkFileFace(_files)
+  function checkFileFace(_uploader, _files)
   {
-    // console.log(_files);
     if(_files.length == 1)
     {
-      return checkOneFileFace(_files[0]);
+      return checkOneFileFace(_uploader, _files[0]);
     }
     else if(_files.length > 1)
     {
@@ -141,15 +136,15 @@ function runUploader()
   }
 
 
-  function checkOneFileFace(_file)
+  function checkOneFileFace(_uploader, _file)
   {
     var fileSizeMB = Math.round( (Math.round(_file.size / 1024) / 1024) * 100) / 100;
     var fileUltraMaxSize = 20;
 
     // get from form if exist
-    if(myUploaderFrame.attr('data-file-ultra-size'))
+    if(_uploader.attr('data-file-ultra-size'))
     {
-      fileUltraMaxSize = parseInt(myUploaderFrame.attr('data-file-ultra-size'));
+      fileUltraMaxSize = parseInt(_uploader.attr('data-file-ultra-size'));
     }
     // if more than 10 MB
     if(fileSizeMB > fileUltraMaxSize)
@@ -161,7 +156,7 @@ function runUploader()
     return true;
   }
 
-  function OneFileMaxSizeOkay(_fileSize, _type)
+  function OneFileMaxSizeOkay(_uploader, _fileSize, _type)
   {
     if(!_fileSize)
     {
@@ -176,9 +171,9 @@ function runUploader()
       // check later
       var fileMaxSizeInit = 2;
       // get from form if exist
-      if(myUploaderFrame.attr('data-file-max-size-init'))
+      if(_uploader.attr('data-file-max-size-init'))
       {
-        fileMaxSizeInit = parseInt(myUploaderFrame.attr('data-file-max-size-init'));
+        fileMaxSizeInit = parseInt(_uploader.attr('data-file-max-size-init'));
       }
 
       // if more than 2 MB
@@ -193,9 +188,9 @@ function runUploader()
     {
       var fileMaxSize = 1;
       // get from form if exist
-      if(myUploaderFrame.attr('data-file-max-size'))
+      if(_uploader.attr('data-file-max-size'))
       {
-        fileMaxSize = parseInt(myUploaderFrame.attr('data-file-max-size'));
+        fileMaxSize = parseInt(_uploader.attr('data-file-max-size'));
       }
 
       // if more than 1 MB
@@ -322,10 +317,10 @@ function runUploader()
 
 
 
-  function cropFullScreen(_fileInfo, _file)
+  function cropFullScreen(_uploader, _label, _fileInfo, _file)
   {
     var previewCircle = "";
-    if(myUploaderFrame.attr('data-preview-circle') !== undefined)
+    if(_uploader.attr('data-preview-circle') !== undefined)
     {
       previewCircle = 'data-preview-circle';
     }
@@ -342,6 +337,7 @@ function runUploader()
       preConfirm: (login) =>
       {
 
+        var myUploaderFinalResult = $(_uploader.attr('data-final'));
         var newType = 'image/jpeg';
         var quality = 0.75;
         if(_fileInfo.type)
@@ -350,17 +346,17 @@ function runUploader()
         }
 
         var cropOption = {};
-        if(myUploaderFrame.attr('data-max-w') !== undefined)
+        if(_uploader.attr('data-max-w') !== undefined)
         {
-          cropOption.width = myUploaderFrame.attr('data-max-w');
+          cropOption.width = _uploader.attr('data-max-w');
         }
         else
         {
           cropOption.width = 2000;
         }
-        if(myUploaderFrame.attr('data-max-h') !== undefined)
+        if(_uploader.attr('data-max-h') !== undefined)
         {
-          cropOption.height = myUploaderFrame.attr('data-max-h');
+          cropOption.height = _uploader.attr('data-max-h');
         }
         else
         {
@@ -382,12 +378,12 @@ function runUploader()
         {
           console.log('100% without crop ' + _fileInfo.size);
           // on other ext append file to form
-          appendFileToForm(_file, _fileInfo.size);
+          appendFileToForm(_uploader, _file, _fileInfo.size);
 
           if(myUploaderFinalResult.prop('selectedFileSrc'))
           {
             myUploaderFinalResult.attr('src', myUploaderFinalResult.prop('selectedFileSrc'));
-            myUploaderFrame.attr('data-fill', '');
+            _uploader.attr('data-fill', '');
           }
           return;
         }
@@ -413,7 +409,7 @@ function runUploader()
             if(_blob.size)
             {
               _blob.KB_after = Math.round(_blob.size / 1024);
-              myLabel.attr('data-file-size', _blob.KB_after + ' KB');
+              _label.attr('data-file-size', _blob.KB_after + ' KB');
             }
             if(_fileInfo.ext)
             {
@@ -425,14 +421,14 @@ function runUploader()
               console.log('image size is increased from ' + _blob.KB_before + ' to ' + _blob.KB_after + 'KB:/');
             }
 
-            appendFileToForm(_blob, _blob.size);
+            appendFileToForm(_uploader, _blob, _blob.size);
 
           }, newType, quality);
 
           if(myUploaderFinalResult.length > 0)
           {
             myUploaderFinalResult.attr('src', myNewImg.toDataURL(newType, quality));
-            myUploaderFrame.attr('data-fill', '');
+            _uploader.attr('data-fill', '');
           }
         }
       },
@@ -450,9 +446,9 @@ function runUploader()
   }
 
 
-  function appendFileToForm(_files, _size)
+  function appendFileToForm(_uploader, _files, _size)
   {
-    if(!OneFileMaxSizeOkay(_size))
+    if(!OneFileMaxSizeOkay(_uploader, _size))
     {
       return false;
     }
@@ -468,12 +464,12 @@ function runUploader()
     }
 
     // add to prop of frame element
-    myUploaderFrame.prop('droppedFiles', _files);
+    _uploader.prop('droppedFiles', _files);
 
-    if(myUploaderFrame.attr('data-autoSend') !== undefined)
+    if(_uploader.attr('data-autoSend') !== undefined)
     {
       // submit form
-      myForm = myUploaderFrame.parents('form');
+      myForm = _uploader.parents('form');
       if(myForm.length)
       {
         console.log('auto send form');
@@ -489,14 +485,14 @@ function runUploader()
   }
 
 
-  function loadImageFile(_file)
+  function loadImageFile(_uploader, _file)
   {
     if (_file)
     {
       var myReader = new FileReader();
       myReader.onload = function (_e)
       {
-        fillCropperImg(this.result);
+        fillCropperImg(_uploader, this.result);
       };
       // read as data
       myReader.readAsDataURL(_file);
@@ -504,7 +500,7 @@ function runUploader()
   }
 
 
-  function fillCropperImg(_imgSrc)
+  function fillCropperImg(_uploader, _imgSrc)
   {
     // if modal is visible run cropper
     if(!say.isVisible())
@@ -517,14 +513,16 @@ function runUploader()
     var $image = $('.alerty2-content .cropBox img');
     // set my img
     var myImg = $image.get(0);
+    var myUploaderFinalResult = $(_uploader.attr('data-final'));
     // set image src
     $image.attr('src', _imgSrc);
+
     if(myUploaderFinalResult.length > 0)
     {
       myUploaderFinalResult.prop('selectedFileSrc', _imgSrc);
     }
 
-    var myInitRatio = myUploaderFrame.attr('data-ratio');
+    var myInitRatio = _uploader.attr('data-ratio');
     if(myInitRatio && myInitRatio > 0)
     {
       // do nothing
@@ -536,7 +534,7 @@ function runUploader()
 
     // define ratio as same as init ratio
     var myRatio = myInitRatio;
-    if(myUploaderFrame.attr('data-ratio-free') !== undefined)
+    if(_uploader.attr('data-ratio-free') !== undefined)
     {
       myRatio = NaN;
     }
@@ -544,14 +542,14 @@ function runUploader()
     var minCropWidth = 250;
     var minCropHeight = 250;
 
-    if(myUploaderFrame.attr('data-min-w') !== undefined)
+    if(_uploader.attr('data-min-w') !== undefined)
     {
-      minCropWidth = myUploaderFrame.attr('data-min-w');
+      minCropWidth = _uploader.attr('data-min-w');
     }
 
-    // if(myUploaderFrame.attr('data-min-h') !== undefined)
+    // if(_uploader.attr('data-min-h') !== undefined)
     // {
-    //   minCropHeight = myUploaderFrame.attr('data-min-h');
+    //   minCropHeight = _uploader.attr('data-min-h');
     // }
 
     // draw new one
@@ -588,21 +586,21 @@ function runUploader()
     $(document).off(_event).on(_event, function(_e)
     {
       myDataTransfer = _e.originalEvent.dataTransfer;
-
-      if($(_e.target).parents('[data-uploader]').length)
+      var myDragEl = $(_e.target).parents('[data-uploader]');
+      if(myDragEl.length)
       {
         setDropEffect(myDataTransfer, 'copy');
-        if(myUploaderFrame.attr('data-dragover') !== 'zone')
+        if(myDragEl.attr('data-dragover') !== 'zone')
         {
-          myUploaderFrame.attr('data-dragover', 'zone');
+          myDragEl.attr('data-dragover', 'zone');
         }
       }
       else
       {
         setDropEffect(myDataTransfer, 'none');
-        if(myUploaderFrame.attr('data-dragover') !== '')
+        if(myDragEl.attr('data-dragover') !== '')
         {
-          myUploaderFrame.attr('data-dragover', '');
+          myDragEl.attr('data-dragover', '');
         }
       }
       // preventing the unwanted behaviours
@@ -619,7 +617,7 @@ function runUploader()
       // preventing the unwanted behaviours
       _e.preventDefault();
       _e.stopPropagation();
-      myUploaderFrame.attr('data-dragover', null);
+      $('[data-uploader]').attr('data-dragover', null);
     });
   });
 
