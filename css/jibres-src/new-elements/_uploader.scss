@@ -45,17 +45,17 @@ body.dragging{
   vertical-align: middle;
   transition: 0.3s;
 }
-[data-uploader] input[type='file'] + label::after{
+[data-uploader]::after{
   content: attr(data-file-size);
   display: block;
   font-size: 1.6rem;
   font-family: monospace;
   direction: ltr;
-  color: #777;
+  color: #eee;
   line-height: 1;
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 3rem;
+  left: 3rem;
 }
 [data-uploader] input[type='file'] + label{
   display: block;
@@ -147,6 +147,7 @@ body.dragging{
 }
 [data-uploader] img:not([src]){
   opacity: 0;
+  display: none;
 }
 [data-uploader][data-fill] img{
   display: block;
