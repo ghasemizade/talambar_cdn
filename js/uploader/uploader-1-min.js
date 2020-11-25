@@ -45,7 +45,7 @@ function runUploader()
       // empty value of input
       this.value = null;
       // reset label
-      resetUploaderLabel(myLabel);
+      resetUploaderLabel($this, myLabel);
     });
     // catch drop file
     $this.off('drop.uploader').on('drop.uploader', function(_e)
@@ -61,7 +61,7 @@ function runUploader()
   function startHandleFileProcess(_myUploaderEl, _files, _input, _label)
   {
     // set file detail
-    var fileInfo = setInputText(_files, _input, _label);
+    var fileInfo = setInputText(_myUploaderEl, _files, _input, _label);
 
     if(!checkFileFace(_myUploaderEl, _files))
     {
@@ -234,7 +234,7 @@ function runUploader()
     return false;
   }
 
-  function resetUploaderLabel(_label)
+  function resetUploaderLabel(_uploader, _label)
   {
     // set default if is not set
     if(!_label.prop('defaultText'))
@@ -243,13 +243,14 @@ function runUploader()
     }
 
     labelText = _label.prop('defaultText');
-    _label.html(labelText).attr('data-file-size', null);
+    _label.html(labelText);
+    _uploader.attr('data-file-size', null);
 
     return labelText;
   }
 
   // show file Content
-  function setInputText(_files, _input, _label)
+  function setInputText(_uploader, _files, _input, _label)
   {
     var labelText = "";
     var fileInfo = [];
@@ -285,7 +286,7 @@ function runUploader()
     }
     else
     {
-      labelText = resetUploaderLabel(_label);
+      labelText = resetUploaderLabel(_uploader, _label);
     }
 
 
@@ -297,11 +298,11 @@ function runUploader()
     _label.find('abbr').html(labelText);
     if(fileInfo['size'] && fileInfo['size'] > 0)
     {
-      _label.attr('data-file-size', Math.round(fileInfo['size'] / 1024) + ' KB');
+      _uploader.attr('data-file-size', Math.round(fileInfo['size'] / 1024) + ' KB');
     }
     else
     {
-      _label.attr('data-file-size', null);
+      _uploader.attr('data-file-size', null);
     }
 
     // set ext
@@ -409,7 +410,7 @@ function runUploader()
             if(_blob.size)
             {
               _blob.KB_after = Math.round(_blob.size / 1024);
-              _label.attr('data-file-size', _blob.KB_after + ' KB');
+              _uploader.attr('data-file-size', _blob.KB_after + ' KB');
             }
             if(_fileInfo.ext)
             {
