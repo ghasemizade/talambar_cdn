@@ -160,10 +160,9 @@ body.dragging{
   position: absolute;
   top: 2rem;
   right:2rem;
-  width: 45px;
-  height: 45px;
+  width: 3.5rem;
+  height: 3.5rem;
   color: #fff;
-  padding: 10px;
   text-align: center;
   cursor: not-allowed;
 }
@@ -171,9 +170,9 @@ body.dragging{
   content: "";
   border-radius: 50%;
   background-color: rgba(255,255,255,1);
-  width: 15px;
-  height: 15px;
-  margin: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 1rem;
   display: block;
   transition: 0.3s;
   position: absolute;
@@ -197,10 +196,10 @@ body.dragging{
   margin: 5px;
   border-radius: 50%;
   color: #d32f2f;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
   font-weight: normal;
   display: block;
   vertical-align: middle;
