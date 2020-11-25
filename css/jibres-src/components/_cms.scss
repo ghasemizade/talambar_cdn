@@ -135,9 +135,12 @@
 }
 
 
-// aparat jibres mode
-.shortcode[type='video'][from='aparat']{
+// shortcode
+.shortcode{
   position:relative;
+}
+
+.shortcode[type='video'][from='aparat']{
   padding-top: 57%;
 }
 .shortcode[type='video'][from='aparat'] iframe{
@@ -147,6 +150,17 @@
   width:100%;
   height:100%
 }
+.shortcode[type='video'][from='youtube']{
+  padding-top: 57%;
+}
+.shortcode[type='video'][from='youtube'] iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%
+}
+
 
 iframe.gMap{
   min-height:200px;
