@@ -4,10 +4,18 @@ jQuery.fn.tagName = function() {
 
 jQuery.fn.isAbsoluteURL = function() {
   var base = location.protocol + '//' + location.host;
-  var prop = this.prop('href');
+
+  var prop = decodeURI(this.prop('href'));
   var attr = this.attr('href');
 
-  return prop.indexOf(base) !== 0 && (prop === attr || prop === attr + '/')
+  if(prop.indexOf(location.origin) === 0)
+  {
+    return false;
+  }
+
+  return true;
+
+  // return prop.indexOf(base) !== 0 && (prop === attr || prop === attr + '/')
 }
 
 
