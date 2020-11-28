@@ -8,6 +8,11 @@ jQuery.fn.isAbsoluteURL = function() {
   var prop = decodeURI(this.prop('href'));
   var attr = this.attr('href');
 
+  if(!attr)
+  {
+    return null;
+  }
+
   if(prop.indexOf(location.origin) === 0)
   {
     return false;
