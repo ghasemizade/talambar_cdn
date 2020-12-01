@@ -123,6 +123,11 @@ body .ltr .items li + li::before{
 .items li .key.grow{
 	flex-basis: 50%;
 }
+.items li [class^="spay-32-"]{
+	min-height: 32px!important;
+	height: 32px!important;
+	border-radius: 0.5rem;
+}
 .items li .value{
 	color:#999;
 	-webkit-box-flex:0;
@@ -137,6 +142,9 @@ body .ltr .items li + li::before{
 	overflow: hidden;
 	height: $myItemLineHeight;
 	min-height: $myItemLineHeight;
+}
+.items li .value.txtB{
+	color:#000;
 }
 .items li .go{
 	color:#ccc;
