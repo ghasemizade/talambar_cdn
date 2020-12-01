@@ -17,6 +17,9 @@
 	transition: 0.3s;
 	will-change: filter;
 }
+.emptyState.search img{
+	filter: grayscale(0);
+}
 .emptyState:hover img{
 	filter: grayscale(0.5);
 }
