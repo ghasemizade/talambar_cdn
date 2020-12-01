@@ -63,6 +63,9 @@ body .ltr .items li + li::before{
 	max-height: $myItemLineHeight;
 	border-radius: 0.5rem;
 }
+.items li img[src=""]{
+	display: none;
+}
 .items li img[data-size='16x9']{
 	max-width: $myItemLineHeight16x9;
 }
