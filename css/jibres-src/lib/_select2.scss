@@ -181,13 +181,18 @@ select.select22-country img{
 }
 #select22-country-container img{
   display: block;
-  height: 34px;
+  height: 3.4rem;
   padding: 7px 0;
+  width: auto;
+  margin:0 auto;
 }
 .select22 img{
-  display: block;
-  height: 34px;
-  padding: 7px 0;
+  display: inline-block;
+  vertical-align: top;
+  height: 3rem;
+  width: 3rem;
+  margin-top: 2px;
+  border-radius: 0.5rem
 }
 .select22-hidden-accessible{
   border:0!important;
