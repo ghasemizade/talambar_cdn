@@ -1,15 +1,15 @@
 function chart_crm_homepage()
 {
-  if($("#chartdiv").length == 1){highChart();}
+  if($("#chartdivcrmhome").length == 1){highChartcrmhome();}
 }
 
 
 
 
-function highChart()
+function highChartcrmhome()
 {
 
-  Highcharts.chart('chartdiv',
+  Highcharts.chart('chartdivcrmhome',
   {
     chart: {
       type: 'areaspline',
