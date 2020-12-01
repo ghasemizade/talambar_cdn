@@ -9,6 +9,9 @@
 	overflow: hidden;
 	text-align: center;
 }
+[data-pwa] .emptyState{
+	max-width: 96%;
+}
 .emptyState img{
 	width: 25rem;
 	margin: 0 auto 1rem;
@@ -16,6 +19,9 @@
 	filter: grayscale(1);
 	transition: 0.3s;
 	will-change: filter;
+}
+[data-pwa] .emptyState img{
+	width: 20rem;
 }
 .emptyState.search img{
 	filter: grayscale(0);
@@ -43,6 +49,9 @@
 	transition: 0.3s;
 	will-change: transform;
 }
+[data-pwa] .emptyState a{
+	font-size: 1.6rem;
+}
 .emptyState a:hover{
 	opacity: 0.9;
 	transform: scale(1.05);
@@ -67,3 +76,7 @@
 	vertical-align: middle;
 	display: inline-block;
 }
+[data-pwa] .emptyState a::before{
+	display: none;
+}
+

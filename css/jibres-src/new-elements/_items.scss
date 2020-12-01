@@ -334,3 +334,11 @@ body .rtl .items li .go::after{
 }
 
 
+.items li .disabled{
+	cursor: not-allowed;
+}
+.items li .disabled .go::after
+{
+	content: "\e070"!important;
+	color: #ff0000;
+}
