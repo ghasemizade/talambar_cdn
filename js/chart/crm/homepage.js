@@ -25,9 +25,6 @@ function highChart()
     yAxis: [{ // Primary yAxis
       labels: {
         format: '{value}',
-      },
-      title: {
-        text: $("#charttitle").html(),
       }
     },
     { // Secondary yAxis
