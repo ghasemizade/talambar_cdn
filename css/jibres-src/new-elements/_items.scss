@@ -245,6 +245,8 @@ body .rtl .items li .go::after{
 .items.long li .item i{
 	min-height:$myItemLineHeight_Long;
 	height:$myItemLineHeight_Long;
+	min-width:$myItemLineHeight_Long;
+	width: $myItemLineHeight_Long;
 }
 .items.long li .item i::before{
 	min-width:$myItemLineHeight_Long;
