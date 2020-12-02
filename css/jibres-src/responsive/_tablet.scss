@@ -1,17 +1,19 @@
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 @import '../grid/gridTablet';
 
   .cn{min-width:710px;max-width:940px;width:92%;}
 
 
   // custom style for another part of siftal
-  // [dir="ltr"] [data-panel] #main{margin-left:0}
-  // [dir="rtl"] [data-panel] #main{margin-right:0}
-  // // sidebar
-  // [dir="ltr"] [data-panel] #sidebar{left:-250px;}
-  // [dir="rtl"] [data-panel] #sidebar{right:-250px;}
-  // [data-panel] .toggleClean{display:none}
-  // [data-panel] #pageContent{margin:0!important;}
+  [dir="ltr"] [data-panel] #main{margin-left:0}
+  [dir="rtl"] [data-panel] #main{margin-right:0}
+  // sidebar
+  [dir="ltr"] [data-panel] #sidebar{left:-250px;}
+  [dir="rtl"] [data-panel] #sidebar{right:-250px;}
+  // header
+  [data-panel] .toggleClean{display:none}
+  [data-panel] #pageHeader .desktop{margin: 0!important}
+  [data-panel] #pageContent{margin:0!important;}
 
   // padding and margin
   .mp0{padding:0}
