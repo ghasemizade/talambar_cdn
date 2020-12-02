@@ -107,6 +107,11 @@ body .ltr .items li + li::before{
 .items li .key.username{
 	max-width: 20%;
 }
+.items li .key.mobile{
+	direction: ltr;
+	text-align: left;
+	max-width: 15rem;
+}
 .items li.multiLine .key{
 	height: auto!important;
 	white-space: initial;
@@ -151,6 +156,10 @@ body .ltr .items li + li::before{
 .items li .value.datetime{
 	min-width: 13rem;
 	direction: ltr;
+	text-align: left;
+}
+.items li .value.humandate{
+	min-width: 13rem;
 	text-align: left;
 }
 [dir=rtl] .items li .value.datetime{
