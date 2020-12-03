@@ -71,6 +71,7 @@ var myModuleFiles =
 	'src/utility/consoleMsg.js',
 	'src/utility/handleDrag.js',
 	'src/utility/gtag.js',
+	'src/utility/tawk.js',
 	'src/utility/resizeDetector.js',
 
 	'src/utility/input-files.js',

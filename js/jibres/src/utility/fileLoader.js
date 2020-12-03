@@ -15,6 +15,7 @@ function readPageAllScripts(_force, _page)
   readPageSelect2();
   readPageUploader();
   readPageGtag();
+  readPageTawk();
 }
 
 
@@ -193,6 +194,19 @@ function readPageGtag()
 }
 
 
+function readPageTawk()
+{
+  var myEl = $('meta[name="tawk"]');
+  var myTawk = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myTawk)
+  {
+    // load script
+    myUrl = 'https://embed.tawk.to/' + myTawk + '/default';
+
+    fileLoader(myUrl, 'runTawk', true, undefined, 'async utf8 crossorigin');
+  }
+}
+
 
 function fileLoader(_url, _fn, _forceCallFn, _file, _scriptType)
 {
@@ -222,6 +236,12 @@ function fileLoader(_url, _fn, _forceCallFn, _file, _scriptType)
     if(_scriptType === 'async')
     {
       newScript.async = true;
+    }
+    if(_scriptType === 'async utf8 crossorigin')
+    {
+      newScript.async = true;
+      newScript.charset='UTF-8';
+      newScript.setAttribute('crossorigin','*');
     }
     // append to page js section
     $('.js').append(newScript);
