@@ -16,6 +16,7 @@ function readPageAllScripts(_force, _page)
   readPageUploader();
   readPageGtag();
   readPageTawk();
+  readPageRaychat();
 }
 
 
@@ -204,6 +205,24 @@ function readPageTawk()
     myUrl = 'https://embed.tawk.to/' + myTawk + '/default';
 
     fileLoader(myUrl, 'runTawk', true, undefined, 'async utf8 crossorigin');
+  }
+}
+
+
+function readPageRaychat()
+{
+  var myEl = $('meta[name="raychat"]');
+  var myRaychat = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myRaychat)
+  {
+    // load script
+    myUrl = "https://app.raychat.io/scripts/js/" + myRaychat + "?href="+window.location.href
+    if(localStorage && localStorage.getItem("rayToken"))
+    {
+      myUrl += localStorage.getItem("rayToken");
+    }
+
+    fileLoader(myUrl, 'runRaychat', true, undefined, 'async utf8 crossorigin');
   }
 }
 

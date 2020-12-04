@@ -89,6 +89,8 @@ var myModuleFiles =
 	'src/utility/catchBeforeUnload.js',
 	'src/utility/serviceWorker.js',
 
+	// addons
+	'src/utility/raychat.js',
 
 
 	'src/main.js',
