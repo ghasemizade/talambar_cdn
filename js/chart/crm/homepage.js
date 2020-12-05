@@ -6,46 +6,46 @@ function chart_crm_homepage()
 
 
 
+
+
 function highChartcrmhome()
 {
 
-  Highcharts.chart('chartdivcrmhome',
-  {
-    chart: {
-      type: 'areaspline',
-      zoomType: 'x',
-    },
+Highcharts.chart('chartdivcrmhome', {
+  chart: {
+    type: 'areaspline'
+  },
+  title: {
+    text: $("#charttitleunit").html(),
+  },
+  xAxis: {
+    categories: $.parseJSON($("#chartcategory").html()),
+    tickmarkPlacement: 'on',
     title: {
-      text: $("#charttitle").html()
-    },
-    xAxis: [{
-      categories: $.parseJSON($("#chartcategory").html()),
-      crosshair: true
-    }],
-    yAxis: [{ // Primary yAxis
-      labels: {
-        format: '{value}',
+      enabled: false
+    }
+  },
+  yAxis: {
+    title: {
+      text: $("#charttitleunit").html()
+    }
+  },
+  tooltip: {
+    split: true
+  },
+  plotOptions: {
+    area: {
+      stacking: 'normal',
+      lineColor: '#666666',
+      lineWidth: 1,
+      marker: {
+        lineWidth: 1,
+        lineColor: '#666666'
       }
-    },
-    { // Secondary yAxis
-      title: {
-        text: $("#charttitleunit").html(),
-      },
-      labels: {
-        format: '{value}',
-      },
-      opposite: true
-    }],
-    legend: {
-      layout: 'vertical',
-      align: 'left',
-      x: 120,
-      verticalAlign: 'top',
-      y: 50,
-      floating: true,
-      backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255,255,255,0.25)'
-    },
-      series: [{
+    }
+  },
+  series: [
+  {
         name: $("#chartverifytitle").html(),
         data: $.parseJSON($("#chartverify").html())
       },
@@ -53,7 +53,7 @@ function highChartcrmhome()
         name: $("#chartunverifytitle").html(),
         data: $.parseJSON($("#chartunverify").html())
       }
-      ]
-  });
+  ]
+});
 }
 
