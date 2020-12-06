@@ -75,7 +75,7 @@ function checkSmile(_register)
         if(notifCount)
         {
       console.log(5);
-          if(newNotif && newNotif !== notifCount)
+          if(notifCount && newNotif !== notifCount)
           {
       console.log(6);
             sessionStorage.setItem("newNotif", notifCount);
@@ -89,7 +89,7 @@ function checkSmile(_register)
       console.log(7);
       console.log(newOrder);
       console.log(orderCount);
-          if(newOrder && newOrder !== orderCount)
+          if(orderCount && newOrder !== orderCount)
           {
       console.log(8);
       console.log(orderCount);
