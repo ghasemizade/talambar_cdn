@@ -449,66 +449,11 @@ function addFindedProduct(_product, _msg, _searchedValue)
       });
     }
 
-    beep('ProductNotExist');
+    beep('ProductNotExist.mp4');
     // show custom message if product not fount
     // if(productNotExistList)
     // productNotExistList.[_searchedValue] = 1;
   }
-}
-
-// var productNotExistList;
-
-
-//All arguments are optional:
-
-//duration of the tone in milliseconds. Default is 500
-//frequency of the tone in hertz. default is 440
-//volume of the tone. Default is 1, off is 0.
-//type of tone. Possible values are sine, square, sawtooth, triangle, and custom. Default is sine.
-//callback to use on end of tone
-function beep(_msg, duration, frequency, volume, type, callback)
-{
-  //if you have another AudioContext class use that one, as some browsers have a limit
-  try
-  {
-    var audioCtx = new (window.AudioContext || window.webkitAudioContext || window.audioContext);
-  }
-  catch(err)
-  {
-    logy(err.message);
-  }
-  if(audioCtx)
-  {
-    var oscillator = audioCtx.createOscillator();
-    var gainNode   = audioCtx.createGain();
-
-    oscillator.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
-
-    if (volume){gainNode.gain.value           = volume;};
-    if (frequency){oscillator.frequency.value = frequency;}
-    if (type){oscillator.type                 = type;}
-    if (callback){oscillator.onended          = callback;}
-
-    oscillator.start();
-    setTimeout(function(){oscillator.stop()}, (duration ? duration : 500));
-  }
-  else
-  {
-    logy('close some tabs!');
-  }
-
-  var myAlert =  urlJibres('cdn') + 'sounds/'+ _msg + '.mp4';
-
-  var audio = new Audio(myAlert);
-  audio.play();
-  // try to create sys beep
-  sysBeep();
-};
-
-function sysBeep()
-{
-  logy('\u0007');
 }
 
 
