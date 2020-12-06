@@ -255,5 +255,8 @@
  0%{ opacity:.7 } 80%{opacity:.9; transform: scale(1.1); } 100%{opacity:.7; transform: scale(1);}
 }
 
+[data-panel][data-env="Jibres"] #pageHeader .desktop .orders{
+	display: none;
+}
 
 
