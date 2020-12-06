@@ -85,8 +85,10 @@ function checkSmile(_register)
           }
         }
 
-        notifGenerator(smileResult);
       }
+
+      // create notif on all conditions
+      notifGenerator(smileResult);
 
       // if user is loginned on this page, try to check logout
       if($('meta[name="user-Jibres"]').attr("content"))
