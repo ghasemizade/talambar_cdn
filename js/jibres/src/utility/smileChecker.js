@@ -24,13 +24,16 @@ function checkSmile(_register)
 
   $.ajax(
   {
-    url:'/' + lang + "/hook/smile",
+    url: urlJibres('sitelang') + "hook/smile",
     method:"POST",
     timeout: 3000,
     dataType:"json",
     data:
     {
-      'notifOn': aleadyIsNew
+      'notifOn': aleadyIsNew,
+      'url-env': $('body').attr('data-env'),
+      'url-in': $('body').attr('data-in'),
+      'url-page': $('body').attr('data-page')
     },
     success:function(smileResult)
     {
