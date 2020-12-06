@@ -219,7 +219,7 @@
 // }
 
 
-[data-panel] #pageHeader .desktop .notification i[data-count]::after{
+[data-panel] #pageHeader .desktop i[data-count]::after{
 	content: attr(data-count);
 	vertical-align: middle;
 	overflow: hidden;
@@ -240,17 +240,20 @@
 	margin: 0;
 	opacity: 0.9;
 	transition:0.3s;
+}
+[data-panel] #pageHeader .desktop i[data-count="۰"]::after{
+	opacity: 0;
+}
+[data-panel] #pageHeader .desktop i[data-count="0"]::after{
+	opacity: 0;
+}
+
+[data-panel] #pageHeader .desktop i[data-count].pulse::after{
 	animation:pulseNotificationHeart 0.7s infinite ease-in-out;
-}
-[data-panel] #pageHeader .desktop .notification i[data-count="۰"]::after{
-	opacity: 0;
-}
-[data-panel] #pageHeader .desktop .notification i[data-count="0"]::after{
-	opacity: 0;
 }
 @keyframes pulseNotificationHeart {
  0%{ opacity:.7 } 80%{opacity:.9; transform: scale(1.1); } 100%{opacity:.7; transform: scale(1);}
- }
+}
 
 
 
