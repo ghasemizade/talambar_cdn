@@ -10,7 +10,6 @@ function checkSmileLoop()
 
 function checkSmile(_register)
 {
-  console.log(1);
   if(_register)
   {
     checkSmileLoop();
@@ -38,14 +37,12 @@ function checkSmile(_register)
     },
     success:function(smileResult)
     {
-      console.log(2);
       var response = smileResult.result;
       var notifCount = null;
       var orderCount = null;
 
       if(response)
       {
-      console.log(3);
         if(response.notifCount)
         {
           notifCount = response.notifCount;
@@ -55,12 +52,10 @@ function checkSmile(_register)
           orderCount = response.orderCount;
         }
       }
-      console.log(response);
 
       // show new notif message only one time
       if(typeof(Storage) !== "undefined")
       {
-      console.log(4);
         newNotif = parseInt(sessionStorage.getItem("newNotif"));
         newOrder = parseInt(sessionStorage.getItem("newOrder"));
         if(isNaN(newNotif))
@@ -74,30 +69,23 @@ function checkSmile(_register)
 
         if(notifCount)
         {
-      console.log(5);
           if(notifCount && newNotif !== notifCount)
           {
-      console.log(6);
             sessionStorage.setItem("newNotif", notifCount);
             playAudio('new-notification-2.mp3');
-            notifGenerator(smileResult);
           }
         }
 
         if(orderCount)
         {
-      console.log(7);
-      console.log(newOrder);
-      console.log(orderCount);
           if(orderCount && newOrder !== orderCount)
           {
-      console.log(8);
-      console.log(orderCount);
             sessionStorage.setItem("newOrder", orderCount);
             playAudio('new-order-2.mp3');
           }
         }
 
+        notifGenerator(smileResult);
       }
 
       // if user is loginned on this page, try to check logout
