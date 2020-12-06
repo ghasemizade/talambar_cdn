@@ -67,11 +67,8 @@ var myModuleFiles =
 	'src/utility/table.js',
 	'src/utility/noscriptRemover.js',
 	'src/utility/insideIframe.js',
-	'src/utility/fileLoader.js',
 	'src/utility/consoleMsg.js',
 	'src/utility/handleDrag.js',
-	'src/utility/gtag.js',
-	'src/utility/tawk.js',
 	'src/utility/resizeDetector.js',
 
 	'src/utility/input-files.js',
@@ -90,7 +87,10 @@ var myModuleFiles =
 	'src/utility/serviceWorker.js',
 
 	// addons
-	'src/utility/raychat.js',
+	'src/addons/fileLoader.js',
+	'src/addons/gtag.js',
+	'src/addons/tawk.js',
+	'src/addons/raychat.js',
 
 
 	'src/main.js',
