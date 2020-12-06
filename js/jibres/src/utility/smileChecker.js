@@ -69,20 +69,20 @@ function checkSmile(_register)
 
         if(notifCount)
         {
-          if(newNotif !== notifCount)
+          if(newNotif && newNotif !== notifCount)
           {
             sessionStorage.setItem("newNotif", notifCount);
-            playAudio('new-notification-1.mp3');
+            playAudio('new-notification-1.mp4');
             notifGenerator(smileResult);
           }
         }
 
         if(orderCount)
         {
-          if(newOrder !== orderCount)
+          if(newOrder && newOrder !== orderCount)
           {
             sessionStorage.setItem("newOrder", orderCount);
-            playAudio('new-order-1.mp3');
+            playAudio('new-order-1.mp4');
           }
         }
 
