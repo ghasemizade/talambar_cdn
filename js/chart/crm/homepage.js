@@ -13,7 +13,7 @@ function highChartcrmhome()
 
 Highcharts.chart('chartdivcrmhome', {
   chart: {
-    type: 'areaspline'
+    type: 'area'
   },
   title: {
     text: $("#charttitleunit").html(),
