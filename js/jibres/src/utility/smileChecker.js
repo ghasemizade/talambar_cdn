@@ -180,8 +180,9 @@ function checkNewNotification(_data)
 
 function checkNewOrder(_orderCount)
 {
-  var panelHeaderEl = $('[data-panel] #pageHeader .orders i');
-  var pwaFooterEl   = $('#pageFooter .pwa [data-key="orders"] i');
+  var panelHeaderEl           = $('[data-panel] #pageHeader .orders i');
+  var pwaFooterEl             = $('#pageFooter .pwa [data-key="orders"] i');
+  var panelBusinessDashDataEl = $('[data-panel] .item.unprocessedOrder .value');
 
   if(_orderCount)
   {
@@ -194,5 +195,9 @@ function checkNewOrder(_orderCount)
     pwaFooterEl.attr('data-count', null);
   }
 
+  if(panelBusinessDashDataEl.length)
+  {
+    panelBusinessDashDataEl.text(fitNumber(_orderCount));
+  }
 }
 
