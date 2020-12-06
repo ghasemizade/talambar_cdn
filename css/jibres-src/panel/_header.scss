@@ -241,12 +241,6 @@
 	opacity: 0.9;
 	transition:0.3s;
 }
-[data-panel] #pageHeader .desktop i[data-count="۰"]::after{
-	opacity: 0;
-}
-[data-panel] #pageHeader .desktop i[data-count="0"]::after{
-	opacity: 0;
-}
 
 [data-panel] #pageHeader .desktop i[data-count].pulse::after{
 	animation:pulseNotificationHeart 0.7s infinite ease-in-out;
@@ -254,7 +248,14 @@
 @keyframes pulseNotificationHeart {
  0%{ opacity:.7 } 80%{opacity:.9; transform: scale(1.1); } 100%{opacity:.7; transform: scale(1);}
 }
-
+[data-panel] #pageHeader .desktop i[data-count="۰"]::after{
+	opacity: 0;
+	visibility: hidden;
+}
+[data-panel] #pageHeader .desktop i[data-count="0"]::after{
+	opacity: 0;
+	visibility: hidden;
+}
 [data-panel][data-env="Jibres"] #pageHeader .desktop .orders{
 	display: none;
 }

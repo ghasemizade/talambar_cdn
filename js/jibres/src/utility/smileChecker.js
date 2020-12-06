@@ -184,20 +184,15 @@ function checkNewOrder(_orderCount)
   var pwaFooterEl             = $('#pageFooter .pwa [data-key="orders"] i');
   var panelBusinessDashDataEl = $('[data-panel] .item.unprocessedOrder .value');
 
-  if(_orderCount)
+  if(!_orderCount)
   {
-    panelHeaderEl.attr('data-count', fitNumber(_orderCount));
-    pwaFooterEl.attr('data-count', fitNumber(_orderCount));
-  }
-  else
-  {
-    panelHeaderEl.attr('data-count', null);
-    pwaFooterEl.attr('data-count', null);
+    _orderCount = 0;
+
   }
 
-  if(panelBusinessDashDataEl.length)
-  {
-    panelBusinessDashDataEl.text(fitNumber(_orderCount));
-  }
+  panelHeaderEl.attr('data-count', fitNumber(_orderCount));
+  pwaFooterEl.attr('data-count', fitNumber(_orderCount));
+  // set in dashboard
+  panelBusinessDashDataEl.text(fitNumber(_orderCount));
 }
 

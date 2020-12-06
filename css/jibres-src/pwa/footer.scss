@@ -156,10 +156,10 @@
 	transition:0.3s;
 }
 #pageFooter .pwa .icon i[data-count="۰"]::after{
-	opacity: 0;
+	visibility: hidden;
 }
 #pageFooter .pwa .icon i[data-count="0"]::after{
-	opacity: 0;
+	visibility: hidden;
 }
 
 #pageFooter .pwa .icon i[data-count].pulse::after{
