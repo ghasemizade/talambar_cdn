@@ -87,6 +87,8 @@ function checkSmile(_register)
         if(orderCount)
         {
       console.log(7);
+      console.log(newOrder);
+      console.log(orderCount);
           if(newOrder && newOrder !== orderCount)
           {
       console.log(8);
