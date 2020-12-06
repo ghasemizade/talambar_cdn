@@ -72,7 +72,7 @@ function checkSmile(_register)
           if(newNotif !== notifCount)
           {
             sessionStorage.setItem("newNotif", notifCount);
-            beep('new-notification-1.mp3');
+            playAudio('new-notification-1.mp3');
             notifGenerator(smileResult);
           }
         }
@@ -82,7 +82,7 @@ function checkSmile(_register)
           if(newOrder !== orderCount)
           {
             sessionStorage.setItem("newOrder", orderCount);
-            beep('new-order-1.mp3');
+            playAudio('new-order-1.mp3');
           }
         }
 

@@ -1,7 +1,12 @@
 
 
-function playAudio(_url)
+function playAudio(_url, _absolute)
 {
+  if(_absolute === undefined)
+  {
+    _url = urlJibres('cdn') + 'sounds/' + _url;
+  }
+
   var audio = new Audio(_url);
   audio.play();
 }
@@ -46,7 +51,7 @@ function beep(_fileName, duration, frequency, volume, type, callback)
     logy('close some tabs!');
   }
 
-  playAudio(urlJibres('cdn') + 'sounds/'+ _fileName);
+  playAudio(_fileName);
 
   // try to create sys beep
   sysBeep();
