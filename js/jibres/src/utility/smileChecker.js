@@ -56,20 +56,20 @@ function checkSmile(_register)
       // show new notif message only one time
       if(typeof(Storage) !== "undefined")
       {
-        newNotif = parseInt(sessionStorage.getItem("newNotif"));
-        newOrder = parseInt(sessionStorage.getItem("newOrder"));
-        if(isNaN(newNotif))
+        newNotifStorage = parseInt(sessionStorage.getItem("newNotif"));
+        newOrderStorage = parseInt(sessionStorage.getItem("newOrder"));
+        if(isNaN(newNotifStorage))
         {
-          newNotif = 0;
+          newNotifStorage = 0;
         }
-        if(isNaN(newOrder))
+        if(isNaN(newOrderStorage))
         {
-          newOrder = 0;
+          newOrderStorage = 0;
         }
 
         if(notifCount)
         {
-          if(notifCount && newNotif !== notifCount)
+          if(notifCount && newNotifStorage !== notifCount)
           {
             sessionStorage.setItem("newNotif", notifCount);
             playAudio('new-notification-2.mp3');
@@ -78,7 +78,7 @@ function checkSmile(_register)
 
         if(orderCount)
         {
-          if(orderCount && newOrder !== orderCount)
+          if(orderCount && newOrderStorage !== orderCount)
           {
             sessionStorage.setItem("newOrder", orderCount);
             playAudio('new-order-2.mp3');
