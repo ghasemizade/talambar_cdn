@@ -57,9 +57,14 @@ function checkSmile(_register)
       if(typeof(Storage) !== "undefined")
       {
         newNotif = parseInt(sessionStorage.getItem("newNotif"));
+        newOrder = parseInt(sessionStorage.getItem("newOrder"));
         if(isNaN(newNotif))
         {
           newNotif = 0;
+        }
+        if(isNaN(newOrder))
+        {
+          newOrder = 0;
         }
 
         if(notifCount)
@@ -67,9 +72,20 @@ function checkSmile(_register)
           if(newNotif !== notifCount)
           {
             sessionStorage.setItem("newNotif", notifCount);
+            beep('new-notification-1.mp3');
             notifGenerator(smileResult);
           }
         }
+
+        if(orderCount)
+        {
+          if(newOrder !== orderCount)
+          {
+            sessionStorage.setItem("newOrder", orderCount);
+            beep('new-order-1.mp3');
+          }
+        }
+
       }
 
       // if user is loginned on this page, try to check logout
