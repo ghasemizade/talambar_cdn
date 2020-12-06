@@ -37,10 +37,20 @@ function checkSmile(_register)
     },
     success:function(smileResult)
     {
+      var response = smileResult.result;
       var notifCount = null;
-      if(smileResult.result && smileResult.result.notifCount)
+      var orderCount = null;
+
+      if(response)
       {
-        notifCount = smileResult.result.notifCount;
+        if(response.notifCount)
+        {
+          notifCount = response.notifCount;
+        }
+        if(response.orderCount)
+        {
+          orderCount = response.orderCount;
+        }
       }
 
       // show new notif message only one time
@@ -62,13 +72,13 @@ function checkSmile(_register)
         }
       }
 
-
       // if user is loginned on this page, try to check logout
       if($('meta[name="user-Jibres"]').attr("content"))
       {
-        if(checkSmileLogout(smileResult))
+        if(checkSmileLoginned(smileResult))
         {
           // if is not logged out
+          checkNewOrder(orderCount)
           // check notifications
           checkNewNotification(smileResult);
           // check redirect
@@ -81,7 +91,7 @@ function checkSmile(_register)
 }
 
 
-function checkSmileLogout(_data)
+function checkSmileLoginned(_data)
 {
   if(_data.result && _data.result.logout)
   {
@@ -158,6 +168,25 @@ function checkNewNotification(_data)
   {
     panelHeaderEl.attr('data-count', fitNumber(_data.result.notifCount));
     pwaFooterEl.attr('data-count', fitNumber(_data.result.notifCount));
+  }
+  else
+  {
+    panelHeaderEl.attr('data-count', null);
+    pwaFooterEl.attr('data-count', null);
+  }
+
+}
+
+
+function checkNewOrder(_orderCount)
+{
+  var panelHeaderEl = $('[data-panel] #pageHeader .orders i');
+  var pwaFooterEl   = $('#pageFooter .pwa [data-key="orders"] i');
+
+  if(_orderCount)
+  {
+    panelHeaderEl.attr('data-count', fitNumber(_orderCount));
+    pwaFooterEl.attr('data-count', fitNumber(_orderCount));
   }
   else
   {
