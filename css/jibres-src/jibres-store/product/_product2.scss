@@ -82,12 +82,14 @@
 	opacity: 0;
 	transition: 0.2s;
 	line-height: 1.5rem;
+	overflow: hidden;
 }
 [data-desktop] .jProduct2 figcaption{
 	opacity: 0.8;
 }
 [data-pwa] .jProduct2 figcaption{
 	opacity: 0.8;
+	max-height: 4.5rem;
 }
 .jProduct2:hover figcaption{
 	opacity: 1;
@@ -128,6 +130,11 @@
 	text-overflow: ellipsis;
 	white-space: initial;
 }
+[data-pwa] .jProduct2 h2{
+	font-size: 1rem;
+	-webkit-line-clamp: 2;
+	display: none;
+}
 .jProduct2 .jSlider1{
 	margin: 0;
 	margin-bottom: 0.5rem;
@@ -147,11 +154,6 @@
 	font-size: 1.5em;
 }
 
-[data-pwa] .jProduct2 h2{
-	font-size: 1rem;
-	-webkit-line-clamp: 2;
-	display: none;
-}
 [data-pwa] .jProduct2 .jSlider1 h2{
 	display: block;
 	font-size: 1.2rem;
@@ -208,6 +210,7 @@
 	opacity: 1;
 }
 [data-pwa] .jProduct2 .btnAddCart{
+	display: none;
 	opacity: 1;
 	top: 0.5rem;
 	left: 0.5rem;
