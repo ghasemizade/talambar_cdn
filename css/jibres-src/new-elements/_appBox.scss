@@ -3,8 +3,8 @@
 	background-color: #5e5bff;
 }
 body[data-in="business"][data-page="app"]{
-	width: 100%;
-	height: 100%;
+	// width: 100%;
+	// height: 100%;
 	position: relative;
 	overflow: hidden;
 	background-image: url('../img/app/bg-app-1.jpg');
@@ -13,10 +13,15 @@ body[data-in="business"][data-page="app"]{
 	background-size:cover;
 }
 .appBox{
-	padding-bottom: 80px;
+	padding-bottom: 8rem;
 	padding-top: 5%;
 	color: #fff;
-	font-size: 1.5em;
+	font-size: 1.6rem;
+}
+[data-pwa] .appBox{
+	font-size: 1.4rem;
+	padding-bottom: 0;
+	padding-top: 1rem;
 }
 .appBox .preview{
 	max-height: 500px;
@@ -24,12 +29,21 @@ body[data-in="business"][data-page="app"]{
 	margin: 20px auto -50px;
 }
 .appBox .text{
-	padding-top: 100px;
+	padding-top: 10rem;
+}
+[data-pwa] .appBox .text{
+	padding-top: 0;
+	text-align: center;
 }
 .appBox .text h2{
-	font-size: 3em;
+	font-size: 4rem;
 	font-weight: 700;
-	margin-bottom: 1em;
+}
+[data-pwa] .appBox .text h2{
+	font-size: 2.5rem;
+}
+[data-pwa] .appBox .dl{
+	text-align: center;
 }
 .appBox .dl a{
 	display: inline-block;
