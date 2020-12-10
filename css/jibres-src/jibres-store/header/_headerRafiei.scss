@@ -1,9 +1,8 @@
 
 #jHeaderRafiei{
+	position: relative;
 	font-size: 1.4rem;
 	padding-top: 2rem;
-	margin-bottom: 2rem;
-	background-color: #053657;
 }
 [data-desktop] #jHeaderRafiei{
 	height: 18rem;
@@ -44,9 +43,56 @@
 	color: #fff;
 	line-height: 2rem;
 	margin: 0 0.5rem;
-	padding: 1rem;
+	padding: 1rem 0.5rem;
+	min-width: 5rem;
 	transition: 0.3s;
 }
 #jHeaderRafiei nav a:hover{
+	color: #ffc107;
+}
+#jHeaderRafiei nav a:focus{
 	color: #eda336;
+}
+#jHeaderRafiei nav a:active{
+	color: #ffb300;
+}
+#jHeaderRafiei #headerEffect{
+	height: 50rem;
+	background-color: #053657;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+}
+#jHeaderRafiei #headerEffect::before{
+  content: '';
+  left: -40%;
+  right: -40%;
+  top: 92%;
+  height: 30rem;
+  width: 180%;
+  z-index: 0;
+  display: block;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  overflow: hidden;
+}
+#jHeaderRafiei #headerEffect::after{
+  content: '';
+  left: -25%;
+  right: -25%;
+  top: 92%;
+  height: 30rem;
+  width: 150%;
+  z-index: 0;
+  display: block;
+  background: rgba(255,255,255,1);
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  overflow: hidden;
+}
+body[data-env="jb2mm"]{
+	min-height: 100%;
 }
