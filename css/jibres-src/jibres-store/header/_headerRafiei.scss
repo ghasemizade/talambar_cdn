@@ -5,7 +5,7 @@
 	padding-top: 2rem;
 }
 [data-desktop] #jHeaderRafiei{
-	height: 18rem;
+	height: 19rem;
 }
 #jHeaderRafiei:before{
 	content: '';
@@ -35,7 +35,7 @@
 #jHeaderRafiei nav{
 	display: block;
 	margin: 0 auto;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
 	text-align: center;
 }
 #jHeaderRafiei nav a{
@@ -57,7 +57,8 @@
 	color: #ffb300;
 }
 #jHeaderRafiei #headerEffect{
-	height: 50rem;
+	height: 60rem;
+	// background: url('/enterprise/rafiei/pattern/pattern1.png');
 	background-color: #053657;
 	position: absolute;
 	top: 0;

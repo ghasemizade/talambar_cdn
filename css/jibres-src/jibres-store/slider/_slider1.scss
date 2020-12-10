@@ -45,10 +45,22 @@
 	display: block;
 }
 .imgLine a img{
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	margin-bottom: 1rem;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+	border-radius: 0.5rem;
 	display: block;
 	min-width: 120px;
+	margin-bottom: 1rem;
+}
+.imgLine .row.padMore a img{
+	margin-bottom: 2rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	border-radius: 1rem;
+}
+.imgLine .row.padMore2 a img{
+	margin-bottom: 4rem;
+	-webkit-border-radius: 1.5rem;
+	-moz-border-radius: 1.5rem;
+	border-radius: 1.5rem;
 }
