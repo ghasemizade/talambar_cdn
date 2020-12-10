@@ -1,0 +1,52 @@
+
+#jHeaderRafiei{
+	font-size: 1.4rem;
+	padding-top: 2rem;
+	margin-bottom: 2rem;
+	background-color: #053657;
+}
+[data-desktop] #jHeaderRafiei{
+	height: 18rem;
+}
+#jHeaderRafiei:before{
+	content: '';
+	display: block;
+	background-color: #eda336;
+	position: fixed;
+	max-width: 80vw;
+	height: 3rem;
+	top: -2rem;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 100;
+}
+#jHeaderRafiei .logo{
+	width: 50rem;
+	display: block;
+	margin: 0 auto 1rem;
+}
+#jHeaderRafiei h1{
+	display: none;
+}
+#jHeaderRafiei .logo img{
+	display: block;
+}
+#jHeaderRafiei nav{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 1rem;
+	text-align: center;
+}
+#jHeaderRafiei nav a{
+	display: inline-block;
+	color: #fff;
+	line-height: 2rem;
+	margin: 0 0.5rem;
+	padding: 1rem;
+	transition: 0.3s;
+}
+#jHeaderRafiei nav a:hover{
+	color: #eda336;
+}
