@@ -7,7 +7,7 @@
 [data-desktop] #jHeaderRafiei{
 	height: 19rem;
 }
-#jHeaderRafiei:before{
+#jHeaderRafiei::before{
 	content: '';
 	display: block;
 	background-color: #eda336;
@@ -20,6 +20,19 @@
 	margin: 0 auto;
 	border-radius: 50%;
 	z-index: 100;
+}
+#jHeaderRafiei::after{
+	content: '';
+	display: block;
+	height: 60rem;
+	height: 50vh;
+	// background: url('/enterprise/rafiei/pattern/pattern1.png');
+	background-color: #053657;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
 }
 #jHeaderRafiei .logo{
 	width: 50rem;
@@ -56,44 +69,15 @@
 #jHeaderRafiei nav a:active{
 	color: #ffb300;
 }
-#jHeaderRafiei #headerEffect{
-	height: 60rem;
-	// background: url('/enterprise/rafiei/pattern/pattern1.png');
-	background-color: #053657;
+#jHeaderRafiei svg{
 	position: absolute;
-	top: 0;
+	top: 60rem;
+	top: 50vh;
 	right: 0;
 	left: 0;
 	z-index: -1;
 }
-#jHeaderRafiei #headerEffect::before{
-  content: '';
-  left: -40%;
-  right: -40%;
-  top: 92%;
-  height: 30rem;
-  width: 180%;
-  z-index: 0;
-  display: block;
-  background: rgba(255,255,255,0.7);
-  border-radius: 50% 50% 0 0;
-  position: absolute;
-  overflow: hidden;
-}
-#jHeaderRafiei #headerEffect::after{
-  content: '';
-  left: -25%;
-  right: -25%;
-  top: 92%;
-  height: 30rem;
-  width: 150%;
-  z-index: 0;
-  display: block;
-  background: rgba(255,255,255,1);
-  border-radius: 50% 50% 0 0;
-  position: absolute;
-  overflow: hidden;
-}
+
 body[data-env="jb2mm"]{
 	min-height: 100%;
 }
