@@ -26,7 +26,7 @@
 	display: block;
 	height: 60rem;
 	height: 50vh;
-	// background: url('/enterprise/rafiei/pattern/pattern1.png');
+	// background: url('/enterprise/rafiei/pattern/pattern3.png');
 	background-color: #053657;
 	position: absolute;
 	top: 0;
@@ -81,3 +81,7 @@
 body[data-env="jb2mm"]{
 	min-height: 100%;
 }
+body[data-env="jb2mm"] #pageContent::after{
+
+}
+
