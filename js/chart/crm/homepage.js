@@ -16,7 +16,7 @@ Highcharts.chart('chartdivcrmhome', {
     type: 'area'
   },
   title: {
-    text: $("#charttitleunit").html(),
+    text: $("#charttitle").html(),
   },
   xAxis: {
     categories: $.parseJSON($("#chartcategory").html()),
