@@ -112,6 +112,9 @@ body .ltr .items li + li::before{
 	text-align: left;
 	max-width: 15rem;
 }
+[dir='rtl'] .items li .key.mobile{
+	max-width: 12rem;
+}
 .items li.multiLine .key{
 	height: auto!important;
 	white-space: initial;
@@ -218,8 +221,10 @@ body .rtl .items li .go::after{
 .items li .go.stop::after{font-size:1.6rem;content:"\e24e"!important;}
 .items li .go.external::after{font-size:1.6rem;content:"\e074"!important;color:#777;}
 .items li .go.surveillance::after{font-size:2rem;content:"\e24a"!important;}
+.items li .go.star::after{font-size:2rem;content:"\5c"!important;}
 .items li .ok::after{color: #4CC790}
 .items li .nok::after{color: #ff5722}
+.items li .gold::after{color: #ffd700}
 
 // reaction
 .items li .item:hover, .items li a:hover{
