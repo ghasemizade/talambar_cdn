@@ -11,49 +11,66 @@ function chart_crm_homepage()
 function highChartcrmhome()
 {
 
-Highcharts.chart('chartdivcrmhome', {
-  chart: {
-    type: 'area'
-  },
-  title: {
-    text: $("#charttitle").html(),
-  },
-  xAxis: {
-    categories: $.parseJSON($("#chartcategory").html()),
-    tickmarkPlacement: 'on',
+  Highcharts.chart('chartdivcrmhome', {
+    chart: {
+      type: 'column'
+    },
     title: {
-      enabled: false
-    }
-  },
-  yAxis: {
-    title: {
-      text: $("#charttitleunit").html()
-    }
-  },
-  tooltip: {
-    split: true
-  },
-  plotOptions: {
-    area: {
-      stacking: 'normal',
-      lineColor: '#666666',
-      lineWidth: 1,
-      marker: {
-        lineWidth: 1,
-        lineColor: '#666666'
-      }
-    }
-  },
-  series: [
-  {
-        name: $("#chartverifytitle").html(),
-        data: $.parseJSON($("#chartverify").html())
+      text: $("#charttitle").html(),
+    },
+    xAxis: {
+      categories: $.parseJSON($("#chartcategory").html())
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: $("#charttitleunit").html()
       },
-      {
-        name: $("#chartunverifytitle").html(),
-        data: $.parseJSON($("#chartunverify").html())
+      stackLabels: {
+        enabled: true,
+        style: {
+          fontWeight: 'bold',
+          color: ( // theme
+            Highcharts.defaultOptions.title.style &&
+            Highcharts.defaultOptions.title.style.color
+          ) || 'gray'
+        }
       }
-  ]
-});
+    },
+    tooltip: {
+      shared: true,
+    },
+    legend: {
+      align: 'right',
+      x: -30,
+      verticalAlign: 'top',
+      y: 25,
+      floating: true,
+      backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || 'white',
+      borderColor: '#CCC',
+      borderWidth: 1,
+      shadow: false
+    },
+    plotOptions: {
+      column: {
+        stacking: 'normal',
+        dataLabels: {
+          enabled: true
+        }
+      }
+    },
+    series: [
+    {
+          name: $("#chartverifytitle").html(),
+          color: 'rgba(139,195,75,1)',
+          data: $.parseJSON($("#chartverify").html())
+        },
+        {
+          name: $("#chartunverifytitle").html(),
+          color: 'rgba(126,86,134,.9)',
+          data: $.parseJSON($("#chartunverify").html())
+        }
+    ]
+  });
 }
 
