@@ -25,16 +25,6 @@ function highChartcrmhome()
       min: 0,
       title: {
         text: $("#charttitleunit").html()
-      },
-      stackLabels: {
-        enabled: true,
-        style: {
-          fontWeight: 'bold',
-          color: ( // theme
-            Highcharts.defaultOptions.title.style &&
-            Highcharts.defaultOptions.title.style.color
-          ) || 'gray'
-        }
       }
     },
     tooltip: {
@@ -54,9 +44,9 @@ function highChartcrmhome()
     plotOptions: {
       column: {
         stacking: 'normal',
-        dataLabels: {
-          enabled: true
-        }
+        // dataLabels: {
+        //   enabled: true
+        // }
       }
     },
     series: [
