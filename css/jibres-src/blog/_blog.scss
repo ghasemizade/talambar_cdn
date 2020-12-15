@@ -82,7 +82,7 @@
 	font-weight: 100;
 }
 .blogEx article h3{
-	margin: 0.5em 0 0;
+	margin: 0.54em 0 0;
 	transition: 0.3s;
 	font-weight: 700;
 }
@@ -90,6 +90,11 @@
 	border-bottom: 3px solid #777;
 	padding-bottom: 5px;
 	margin-bottom:5px;
+}
+.blogEx article h4{
+	margin: 0.54em 0 0;
+	transition: 0.3s;
+	font-weight: 700;
 }
 .blogEx article .meta{
 	color:#aaa;
@@ -115,7 +120,7 @@
 	transition: 0.3s;
 }
 .blogEx li:hover{
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.05);
 }
 .blogEx article .thumb{
 	display: block;
