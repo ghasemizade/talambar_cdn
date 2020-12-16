@@ -9,6 +9,20 @@
 	margin-top: 10rem;
 	background-color: #095e60;
 }
+.jFooterRafiei::after{
+	content: '';
+	display: block;
+	background-color: #eda336;
+	position: absolute;
+	max-width: 80vw;
+	height: 3rem;
+	bottom: -2rem;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 100;
+}
 .jFooterRafiei svg{
 	position: absolute;
 	bottom: 100%;

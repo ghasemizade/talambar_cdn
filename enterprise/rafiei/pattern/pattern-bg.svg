@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 180 180" style="enable-background:new 0 0 180 180;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.8;}
+	.st1{fill:none;stroke:#F2F2F2;stroke-width:1.5;stroke-miterlimit:10;}
+</style>
+<g class="st0">
+	<path class="st1" d="M0,71.4l45-18.7l45,18.6l45-18.6l45,18.6 M71.4,180l-18.7-45l18.6-45L52.7,45L71.4,0 M180,108.7l-45,18.6
+		l-45-18.6l-45,18.6L0,108.7 M166.8,76.8l-63.6,26.4l-26.4,63.6L45,180l-31.8-13.2L0,135l13.2-31.8l63.7-26.4l26.4-63.6L135,0
+		l31.8,13.2L180,45L166.8,76.8z M108.7,0l18.6,45l-18.6,45l18.6,45l-18.6,45 M0,161.4l45-18.6l45,18.6l45-18.6l45,18.6 M18.6,0
+		l18.6,45L18.6,90l18.6,45l-18.6,45 M13.2,76.8l63.7,26.4l26.4,63.6L135,180l31.8-13.2L180,135l-13.2-31.8l-63.6-26.4L76.8,13.2
+		L45,0L13.2,13.2L0,45L13.2,76.8z M0,18.6l45,18.6l45-18.6l45,18.6l45-18.6 M161.4,180l-18.6-45l18.6-45l-18.6-45l18.6-45"/>
+</g>
+</svg>
