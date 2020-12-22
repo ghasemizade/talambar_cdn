@@ -97,8 +97,9 @@ function runUploader()
     fileChooseOnlyOne: "Please choose only one file!",
     fileUltraMaxSize: "Please select file with less than 20 MB!",
     fileMaxSizeInit: "Please select file with less than 2 MB!",
-    fileMaxSize: "Please select file with less than 1 MB!",
+    fileMaxSize: "Your file size is too large!",
     yourFileSize: "Your file size is ",
+    max: "Max allowed size",
   }
 
   if(urlLang() === 'fa')
@@ -109,8 +110,9 @@ function runUploader()
       fileChooseOnlyOne: "لطفا تنها یک فایل را امتخاب کنید",
       fileUltraMaxSize: "فایل انتخابی باید کمتر از ۲۰ مگ داشته باشد",
       fileMaxSizeInit: "حجم فایل شما باید کمتر از ۲ مگ باشد.",
-      fileMaxSize: "حجم فایل شما باید کمتر از ۱ مگ باشد.",
+      fileMaxSize: "حجم فایل شما بیش از اندازه مجاز است!",
       yourFileSize: "اندازه فایل شما برابر است با ",
+      max: "حداکثر اندازه مجاز ",
     }
   }
 
