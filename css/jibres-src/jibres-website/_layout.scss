@@ -23,6 +23,9 @@ html[data-iframe]::-webkit-scrollbar{width: 0px;background: transparent;}
   position: absolute;
   overflow: hidden;
 }
+[data-pwa] .jibresBanner::after{
+  height: 15rem;
+}
 .jibresBanner[data-back]::before{min-height:175px;}
 
 

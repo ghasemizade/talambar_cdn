@@ -36,14 +36,14 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 #jibresFooter figure img{height: 120px;display:block;padding:10px; margin: 0 auto;}
 #jibresFooter figure figcaption{padding: 0 1.5em;}
 [data-pwa] #jibresFooter figure figcaption{padding:0;font-size: 1.2rem;}
+#jibresFooter a{color: #555;transition:0.3s;}
+#jibresFooter a:hover{color: $jibres;}
+#jibresFooter a:focus{color: $jibresMono;}
+#jibresFooter a:active{color: $jibresDark;}
 // footer nav links
 #jibresFooter #footerMenu nav{margin-bottom: 4rem;background-color:transparent;}
 [data-pwa] #jibresFooter #footerMenu nav{margin-bottom: 2rem;}
 #jibresFooter #footerMenu nav li.title{border-bottom: 1px solid #eee;display: block;color: #555;padding:5px 0;font-weight:900;font-size:1em;margin:0 0 1rem; }
-#jibresFooter a{color: #555!important;transition:0.3s;}
-#jibresFooter a:hover{color: $jibres;}
-#jibresFooter a:focus{color: $jibresMono;}
-#jibresFooter a:active{color: $jibresDark;}
 #jibresFooter .items li+li::before{display: none;}
 #jibresFooter .items a{padding-right: 0;padding-left: 0;}
 
