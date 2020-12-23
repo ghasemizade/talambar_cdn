@@ -1,4 +1,10 @@
 body[data-in="site"] {background-color:$jibresBack;}
+body[data-env="Jibres"][data-in="site"] .jibresBanner img{
+  -webkit-border-radius: 1rem;border-radius: 1rem;
+}
+body[data-env="Jibres"][data-in="site"] .jibresBanner video{
+  -webkit-border-radius: 1rem;border-radius: 1rem;
+}
 
 // block iframe of jibres
 html[data-iframe="block"]{overflow:hidden;}
