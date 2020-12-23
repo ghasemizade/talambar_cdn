@@ -1,4 +1,4 @@
-object, iframe, blockquote, abbr, address, cite, del, dfn, em, ins, q, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark, audio, video{
+object, iframe, blockquote, abbr, address, cite, del, dfn, em, ins, q, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, time, mark{
   margin: 0;
   padding: 0;
   border: 0;
@@ -328,12 +328,33 @@ kbd{
 kbd:hover{background-color:rgba(0,0,0,0.2);}
 
 
-audio,
 video {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+  object-fit: cover;
+}
+audio{
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  outline: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
 }
 audio:not([controls]) {
   display: none;

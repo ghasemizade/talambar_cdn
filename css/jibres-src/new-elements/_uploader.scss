@@ -153,8 +153,16 @@ body.dragging{
   display: block;
   border-radius: 0.5rem;
 }
+[data-uploader][data-fill] video{
+  display: block;
+  border-radius: 0.5rem;
+}
+[data-uploader][data-fill] audio{
+  display: block;
+  border-radius: 0.5rem;
+}
 [data-option] .action[data-uploader][data-fill] img{
-  width: 120px;
+  max-height: 18rem;
 }
 [data-uploader] .imageDel{
   position: absolute;
