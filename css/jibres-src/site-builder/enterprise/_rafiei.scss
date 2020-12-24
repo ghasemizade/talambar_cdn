@@ -1,12 +1,12 @@
 
 // body
-body[data-env="jb2mm"]{
+body[data-enterprise="rafiei"]{
 	min-height: 100%;
 	background: url('/enterprise/rafiei/pattern/pattern-bg.svg');
 	background-attachment: fixed;
 	background-size:18rem;
 }
-body[data-env="jb2mm"] #pageContent::after{
+body[data-enterprise="rafiei"] #pageContent::after{
 
 }
 
