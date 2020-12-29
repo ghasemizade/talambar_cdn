@@ -360,7 +360,20 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-
+picture {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+  object-fit: cover;
+}
 svg:not(:root) {
   max-width:100%;
   overflow: hidden;

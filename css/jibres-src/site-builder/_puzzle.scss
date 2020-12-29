@@ -40,13 +40,11 @@
 	width: 100%;
 }
 
-.puzzle img{
+.puzzle picture img{
 	position: relative;
 	display: block;
 	width: 100%;
-	min-height: 1rem;
 	overflow: hidden;
-	transition: 0.3s;
 }
 .puzzle video{
 	display: block;
@@ -61,46 +59,46 @@
 }
 // border radius
 [data-radius='0'] .everyItem{ @include border-radius(0);}
-[data-radius='0'] img{ @include border-radius(0);}
+[data-radius='0'] picture{ @include border-radius(0);}
 [data-radius='0'] video{ @include border-radius(0);}
 
 [data-radius='1x'] .everyItem{ @include border-radius(0.5rem);}
-[data-radius='1x'] img{ @include border-radius(0.5rem);}
+[data-radius='1x'] picture{ @include border-radius(0.5rem);}
 [data-radius='1x'] video{ @include border-radius(0.5rem);}
 
 [data-radius='2x'] .everyItem{ @include border-radius(1rem);}
-[data-radius='2x'] img{ @include border-radius(1rem);}
+[data-radius='2x'] picture{ @include border-radius(1rem);}
 [data-radius='2x'] video{ @include border-radius(1rem);}
 
 [data-radius='3x'] .everyItem{ @include border-radius(1.5rem);}
-[data-radius='3x'] img{ @include border-radius(1.5rem);}
+[data-radius='3x'] picture{ @include border-radius(1.5rem);}
 [data-radius='3x'] video{ @include border-radius(1.5rem);}
 
 [data-radius='4x'] .everyItem{ @include border-radius(2rem);}
-[data-radius='4x'] img{ @include border-radius(2rem);}
+[data-radius='4x'] picture{ @include border-radius(2rem);}
 [data-radius='4x'] video{ @include border-radius(2rem);}
 
 [data-radius='circle'] .everyItem{ @include border-radius(50%);}
-[data-radius='circle'] img{ @include border-radius(50%);}
+[data-radius='circle'] picture{ @include border-radius(50%);}
 [data-radius='circle'] video{ @include border-radius(50%);}
 
 
-[data-effect='zoom'] img{
+[data-effect='zoom'] picture{
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);
 	transition: 0.3s;
 	will-change: transform;
 }
 
-[data-effect='zoom'] img:hover{
+[data-effect='zoom'] picture:hover{
 	box-shadow: 0 2rem 2.5rem -0.5rem rgba(0,0,0,0.1), 0 1rem 1rem -0.5rem rgba(0,0,0,0.04);
 	transform:scale(0.95);
 }
 
-[data-effect='zoom'] a:focus img{
+[data-effect='zoom'] a:focus picture{
 	transform:scale(1.05);
 }
 
-[data-effect='zoom'] a:active img{
+[data-effect='zoom'] a:active picture{
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	transform:scale(1);
 }
@@ -168,16 +166,16 @@
 	z-index: 2;
 	color: #fff;
 }
-.everyItem[data-info="inside"] img{
+.everyItem[data-info="inside"] picture{
 	transform: scale(1);
 }
-.everyItem[data-info="inside"]:hover img{
+.everyItem[data-info="inside"]:hover picture{
 	transform: scale(1.05);
 }
-.everyItem[data-info="inside"]:focus img{
+.everyItem[data-info="inside"]:focus picture{
 	transform: scale(1.1);
 }
-.everyItem[data-info="inside"]:active img{
+.everyItem[data-info="inside"]:active picture{
 	transform: scale(1);
 }
 .everyItem[data-info="inside"] .info a{
@@ -186,7 +184,11 @@
 [data-effect="zoom"] .everyItem[data-info="inside"] .info{
 	padding: 0 1.5rem 1.5rem;
 }
-.everyItem:after{
+.everyItem picture{
+	position: relative;
+	overflow: hidden;
+}
+.everyItem picture:after{
 	content: "";
 	position: absolute;
 	top: 0;
