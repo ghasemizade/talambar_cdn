@@ -4,6 +4,9 @@
 	height: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	transition: 0.3s;
+	transform: scale(1);
+	will-change: transform, opacity;
 }
 
 // everyItem row c special bottom size
@@ -42,6 +45,7 @@
 .everyItem picture{
 	position: relative;
 	transition: 0.3s;
+	transform: scale(1);
 	will-change: transform, opacity;
 	min-height: 1rem;
 	// overflow: hidden;
@@ -201,19 +205,17 @@
 
 // effect
 
-[data-effect='zoom'] a:hover picture{
+[data-effect='zoom'] .everyItem:hover{
 	transform:scale(0.95);
 }
-[data-effect='zoom'] a:focus picture{
+[data-effect='zoom'] .everyItem:focus{
 	transform:scale(0.9);
 }
-[data-effect='zoom'] a:active picture{
+[data-effect='zoom'] .everyItem:active{
 	transform:scale(1);
 }
 
-[data-effect='darkShadow'] picture{
-	transform: scale(1);
-}
+
 [data-effect='darkShadow'] a:hover picture{
 	transform: scale(1.05);
 }
