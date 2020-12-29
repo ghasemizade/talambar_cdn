@@ -1,5 +1,5 @@
-.puzzle{
-
+.puzzle a{
+	display: block;
 }
 
 .puzzle img{
@@ -31,48 +31,30 @@
 [data-radius='3x'] img{ @include border-radius(1.5rem);}
 [data-radius='3x'] video{ @include border-radius(1.5rem);}
 
-[data-radius='4x'] img{ @include border-radius(1.5rem);}
-[data-radius='4x'] video{ @include border-radius(1.5rem);}
+[data-radius='4x'] img{ @include border-radius(2rem);}
+[data-radius='4x'] video{ @include border-radius(2rem);}
 
 [data-radius='circle'] img{ @include border-radius(50%);}
 [data-radius='circle'] video{ @include border-radius(50%);}
 
 
-.puzzle a {
-	display: block;
-}
-.puzzle a img{
-	display: block;
-	min-width: 120px;
-	margin-bottom: 1rem;
+[data-effect='zoom'] img{
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);
 	transition: 0.3s;
 	will-change: transform;
 }
-.puzzle a:hover img{
+
+[data-effect='zoom'] img:hover{
 	box-shadow: 0 2rem 2.5rem -0.5rem rgba(0,0,0,0.1), 0 1rem 1rem -0.5rem rgba(0,0,0,0.04);
 	transform:scale(0.95);
 }
-.puzzle a:focus img{
+
+[data-effect='zoom'] a:focus img{
 	transform:scale(1.05);
 }
-.puzzle a:active img{
+
+[data-effect='zoom'] a:active img{
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 	transform:scale(1);
-}
-.puzzle .row.padMore a img{
-	margin-bottom: 2rem;
-	-webkit-border-radius: 1rem;
-	-moz-border-radius: 1rem;
-	border-radius: 1rem;
-}
-.puzzle .row.padMore2 a img{
-	margin-bottom: 3rem;
-	-webkit-border-radius: 1.5rem;
-	-moz-border-radius: 1.5rem;
-	border-radius: 1.5rem;
-}
-.puzzle video{
-	margin-bottom: 3rem;
 }
 
