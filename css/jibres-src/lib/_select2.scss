@@ -42,14 +42,15 @@ label+div .select22 {
   cursor:pointer;
   display:block;
   min-height:36px;
-  height:36px;
   user-select:none;
   -webkit-user-select:none;
   background-color:#fff;
   border:1px solid rgba(0,0,0,0.1);
   border-radius:0.25rem
 }
-
+.select22-container .select22-selection--multiple2{
+  height:36px;
+}
 .select22-container .select22-selection--multiple .select22-selection__rendered{
   display:inline-block;
   overflow:hidden;
@@ -66,8 +67,8 @@ label+div .select22 {
   box-sizing:border-box;
   border:none;
   font-size:100%;
-  line-height: 26px;
-  margin-top:5px;
+  line-height: 29px;
+  // margin-top:5px;
   padding:0
 }
 
@@ -320,7 +321,7 @@ select.select22-country img{
 
 .select22-container--default .select22-selection--multiple .select22-selection__choice{
   background-color:#e4e4e4;
-  border:1px solid #aaa;
+  // border:1px solid #aaa;
   border-radius:0.25rem;
   max-width: 100%;
   overflow: hidden;
