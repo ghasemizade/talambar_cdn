@@ -1,18 +1,53 @@
+.puzzle .everyItem{
+	display: block;
+	overflow: hidden;
+	height: 100%;
+}
+
+
+// everyItem row c special bottom size
+// normal
+.row > .c .everyItem, .row > [class*=c-] .everyItem{
+    padding-bottom: 0.5rem;
+}
+[data-pwa] .row > .c .everyItem, [data-pwa] .row > [class*=c-] .everyItem{
+    padding-bottom: 0.5rem
+}
+.row[data-space='zero'] > .c .everyItem, .row[data-space='zero'] > [class*="c-"] .everyItem {
+  padding-bottom: 0;
+}
+// high
+.row[data-space='high'] > .c .everyItem, .row[data-space='high'] > [class*=c-] .everyItem{
+    padding-bottom: 1rem;
+}
+[data-pwa] .row[data-space='high'] > .c .everyItem, [data-pwa] .row[data-space='high'] > [class*=c-] .everyItem{
+    padding-bottom: 0.5rem;
+}
+// extra
+.row[data-space='extra'] > .c .everyItem, .row[data-space='extra'] > [class*=c-] .everyItem{
+    padding-bottom: 1.5rem;
+}
+[data-pwa] .row[data-space='extra'] > .c .everyItem, [data-pwa] .row[data-space='extra'] > [class*=c-] .everyItem{
+    padding-bottom: 1rem;
+}
+
+
 .puzzle a{
 	display: block;
 }
 
 .puzzle img{
 	display: block;
-	transition: 0.3s;
+	width: 100%;
 	overflow: hidden;
+	transition: 0.3s;
 }
 .puzzle video{
 	display: block;
 	width: 100%;
-	margin: 0 auto;
 	overflow: hidden;
 	max-height: 60rem;
+	margin: 0 auto;
 }
 .puzzle audio{
 	display: block;
