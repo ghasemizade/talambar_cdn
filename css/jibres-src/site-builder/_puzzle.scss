@@ -41,9 +41,12 @@
 }
 .everyItem picture{
 	position: relative;
+	transition: 0.3s;
+	will-change: transform, opacity;
+	min-height: 1rem;
 	// overflow: hidden;
 }
-.everyItem picture::after{
+[data-effect='darkShadow'] .everyItem picture::after{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -57,7 +60,7 @@
 	opacity: 0.7;
 	z-index: 1;
 }
-.everyItem picture:hover::after{
+[data-effect='darkShadow'] .everyItem picture:hover::after{
 	opacity: 1;
 }
 .puzzle picture img{
@@ -198,10 +201,7 @@
 
 // effect
 
-[data-effect='zoom'] picture{
-	transition: 0.3s;
-}
-[data-effect='zoom'] picture:hover{
+[data-effect='zoom'] a:hover picture{
 	transform:scale(0.95);
 }
 [data-effect='zoom'] a:focus picture{
@@ -211,15 +211,15 @@
 	transform:scale(1);
 }
 
-.everyItem[data-info="inside"] picture{
+[data-effect='darkShadow'] picture{
 	transform: scale(1);
 }
-.everyItem[data-info="inside"]:hover picture{
+[data-effect='darkShadow'] a:hover picture{
 	transform: scale(1.05);
 }
-.everyItem[data-info="inside"]:focus picture{
+[data-effect='darkShadow'] a:focus picture{
 	transform: scale(1.1);
 }
-.everyItem[data-info="inside"]:active picture{
+[data-effect='darkShadow'] a:active picture{
 	transform: scale(1);
 }
