@@ -39,7 +39,27 @@
 	display: block;
 	width: 100%;
 }
-
+.everyItem picture{
+	position: relative;
+	// overflow: hidden;
+}
+.everyItem picture::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.7) 100%);
+	transition: 0.3s;
+	opacity: 0.7;
+	z-index: 1;
+}
+.everyItem picture:hover::after{
+	opacity: 1;
+}
 .puzzle picture img{
 	position: relative;
 	display: block;
@@ -57,51 +77,38 @@
 	display: block;
 	width: 100%;
 }
+
 // border radius
 [data-radius='0'] .everyItem{ @include border-radius(0);}
 [data-radius='0'] picture{ @include border-radius(0);}
+[data-radius='0'] picture img{ @include border-radius(0);}
 [data-radius='0'] video{ @include border-radius(0);}
 
 [data-radius='1x'] .everyItem{ @include border-radius(0.5rem);}
 [data-radius='1x'] picture{ @include border-radius(0.5rem);}
+[data-radius='1x'] picture img{ @include border-radius(0.5rem);}
 [data-radius='1x'] video{ @include border-radius(0.5rem);}
 
 [data-radius='2x'] .everyItem{ @include border-radius(1rem);}
 [data-radius='2x'] picture{ @include border-radius(1rem);}
+[data-radius='2x'] picture img{ @include border-radius(1rem);}
 [data-radius='2x'] video{ @include border-radius(1rem);}
 
 [data-radius='3x'] .everyItem{ @include border-radius(1.5rem);}
 [data-radius='3x'] picture{ @include border-radius(1.5rem);}
+[data-radius='3x'] picture img{ @include border-radius(1.5rem);}
 [data-radius='3x'] video{ @include border-radius(1.5rem);}
 
 [data-radius='4x'] .everyItem{ @include border-radius(2rem);}
 [data-radius='4x'] picture{ @include border-radius(2rem);}
+[data-radius='4x'] picture img{ @include border-radius(2rem);}
 [data-radius='4x'] video{ @include border-radius(2rem);}
 
 [data-radius='circle'] .everyItem{ @include border-radius(50%);}
 [data-radius='circle'] picture{ @include border-radius(50%);}
+[data-radius='circle'] picture img{ @include border-radius(50%);}
 [data-radius='circle'] video{ @include border-radius(50%);}
 
-
-[data-effect='zoom'] picture{
-	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);
-	transition: 0.3s;
-	will-change: transform;
-}
-
-[data-effect='zoom'] picture:hover{
-	box-shadow: 0 2rem 2.5rem -0.5rem rgba(0,0,0,0.1), 0 1rem 1rem -0.5rem rgba(0,0,0,0.04);
-	transform:scale(0.95);
-}
-
-[data-effect='zoom'] a:focus picture{
-	transform:scale(1.05);
-}
-
-[data-effect='zoom'] a:active picture{
-	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-	transform:scale(1);
-}
 
 
 .puzzle h2{
@@ -166,45 +173,13 @@
 	z-index: 2;
 	color: #fff;
 }
-.everyItem[data-info="inside"] picture{
-	transform: scale(1);
-}
-.everyItem[data-info="inside"]:hover picture{
-	transform: scale(1.05);
-}
-.everyItem[data-info="inside"]:focus picture{
-	transform: scale(1.1);
-}
-.everyItem[data-info="inside"]:active picture{
-	transform: scale(1);
-}
 .everyItem[data-info="inside"] .info a{
 	color: #fff!important;
 }
 [data-effect="zoom"] .everyItem[data-info="inside"] .info{
 	padding: 0 1.5rem 1.5rem;
 }
-.everyItem picture{
-	position: relative;
-	overflow: hidden;
-}
-.everyItem picture:after{
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background:linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.7) 100%);
-	transition: 0.3s;
-	opacity: 0.7;
-	z-index: 1;
-}
-.everyItem:hover:after{
-	opacity: 1;
-}
+
 
 
 .everyItem[data-info="inside"] h2{
@@ -220,3 +195,31 @@
 	line-height: 1.8rem;
 }
 
+
+// effect
+
+[data-effect='zoom'] picture{
+	transition: 0.3s;
+}
+[data-effect='zoom'] picture:hover{
+	transform:scale(0.95);
+}
+[data-effect='zoom'] a:focus picture{
+	transform:scale(0.9);
+}
+[data-effect='zoom'] a:active picture{
+	transform:scale(1);
+}
+
+.everyItem[data-info="inside"] picture{
+	transform: scale(1);
+}
+.everyItem[data-info="inside"]:hover picture{
+	transform: scale(1.05);
+}
+.everyItem[data-info="inside"]:focus picture{
+	transform: scale(1.1);
+}
+.everyItem[data-info="inside"]:active picture{
+	transform: scale(1);
+}
