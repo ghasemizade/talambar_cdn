@@ -2,43 +2,48 @@
 	position: relative;
 	display: block;
 	height: 100%;
+	min-height: 100%;
 }
-
 
 // everyItem row c special bottom size
 // normal
-.row[data-space="normal"] > .c .everyItem, .row[data-space="normal"] > [class*=c-] .everyItem{
+.puzzle .row[data-space="normal"] > .c, .puzzle .row[data-space="normal"] > [class*=c-]{
     padding-bottom: 1rem;
 }
-[data-pwa] .row > .c .everyItem, [data-pwa] .row > [class*=c-] .everyItem{
+[data-pwa] .puzzle .row > .c, [data-pwa] .puzzle .row > [class*=c-]{
     padding-bottom: 0.5rem
 }
-.row[data-space='zero'] > .c .everyItem, .row[data-space='zero'] > [class*="c-"] .everyItem {
+.puzzle .row[data-space='zero'] > .c, .puzzle .row[data-space='zero'] > [class*="c-"] {
   padding-bottom: 0;
 }
 // high
-.row[data-space='high'] > .c .everyItem, .row[data-space='high'] > [class*=c-] .everyItem{
+.puzzle .row[data-space='high'] > .c, .puzzle .row[data-space='high'] > [class*=c-]{
     padding-bottom: 2rem;
 }
-[data-pwa] .row[data-space='high'] > .c .everyItem, [data-pwa] .row[data-space='high'] > [class*=c-] .everyItem{
+[data-pwa] .puzzle .row[data-space='high'] > .c, [data-pwa] .puzzle .row[data-space='high'] > [class*=c-]{
     padding-bottom: 1rem;
 }
 // extra
-.row[data-space='extra'] > .c .everyItem, .row[data-space='extra'] > [class*=c-] .everyItem{
+.puzzle .row[data-space='extra'] > .c, .puzzle .row[data-space='extra'] > [class*=c-]{
     padding-bottom: 3rem;
 }
-[data-pwa] .row[data-space='extra'] > .c .everyItem, [data-pwa] .row[data-space='extra'] > [class*=c-] .everyItem{
+[data-pwa] .puzzle .row[data-space='extra'] > .c, [data-pwa] .puzzle .row[data-space='extra'] > [class*=c-]{
     padding-bottom: 2rem;
 }
 
 
 .puzzle a{
+	position: relative;
+	overflow: hidden;
 	display: block;
+	width: 100%;
 }
 
 .puzzle img{
+	position: relative;
 	display: block;
 	width: 100%;
+	min-height: 1rem;
 	overflow: hidden;
 	transition: 0.3s;
 }
@@ -159,6 +164,18 @@
 	transition: 0.3s;
 	z-index: 2;
 	color: #fff;
+}
+.everyItem[data-info="inside"] img{
+	transform: scale(1);
+}
+.everyItem[data-info="inside"]:hover img{
+	transform: scale(1.05);
+}
+.everyItem[data-info="inside"] a:focus img{
+	transform: scale(1.1);
+}
+.everyItem[data-info="inside"] a:active img{
+	transform: scale(1);
 }
 .everyItem[data-info="inside"] .info a{
 	color: #fff!important;
