@@ -144,7 +144,7 @@
 }
 
 .everyItem .info{
-	transition: 0.3s;
+	transition: 0.2s;
 }
 .everyItem[data-info="top"] .info{
 	margin-top: 1rem;
@@ -203,9 +203,7 @@
 .everyItem:hover:after{
 	opacity: 1;
 }
-.everyItem[data-info="inside"]:hover .info{
-	padding-bottom: 2rem;
-}
+
 
 .everyItem[data-info="inside"] h2{
 	font-size: 1.4rem;
