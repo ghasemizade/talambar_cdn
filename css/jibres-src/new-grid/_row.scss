@@ -60,6 +60,52 @@
     padding-right: 1rem;
     padding-left: 1rem
 }
+
+// new way to define space of row
+.row[data-space='zero'] {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row[data-space='zero'] > .c,
+.row[data-space='zero'] > [class*="c-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.row[data-space='high']{
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+.row[data-space='high'] > .c, .row[data-space='high'] > [class*=c-]{
+    padding-right: 1rem;
+    padding-left: 1rem
+}
+// padMore PWA
+[data-pwa] .row[data-space='high']{
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+[data-pwa] .row[data-space='high'] > .c, [data-pwa] .row[data-space='high'] > [class*=c-]{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem
+}
+.row[data-space='extra']{
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+}
+.row[data-space='extra'] > .c, .row[data-space='extra'] > [class*=c-]{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem
+}
+// padMore2 PWA
+[data-pwa] .row[data-space='extra']{
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+[data-pwa] .row[data-space='extra'] > .c, [data-pwa] .row[data-space='extra'] > [class*=c-]{
+    padding-right: 1rem;
+    padding-left: 1rem
+}
+
 // flex custom modes
 .flex-column {
   -ms-flex-direction: column !important;
