@@ -144,11 +144,11 @@ function scrollSmoothTo(_target, _hashtag, _timing, _arg)
   else
   {
     // calc timing with size of scroll
-    _timing  = Math.round(diff/2);
+    _timing  = Math.round(diff/10);
     // if timing is very short, replace with 0.2s
-    if(_timing < 300)
+    if(_timing < 100)
     {
-      _timing = 300;
+      _timing = 100;
     }
     else if(_timing>1500)
     {
@@ -213,5 +213,12 @@ function scrollSmoothDetector(_direct)
   {
     scrollSmooth(hashtagFake, null, 1000);
   }
+}
+
+
+function scrollTop()
+{
+  // $('html,body').scrollTop(0);
+  window.scrollTo(0, 0);
 }
 

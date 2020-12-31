@@ -249,7 +249,7 @@
     if(obj.autoScroll === true)
     {
       // force scroll to top of page
-      findPushStateScroll();
+      scrollTop();
     }
     else if(obj.autoScroll && $(obj.autoScroll).length === 1)
     {
@@ -258,15 +258,15 @@
     }
     else if($("body").attr('data-in') === 'site')
     {
-      findPushStateScroll();
+      scrollTop();
     }
     else if($("body").attr('data-in') === 'business')
     {
-      findPushStateScroll();
+      scrollTop();
     }
     else if($("body").attr('data-in') === 'support')
     {
-      findPushStateScroll();
+      scrollTop();
     }
     else if(obj.autoScroll === false)
     {
@@ -277,7 +277,7 @@
       // do nothing on other pages, we need to freeze scroll
       // no, this is not good
       // try to scroll on all contents
-      findPushStateScroll();
+      scrollTop();
     }
 
     // call pushState function if exist
