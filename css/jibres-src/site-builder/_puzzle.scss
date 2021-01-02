@@ -191,13 +191,24 @@
 [data-effect="zoom"] .everyItem[data-info="inside"] .info{
 	padding: 0 1.5rem 1.5rem;
 }
-[data-effect='zoom'] .everyItem:hover{
+
+
+[data-effect='zoom'] a:hover picture img{
 	transform:scale(0.95);
 }
-[data-effect='zoom'] .everyItem:focus{
+[data-effect='zoom'] a:focus picture img{
 	transform:scale(0.9);
 }
-[data-effect='zoom'] .everyItem:active{
+[data-effect='zoom'] a:active picture img{
+	transform:scale(1);
+}
+[data-effect="zoom"] a[data-info="inside"]:hover{
+	transform:scale(0.95);
+}
+[data-effect='zoom'] a[data-info="inside"]:focus{
+	transform:scale(0.9);
+}
+[data-effect='zoom'] a[data-info="inside"]:active{
 	transform:scale(1);
 }
 
@@ -254,21 +265,21 @@
 	opacity: 0.7;
 	z-index: 1;
 }
-[data-effect='whiteShadow'] a:hover picture{
+[data-effect='whiteShadow'] a:hover picture img{
 	transform: scale(1.05);
 	filter: brightness(110%);
 }
 [data-effect='whiteShadow'] a:hover picture::after{
 	opacity: 0.8;
 }
-[data-effect='whiteShadow'] a:focus picture{
+[data-effect='whiteShadow'] a:focus picture img{
 	transform: scale(1.1);
 	filter: brightness(120%);
 }
 [data-effect='whiteShadow'] a:focus picture::after{
 	opacity: 0.9;
 }
-[data-effect='whiteShadow'] a:active picture{
+[data-effect='whiteShadow'] a:active picture img{
 	transform: scale(1.15);
 }
 
