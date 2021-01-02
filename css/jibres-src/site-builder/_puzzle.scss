@@ -103,9 +103,9 @@
 [data-radius='circle'] video{ @include border-radius(50%);}
 
 
-
-.puzzle h2{
-	font-size: 1.8rem;
+// style heading inside puzzle
+.puzzle .info h2{
+	font-size: 1.6rem;
 	line-height: 3rem;
 	font-weight: 700;
 	max-height: 6rem;
@@ -116,8 +116,8 @@
 	white-space: initial;
 	margin: 0;
 }
-.puzzle h3{
-	font-size: 1.7rem;
+.puzzle .info h3{
+	font-size: 1.5rem;
 	line-height: 2.8rem;
 	font-weight: 700;
 	max-height: 5.6rem;
@@ -128,8 +128,8 @@
 	white-space: initial;
 	margin: 0;
 }
-.puzzle h4{
-	font-size: 1.6rem;
+.puzzle .info h4{
+	font-size: 1.4rem;
 	line-height: 2.5rem;
 	font-weight: 700;
 	max-height: 5rem;
@@ -152,6 +152,8 @@
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 }
+
+// info inside
 .everyItem[data-info="inside"]{
 	overflow: hidden;
 }
@@ -169,9 +171,6 @@
 .everyItem[data-info="inside"] .info a{
 	color: #fff!important;
 }
-
-
-
 .everyItem[data-info="inside"] h2{
 	font-size: 1.4rem;
 	line-height: 2.2rem;
@@ -185,6 +184,32 @@
 	line-height: 1.8rem;
 }
 
+// info beside
+.everyItem[data-info="beside"]{
+}
+.everyItem[data-info="beside"] picture{
+	width: 30%;
+}
+[dir='ltr'] .everyItem[data-info="beside"] picture{
+	float: left;
+	margin-right:1rem;
+}
+[dir='rtl'] .everyItem[data-info="beside"] picture{
+	float: right;
+	margin-left:1rem;
+}
+.everyItem[data-info="beside"] .info{
+	overflow: hidden;
+}
+.everyItem[data-info="beside"] .info h2{
+	max-height: 9rem;
+}
+.everyItem[data-info="beside"] .info h3{
+	max-height: 8.4rem;
+}
+.everyItem[data-info="beside"] .info h4{
+	max-height: 7.5rem;
+}
 
 
 // effect
