@@ -4,6 +4,7 @@ function dataCopy()
   $('[data-copy]').off('click.copy').on('click.copy', function()
   {
     var copyAttr = $(this).attr('data-copy');
+    var copyMsg  = $(this).attr('data-copy-msg');
     if(copyAttr)
     {
 
@@ -18,13 +19,23 @@ function dataCopy()
           ? document.getSelection().getRangeAt(0)     // Store selection if found
           : false;                                    // Mark as false to know no selection existed before
       el.select();                                    // Select the <textarea> content
-
+      if(!copyMsg)
+      {
+        if(urlLang() === 'fa')
+        {
+          copyMsg = 'کپی شد! گرفتیش';
+        }
+        else
+        {
+          copyMsg = 'Copied! You got this';
+        }
+      }
+      notif('info', copyMsg);
       try
       {
         // Copy - only works as a result of a user action (e.g. click events)
         // copy to clipboard
         document.execCommand('copy');
-        notif('info', myText + ' copied to clipboard!');
       }
       catch (err)
       {
