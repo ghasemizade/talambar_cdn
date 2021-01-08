@@ -82,6 +82,9 @@
   padding: 2rem;
   overflow: hidden;
 }
+[dir="ltr"] .postContent{line-height:2.5rem;font-size: 1.4rem;}
+[dir="rtl"] .postContent{line-height:3rem;font-size: 1.4rem;}
+
 .box .body.maxPad{
   padding: 3rem 3rem;
 }

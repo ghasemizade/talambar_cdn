@@ -19,12 +19,9 @@ body.dragging, body.dragging * {
   position: relative;
   list-style: none;
 }
-[data-sortable2] ol{
-  margin: 0 0 1rem 2.5rem;
-}
-[data-sortable2] li{
-  // position: relative;
-}
+// [data-sortable2] ol{
+//   margin: 0 0 1rem 2.5rem;
+// }
 [data-sortable2] li.placeholder {
   position: relative;
   margin: 0;
