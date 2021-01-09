@@ -8,7 +8,6 @@ function readPageAllScripts(_force, _page)
   readPageEditor();
   readDigikalaCrawler();
   readPageSortable();
-  readPageSortable2();
   readPageCropper();
   readPageFancyBox();
   readPageJsTree();
@@ -94,21 +93,8 @@ function readPageSortable()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "js/sortable/sortable-1.10.2.min.js?v=1";
+    myUrl = urlJibres('cdn') + "lib/sortable/sortable-1.10.2.min.js?v=2";
     fileLoader(myUrl, 'runSortable', true);
-  }
-}
-
-
-function readPageSortable2()
-{
-  var myEl = $('[data-sortable2]');
-
-  if(myEl && myEl.length > 0)
-  {
-    // load script
-    myUrl = urlJibres('cdn') + "lib/jquery-sortable/jquery-sortable-v0.9.13.min.js?v=1";
-    fileLoader(myUrl, 'runSortable2', true);
   }
 }
 

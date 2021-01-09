@@ -15,8 +15,6 @@ var myModuleFiles =
 	'src/libs/underscore/underscore-min-v1.11.0.js',
 
 	'src/libs/dataResponse/dataResponse.js',
-	// 'src/libs/sortable/Sortable.js',
-	// 'src/libs/sortable/SortableRunner.js',
 	'src/libs/lazyload/lazyload.min.js',
 	'src/libs/lazyload/lazyloadRunner.js',
 
