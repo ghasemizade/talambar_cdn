@@ -2,14 +2,20 @@
 [data-sortable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 [data-sortable] [data-handle]{cursor:move!important;transition: 0.3s;}
 [data-sortable] .isChoosen{opacity:0.8;}
-[data-sortable] .sortable-ghost{opacity: 0.7;}
+[data-sortable] .sortable-ghost{opacity: 0.5;}
 [data-sortable] > li.disabled{opacity:.5}
 [data-sortable] > li.highlight{background:#FEE25F}
 [data-sortable] > li.sortable-placeholder{border-color:#CCC}
 [data-sortable] > li .title{cursor:move;cursor: -webkit-grabbing;}
 
-// sortable for roundedBox
+// dragable item style
+.sortable-drag{list-style: none;border: 1px solid #2ea5ff;padding: 0 1rem;opacity: 0.3;}
+.sortable-drag li{list-style: none;}
+.sortable-drag i{opacity: 0;}
+.sortable-drag .value{opacity: 0;}
 
+
+// sortable for roundedBox
 [data-sortable] .roundedBox{
 	display: inline-block;
 	max-width: 15rem;

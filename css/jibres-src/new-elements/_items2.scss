@@ -1,36 +1,38 @@
 .items2{
-	background-color: #fff;
+	background-color: #fafafa;
 	border-radius:$myRadius;
 	// font-size:1.4rem;
 	font-size:1.2rem;
 	// overflow: hidden;
 	margin-bottom:1rem;
 	box-shadow: #ddd 0 0 0.5rem;
+	list-style-type:none;
+}
+.items2 li ol{
+	margin-left: 2rem;
+	margin-left: 5%;
+}
+.items2[data-layer-limit="3"] li ol li ol .addChild{
+	display: none;
+}
+.items2[data-layer-limit="3"] li ol li ol li ol{
+	display: none;
+}
+[data-sortable2] li .sortable-ghost .value{
+	opacity: 0;
 }
 .items2 li{
+	display: block;
 	position: relative;
-	overflow: hidden;
+	list-style:none;
+	// overflow: hidden;
 	min-height: $myItemHeight_Long;
-	height: $myItemHeight_Long;
 	line-height: $myItemLineHeight_Long;
+	// margin: 0.5rem 0;
 }
 // line between items2
-.items2 li + li::before{
-	content:"";
-	position:absolute;
-	height:1px;
-	top:0;
-	right:0;
-	left:4rem;
-	background-color:#eee;
-}
-[dir="rtl"] .items2 li + li::before{
-	right:4rem;
-	left:0;
-}
-body .ltr .items2 li + li::before{
-	right:0;
-	left:4rem;
+.items2 li + li{
+	// border-top: 1px solid #eee;
 }
 .items2 li .item{
 	-webkit-box-align:center;
@@ -44,13 +46,14 @@ body .ltr .items2 li + li::before{
 	flex-wrap:nowrap;
 
 	padding: 0.5rem;
+	background-color: #fff;
 	color: #333!important;
 	transition:0.2s ease-in-out;
+	border: 1px solid #eee;
+	border-top: none;
 }
-.items2 li a{
-	padding: 0.5rem;
-	color: #333!important;
-	transition:0.2s ease-in-out;
+.items2 li.isChoosen > .item{
+	border: 1px solid #2ea5ff;
 }
 .items2 li img{
 	overflow:hidden;
@@ -239,7 +242,6 @@ body .rtl .items2 li .go::after{
 }
 [data-pwa] .items2 li{
 	line-height: $myItemLineHeight_PWA;
-	height: $myItemHeight_PWA;
 	min-height: $myItemHeight_PWA;
 }
 [data-pwa] .items2 li img{
