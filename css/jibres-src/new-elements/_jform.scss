@@ -2,7 +2,10 @@
 [data-jform] label .txtB{
 	font-weight: 900!important;
 }
-[data-jform] label{
+[data-jform] label.q{
+	font-weight: 700;
+}
+[data-jform] label.q span{
 	font-weight: 700;
 }
 [data-pwa] [data-jform] label small{
