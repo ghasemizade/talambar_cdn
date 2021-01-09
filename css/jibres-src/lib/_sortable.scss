@@ -9,7 +9,7 @@
 [data-sortable] > li .title{cursor:move;cursor: -webkit-grabbing;}
 
 // dragable item style
-.sortable-drag{list-style: none;border: 1px solid #2ea5ff;padding: 0 1rem;opacity: 0.3;}
+.sortable-drag{list-style: none;padding: 0 1rem;opacity: 0.3;}
 .sortable-drag li{list-style: none;}
 .sortable-drag i{opacity: 0;}
 .sortable-drag .value{opacity: 0;}

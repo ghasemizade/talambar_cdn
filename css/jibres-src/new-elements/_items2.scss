@@ -15,7 +15,10 @@
 .items2[data-layer-limit="3"] li ol li ol .addChild{
 	display: none;
 }
-.items2[data-layer-limit="3"] li ol li ol li ol{
+.items2[data-layer-limit="3"] li ol li ol li ol .item{
+	border: 1px solid #f44336;
+}
+.items2[data-layer-limit="3"] li ol li ol li ol:empty{
 	display: none;
 }
 [data-sortable2] li .sortable-ghost .value{
