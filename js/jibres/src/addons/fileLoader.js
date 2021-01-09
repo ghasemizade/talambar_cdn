@@ -93,7 +93,7 @@ function readPageSortable()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "lib/sortable/sortable-1.10.2.min.js?v=2";
+    myUrl = urlJibres('cdn') + "lib/sortable/sortable-1.13.0.min.js?v=3";
     fileLoader(myUrl, 'runSortable', true);
   }
 }
