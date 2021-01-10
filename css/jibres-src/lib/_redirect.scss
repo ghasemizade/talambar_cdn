@@ -4,6 +4,9 @@ body.redirecting {
   overflow: hidden;
   min-height: 100%;
 }
+body.redirecting[data-model='pay']{
+  background-color: #e0f2f1;
+}
 
 body.redirecting .detail {
   font-family: IRANSans,"Segoe UI",Helvetica,sans-serif;;
