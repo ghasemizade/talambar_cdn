@@ -8,9 +8,11 @@
 	box-shadow: #ddd 0 0 0.5rem;
 	list-style-type:none;
 }
-.items2 li ol{
-	margin-left: 2rem;
+[dir='ltr'] .items2 li ol{
 	margin-left: 5%;
+}
+[dir='rtl'] .items2 li ol{
+	margin-right: 5%;
 }
 .items2[data-layer-limit="3"] li li li .addChild{
 	display: none;
