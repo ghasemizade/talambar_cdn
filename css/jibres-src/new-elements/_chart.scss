@@ -6,7 +6,8 @@
     max-height:60rem;
     user-select:none;
     position:relative;
-    transition:0.2s ease-in-out
+    transition:0.2s ease-in-out;
+    will-change: transform;
 }
 .chart::after{
     content: "";
@@ -42,25 +43,26 @@
 .chart.notActive:active{transform: none;}
 [dir="rtl"] .chart{text-align:right}
 
-.chart.x100{height:100px;}
-.chart.x150{height:150px;}
-.chart.x200{height:200px;}
-.chart.x210{height:210px;}
-.chart.x240{height:240px;}
-.chart.x250{height:250px;}
-.chart.x260{height:260px;}
-.chart.x270{height:270px;}
-.chart.x280{height:280px;}
-.chart.x290{height:290px;}
-.chart.x300{height:300px;}
-.chart.x310{height:310px;}
-.chart.x320{height:320px;}
-.chart.x350{height:350px;}
-.chart.x400{height:400px;}
-.chart.x450{height:450px;}
-.chart.x500{height:500px;}
-.chart.x600{height:600px;}
-.chart.x700{height:700px;}
+.chart.x100{height:10rem;}
+.chart.x150{height:15rem;}
+.chart.x200{height:20rem;}
+.chart.x210{height:21rem;}
+.chart.x240{height:24rem;}
+.chart.x250{height:25rem;}
+.chart.x260{height:26rem;}
+.chart.x270{height:27rem;}
+.chart.x280{height:28rem;}
+.chart.x290{height:29rem;}
+.chart.x300{height:30rem;}
+.chart.x310{height:31rem;}
+.chart.x320{height:32rem;}
+.chart.x330{height:33rem;}
+.chart.x350{height:35rem;}
+.chart.x400{height:40rem;}
+.chart.x450{height:45rem;}
+.chart.x500{height:50rem;}
+.chart.x600{height:60rem;}
+.chart.x700{height:70rem;}
 
 // highcharts
 // .highcharts-root {font-family:IRANSans,Tahoma,sans-serif!important;}
