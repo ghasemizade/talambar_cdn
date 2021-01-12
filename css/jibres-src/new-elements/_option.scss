@@ -9,6 +9,9 @@
 	background-color: #fff;
 	color: #333;
 }
+[data-pwa] [data-panel] [data-option]{
+	margin: 0.5rem auto 1rem;
+}
 [data-panel] [data-option] .data{
 	padding: 3rem;
 }
@@ -25,6 +28,9 @@
 	align-items: center;
 	justify-content: center;
 }
+[data-pwa] [data-panel] [data-option] .action{
+	padding: 1.5rem;
+}
 [data-panel] [data-option] .action.dropzone{
 	flex-direction: column;
 }
@@ -34,6 +40,9 @@
 [dir='rtl'] [data-panel] [data-option] .action{
 	border: none;
 	border-right:1px solid #d5d7d8;
+}
+[data-pwa] [data-panel] [data-option] .action{
+	border:none;
 }
 [data-panel] [data-option]:hover .action{
 	background-color: #f5f5f5;
