@@ -8,13 +8,15 @@
   transition: 0.2s ease-in-out;
   overflow: hidden;
   padding: 0.5rem;
+  will-change: transform;
 }
 // reaction
 a.circularChartBox:hover{
-	transform: scale(0.9);
+	transform: scale(0.95);
 	background-color: #f9f9f9;
 }
-.circularChartBox:focus{
+a.circularChartBox:focus{
+	transform: scale(0.9);
 	background-color: #f6f6f6;
 }
 .circularChartBox:focus h3{
@@ -22,7 +24,7 @@ a.circularChartBox:hover{
 }
 .circularChartBox:active{
 	background-color: #e6e5eb;
-	transform: scale(0.8);
+	transform: scale(0.9);
 }
 .circularChartBox h3{
 	display: block;

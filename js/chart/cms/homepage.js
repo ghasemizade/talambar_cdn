@@ -24,7 +24,7 @@ function highChartcmshome()
     yAxis: {
       min: 0,
       title: {
-        text: $("#charttitleunit").html()
+        text: false
       }
     },
     tooltip: {
