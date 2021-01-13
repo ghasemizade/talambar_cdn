@@ -37,8 +37,44 @@
 	line-height: 4rem;
 	margin: 1rem auto 1rem;
 }
-#jHeader100 nav a{
+#jHeader100 nav > ul {
+	position: relative;
+	list-style: none;
+	line-height: 0;
+}
+#jHeader100 nav > ul > li{
+	position: relative;
 	display: inline-block;
+}
+#jHeader100 nav > ul > li > a{
+	line-height: 4rem;
+}
+#jHeader100 nav > ul > li > ul{
+	position: absolute;
+	z-index: 1;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	background-color: #f9f9f9;
+	min-width: 15rem;
+	display: none;
+}
+#jHeader100 nav > ul > li:hover > ul{
+	display: block;
+}
+#jHeader100 nav > ul > li a:focus + ul{
+	display: block;
+}
+#jHeader100 nav > ul > li > ul a:hover{
+	background-color: #f1f1f1;
+}
+#jHeader100 nav > ul > li > ul a:focus{
+	background-color: #eee;
+}
+#jHeader100 nav > ul > li > ul a:active{
+	background-color: #ddd;
+}
+
+#jHeader100 nav a{
+	display: block;
 	color: #666;
 	padding: 0.5rem 1rem;
 }

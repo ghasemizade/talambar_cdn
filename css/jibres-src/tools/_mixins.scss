@@ -398,6 +398,24 @@
   .font#{$size}-40{font-size: 4.0rem!important;}
   .font#{$size}-45{font-size: 4.5rem!important;}
   .font#{$size}-50{font-size: 5.0rem!important;}
+
+  // auto size for rtl and ltr
+  .font#{$size}-14{font-size: 1.2rem!important;}
+  .font#{$size}-15{font-size: 1.3rem!important;}
+  .font#{$size}-16{font-size: 1.4rem!important;}
+  .font#{$size}-17{font-size: 1.5rem!important;}
+  .font#{$size}-18{font-size: 1.6rem!important;}
+  .font#{$size}-19{font-size: 1.7rem!important;}
+  .font#{$size}-20{font-size: 1.8rem!important;}
+
+  [dir='rtl'] .font#{$size}-14a{font-size: 1.2rem!important;}
+  [dir='rtl'] .font#{$size}-15a{font-size: 1.3rem!important;}
+  [dir='rtl'] .font#{$size}-16a{font-size: 1.4rem!important;}
+  [dir='rtl'] .font#{$size}-17a{font-size: 1.5rem!important;}
+  [dir='rtl'] .font#{$size}-18a{font-size: 1.6rem!important;}
+  [dir='rtl'] .font#{$size}-19a{font-size: 1.7rem!important;}
+  [dir='rtl'] .font#{$size}-20a{font-size: 1.8rem!important;}
+
 }
 
 
