@@ -21,7 +21,7 @@
   border-radius:0.25rem;
   min-height: 1em;
   line-height:1.5;
-  opacity: 0.7;
+  opacity: 0.8;
   background-color:#f7f7f7;
   color: #333;
   overflow: hidden;
@@ -77,11 +77,11 @@
 }
 .msg:focus{
   border-color: rgba(0,0,0,0.2);
-  opacity: 0.8;
+  opacity: 0.85;
 }
 .msg:active, .msg.active{
   border-color: rgba(0,0,0,0.2);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .msg.url{direction:ltr;font-family:monospace, sans-serif;}

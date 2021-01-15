@@ -14,6 +14,9 @@
   margin-right: auto;
   margin-left: auto;
 }
+[data-panel] [class^="avand-"]{
+  width: 100%;
+}
 [data-pwa] [class^="avand-"]{
   padding-right: 0.5rem;
   padding-left: 0.5rem;
