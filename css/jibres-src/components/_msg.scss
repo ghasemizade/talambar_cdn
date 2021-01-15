@@ -36,6 +36,9 @@
 .msg:empty{
   display:none
 }
+.msg p:last-child{
+  margin-bottom: 0;
+}
 .msg.minimal{
   padding: 5px 10px;
 }
