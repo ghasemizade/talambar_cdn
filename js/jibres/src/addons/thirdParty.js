@@ -62,9 +62,13 @@ function loadScriptImber()
   {
     // load script
     myUrl = "https://widget.imber.live/imber?id=" + myImber;
-    if(localStorage && localStorage.getItem("imber_token"))
+    if(localStorage && localStorage.getItem("imber_token")) + '?jibres=' + urlEnv();
     {
-      myUrl += '?token=' + localStorage.getItem("imber_token");
+      myUrl += '&token=' + localStorage.getItem("imber_token");
+    }
+    if(jibresUID())
+    {
+      myUrl += '&imber_sid=' + jibresUID();
     }
     // set default lang
     // window.IMBER_LANG = 'fa';

@@ -16,6 +16,17 @@ function urlJibres(_type)
 }
 
 
+function jibresUID()
+{
+  var myUID = $('meta[name="user-Jibres"]').attr('content');
+  if(myUID)
+  {
+    return myUID;
+  }
+  return null;
+}
+
+
 function urlStore()
 {
   var myStore = urlStoreCode();

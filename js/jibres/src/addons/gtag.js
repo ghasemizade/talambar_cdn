@@ -5,7 +5,6 @@
 function runGtag()
 {
 	myUA  = $('meta[name="gtag"]').attr('content');
-	myUID = $('meta[name="user-Jibres"]').attr('content');
 	if(myUA)
 	{
 		if($('meta[name="gtag"]').prop('install') === undefined)
@@ -20,9 +19,9 @@ function runGtag()
 		var pathname = window.location.href.substr(origin.length);
 
 		// gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=None;Secure'});
-		if(myUID)
+		if(jibresUID())
 		{
-			gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure', 'user_id': myUID});
+			gtag('config', myUA, {'page_path': pathname, cookie_flags: 'SameSite=Strict;Secure', 'user_id': jibresUID()});
 		}
 		else
 		{
