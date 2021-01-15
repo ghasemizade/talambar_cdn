@@ -9,8 +9,8 @@
 
   [dir='ltr'] [data-panel] #pageHeader .desktop{margin-left: 300px;}
   [dir='rtl'] [data-panel] #pageHeader .desktop{margin-right: 300px;}
-  [dir='ltr'] [data-panel] #pageContent{margin-left: 300px;}
-  [dir='rtl'] [data-panel] #pageContent{margin-right: 300px;}
+  [data-desktop][dir='ltr'] [data-panel] #pageContent{margin-left: 300px;}
+  [data-desktop][dir='rtl'] [data-panel] #pageContent{margin-right: 300px;}
 
   [dir="ltr"] [data-panel] #main:after{left:300px;right:initial;}
   [dir="rtl"] [data-panel] #main:after{left:initial;right:300px;}
