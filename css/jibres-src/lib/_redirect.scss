@@ -5,9 +5,29 @@ body.redirecting {
   min-height: 100%;
 }
 body.redirecting[data-model='pay']{
-  background-color: #e0f2f1;
+  background-color: #e0f2f1!important;
 }
-
+body.redirecting[data-model='jibres']{
+  background-color: #c8095a!important;
+}
+body.redirecting[data-model='jibres'] h1{
+  color: #fff;
+}
+body.redirecting[data-model='jibres'] h2{
+  color: #fff;
+  display: none;
+}
+body.redirecting[data-model='billboard']{
+  background-color: #c8095a!important;
+}
+body.redirecting[data-model='billboard'] h1{
+  color: #fff;
+  display: none;
+}
+body.redirecting[data-model='billboard'] h2{
+  color: #fff;
+  display: none;
+}
 body.redirecting .detail {
   font-family: IRANSans,"Segoe UI",Helvetica,sans-serif;;
   font-weight: 600;
@@ -24,7 +44,7 @@ body.redirecting .detail h1{
   direction: rtl;
 }
 body.redirecting .detail h2{
-  font-size: 0.9em;
+  font-size: 1.4rem;
   font-weight: 100;
 }
 body.redirecting .detail h2 a{
