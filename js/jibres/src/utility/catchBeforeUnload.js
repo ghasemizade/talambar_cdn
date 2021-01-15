@@ -2,6 +2,7 @@
 
 function catchBeforeUnload()
 {
+  return;
   window.addEventListener("beforeunload", function (e)
   {
     // send close with ajax
