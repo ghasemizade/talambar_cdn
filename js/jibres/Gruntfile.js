@@ -87,9 +87,11 @@ var myModuleFiles =
 
 	// addons
 	'src/addons/fileLoader.js',
+	'src/addons/thirdParty.js',
 	'src/addons/gtag.js',
 	'src/addons/tawk.js',
 	'src/addons/raychat.js',
+	'src/addons/imber.js',
 
 
 	'src/main.js',

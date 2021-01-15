@@ -14,9 +14,8 @@ function readPageAllScripts(_force, _page)
   readPageSlick();
   readPageSelect2();
   readPageUploader();
-  readPageGtag();
-  readPageTawk();
-  readPageRaychat();
+
+  loadThirdPartyScripts();
 }
 
 
@@ -178,51 +177,6 @@ function readPageUploader()
     // load script
     myUrl = urlJibres('cdn') + "js/uploader/uploader-1-min.js?v=1";
     fileLoader(myUrl, 'runUploader', true);
-  }
-}
-
-
-function readPageGtag()
-{
-  var myEl = $('meta[name="gtag"]');
-  var myGtag = myEl.attr('content');
-  if(myEl && myEl.length > 0 && myGtag)
-  {
-    // load script
-    myUrl = "https://www.googletagmanager.com/gtag/js?id=" + myGtag;
-    fileLoader(myUrl, 'runGtag', true, undefined, 'defer');
-  }
-}
-
-
-function readPageTawk()
-{
-  var myEl = $('meta[name="tawk"]');
-  var myTawk = myEl.attr('content');
-  if(myEl && myEl.length > 0 && myTawk)
-  {
-    // load script
-    myUrl = 'https://embed.tawk.to/' + myTawk + '/default';
-
-    fileLoader(myUrl, 'runTawk', true, undefined, 'async utf8 crossorigin');
-  }
-}
-
-
-function readPageRaychat()
-{
-  var myEl = $('meta[name="raychat"]');
-  var myRaychat = myEl.attr('content');
-  if(myEl && myEl.length > 0 && myRaychat)
-  {
-    // load script
-    myUrl = "https://app.raychat.io/scripts/js/" + myRaychat + "?href="+window.location.href
-    if(localStorage && localStorage.getItem("rayToken"))
-    {
-      myUrl += localStorage.getItem("rayToken");
-    }
-
-    fileLoader(myUrl, 'runRaychat', true, undefined, 'async utf8 crossorigin');
   }
 }
 
