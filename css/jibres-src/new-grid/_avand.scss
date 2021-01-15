@@ -43,7 +43,7 @@
   padding: 0;
 }
 // avand zero with img effect
-.avand.zero img{transition: 0.2s ease-in-out;}
+.avand.zero img{transition: 0.2s ease-in-out;will-change: transform;}
 .avand.zero img:hover{transform: scale(1.05);}
 [class^="avand-"].zero img{transition: 0.2s ease-in-out;}
 [class^="avand-"].zero img:hover{transform: scale(1.05);}
