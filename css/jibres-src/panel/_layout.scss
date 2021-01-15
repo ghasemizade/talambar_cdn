@@ -275,6 +275,17 @@ img.profileAvatar{
 .ck.ck-link-form{
   direction: ltr;
 }
+.ck.ck-link-form input{
+  direction: ltr;
+  text-align: left!important;
+}
+.ck-media-form{
+  direction: ltr;
+}
+.ck-media-form input{
+  direction: ltr;
+  text-align: left!important;
+}
 // rtl
 [dir="rtl"] .ck.ck-content.ck-editor__editable{
   direction: rtl;
