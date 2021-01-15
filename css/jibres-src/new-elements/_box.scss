@@ -18,6 +18,14 @@
 .box.hasCover{
   margin-top: 10rem;
 }
+.avand.impact .box{
+  border:none;
+  margin-bottom: 0;
+}
+[class^="avand-"].impact .box{
+  border:none;
+  margin-bottom: 0;
+}
 .box.impact{
   box-shadow: 0 10px 25px #ddd;
   border: 1px solid #ddd;
