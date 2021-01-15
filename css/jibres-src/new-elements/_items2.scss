@@ -35,13 +35,29 @@
 .items2[data-layer-limit="4"] li li li li li .value{
 	display: none;
 }
-.items2[data-layer-limit="4"] li li li li li.item{
+.items2[data-layer-limit="4"] li li li li li .item{
 	border: 1px solid #f44336;
 }
 .items2[data-layer-limit="4"] li li li li li + li .item {
 	border-top: none;
 }
 .items2[data-layer-limit="4"] li li li li ol:empty{
+	display: none;
+}
+
+.items2[data-layer-limit="5"] li li li li li .addChild{
+	display: none;
+}
+.items2[data-layer-limit="5"] li li li li li li .value{
+	display: none;
+}
+.items2[data-layer-limit="5"] li li li li li li .item{
+	border: 1px solid #f44336;
+}
+.items2[data-layer-limit="5"] li li li li li li + li .item {
+	border-top: none;
+}
+.items2[data-layer-limit="5"] li li li li li ol:empty{
 	display: none;
 }
 [data-sortable2] li .sortable-ghost .value{
