@@ -81,6 +81,19 @@
 	font-size: 20px;
 	color: #20b040;
 }
+// info
+.checklist[data-info]{
+	background-color: #d9edf7;
+}
+.checklist[data-info]::before{
+	background-color: #d9edf7;
+}
+.checklist[data-info]::after{
+	content: "\e03a";
+	font-family: "siftal" !important;
+	font-size: 20px;
+	color: #3a87ad;
+}
 // warn
 .checklist[data-warn]{
 	background-color: #ffecb3;
