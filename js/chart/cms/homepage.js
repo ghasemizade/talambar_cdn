@@ -50,11 +50,17 @@ function highChartcmshome()
       }
     },
     series: [
-    {
-          name: $("#chardatatitle").html(),
+        {
+          name: $("#chardatatitlepublish").html(),
           color: 'rgba(139,195,75,1)',
-          data: $.parseJSON($("#chartdata").html())
+          data: $.parseJSON($("#chartdatapublish").html())
+        },
+        {
+          name: $("#chardatatitle").html(),
+          color: 'rgba(126,86,134,.9)',
+          data: $.parseJSON($("#chartdatadraft").html())
         }
+
     ]
   });
 }
