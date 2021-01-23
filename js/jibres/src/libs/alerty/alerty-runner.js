@@ -211,6 +211,18 @@ function notifAlerty(_type, _msg, _title, _timeout, _opt)
   // get extra options of notify
   if(_opt)
   {
+    // if prority is false check is visible something don't show new one
+    if(_opt.priority === false)
+    {
+      if(alerty.isVisible())
+      {
+        // don't show alerty on another
+        return false;
+      }
+      // delete extra value
+      delete _opt.priority;
+    }
+
     // set all setting from old one
     alertyOpt = _opt;
 
@@ -261,9 +273,6 @@ function notifAlerty(_type, _msg, _title, _timeout, _opt)
     alertyOpt.timer = false;
   }
 
-
   say(alertyOpt);
 }
-
-
 
