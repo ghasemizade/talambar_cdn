@@ -47,8 +47,8 @@ function notif(_type, _msg, _title, _timeout, _opt)
   notifOpt.transitionOut = 'fadeOutRight';
 
   // override on pwa
-  notifOpt.transitionInMobile = 'bounceInDown';
-  notifOpt.transitionOutMobile = 'fadeOutLeft';
+  // notifOpt.transitionInMobile = 'bounceInDown';
+  // notifOpt.transitionOutMobile = 'fadeOutLeft';
 
   // rtl design
   if(urlDirRtl())
@@ -74,14 +74,26 @@ function notif(_type, _msg, _title, _timeout, _opt)
     }
 
     // override on pwa
-    // notifOpt.transitionInMobile = 'bounceInDown';
-    notifOpt.transitionOutMobile = 'fadeOutRight';
+    // notifOpt.transitionInMobile = 'fadeInUp';
+    // notifOpt.transitionOutMobile = 'fadeOutDown';
   }
 
   if(isPagePWA())
   {
-  notifOpt.position = 'topCenter';
-
+    notifOpt.position = 'bottomCenter';
+    // notifOpt.transitionIn = 'fadeInUp';
+    // notifOpt.transitionInMobile = = 'fadeInUp';
+    // notifOpt.transitionOutMobile = 'fadeOutRight';
+    notifOpt.progressBar = false;
+    notifOpt.timeout = 1000;
+    if(_type == 'error')
+    {
+      notifOpt.timeout = 4000;
+    }
+    else if(_type == 'warning')
+    {
+      notifOpt.timeout = 3000;
+    }
   }
 
 
