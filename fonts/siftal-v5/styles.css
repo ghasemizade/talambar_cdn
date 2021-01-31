@@ -227,9 +227,6 @@
 .sf-gauge:before {
   content: "\e02e";
 }
-.sf-flight:before {
-  content: "\e02f";
-}
 .sf-enter:before {
   content: "\e033";
 }
@@ -907,4 +904,46 @@
 }
 .sf-cash-register:before {
   content: "\4d";
+}
+.sf-certificate:before {
+  content: "\e007";
+}
+.sf-paw:before {
+  content: "\e008";
+}
+.sf-quote-right:before {
+  content: "\e009";
+}
+.sf-spinner:before {
+  content: "\e00a";
+}
+.sf-suitcase:before {
+  content: "\e00d";
+}
+.sf-ticket:before {
+  content: "\e013";
+}
+.sf-windows-1:before {
+  content: "\e006";
+}
+.sf-android-1:before {
+  content: "\e015";
+}
+.sf-align-right:before {
+  content: "\e016";
+}
+.sf-file-archive-o:before {
+  content: "\e017";
+}
+.sf-file-code-o:before {
+  content: "\e018";
+}
+.sf-news:before {
+  content: "\e01b";
+}
+.sf-pound:before {
+  content: "\e01d";
+}
+.sf-plane-airport:before {
+  content: "\e01f";
 }
