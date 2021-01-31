@@ -52,15 +52,16 @@ function highChartcmshome()
     series: [
         {
           name: $("#chardatatitlepublish").html(),
-          color: 'rgba(139,195,75,1)',
-          data: $.parseJSON($("#chartdatapublish").html())
+          color: 'rgba(100,180,220,1)',
+          data: $.parseJSON($("#chartdatapublish").html()),
+          type: 'column',
         },
         {
           name: $("#chardatatitle").html(),
-          color: 'rgba(126,86,134,.9)',
-          data: $.parseJSON($("#chartdatadraft").html())
-        }
-
+          color: 'rgba(164,100,220,.5)',
+          data: $.parseJSON($("#chartdatadraft").html()),
+          type: 'line',
+        },
     ]
   });
 }
