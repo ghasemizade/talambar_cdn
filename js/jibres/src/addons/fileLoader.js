@@ -42,13 +42,18 @@ function readPageScript(_force, _url)
 
 function readPageChart()
 {
-  var myChartURL = $('.chart[data-abc]').attr('data-abc');
+  var myChartURL    = $('.chart[data-abc]').attr('data-abc');
+  var myChartURLVer = $('.chart[data-abc]').attr('data-abc-v');
 
   if(myChartURL && myChartURL.length > 0)
   {
     var fnName       = myChartURL;
     var highChartUrl = urlJibres('cdn') + 'lib/highcharts/highcharts-8.2.0.js?v=3';
-    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js?v=3';
+    myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
+    if(myChartURLVer)
+    {
+      myChartURL += '?v=' + myChartURLVer;
+    }
 
     fnName = fnName.replace('/', '_');
     if(fnName)
