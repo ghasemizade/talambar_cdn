@@ -72,7 +72,7 @@ function readPageEditor()
 
   if(myEl && myEl.length > 0)
   {
-    myUrl = urlJibres('cdn') + "js/ckeditor5/ckeditor.js?v=1";
+    myUrl = urlJibres('cdn') + "js/ckeditor5/ckeditor.js?v=2";
     fileLoader(myUrl, 'runEditor', true);
   }
 }
