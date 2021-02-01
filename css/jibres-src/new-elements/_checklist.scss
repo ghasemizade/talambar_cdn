@@ -6,11 +6,17 @@
 	line-height: 30px;
 	background-color: #eee;
 	border-radius: 0.5rem;
-	padding:0 2rem 0 60px;
+	padding:0 2rem 0 6rem;
 	min-width: 280px;
 	border-radius: 2rem;
 	transition: 0.3s;
 	opacity: 0.9;
+}
+[data-pwa] .checklist{
+	font-size: 1.2rem;
+	margin-right: 0;
+	margin-left: 0;
+	padding:0 0.5rem 0 4.5rem;
 }
 .checklist::before{
 	content: "";
@@ -58,7 +64,10 @@
 }
 // rtl
 [dir="rtl"] .checklist{
-	padding:0 60px 0 2rem;
+	padding:0 6rem 0 2rem;
+}
+[dir="rtl"][data-pwa] .checklist{
+	padding:0 4.5rem 0 0.5rem;
 }
 [dir="rtl"] .checklist::before{
 	left: initial;
