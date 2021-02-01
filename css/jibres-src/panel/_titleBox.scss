@@ -15,7 +15,8 @@
 .titleBox:hover{opacity:1;}
 .titleBox h2{font-weight:400;font-size:1.6rem;line-height:36px;height:36px;margin:0;overflow:hidden;text-overflow:ellipsis;}
 [data-pwa] .titleBox h2{display: none;}
-.titleBox .actions .btn{padding-left:0.5em;padding-right:0.5em}
+.titleBox .actions .btn{font-size: 1.2rem;padding-left:0.5rem;padding-right:0.5rem}
+.titleBox .actions .btn i{font-size: 1.5rem;}
 
 .btn.master{font-size:1em;transition: all 150ms ease-out;background-color:#2080d0;color:#fff;background:linear-gradient(to left, #2080d0, #6b7ae0);}
 .btn.master.back{background:#eceff1;color:#333;padding-left:0.5em;padding-right:0.5em;min-width:90px;}

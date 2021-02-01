@@ -60,7 +60,7 @@
 #pageHeader .pwa .square.menu::before{content: "\43";}
 #pageHeader .pwa .square.add::before{content: "\e03e";color: #6b7ae0;}
 #pageHeader .pwa .square.plus::before{content: "\e03e";color: #6b7ae0;}
-#pageHeader .pwa .square.setting::before{content: "\e19f";}
+#pageHeader .pwa .square.setting::before{content: "\e075";}
 #pageHeader .pwa .square.duplicate::before{content: "\75";}
 #pageHeader .pwa .square.print::before{content: "\e047";}
 #pageHeader .pwa .square.save::before{content: "\e084";}
@@ -122,10 +122,11 @@
 }
 #pageHeader .pwa button.save{
 	color: #0e8654;
-
+	min-width: 6rem;
 }
 #pageHeader .pwa button.insert{
 	color: #d02092;
+	min-width: 6rem;
 }
 
 // extra
