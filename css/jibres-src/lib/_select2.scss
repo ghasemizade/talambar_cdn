@@ -398,7 +398,8 @@ select.select22-country img{
 
 .select22-container--default .select22-results > .select22-results__options{
   max-height:200px;
-  overflow-y:auto
+  overflow-y:auto;
+  line-height: initial;
 }
 
 .select22-container--default .select22-results__option[role=group]{

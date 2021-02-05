@@ -65,3 +65,22 @@
 .filterBox .filterList .btn{
   margin: 0 0.5rem 1rem;
 }
+.sortBox .select22-results__options{
+  font-size: 1rem;
+}
+
+.searchBox .select22{
+  min-width: 14rem;
+}
+[data-pwa] .searchBox .select22{
+  min-width: 5.5rem;
+}
+.searchBox [data-kerkere=".filterBox"]{
+  min-width: 8rem;
+}
+[data-pwa] .searchBox [data-kerkere=".filterBox"]{
+  min-width: 6.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
