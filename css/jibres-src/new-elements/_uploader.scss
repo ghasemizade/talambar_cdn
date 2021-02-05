@@ -45,6 +45,19 @@ body.dragging{
   vertical-align: middle;
   transition: 0.3s;
 }
+[data-uploader][data-type="gallery"] input[type='file'] + label::before{
+  content: "\e260";
+}
+[data-uploader][data-type="video"] input[type='file'] + label::before{
+  content: "\21";
+}
+[data-uploader][data-type="audio"] input[type='file'] + label::before{
+  content: "\e108";
+}
+[data-uploader][data-type="featureImage"] input[type='file'] + label::before{
+  content: "\e10a";
+}
+
 [data-uploader]::after{
   content: attr(data-file-size);
   display: block;
@@ -72,6 +85,9 @@ body.dragging{
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: 0.3s;
+}
+[data-option] [data-uploader] input[type='file']+label{
+  padding: 0;
 }
 [data-pwa] [data-uploader] input[type='file'] + label{
   white-space: initial;
