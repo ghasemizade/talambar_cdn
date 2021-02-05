@@ -162,17 +162,32 @@ body .ltr .items li + li::before{
 	height: $myItemLineHeight;
 	min-height: $myItemLineHeight;
 }
+.items li time.value{
+	min-width: 13rem;
+	direction: ltr;
+	text-align: left;
+}
+[dir=rtl] .items li time.value{
+	min-width: 11.5rem;
+}
+[data-pwa] .items li time.value{
+	font-size: 1.1rem;
+	min-width: 9rem;
+}
+[data-pwa][dir=rtl] .items li time.value{
+	min-width: 9rem;
+}
 .items li .value.datetime{
 	min-width: 13rem;
 	direction: ltr;
 	text-align: left;
 }
+[dir=rtl] .items li .value.datetime{
+	min-width: 11.5rem;
+}
 .items li .value.humandate{
 	min-width: 13rem;
 	text-align: left;
-}
-[dir=rtl] .items li .value.datetime{
-	min-width: 11.5rem;
 }
 .items li .value.txtB{
 	color:#000;
