@@ -234,43 +234,21 @@ body.dragging{
 }
 
 [data-uploader] .previewList .fileItem{
-  width: 20rem;
-  min-height: 10rem;
-  max-height: 15rem;
-  margin:0 0.5rem 1rem;
-  border-radius: 1rem;
-  overflow: hidden;
   position: relative;
-  display: inline-block;
-}
-[data-uploader] .previewList .fileItem[data-type='video']{
-  width: 46%;
-  margin: 0 1% 1rem;
-  max-height: initial;
-}
-[data-pwa] [data-uploader] .previewList .fileItem[data-type='video']{
-  width: 98%;
-}
-[data-uploader] .previewList .fileItem[data-type='audio']{
-  display: block;
-  width: 98%;
-  margin: 0 1% 0;
-  padding-bottom: 1rem;
-  max-height: initial;
-  min-height: initial;
-}
-[data-pwa] [data-uploader] .previewList .fileItem{
-  max-width: 98%;
-  margin-right: auto;
-  margin-left: auto;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 [data-uploader] .previewList .fileItem img{
   display: block;
+  min-height: 10rem;
+  max-height: 20rem;
+  border-radius: 1rem;
 }
 [data-uploader] .previewList .fileItem video{
   display: block;
   max-height: 30rem;
   width: 100%;
+  border-radius: 1rem;
 }
 [data-uploader] .previewList .fileItem audio{
   display: block;
