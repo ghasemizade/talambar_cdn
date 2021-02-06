@@ -185,6 +185,11 @@ body .ltr .items li + li::before{
 [dir=rtl] .items li .value.datetime{
 	min-width: 11.5rem;
 }
+.items li .value.fileSize{
+	min-width: 6rem;
+	direction: ltr;
+	text-align: right;
+}
 .items li .value.humandate{
 	min-width: 13rem;
 	text-align: left;
