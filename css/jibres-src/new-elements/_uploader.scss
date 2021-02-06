@@ -57,7 +57,9 @@ body.dragging{
 [data-uploader][data-type="featureImage"] input[type='file'] + label::before{
   content: "\e10a";
 }
-
+[data-uploader][data-type="cover"] input[type='file'] + label::before{
+  content: "\76";
+}
 [data-uploader]::after{
   content: attr(data-file-size);
   display: block;

@@ -150,14 +150,20 @@ function checkInputResponse(_this, _firstTime)
 		}
 
 		// set effect name and default is fade
+
 		if(effect == 'slide')
 		{
 			effect = {'name':'slide', 'toggle':'slideToggle', 'open':'slideDown', 'close':'slideUp'}
 		}
-		else
+		else if(effect == 'fade')
 		{
 			effect = {'name':'fade', 'toggle':'fadeToggle', 'open':'fadeIn', 'close':'fadeOut'}
 		}
+		else
+		{
+			effect = {'name':'slide', 'toggle':'slideToggle', 'open':'slideDown', 'close':'slideUp'}
+		}
+
 		if(!timing)
 		{
 			timing = 'fast';
