@@ -19,7 +19,7 @@
 [data-sortable] .roundedBox{
 	display: inline-block;
 	max-width: 15rem;
-	height: 10rem;
+	max-height: 20rem;
 	margin: 0.5rem;
 }
 [data-sortable][data-ratio='16x9'] .roundedBox{
