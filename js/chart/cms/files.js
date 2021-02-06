@@ -15,6 +15,16 @@ function highChartcmsfiles()
     chart: {
       type: 'pie'
     },
+   colors: [
+     '#dcd267',
+     '#6771dc',
+     '#dc67ce',
+     '#8bc34a',
+     '#64E572',
+     '#FF9655',
+     '#FFF263',
+     '#6AF9C4'
+   ],
     title: {
       text: $("#charttitle").html(),
     },
@@ -38,6 +48,16 @@ function highChartcmsfilessize()
     chart: {
       type: 'pie'
     },
+   colors: [
+     '#dcd267',
+     '#6771dc',
+     '#dc67ce',
+     '#8bc34a',
+     '#64E572',
+     '#FF9655',
+     '#FFF263',
+     '#6AF9C4'
+   ],
     title: {
       text: $("#charttitlesize").html(),
     },
