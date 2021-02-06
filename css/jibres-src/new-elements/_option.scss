@@ -32,6 +32,12 @@
 	align-items: center;
 	justify-content: center;
 }
+[data-panel] [data-option] .action .btn{
+	min-width: 18rem;
+}
+[data-panel] [data-option] .action .radio1{
+	min-width: 11rem;
+}
 [data-panel] [data-option] time{
 	display: block;
 	color: #777;
@@ -76,8 +82,8 @@
 [data-panel] [data-option] p+p{
 	margin-top: 1rem;
 }
-[data-panel] [data-option] .radio1{
-	margin: 0.5rem 1rem;
+[data-panel] [data-option] .radio1 + .radio1{
+	margin-top: 0.5rem;
 }
 [data-panel] [data-option] .body{
 	font-size: 1.6rem;
