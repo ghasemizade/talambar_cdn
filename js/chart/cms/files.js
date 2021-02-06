@@ -1,12 +1,8 @@
 function chart_cms_files()
 {
   if($("#chartdivcmsfiles").length == 1){highChartcmsfiles();}
+  if($("#chartdivcmsfilessize").length == 1){highChartcmsfilessize();}
 }
-
-
-
-
-
 
 
 
@@ -17,50 +13,41 @@ function highChartcmsfiles()
 
   Highcharts.chart('chartdivcmsfiles', {
     chart: {
-      type: 'column'
+      type: 'pie'
     },
     title: {
       text: $("#charttitle").html(),
     },
-    xAxis: {
-      categories: $.parseJSON($("#chartcategory").html())
+    tooltip: {
+      shared: true,
     },
-    yAxis: {
-      min: 0,
-      title: {
-        text: false
-      }
+    series: [{
+        name: $('#charttitleunit').html(),
+        colorByPoint: true,
+        data: $.parseJSON($("#chartdata").html())
+    }]
+  });
+}
+
+
+
+function highChartcmsfilessize()
+{
+
+  Highcharts.chart('chartdivcmsfilessize', {
+    chart: {
+      type: 'pie'
+    },
+    title: {
+      text: $("#charttitlesize").html(),
     },
     tooltip: {
       shared: true,
     },
-    legend: {
-      align: 'right',
-      x: -30,
-      verticalAlign: 'top',
-      y: 25,
-      floating: true,
-      backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || 'white',
-      borderColor: '#CCC',
-      borderWidth: 1,
-      shadow: false
-    },
-    plotOptions: {
-      column: {
-        stacking: 'normal',
-        // dataLabels: {
-        //   enabled: true
-        // }
-      }
-    },
-    series: [
-        {
-          name: $("#chartfiletitle").html(),
-          color: 'rgba(100,180,220,1)',
-          data: $.parseJSON($("#chartdata").html()),
-          type: 'column'
-        }
-
-    ]
+    series: [{
+        name: $('#charttitleunitsize').html(),
+        colorByPoint: true,
+        data: $.parseJSON($("#chartdatasize").html())
+    }]
   });
 }
