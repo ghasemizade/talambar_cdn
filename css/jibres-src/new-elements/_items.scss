@@ -53,9 +53,11 @@ body .ltr .items li + li::before{
 	transition:0.2s ease-in-out;
 }
 .items li a{
-	padding: 0.5rem;
 	color: #333!important;
 	transition:0.2s ease-in-out;
+}
+.items li > a{
+	padding: 0.5rem;
 }
 .items li img{
 	overflow:hidden;
@@ -77,7 +79,7 @@ body .ltr .items li + li::before{
 	max-height: $myItemLineHeight;
 	border-radius: 0.5rem;
 }
-.items li .item i{
+.items li .item > i{
 	height:$myItemLineHeight;
 	-webkit-box-flex:0;
 	-webkit-flex:0 0 auto;
@@ -86,7 +88,7 @@ body .ltr .items li + li::before{
 	flex:0 0 auto;
 	width:auto;
 }
-.items li .item i::before{
+.items li .item > i::before{
 	min-width:$myItemLineHeight;
 	max-width:$myItemLineHeight;
 	line-height: $myItemLineHeight;
@@ -99,7 +101,7 @@ body .ltr .items li + li::before{
 	opacity: 0.8;
 	font-size: 1.8rem;
 }
-.item li:hover .item i::before{
+.item li:hover .item > i::before{
 	opacity: 1;
 }
 .items li .key{
@@ -129,7 +131,7 @@ body .ltr .items li + li::before{
 	min-height: initial!important;
 	line-height: 2rem!important;
 }
-.items li .item i + .key{
+.items li .item > i + .key{
 	padding:0 0.5rem;
 }
 .items li .key + .key{
@@ -284,13 +286,13 @@ body .rtl .items li .go::after{
 	max-width: $myItemLineHeight_Long;
 	max-height: $myItemLineHeight_Long;
 }
-.items.long li .item i{
+.items.long li .item > i{
 	min-height:$myItemLineHeight_Long;
 	height:$myItemLineHeight_Long;
 	min-width:$myItemLineHeight_Long;
 	width: $myItemLineHeight_Long;
 }
-.items.long li .item i::before{
+.items.long li .item > i::before{
 	min-width:$myItemLineHeight_Long;
 	max-width:$myItemLineHeight_Long;
 	line-height: $myItemLineHeight_Long;
