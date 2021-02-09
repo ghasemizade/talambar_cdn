@@ -108,7 +108,16 @@ label+div .select22 {
   text-overflow:ellipsis;
   white-space:nowrap;
 }
-
+.select22-results__option .row{
+  white-space: initial;
+}
+.select22-results__option .row img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: block;
+}
 .select22-results__option[aria-selected]{
   cursor:pointer
 }
