@@ -4223,14 +4223,17 @@ S2.define('select22/dropdown/hidePlaceholder',[
   };
 
   HidePlaceholder.prototype.removePlaceholder = function (_, data) {
-    var modifiedData = data.slice(0);
+    var modifiedData = undefined;
+    if(data)
+    {
+        modifiedData = data.slice(0);
+        for (var d = data.length - 1; d >= 0; d--) {
+          var item = data[d];
 
-    for (var d = data.length - 1; d >= 0; d--) {
-      var item = data[d];
-
-      if (this.placeholder.id === item.id) {
-        modifiedData.splice(d, 1);
-      }
+          if (this.placeholder.id === item.id) {
+            modifiedData.splice(d, 1);
+          }
+        }
     }
 
     return modifiedData;
@@ -6883,7 +6886,6 @@ function runPageSelect2()
       delay: 100, // wait 100 milliseconds before triggering the request
       beforeSend : function()
       {
-        console.log(555);
         NProgress.configure({ animationModel: 'form' }).start();
       },
       complete : function(jqXHR)
@@ -6950,6 +6952,12 @@ function runPageSelect2()
           _e.preventDefault();
           $(this).select22('close');
         }
+      }
+
+      if(selectedData.url)
+      {
+        console.log(selectedData.url);
+        Navigate({ url: selectedData.url });
       }
 
       // open option as link
