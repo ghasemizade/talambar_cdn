@@ -126,6 +126,22 @@ label+div .select22 {
   overflow: hidden;
   display: block;
 }
+.select22-container img.little{
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 2px;
+}
+.select22-container i{
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 2.5rem;
+}
+.select22-container i::before{
+  vertical-align: text-top;
+}
 .select22-results__option[aria-selected]{
   cursor:pointer
 }
