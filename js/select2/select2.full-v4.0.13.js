@@ -6956,7 +6956,6 @@ function runPageSelect2()
 
       if(selectedData.url)
       {
-        console.log(selectedData.url);
         Navigate({ url: selectedData.url });
       }
 
