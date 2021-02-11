@@ -526,6 +526,7 @@ function runUploader()
     }
 
     var myInitRatio = _uploader.attr('data-ratio');
+    var myAutoCropArea = 1;
     if(myInitRatio && myInitRatio > 0)
     {
       // do nothing
@@ -539,7 +540,9 @@ function runUploader()
     var myRatio = myInitRatio;
     if(_uploader.attr('data-ratio-free') !== undefined)
     {
+      myInitRatio = NaN;
       myRatio = NaN;
+      myAutoCropArea = 0.8;
     }
 
     var minCropWidth = 250;
@@ -559,7 +562,7 @@ function runUploader()
     cropperObj = new Cropper(myImg,
     {
       viewMode:2,
-      autoCropArea:1,
+      autoCropArea:myAutoCropArea,
       // zoomable:false,
       minCropBoxWidth:minCropWidth,
       minCropBoxHeight:minCropHeight,
