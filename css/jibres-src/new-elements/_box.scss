@@ -93,6 +93,9 @@
   padding: 2rem;
   overflow: hidden;
 }
+[dir="ltr"] .box .body{line-height:2rem;}
+[dir="rtl"] .box .body{line-height:2.5rem;}
+
 [dir="ltr"] .postContent{line-height:2.5rem;font-size: 1.4rem;}
 [dir="rtl"] .postContent{line-height:3rem;font-size: 1.4rem;}
 
@@ -108,6 +111,9 @@
 .box .body:empty{
   padding: 0;
   display: none;
+}
+.box .body p:last-child{
+  margin-bottom: 0;
 }
 // video inside box
 .box video.infoVideo{
