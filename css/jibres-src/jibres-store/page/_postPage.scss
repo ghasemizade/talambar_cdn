@@ -7,9 +7,30 @@
 	margin-top: 2rem;
 }
 
+.postBlock .gallery a{
+	display: block;
+	line-height: 0;
+	max-height: 40vh;
+}
+[data-pwa] .postBlock .gallery a{
+	max-height: 60vh;
+}
 .postBlock .gallery img{
 	overflow: hidden;
 	position: relative;
 	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+	max-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	// vertical-align: middle;
+	// vertical-align: bottom;
+	transition: 0.3s;
+	will-change: transform;
 }
-
+.postBlock .gallery img:hover{
+	transform: scale(0.95);
+}
+.postBlock .gallery img:focus{
+	transform: scale(0.90);
+}
