@@ -2,21 +2,25 @@
 
 }
 
-.postBlock header video{
+.postBlock video{
 	display: block;
 	width: 100%;
 	max-height: 80vh;
-	margin-bottom: 1rem;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 1rem;
 }
-.postBlock header audio{
+.postBlock header video{
+}
+.postBlock audio{
 	display: block;
 	width: 100%;
-	margin-bottom: 1rem;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 1rem;
+}
+.postBlock header audio{
 }
 .postBlock header h2{
 	font-size: 4rem;
@@ -116,11 +120,13 @@
 
 .postBlock .gallery a{
 	display: block;
-	line-height: 0;
-	max-height: 40vh;
 	overflow: hidden;
 	position: relative;
 	border-radius: 0.5rem;
+}
+.postBlock .gallery a [data-fancybox]{
+	line-height: 0;
+	max-height: 40vh;
 }
 [data-pwa] .postBlock .gallery a{
 	max-height: 60vh;
