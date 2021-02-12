@@ -175,6 +175,16 @@
 
 .postBlock .infoBox{
 	font-size: 1.4rem;
-	line-height: 2rem;
+	line-height: 3.5rem;
+}
+.postBlock .share1 a{
+	margin: 0.5rem 0.5rem;
+	border-radius: 50%;
+	filter: grayscale(100%);
+	transition: 0.1s;
+}
+
+.postBlock .share1 a:hover{
+	filter: grayscale(0);
 }
 
