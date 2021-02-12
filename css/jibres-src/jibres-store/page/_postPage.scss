@@ -116,6 +116,7 @@
 .postBlock .gallery{
 	position: relative;
 	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 
 .postBlock .gallery a{
@@ -188,3 +189,11 @@
 	filter: grayscale(0);
 }
 
+.postBlock .similarPost{
+	font-size: 1.4rem;
+	line-height: 3rem;
+}
+.postBlock .similarPost h4{
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
