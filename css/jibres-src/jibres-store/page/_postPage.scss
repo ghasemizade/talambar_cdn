@@ -92,6 +92,16 @@
 	margin: 2rem 0;
 	line-height:2.5rem;
 	font-size: 1.6rem;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	position: relative;
+	overflow: hidden;
+	padding: 1rem;
+	box-shadow: 0px 0px 1.5rem 0px rgba(0, 0, 0, 0.05);
+	transition: 0.3s;
+}
+.postBlock article:hover{
+	box-shadow: 0px 0px 0.5rem 0px rgba(0, 0, 0, 0.1);
 }
 [dir="rtl"] .postBlock article{
 	line-height:3rem;
