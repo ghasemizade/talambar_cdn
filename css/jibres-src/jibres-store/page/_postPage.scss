@@ -124,6 +124,27 @@
 	position: relative;
 	border-radius: 0.5rem;
 }
+.postBlock .gallery a.file{
+	background-color: #f7f7f7;
+	color: #37474f;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	padding: 3rem 1rem;
+	font-size: 1.6rem;
+	text-align: center;
+	transition: 0.3s;
+}
+.postBlock .gallery a.file:hover{
+	background-color: #eee;
+}
+.postBlock .gallery a i{
+	font-size: 5rem;
+	display: block;
+	margin-bottom: 2rem;
+}
+.postBlock .gallery a i::before{
+	display: block;
+}
 .postBlock .gallery a [data-fancybox]{
 	line-height: 0;
 	max-height: 40vh;
