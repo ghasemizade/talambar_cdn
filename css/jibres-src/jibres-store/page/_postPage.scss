@@ -88,8 +88,15 @@
 
 
 
-[dir="ltr"] .postContent{line-height:2.5rem;font-size: 1.6rem;}
-[dir="rtl"] .postContent{line-height:3rem;font-size: 1.6rem;}
+.postBlock article{
+	margin: 2rem 0;
+	line-height:2.5rem;
+	font-size: 1.6rem;
+}
+[dir="rtl"] .postBlock article{
+	line-height:3rem;
+	font-size: 1.6rem;
+}
 
 
 .postBlock .gallery{
