@@ -262,6 +262,27 @@ body.dragging{
   display: block;
   width: 100%;
 }
+[data-uploader] .previewList .fileItem .file{
+  background-color: #eee;
+  color: #37474f;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
+[data-uploader] .previewList .fileItem .file:hover{
+  background-color: #ddd;
+}
+[data-uploader] .previewList .fileItem i{
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+[data-uploader] .previewList .fileItem i::before{
+  display: block;
+}
 [data-uploader] .previewList .fileItem .imageDel{
   top: 0;
   right: 0;
