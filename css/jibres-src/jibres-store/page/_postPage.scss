@@ -23,7 +23,7 @@
 	line-height: 1.25;
 	font-weight: 900;
 	color: #272727;
-	margin-bottom: 2rem;
+	margin-bottom: 0;
 }
 [dir="rtl"] .postBlock header h2{
 	font-size: 3rem;
@@ -31,27 +31,23 @@
 }
 [data-pwa] .postBlock header h2{
 	font-size: 2.5rem;
-	margin-bottom: 1rem;
 }
 [data-pwa][dir="rtl"] .postBlock header h2{
 	font-size: 1.8rem;
 }
 
 .postBlock .postTitleBox{
-	font-size: 1.6rem;
-	line-height: 2.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
-[dir="rtl"] .postBlock .postTitleBox{
-	line-height: 3rem;
-}
-[data-pwa] .postBlock .postTitleBox{
-	font-size: 1.4rem;
-}
-.postBlock .postTitleBox img{
+.postBlock header img{
 	border-radius: 0.5rem;
 	overflow: hidden;
 	display: block;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.postBlock header .postTitleBox img{
+	margin-bottom: 0;
 	min-width: 12rem;
 	height: 12rem;
 }
@@ -59,18 +55,32 @@
 	min-width: 8rem;
 	height: 8rem;
 }
-.postBlock .postTitleBox h2{
-	margin-bottom: 0;
+
+// excerpt
+.postBlock .excerpt{
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	background-color: #f7f7f7;
+	color: #333;
+	padding: 1rem;
+	font-size: 1.6rem;
+	margin: 0 0 1rem;
+	line-height: 3rem;
+	transition: 0.3s;
 }
-[data-pwa] .postBlock .postTitleBox h2{
-	margin-bottom: 0;
+.postBlock .excerpt:hover{
+	background-color: #eee;
 }
-.postBlock .postTitleBox p{
+[data-pwa] .postBlock .excerpt{
+	font-size: 1.4rem;
+}
+
+.postBlock .postTitleBox .excerpt{
+	background-color: transparent;
+	padding: 0;
 	margin: 0;
-	line-height: 2!important;
 }
-
-
 
 
 
