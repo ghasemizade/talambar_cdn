@@ -248,8 +248,9 @@ body.dragging{
 [data-uploader] .previewList .fileItem img{
   display: block;
   min-height: 10rem;
-  max-height: 20rem;
+  max-height: 22rem;
   border-radius: 1rem;
+  margin: 0 auto;
 }
 [data-uploader] .previewList .fileItem video{
   display: block;
