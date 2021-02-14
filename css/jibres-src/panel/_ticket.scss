@@ -60,9 +60,6 @@
   height: 1.3rem;
   right: -1rem;
 }
-.ticketPage .messageBox[data-note]{
-  background-color: #ffeb3b;
-}
 .ticketPage .messageBox[data-admin]{
   background-color: #f8ffff;
   color: #276f86;
@@ -75,6 +72,11 @@
   background-color: #fcfff5;
   color: #2c662d;
   box-shadow: 0 0 0 1px #a3c293 inset, 0 0 0 0 transparent;
+}
+.ticketPage .messageBox[data-note]{
+  background-color: #ffe8e6;
+  color: #db2828;
+  box-shadow: 0 0 0 1px #db2828 inset, 0 0 0 0 transparent;
 }
 .ticketPage .messageBox .message{
   text-align: initial;

@@ -27,7 +27,6 @@ function checkSmile(_register)
   {
     smileData = $('[data-smile]').attr('data-smile');
   }
-  console.log(smileData);
 
   var ajaxData =
   {
@@ -45,8 +44,10 @@ function checkSmile(_register)
     timeout: 3000,
     dataType:"json",
     data: ajaxData,
-    success:function(smileResult)
+    done:function(smileResult)
     {
+console.log(99);
+
       var response = smileResult.result;
       var notifCount = null;
       var orderCount = null;
@@ -62,6 +63,7 @@ function checkSmile(_register)
           orderCount = response.orderCount;
         }
       }
+console.log(98);
 
       // show new notif message only one time
       if(typeof(Storage) !== "undefined")
@@ -99,12 +101,14 @@ function checkSmile(_register)
 
       // create notif on all conditions
       notifGenerator(smileResult);
-
+console.log(2);
       // if user is loginned on this page, try to check logout
       if(jibresUID())
       {
+console.log(3);
         if(checkSmileLoginned(smileResult))
         {
+console.log(4);
           // if is not logged out
           checkNewOrder(orderCount)
           // check notifications
@@ -155,6 +159,7 @@ function checkSmileLoginned(_data)
 
 function checkSmileRedirect(_data)
 {
+  console.log(11);
   if(_data && _data.redirect)
   {
     var a = $('<a href="' + _data.redirect + '"></a>');
