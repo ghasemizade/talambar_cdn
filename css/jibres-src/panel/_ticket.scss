@@ -53,12 +53,21 @@
   height: 1.3rem;
   right: -1rem;
 }
+.ticketPage .messageBox[data-note]{
+  background-color: #ffeb3b;
+}
+.ticketPage .messageBox[data-user]{
+  background-color: #c5e1a5;
+}
+.ticketPage .messageBox .message{
+  text-align: initial;
+}
 .ticketPage .messageBox p:last-child{
   margin-bottom: 0;
 }
 .ticketPage .messageBox footer{
-  color: #8d9ea7;
-  line-height: 2rem;
+  color: #444;
+  line-height: 2.5rem;
   font-size: 1.2rem;
 }
 .ticketPage .messageBox footer i{
@@ -67,6 +76,10 @@
 .ticketPage .messageBox footer i::before{
   display: block;
   line-height: 2rem;
+  text-shadow: 0 0 1px #000;
+}
+.ticketPage .messageBox footer a{
+  display: block;
 }
 .ticketPage .messageBox footer .sf-check{
   color: #eee;
