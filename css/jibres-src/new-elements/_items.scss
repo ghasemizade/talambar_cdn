@@ -256,6 +256,10 @@ body .rtl .items li .go::after{
 .items li .ok::after{color: #4CC790}
 .items li .nok::after{color: #ff5722}
 .items li .gold::after{color: #ffd700}
+// for i
+.items li .ok::before{color: #4CC790}
+.items li .nok::before{color: #ff5722}
+.items li .gold::before{color: #ffd700}
 
 // reaction
 .items li .item:hover, .items li a:hover{
