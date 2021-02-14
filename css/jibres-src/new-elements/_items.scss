@@ -101,6 +101,9 @@ body .ltr .items li + li::before{
 	opacity: 0.8;
 	font-size: 1.8rem;
 }
+.items li .item > i.sf-mobile::before{
+	font-size: 2.5rem;
+}
 .item li:hover .item > i::before{
 	opacity: 1;
 }
@@ -115,12 +118,12 @@ body .ltr .items li + li::before{
 .items li .key.username{
 	max-width: 20%;
 }
-.items li .key.mobile{
+.items li .mobile{
 	direction: ltr;
 	text-align: left;
 	max-width: 15rem;
 }
-[dir='rtl'] .items li .key.mobile{
+[dir='rtl'] .items li .mobile{
 	max-width: 13rem;
 }
 .items li.multiLine .key{
