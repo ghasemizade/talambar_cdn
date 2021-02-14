@@ -22,19 +22,29 @@ function checkSmile(_register)
   // get user language
   var lang = $('html').attr('lang');
 
+  var smileData = undefined;
+  if($('[data-smile]').length === 1)
+  {
+    smileData = $('[data-smile]').attr('data-smile');
+  }
+  console.log(smileData);
+
+  var ajaxData =
+  {
+    'notifOn': aleadyIsNew,
+    'url-env': $('body').attr('data-env'),
+    'url-in': $('body').attr('data-in'),
+    'url-page': $('body').attr('data-page'),
+    'smileData': smileData
+  };
+
   $.ajax(
   {
     url: urlJibres('sitelang') + "hook/smile",
     method:"POST",
     timeout: 3000,
     dataType:"json",
-    data:
-    {
-      'notifOn': aleadyIsNew,
-      'url-env': $('body').attr('data-env'),
-      'url-in': $('body').attr('data-in'),
-      'url-page': $('body').attr('data-page')
-    },
+    data: ajaxData,
     success:function(smileResult)
     {
       var response = smileResult.result;
