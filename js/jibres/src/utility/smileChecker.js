@@ -44,88 +44,88 @@ function checkSmile(_register)
     timeout: 3000,
     dataType:"json",
     data: ajaxData,
-    success:function(smileResult)
-    {
-      var response = smileResult.result;
-      var notifCount = null;
-      var orderCount = null;
-
-      if(response)
-      {
-        if(response.notifCount)
-        {
-          notifCount = response.notifCount;
-        }
-        if(response.orderCount)
-        {
-          orderCount = response.orderCount;
-        }
-      }
-
-      // show new notif message only one time
-      if(typeof(Storage) !== "undefined")
-      {
-        newNotifStorage = parseInt(sessionStorage.getItem("newNotif"));
-        newOrderStorage = parseInt(sessionStorage.getItem("newOrder"));
-        if(isNaN(newNotifStorage))
-        {
-          newNotifStorage = 0;
-        }
-        if(isNaN(newOrderStorage))
-        {
-          newOrderStorage = 0;
-        }
-
-        if(notifCount)
-        {
-          if(notifCount && newNotifStorage !== notifCount)
-          {
-            sessionStorage.setItem("newNotif", notifCount);
-            playAudio('new-notification-2.mp3');
-          }
-        }
-
-        if(orderCount)
-        {
-          if(orderCount && newOrderStorage !== orderCount)
-          {
-            sessionStorage.setItem("newOrder", orderCount);
-            playAudio('new-order-2.mp3');
-          }
-        }
-
-      }
-
-      // create notif on all conditions
-      notifGenerator(smileResult);
-      // if user is loginned on this page, try to check logout
-      if(jibresUID())
-      {
-        if(checkSmileLoginned(smileResult))
-        {
-          // if is not logged out
-          checkNewOrder(orderCount)
-          // check notifications
-          checkNewNotification(smileResult);
-          // check redirect
-          checkSmileRedirect(smileResult);
-        }
-      }
-    }
-  })
-  .done(function(_data, _textStatus, _jqXHR)
-  {
-    console.log(30);
-
   })
   .always(function(_jqXHR, _textStatus, _error)
   {
-    console.log(40);
-    console.log(_jqXHR);
-    console.log(_textStatus);
-    console.log(_error);
-  });
+    var smileResult = undefined;
+    if(_jqXHR.ok === true)
+    {
+      smileResult = _jqXHR;
+    }
+    else if(_jqXHR.responseJSON && _jqXHR.responseJSON.ok === true)
+    {
+      smileResult = _jqXHR.responseJSON;
+    }
+    else
+    {
+      return false;
+    }
 
+    var response = smileResult.result;
+    var notifCount = null;
+    var orderCount = null;
+
+    if(response)
+    {
+      if(response.notifCount)
+      {
+        notifCount = response.notifCount;
+      }
+      if(response.orderCount)
+      {
+        orderCount = response.orderCount;
+      }
+    }
+
+    // show new notif message only one time
+    if(typeof(Storage) !== "undefined")
+    {
+      newNotifStorage = parseInt(sessionStorage.getItem("newNotif"));
+      newOrderStorage = parseInt(sessionStorage.getItem("newOrder"));
+      if(isNaN(newNotifStorage))
+      {
+        newNotifStorage = 0;
+      }
+      if(isNaN(newOrderStorage))
+      {
+        newOrderStorage = 0;
+      }
+
+      if(notifCount)
+      {
+        if(notifCount && newNotifStorage !== notifCount)
+        {
+          sessionStorage.setItem("newNotif", notifCount);
+          playAudio('new-notification-2.mp3');
+        }
+      }
+
+      if(orderCount)
+      {
+        if(orderCount && newOrderStorage !== orderCount)
+        {
+          sessionStorage.setItem("newOrder", orderCount);
+          playAudio('new-order-2.mp3');
+        }
+      }
+    }
+
+    // create notif on all conditions
+    notifGenerator(smileResult);
+    // if user is loginned on this page, try to check logout
+    if(jibresUID())
+    {
+      if(checkSmileLoginned(smileResult))
+      {
+        // if is not logged out
+        checkNewOrder(orderCount)
+        // check notifications
+        checkNewNotification(smileResult);
+        // check redirect
+        checkSmileRedirect(smileResult);
+      }
+    }
+  });
 }
 
 
