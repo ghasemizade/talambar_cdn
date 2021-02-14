@@ -131,7 +131,7 @@ function editorSimpleRunner(_el)
     toolbar: {
       items: [
         'bold',
-        'italic',
+        // 'italic',
         'link',
       ]
     },
