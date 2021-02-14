@@ -34,6 +34,9 @@
   border-radius: 50%;
   display: block;
 }
+[data-pwa] .ticketPage .messageLine img{
+  margin-bottom: 0.5rem;
+}
 .ticketPage .messageBox{
   position: relative;
   display: inline-block;
@@ -60,7 +63,17 @@
   background-color: #ffeb3b;
 }
 .ticketPage .messageBox[data-admin]{
-  background-color: #c5e1a5;
+  background-color: #f8ffff;
+  color: #276f86;
+  box-shadow: 0 0 0 1px #a9d5de inset, 0 0 0 0 transparent;
+}
+.ticketPage .messageBox[data-color=green1]{
+  background-color: #d4edda;
+}
+.ticketPage .messageBox[data-color=green2]{
+  background-color: #fcfff5;
+  color: #2c662d;
+  box-shadow: 0 0 0 1px #a3c293 inset, 0 0 0 0 transparent;
 }
 .ticketPage .messageBox .message{
   text-align: initial;
@@ -79,7 +92,7 @@
 .ticketPage .messageBox footer i::before{
   display: block;
   line-height: 2rem;
-  text-shadow: 0 0 1px #000;
+  text-shadow: 0 0 1px #333;
 }
 .ticketPage .messageBox footer a{
   display: block;
