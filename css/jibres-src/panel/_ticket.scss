@@ -1,21 +1,83 @@
-.ticketSidebar .hero{
+.ticketPage .ticketSidebar .hero{
   position: relative;
   text-align: center;
   font-size: 1.6rem;
   background-color: #fff;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.ticketSidebar .hero img{
+.ticketPage .ticketSidebar .hero img{
   width: 12rem;
   height: 12rem;
   margin: 0 auto;
   display: block;
 }
-.ticketSidebar .hero h3{
+.ticketPage .ticketSidebar .hero h3{
   font-size: 1.8rem;
   font-weight: 700;
 }
+
+.ticketPage .chat{
+  font-size: 1.4rem;
+}
+.ticketPage .messageLine{
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.ticketPage .messageLine img{
+  height: 4rem;
+  width: 4rem;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+}
+.ticketPage .messageBox{
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem 1rem 0;
+  line-height: 3rem;
+}
+.ticketPage .messageBox::before{
+  position: absolute;
+  display: block;
+  background-color: #747474;
+  bottom: 0;
+  z-index: 100;
+  width: 0.8rem;
+  height: 1.3rem;
+  right: -1rem;
+}
+.ticketPage .messageBox p:last-child{
+  margin-bottom: 0;
+}
+.ticketPage .messageBox footer{
+  color: #8d9ea7;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+.ticketPage .messageBox footer i{
+  display: block;
+}
+.ticketPage .messageBox footer i::before{
+  display: block;
+  line-height: 2rem;
+}
+.ticketPage .messageBox footer .sf-check{
+  color: #eee;
+}
+.ticketPage .messageBox footer .sf-check.seen{
+  color: #306efe;
+  text-shadow: 0 0 5px #306efe;
+}
+.ticketPage .messageBox time{
+  display: inline-block;
+  direction: ltr;
+}
+
+
