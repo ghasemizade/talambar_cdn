@@ -1,6 +1,7 @@
 .ticketPage .ticketSidebar .hero{
   position: relative;
   text-align: center;
+  display: block;
   font-size: 1.6rem;
   background-color: #fff;
   padding: 1rem;
@@ -43,7 +44,7 @@
   background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
-  padding: 1rem 1rem 0;
+  padding: 1rem 1.5rem 0;
   line-height: 3rem;
 }
 [data-desktop] .ticketPage .messageBox{
@@ -77,6 +78,9 @@
 }
 .ticketPage .messageBox .message{
   text-align: initial;
+}
+.ticketPage .messageBox p{
+  margin-bottom: 1rem;
 }
 .ticketPage .messageBox p:last-child{
   margin-bottom: 0;
