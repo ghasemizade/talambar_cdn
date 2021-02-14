@@ -22,10 +22,10 @@ function checkSmile(_register)
   // get user language
   var lang = $('html').attr('lang');
 
-  var smileData = undefined;
-  if($('[data-smile]').length === 1)
+  var smileLive = undefined;
+  if($('[data-smile-live]').length === 1)
   {
-    smileData = $('[data-smile]').attr('data-smile');
+    smileLive = $('[data-smile-live]').attr('data-smile-live');
   }
 
   var ajaxData =
@@ -34,7 +34,7 @@ function checkSmile(_register)
     'url-env': $('body').attr('data-env'),
     'url-in': $('body').attr('data-in'),
     'url-page': $('body').attr('data-page'),
-    'smileData': smileData
+    'smileLive': smileLive
   };
 
   $.ajax(
