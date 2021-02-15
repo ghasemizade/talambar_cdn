@@ -1,5 +1,6 @@
 .starRating {
   margin: 1rem auto;
+  @include select-none-only();
 }
 .starRating > fieldset {
   border: none;
