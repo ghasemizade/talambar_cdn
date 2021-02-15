@@ -400,7 +400,6 @@ input{
   box-sizing: border-box;
   overflow: visible;
   outline: none;
-  @include select-none();
 }
 
 input[type="file"]{
