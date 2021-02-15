@@ -277,19 +277,27 @@ function smileLiveMode(_smileResult)
       // remove old smile live element
       $("[data-smile-live]").remove();
       // get element
-      var $html = $(_data).hide();
       // insert on top or buttom
-      if(_smileResult.livePosition === 'top')
+      var $html = $(_data);
+      if(_smileResult.livePosition === 'all')
       {
-        $targetEl.prepend($html);
+        $targetEl.html($html);
       }
       else
       {
-        $targetEl.append($html);
+        $html.hide();
+        if(_smileResult.livePosition === 'top')
+        {
+          $targetEl.prepend($html);
+        }
+        else
+        {
+          $targetEl.append($html);
+        }
+        // show with animation
+        $html.slideDown();
+        // $html.show();
       }
-      // show with animation
-      $html.slideDown();
-      // $html.show();
     }
   });
 
