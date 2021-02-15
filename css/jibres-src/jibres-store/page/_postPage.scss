@@ -30,15 +30,15 @@
 	margin-bottom: 0;
 }
 [dir="rtl"] .postBlock header h2{
-	font-size: 3rem;
 	line-height: 2;
+	font-size: 3rem;
 }
 [data-pwa] .postBlock header h2{
 	font-size: 2.5rem;
+	margin:1rem 0;
 }
 [data-pwa][dir="rtl"] .postBlock header h2{
-	line-height: 3;
-	font-size: 2rem;
+	font-size: 2.2rem;
 }
 
 .postBlock .postTitleBox{
