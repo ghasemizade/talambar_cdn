@@ -37,6 +37,7 @@
 	font-size: 2.5rem;
 }
 [data-pwa][dir="rtl"] .postBlock header h2{
+	line-height: 3;
 	font-size: 1.8rem;
 }
 
@@ -104,12 +105,14 @@
 	box-shadow: 0px 0px 1.5rem 0px rgba(0, 0, 0, 0.05);
 	transition: 0.3s;
 }
+[data-pwa] .postBlock article{
+	font-size: 1.4rem;
+}
 .postBlock article:hover{
 	box-shadow: 0px 0px 0.5rem 0px rgba(0, 0, 0, 0.1);
 }
 [dir="rtl"] .postBlock article{
 	line-height:3rem;
-	font-size: 1.6rem;
 }
 .postBlock article h2{
 	font-size: 2.6rem;
@@ -130,6 +133,12 @@
 .postBlock article h6{
 	font-size: 1.4rem;
 	font-weight: 700;
+}
+.postBlock article p{
+	margin-bottom: 1rem;
+}
+.postBlock article p:last-child{
+	margin-bottom: 0;
 }
 .postBlock .gallery{
 	position: relative;
@@ -204,7 +213,7 @@
 	transition: 0.1s;
 }
 [data-pwa] .postBlock .share1 a{
-	margin: 0.5rem 0.25rem;
+	margin: 0.5rem 0.2rem;
 }
 .postBlock .share1 a:hover{
 	filter: grayscale(0);
