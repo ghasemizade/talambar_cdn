@@ -107,21 +107,27 @@ body .ltr .items li + li::before{
 .item li:hover .item > i::before{
 	opacity: 1;
 }
-.items li .item > i[data-count]::after{
+.items li .item > i[data-count]{
+	color: 	#444;
+}
+.items li .item > i[data-count=""]{
+	color: 	#ddd;
+}
+.items li .item > i[data-count]:not([data-count=""])::after{
 	content: attr(data-count);
 	vertical-align: middle;
 	overflow: hidden;
 	display: block;
 	position: absolute;
-	top: -1px;
-	left: 18px;
-	min-width: 1.6rem;
-	height: 1.6rem;
-	font-size: 1.2rem;
-	line-height: 1.6rem;
+	top: 0;
+	right: 0;
+	min-width: 1.5rem;
+	height: 1.5rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	text-align: center;
 	border-radius: 50%;
-	background-color: #777;
+	background-color: #999;
 	color: #fff;
 	padding: 0;
 	margin: 0;
