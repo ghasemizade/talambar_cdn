@@ -42,6 +42,20 @@
   text-align: center;
   font-size: 3rem;
 }
+// pwa
+[data-pwa] .starRating > fieldset {
+  width: 15rem;
+}
+[data-pwa] .starRating > fieldset:not(:checked) > label {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+[data-pwa] .starRating > fieldset label:before{
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.7rem;
+}
 .starRating > fieldset:not(:checked) > label:before {
   content: "\e002";
 }
