@@ -11,6 +11,11 @@
 
 function runEditor()
 {
+  if(urlParam('live') === 1)
+  {
+    // skip on live mode
+    return null;
+  }
 	// var editor = new MediumEditor('[data-editor]');
 	$('[data-editor]').each(function(_el)
 	{

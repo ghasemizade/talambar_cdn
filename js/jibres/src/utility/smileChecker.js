@@ -165,7 +165,6 @@ function checkSmileLoginned(_data)
 
 function checkSmileRedirect(_data)
 {
-  console.log(11);
   if(_data && _data.redirect)
   {
     var a = $('<a href="' + _data.redirect + '"></a>');
