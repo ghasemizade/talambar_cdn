@@ -117,8 +117,8 @@ img {
   background: transparent;
   -webkit-user-drag: none;
   user-drag: none;
+  @include select-none();
 }
-
 
 // main{
 //   display: block;
@@ -132,6 +132,7 @@ img {
 //   box-sizing: border-box;
 //   overflow-x:hidden;
 // }
+
 header{
   position: relative;
   display: block;
