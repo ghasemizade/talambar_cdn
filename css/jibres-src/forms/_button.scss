@@ -1,8 +1,8 @@
 // styles of btn as default
 .btn{
 	position: relative;
-	cursor: pointer;
 	display: inline-block;
+	cursor: pointer;
 	outline: none;
 	padding: 5px 1.2em;
 	text-decoration:none;
@@ -21,7 +21,7 @@
 	font-size:0.9em;
 	max-width:100%;
 	text-overflow:ellipsis;
-	@include select-none();
+	@include select-none-only();
 }
 .outline{
 	background-color: transparent;

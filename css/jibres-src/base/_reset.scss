@@ -117,7 +117,7 @@ img {
   background: transparent;
   -webkit-user-drag: none;
   user-drag: none;
-  @include select-none();
+  @include select-none-only();
 }
 
 // main{

@@ -203,7 +203,9 @@
 	filter: grayscale(100%);
 	transition: 0.1s;
 }
-
+[data-pwa] .postBlock .share1 a{
+	margin: 0.5rem 0.25rem;
+}
 .postBlock .share1 a:hover{
 	filter: grayscale(0);
 }
