@@ -295,8 +295,8 @@ function smileLiveMode(_smileResult)
           $targetEl.append($html);
         }
         // show with animation
-        $html.slideDown();
-        // $html.show();
+        $html.slideDown('fast');
+        // $html.show('slow');
       }
     }
   });
