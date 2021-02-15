@@ -10,6 +10,12 @@ function checkSmileLoop()
 
 function checkSmile(_register)
 {
+  if (document.hidden)
+  {
+    // don't run if browser tab is hidden
+    return false;
+  }
+
   if(_register)
   {
     checkSmileLoop();
