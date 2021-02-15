@@ -12,6 +12,7 @@ $inputBorder: 1px solid rgba(0,0,0,0.15);
 	border-radius: 0.25rem;
 	@include flexbox;
 	@include flex-wrap(wrap);
+	@include select-none-only();
 }
 [dir="rtl"] .input.fix{
 	@include flex-direction(row-reverse);
