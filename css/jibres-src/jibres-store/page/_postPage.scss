@@ -111,8 +111,26 @@
 	line-height:3rem;
 	font-size: 1.6rem;
 }
-
-
+.postBlock article h2{
+	font-size: 2.6rem;
+	font-weight: 900;
+}
+.postBlock article h3{
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.postBlock article h4{
+	font-size: 2.0rem;
+	font-weight: 700;
+}
+.postBlock article h5{
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+.postBlock article h6{
+	font-size: 1.4rem;
+	font-weight: 700;
+}
 .postBlock .gallery{
 	position: relative;
 	margin-top: 2rem;
@@ -177,6 +195,7 @@
 .postBlock .infoBox{
 	font-size: 1.4rem;
 	line-height: 3.5rem;
+	@include select-none();
 }
 .postBlock .share1 a{
 	margin: 0.5rem 0.5rem;
@@ -194,4 +213,6 @@
 	line-height: 3rem;
 }
 
-
+.postBlock .tagLine{
+	@include select-none();
+}

@@ -9,6 +9,7 @@
   overflow: hidden;
   padding: 0.5rem;
   will-change: transform;
+  @include select-none();
 }
 // reaction
 a.circularChartBox:hover{
