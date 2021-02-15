@@ -324,6 +324,7 @@
       $window.trigger('navigate:fetch:ajax:start', options);
       // analyse result as json
       var resultJSON = analyseAjaxResponse(_data, deferred, props);
+      window.pushStateResult = resultJSON;
       // check for redirect if needed
       if(resultJSON && resultJSON.ok === true && resultJSON.redirect)
       {
@@ -349,7 +350,7 @@
       }
       // analyse result as json
       var resultJSON = analyseAjaxResponse(myResponseRaw, deferred, props);
-
+      window.pushStateResult = resultJSON;
       if(resultJSON)
       {
         if(resultJSON.ok === true && resultJSON.redirect)

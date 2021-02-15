@@ -61,6 +61,7 @@ function checkSmile(_register)
       return false;
     }
 
+    window.pushStateSmile = smileResult;
     var response = smileResult.result;
     var notifCount = null;
     var orderCount = null;
