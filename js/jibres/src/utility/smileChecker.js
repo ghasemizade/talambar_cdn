@@ -135,6 +135,9 @@ function checkSmile(_register)
         checkSmileRedirect(smileResult);
       }
     }
+
+    // check live mode
+    smileLiveMode(smileResult);
   });
 }
 
@@ -184,11 +187,8 @@ function checkSmileRedirect(_data)
     }
     else
     {
-      console.log(11);
-      console.log(window.pushStateSmile);
       if(window.pushStateSmile && window.pushStateSmile.live && parseInt(window.pushStateSmile.live) === 1)
       {
-        console.log(12);
         Navigate({ url: _data.redirect, live: 1 });
       }
       else
@@ -252,5 +252,46 @@ function checkNewOrder(_orderCount)
   pwaFooterEl.attr('data-count', fitNumber(_orderCount));
   // set in dashboard
   panelBusinessDashDataEl.text(fitNumber(_orderCount));
+}
+
+function smileLiveMode(_smileResult)
+{
+  if(!_smileResult.liveResult)
+  {
+    return null;
+  }
+
+  $.ajax(
+  {
+    url: _smileResult.liveResult,
+    headers: {"x-live": "1"},
+    method:"get",
+    timeout: 3000,
+    dataType:"html",
+  })
+  .done(function(_data, _textStatus, _jqXHR)
+  {
+    $targetEl = $(_smileResult.liveTarget);
+    if($targetEl.length === 1)
+    {
+      // remove old smile live element
+      $("[data-smile-live]").remove();
+      // get element
+      var $html = $(_data).hide();
+      // insert on top or buttom
+      if(_smileResult.livePosition === 'top')
+      {
+        $targetEl.prepend($html);
+      }
+      else
+      {
+        $targetEl.append($html);
+      }
+      // show with animation
+      $html.slideDown();
+      // $html.show();
+    }
+  });
+
 }
 
