@@ -26,7 +26,14 @@
 }
 .ticketPage .messageLine{
   position: relative;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+// multi line
+.ticketPage .messageLine[data-line-1]{
+
+}
+.ticketPage .messageLine[data-line-multi]{
+  margin-top: 0;
 }
 .ticketPage .messageLine img{
   height: 4rem;
@@ -60,22 +67,12 @@
 [dir="rtl"] .ticketPage .messageBox[data-user]{
   border-radius: 0 1rem 1rem 1rem;
 }
-// multi line
-.ticketPage .messageLine[data-multi] .messageBox{
+// show rounded for multi
+.ticketPage .messageLine[data-line-multi] .messageBox{
   border-radius: 1rem;
 }
 [data-desktop] .ticketPage .messageBox{
   max-width: 85%;
-}
-.ticketPage .messageBox::before{
-  position: absolute;
-  display: block;
-  background-color: #747474;
-  bottom: 0;
-  z-index: 100;
-  width: 0.8rem;
-  height: 1.3rem;
-  right: -1rem;
 }
 .ticketPage .messageBox[data-admin]{
   background-color: #f8ffff;
@@ -133,5 +130,6 @@
 }
 .ticketPage .attachment.btn{
   border-radius: 1rem;
+  margin-bottom: 0.5rem;
 }
 
