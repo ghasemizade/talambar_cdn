@@ -35,6 +35,9 @@
   border-radius: 50%;
   display: block;
 }
+.ticketPage .messageLine .imgEmpty{
+  width: 4rem;
+}
 [data-pwa] .ticketPage .messageLine img{
   margin-bottom: 0.5rem;
 }
@@ -42,10 +45,24 @@
   position: relative;
   display: inline-block;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem 1rem;
   overflow: hidden;
   padding: 1rem 1.5rem 0;
   line-height: 3rem;
+}
+.ticketPage .messageBox[data-user]{
+  border-radius: 1rem 0 1rem 1rem;
+}
+// rtl
+[dir="rtl"] .ticketPage .messageBox{
+  border-radius: 1rem 0 1rem 1rem;
+}
+[dir="rtl"] .ticketPage .messageBox[data-user]{
+  border-radius: 0 1rem 1rem 1rem;
+}
+// multi line
+.ticketPage .messageLine[data-multi] .messageBox{
+  border-radius: 1rem;
 }
 [data-desktop] .ticketPage .messageBox{
   max-width: 85%;
