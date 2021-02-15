@@ -54,20 +54,20 @@
   position: relative;
   display: inline-block;
   background-color: #fff;
-  border-radius: 0 1rem 1rem 1rem;
+  border-radius: 1rem 1rem 1rem 0;
   overflow: hidden;
   padding: 1rem 1.5rem 0;
   line-height: 3rem;
 }
 .ticketPage .messageBox[data-user]{
-  border-radius: 1rem 0 1rem 1rem;
+  border-radius: 1rem 1rem 0 1rem;
 }
 // rtl
 [dir="rtl"] .ticketPage .messageBox{
-  border-radius: 1rem 0 1rem 1rem;
+  border-radius: 1rem 1rem 0 1rem;
 }
 [dir="rtl"] .ticketPage .messageBox[data-user]{
-  border-radius: 0 1rem 1rem 1rem;
+  border-radius: 1rem 1rem 1rem 0;
 }
 // show rounded for multi
 .ticketPage .messageLine[data-line-multi] .messageBox{
