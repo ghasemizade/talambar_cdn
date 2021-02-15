@@ -11,7 +11,7 @@
 
 function runEditor()
 {
-  if(window.pushStateSmile && window.pushStateSmile.live && parseInt(window.pushStateSmile.live) === 1)
+  if(window.pushStateResult && window.pushStateResult.live && parseInt(window.pushStateResult.live) === 1)
   {
     // skip on live mode
     return null;
