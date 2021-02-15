@@ -294,11 +294,18 @@
     $('body').attr('data-reloading', '');
     callFunc('loading_page', true);
 
+    // set header of liveMode
+    if(props.live === 1)
+    {
+      props.ajax.headers = { "x-live": "1" };
+    }
+
     var options = $.extend(true, {}, props.ajax,
     {
       url: props.url,
       // headers: { 'x-request-type': 'pushState' }
     });
+
 
     var deferred = new jQuery.Deferred();
 
@@ -316,7 +323,6 @@
 
     // set timeout for fetch page
     options.timeout = 30000;
-
 
     var myXhr = $.ajax(options)
     .done(function(_data, _textStatus, _jqXHR)

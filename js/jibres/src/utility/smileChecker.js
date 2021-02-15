@@ -97,7 +97,6 @@ function checkSmile(_register)
         if(notifCount && newNotifStorage !== notifCount)
         {
           sessionStorage.setItem("newNotif", notifCount);
-          playAudio('new-notification-2.mp3');
         }
       }
 
@@ -106,9 +105,13 @@ function checkSmile(_register)
         if(orderCount && newOrderStorage !== orderCount)
         {
           sessionStorage.setItem("newOrder", orderCount);
-          playAudio('new-order-2.mp3');
         }
       }
+    }
+
+    if(smileResult.sound)
+    {
+      playAudio(smileResult.sound);
     }
 
     // create notif on all conditions
@@ -175,7 +178,17 @@ function checkSmileRedirect(_data)
     }
     else
     {
-      Navigate({ url: _data.redirect });
+      console.log(11);
+      console.log(window.pushStateSmile);
+      if(window.pushStateSmile && window.pushStateSmile.live && parseInt(window.pushStateSmile.live) === 1)
+      {
+        console.log(12);
+        Navigate({ url: _data.redirect, live: 1 });
+      }
+      else
+      {
+        Navigate({ url: _data.redirect });
+      }
     }
     return;
   }
