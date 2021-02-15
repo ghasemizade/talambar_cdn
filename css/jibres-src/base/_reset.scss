@@ -79,7 +79,6 @@ html[dir="rtl"]{
   box-sizing: border-box;
   font-family:$fontNameEn;
   overflow-x: hidden;
-  @include select-none();
 }
 
 [dir="rtl"] body{
@@ -92,7 +91,6 @@ html[dir="rtl"]{
   box-sizing: border-box;
   font-family:$fontNameFa;
   overflow-x: hidden;
-  @include select-none();
 }
 
 
@@ -119,6 +117,7 @@ img {
   background: transparent;
   -webkit-user-drag: none;
   user-drag: none;
+  @include select-none();
 }
 
 
@@ -146,6 +145,7 @@ header{
   background: transparent;
   box-sizing: border-box;
   -webkit-tap-highlight-color:transparent;
+  @include select-none();
 }
 footer{
   position: relative;
@@ -159,6 +159,13 @@ footer{
   background: transparent;
   box-sizing: border-box;
   -webkit-tap-highlight-color:transparent;
+  @include select-none();
+}
+aside{
+  @include select-none();
+}
+nav{
+  @include select-none();
 }
 
 /*
@@ -393,6 +400,7 @@ input{
   box-sizing: border-box;
   overflow: visible;
   outline: none;
+  @include select-none();
 }
 
 input[type="file"]{
@@ -468,6 +476,7 @@ button{
   -webkit-appearance: button;
   touch-action: manipulation;
   outline: none;
+  @include select-none();
 }
 
 textarea{
@@ -481,6 +490,7 @@ textarea{
   margin: 0;
   outline: none;
   touch-action: manipulation;
+  @include select-none();
 }
 
 /**

@@ -1,4 +1,8 @@
-.radio1{padding:8px 0;overflow:hidden;}
+.radio1{
+  padding:8px 0;
+  overflow:hidden;
+  @include select-none();
+}
 
 .radio1 input{
   padding:0;
@@ -77,7 +81,7 @@
 
 
 // radio 3
-.radio3{padding:0;position:relative;min-width: 80px;}
+.radio3{padding:0;position:relative;min-width: 80px;@include select-none();}
 .radio3 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .radio3 label{display:block;padding:0.5rem 1rem;position:relative;cursor:pointer;transition:0.3s;background-color:#f6f8fa;min-width:50px;line-height:24px;height:36px;border-radius:0.25rem;border:1px solid transparent;white-space:nowrap;}
 .radio3 label::before{content:'';margin-right:1rem;display:inline-block;vertical-align:middle;width:20px;height:20px;transition:0.3s;border-radius:50%;border:1px solid rgba(0,0,0,0.1);}
@@ -99,7 +103,7 @@
 .radio3.colored label::before{border-radius: 0;}
 
 // radio4
-.radio4{margin:0 0.5rem;padding-bottom:1rem;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;}
+.radio4{margin:0 0.5rem;padding-bottom:1rem;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;@include select-none();}
 .radio4 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .radio4 label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:100%;height:auto;border-radius:0.25rem;padding:1rem;}
 .radio4 img{width:100%;height:auto;}
@@ -118,7 +122,7 @@
 
 
 // radio gateway
-.radioGateway{margin:5px;position:relative;cursor:pointer;display:inline-flex;}
+.radioGateway{margin:5px;position:relative;cursor:pointer;display:inline-flex;@include select-none();}
 .radioGateway input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .radioGateway label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:68px;height:68px;border-radius:0.25rem;padding:2px;}
 .radioGateway img{width:100%;height:auto;}
@@ -138,7 +142,7 @@
 
 // radio rating
 .radioRating{
-
+  @include select-none();
 }
 .radioRating .rateBox{
   display:inline-block;
@@ -256,6 +260,7 @@
   min-width:100px;
   min-height:90px;
   position:relative;
+  @include select-none();
 }
 .radioType input{
   padding:0;

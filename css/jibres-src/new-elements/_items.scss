@@ -5,6 +5,7 @@
 	overflow: hidden;
 	margin-bottom:1rem;
 	box-shadow: #ddd 0 0 0.5rem;
+	@include select-none();
 }
 .zeroSide .items{
 	border-radius:0;
