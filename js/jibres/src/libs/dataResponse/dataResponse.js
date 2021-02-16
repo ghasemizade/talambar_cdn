@@ -36,15 +36,17 @@ function runDataResponse()
 
 function autosizeTextarea(_this)
 {
-	_this.style.cssText = 'height:auto;';
-
-	var newHeight = _this.scrollHeight;
-	if(newHeight > 36)
+	setTimeout(function()
 	{
-		newHeight += 22;
-	}
-	console.log(newHeight);
-	_this.style.cssText = 'height:' + newHeight + 'px;';
+		_this.style.cssText = 'height:auto;';
+		var newHeight = _this.scrollHeight;
+		if(newHeight > 36)
+		{
+			newHeight += 2;
+		}
+		console.log(newHeight);
+		_this.style.cssText = 'height:' + newHeight + 'px;';
+	},0);
 }
 
 /**
