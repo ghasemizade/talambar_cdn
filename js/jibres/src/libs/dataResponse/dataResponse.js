@@ -21,6 +21,12 @@ function runDataResponse()
 		checkInputResponse(this, false);
 	});
 
+	$(document).on('keydown', 'textarea.txt[data-autoResize]', function()
+	{
+		autosizeTextarea(this);
+	});
+
+
 	// // run for the first time
 	// $('input[type=checkbox]').each(function ()
 	// {
@@ -28,6 +34,18 @@ function runDataResponse()
 	// });
 }
 
+function autosizeTextarea(_this)
+{
+	_this.style.cssText = 'height:auto;';
+
+	var newHeight = _this.scrollHeight;
+	if(newHeight > 36)
+	{
+		newHeight += 22;
+	}
+	console.log(newHeight);
+	_this.style.cssText = 'height:' + newHeight + 'px;';
+}
 
 /**
  * [getInputValue description]

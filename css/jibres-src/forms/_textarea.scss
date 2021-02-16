@@ -38,6 +38,7 @@
 	line-height:1;
 }
 .txt[rows="1"][data-autoResize]{
+	height: auto;
 	line-height:2rem;
 	padding: 0.7rem 1rem;
 }
