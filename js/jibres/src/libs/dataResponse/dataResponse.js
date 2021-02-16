@@ -21,7 +21,7 @@ function runDataResponse()
 		checkInputResponse(this, false);
 	});
 
-	$(document).on('keydown', 'textarea.txt[data-autoResize]', function()
+	$(document).on('input', 'textarea.txt[data-autoResize]', function()
 	{
 		autosizeTextarea(this);
 	});
@@ -36,18 +36,10 @@ function runDataResponse()
 
 function autosizeTextarea(_this)
 {
-	setTimeout(function()
-	{
-		_this.style.cssText = 'height:auto;';
-		var newHeight = _this.scrollHeight;
-		if(newHeight > 36)
-		{
-			newHeight += 2;
-		}
-		console.log(newHeight);
-		_this.style.cssText = 'height:' + newHeight + 'px;';
-	},0);
+  _this.rows = 1
+  _this.rows = Math.ceil((_this.scrollHeight - 34) / 20) + 1;
 }
+
 
 /**
  * [getInputValue description]
