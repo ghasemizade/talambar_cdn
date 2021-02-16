@@ -256,7 +256,6 @@ img.profileAvatar{
 
 // editor
 .ck.ck-content.ck-editor__editable{
-  @include select-none();
   min-height: 200px;
   line-height: 2rem;
 }
