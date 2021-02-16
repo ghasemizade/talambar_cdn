@@ -46,4 +46,10 @@
 .txt.error{
 	border-color:rgba(255,0,0,0.5);
 }
+.txt[data-dir="rtl"]{
+	direction: rtl;
+}
+.txt[data-dir="ltr"]{
+	direction: ltr;
+}
 
