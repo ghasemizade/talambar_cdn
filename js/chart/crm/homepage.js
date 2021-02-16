@@ -41,24 +41,17 @@ function highChartcrmhome()
       borderWidth: 1,
       shadow: false
     },
-    plotOptions: {
-      column: {
-        stacking: 'normal',
-        // dataLabels: {
-        //   enabled: true
-        // }
-      }
-    },
     series: [
     {
           name: $("#chartverifytitle").html(),
-          color: 'rgba(139,195,75,1)',
+          color: 'rgba(100,220,118,1)',
           data: $.parseJSON($("#chartverify").html())
         },
         {
           name: $("#chartunverifytitle").html(),
-          color: 'rgba(126,86,134,.9)',
-          data: $.parseJSON($("#chartunverify").html())
+          color: 'rgba(128,100,220,.8)',
+          data: $.parseJSON($("#chartunverify").html()),
+          type: 'line',
         }
     ]
   });

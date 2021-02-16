@@ -41,24 +41,17 @@ function highChartcmsTicket()
       borderWidth: 1,
       shadow: false
     },
-    plotOptions: {
-      column: {
-        stacking: 'normal',
-        // dataLabels: {
-        //   enabled: true
-        // }
-      }
-    },
     series: [
         {
           name: $("#charttickettitle").html(),
-          color: 'rgba(139,195,75,1)',
+          color: 'rgba(205,220,55,1)',
           data: $.parseJSON($("#chartdataticket").html())
         },
         {
           name: $("#chartmessagetitle").html(),
-          color: 'rgba(126,86,134,.9)',
-          data: $.parseJSON($("#chartdatamessage").html())
+          color: 'rgba(100,180,220,.9)',
+          data: $.parseJSON($("#chartdatamessage").html()),
+          type: 'line',
         }
 
     ]
