@@ -156,7 +156,7 @@
 }
 
 // answer box
-.ticketPage .answerBox{
+.ticketPage .quickReply{
   font-size: 1.4rem;
   line-height: 2;
   background-color: #fff;
@@ -164,16 +164,6 @@
   overflow: hidden;
   padding: 1rem;
   margin: 1rem 0;
-}
-.ticketPage .answerBox [class^="sf-"]{
-  font-size: 2rem;
-  width: 3.6rem;
-  height: 3.6rem;
-  line-height: 3.6rem;
-  display: block;
-}
-.ticketPage .answerBox textarea{
-  padding: 1rem;
 }
 
 

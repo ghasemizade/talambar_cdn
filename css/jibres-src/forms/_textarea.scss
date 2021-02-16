@@ -37,6 +37,10 @@
 .txt[rows="1"]{
 	line-height:1;
 }
+.txt[rows="1"][data-autoResize]{
+	line-height:2rem;
+	padding: 0.7rem 1rem;
+}
 .txt.error{
 	border-color:rgba(255,0,0,0.5);
 }
