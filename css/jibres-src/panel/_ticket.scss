@@ -100,10 +100,16 @@
   text-align: initial;
 }
 .ticketPage .messageBox p{
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .ticketPage .messageBox p:last-child{
   margin-bottom: 0;
+}
+.ticketPage .messageBox b{
+  font-weight: 900;
+}
+.ticketPage .messageBox a{
+  font-weight: 700;
 }
 .ticketPage .messageBox footer{
   color: #444;
