@@ -24,6 +24,7 @@ function runDataResponse()
 	$(document).on('input', 'textarea.txt[data-autoResize]', function()
 	{
 		autosizeTextarea(this);
+		textareaTypedChar(this);
 	});
 
 
@@ -36,8 +37,28 @@ function runDataResponse()
 
 function autosizeTextarea(_this)
 {
+	var minrow =  $(_this).attr('data-rows-min');
   _this.rows = 1
-  _this.rows = Math.ceil((_this.scrollHeight - 34) / 20) + 1;
+  var newRows = Math.ceil((_this.scrollHeight - 34) / 20) + 1;
+  if(newRows < minrow)
+  {
+  	newRows = minrow;
+  }
+  _this.rows = newRows;
+}
+
+function textareaTypedChar(_this)
+{
+	var myText = $.trim(_this.value);
+	var charCount = 0;
+	var wordCount = 0;
+	if(myText)
+	{
+		charCount = myText.length;
+		wordCount = myText.split(' ').length;
+	}
+	$(_this).attr('data-count-char', charCount);
+	$(_this).attr('data-count-word', wordCount);
 }
 
 
