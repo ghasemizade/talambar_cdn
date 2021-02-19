@@ -12,6 +12,9 @@
   border-radius: .5rem;
   transform: skew(-9deg);
 }
+[dir="rtl"] .hey{
+  line-height: 2rem;
+}
 .hey .inside{
   padding: 1.3rem 2rem;
   border: 2px solid transparent;
