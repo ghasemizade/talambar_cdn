@@ -5,6 +5,9 @@
 [dir="rtl"] [data-env="Jibres"][data-in="site"] #pageHeader .pwa .action{
 	font-weight: 900;
 }
+[data-env="Jibres"][data-in="site"][data-page="home"] #pageHeader .pwa .title{
+	font-weight: 400;
+}
 #homeLanding{
 	color: #fff;
 	min-height: 35rem;
