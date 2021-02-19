@@ -20,6 +20,21 @@
 svg.circle-bottom-left{width: 400px;height:400px;fill:#f7f7f9;position:absolute;left:0;bottom:0;pointer-events:none;z-index: 2;}
 svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute;right:0;bottom:0;pointer-events:none;z-index: 2;}
 
+// certificate sprite
+[class^="jcert-"]{display: inline-block; background: url('../img/certificates/200px/jibres-certificate-sprite-200px.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left;}
+.jcert_cbi{width:200px;height:200px;background-position:-0 -0;}
+.jcert_bmn{width:200px;height:200px;background-position:-0 -200px;}
+.jcert_brand{width:200px;height:200px;background-position:-0 -400px;}
+.jcert_chambertrust{width:200px;height:200px;background-position:-0 -600px;}
+.jcert_daneshbonyan{width:200px;height:200px;background-position:-0 -800px;}
+.jcert_enamad{width:200px;height:200px;background-position:-0 -1000px;}
+.jcert_irnic{width:200px;height:200px;background-position:-0 -1200px;}
+.jcert_nsr{width:200px;height:200px;background-position:-0 -1400px;}
+.jcert_samandehi{width:200px;height:200px;background-position:-0 -1600px;}
+.jcert_shaparak{width:200px;height:200px;background-position:-0 -1800px;}
+
+
+
 // support line
 #jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 10rem 0 0;color:$jibres;text-align: center;font-size: 1.4rem;}
 #jibresSupportLine .btn{margin: 2rem auto 7rem;font-weight:900;}
