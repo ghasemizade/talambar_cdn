@@ -8,6 +8,9 @@
 [data-env="Jibres"][data-in="site"][data-page="home"] #pageHeader .pwa .title{
 	font-weight: 400;
 }
+[dir="ltr"] [data-env="Jibres"][data-in="site"][data-page="home"] #jibresLastLine .langlist a{
+	font-family: tahoma;
+}
 #homeLanding{
 	color: #fff;
 	min-height: 35rem;
