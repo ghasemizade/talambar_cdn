@@ -1,4 +1,7 @@
 
+[data-env="Jibres"][data-in="site"][data-page="home"] .txtB{
+	font-weight: 900!important;
+}
 #homeLanding{
 	color: #fff;
 	min-height: 35rem;
@@ -183,16 +186,16 @@
 #jibresDomain{position:relative;overflow: hidden;font-size: 1.5rem;padding: 5rem 0 10rem;background-color: #f7f7f9;color: #415161}
 #jibresDomain h2{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 5rem;position: relative;line-height: 5rem}
 #jibresDomain h2:after{content: "";width: 7%;min-width:5rem; border-top:3px solid #ff5151;display:block;margin: 2.2rem auto 0;transition:0.3s}
-#jibresDomain h2 a{transition:0.3s;}
+#jibresDomain h2 a{transition:0.3s;font-weight: 900;}
 #jibresDomain:hover h2:after{width: 10%;}
 #jibresDomain:active h2:after{width: 15%;}
 #jibresDomain .domainQuickBuy{background-color: #eee;color:#415161}
 
 
 #saleChannels{padding-top:0;font-size: 1.4rem;text-align: center;position:relative;}
-#saleChannels h3{font-size: 3em;color:#444;font-weight: 700;}
-#saleChannels h4{font-size: 1.3em;color: #333;font-weight: 700;}
-[dir="rtl"] #saleChannels h4{font-size: 1.1em;font-weight: 800;}
+#saleChannels h3{font-size: 3em;color:#444;font-weight: 900;}
+#saleChannels h4{font-size: 1.3em;color: #333;}
+[dir="rtl"] #saleChannels h4{font-size: 1.1em;}
 #saleChannels .item{background-color: #ffffff;border-radius: 0.5em;box-shadow: 0 0 1.5em rgba(220,90,90,0.15);padding: 20px 10px 10px;-webkit-transition: all 0.3s linear 0s;transition: all 0.3s linear 0s;overflow: hidden;height: 100%;}
 #saleChannels .item:hover{box-shadow: 0 0 2em rgba(220,90,90,0.3);}
 #saleChannels .item:active{box-shadow: 0 0 2em rgba(220,90,90,0.4);}
@@ -211,7 +214,7 @@
 
 #keepitsimple{background:#3850cc;background:-webkit-linear-gradient(left,#3230a0, #4895ff 70%,#aabbff);background:linear-gradient(90deg,#3230a0, #4895ff 70%,#aabbff);color:#fff;position:relative;}
 #keepitsimple .title{font-size:2em;text-align:center;padding:10rem 5px 15rem;}
-#keepitsimple .title h3{font-weight:900;font-size:5em;line-height:2;margin-bottom:0;position:relative;margin-bottom:1em;}
+#keepitsimple .title h3{font-weight:900;font-size:4em;line-height:2;position:relative;margin-bottom:3rem;}
 [data-pwa] #keepitsimple .title h3{font-size:3rem;}
 #keepitsimple .title h3:after{content:"";position:absolute;bottom:0;right:0;left:0;width:5rem;height:1px;margin:0 auto;background-color:#ddd;transition:0.3s;}
 #keepitsimple:hover .title h3:after{background-color:#fff;width:10rem;}
@@ -296,7 +299,7 @@
 #jibresForm h3{
 	font-size: 2.8rem;
 	// color: #1565c0;
-	font-weight: 700;
+	font-weight: 900;
 }
 #jibresForm p{
 	color: #343444;
@@ -374,7 +377,7 @@
 #jibresFeatures h4{
 	color: #c8095a;
 	font-size: 2rem;
-	font-weight: 700;
+	font-weight: 900;
 	margin: 0 0 1rem!important;
 }
 #jibresFeatures p{
@@ -420,7 +423,7 @@
 }
 #jibresApp h2{
 	font-size: 4rem;
-	font-weight: 700;
+	font-weight: 900;
 }
 [dir="rtl"] #jibresApp h2{
 	font-size: 3.5rem;
@@ -496,20 +499,22 @@
 }
 #jibresPrivacy h3{
 	font-size: 6rem;
+}
+#jibresPrivacy h3 a{
 	font-weight: 900;
 }
+
 [dir="rtl"] #jibresPrivacy h3{
-	font-size: 5rem;
+	font-size: 4rem;
 }
 [data-pwa] #jibresPrivacy h3{
-	font-size: 3rem!important;
+	font-size: 2.5rem!important;
 }
 #jibresPrivacy h3 a{
 	color: #f5f5f7!important;
 }
 #jibresPrivacy p{
 	font-size: 2rem;
-	font-weight: 700;
 	margin: 0;
 }
 [dir="rtl"] #jibresPrivacy p{
