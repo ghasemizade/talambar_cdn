@@ -2,6 +2,10 @@
 [data-env="Jibres"][data-in="site"][data-page="home"] .txtB{
 	font-weight: 900!important;
 }
+[data-env="Jibres"][data-in="site"][data-page="home"] a{
+  -webkit-user-drag: none;
+  user-drag: none;
+}
 #homeLanding{
 	color: #fff;
 	min-height: 35rem;
