@@ -203,6 +203,9 @@ a {
   -webkit-text-decoration-skip: objects;
   -webkit-tap-highlight-color:transparent;
 
+  -webkit-user-drag: none;
+  user-drag: none;
+
   color: #1a0aaa;
   text-decoration:none;
   background:transparent;
