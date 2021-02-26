@@ -4,7 +4,10 @@ body.errorPage{background-color:#0e5860;color:#fff;width: 100%;height: 100%;over
 body.errorPage.s20{background-color:#102060;}
 body.errorPage.s40{background-color:#400000;}
 body.errorPage.s41{background-color:#200000;}
+body.errorPage.s41[data-header="418"]{background-color:#e91e63;}
 body.errorPage.s42{background-color:#900000;}
+body.errorPage.s43{background-color:#ff5722;}
+body.errorPage.s45{background-color:#673ab7;}
 body.errorPage.s50{background-color:#750700;}
 body.errorPage.s51{background-color:#600000;}
 .errorPage .wrapper{min-width:280px;width:80%;margin:0 auto;padding:5% 0 0;}
