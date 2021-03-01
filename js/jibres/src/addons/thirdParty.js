@@ -18,6 +18,10 @@ function loadScriptRecaptcha()
   {
     // load script
     myUrl = "https://www.google.com/recaptcha/api.js?render=" + myRecaptcha;
+    if(urlLangFa())
+    {
+      myUrl += '&hl=fa';
+    }
     fileLoader(myUrl, 'runRecaptcha', true, undefined, 'async');
   }
 }
