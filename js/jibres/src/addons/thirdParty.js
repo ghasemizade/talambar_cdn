@@ -2,10 +2,24 @@
 
 function loadThirdPartyScripts(_force, _page)
 {
+  loadScriptRecaptcha();
   loadScriptGtag();
   loadScriptTawk();
   loadScriptRaychat();
   loadScriptImber();
+}
+
+
+function loadScriptRecaptcha()
+{
+  var myEl = $('meta[name="recaptcha"]');
+  var myRecaptcha = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myRecaptcha)
+  {
+    // load script
+    myUrl = "https://www.google.com/recaptcha/api.js?render=" + myRecaptcha;
+    fileLoader(myUrl, 'runRecaptcha', true, undefined, 'async');
+  }
 }
 
 
@@ -31,7 +45,7 @@ function loadScriptTawk()
     // load script
     myUrl = 'https://embed.tawk.to/' + myTawk + '/default';
 
-    fileLoader(myUrl, 'runTawk', true, undefined, 'async utf8 crossorigin');
+    fileLoader(myUrl, 'runTawk', true, undefined, 'defer utf8 crossorigin');
   }
 }
 
@@ -49,7 +63,7 @@ function loadScriptRaychat()
       myUrl += '&rid=' +localStorage.getItem("rayToken");
     }
 
-    fileLoader(myUrl, 'runRaychat', true, undefined, 'async utf8 crossorigin');
+    fileLoader(myUrl, 'runRaychat', true, undefined, 'defer utf8 crossorigin');
   }
 }
 
@@ -76,7 +90,7 @@ function loadScriptImber()
     // append element of imber
     $('.js').append('<div id="imber-top-parent"></div>');
 
-    fileLoader(myUrl, 'runImber', true, undefined, 'async utf8 crossorigin');
+    fileLoader(myUrl, 'runImber', true, undefined, 'defer utf8 crossorigin');
   }
 }
 
