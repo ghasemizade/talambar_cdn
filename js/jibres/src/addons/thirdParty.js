@@ -49,7 +49,7 @@ function loadScriptTawk()
     // load script
     myUrl = 'https://embed.tawk.to/' + myTawk + '/default';
 
-    fileLoader(myUrl, 'runTawk', true, undefined, 'defer utf8 crossorigin');
+    fileLoader(myUrl, 'runTawk', false, undefined, 'defer utf8 crossorigin');
   }
 }
 
@@ -67,7 +67,7 @@ function loadScriptRaychat()
       myUrl += '&rid=' +localStorage.getItem("rayToken");
     }
 
-    fileLoader(myUrl, 'runRaychat', true, undefined, 'defer utf8 crossorigin');
+    fileLoader(myUrl, 'runRaychat', false, undefined, 'defer utf8 crossorigin');
   }
 }
 
