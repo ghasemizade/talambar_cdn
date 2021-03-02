@@ -98,6 +98,9 @@
 }
 .ticketPage .messageBox .message{
   text-align: initial;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 .ticketPage .messageBox p{
   margin-bottom: 0.5rem;
