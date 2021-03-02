@@ -12,8 +12,8 @@ function loadThirdPartyScripts(_force, _page)
 
 function loadScriptRecaptcha()
 {
-  var myEl = $('meta[name="recaptcha"]');
-  var myRecaptcha = myEl.attr('content');
+  var myEl = $('form [name="recaptcha_sitekey"]');
+  var myRecaptcha = myEl.val();
   if(myEl && myEl.length > 0 && myRecaptcha)
   {
     // load script
