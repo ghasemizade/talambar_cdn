@@ -19,7 +19,7 @@ function runRecaptcha()
 
   grecaptcha.ready(function()
   {
-    grecaptcha.execute(site_key, {action: 'submit'}).then(function(token)
+    grecaptcha.execute(site_key, {action: gaction}).then(function(token)
     {
       // Add your logic to submit to your backend server here.
       tokenEl.val(token);
