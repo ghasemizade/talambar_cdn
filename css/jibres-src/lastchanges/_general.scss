@@ -9,8 +9,6 @@
 .radius10px{@include border-radius(10px)}
 .radius1em{@include border-radius(10em)}
 
-.grecaptcha-badge {visibility: hidden;}
-[data-desktop] [data-in="enter"] .grecaptcha-badge {visibility: visible;}
 
 .box50{display:block;margin:0 auto;width:50px;overflow:hidden;}
 .box100{display:block;margin:0 auto;width:100px;overflow:hidden;}
