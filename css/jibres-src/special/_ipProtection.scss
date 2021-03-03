@@ -1,46 +1,36 @@
 body.ipProtection{
 	height: 100%!important;
-	background-color: #f2f2f2!important
-
+	background-color: #f2f2f2!important;
+	user-select: none;
 }
 body.ipProtection::before{
 	content: "";
-	background-color: #0AC878;
+	background-color: #c80a5a;
 	position: fixed;
 	z-index: -1;
-	transform: rotate(-45deg);
-	width: 50vh;
-	height: 50vh;
-	top: -10vh;
-	right: -10vh;
-}
-body.ipProtection main{
-	box-sizing: border-box;
-	background-color: #fff;
-	font-size: 1.4rem;
-	border-radius: 1rem;
-	margin: 5vh 5vh 0;
-	height: 90%;
-	padding: 5vh;
-	position: relative;
-	text-align: center;
-}
-body.ipProtection h1{
-	font-size:3rem;
-	text-align: center;
-	right: 5vh;
-	left: 5vh;
-	overflow: hidden;
-	line-height: 5rem;
-	height: 5rem;
-	margin: 5rem 0 0;
-}
-body.ipProtection h2{
-	font-size: 1.6rem;
-	text-align: center;
-	position: absolute;
-	bottom: 2rem;
+	width: 100%;
+	height: 30vh;
+	top: 0;
 	right: 0;
 	left: 0;
 }
+body.ipProtection section{
+	margin-top: 5rem;
+	font-size: 1.4rem;
+	border-radius: 1rem;
+	position: relative;
+}
+body.ipProtection section svg{
+	width: 10rem;
+	height: auto;
+	max-width: 30%;
+	margin-bottom: 1rem;
+}
+body.ipProtection form{
+	overflow: hidden;
 
+}
+body.ipProtection .g-recaptcha {
+	display: inline-block;
+	max-width: 100%!important;
+}
