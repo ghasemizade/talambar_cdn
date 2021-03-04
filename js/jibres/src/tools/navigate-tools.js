@@ -58,22 +58,30 @@ function analyseAjaxRedirect(_result)
  // redirect it's okay and we have redirect
   if(_result && _result.ok === true && _result.redirect)
   {
-    if(_result.replaceState)
+    var a = $('<a href="' + _result.redirect + '"></a>');
+    if(a.isAbsoluteURL() || _result.redirect)
     {
-      Navigate(
-      {
-        url: _result.redirect,
-        replace: true
-      });
-      return true;
+      location.replace(_result.redirect);
     }
     else
     {
-      Navigate(
+      if(_result.replaceState)
       {
-        url: _result.redirect
-      });
-      return true;
+        Navigate(
+        {
+          url: _result.redirect,
+          replace: true
+        });
+        return true;
+      }
+      else
+      {
+        Navigate(
+        {
+          url: _result.redirect
+        });
+        return true;
+      }
     }
   }
   return false;
