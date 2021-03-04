@@ -308,6 +308,8 @@
         }
 
         $form.trigger('ajaxify:fail', _jqXHR, _textStatus, _errorThrown);
+        // regenerate recaptcha
+        runRecaptcha();
       })
       .always(function(a1, a2, a3)
       {
