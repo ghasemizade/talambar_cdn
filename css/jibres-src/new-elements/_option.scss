@@ -127,3 +127,11 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 {
 	font-size: 1.4rem;
 }
+
+// table
+[data-panel] [data-option] table{
+	margin: 0;
+	border-radius: 0;
+	border-top: 1px solid #d5d7d8;
+}
+
