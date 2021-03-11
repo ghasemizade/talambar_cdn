@@ -133,5 +133,14 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 	margin: 0;
 	border-radius: 0;
 	border-top: 1px solid #d5d7d8;
+	line-height: 2.6rem;
 }
-
+[data-panel] [data-option] table thead th{
+	background-color: #eceff1;
+}
+[data-panel] [data-option] table tbody tr{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+[data-panel] [data-option] table tbody tr:last-child{
+	border-bottom: none;
+}

@@ -82,12 +82,13 @@
 	color: #808080;
 	transition:0.3s;
 }
-.tbl1.minimal thead tr{
-	font-size: 0.9em;
+.tbl1.minimal th {
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
 }
 .tbl1.minimal td {
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
 }
 .tbl1 td.breakWord {
 	word-break:break-word;
