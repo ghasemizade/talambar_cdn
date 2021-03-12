@@ -118,15 +118,31 @@
 [dir="rtl"] .tbl1 tr th:first-of-type, [dir="rtl"] .tbl1 tr td:first-of-type{
 	padding-right: 3rem;
 }
+[dir="ltr"][data-pwa] .tbl1 tr th:first-of-type, [dir="ltr"][data-pwa] .tbl1 tr td:first-of-type{
+	padding-left: 1rem;
+}
+[dir="rtl"][data-pwa] .tbl1 tr th:first-of-type, [dir="rtl"][data-pwa] .tbl1 tr td:first-of-type{
+	padding-right: 1rem;
+}
+
 
 .tbl1.ltr tr th:first-of-type, .tbl1.ltr tr td:first-of-type{
-	padding-left: 2rem;
+	padding-left: 3rem;
 	padding-right: 1rem;
 }
 .tbl1.rtl tr th:first-of-type, .tbl1.rtl tr td:first-of-type{
 	padding-left: 1rem;
-	padding-right: 2rem;
+	padding-right: 3rem;
 }
+[data-pwa] .tbl1.ltr tr th:first-of-type, [data-pwa] .tbl1.ltr tr td:first-of-type{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+[data-pwa] .tbl1.rtl tr th:first-of-type, [data-pwa] .tbl1.rtl tr td:first-of-type{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 .tbl1.ltr td {
 	text-align: left;
 }

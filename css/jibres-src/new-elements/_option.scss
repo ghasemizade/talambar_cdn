@@ -110,6 +110,13 @@
 }
 [data-panel] [data-option] footer{
 	border-top:1px solid #d5d7d8;
+	padding: 0 1rem 0 3rem;
+}
+[dir="rtl"] [data-panel] [data-option] footer{
+	padding: 0 3rem 0 1rem;
+}
+[data-pwa] [data-panel] [data-option] footer{
+	padding: 0 1rem;
 }
 // switch
 
@@ -162,4 +169,7 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 	display: inline-block;
 	line-height: 4rem;
 }
-
+[data-panel] [data-option] a.link [class^="sf-"]{
+	display: inline-block;
+	line-height: 4rem;
+}
