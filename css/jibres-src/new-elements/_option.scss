@@ -144,3 +144,11 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 [data-panel] [data-option] table tbody tr:last-child{
 	border-bottom: none;
 }
+[data-panel] [data-option] table img{
+	max-width: 10rem;
+	height: 2.4rem;
+}
+[data-panel] [data-option] table thead{
+	font-size: 1em;
+}
+
