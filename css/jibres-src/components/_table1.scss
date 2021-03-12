@@ -60,6 +60,16 @@
 	padding-right: 0;
 	padding-left: 1rem;
 }
+.tbl1.ltr th {
+	text-align:left;
+	padding-right: 1rem;
+	padding-left: 0;
+}
+.tbl1.rtl th {
+	text-align:right;
+	padding-right: 0;
+	padding-left: 1rem;
+}
 .tbl1 tr{
 	transition:0.3s;
 }
@@ -107,6 +117,21 @@
 }
 [dir="rtl"] .tbl1 tr th:first-of-type, [dir="rtl"] .tbl1 tr td:first-of-type{
 	padding-right: 3rem;
+}
+
+.tbl1.ltr tr th:first-of-type, .tbl1.ltr tr td:first-of-type{
+	padding-left: 2rem;
+	padding-right: 1rem;
+}
+.tbl1.rtl tr th:first-of-type, .tbl1.rtl tr td:first-of-type{
+	padding-left: 1rem;
+	padding-right: 2rem;
+}
+.tbl1.ltr td {
+	text-align: left;
+}
+.tbl1.rtl td {
+	text-align: right;
 }
 
 .tbl1 tr th{
