@@ -105,7 +105,12 @@
     padding-right: 1rem;
     padding-left: 1rem;
 }
-
+// fit
+.row.fit > .c, .row.fit > [class*=c-]{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 // flex custom modes
 .flex-column {

@@ -138,6 +138,9 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 [data-panel] [data-option] table thead th{
 	background-color: #eceff1;
 }
+[data-panel] [data-option] table tbody th{
+	color: #aaa;
+}
 [data-panel] [data-option] table tbody tr{
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
@@ -151,4 +154,7 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 [data-panel] [data-option] table thead{
 	font-size: 1em;
 }
-
+[data-panel] [data-option] table time{
+	margin: 0;
+	color: inherit;
+}
