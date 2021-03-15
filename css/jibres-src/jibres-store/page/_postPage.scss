@@ -70,7 +70,7 @@
 	color: #333;
 	padding: 1rem;
 	font-size: 1.6rem;
-	margin: 0 0 1rem;
+	margin: 0 0 1rem!important;
 	line-height: 3rem;
 	transition: 0.3s;
 }
@@ -87,7 +87,7 @@
 }
 
 
-.postBlock article{
+.postBlock .text{
 	margin: 2rem 0;
 	line-height:2.5rem;
 	font-size: 1.6rem;
@@ -100,55 +100,56 @@
 	transition: 0.3s;
 }
 
-.postBlock article:hover{
+.postBlock .text:hover{
 	box-shadow: 0px 0px 0.5rem 0px rgba(0, 0, 0, 0.1);
 }
-[dir="rtl"] .postBlock article{
+[dir="rtl"] .postBlock .text{
 	line-height:3rem;
 }
-.postBlock article h2{
+.postBlock .text h2{
 	font-size: 2.6rem;
 	font-weight: 900;
 }
-.postBlock article h3{
+.postBlock .text h3{
 	font-size: 2.4rem;
 	font-weight: 700;
 }
-.postBlock article h4{
+.postBlock .text h4{
 	font-size: 2.0rem;
 	font-weight: 700;
 }
-.postBlock article h5{
+.postBlock .text h5{
 	font-size: 1.6rem;
 	font-weight: 700;
 }
-.postBlock article h6{
+.postBlock .text h6{
 	font-size: 1.4rem;
 	font-weight: 700;
 }
 // pwa
-[data-pwa] .postBlock article{
+[data-pwa] .postBlock .text{
 	font-size: 1.4rem;
 }
-.postBlock article h2{
+[data-pwa] .postBlock .text h2{
 	font-size: 2rem;
 }
-.postBlock article h3{
+[data-pwa] .postBlock .text h3{
 	font-size: 1.8rem;
 }
-.postBlock article h4{
+[data-pwa] .postBlock .text h4{
 	font-size: 1.6rem;
 }
-.postBlock article h5{
+[data-pwa] .postBlock .text h5{
 	font-size: 1.4rem;
 }
-.postBlock article h6{
+[data-pwa] .postBlock .text h6{
 	font-size: 1.2rem;
 }
-.postBlock article p{
+
+.postBlock .text p{
 	margin-bottom: 1rem;
 }
-.postBlock article p:last-child{
+.postBlock .text p:last-child{
 	margin-bottom: 0;
 }
 .postBlock .gallery{
