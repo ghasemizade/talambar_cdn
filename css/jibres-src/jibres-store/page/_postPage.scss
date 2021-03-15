@@ -156,6 +156,16 @@
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
+.postBlock ul{
+	list-style: square outside none;
+	margin: 0 2rem 1rem;
+}
+.postBlock ol{
+	margin: 0 2rem 1rem;
+}
+.postBlock li{
+	padding: 0.5rem 1rem;
+}
 
 .postBlock .gallery a{
 	display: block;
