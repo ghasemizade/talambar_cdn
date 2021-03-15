@@ -269,10 +269,13 @@ img.profileAvatar{
 }
 .ck.ck-content.ck-editor__editable ul{
   list-style: square inside;
-  margin: 1.5rem 0 2rem;
+  margin: 0 2rem 1rem;
+}
+.ck.ck-content.ck-editor__editable ol{
+  margin: 0 2rem 1rem;
 }
 .ck.ck-content.ck-editor__editable li{
-  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
 }
 #aProductData .ck.ck-content.ck-editor__editable{
   min-height: 120px;
