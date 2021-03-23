@@ -39,9 +39,11 @@ function editorRunner(_el)
   var myEl = _el.get(0);
 	ClassicEditor.create( myEl,
   {
-
-		toolbar: {
-			items: [
+  	//plugins: [ Autoformat, CodeBlock ],
+		toolbar:
+		{
+			items:
+			[
 				'heading',
 				'|',
 				'bold',
@@ -56,8 +58,9 @@ function editorRunner(_el)
 				'alignment',
 				'imageUpload',
 				'blockQuote',
+				'codeBlock',
 				'insertTable',
-				'mediaEmbed',
+				// 'mediaEmbed',
 				'undo',
 				'redo'
 			]
