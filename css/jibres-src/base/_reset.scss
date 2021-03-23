@@ -304,20 +304,26 @@ pre {
   word-wrap: break-word; /* IE */
   display:block;
   direction: ltr;
+  text-align: left;
   font-family: monospace, sans-serif;
   font-size: 1em;
   overflow: auto;
   margin: 0;
-  padding: 1em;
+  padding: 1rem;
   border: 0;
   font-weight: normal;
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
   @include user-select(text);
-  background-color:#333;
+  background-color:#343d46;
+  transition:0.3s;
   color:#eee;
-  margin-bottom:1em;
+  margin-bottom:1rem;
+  border-radius:0.5rem;
+}
+pre:hover{
+  background-color:#333;
 }
 kbd{
   margin: 0;
