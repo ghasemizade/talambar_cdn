@@ -112,22 +112,27 @@
 .postBlock .text h2{
 	font-size: 2.6rem;
 	font-weight: 900;
+	margin: 1rem 0 1rem;
 }
 .postBlock .text h3{
 	font-size: 2.4rem;
 	font-weight: 700;
+	margin: 1rem 0 1rem;
 }
 .postBlock .text h4{
 	font-size: 2.0rem;
 	font-weight: 700;
+	margin: 1rem 0 0.5rem;
 }
 .postBlock .text h5{
 	font-size: 1.6rem;
 	font-weight: 700;
+	margin: 1rem 0 0.5rem;
 }
 .postBlock .text h6{
 	font-size: 1.4rem;
 	font-weight: 700;
+	margin: 1rem 0 0.5rem;
 }
 // pwa
 [data-pwa] .postBlock .text{
@@ -153,16 +158,12 @@
 	margin-bottom: 2.5rem;
 	color: #282828;
 }
-.postBlock .text p + pre{
-	margin-bottom: 1rem;
-}
 .postBlock .text p:last-child{
 	margin-bottom: 0;
 }
 .postBlock .text pre{
-	margin-bottom: 1rem 0 2rem;
+	margin: 1rem 0 3rem;
 }
-
 .postBlock .gallery{
 	position: relative;
 	margin-top: 2rem;
