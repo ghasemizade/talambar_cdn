@@ -153,9 +153,16 @@
 	margin-bottom: 2.5rem;
 	color: #282828;
 }
+.postBlock .text p + pre{
+	margin-bottom: 1rem;
+}
 .postBlock .text p:last-child{
 	margin-bottom: 0;
 }
+.postBlock .text pre{
+	margin-bottom: 1rem 0 2rem;
+}
+
 .postBlock .gallery{
 	position: relative;
 	margin-top: 2rem;
