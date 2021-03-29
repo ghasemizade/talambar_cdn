@@ -170,6 +170,11 @@ html[lang=fa] [data-panel] [data-option] .switch1 input:checked+label:first-of-t
 	display: inline-block;
 	line-height: 4rem;
 }
+[data-panel] [data-option] footer .btn.link{
+	line-height: 2.4rem;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+}
 [data-panel] [data-option] a.link [class^="sf-"]{
 	display: inline-block;
 	line-height: 4rem;
