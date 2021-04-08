@@ -51,8 +51,11 @@
 	padding-bottom: 2rem;
 	text-align: center;
 }
-#jHeaderRafiei nav a{
+#jHeaderRafiei nav li{
 	display: inline-block;
+}
+#jHeaderRafiei nav a{
+	display: block;
 	color: #fff;
 	line-height: 2rem;
 	margin: 0 0.5rem;
