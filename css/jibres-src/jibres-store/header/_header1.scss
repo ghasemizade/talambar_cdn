@@ -41,9 +41,12 @@
 .jHeader1 nav:hover{
 	opacity: 1;
 }
+.jHeader1 nav li{
+	display: inline-block;
+}
 .jHeader1 nav a{
 	padding: 0 0.5em;
-	display: inline-block;
+	display: block;
 	transition: 0.3s;
 }
 .jHeader1 nav a:hover{
