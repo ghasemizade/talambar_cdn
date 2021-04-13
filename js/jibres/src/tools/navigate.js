@@ -322,7 +322,7 @@
     };
 
     // set timeout for fetch page
-    options.timeout = 30000;
+    options.timeout = 60000;
 
     var myXhr = $.ajax(options)
     .done(function(_data, _textStatus, _jqXHR)
