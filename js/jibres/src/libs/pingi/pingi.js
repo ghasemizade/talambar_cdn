@@ -16,7 +16,7 @@ function pingiWebsite(_firstTime)
       {
         url: window.location.protocol + "//" + window.location.hostname,
         cache: false,
-        timeout: 500,
+        timeout: 30000,
         processData: false,
         contentType: false,
         // dataType: 'json',
@@ -54,11 +54,11 @@ function pingiRunner()
     // show notif if we cant see website
     if($('html').attr('lang') === 'fa')
     {
-      notif('warn', "ما نمی‌توانیم  "+ window.location.hostname + " را ببینیم", 'ارتباط از دست رفت!', 8000, {'position':'topCenter', 'icon':'sf-exclamation-circle', 'displayMode':1});
+      notif('warn', "ما نمی‌توانیم  "+ window.location.hostname + " را ببینیم", 'ارتباط از دست رفت!', 5000, {'position':'topCenter', 'icon':'sf-exclamation-circle', 'displayMode':1});
     }
     else
     {
-      notif('warn', "We can't see "+ window.location.hostname, 'Connection is lost', 8000, {'position':'topCenter', 'icon':'sf-exclamation-circle', 'displayMode':1});
+      notif('warn', "We can't see "+ window.location.hostname, 'Connection is lost', 5000, {'position':'topCenter', 'icon':'sf-exclamation-circle', 'displayMode':1});
     }
 
 
@@ -91,11 +91,11 @@ function pingiRunner()
     {
       if($('html').attr('lang') === 'fa')
       {
-        notif('okay', "ما روی  "+ window.location.hostname + " آنلاین هستیم", 'اتصال برقرار شد', 5000, {'position':'topCenter', 'icon':'sf-link', 'displayMode':1});
+        notif('okay', "الان می‌توانیم  "+ window.location.hostname + " را ببینیم", 'اتصال برقرار شد', 5000, {'position':'topCenter', 'icon':'sf-link', 'displayMode':1});
       }
       else
       {
-        notif('okay', "We are online on "+ window.location.hostname, 'Connection is re-established', 5000, {'position':'topCenter', 'icon':'sf-link', 'displayMode':1});
+        notif('okay', "Now we can see "+ window.location.hostname, 'Connection is re-established', 5000, {'position':'topCenter', 'icon':'sf-link', 'displayMode':1});
       }
     }
 
@@ -110,11 +110,11 @@ function pingiRunner()
     // show notif if we don't have internet connection
     if($('html').attr('lang') === 'fa')
     {
-      notif('fatal', 'اینترنت شما قطع شده است!', "لطفا ارتباط اینترنت خود را بررسی کنید", 10000, {'position':'topCenter', 'icon':'sf-plug', 'displayMode':1});
+      notif('fatal', 'اینترنت شما قطع است!', "لطفا ارتباط اینترنت خود را بررسی کنید", 8000, {'position':'topCenter', 'icon':'sf-plug', 'displayMode':1});
     }
     else
     {
-      notif('fatal', "Check your internet connection", 'No internet!', 10000, {'position':'topCenter', 'icon':'sf-plug', 'displayMode':1});
+      notif('fatal', "Check your internet connection", 'No internet!', 8000, {'position':'topCenter', 'icon':'sf-plug', 'displayMode':1});
     }
 
 
@@ -133,6 +133,33 @@ function pingiRunner()
       // after a delay try to recheck connection
       setTimeout(pingiWebsite, 10000);
     }
+  });
+
+  // show message if internet connection is lost
+  window.addEventListener("offline", function() {
+    if($('html').attr('lang') === 'fa')
+    {
+      notif('warn', 'اینترنت شما قطع شده است!', '', 2000, {'icon':'sf-plug', 'displayMode':1});
+    }
+    else
+    {
+      notif('warn', 'No internet Connection!', '', 2000, {'icon':'sf-plug', 'displayMode':1});
+    }
+  });
+
+
+  // show message if internet connection is lost
+  window.addEventListener("online", function() {
+    if($('html').attr('lang') === 'fa')
+    {
+      notif('info', 'اینترنت شما مجدد وصل شد!', '', 3000, {'icon':'sf-plug', 'displayMode':1});
+    }
+    else
+    {
+      notif('info', 'Your internet is back!', '', 3000, {'icon':'sf-plug', 'displayMode':1});
+    }
+
+    $("body").attr('data-offline', null);
   });
 }
 
