@@ -13,7 +13,7 @@
       contentType: false,
       dataType: 'json',
       cache: false,
-      timeout: 60000,
+      timeout: 100000,
       abort: false,
       autoScroll: false,
       async: true,
