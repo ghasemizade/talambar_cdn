@@ -55,11 +55,14 @@
 .postBlock header .postTitleBox img{
 	margin-bottom: 0;
 	min-width: 12rem;
-	height: 12rem;
+	max-height: 25rem;
 }
 [data-pwa] .postBlock .postTitleBox img{
 	min-width: 8rem;
 	height: 8rem;
+}
+.postBlock header .postTitleBox h2{
+	padding: 0 1rem;
 }
 
 // excerpt
