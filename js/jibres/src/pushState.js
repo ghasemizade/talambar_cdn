@@ -67,6 +67,8 @@ $(document).ready(function()
   showWarnHack();
   pushStateSiftal(true);
 
+  // detect clinet timezone
+  timezoneDetector()
   // call some static function without need to run with pushState
   inputChecker();
   // handle drag status

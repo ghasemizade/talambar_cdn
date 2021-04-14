@@ -53,6 +53,7 @@ var myModuleFiles =
 	'src/tools/forms.js',
 
 	// use some utitlity
+	'src/utility/cookie.js',
 	'src/utility/url.js',
 	'src/utility/fnCaller.js',
 	'src/utility/fitNumber.js',
@@ -68,6 +69,7 @@ var myModuleFiles =
 	'src/utility/consoleMsg.js',
 	'src/utility/handleDrag.js',
 	'src/utility/resizeDetector.js',
+	'src/utility/timezoneDetector.js',
 
 	'src/utility/input-files.js',
 	'src/utility/language.js',
