@@ -10,11 +10,17 @@
 .zeroSide .items{
 	border-radius:0;
 }
+.items ul{
+	list-style:none;
+	margin:0;
+}
 .items li{
 	min-height: $myItemHeight;
 	height: $myItemHeight;
 	line-height: $myItemLineHeight;
 	position: relative;
+	padding: 0;
+	margin: 0;
 	overflow: hidden;
 }
 .items li.multiLine{
