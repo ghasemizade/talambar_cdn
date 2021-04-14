@@ -4,14 +4,11 @@
 	font-size: 1.4rem;
 	padding-top: 2rem;
 }
-[data-desktop] #jHeaderRafiei{
-	height: 19rem;
-}
 #jHeaderRafiei::before{
 	content: '';
 	display: block;
 	background-color: #eda336;
-	position: absolute;
+	position: fixed;
 	max-width: 80vw;
 	height: 3rem;
 	top: -2rem;
@@ -24,8 +21,7 @@
 #jHeaderRafiei::after{
 	content: '';
 	display: block;
-	height: 60rem;
-	height: 50vh;
+	height: 18rem;
 	// background: url('/enterprise/rafiei/pattern/pattern3.png');
 	background-color: #053657;
 	position: absolute;
@@ -34,6 +30,7 @@
 	left: 0;
 	z-index: -1;
 }
+
 #jHeaderRafiei .logo{
 	width: 50rem;
 	display: block;
@@ -48,7 +45,7 @@
 #jHeaderRafiei nav{
 	display: block;
 	margin: 0 auto;
-	padding-bottom: 2rem;
+	padding-bottom: 6rem;
 	text-align: center;
 }
 #jHeaderRafiei nav li{
@@ -74,9 +71,23 @@
 }
 #jHeaderRafiei svg.bottom{
 	position: absolute;
-	top: 60rem;
-	top: 50vh;
+	top: 18rem;
 	right: 0;
 	left: 0;
 	z-index: -1;
 }
+
+
+// homepage header
+[data-page='home'] #jHeaderRafiei nav{
+	padding-bottom: 2rem;
+}
+[data-page='home'] #jHeaderRafiei svg.bottom{
+	top: 60rem;
+	top: 50vh;
+}
+[data-page='home'] #jHeaderRafiei::after{
+	height: 60rem;
+	height: 50vh;
+}
+
