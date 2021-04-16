@@ -123,10 +123,11 @@
 	font-weight: 700;
 	max-height: 5.6rem;
 	display: -webkit-box;
-	-webkit-line-clamp: 3;
+	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 	white-space: initial;
+	overflow: hidden;
 	margin: 0;
 }
 .puzzle .info h4{
@@ -139,6 +140,7 @@
 	-webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 	white-space: initial;
+	overflow: hidden;
 	margin: 0;
 }
 
@@ -234,20 +236,11 @@
 }
 
 
-[data-effect='zoom'] a:hover picture img{
-	transform:scale(0.95);
-}
-[data-effect='zoom'] a:focus picture img{
-	transform:scale(0.9);
-}
-[data-effect='zoom'] a:active picture img{
-	transform:scale(1);
-}
 [data-effect="zoom"] a[data-info="inside"]:hover{
-	transform:scale(0.95);
+	transform:scale(0.97);
 }
 [data-effect='zoom'] a[data-info="inside"]:focus{
-	transform:scale(0.9);
+	transform:scale(0.95);
 }
 [data-effect='zoom'] a[data-info="inside"]:active{
 	transform:scale(1);
