@@ -36,3 +36,7 @@
 [data-subdomain="developers"] #jibresPageTitle{background-color: #607d8b}
 #jibresGoToFa{display:block;position: relative;font-size: 2.5rem;line-height:6rem;font-weight:900;background-color: #ffc107;color: #000;text-align: center;padding:0;direction: rtl;}
 #jibresGoToFa img{height: 4rem;width: auto;margin: 0 1rem; vertical-align: middle;display: inline-block;border-radius: 0.5rem;}
+// pwa
+[data-pwa] #jibresGoToFa {font-size: 1rem;line-height:3rem;}
+[data-pwa] #jibresGoToFa b{display: none;}
+[data-pwa] #jibresGoToFa img{height: 2.4rem;}
