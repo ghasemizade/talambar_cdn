@@ -213,13 +213,15 @@
 // figure
 .postBlock figure{
 	position: relative;
-	overflow: hidden;
 	margin: 1rem auto;
+	overflow: hidden;
 	border-radius: 0.5rem;
 }
 .postBlock figure img{
 	display: block;
 	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 0.5rem;
 }
 .postBlock figcaption{
 	position: absolute;
