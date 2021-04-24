@@ -199,6 +199,17 @@
   left: initial;
   right: 0.5rem;
 }
+.postBlock figure{
+	overflow: hidden;
+	margin: 1rem auto;
+}
+.postBlock figure img{
+	display: block;
+	margin: 0 auto;
+}
+.postBlock figcaption{
+	font-size: 1.4rem;
+}
 
 .postBlock ul{
 	list-style: square outside none;
