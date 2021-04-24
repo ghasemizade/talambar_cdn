@@ -174,12 +174,14 @@
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
+
+// blockquote
 .postBlock blockquote{
 	background-color: #f9f9f9;
 	border-left: 1rem solid #ccc;
 	padding: 1rem 1.5rem;
-	font-size: 1.4rem;
 	margin: 1.5rem 1rem;
+	font-size: 1.4rem;
 }
 .postBlock blockquote:before{
   // content: open-quote;
@@ -199,16 +201,35 @@
   left: initial;
   right: 0.5rem;
 }
+[data-pwa] .postBlock blockquote{
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-right: 0;
+	margin-left: 0;
+	font-size: 1.2rem;
+	border-width: 0.5rem;
+}
+
+// figure
 .postBlock figure{
+	position: relative;
 	overflow: hidden;
 	margin: 1rem auto;
+	border-radius: 0.5rem;
 }
 .postBlock figure img{
 	display: block;
 	margin: 0 auto;
 }
 .postBlock figcaption{
+	position: absolute;
+	bottom: 0;
 	font-size: 1.4rem;
+	padding: 0 1rem;
+	background-color: rgba(255,255,255,0.7);
+}
+[data-pwa] .postBlock figcaption{
+	font-size: 1.2rem;
 }
 
 .postBlock ul{
@@ -282,6 +303,9 @@
 	line-height: 3.5rem;
 	@include select-none();
 }
+[data-pwa] .postBlock .infoBox{
+	font-size: 1.2rem
+}
 .postBlock .share1 a{
 	margin: 0.5rem 0.5rem;
 	border-radius: 50%;
@@ -303,4 +327,8 @@
 .postBlock .tagLine{
 	@include select-none();
 	margin-top: 3rem;
+	font-size: 1.4rem;
+}
+[data-pwa] .postBlock .tagLine{
+	font-size: 1.2rem;
 }
