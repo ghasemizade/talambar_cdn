@@ -177,37 +177,43 @@
 
 // blockquote
 .postBlock blockquote{
+	position: relative;
 	background-color: #f9f9f9;
-	border-left: 1rem solid #ccc;
-	padding: 1rem 1.5rem;
-	margin: 1.5rem 1rem;
+	border-left: 0.3rem solid #ccc;
+	border-right: 0.3rem solid #ccc;
+	padding: 5rem 4rem 4rem;
+	margin: 3rem 0 2rem;
 	font-size: 1.4rem;
+	transition: 0.3s;
+	font-style: normal!important;
+	overflow: visible!important;
+}
+.postBlock blockquote:hover{
+	background-color: #efefef;
 }
 .postBlock blockquote:before{
-  // content: open-quote;
-	content:"\0022";
-  color: #eee;
-  font-size: 4rem;
-  line-height: 0.1rem;
+	content:"\e009";
+	font-family: "siftal" !important;
   position: absolute;
-  top:0.5rem;
-  left: 0.5rem;
-}
-[dir="rtl"] .postBlock blockquote{
-	border:none;
-	border-right: 1rem solid #ccc;
-}
-[dir="rtl"] .postBlock blockquote:before{
-  left: initial;
-  right: 0.5rem;
+  top:-3rem;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+  width: 7rem;
+  height: 7rem;
+  line-height: 7rem;
+  font-size: 3rem;
+  color: #333;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
 }
 [data-pwa] .postBlock blockquote{
 	padding-right: 1rem;
 	padding-left: 1rem;
-	margin-right: 0;
-	margin-left: 0;
+	padding-bottom: 2rem;
 	font-size: 1.2rem;
-	border-width: 0.5rem;
 }
 
 // figure
