@@ -37,6 +37,7 @@ function editorRunner(_el)
 {
 	var myLang = urlLang();
   var myEl = _el.get(0);
+
 	ClassicEditor.create( myEl,
   {
   	//plugins: [ Autoformat, CodeBlock ],
@@ -80,8 +81,13 @@ function editorRunner(_el)
         { model: 'heading2', view: 'h3', title: 'Heading 2', class: 'ck-heading_heading2' },
         { model: 'heading3', view: 'h4', title: 'Heading 3', class: 'ck-heading_heading3' },
         { model: 'pre', view: 'pre', title: 'Code Block', class: 'ck-pre' },
+        // { model: 'msgInfo', view: { name: 'p', classes: 'msg info2'}, title: 'Msg Info', class: 'ck-msg-info', converterPriority: 'high' },
+        // { model: 'msgSuccess', view: { name: 'p', classes: 'msg success2'}, title: 'Msg Success', class: 'ck-msg-success', converterPriority: 'high' },
+        // { model: 'msgWarn', view: { name: 'p', classes: 'msg warn2'}, title: 'Msg Warn', class: 'ck-msg-warn', converterPriority: 'high' },
+        // { model: 'msgDanger', view: { name: 'p', classes: 'msg danger2'}, title: 'Msg Danger', class: 'ck-msg-danger', converterPriority: 'high' },
       ]
     },
+    // allowedContent: 'p(msg)',
 		link: {
             // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
             addTargetToExternalLinks: true,
