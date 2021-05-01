@@ -7,6 +7,7 @@ function loadThirdPartyScripts(_force, _page)
   loadScriptTawk();
   loadScriptRaychat();
   loadScriptImber();
+  loadScriptMediaad();
 }
 
 
@@ -95,6 +96,18 @@ function loadScriptImber()
     $('.js').append('<div id="imber-top-parent"></div>');
 
     fileLoader(myUrl, 'runImber', true, undefined, 'defer utf8 crossorigin');
+  }
+}
+
+function loadScriptMediaad()
+{
+  var myEl = $('meta[name="mediaad"]');
+  var myMediaad = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myMediaad)
+  {
+    // load script
+    myUrl = "https://s1.mediaad.org/serve/" + myMediaad + "/retargeting.js?href="+window.location.href
+    fileLoader(myUrl, undefined, false, undefined, 'defer utf8 crossorigin');
   }
 }
 
