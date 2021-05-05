@@ -13,6 +13,7 @@ html[data-iframe]::-webkit-scrollbar{width: 0px;background: transparent;}
 
 
 .jibresBanner{position: relative;min-height:300px;padding: 2rem 0 7rem;font-size:1.6em;}
+[data-pwa] .jibresBanner{padding-bottom: 2rem;}
 [dir='rtl'] .jibresBanner{font-size:1.4em;}
 .jibresBanner::after{
   content: '';
