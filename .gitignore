@@ -14,7 +14,6 @@ package-lock.json
 *crontab.txt
 *sftp-config.json
 *.me.php
-*crontab.txt
 *crontab.json
 /build
 *.swo
@@ -23,3 +22,4 @@ cache/*.json
 .idea
 yarn.lock
 *.sublime-*
+~*.xlsx
