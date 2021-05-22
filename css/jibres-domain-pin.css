@@ -19,20 +19,22 @@ main{
 	background-color: #fff;
 	font-size: 1.4rem;
 	border-radius: 1rem;
-	margin: 5vh 5vh 0;
-	height: 90%;
+	margin: 3vh 3vh 0;
+	height: 94%;
 	padding: 5vh;
 	position: relative;
+	overflow: hidden;
 }
 h1{
-	font-size:3rem;
+	font-size:4rem;
 	text-align: center;
+	font-weight: 900;
 	right: 5vh;
 	left: 5vh;
 	overflow: hidden;
-	line-height: 5rem;
-	height: 5rem;
+	line-height: 7rem;
 	margin: 5rem 0 0;
+	word-break: break-all;
 }
 h2{
 	font-size: 1.6rem;
