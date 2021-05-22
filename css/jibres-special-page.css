@@ -54,18 +54,20 @@ body .mc-cycle {height:100%;left:0;overflow:hidden;position:fixed;top:0;width:10
 }
 
 
-[data-pwa] .wedbox{
-	top: inherit;
-	bottom:5%;
-	left:5%;
-	right: 5%;
-	min-width: 25rem;
-	max-width: 40rem;
-}
-[data-pwa] .wed-title{
-	font-size: 3rem;
-}
-[data-pwa] .wed-date{
-	font-size: 1.5rem;
+@media only screen and (max-width: 7680px){
+	.wedbox{
+		top: inherit;
+		bottom:5%;
+		left:5%;
+		right: 5%;
+		min-width: 25rem;
+		max-width: 40rem;
+	}
+	.wed-title{
+		font-size: 3rem;
+	}
+	.wed-date{
+		font-size: 1.5rem;
+	}
 }
 
