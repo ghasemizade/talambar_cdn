@@ -11,6 +11,9 @@
   will-change: transform;
   @include select-none();
 }
+a.circularChartBox{
+	cursor: pointer;
+}
 // reaction
 a.circularChartBox:hover{
 	transform: scale(0.95);
