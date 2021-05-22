@@ -26,11 +26,9 @@ main{
 	overflow: hidden;
 }
 h1{
-	font-size:4rem;
+	font-size:7rem;
 	text-align: center;
 	font-weight: 900;
-	right: 5vh;
-	left: 5vh;
 	overflow: hidden;
 	line-height: 7rem;
 	margin: 5rem 0 0;
