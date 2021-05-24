@@ -322,6 +322,9 @@ pre {
   color:#eee;
   border-radius:0.5rem;
 }
+pre:empty{
+  display: none;
+}
 pre:hover{
   background-color:#333;
 }
