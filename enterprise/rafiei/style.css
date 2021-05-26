@@ -1,17 +1,15 @@
-
-#jHeaderRafiei{
-	position: relative;
-	font-size: 1.4rem;
-	padding-top: 2rem;
+html{
+	overflow-x: hidden;
 }
+
 #jHeaderRafiei::before{
 	content: '';
 	display: block;
 	background-color: #eda336;
 	position: fixed;
 	max-width: 80vw;
-	height: 3rem;
-	top: -2rem;
+	height: 30px;
+	top: -20px;
 	right: 0;
 	left: 0;
 	margin: 0 auto;
@@ -21,7 +19,7 @@
 #jHeaderRafiei::after{
 	content: '';
 	display: block;
-	height: 18rem;
+	height: 180px;
 	// background: url('/enterprise/rafiei/pattern/pattern3.png');
 	background-color: #053657;
 	position: absolute;
@@ -31,17 +29,6 @@
 	z-index: -1;
 }
 
-#jHeaderRafiei .logo{
-	width: 50rem;
-	display: block;
-	margin: 0 auto 1rem;
-}
-#jHeaderRafiei h1{
-	display: none;
-}
-#jHeaderRafiei .logo img{
-	display: block;
-}
 #jHeaderRafiei nav{
 	display: block;
 	margin: 0 auto;
