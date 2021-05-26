@@ -1,7 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 
-@import "fonts/_iranyekan.scss"
+@import "css/fonts/_iranyekan.scss";
 .btn2 {
   @apply px-4 py-2 bg-blue-600 text-white rounded;
 }
