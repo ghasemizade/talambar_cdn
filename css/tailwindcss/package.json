@@ -1,8 +1,9 @@
 {
+  "name": "Jibres-tw-v2",
   "scripts": {
-    "watch:css": "postcss ./src/css/**/*.css -o ./public/css/style.css -w",
-    "build:css": "postcss ./src/css/style.css -o ./public/css/style.css",
-    "production:css": "NODE_ENV=production postcss ./src/css/style.css -o ./public/css/style.css"
+    "watch:css": "postcss ./src/css/**/*.css -o ./tailwind.css -w",
+    "build:css": "postcss master.css -o ./tailwind.css",
+    "production:css": "NODE_ENV=production postcss master.css -o ./tailwind.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
