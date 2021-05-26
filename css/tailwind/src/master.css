@@ -7,5 +7,6 @@
 @import "tailwindcss/utilities";
 
 /* add extra style*/
-@import "css/custom.scss";
+@import "css/elements/_items.scss";
+@import "css/_custom.scss";
 
