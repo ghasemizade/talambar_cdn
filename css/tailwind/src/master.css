@@ -1,8 +1,11 @@
+/* load fonts*/
+@import "css/fonts/_iranyekan.scss";
 
+/* tailwind */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.btn2 {
-  @apply px-4 py-2 bg-blue-600 text-white rounded;
-}
+/* add extra style*/
+@import "css/custom.scss";
+
