@@ -19,6 +19,6 @@
   "scripts": {
     "watch:css": "postcss ./src/css/**/*.css -o ./tailwind-v1.css -w",
     "build:css": "postcss master.css -o ./tailwind-v1.css",
-    "production:css": "SET NODE_ENV=production postcss master.css -o ./tailwind-v1.css"
+    "production:css": "NODE_ENV=production postcss master.css -o ./tailwind-v1.css"
   }
 }
