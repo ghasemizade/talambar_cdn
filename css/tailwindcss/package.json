@@ -1,0 +1,24 @@
+{
+  "name": "jibres-tw-v2",
+  "version": "1.0.0",
+  "description": "Tailwind css for Jibres Page Builder",
+  "main": "postcss.config.js",
+  "dependencies": {},
+  "keywords": [
+    "tailwind",
+    "jibres"
+  ],
+  "author": "Javad Adib",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.2"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development postcss ./src/master.css -o ./tailwind-v1.css -w",
+    "build": "NODE_ENV=development postcss ./src/master.css -o ./tailwind-v1.css",
+    "production": "NODE_ENV=production postcss ./src/master.css -o ./tailwind-v1-production.css"
+  }
+}
