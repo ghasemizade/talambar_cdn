@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Tailwind css for Jibres Page Builder",
   "main": "postcss.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "postcss-import": "^14.0.2"
+  },
   "keywords": [
     "tailwind",
     "jibres"
