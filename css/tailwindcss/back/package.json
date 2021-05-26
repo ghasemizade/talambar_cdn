@@ -4,25 +4,30 @@
   "description": "Tailwind css for Jibres Page Builder",
   "main": "postcss.config.js",
   "dependencies": {
-    "postcss-cli-simple": "^3.1.0",
-    "postcss-import": "^14.0.2"
+    "postcss-cli": "^8.3.1"
   },
   "keywords": [
     "tailwind",
     "jibres"
   ],
-  "repository": "https://github.com/jibres/talambar_cdn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jibres/talambar_cdn.git"
+  },
   "author": "Javad Adib",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "postcss": "^8.3.0",
-    "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.1.2"
   },
   "scripts": {
     "dev": "NODE_ENV=development postcss ../src/master.css -o ../tailwind-v1.css -w",
     "build": "NODE_ENV=development postcss ../src/master.css -o ../tailwind-v1.css",
     "production": "NODE_ENV=production postcss ../src/master.css -o ../tailwind-v1-production.css"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jibres/talambar_cdn/issues"
+  },
+  "homepage": "https://github.com/jibres/talambar_cdn#readme"
 }
