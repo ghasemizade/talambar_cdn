@@ -17,8 +17,8 @@
     "tailwindcss": "^2.1.2"
   },
   "scripts": {
-    "dev": "NODE_ENV=development postcss ./src/master.css -o ./tailwind-v1.css -w",
-    "build": "NODE_ENV=development postcss ./src/master.css -o ./tailwind-v1.css",
-    "production": "NODE_ENV=production postcss ./src/master.css -o ./tailwind-v1-production.css"
+    "dev": "NODE_ENV=development postcss ../src/master.css -o ../tailwind-v1.css -w",
+    "build": "NODE_ENV=development postcss ../src/master.css -o ../tailwind-v1.css",
+    "production": "NODE_ENV=production postcss ../src/master.css -o ../tailwind-v1-production.css"
   }
 }
