@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch:css": "postcss ./src/css/**/*.css -o ./public/css/style.css -w",
+    "build:css": "postcss ./src/css/style.css -o ./public/css/style.css",
+    "production:css": "NODE_ENV=production postcss ./src/css/style.css -o ./public/css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.2"
+  }
+}
