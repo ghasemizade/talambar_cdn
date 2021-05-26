@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Tailwind css for Jibres Page Builder",
   "main": "postcss.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "postcss-cli-simple": "^3.1.0",
+    "postcss-import": "^14.0.2"
+  },
   "keywords": [
     "tailwind",
     "jibres"
   ],
+  "repository": "https://github.com/jibres/talambar_cdn",
   "author": "Javad Adib",
   "license": "MIT",
   "devDependencies": {
