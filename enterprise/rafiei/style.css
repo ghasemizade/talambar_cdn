@@ -1,0 +1,245 @@
+
+#jHeaderRafiei{
+	position: relative;
+	font-size: 1.4rem;
+	padding-top: 2rem;
+}
+#jHeaderRafiei::before{
+	content: '';
+	display: block;
+	background-color: #eda336;
+	position: fixed;
+	max-width: 80vw;
+	height: 3rem;
+	top: -2rem;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 100;
+}
+#jHeaderRafiei::after{
+	content: '';
+	display: block;
+	height: 18rem;
+	// background: url('/enterprise/rafiei/pattern/pattern3.png');
+	background-color: #053657;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#jHeaderRafiei .logo{
+	width: 50rem;
+	display: block;
+	margin: 0 auto 1rem;
+}
+#jHeaderRafiei h1{
+	display: none;
+}
+#jHeaderRafiei .logo img{
+	display: block;
+}
+#jHeaderRafiei nav{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 6rem;
+	text-align: center;
+}
+#jHeaderRafiei nav li{
+	display: inline-block;
+}
+#jHeaderRafiei nav a{
+	display: block;
+	color: #fff;
+	line-height: 2rem;
+	margin: 0 0.5rem;
+	padding: 1rem 0.5rem;
+	min-width: 5rem;
+	transition: 0.3s;
+}
+#jHeaderRafiei nav a:hover{
+	color: #ffc107;
+}
+#jHeaderRafiei nav a:focus{
+	color: #eda336;
+}
+#jHeaderRafiei nav a:active{
+	color: #ffb300;
+}
+#jHeaderRafiei svg.bottom{
+	position: absolute;
+	top: 18rem;
+	right: 0;
+	left: 0;
+	z-index: -1;
+}
+
+
+// homepage header
+[data-page='home'] #jHeaderRafiei nav{
+	padding-bottom: 2rem;
+}
+[data-page='home'] #jHeaderRafiei svg.bottom{
+	top: 60rem;
+	top: 50vh;
+}
+[data-page='home'] #jHeaderRafiei::after{
+	height: 60rem;
+	height: 50vh;
+}
+
+
+
+
+// body
+body[data-in="business"][data-enterprise="rafiei"]{
+	min-height: 100%;
+	background: url('/enterprise/rafiei/pattern/pattern-bg.svg');
+	background-attachment: fixed;
+	background-size:18rem;
+}
+body[data-enterprise="rafiei"] #pageContent::after{
+
+}
+
+// title
+[data-enterprise="rafiei"] .eTitle::before{
+	content: "";
+	right: 0;
+	left: 0;
+	top: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #eda336;
+}
+[data-enterprise="rafiei"] .postBlock header h2{
+	background-color: rgba(255,255,255,0.9);
+	margin-bottom: 1rem;
+}
+
+
+.jFooterRafiei{
+	margin:0;
+	position: relative;
+	display: block;
+	font-size: 1.4rem;
+	transition: 0.3s;
+	padding: 8rem 0 4rem;
+	color: #ccc;
+	margin-top: 10rem;
+	background-color: #053657;
+}
+.jFooterRafiei::after{
+	content: '';
+	display: block;
+	background-color: #eda336;
+	position: fixed;
+	max-width: 80vw;
+	height: 3rem;
+	bottom: -2rem;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 100;
+}
+.jFooterRafiei svg{
+	position: absolute;
+	bottom: 100%;
+	right: 0;
+	left: 0;
+}
+.jFooterRafiei h3{
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 1.15;
+	margin-bottom: 1rem;
+	color: #eae7f3;
+}
+.jFooterRafiei p{
+	margin: 0;
+	font-size: 1.6rem;
+}
+
+.jFooterRafiei hr{
+  height: 0;
+  border: 0;
+  border: .1rem solid;
+  margin: 3rem 0;
+  color: HSLA(256, 13%, 50%, 0.25);
+}
+
+.jFooterRafiei .button{
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: .02em;
+	text-decoration: none;
+	border: .1rem solid transparent;
+	border-radius: 0.3rem;
+	padding: 1.5rem 3rem;
+	margin: 0 auto;
+	background-color: transparent;
+	display: inline-block;
+	color: #ef4a25;
+	background-color: #fff;
+	border-color: #fff;
+}
+.jFooterRafiei .certifications{
+
+}
+.jFooterRafiei .cert{
+	background-color: #fff;
+	border-radius: 0.5rem;
+	width: 12rem;
+	height: 12rem;
+	overflow: hidden;
+	display: inline-block;
+	cursor: pointer;
+	margin: 0.5rem;
+	padding: 0.5rem;
+}
+.jFooterRafiei .cert img{
+	display: block;
+	margin: 0 auto;
+}
+.jFooterRafiei h4{
+	color: #eae7f3;
+	margin: 4rem 0 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.jFooterRafiei ul{
+	list-style: none;
+}
+.jFooterRafiei ul li{
+	margin-bottom: .5rem;
+}
+.jFooterRafiei ul li a{
+	padding: 0 0.5rem;
+	line-height: 3rem;
+}
+.jFooterRafiei a{
+	color: #eae7f3;
+	text-decoration: none;
+	display: inline-block;
+}
+.jFooterRafiei ul li a:hover{
+	color: #cec3ea;
+}
+.jFooterRafiei ul li a:focus{
+	box-shadow: 0 0 0 0.4rem HSLA(195, 84%, 39%, 0.5);
+}
+.jFooterRafiei ul li a:active{
+	color: #cec3ea;
+}
+
+.jFooterRafiei .bottom{
+	font-size: 1.6rem;
+	color: #968caa;
+	margin:0;
+}
+
+
