@@ -1,0 +1,20 @@
+body[data-preload] * {
+	-webkit-transition: none !important;
+	 -moz-transition: none !important;
+	 -ms-transition: none !important;
+	 -o-transition: none !important;
+}
+#pageNotif{
+	display:none!important;
+}
+
+
+/* very usefull styles*/
+.selectable{
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	user-select: text;
+}
+
+
+
