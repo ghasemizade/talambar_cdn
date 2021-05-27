@@ -1,0 +1,36 @@
+
+[dir="ltr"] body{
+  direction:ltr;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  font-family: "LatoLatinWeb", "IRANYekan","Segoe UI","Helvetica",sans-serif;
+  overflow-x: hidden;
+}
+[dir="rtl"] body{
+  direction:rtl;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  font-family: "IRANYekan","Segoe UI","Helvetica",sans-serif;
+  overflow-x: hidden;
+}
+
+body[data-preload] * {
+  -webkit-transition: none !important;
+   -moz-transition: none !important;
+   -ms-transition: none !important;
+   -o-transition: none !important;
+}
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+}
+a {
+  touch-action: manipulation;
+  -webkit-text-decoration-skip: objects;
+  -webkit-tap-highlight-color:transparent;
+
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+

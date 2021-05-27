@@ -1,13 +1,26 @@
-body[data-preload] * {
-	-webkit-transition: none !important;
-	 -moz-transition: none !important;
-	 -ms-transition: none !important;
-	 -o-transition: none !important;
-}
+
 #pageNotif{
 	display:none!important;
 }
 
+body [data-response-hide]{
+	display:none!important
+}
+
+.ltr{
+	direction: ltr;
+}
+.rtl{
+	direction: rtl;
+}
+
+/* for some bad guys, because they are use direct link! */
+svg g[opacity="0.3"][style][filter]{
+	display:none;
+}
+svg g[opacity="0.4"][style][filter]{
+	display:none;
+}
 
 /* very usefull styles*/
 .selectable{
