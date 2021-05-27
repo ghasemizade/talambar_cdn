@@ -3,13 +3,11 @@ html[dir="ltr"]{
   direction:ltr;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
-  overflow-x: hidden;
 }
 html[dir="rtl"]{
   direction:rtl;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
-  overflow-x: hidden;
 }
 
 body[data-preload] * {
