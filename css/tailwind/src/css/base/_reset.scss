@@ -1,16 +1,14 @@
 
-[dir="ltr"] body{
+html[dir="ltr"]{
   direction:ltr;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
-  font-family: "LatoLatinWeb", "IRANYekan","Segoe UI","Helvetica",sans-serif;
   overflow-x: hidden;
 }
-[dir="rtl"] body{
+html[dir="rtl"]{
   direction:rtl;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
-  font-family: "IRANYekan","Segoe UI","Helvetica",sans-serif;
   overflow-x: hidden;
 }
 

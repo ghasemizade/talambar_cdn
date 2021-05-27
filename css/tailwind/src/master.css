@@ -1,10 +1,16 @@
+
 /* load fonts*/
 @import "css/fonts/_iranyekan.scss";
+@import "css/fonts/_iransansx.scss";
+@import "css/fonts/_lato.scss";
+@import "css/fonts/_siftal.scss";
+
 
 /* tailwind */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 
 /* add extra style*/
 @import "css/base/_reset.scss";
