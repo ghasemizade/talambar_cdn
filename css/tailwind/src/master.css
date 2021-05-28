@@ -15,8 +15,10 @@
 /* add extra style*/
 @import "css/base/_reset.scss";
 @import "css/base/_global.scss";
-@import "css/base/_switchResponsive.scss";
 
+/* responsive*/
+@import "css/responsive/_switchResponsive.scss";
+@import "css/responsive/_dev.scss";
 
 /* add extra elements*/
 @import "css/elements/_items.scss";
