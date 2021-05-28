@@ -20,7 +20,11 @@
 @import "css/responsive/_switchResponsive.scss";
 @import "css/responsive/_dev.scss";
 
+
 /* add extra elements*/
 @import "css/elements/_items.scss";
+@import "css/pagebuilder/_specialSlider.scss";
+
 @import "css/_custom.scss";
+
 
