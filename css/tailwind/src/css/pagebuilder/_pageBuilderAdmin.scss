@@ -1,0 +1,29 @@
+
+body[data-siteBuilder]{
+	@apply h-screen grid;
+  grid-template-areas:
+    'header header'
+    'sidebar main'
+    'sidebar footer';
+  grid-template-columns: 25% auto;
+  grid-template-rows: 60px auto 30px;
+
+}
+body[data-siteBuilder] > #sidebar{
+	grid-area: sidebar;
+}
+body[data-siteBuilder] > #pageHeader{
+	@apply bg-red-50;
+	grid-area: header;
+}
+body[data-siteBuilder] > #pageContent{
+	@apply bg-blue-50;
+	 grid-area: main;
+}
+body[data-siteBuilder] > #pageFooter{
+	@apply bg-red-50;
+	grid-area: footer;
+}
+body[data-siteBuilder] > .js{
+	@apply hidden;
+}

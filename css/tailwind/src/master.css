@@ -21,6 +21,9 @@
 @import "css/responsive/_dev.scss";
 
 
+/* add extra layouts*/
+@import "css/pagebuilder/_pageBuilderAdmin.scss";
+
 /* add extra elements*/
 @import "css/elements/_items.scss";
 @import "css/pagebuilder/_specialSlider.scss";
