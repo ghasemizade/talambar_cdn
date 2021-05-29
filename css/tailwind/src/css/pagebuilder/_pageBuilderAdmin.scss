@@ -42,19 +42,8 @@ body[data-siteBuilder] > .js{
 	@apply hidden;
 }
 
-body[data-siteBuilder] > #pageContent > .browserFrame{
-	height: 100%;
-	width: 100%;
-	@apply shadow-lg overflow-hidden rounded-t-lg flex flex-col bg-white;
-}
 .browserFrame .toolbar{
-	@apply flex-grow-0;
 	height: 45px;
-}
-.browserFrame iframe{
-	@apply flex-grow;
-	height: 100%;
-	width: 100%;
 }
 
 
