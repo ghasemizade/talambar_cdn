@@ -32,10 +32,10 @@ body[data-siteBuilder] > .js{
 body[data-siteBuilder] > #pageContent > .browserFrame{
 	height: 100%;
 	width: 100%;
-	@apply shadow-lg overflow-hidden flex flex-col;
+	@apply shadow-lg overflow-hidden flex flex-col bg-white;
 }
 .browserFrame .toolbar{
-	@apply rounded-t-lg bg-white flex-grow-0;
+	@apply rounded-t-lg flex-grow-0;
 	height: 45px;
 }
 .browserFrame iframe{
