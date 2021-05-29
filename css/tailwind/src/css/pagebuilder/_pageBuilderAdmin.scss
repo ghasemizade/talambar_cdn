@@ -7,34 +7,39 @@ body[data-siteBuilder]{
     'sidebar footer';
   grid-template-columns: 25% auto;
   grid-template-rows: 60px auto minmax(0, 30px);
+  font-size: 16px!important;
 
 }
 body[data-siteBuilder] > #sidebar{
+	@apply bg-white;
+	@apply shadow;
 	grid-area: sidebar;
 }
 body[data-siteBuilder] > #pageHeader{
-	@apply bg-red-50;
+	@apply shadow;
 	overflow: hidden;
 	grid-area: header;
 }
 body[data-siteBuilder] > #pageHeader .desktop{
 	overflow: hidden;
 	height: 100%;
+	line-height: 40px;
 }
+body[data-siteBuilder] .backBtn{
+	line-height: 40px;
+}
+
 body[data-siteBuilder] > #pageContent{
 	@apply overflow-hidden bg-blue-50;
 	@apply pt-5 px-10 pb-10;
 	 grid-area: main;
 }
 body[data-siteBuilder] > #pageFooter{
-	@apply overflow-hidden bg-red-50;
+	@apply overflow-hidden bg-gray-50;
 	grid-area: footer;
 }
 body[data-siteBuilder] > .js{
 	@apply hidden;
-}
-body[data-siteBuilder] .backBtn{
-	line-height: 40px;
 }
 
 body[data-siteBuilder] > #pageContent > .browserFrame{
