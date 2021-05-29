@@ -18,6 +18,7 @@ body[data-siteBuilder] > #pageHeader{
 }
 body[data-siteBuilder] > #pageContent{
 	@apply bg-blue-50;
+	@apply pt-5 px-10 pb-10;
 	 grid-area: main;
 }
 body[data-siteBuilder] > #pageFooter{
@@ -27,3 +28,21 @@ body[data-siteBuilder] > #pageFooter{
 body[data-siteBuilder] > .js{
 	@apply hidden;
 }
+
+body[data-siteBuilder] > #pageContent > .browserFrame{
+	height: 100%;
+	width: 100%;
+	@apply shadow-lg overflow-hidden flex flex-col;
+}
+.browserFrame .toolbar{
+	@apply rounded-t-lg bg-white flex-grow-0;
+	height: 45px;
+}
+.browserFrame iframe{
+	@apply flex-grow;
+	height: 100%;
+	width: 100%;
+}
+
+
+
