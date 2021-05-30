@@ -94,11 +94,16 @@ body.alerty2-toast-column .alerty2-toast .alerty2-input{height:2em;margin:.3125e
 body.alerty2-toast-column .alerty2-toast .alerty2-validation-message{font-size:1em}
 
 // siftal support
-body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-end,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-right{top:50px;}
 body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-start,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-left{top:50px;}
+body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-end,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-right{top:50px;}
+body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-start,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-left{bottom:50px;}
+body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-end,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-right{bottom:50px;}
+
 // rtl support
 [dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-end,[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-right{right:auto;left:0;}
 [dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-start,[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-left{right:0;left:auto}
+[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-bottom-end,[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-bottom-right{right:auto;left:0;}
+[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-bottom-start,[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-bottom-left{right:0;left:auto}
 
 .alerty2-popup.alerty2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;box-shadow:0 0 .625em #d9d9d9;overflow-y:hidden}
 .alerty2-popup.alerty2-toast .alerty2-header{flex-direction:row}
@@ -330,6 +335,10 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 [data-pwa] .alerty2-popup{
   padding: 1em;
 }
+[data-pwa] .alerty2-popup.alerty2-toast{
+  padding: 0.5em;
+}
+
 [data-pwa] .alerty2-container{
   padding: 5px;
 }
