@@ -622,20 +622,12 @@ body.dragging{
 
 
 
-
-
-
-
-
-
-
-
 [data-preview-circle] .cropper-view-box {
     border-radius: 50%;
     box-shadow: 0 0 0 1px #39f;
     outline: 0;
 }
-.cropper-container{direction: ltr;}
+.alerty2-container .cropper-container{width:100%!important;height: 100%!important;}
 .cropper-point{background-color: #fff;border-radius: 50%;}
 .cropper-line{background-color: #fff;}
 .cropper-view-box{outline-color: #fff;}

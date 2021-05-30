@@ -326,3 +326,10 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 .alerty2-shown:not(.alerty2-toast-shown) #pageContent{filter: blur(4px);}
 .alerty2-shown:not(.alerty2-toast-shown) #pageFooter{filter: blur(4px);}
 
+
+[data-pwa] .alerty2-popup{
+  padding: 1em;
+}
+[data-pwa] .alerty2-container{
+  padding: 5px;
+}
