@@ -10,6 +10,10 @@ body[data-siteBuilder]{
   font-size: 16px!important;
 
 }
+[data-pwa] body[data-siteBuilder]{
+	display: initial;
+	height: initial;
+}
 body[data-siteBuilder] > #sidebar{
 	@apply bg-white;
 	@apply shadow p-7;
@@ -44,11 +48,20 @@ body[data-siteBuilder] > .js{
 .browserFrame[data-size='desktop']{
 	width:100%;
 	max-width: 100%;;
+	min-height: 400px;
 }
 .browserFrame[data-size='mobile']{
 	max-width:375px;
+	min-height: 700px;
+}
+[data-pwa] .browserFrame{
+	max-width: 100%;;
+	min-height: 500px;
 }
 .browserFrame[data-size='mobile'] .address{
+	display: none;
+}
+[data-pwa] .browserFrame .address{
 	display: none;
 }
 .browserFrame .toolbar{
@@ -63,6 +76,8 @@ body[data-siteBuilder] > .js{
 .browserFrame .resizePreview [data-mode="mobile"]{
 	font-size: 29px;
 }
-
+[data-pwa] .browserFrame .resizePreview{
+	display: none!important;
+}
 
 
