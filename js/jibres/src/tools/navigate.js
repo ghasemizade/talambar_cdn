@@ -130,6 +130,8 @@
     $('body').attr('data-subdomain', obj.subdomain);
     // set panel
     $('body').attr('data-panel', obj.panel);
+    // set siteBuilder
+    $('body').attr('data-siteBuilder', obj.siteBuilder);
 
     $window.trigger('navigate:render:filter:before', obj.filter);
 
