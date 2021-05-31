@@ -41,6 +41,16 @@ body[data-siteBuilder] > #pageFooter{
 body[data-siteBuilder] > .js{
 	@apply hidden;
 }
+.browserFrame[data-size='desktop']{
+	width:100%;
+	max-width: 100%;;
+}
+.browserFrame[data-size='mobile']{
+	max-width:375px;
+}
+.browserFrame[data-size='mobile'] .address{
+	display: none;
+}
 .browserFrame .toolbar{
 	height: 45px;
 }
