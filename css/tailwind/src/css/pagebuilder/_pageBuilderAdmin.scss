@@ -54,6 +54,15 @@ body[data-siteBuilder] > .js{
 .browserFrame .toolbar{
 	height: 45px;
 }
+.browserFrame .resizePreview [data-mode]{
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 24px;
+}
+.browserFrame .resizePreview [data-mode="mobile"]{
+	font-size: 29px;
+}
 
 
 

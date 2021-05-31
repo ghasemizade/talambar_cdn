@@ -1,7 +1,7 @@
 
 function pageScript()
 {
-  $('.browserFrame #resizePreview [data-mode]').off('click.resizePreview').on("click.resizePreview", function(event)
+  $('.browserFrame .resizePreview [data-mode]').off('click.resizePreview').on("click.resizePreview", function(event)
   {
     resizePreview($(this).attr('data-mode'));
   });
