@@ -259,6 +259,12 @@ function notifGenerator(_data, $_form)
     $_form.find('input').removeClass('error warn');
   }
 
+  // reload iframe if requested
+  if(_data && _data.reloadIframe)
+  {
+    document.getElementById(_data.reloadIframe).src += '';
+  }
+
   if(_data && _data.msg)
   {
     _data = _data.msg;
