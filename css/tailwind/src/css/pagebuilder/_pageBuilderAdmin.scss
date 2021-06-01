@@ -8,7 +8,6 @@ body[data-siteBuilder]{
   grid-template-columns: 25% auto;
   grid-template-rows: 60px auto minmax(0, 30px);
   font-size: 16px!important;
-
 }
 [data-pwa] body[data-siteBuilder]{
 	display: initial;
@@ -36,7 +35,8 @@ body[data-siteBuilder] .backBtn{
 body[data-siteBuilder] > #pageContent{
 	@apply overflow-hidden bg-blue-50;
 	@apply pt-5 px-10 pb-10;
-	 grid-area: main;
+	grid-area: main;
+	overflow: auto;
 }
 body[data-siteBuilder] > #pageFooter{
 	@apply overflow-hidden bg-gray-50;
