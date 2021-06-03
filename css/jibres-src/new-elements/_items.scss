@@ -72,6 +72,12 @@ body .ltr .items li + li::before{
 	max-height: $myItemLineHeight;
 	border-radius: 0.5rem;
 }
+.items li svg{
+	overflow:hidden;
+	max-width: $myItemLineHeight;
+	max-height: $myItemLineHeight;
+	border-radius: 0.5rem;
+}
 .items li img[src=""]{
 	opacity: 0.1;
 	background-color: #333;
