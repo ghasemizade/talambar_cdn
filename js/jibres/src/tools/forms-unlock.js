@@ -121,6 +121,11 @@ function analyseAjaxFormResponse(_data, _$this, _super, _autoScrollAttr)
 
 function analyseAjaxFormError(_jqXHR, _textStatus, _super)
 {
+  if($('pre.debugger').length === 1)
+  {
+    $('pre.debugger').text(_jqXHR.responseText).fadeIn();
+  }
+
   if(_textStatus === 'timeout')
   {
     if(urlLangFa())

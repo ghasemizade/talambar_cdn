@@ -372,9 +372,9 @@ function notifGenerator(_data, $_form)
   }
   else if(_data && _data.debug)
   {
-    if($('pre').length === 1)
+    if($('pre.debugger').length === 1)
     {
-      $('pre').text(_data.debug).fadeIn();
+      $('pre.debugger').text(_data.debug).fadeIn();
     }
   }
   else
