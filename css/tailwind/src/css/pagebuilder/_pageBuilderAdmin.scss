@@ -57,10 +57,12 @@ body[data-siteBuilder] > #pageFooter{
 	@apply overflow-hidden;
 	@apply shadow;
 	grid-area: footer;
+	/* border-top: 1px solid #eee; */
 }
 body[data-siteBuilder] > #pageFooter .desktop{
 	@apply px-7;
-	margin-bottom: 10px;
+	@apply flex flex-wrap content-center;
+	height: 100%;
 }
 body[data-siteBuilder] > #pageFooter:empty{
 
