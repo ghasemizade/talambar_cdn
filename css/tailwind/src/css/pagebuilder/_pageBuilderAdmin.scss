@@ -28,6 +28,11 @@ body[data-siteBuilder] > #pageHeader .desktop{
 	height: 100%;
 	line-height: 40px;
 }
+body[data-siteBuilder] > #pageHeader .desktop svg{
+	display: inline-block;
+	width:30px;
+	height: 30px;
+}
 body[data-siteBuilder] .backBtn{
 	line-height: 40px;
 }
