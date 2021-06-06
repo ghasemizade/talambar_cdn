@@ -37,4 +37,23 @@ label+div .select22 {
   border-color:rgba(128,192,208,0.9);
   /*border-color:rgba(0,0,0,0.4);*/
 }
+.select22-results__option{
+  cursor: pointer;
+}
+.select22-container.select22-container--open .select22-selection--single{
+  cursor: context-menu;
+}
+.select22-container .select22-results__option--highlighted[aria-selected]{
+  background-color:#3875d7;
+  color:#fff
+}
+.select22-container--classic .select22-results__group{
+  cursor:default;
+  display:block;
+  padding:6px
+}
+.select22-container--classic.select22-container--open .select22-dropdown{
+  border-color:#5897fb
+}
+
 
