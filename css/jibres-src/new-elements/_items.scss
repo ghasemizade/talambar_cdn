@@ -72,17 +72,6 @@ body .ltr .items li + li::before{
 	max-height: $myItemLineHeight;
 	border-radius: 0.5rem;
 }
-.items li img.icon{
-	background-color:#f7f7f7;
-	padding: 5px;
-}
-.items li img.switch{
-	padding: 5px;
-}
-.items li img[data-handle]{
-	padding: 10px;
-}
-
 
 .items li svg{
 	overflow:hidden;
