@@ -4,9 +4,9 @@ body[data-siteBuilder]{
   grid-template-areas:
     'header header'
     'sidebar main'
-    'sidebar footer';
+    'footer main';
   grid-template-columns: 25% auto;
-  grid-template-rows: 60px auto minmax(0, 30px);
+  grid-template-rows: 60px auto minmax(0, 50px);
   font-size: 16px!important;
 }
 [data-pwa] body[data-siteBuilder]{
