@@ -6,7 +6,7 @@ body[data-siteBuilder]{
     'sidebar main'
     'footer main';
   grid-template-columns: 25% auto;
-  grid-template-rows: 60px auto minmax(0, 50px);
+  grid-template-rows: 60px auto minmax(0, 60px);
   font-size: 16px!important;
 }
 [data-pwa] body[data-siteBuilder]{
@@ -53,9 +53,14 @@ body[data-siteBuilder] > #pageContent{
 	overflow: auto;
 }
 body[data-siteBuilder] > #pageFooter{
-	@apply overflow-hidden bg-gray-50;
+	@apply bg-white;
+	@apply overflow-hidden;
 	@apply shadow;
 	grid-area: footer;
+}
+body[data-siteBuilder] > #pageFooter .desktop{
+	@apply px-7;
+	margin-bottom: 10px;
 }
 body[data-siteBuilder] > #pageFooter:empty{
 
