@@ -54,6 +54,7 @@ body[data-siteBuilder] > #pageContent{
 }
 body[data-siteBuilder] > #pageFooter{
 	@apply overflow-hidden bg-gray-50;
+	@apply shadow;
 	grid-area: footer;
 }
 body[data-siteBuilder] > #pageFooter:empty{
