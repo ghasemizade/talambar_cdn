@@ -11,6 +11,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* add variables */
+@import "css/_variables.scss";
 
 /* add extra style*/
 @import "css/base/_reset.scss";
