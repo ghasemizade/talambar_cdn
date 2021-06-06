@@ -2,7 +2,6 @@ function formToolsRunner()
 {
   toggleRadio();
   radioSave();
-  checkboxSave();
   inputSave();
 }
 
@@ -33,15 +32,6 @@ function toggleRadio()
 
 function radioSave()
 {
-  $('form[data-patch] input[type=radio]').off("click.setting").on("click.setting", function(event)
-  {
-    var myForm = $(this).parents('form[data-patch]');
-    if(myForm.length === 1)
-    {
-      $(myForm).ajaxify();
-    }
-  });
-
   $('form[data-patch] input[type=radio]').off("keydown.setting").on("keydown.setting", function(_e)
   {
     var arrowKeys = [37, 38, 39, 40];
@@ -60,27 +50,37 @@ function radioSave()
 }
 
 
-function checkboxSave()
+function inputSave()
 {
-  $('form[data-patch] input[type=checkbox]').off("click.setting").on("click.setting", function(event)
+  $('form[data-patch] input').off("change.settingPatch").on("change.settingPatch", function(event)
   {
+    switch($(this).attr('type'))
+    {
+      case 'checkbox':
+      case 'radio':
+        // do nothing
+      break;
+
+      default:
+        return false;
+      break;
+    }
+
+
     var myForm = $(this).parents('form[data-patch]');
     if(myForm.length === 1)
     {
       $(myForm).ajaxify();
     }
   });
-}
 
-
-function inputSave()
-{
   var timeout = null;
-  $('form[data-patch] input').off("keyup.setting").on("keyup.setting", function(event)
+  $('form[data-patch] input').off("keyup.settingPatch").on("keyup.settingPatch", function(event)
   {
     switch($(this).attr('type'))
     {
       case 'text':
+      case 'password':
       case 'textarea':
         // do nothing
       break;
