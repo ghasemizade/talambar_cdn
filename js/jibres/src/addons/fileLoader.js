@@ -167,7 +167,7 @@ function readPageSelect2()
   {
     // load script
     StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.js?v=3";
+    myUrl = urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.js?v=3";
     fileLoader(myUrl, 'runPageSelect2', true);
   }
 }
