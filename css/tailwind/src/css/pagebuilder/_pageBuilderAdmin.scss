@@ -15,8 +15,14 @@ body[data-siteBuilder]{
 }
 body[data-siteBuilder] > #sidebar{
 	@apply bg-white;
-	@apply shadow p-7;
+	@apply shadow;
 	grid-area: sidebar;
+	overflow: hidden;
+	position: relative;
+}
+body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
+	@apply p-7;
+	overflow: auto;
 }
 body[data-siteBuilder] > #pageHeader{
 	@apply shadow;
