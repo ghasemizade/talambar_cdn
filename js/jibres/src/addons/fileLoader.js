@@ -14,6 +14,7 @@ function readPageAllScripts(_force, _page)
   readPageSlick();
   readPageSelect2();
   readPageUploader();
+  readPageRangeSlider();
 
   loadThirdPartyScripts();
 }
@@ -182,6 +183,20 @@ function readPageUploader()
     // load script
     myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=4";
     fileLoader(myUrl, 'runUploader', true);
+  }
+}
+
+
+function readPageRangeSlider()
+{
+  var myEl = $('[data-rangeSlider]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    StyleLoader(urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min?v=1");
+    myUrl = urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.js?v=1";
+    fileLoader(myUrl, 'runRangeSlider', true);
   }
 }
 
