@@ -14,13 +14,16 @@ body[data-siteBuilder]{
 	height: initial;
 }
 body[data-siteBuilder] > #sidebar{
+	@apply flex flex-col;
 	@apply bg-white;
 	@apply shadow;
 	grid-area: sidebar;
 	overflow: hidden;
 	position: relative;
+	height: 100%;
 }
 body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
+	@apply flex-grow;
 	@apply p-7;
 	overflow: auto;
 }
