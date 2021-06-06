@@ -194,7 +194,7 @@ function readPageRangeSlider()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min?v=1");
+    StyleLoader(urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.css?v=1");
     myUrl = urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.js?v=1";
     fileLoader(myUrl, 'runRangeSlider', true);
   }
