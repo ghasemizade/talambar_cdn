@@ -6,7 +6,7 @@ body[data-siteBuilder]{
     'sidebar main'
     'footer main';
   grid-template-columns: 25% auto;
-  grid-template-rows: 60px auto auto;
+  grid-template-rows: 60px auto minmax(0, 50px);
   font-size: 16px!important;
 }
 [data-pwa] body[data-siteBuilder]{
@@ -55,6 +55,9 @@ body[data-siteBuilder] > #pageContent{
 body[data-siteBuilder] > #pageFooter{
 	@apply overflow-hidden bg-gray-50;
 	grid-area: footer;
+}
+body[data-siteBuilder] > #pageFooter:empty{
+
 }
 body[data-siteBuilder] > .js{
 	@apply hidden;
