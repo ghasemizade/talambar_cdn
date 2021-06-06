@@ -3,6 +3,7 @@ function formToolsRunner()
   toggleRadio();
   radioSave();
   checkboxSave();
+  inputSave();
 }
 
 
@@ -59,7 +60,6 @@ function radioSave()
 }
 
 
-
 function checkboxSave()
 {
   $('form[data-patch] input[type=checkbox]').off("click.setting").on("click.setting", function(event)
@@ -71,4 +71,38 @@ function checkboxSave()
     }
   });
 }
+
+
+function inputSave()
+{
+  var timeout = null;
+  $('form[data-patch] input').off("keyup.setting").on("keyup.setting", function(event)
+  {
+    switch($(this).attr('type'))
+    {
+      case 'text':
+      case 'textarea':
+        // do nothing
+      break;
+
+      default:
+        return false;
+      break;
+    }
+    var myForm = $(this).parents('form[data-patch]');
+    if(myForm.length === 1)
+    {
+      if(timeout)
+      {
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(function()
+      {
+        $(myForm).ajaxify();
+      }, 500);
+    }
+  });
+}
+
+
 
