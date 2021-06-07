@@ -122,6 +122,9 @@ select.select22-country img{
   border-radius: 0.5rem
 }
 
-
+.select22-container .select22-search--inline .select22-search__field{
+	min-width: 200px;
+	font-family: inherit;
+}
 
 
