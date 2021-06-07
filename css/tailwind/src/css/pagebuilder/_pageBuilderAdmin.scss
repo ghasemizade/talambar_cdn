@@ -1,6 +1,6 @@
 
 body[data-siteBuilder]{
-	@apply h-screen grid;
+	@apply grid;
   grid-template-areas:
     'header header'
     'sidebar main'
@@ -8,6 +8,8 @@ body[data-siteBuilder]{
   grid-template-columns: 25% auto;
   grid-template-rows: 60px auto minmax(0, 60px);
   font-size: 16px!important;
+  height: 100vh;
+  height: 100%!important;
 }
 [data-pwa] body[data-siteBuilder]{
 	display: initial;
@@ -26,6 +28,9 @@ body[data-siteBuilder] > #sidebar{
 body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
 	@apply flex-grow;
 	overflow: auto;
+}
+body[data-siteBuilder] > #sidebar form + form{
+	margin-top: 12px;
 }
 body[data-siteBuilder] > #pageHeader{
 	@apply shadow;
