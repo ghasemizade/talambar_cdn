@@ -52,29 +52,48 @@ function radioSave()
 
 function inputSave()
 {
+  var timeoutPatchChange = null;
   $('form[data-patch] input').off("change.settingPatch").on("change.settingPatch", function(event)
   {
+    var myForm = $(this).parents('form[data-patch]');
+    if(myForm.length !== 1)
+    {
+      return null;
+    }
+
     switch($(this).attr('type'))
     {
       case 'checkbox':
       case 'radio':
-        // do nothing
+        $(myForm).ajaxify();
+      break;
+
+      case 'text':
+        if($(this).attr('data-rangeslider') !== undefined)
+        {
+          if(timeoutPatchChange)
+          {
+            clearTimeout(timeoutPatchChange);
+          }
+          timeoutPatchChange = setTimeout(function()
+          {
+            // submit form for range slider because it's only trigger change not keyup
+            $(myForm).ajaxify();
+          }, 500);
+        }
+        else
+        {
+          return null;
+        }
       break;
 
       default:
-        return false;
+        return null;
       break;
-    }
-
-
-    var myForm = $(this).parents('form[data-patch]');
-    if(myForm.length === 1)
-    {
-      $(myForm).ajaxify();
     }
   });
 
-  var timeout = null;
+  var timeoutPatchUp = null;
   $('form[data-patch] input').off("keyup.settingPatch").on("keyup.settingPatch", function(event)
   {
     switch($(this).attr('type'))
@@ -92,11 +111,11 @@ function inputSave()
     var myForm = $(this).parents('form[data-patch]');
     if(myForm.length === 1)
     {
-      if(timeout)
+      if(timeoutPatchUp)
       {
-        clearTimeout(timeout);
+        clearTimeout(timeoutPatchUp);
       }
-      timeout = setTimeout(function()
+      timeoutPatchUp = setTimeout(function()
       {
         $(myForm).ajaxify();
       }, 500);
