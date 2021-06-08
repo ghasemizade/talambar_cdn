@@ -65,7 +65,7 @@ function inputSave()
     {
       case 'checkbox':
       case 'radio':
-        $(myForm).ajaxify();
+        $(myForm).ajaxify({lockForm:false});
       break;
 
       case 'text':
@@ -78,7 +78,7 @@ function inputSave()
           timeoutPatchChange = setTimeout(function()
           {
             // submit form for range slider because it's only trigger change not keyup
-            $(myForm).ajaxify();
+            $(myForm).ajaxify({lockForm:false});
           }, 500);
         }
         else
@@ -117,7 +117,7 @@ function inputSave()
       }
       timeoutPatchUp = setTimeout(function()
       {
-        $(myForm).ajaxify();
+        $(myForm).ajaxify({lockForm:false});
       }, 500);
     }
   });
