@@ -1,6 +1,6 @@
 /* sortable list styles*/
 [data-sortable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-[data-sortable] [data-handle]{cursor:move!important;transition: 0.3s;}
+[data-sortable] [data-handle]{cursor:grab!important;transition: 0.3s;}
 [data-sortable] .isChoosen{opacity:0.8;}
 [data-sortable] .sortable-ghost{opacity: 0.5;}
 [data-sortable] > li.disabled{opacity:.5}
