@@ -25,6 +25,10 @@
   tr {page-break-inside:avoid;}
   textarea {overflow:auto;}
   .alerty2-container{display:none!important;}
+  // some style for break
+  .break-before-always{page-break-before: always;}
+  .break-before-auto{page-break-before:auto}
+  .break-inside-avoid{page-break-inside: avoid;}
 
   // for siftal panel
   body[data-panel]{background-color:transparent;}
