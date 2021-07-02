@@ -99,8 +99,14 @@ function inputSave()
     switch($(this).attr('type'))
     {
       case 'text':
+      case 'number':
+      case 'tel':
+      case 'url':
+      case 'color':
+      case 'date':
+      case 'email':
+      case 'search':
       case 'password':
-      case 'textarea':
         // do nothing
       break;
 
@@ -121,6 +127,25 @@ function inputSave()
       }, 500);
     }
   });
+
+  // save changes on textarea
+  var timeoutPatchUp = null;
+  $('form[data-patch] textarea').off("keyup.settingPatchTextArea").on("keyup.settingPatchTextArea", function(event)
+  {
+    var myForm = $(this).parents('form[data-patch]');
+    if(myForm.length === 1)
+    {
+      if(timeoutPatchUp)
+      {
+        clearTimeout(timeoutPatchUp);
+      }
+      timeoutPatchUp = setTimeout(function()
+      {
+        $(myForm).ajaxify({lockForm:false});
+      }, 1000);
+    }
+  });
+
 }
 
 
