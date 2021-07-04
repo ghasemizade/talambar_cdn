@@ -40,6 +40,9 @@ label+div .select22 {
 .select22-results__option{
   cursor: pointer;
 }
+.SelectOptZeroPadding .select22-results__option{
+	padding: 0;
+}
 .select22-container.select22-container--open .select22-selection--single{
   cursor: context-menu;
 }
