@@ -4,10 +4,10 @@ body[data-preload] * { -webkit-transition: none !important; -moz-transition: non
 
 
 /* list */
-ul{list-style:none inside none;line-height:2rem;}
-[dir="rtl"] ul{line-height:3rem;}
+ul{list-style:none inside none;}
 
-ul.list{list-style:square outside none;margin:0 2rem;}
+ul.list{list-style:square outside none;margin:0 2rem;line-height:2rem;}
+[dir="rtl"] ul.list{line-height:3rem;}
 ul.list li {padding:0.5rem 1rem;}
 ul.list li a {padding:0.3rem 0.5rem;}
 
