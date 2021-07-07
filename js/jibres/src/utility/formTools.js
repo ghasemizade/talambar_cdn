@@ -126,6 +126,8 @@ function inputSave()
         $(myForm).ajaxify({lockForm:false});
       }, 500);
     }
+
+    inputSyncLiveMode(this);
   });
 
   // save changes on textarea
@@ -148,5 +150,22 @@ function inputSave()
 
 }
 
+function inputSyncLiveMode(_this)
+{
+  var $syncInput = $(_this);
+  var syncMode = $syncInput.attr('data-sync');
 
+  if(syncMode)
+  {
+    var syncModeApply = $("[data-sync-apply="+ syncMode +"]");
+    if(syncModeApply.length === 1)
+    {
+      syncModeApply.text($syncInput.val());
+    }
+    else
+    {
+      console.log('we have duplicate sync mode apply element!');
+    }
+  }
+}
 
