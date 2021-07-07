@@ -125,9 +125,10 @@ function inputSave()
       {
         $(myForm).ajaxify({lockForm:false});
       }, 500);
-    }
 
-    inputSyncLiveMode(this);
+      // sync with preview if exist
+      inputSyncLiveMode(this);
+    }
   });
 
   // save changes on textarea
@@ -145,6 +146,9 @@ function inputSave()
       {
         $(myForm).ajaxify({lockForm:false});
       }, 1000);
+
+      // sync with preview if exist
+      inputSyncLiveMode(this);
     }
   });
 
