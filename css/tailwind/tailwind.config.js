@@ -21,6 +21,8 @@ module.exports = {
       'tahoma': 'tahoma',
       'GanjNamehSans': 'GanjNamehSans',
       'NikaWeb': 'NikaWeb',
+      'BehdadWeb': 'BehdadWeb',
+      'WebNastaliq': 'WebNastaliq',
     },
     fontSize: {
       'reset': ['16px',    '24px'],
