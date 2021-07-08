@@ -34,6 +34,21 @@ function unlockFormRedirect(_data, _autoScrollAttr)
       autoScroll = _autoScrollAttr;
     }
 
+    // read headers and send with request
+    var myHeaders = {};
+    if(_data && _data.redirectHeaders)
+    {
+      try
+      {
+        var myHeaders = $.parseJSON(_data.redirectHeaders);
+      }
+      catch (err)
+      {
+        console.log('error on parse redirectHeaders');
+      }
+      // myHeaders = { 'X-test3':'xxxxxxxxxxxxxxxxxxxx' };
+    }
+
     var a = $('<a href="' + _data.redirect + '"></a>');
     if(a.isAbsoluteURL() || _data.direct)
     {
@@ -54,14 +69,16 @@ function unlockFormRedirect(_data, _autoScrollAttr)
         Navigate({
           url: _data.redirect,
           autoScroll: autoScroll,
-          replace: true
+          replace: true,
+          ajax: { headers: myHeaders }
         });
       }
       else
       {
         Navigate({
           url: _data.redirect,
-          autoScroll: autoScroll
+          autoScroll: autoScroll,
+          ajax: { headers: myHeaders }
         });
       }
     }
