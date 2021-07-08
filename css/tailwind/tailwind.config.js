@@ -16,6 +16,11 @@ module.exports = {
       'siftal': 'siftal',
       'IRANSansX': 'IRANSansX',
       'IRANYekan': 'IRANYekan',
+      'LatoLatinWeb': 'LatoLatinWeb',
+      'Vazir': 'Vazir',
+      'tahoma': 'tahoma',
+      'GanjNamehSans': 'GanjNamehSans',
+      'NikaWeb': 'NikaWeb',
     },
     fontSize: {
       'reset': ['16px',    '24px'],
