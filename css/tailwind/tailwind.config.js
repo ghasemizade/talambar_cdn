@@ -60,5 +60,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-rtl'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 }
