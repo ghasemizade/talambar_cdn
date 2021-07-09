@@ -11,6 +11,12 @@ body[data-siteBuilder]{
   height: 100vh;
   height: 100%!important;
 }
+@media (min-width: 1200px) {
+	body[data-siteBuilder]{
+  	grid-template-columns: 320px auto;
+	}
+}
+
 [data-pwa] body[data-siteBuilder]{
 	display: initial;
 	height: initial;
