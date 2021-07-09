@@ -23,6 +23,7 @@ module.exports = {
       'NikaWeb': 'NikaWeb',
       'BehdadWeb': 'BehdadWeb',
       'WebNastaliq': 'WebNastaliq',
+      'Lalezar': 'Lalezar',
     },
     fontSize: {
       'reset': ['16px',    '24px'],
