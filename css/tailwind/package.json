@@ -4,6 +4,7 @@
   "description": "Tailwind css for Jibres Page Builder",
   "main": "postcss.config.js",
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
     "postcss-import": "^14.0.2"
   },
   "keywords": [
@@ -13,10 +14,10 @@
   "author": "Javad Adib",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.3.0",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.1.2",
+    "tailwindcss": "^2.2.4",
     "tailwindcss-rtl": "^0.7.3"
   },
   "scripts": {
