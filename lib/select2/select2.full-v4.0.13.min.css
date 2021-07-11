@@ -16,6 +16,7 @@ label+div .select22 {
 }
 .select22-container--default .select22-selection--single .select22-selection__rendered{
   line-height: 34px;
+  font-size: 14px;
 }
 .select22-container--default .select22-selection--single .select22-selection__arrow{
   height: 34px;
