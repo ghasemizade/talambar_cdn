@@ -14,6 +14,7 @@ module.exports = {
     fontFamily: {
       'sans': '"LatoLatinWeb", IRANYekan, ui-sans-serif, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
       'siftal': 'siftal',
+      'mono': ['ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'],
       'IRANSansX': 'IRANSansX',
       'IRANYekan': 'IRANYekan',
       'LatoLatinWeb': 'LatoLatinWeb',
@@ -30,6 +31,7 @@ module.exports = {
       '2xs':   ['.625em',  '0.875em'],
       'xs':    ['.75em',   '1em'],
       'sm':    ['.875em',  '1.25em'],
+      'md':    ['.9375em', '1.4em'],
       'base':  ['1em',     '1.5em'],
       'lg':    ['1.125em', '1.75em'],
       'xl':    ['1.25em',  '1.75em'],
