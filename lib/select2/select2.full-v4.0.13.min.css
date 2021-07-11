@@ -59,6 +59,9 @@ label+div .select22 {
   border-color:#5897fb
 }
 
+.select22-results__options{
+	font-size: 14px;
+}
 /*row inside line*/
 .select22-container .row{
   white-space: initial;
