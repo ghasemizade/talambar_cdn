@@ -124,10 +124,16 @@ body[data-siteBuilder] > .js{
 }
 .filter-switch-item input:checked + label {
   color: inherit;
+  --tw-bg-opacity: 100;
 }
 .filter-switch-item input:not(:checked) + label {
-  --bg-opacity: 0;
+  --tw-bg-opacity: 0;
   box-shadow: none;
 }
-
+.filter-switch-item input:focus + label{
+	@apply bg-blue-200;
+}
+.filter-switch-item label:hover{
+  --tw-bg-opacity: 0.6!important;
+}
 
