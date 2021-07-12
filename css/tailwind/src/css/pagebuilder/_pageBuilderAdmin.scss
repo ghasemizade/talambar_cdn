@@ -136,4 +136,7 @@ body[data-siteBuilder] > .js{
 .filter-switch-item label:hover{
   --tw-bg-opacity: 0.6!important;
 }
+.filter-switch-item label svg{
+	max-height: 25px;
+}
 
