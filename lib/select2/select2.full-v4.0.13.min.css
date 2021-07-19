@@ -18,6 +18,9 @@ label+div .select22 {
   line-height: 34px;
   font-size: 14px;
 }
+[dir=rtl] .select22-container--default .select22-selection--single .select22-selection__rendered{
+  font-size: 12px;
+}
 .select22-container--default .select22-selection--single .select22-selection__arrow{
   height: 34px;
 }
@@ -62,6 +65,9 @@ label+div .select22 {
 
 .select22-results__options{
 	font-size: 14px;
+}
+[dir=rtl] .select22-results__options{
+	font-size: 12px;
 }
 /*row inside line*/
 .select22-container .row{
