@@ -45,7 +45,7 @@ label+div .select22 {
   cursor: pointer;
 }
 .SelectOptZeroPadding .select22-results__option{
-	padding: 0;
+  padding: 0;
 }
 .select22-container.select22-container--open .select22-selection--single{
   cursor: context-menu;
@@ -64,10 +64,10 @@ label+div .select22 {
 }
 
 .select22-results__options{
-	font-size: 14px;
+  font-size: 14px;
 }
 [dir=rtl] .select22-results__options{
-	font-size: 12px;
+  font-size: 12px;
 }
 /*row inside line*/
 .select22-container .row{
@@ -136,8 +136,15 @@ select.select22-country img{
 }
 
 .select22-container .select22-search--inline .select22-search__field{
-	min-width: 200px;
-	font-family: inherit;
+  min-width: 200px;
+  font-family: inherit;
 }
 
+/*disable mode*/
+.select22-container--default.select22-container--disabled .select22-selection--single{
+  background-color: #f7f7f7;
+}
+.select22-container--default.select22-container--disabled .select22-selection--single .select22-selection__arrow{
+  display: none;
+}
 
