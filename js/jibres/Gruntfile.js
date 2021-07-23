@@ -12,7 +12,7 @@ var myModuleFiles =
 
 	'src/libs/localstorage.js',
 	'src/libs/utils.js',
-	'src/libs/underscore/underscore-min-v1.11.0.js',
+	'src/libs/underscore/underscore-umd-min-v1.13.1.js',
 
 	'src/libs/dataResponse/dataResponse.js',
 	'src/libs/lazyload/lazyload.min.js',
