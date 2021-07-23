@@ -139,6 +139,10 @@ select.select22-country img{
   min-width: 200px;
   font-family: inherit;
 }
+.select22-search--dropdown .select22-search__field{
+  font-size: 16px;
+  line-height: 1.4em;
+}
 
 /*disable mode*/
 .select22-container--default.select22-container--disabled .select22-selection--single{
@@ -147,4 +151,3 @@ select.select22-country img{
 .select22-container--default.select22-container--disabled .select22-selection--single .select22-selection__arrow{
   display: none;
 }
-

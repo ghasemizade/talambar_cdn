@@ -171,8 +171,6 @@ label+div .select22 {
   padding:4px;
   width:100%;
   box-sizing:border-box;
-  font-size: 16px;
-  line-height: 1.4em;
 }
 
 .select22-search--dropdown .select22-search__field::-webkit-search-cancel-button{

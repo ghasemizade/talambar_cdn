@@ -261,19 +261,35 @@ function event_corridor(_e, _self, _key)
 
     case '114':             // f3
     case '114ctrl':         // f3 + ctrl
-    case '70ctrl':          // f3 + ctrl
-logy($('input.search'));
-logy($('input.search').length);
+    case '70ctrl':          // f + ctrl
 
-      if($('input[type=search]').length === 1)
+      var inputSearchEl = $('input[type=search]');
+      var inputSearchEl2 = $('select input.search');
+      if(inputSearchEl.length === 1)
       {
-        $('input[type=search]').trigger("focus");
-        _e.preventDefault();
+        if(inputSearchEl.attr('pressedCounter') === undefined || parseInt(inputSearchEl.attr('pressedCounter')) === 0)
+        {
+          inputSearchEl.attr('pressedCounter', 1);
+        }
+        else
+        {
+          inputSearchEl.attr('pressedCounter', 0);
+          inputSearchEl.trigger("focus");
+          _e.preventDefault();
+        }
       }
-      else if($('select input.search').length === 2)
+      else if(inputSearchEl2.length === 1)
       {
-        $('input.search').trigger("focus");
-        _e.preventDefault();
+        if(inputSearchEl2.attr('pressedCounter') === undefined || parseInt(inputSearchEl2.attr('pressedCounter')) === 0)
+        {
+          inputSearchEl2.attr('pressedCounter', 1);
+        }
+        else
+        {
+          inputSearchEl2.attr('pressedCounter', 0);
+          inputSearchEl2.trigger("focus");
+          _e.preventDefault();
+        }
       }
       break;
 
