@@ -5,12 +5,22 @@ function pageScript()
 		var total         = $("#input-total").val();
 		var totaldiscount = $("#input-totaldiscount").val();
 
-		total         = total.replace(',', '');
-		totaldiscount = totaldiscount.replace(',', '');
+		total         = parseInt(total.replace(',', ''));
+		totaldiscount = parseInt(totaldiscount.replace(',', ''));
 
-		final         = parseInt(total) - parseInt(totaldiscount);
+		if(total === NaN)
+		{
+			total = 0
+		}
+		if(totaldiscount === NaN)
+		{
+			totaldiscount = 0;
+		}
 
-		$("#input-totalvat").val(final * 0.09);
+		final = parseInt(total) - parseInt(totaldiscount);
+		vat   = parseInt(final * 0.09);
+
+		$("#input-totalvat").val(vat);
 
 	});
 }
