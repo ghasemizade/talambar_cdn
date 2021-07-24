@@ -5,8 +5,9 @@ function pageScript()
 		var total         = $("#input-total").val();
 		var totaldiscount = $("#input-totaldiscount").val();
 
-		total         = parseInt(total.replace(',', ''));
-		totaldiscount = parseInt(totaldiscount.replace(',', ''));
+		total         = parseInt(total.replace(/[^\d.]+/g, ''));
+		totaldiscount = parseInt(totaldiscount.replace(/[^\d.]+/g, ''));
+
 
 		if(total === NaN)
 		{
@@ -17,8 +18,8 @@ function pageScript()
 			totaldiscount = 0;
 		}
 
-		final = parseInt(total) - parseInt(totaldiscount);
-		vat   = parseInt(final * 0.09);
+		vat = (total - totaldiscount) * 0.09;
+		vat = parseInt(vat);
 
 		$("#input-totalvat").val(vat);
 
