@@ -10,7 +10,7 @@ function pageScript()
 
 		final         = parseInt(total) - parseInt(totaldiscount);
 
-		$("#input-totalvat").val(final * 0.9);
+		$("#input-totalvat").val(final * 0.09);
 
 	});
 }
