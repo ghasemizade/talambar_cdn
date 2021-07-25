@@ -19,6 +19,7 @@ function pageScript()
 		}
 
 		vat = (total - totaldiscount) * 0.09;
+		vat = Math.round(vat);
 		vat = parseInt(vat);
 
 		$("#input-totalvat").val(vat);
