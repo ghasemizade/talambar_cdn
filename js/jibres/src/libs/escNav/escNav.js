@@ -2,9 +2,15 @@
 
 function escPressed()
 {
+	var backBtnEl = $('.titleBox a.back');
+
 	$myFocus = $(":focus");
 	// if user focused on everything remove focus from it
-	if($myFocus.length > 0)
+	if($myFocus.hasClass('back'))
+	{
+		// do nothing
+	}
+	else if($myFocus.length > 0)
 	{
 		// if($myFocus.is('input') || $myFocus.is('textarea') || $myFocus.is('select'))
 		// {
@@ -36,26 +42,32 @@ function escPressed()
 
 	if($('.titleBox a.back').length === 1)
 	{
-		myNewAddr = $('.titleBox a.back').attr('href');
+		myNewAddr = backBtnEl.attr('href');
 	}
 	else
 	{
-		return false;
+		return null;
 	}
 
 	if(myNewAddr)
 	{
 		if(pressCounter === 1)
 		{
+			// do nothing
+			return null;
+		}
+		else if(pressCounter === 2)
+		{
+			backBtnEl.focus();
 			// show info message
-			if($('html').attr('lang') === 'fa')
-			{
-				notif('info', 'با فشردن مجدد دکمه اسکیپ به یک آدرس بالاتر منتقل می‌شوید');
-			}
-			else
-			{
-				notif('info', 'Press Esc key another time to go one level up');
-			}
+			// if($('html').attr('lang') === 'fa')
+			// {
+			// 	notif('info', 'با فشردن مجدد دکمه اسکیپ به یک آدرس بالاتر منتقل می‌شوید');
+			// }
+			// else
+			// {
+			// 	notif('info', 'Press Esc key another time to go one level up');
+			// }
 			return true;
 		}
 

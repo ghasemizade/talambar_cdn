@@ -125,8 +125,8 @@ function readPageFancyBox()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "css/lib/jquery.fancybox-3.5.7.min.css?v=1");
-    myUrl = urlJibres('cdn') + "js/fancybox/jquery.fancybox-3.5.7.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.0-alpha.4.min.css?v=1");
+    myUrl = urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.0-alpha.4.min.js?v=1";
     fileLoader(myUrl, 'runFancybox', true);
   }
 }
@@ -166,9 +166,8 @@ function readPageSelect2()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.css?v=2");
-    // myUrl = urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.js?v=3";
-    myUrl = urlJibres('cdn') + "lib/select2/src/select2.full-v4.0.13.js?v=4";
+    StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.css?v=5");
+    myUrl = urlJibres('cdn') + "lib/select2/src/select2.full-v4.0.13.js?v=5";
     fileLoader(myUrl, 'runPageSelect2', true);
   }
 }

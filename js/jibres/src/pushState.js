@@ -52,6 +52,9 @@ function pushStateSiftal(_direct)
     calcProductMargin();
   }
 
+  // reset escape counter
+  sessionStorage.setItem("escCounter", 0);
+
   setTimeout(function(){
     callFunc('pushState', _direct);
     callFunc('pushStateFinal', _direct);

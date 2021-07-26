@@ -7,12 +7,12 @@ var myModuleFiles =
 	'src/libs/logy/logy.js',
 
 	// include jquery
-	'src/libs/jquery/jquery-3.5.1.min.js',
+	'src/libs/jquery/jquery-3.6.0.min.js',
 	'src/libs/jquery/jquery-fn.js',
 
 	'src/libs/localstorage.js',
 	'src/libs/utils.js',
-	'src/libs/underscore/underscore-min-v1.11.0.js',
+	'src/libs/underscore/underscore-umd-min-v1.13.1.js',
 
 	'src/libs/dataResponse/dataResponse.js',
 	'src/libs/lazyload/lazyload.min.js',
