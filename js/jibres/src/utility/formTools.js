@@ -68,6 +68,10 @@ function inputSave()
         $(myForm).ajaxify({lockForm:false});
       break;
 
+      case 'color':
+        $(myForm).ajaxify({lockForm:false});
+      break;
+
       case 'text':
         if($(this).attr('data-rangeslider') !== undefined)
         {
