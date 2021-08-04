@@ -9,6 +9,10 @@ module.exports = {
       keyframes: true,
     },
   },
+  corePlugins: {
+   gradientColorStops: false,
+   backgroundImage: false,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
