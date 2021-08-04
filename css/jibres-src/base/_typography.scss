@@ -42,7 +42,10 @@ a:active{
 	outline:0;
 }
 
-a[data-ajaxify]{
+[data-ajaxify]{
+  cursor: pointer;
+}
+[data-confirm]{
   cursor: pointer;
 }
 div{
