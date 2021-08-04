@@ -53,7 +53,14 @@ function pushStateSiftal(_direct)
   }
 
   // reset escape counter
-  sessionStorage.setItem("escCounter", 0);
+  if(typeof(Storage) !== "undefined")
+  {
+    try {
+      sessionStorage.setItem("escCounter", 0);
+    } catch(e) {
+      // console.log('Session Storage is disabled');
+    }
+  }
 
   setTimeout(function(){
     callFunc('pushState', _direct);

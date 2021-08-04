@@ -28,7 +28,11 @@ function escPressed()
 
 	// save press counter in sessionStorage
 	var pressCounter = null;
-	if(typeof(Storage) !== "undefined")
+	if(typeof(Storage) == "undefined")
+	{
+		return false;
+	}
+	else
 	{
 		pressCounter = parseInt(sessionStorage.getItem("escCounter"));
 		if(isNaN(pressCounter))
