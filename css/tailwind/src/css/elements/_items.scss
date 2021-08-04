@@ -1,6 +1,18 @@
+/* --------------------------------- items */
+$myItemHeight: 5rem;
+$myItemHeight_Long: 4rem;
+$myItemHeight_PWA: 4.5rem;
+
+$myItemLineHeight: 4rem;
+$myItemLineHeight16x9: 7.1rem;
+$myItemLineHeight_Long: 3rem;
+$myItemLineHeight_PWA: 3.5rem;
+$myItemLineHeight16x9_PWA: 6.2rem;
+
+
 .items{
 	background-color: #fff;
-	border-radius:$myRadius;
+	border-radius:0.25rem;
 	font-size:1.4rem;
 	overflow: hidden;
 	margin-bottom:1rem;
@@ -367,7 +379,7 @@ body .rtl .items li .go::after{
 /* pwa mode */
 [data-pwa] .items{
 	box-shadow:none;
-	border-radius:$myRadiusPWA;
+	border-radius:0.8rem;
 	font-size: 1.2rem;
 }
 [data-pwa] .items li{
