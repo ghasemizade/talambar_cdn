@@ -182,7 +182,7 @@ function readPageUploader()
     // load style
     // StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
     // load script
-    myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=4";
+    myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=5";
     fileLoader(myUrl, 'runUploader', true);
   }
 }
