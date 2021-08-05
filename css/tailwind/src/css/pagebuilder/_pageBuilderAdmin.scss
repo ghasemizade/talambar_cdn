@@ -99,6 +99,9 @@ body[data-siteBuilder] > .js{
 .browserFrame[data-size='mobile'] .address{
 	display: none;
 }
+.browserFrame[data-size='mobile'] .connectDomain{
+	display: none;
+}
 [data-pwa] .browserFrame .address{
 	display: none;
 }
