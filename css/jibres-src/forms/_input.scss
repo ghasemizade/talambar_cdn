@@ -385,3 +385,17 @@ input[type="color"].circle{
 	width:35px;
 	height:35px;
 }
+input[type="color"].picker::-webkit-color-swatch-wrapper {
+	padding: 2px;
+}
+input[type="color"].picker::-webkit-color-swatch {
+	border-radius: 10px;
+	border: none;
+}
+input[type="color"].picker{
+	border: 2px solid #162666;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	border-radius:10px;
+	width:42px;
+	height:42px;
+}
