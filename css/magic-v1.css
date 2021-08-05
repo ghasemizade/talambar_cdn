@@ -20189,11 +20189,11 @@ video {
 }
 
 .leading-9 {
-  line-height: 2.25em;
+  line-height: 2.5em;
 }
 
 .leading-10 {
-  line-height: 2.5em;
+  line-height: 3em;
 }
 
 .leading-none {
@@ -53254,11 +53254,11 @@ body .rtl .items li .go::after{
   }
 
   .sm\:leading-9 {
-    line-height: 2.25em;
+    line-height: 2.5em;
   }
 
   .sm\:leading-10 {
-    line-height: 2.5em;
+    line-height: 3em;
   }
 
   .sm\:leading-none {
@@ -84965,11 +84965,11 @@ body .rtl .items li .go::after{
   }
 
   .md\:leading-9 {
-    line-height: 2.25em;
+    line-height: 2.5em;
   }
 
   .md\:leading-10 {
-    line-height: 2.5em;
+    line-height: 3em;
   }
 
   .md\:leading-none {
@@ -116676,11 +116676,11 @@ body .rtl .items li .go::after{
   }
 
   .lg\:leading-9 {
-    line-height: 2.25em;
+    line-height: 2.5em;
   }
 
   .lg\:leading-10 {
-    line-height: 2.5em;
+    line-height: 3em;
   }
 
   .lg\:leading-none {
@@ -148387,11 +148387,11 @@ body .rtl .items li .go::after{
   }
 
   .xl\:leading-9 {
-    line-height: 2.25em;
+    line-height: 2.5em;
   }
 
   .xl\:leading-10 {
-    line-height: 2.5em;
+    line-height: 3em;
   }
 
   .xl\:leading-none {
@@ -180098,11 +180098,11 @@ body .rtl .items li .go::after{
   }
 
   .\32xl\:leading-9 {
-    line-height: 2.25em;
+    line-height: 2.5em;
   }
 
   .\32xl\:leading-10 {
-    line-height: 2.5em;
+    line-height: 3em;
   }
 
   .\32xl\:leading-none {
