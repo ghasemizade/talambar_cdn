@@ -33601,7 +33601,8 @@ body[data-siteBuilder] > .js{
 }
 
 .filter-switch-item label svg{
-  max-height: 25px;
+  max-height: 20px;
+  margin: 0 auto;
 }
 
 /*xs */
