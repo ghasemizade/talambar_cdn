@@ -15,7 +15,8 @@ var myModuleFiles =
 	'src/libs/underscore/underscore-umd-min-v1.13.1.js',
 
 	'src/libs/dataResponse/dataResponse.js',
-	'src/libs/lazyload/lazyload.min.js',
+	// lazyload
+	'src/libs/lazyload/lazyload-17.0.4.min.js',
 	'src/libs/lazyload/lazyloadRunner.js',
 
 	'src/libs/counter/jquery.counterup.js',
