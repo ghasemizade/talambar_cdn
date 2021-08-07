@@ -17,6 +17,13 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'sm': {'min': '640px'},
+      'md': {'min': '768px'},
+      'lg': {'min': '1024px'},
+      'xl': {'min': '1280px'},
+      // '2xl': {'min': '1536px'},
+    },
     fontFamily: {
       'sans': '"LatoLatinWeb", IRANYekan, ui-sans-serif, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
       'siftal': 'siftal',
@@ -74,7 +81,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('tailwindcss-rtl'),
+    // require('tailwindcss-rtl'),
     require('@tailwindcss/aspect-ratio'),
   ],
 }
