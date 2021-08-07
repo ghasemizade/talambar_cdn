@@ -12976,7 +12976,7 @@ body[data-siteBuilder] > #pageFooter{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   background-color:#fff;
   grid-area: footer;
-  /* border-top: 1px solid #eee; */
+  border-top: 1px solid #eee;
 }
 
 body[data-siteBuilder] > #pageFooter .desktop{

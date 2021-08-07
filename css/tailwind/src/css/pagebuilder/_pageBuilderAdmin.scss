@@ -69,7 +69,7 @@ body[data-siteBuilder] > #pageFooter{
 	@apply shadow;
 	background-color:#fff;
 	grid-area: footer;
-	/* border-top: 1px solid #eee; */
+	border-top: 1px solid #eee;
 }
 body[data-siteBuilder] > #pageFooter .desktop{
 	@apply px-7;
