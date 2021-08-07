@@ -23,6 +23,8 @@
 /* add extra style*/
 @import "css/base/_reset.scss";
 @import "css/base/_global.scss";
+@import "css/base/_textColor.scss";
+@import "css/base/_backgroundColor.scss";
 
 /* responsive*/
 @import "css/responsive/_switchResponsive.scss";
