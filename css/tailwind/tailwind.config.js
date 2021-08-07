@@ -17,6 +17,9 @@ module.exports = {
    mixBlendMode: false,
    backgroundBlendMode: false,
 
+   // disable TYPOGRAPHY
+   placeholderColor: false,
+
    // disable filters
    contrast: false,
    dropShadow: false,
@@ -31,6 +34,11 @@ module.exports = {
    backdropInvert: false,
    backdropSaturate: false,
    backdropSepia: false,
+
+   // disable transforms
+   transformOrigin: false,
+   scale: false,
+
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
