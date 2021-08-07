@@ -97,6 +97,14 @@ module.exports = {
       '8xl':   ['6em',     '1'],
       '9xl':   ['8em',     '1'],
     },
+    inset: {
+      '0': 0,
+      'auto': 'auto',
+      '1/4': '25%;',
+      '2/4': '50%;',
+      '3/4': '75%;',
+      'full': '100%;',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
