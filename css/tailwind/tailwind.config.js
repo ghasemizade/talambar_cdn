@@ -25,7 +25,10 @@ module.exports = {
    // disable BORDERS
    // borderColor: false,
    divideColor: false,
+   ringWidth: false,
    ringColor: false,
+   ringOpacity: false,
+   ringOffsetWidth: false,
    ringOffsetColor: false,
 
    // disable EFFECTS
