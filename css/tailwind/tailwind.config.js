@@ -13,14 +13,24 @@ module.exports = {
   },
   corePlugins: {
    gradientColorStops: false,
-   backgroundImage: false,
-   textColor: false,
-   backgroundColor: false,
-   mixBlendMode: false,
-   backgroundBlendMode: false,
 
    // disable TYPOGRAPHY
    placeholderColor: false,
+   textColor: false,
+
+   // disable BACKGROUNDS
+   backgroundImage: false,
+   backgroundColor: false,
+
+   // disable BORDERS
+   // borderColor: false,
+   divideColor: false,
+   ringColor: false,
+   ringOffsetColor: false,
+
+   // disable EFFECTS
+   mixBlendMode: false,
+   backgroundBlendMode: false,
 
    // disable filters
    contrast: false,
