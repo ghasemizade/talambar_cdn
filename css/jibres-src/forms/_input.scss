@@ -372,6 +372,7 @@ input[type="color"]{
 	min-height:35px;
 	border-radius: 0.25rem;
 	overflow: hidden;
+	cursor: pointer;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
@@ -398,4 +399,22 @@ input[type="color"].picker{
 	border-radius:10px;
 	width:42px;
 	height:42px;
+	transition: 0.3s;
+}
+input[type="color"].picker:hover{
+	background: #eee;;
+}
+.picker.reset{
+	border: 2px solid #162666;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	border-radius:10px;
+	width:42px;
+	height:42px;
+	transition: 0.3s;
+}
+.picker.reset:hover{
+	background: #eee;;
+}
+.picker img{
+	padding: 5px;
 }
