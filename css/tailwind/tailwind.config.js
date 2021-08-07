@@ -108,6 +108,13 @@ module.exports = {
       green: colors.emerald,
       blue: colors.blue,
     },
+    aspectRatio: {
+      1: '1',
+      3: '3',
+      4: '4',
+      9: '9',
+      16: '16',
+    },
     extend: {
       lineHeight: {
         '3': '.75em',
