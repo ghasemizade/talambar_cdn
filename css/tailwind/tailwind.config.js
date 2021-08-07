@@ -14,6 +14,7 @@ module.exports = {
   corePlugins: {
    gradientColorStops: false,
 
+
    // disable TYPOGRAPHY
    placeholderColor: false,
    textColor: false,
@@ -107,6 +108,13 @@ module.exports = {
       '2/4': '50%;',
       '3/4': '75%;',
       'full': '100%;',
+    },
+    space: {
+      '0': 0,
+      '2': '0.5rem',
+      '4': '1rem',
+      '5': '1.25rem',
+      '10': '2.5rem',
     },
     colors: {
       transparent: 'transparent',
