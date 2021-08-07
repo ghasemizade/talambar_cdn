@@ -1,16 +1,8 @@
+.bg-transparent{background-color:transparent;}
+.bg-current{background-color:currentColor;}
+
 .bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity));}
 .bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity));}
-
-.bg-blue-50{--tw-bg-opacity:1;background-color:rgba(239,246,255,var(--tw-bg-opacity));}
-.bg-blue-100{--tw-bg-opacity:1;background-color:rgba(219,234,254,var(--tw-bg-opacity));}
-.bg-blue-200{--tw-bg-opacity:1;background-color:rgba(191,219,254,var(--tw-bg-opacity));}
-.bg-blue-300{--tw-bg-opacity:1;background-color:rgba(147,197,253,var(--tw-bg-opacity));}
-.bg-blue-400{--tw-bg-opacity:1;background-color:rgba(96,165,250,var(--tw-bg-opacity));}
-.bg-blue-500{--tw-bg-opacity:1;background-color:rgba(59,130,246,var(--tw-bg-opacity));}
-.bg-blue-600{--tw-bg-opacity:1;background-color:rgba(37,99,235,var(--tw-bg-opacity));}
-.bg-blue-700{--tw-bg-opacity:1;background-color:rgba(29,78,216,var(--tw-bg-opacity));}
-.bg-blue-800{--tw-bg-opacity:1;background-color:rgba(30,64,175,var(--tw-bg-opacity));}
-.bg-blue-900{--tw-bg-opacity:1;background-color:rgba(30,58,138,var(--tw-bg-opacity));}
 
 .bg-gray-50{--tw-bg-opacity:1;background-color:rgba(249,250,251,var(--tw-bg-opacity));}
 .bg-gray-100{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity));}
@@ -23,4 +15,14 @@
 .bg-gray-800{--tw-bg-opacity:1;background-color:rgba(31,41,55,var(--tw-bg-opacity));}
 .bg-gray-900{--tw-bg-opacity:1;background-color:rgba(17,24,39,var(--tw-bg-opacity));}
 
+.bg-blue-50{--tw-bg-opacity:1;background-color:rgba(239,246,255,var(--tw-bg-opacity));}
+.bg-blue-100{--tw-bg-opacity:1;background-color:rgba(219,234,254,var(--tw-bg-opacity));}
+.bg-blue-200{--tw-bg-opacity:1;background-color:rgba(191,219,254,var(--tw-bg-opacity));}
+.bg-blue-300{--tw-bg-opacity:1;background-color:rgba(147,197,253,var(--tw-bg-opacity));}
+.bg-blue-400{--tw-bg-opacity:1;background-color:rgba(96,165,250,var(--tw-bg-opacity));}
+.bg-blue-500{--tw-bg-opacity:1;background-color:rgba(59,130,246,var(--tw-bg-opacity));}
+.bg-blue-600{--tw-bg-opacity:1;background-color:rgba(37,99,235,var(--tw-bg-opacity));}
+.bg-blue-700{--tw-bg-opacity:1;background-color:rgba(29,78,216,var(--tw-bg-opacity));}
+.bg-blue-800{--tw-bg-opacity:1;background-color:rgba(30,64,175,var(--tw-bg-opacity));}
+.bg-blue-900{--tw-bg-opacity:1;background-color:rgba(30,58,138,var(--tw-bg-opacity));}
 
