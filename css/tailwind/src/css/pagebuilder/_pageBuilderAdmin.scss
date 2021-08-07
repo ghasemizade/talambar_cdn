@@ -22,9 +22,9 @@ body[data-siteBuilder]{
 	height: initial;
 }
 body[data-siteBuilder] > #sidebar{
-	@apply bg-white;
 	@apply shadow;
 	@apply p-7;
+	background-color: #fff;
 	grid-area: sidebar;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -58,15 +58,16 @@ body[data-siteBuilder] .backBtn{
 }
 
 body[data-siteBuilder] > #pageContent{
-	@apply overflow-hidden bg-blue-50;
+	@apply overflow-hidden;
 	@apply pt-5 px-10 pb-10;
+	background-color:#EFF6FF;
 	grid-area: main;
 	overflow: auto;
 }
 body[data-siteBuilder] > #pageFooter{
-	@apply bg-white;
 	@apply overflow-hidden;
 	@apply shadow;
+	background-color:#fff;
 	grid-area: footer;
 	/* border-top: 1px solid #eee; */
 }
@@ -134,7 +135,7 @@ body[data-siteBuilder] > .js{
   box-shadow: none;
 }
 .filter-switch-item input:focus + label{
-	@apply bg-blue-200;
+	background-color:#BFDBFE;
 }
 .filter-switch-item label:hover{
   --tw-bg-opacity: 0.6!important;
