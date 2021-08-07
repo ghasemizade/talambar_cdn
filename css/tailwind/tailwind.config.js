@@ -51,8 +51,11 @@ module.exports = {
    backdropSepia: false,
 
    // disable transforms
+   // transform: false,
    transformOrigin: false,
    scale: false,
+   translate: false,
+   skew: false,
 
   },
   darkMode: false, // or 'media' or 'class'
