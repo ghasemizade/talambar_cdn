@@ -12,7 +12,7 @@ module.exports = {
   corePlugins: {
    gradientColorStops: false,
    backgroundImage: false,
-   // textColor: false,
+   textColor: false,
    backgroundColor: false,
   },
   darkMode: false, // or 'media' or 'class'
