@@ -14,6 +14,23 @@ module.exports = {
    backgroundImage: false,
    textColor: false,
    backgroundColor: false,
+   mixBlendMode: false,
+   backgroundBlendMode: false,
+
+   // disable filters
+   contrast: false,
+   dropShadow: false,
+   hueRotate: false,
+   invert: false,
+   saturate: false,
+   sepia: false,
+   backdropBrightness: false,
+   backdropContrast: false,
+   backdropGrayscale: false,
+   backdropHueRotate: false,
+   backdropInvert: false,
+   backdropSaturate: false,
+   backdropSepia: false,
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
