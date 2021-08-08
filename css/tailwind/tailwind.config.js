@@ -166,5 +166,6 @@ module.exports = {
     // require('tailwindcss-rtl'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
+    require('tailwindcss-debug-screens'),
   ],
 }
