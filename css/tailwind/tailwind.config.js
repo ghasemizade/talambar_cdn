@@ -134,6 +134,11 @@ module.exports = {
       9: '9',
       16: '16',
     },
+    lineClamp: {
+      1: '1',
+      2: '2',
+      3: '3',
+    },
     extend: {
       lineHeight: {
         '3': '.75em',
@@ -160,5 +165,6 @@ module.exports = {
   plugins: [
     // require('tailwindcss-rtl'),
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
   ],
 }
