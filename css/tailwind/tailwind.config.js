@@ -1,4 +1,5 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
+// const breakpoint_sm = theme('screens.sm', {});
 
 module.exports = {
   purge: {
@@ -140,6 +141,7 @@ module.exports = {
       3: '3',
     },
     debugScreens: {
+      prefix: '',
       selector: '[data-debugger]::before',
     },
     extend: {
@@ -170,5 +172,12 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
     require('tailwindcss-debug-screens'),
+    // plugin(function({ addBase, theme }) {
+    //   addBase({
+    //     'h1': { fontSize: theme('fontSize.2xl') },
+    //     'h2': { fontSize: theme('fontSize.xl') },
+    //     'h3': { fontSize: theme('fontSize.lg') },
+    //   }),
+    // }),
   ],
 }

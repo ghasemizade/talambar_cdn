@@ -1389,18 +1389,18 @@ video {
   background-color: #000;
   color: #fff;
   box-shadow: 0 0 0 1px #fff;
-  content: 'screen: _';
+  content: '_';
 }
 
 @media (min-width: 640px) {
   [data-debugger]::before {
-    content: 'screen: sm';
+    content: 'sm';
   }
 }
 
 @media (min-width: 1024px) {
   [data-debugger]::before {
-    content: 'screen: lg';
+    content: 'lg';
   }
 }
 
