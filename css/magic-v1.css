@@ -1377,7 +1377,7 @@ video {
   --tw-aspect-h: 16;
 }
 
-.debug-screens::before {
+[data-debugger]::before {
   position: fixed;
   z-index: 2147483647;
   bottom: 0;
@@ -1393,13 +1393,13 @@ video {
 }
 
 @media (min-width: 640px) {
-  .debug-screens::before {
+  [data-debugger]::before {
     content: 'screen: sm';
   }
 }
 
 @media (min-width: 1024px) {
-  .debug-screens::before {
+  [data-debugger]::before {
     content: 'screen: lg';
   }
 }

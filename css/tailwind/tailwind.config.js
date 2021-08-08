@@ -139,6 +139,9 @@ module.exports = {
       2: '2',
       3: '3',
     },
+    debugScreens: {
+      selector: '[data-debugger]::before',
+    },
     extend: {
       lineHeight: {
         '3': '.75em',
