@@ -15,7 +15,7 @@ var chart;
 
 function getServerStat()
 {
-  if($('body').attr('data-in') === 'su' && $('body').attr('data-page') === 'home' && chart)
+  if($('body').attr('data-in') === 'sudo' && $('body').attr('data-page') === 'home' && chart)
   {
     $.ajax({
       url: $('#hereurl').text()+'?cmd=health',
