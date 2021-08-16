@@ -1,82 +1,76 @@
-/*
-* ============================
-* Buttons
-*=============================
-*/
-
-[class^="btn2-"] {
+[class^="jbtn-"] {
   @apply inline-block font-normal text-center px-3 py-2 leading-normal text-base rounded cursor-pointer;
 }
 
-.btn2-primary {
+.jbtn-primary {
   @apply text-white bg-blue-600;
 }
 
-.btn2-primary:hover {
+.jbtn-primary:hover {
   @apply text-white bg-blue-700
 }
 
-.btn2-secondary {
+.jbtn-secondary {
   @apply text-white bg-gray-600;
 }
 
-.btn2-secondary:hover {
+.jbtn-secondary:hover {
   @apply text-white bg-gray-700
 }
 
-.btn2-success {
+.jbtn-success {
   @apply text-white bg-green-600;
 }
 
-.btn2-success:hover {
+.jbtn-success:hover {
   @apply text-white bg-green-700
 }
 
-.btn2-danger {
+.jbtn-danger {
   @apply text-white bg-red-600;
 }
 
-.btn2-danger:hover {
+.jbtn-danger:hover {
   @apply text-white bg-red-700
 }
 
-.btn2-warning {
+.jbtn-warning {
   @apply text-black bg-yellow-500;
 }
 
-.btn2-warning:hover {
+.jbtn-warning:hover {
   @apply text-black bg-yellow-600
 }
 
-.btn2-info {
-  @apply text-white bg-teal-500;
+.jbtn-info {
+  @apply text-white bg-blue-500;
 }
 
-.btn2-info:hover {
-  @apply text-white bg-teal-600
+.jbtn-info:hover {
+  @apply text-white bg-blue-600
 }
 
-.btn2-light {
+.jbtn-light {
   @apply text-black bg-gray-200;
 }
 
-.btn2-light:hover {
+.jbtn-light:hover {
   @apply text-black bg-gray-300
 }
 
-.btn2-dark {
+.jbtn-dark {
   @apply text-white bg-gray-900;
 }
 
-.btn2-dark:hover {
+.jbtn-dark:hover {
   @apply text-white bg-black
 }
 
-.btn2-link {
+.jbtn-link {
   @apply text-blue-500;
 }
 
-.btn2-link:hover {
+.jbtn-link:hover {
   @apply text-blue-800;
 }
 

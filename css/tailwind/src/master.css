@@ -27,6 +27,7 @@
 
 
 /* components*/
+@import "css/components/_alert.scss";
 @import "css/components/_button.scss";
 
 
