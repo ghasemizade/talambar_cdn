@@ -7,7 +7,7 @@ module.exports = {
     content: [
       './purge/samples/*.html',
       './purge/**/*.html'
-      ],
+    ],
     options: {
       keyframes: true,
     },
