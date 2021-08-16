@@ -262,7 +262,14 @@ function notifGenerator(_data, $_form)
   // reload iframe if requested
   if(_data && _data.reloadIframe)
   {
-    document.getElementById(_data.reloadIframe).src += '';
+    if(_data.reloadIframeSrc)
+    {
+      document.getElementById(_data.reloadIframe).src = _data.reloadIframeSrc + '';
+    }
+    else
+    {
+      document.getElementById(_data.reloadIframe).src += '';
+    }
   }
 
   if(_data && _data.msg)
