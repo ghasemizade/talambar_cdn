@@ -6,7 +6,6 @@
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/line-clamp": "^0.2.1",
-    "daisyui": "^1.11.1",
     "postcss-import": "^14.0.2"
   },
   "keywords": [
