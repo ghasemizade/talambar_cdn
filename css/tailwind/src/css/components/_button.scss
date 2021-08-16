@@ -1,0 +1,82 @@
+/*
+* ============================
+* Buttons
+*=============================
+*/
+
+[class^="btn2-"] {
+  @apply inline-block font-normal text-center px-3 py-2 leading-normal text-base rounded cursor-pointer;
+}
+
+.btn2-primary {
+  @apply text-white bg-blue-600;
+}
+
+.btn2-primary:hover {
+  @apply text-white bg-blue-700
+}
+
+.btn2-secondary {
+  @apply text-white bg-gray-600;
+}
+
+.btn2-secondary:hover {
+  @apply text-white bg-gray-700
+}
+
+.btn2-success {
+  @apply text-white bg-green-600;
+}
+
+.btn2-success:hover {
+  @apply text-white bg-green-700
+}
+
+.btn2-danger {
+  @apply text-white bg-red-600;
+}
+
+.btn2-danger:hover {
+  @apply text-white bg-red-700
+}
+
+.btn2-warning {
+  @apply text-black bg-yellow-500;
+}
+
+.btn2-warning:hover {
+  @apply text-black bg-yellow-600
+}
+
+.btn2-info {
+  @apply text-white bg-teal-500;
+}
+
+.btn2-info:hover {
+  @apply text-white bg-teal-600
+}
+
+.btn2-light {
+  @apply text-black bg-gray-200;
+}
+
+.btn2-light:hover {
+  @apply text-black bg-gray-300
+}
+
+.btn2-dark {
+  @apply text-white bg-gray-900;
+}
+
+.btn2-dark:hover {
+  @apply text-white bg-black
+}
+
+.btn2-link {
+  @apply text-blue-500;
+}
+
+.btn2-link:hover {
+  @apply text-blue-800;
+}
+

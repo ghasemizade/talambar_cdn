@@ -25,6 +25,11 @@
 @import "css/base/_backgroundColor.scss";
 @import "css/base/_borderColor.scss";
 
+
+/* components*/
+@import "css/components/_button.scss";
+
+
 /* responsive*/
 @import "css/responsive/_switchResponsive.scss";
 @import "css/responsive/_dev.scss";
