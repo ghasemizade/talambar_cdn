@@ -12448,12 +12448,14 @@ html[dir="ltr"]{
   direction:ltr;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html[dir="rtl"]{
   direction:rtl;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body[data-preload] * {
@@ -13788,81 +13790,71 @@ img[src="#"] {
 
 /* components*/
 
+.jalert>:not([hidden])~:not([hidden]) {
+  margin-top:calc(0.5rem*(1 - 0));
+  margin-bottom:calc(0.5rem*0)
+}
+
 [class^="jalert-"] {
-  position: relative;
-  margin-bottom: 1rem;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  border-color: transparent;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  border-color:transparent;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  --tw-bg-opacity:1;
+  background-color:hsla(var(--b2)/var(--tw-bg-opacity,1));
+  padding:1rem;
+  border-radius:var(--rounded-box,1rem)
 }
 
-.jalert-primary {
-  --tw-border-opacity: 1;
-  border-color: rgba(147, 197, 253, var(--tw-border-opacity));
-  --tw-text-opacity:1;
-  color:rgba(30,64,175,var(--tw-text-opacity));
-  --tw-bg-opacity:1;
-  background-color:rgba(191,219,254,var(--tw-bg-opacity));
-  --tw-border-opacity:1;
-  border-color:rgba(147,197,253,var(--tw-border-opacity));
+@media (min-width:768px) {
+  .jalert>:not([hidden])~:not([hidden]) {
+    margin-top:0;
+    margin-bottom:0;
+  }
+
+  [class^="jalert-"] {
+    flex-direction:row
+  }
 }
 
-.jalert-secondary {
-  --tw-border-opacity: 1;
-  border-color: rgba(156, 163, 175, var(--tw-border-opacity));
-  --tw-text-opacity:1;
-  color:rgba(31,41,55,var(--tw-text-opacity));
-  --tw-bg-opacity:1;
-  background-color:rgba(209,213,219,var(--tw-bg-opacity));
-  --tw-border-opacity:1;
-  border-color:rgba(156,163,175,var(--tw-border-opacity));
+.jalert>* {
+  display:flex
 }
 
-.jalert-success {
-  --tw-border-opacity: 1;
-  border-color: rgba(110, 231, 183, var(--tw-border-opacity));
-  --tw-text-opacity:1;
-  color:rgba(6,95,70,var(--tw-text-opacity));
-  --tw-bg-opacity:1;
-  background-color:rgba(167,243,208,var(--tw-bg-opacity));
-  --tw-border-opacity:1;
-  border-color:rgba(110,231,183,var(--tw-border-opacity));
-}
-
-.jalert-danger {
-  --tw-border-opacity: 1;
-  border-color: rgba(252, 165, 165, var(--tw-border-opacity));
-  --tw-text-opacity:1;
-  color:rgba(153,27,27,var(--tw-text-opacity));
-  --tw-bg-opacity:1;
-  background-color:rgba(254,202,202,var(--tw-bg-opacity));
-  --tw-border-opacity:1;
-  border-color:rgba(252,165,165,var(--tw-border-opacity));
-}
-
-.jalert-warning {
-  --tw-border-opacity: 1;
-  border-color: rgba(252, 211, 77, var(--tw-border-opacity));
-  --tw-text-opacity:1;
-  color:rgba(146,64,14,var(--tw-text-opacity));
-  --tw-bg-opacity:1;
-  background-color:rgba(253,230,138,var(--tw-bg-opacity));
-  --tw-border-opacity:1;
-  border-color:rgba(252,211,77,var(--tw-border-opacity));
+.jalert-sm {
+  padding:.5rem
 }
 
 .jalert-info {
-  --tw-text-opacity:1;
-  color:rgba(55,48,163,var(--tw-text-opacity));
   --tw-bg-opacity:1;
-  background-color:rgba(199,210,254,var(--tw-bg-opacity));
-  --tw-border-opacity:1;
-  border-color:rgba(165,180,252,var(--tw-border-opacity));
+  --tw-bg-opacity:.1;
+  background-color:hsla(var(--in)/var(--tw-bg-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--in)/var(--tw-text-opacity,1))
+}
+
+.jalert-success {
+  --tw-bg-opacity:1;
+  --tw-bg-opacity:.1;
+  background-color:hsla(var(--su)/var(--tw-bg-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--su)/var(--tw-text-opacity,1))
+}
+
+.jalert-warning {
+  --tw-bg-opacity:1;
+  --tw-bg-opacity:.1;
+  background-color:hsla(var(--wa)/var(--tw-bg-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--wa)/var(--tw-text-opacity,1))
+}
+
+.jalert-error {
+  --tw-bg-opacity:1;
+  --tw-bg-opacity:.1;
+  background-color:hsla(var(--er)/var(--tw-bg-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--er)/var(--tw-text-opacity,1))
 }
 
 [class^="jbtn-"] {
