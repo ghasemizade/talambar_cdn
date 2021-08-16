@@ -31,6 +31,7 @@
 @import "css/components/_alert.scss";
 @import "css/components/_button.scss";
 @import "css/components/_kbd.scss";
+@import "css/components/_mask.scss";
 
 
 /* responsive*/
