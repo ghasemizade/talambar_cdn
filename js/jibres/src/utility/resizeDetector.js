@@ -17,7 +17,7 @@ function resizeDetector(_data, _forceArray)
   $(window).bind('resizeWin', function()
   {
     //do something, window hasn't changed size in 100ms
-    var myWidth = document.body.clientWidth;
+    var myWidth = document.body.clientWidth || window.innerWidth;
     // some useful variables
     // document.body.clientWidth
     // document.body.clientHeight
