@@ -85,6 +85,8 @@ $(document).ready(function()
   handleDrag();
   // check we are in iframe of not!
   // insideIframe();
+  // show iframe after load
+  showIframeOnLoad();
   // check requirements of form and highlight them
   inputRequirement();
   // do something before unload page

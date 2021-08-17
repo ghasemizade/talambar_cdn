@@ -66,7 +66,7 @@ var myModuleFiles =
 	'src/utility/smileChecker.js',
 	'src/utility/table.js',
 	'src/utility/noscriptRemover.js',
-	'src/utility/insideIframe.js',
+	'src/utility/iframe.js',
 	'src/utility/consoleMsg.js',
 	'src/utility/handleDrag.js',
 	'src/utility/resizeDetector.js',

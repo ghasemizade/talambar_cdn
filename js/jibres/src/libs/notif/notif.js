@@ -263,11 +263,12 @@ function notifGenerator(_data, $_form)
   if(_data && _data.reloadIframe)
   {
     var myIframe = document.getElementById(_data.reloadIframe);
-    var mySRC = myIframe.src;
 
     if(_data.reloadIframeSrc)
     {
-      myIframe.src = _data.reloadIframeSrc + '';
+      // console.log('hide iframe');
+      // $(myIframe).hide();
+      myIframe.src = _data.reloadIframeSrc;
     }
     else
     {

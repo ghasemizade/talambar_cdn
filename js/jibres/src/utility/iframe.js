@@ -33,5 +33,20 @@ function insideIframe()
     //   self.location = window.location.origin + "/billboard";
     // }
   }
+
+
+
 };
+
+function showIframeOnLoad()
+{
+  $('iframe').on('load', function()
+  {
+    $(this).fadeIn(200);
+    // $(this).animate('opacity') = '1';
+    // $(this).show();
+    // console.log('show iframe');
+  });
+}
+
 
