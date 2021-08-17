@@ -262,13 +262,25 @@ function notifGenerator(_data, $_form)
   // reload iframe if requested
   if(_data && _data.reloadIframe)
   {
+    var myIframe = document.getElementById(_data.reloadIframe);
+    var mySRC = myIframe.src;
+
     if(_data.reloadIframeSrc)
     {
-      document.getElementById(_data.reloadIframe).src = _data.reloadIframeSrc + '';
+      myIframe.src = _data.reloadIframeSrc + '';
     }
     else
     {
-      document.getElementById(_data.reloadIframe).src += '';
+      // replace with clone
+      myIframe.parentNode.replaceChild(myIframe.cloneNode(), myIframe);
+
+      // another way, update src
+      // not work on chorme!
+      // myIframe.src += '';
+
+      // another way, update src
+      // not work!
+      // myIframe.src = myIframe.src;
     }
   }
 
