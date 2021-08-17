@@ -24,7 +24,13 @@
 @import "css/base/_textColor.scss";
 @import "css/base/_backgroundColor.scss";
 @import "css/base/_borderColor.scss";
-@import "css/base/_ringColor.scss";
+
+/* ring*/
+@import "css/ring/_ringWidth.scss";
+@import "css/ring/_ringColor.scss";
+@import "css/ring/_ringOpacity.scss";
+@import "css/ring/_ringOffsetWidth.scss";
+
 
 
 /* components*/
