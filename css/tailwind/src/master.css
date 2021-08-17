@@ -24,6 +24,7 @@
 @import "css/base/_textColor.scss";
 @import "css/base/_backgroundColor.scss";
 @import "css/base/_borderColor.scss";
+@import "css/base/_ringColor.scss";
 
 
 /* components*/
@@ -48,7 +49,5 @@
 
 /* add extra elements*/
 @import "css/elements/_items.scss";
-
-@import "css/_custom.scss";
 
 
