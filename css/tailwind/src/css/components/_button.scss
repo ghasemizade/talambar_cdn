@@ -440,9 +440,9 @@
   -webkit-backdrop-filter:blur(var(--glass-blur,40px));
   backdrop-filter:blur(var(--glass-blur,40px));
   background-color:transparent;
-  background-image:linear-gradient(135deg,#ff4d00),#000),linear-gradient(var(--glass-reflex-degree,100deg),#ff1a00) 25%,#000 0);
-box-shadow:0 0 0 1px #ff0a00 inset,0 0 0 2px #000;
-text-shadow:0 1px #000500
+  background-image:linear-gradient(135deg,rgb(255 255 255/var(--glass-opacity,30%)),rgb(0 0 0/0)),linear-gradient(var(--glass-reflex-degree,100deg),rgb(255 255 255/var(--glass-reflex-opacity,10%)) 25%,rgb(0 0 0/0) 0);
+  box-shadow: 0 0 0 1px rgb(255 255 255/var(--glass-border-opacity,10%)) inset,0 0 0 2px rgb(0 0 0/5%);
+  box-shadow: 0 1px rgb(0 0 0/var(--glass-text-shadow-opacity,5%));
 }
 
 .jbtn-xs {
