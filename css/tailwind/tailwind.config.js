@@ -166,7 +166,17 @@ module.exports = {
        '1/4': '25vh',
        '1/2': '50vh',
        '3/4': '75vh',
-      }
+      },
+      maxWidth:{
+       '1/4': '25%',
+       '1/2': '50%',
+       '3/4': '75%',
+       'screen-sm': '640px',
+       'screen-md': '768px',
+       'screen-lg': '1024px',
+       'screen-xl': '1280px',
+       'screen-2xl': '1536px',
+      },
     },
   },
   variants: {
