@@ -15614,7 +15614,7 @@ img[src="#"] {
   filter: brightness(110%);
 }
 
-[data-magicbox]::after {
+[data-magicbox="dark"]::after {
   content: "";
   position: absolute;
   top: 0;
@@ -15629,7 +15629,7 @@ img[src="#"] {
   z-index: 1;
 }
 
-[data-magicbox]:hover::after {
+[data-magicbox="dark"]:hover::after {
   opacity: 0.8;
 }
 
