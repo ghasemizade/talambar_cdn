@@ -34,6 +34,7 @@
 
 
 
+
 /* components*/
 @import "css/components/_0var.scss";
 @import "css/components/_alert.scss";
@@ -44,6 +45,8 @@
 @import "css/components/_stat.scss";
 @import "css/components/_steps.scss";
 
+/* customized elements*/
+@import "css/custom/_magicBox.scss";
 
 /* responsive*/
 @import "css/responsive/_switchResponsive.scss";
