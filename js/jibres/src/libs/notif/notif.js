@@ -264,24 +264,28 @@ function notifGenerator(_data, $_form)
   {
     var myIframe = document.getElementById(_data.reloadIframe);
 
-    if(_data.reloadIframeSrc)
+    if(myIframe)
     {
-      // console.log('hide iframe');
-      // $(myIframe).hide();
-      myIframe.src = _data.reloadIframeSrc;
-    }
-    else
-    {
-      // replace with clone
-      myIframe.parentNode.replaceChild(myIframe.cloneNode(), myIframe);
+      if(_data.reloadIframeSrc)
+      {
+        // console.log('hide iframe');
+        // $(myIframe).hide();
+        myIframe.src = _data.reloadIframeSrc;
+      }
+      else
+      {
+        // replace with clone
+        myIframe.parentNode.replaceChild(myIframe.cloneNode(), myIframe);
 
-      // another way, update src
-      // not work on chorme!
-      // myIframe.src += '';
+        // another way, update src
+        // not work on chorme!
+        // myIframe.src += '';
 
-      // another way, update src
-      // not work!
-      // myIframe.src = myIframe.src;
+        // another way, update src
+        // not work!
+        // myIframe.src = myIframe.src;
+      }
+
     }
   }
 
