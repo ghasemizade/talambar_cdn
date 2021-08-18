@@ -11,6 +11,7 @@ function readPageAllScripts(_force, _page)
   readPageCropper();
   readPageFancyBox();
   readPageJsTree();
+  readPageCodeEditor();
   readPageSlick();
   readPageSelect2();
   readPageUploader();
@@ -142,6 +143,19 @@ function readPageJsTree()
     StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css?v=1");
     myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js?v=1";
     fileLoader(myUrl, 'runJstree', true);
+  }
+}
+
+
+function readPageCodeEditor()
+{
+  var myEl = $('[data-code-editor]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    myUrl = urlJibres('cdn') + "lib/ace/1.4.12/ace-runner.js?v=1";
+    fileLoader(myUrl, 'runACE', true);
   }
 }
 
