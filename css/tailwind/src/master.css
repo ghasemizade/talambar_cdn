@@ -23,6 +23,7 @@
 @import "css/base/_global.scss";
 @import "css/base/_textColor.scss";
 @import "css/base/_backgroundColor.scss";
+@import "css/base/_backgroundGradient.scss";
 @import "css/base/_borderColor.scss";
 
 /* ring*/
