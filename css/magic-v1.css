@@ -14597,7 +14597,7 @@ img[src="#"] {
   color:hsla(var(--er))
 }
 
-.btn {
+[class^="btn-"] {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -14619,21 +14619,21 @@ img[src="#"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  [class^="btn-"] {
     transition: none;
   }
 }
 
-.btn:hover {
+[class^="btn-"]:hover {
   color: #212529;
 }
 
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + [class^="btn-"], [class^="btn-"]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+[class^="btn-"]:disabled, [class^="btn-"].disabled, fieldset:disabled [class^="btn-"] {
   pointer-events: none;
   opacity: 0.65;
 }
@@ -15172,13 +15172,13 @@ img[src="#"] {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > [class^="btn-"] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > [class^="btn-"] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
