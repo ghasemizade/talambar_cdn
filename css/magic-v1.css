@@ -15184,6 +15184,19 @@ img[src="#"] {
   border-radius: 0.2rem;
 }
 
+.btn-circle {
+  border-radius:9999px;
+  height:3rem;
+  padding:0;
+  width:3rem
+}
+
+.btn-wide {
+  min-width:10rem;
+  padding-right:3rem;
+  padding-left:3rem;
+}
+
 .kbd {
   display:inline-flex;
   align-items:center;
