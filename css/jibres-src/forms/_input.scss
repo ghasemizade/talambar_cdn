@@ -392,6 +392,7 @@ input[type="color"].picker::-webkit-color-swatch-wrapper {
 input[type="color"].picker::-webkit-color-swatch {
 	border-radius: 10px;
 	border: none;
+	transition: 0.3s;
 }
 input[type="color"].picker{
 	border: 2px solid #162666;
@@ -401,8 +402,16 @@ input[type="color"].picker{
 	height:42px;
 	transition: 0.3s;
 }
-input[type="color"].picker:hover{
-	background: #eee;;
+input[type="color"].picker:hover, button.picker:hover{
+	border-color: #3f51b5;
+	background: #eee;
+}
+input[type="color"].picker:focus, button.picker:focus{
+	border-color: #2196f3;
+	background: #eee;
+}
+input[type="color"].picker:focus::-webkit-color-swatch{
+	border-radius: 50%;
 }
 .picker.reset{
 	border: 2px solid #162666;
@@ -410,10 +419,10 @@ input[type="color"].picker:hover{
 	border-radius:10px;
 	width:42px;
 	height:42px;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 .picker.reset:hover{
-	background: #eee;;
+	background: #eee;
 }
 .picker img{
 	padding: 5px;
