@@ -6,7 +6,7 @@
 	transform: scale(1.05);
 	filter: brightness(110%);
 }
-[data-magicbox="dark"]::after {
+[data-magicbox="dark"] picture::after {
     content: "";
     position: absolute;
     top: 0;
@@ -20,6 +20,6 @@
     opacity: 0.7;
     z-index: 1;
 }
-[data-magicbox="dark"]:hover::after {
+[data-magicbox="dark"] picture:hover::after {
     opacity: 0.8;
 }

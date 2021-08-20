@@ -15739,7 +15739,7 @@ img[src="#"] {
   filter: brightness(110%);
 }
 
-[data-magicbox="dark"]::after {
+[data-magicbox="dark"] picture::after {
   content: "";
   position: absolute;
   top: 0;
@@ -15754,7 +15754,7 @@ img[src="#"] {
   z-index: 1;
 }
 
-[data-magicbox="dark"]:hover::after {
+[data-magicbox="dark"] picture:hover::after {
   opacity: 0.8;
 }
 
