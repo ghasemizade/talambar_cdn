@@ -44,6 +44,7 @@
 @import "css/components/_progress.scss";
 @import "css/components/_stat.scss";
 @import "css/components/_steps.scss";
+@import "css/components/_coloredLinks.scss";
 
 /* customized elements*/
 @import "css/custom/_magicBox.scss";
