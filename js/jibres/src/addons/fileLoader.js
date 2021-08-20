@@ -221,14 +221,14 @@ function readPageRangeSlider()
 
 function readBootstrapAccordion()
 {
-  var myEl = $('[data-bs-accordion]');
+  var myEl = $('.accordion [data-bs-target]');
 
   if(myEl && myEl.length > 0)
   {
     // load script
     StyleLoader(urlJibres('cdn') + "lib/bootstrap/5.1.0/bootstrap-accordion.css?v=1");
     myUrl = urlJibres('cdn') + "lib/bootstrap/5.1.0/bootstrap.min.js?v=1";
-    // fileLoader(myUrl, 'runRangeSlider', true);
+    fileLoader(myUrl);
   }
 }
 
@@ -271,11 +271,14 @@ function fileLoader(_url, _fn, _forceCallFn, _file, _scriptType)
     // append to page js section
     $('.js').append(newScript);
 
-    // add on load function
-    newScript.onload = function()
+    if(_fn)
     {
-      afterFileLoaded(_fn, 'fileLoader', _file);
-    };
+      // add on load function
+      newScript.onload = function()
+      {
+        afterFileLoaded(_fn, 'fileLoader', _file);
+      };
+    }
 
     // show error message if we are problem on load process
     newScript.onerror = function(){ console.warn('error or load script ' + _url);};
