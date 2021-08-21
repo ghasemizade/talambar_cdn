@@ -41,3 +41,24 @@
     opacity: 0.8;
 }
 
+[data-magicbox] picture.rounded-sm::after{
+    border-radius: 0.125rem;
+}
+[data-magicbox] picture.rounded::after{
+    border-radius: 0.25rem;;
+}
+[data-magicbox] picture.rounded-md::after{
+    border-radius: 0.375rem;
+}
+[data-magicbox] picture.rounded-lg::after{
+    border-radius: 0.5rem;
+}
+[data-magicbox] picture.rounded-xl::after{
+    border-radius: 0.75rem;
+}
+[data-magicbox] picture.rounded-2xl::after{
+    border-radius: 1rem;
+}
+[data-magicbox] picture.rounded-3xl::after{
+    border-radius: 1.5rem;
+}
