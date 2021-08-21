@@ -15805,6 +15805,10 @@ img[src="#"] {
   border-radius: 1.5rem;
 }
 
+[data-magicbox] picture.rounded-full::after{
+  border-radius: 9999px;
+}
+
 /* responsive*/
 
 /* header */

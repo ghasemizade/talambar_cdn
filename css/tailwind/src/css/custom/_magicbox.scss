@@ -62,3 +62,7 @@
 [data-magicbox] picture.rounded-3xl::after{
     border-radius: 1.5rem;
 }
+[data-magicbox] picture.rounded-full::after{
+    border-radius: 9999px;
+}
+
