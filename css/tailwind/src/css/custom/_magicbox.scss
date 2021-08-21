@@ -1,11 +1,15 @@
-[data-magicbox] img{
-	transition: 0.3s;
+[data-magicbox]{
+    transition: 0.3s;;
 	will-change: transform, filter;
 }
-[data-magicbox="zoom"]:hover img{
+[data-magicbox] img{
+	transition: 0.3s;
+    will-change: transform, filter;
+}
+[data-magicbox="zoom"]:hover{
     transform: scale(1.03);
     filter: brightness(110%);
-    z-index: 20;
+    z-index: 9;
 }
 [data-magicbox="dark"] picture::after {
     content: "";
