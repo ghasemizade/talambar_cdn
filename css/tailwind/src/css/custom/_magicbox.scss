@@ -94,6 +94,9 @@
 
 
 /* magicbox inside slider */
+[data-slider] [data-magicbox]{
+    display: none;
+}
 .grid [data-slider] .slick-list{
     height: 100%;
 }
