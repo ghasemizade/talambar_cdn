@@ -170,7 +170,8 @@ function readPageSlick()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "js/slick/slick-1.8.1.min.js?v=2";
+    StyleLoader(urlJibres('cdn') + "lib/slick/1.8.1/slick-final.css?v=2");
+    myUrl = urlJibres('cdn') + "lib/slick/1.8.1/slick.min.js?v=2";
     fileLoader(myUrl, 'runPageSlider', true);
   }
 }
