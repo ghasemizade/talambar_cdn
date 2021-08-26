@@ -13,6 +13,7 @@ function readPageAllScripts(_force, _page)
   readPageJsTree();
   readPageCodeEditor();
   readPageSlick();
+  readPageSwiper();
   readPageSelect2();
   readPageUploader();
   readPageRangeSlider();
@@ -173,6 +174,20 @@ function readPageSlick()
     StyleLoader(urlJibres('cdn') + "lib/slick/1.8.1/slick-final.css?v=2");
     myUrl = urlJibres('cdn') + "lib/slick/1.8.1/slick.min.js?v=2";
     fileLoader(myUrl, 'runPageSlickSlider', true);
+  }
+}
+
+
+function readPageSwiper()
+{
+  var myEl = $('[data-swiper]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    StyleLoader(urlJibres('cdn') + "lib/swiper/7.0.1/swiper-bundle.min.css?v=1");
+    myUrl = urlJibres('cdn') + "lib/swiper/7.0.1/swiper-bundle.min.js?v=1";
+    fileLoader(myUrl, 'runPageSwiperSlider', true);
   }
 }
 
