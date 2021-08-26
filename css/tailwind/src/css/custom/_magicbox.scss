@@ -103,4 +103,22 @@
 .grid [data-slider] [data-magicbox] picture{
     height: 100%;
 }
+.grid [data-slider] .slick-next {
+    z-index: 1;
+    right: 2%;
+    background: transparent;
+}
+[dir='rtl'] .grid [data-slider] .slick-next{
+    right: auto;
+    left: 2%;
+}
+.grid [data-slider] .slick-prev {
+    z-index: 1;
+    left: 2%;
+    background: transparent;
+}
+[dir='rtl'] .grid [data-slider] .slick-prev{
+    left: auto;
+    right: 2%;
+}
 
