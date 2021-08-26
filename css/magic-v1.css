@@ -15846,6 +15846,10 @@ img[src="#"] {
   height: 100%;
 }
 
+.grid .swiper{
+  display: none;
+}
+
 /* responsive*/
 
 /* header */
@@ -15901,6 +15905,10 @@ body[data-siteBuilder]{
 
 body[data-siteBuilder] .swiper [data-magicbox] picture{
   height: 100%;
+}
+
+body[data-siteBuilder] .swiper{
+  display: none;
 }
 
 body[data-siteBuilder] {
