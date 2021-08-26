@@ -92,3 +92,15 @@
     border-radius: 9999px;
 }
 
+
+/* magicbox inside slider */
+.grid [data-slider] .slick-list{
+    height: 100%;
+}
+.grid [data-slider] .slick-track{
+    height: 100%;
+}
+.grid [data-slider] [data-magicbox] picture{
+    height: 100%;
+}
+
