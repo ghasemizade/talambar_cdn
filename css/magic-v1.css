@@ -13971,7 +13971,7 @@ img[src="#"] {
 
 .toggle2 span {
   font-size:14px;
-  line-height:2.5rem;
+  line-height:2rem;
   --tw-text-opacity:1;
   color:hsla(var(--bc)/var(--tw-text-opacity,1))
 }
@@ -16027,7 +16027,11 @@ body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
 }
 
 body[data-siteBuilder] > #sidebar form + form{
-  margin-top: 12px;
+  margin-top: 5px;
+}
+
+body[data-siteBuilder] > #sidebar label{
+  line-height: 2rem;
 }
 
 body[data-siteBuilder] > #pageHeader{

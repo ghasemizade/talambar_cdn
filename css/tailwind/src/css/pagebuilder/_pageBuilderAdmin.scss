@@ -36,7 +36,10 @@ body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
 	overflow: auto;
 }
 body[data-siteBuilder] > #sidebar form + form{
-	margin-top: 12px;
+	margin-top: 5px;
+}
+body[data-siteBuilder] > #sidebar label{
+	line-height: 2rem;
 }
 body[data-siteBuilder] > #pageHeader{
 	@apply shadow;
