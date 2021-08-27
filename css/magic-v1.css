@@ -12486,7 +12486,7 @@ video {
   -webkit-line-clamp: unset;
 }
 
-/* add extra style*/
+/* add extra style */
 
 html[dir="ltr"]{
   direction:ltr;
@@ -13954,7 +13954,106 @@ img[src="#"] {
   border-color:rgba(131,24,67,var(--tw-border-opacity));
 }
 
-/* ring*/
+/* forms */
+
+.toggle{
+  --chkbg:hsla(var(--bc)/.2);
+  --focus-shadow:0 0 0;
+  --handleoffset:1.5rem;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  --tw-bg-opacity:1;
+  --tw-bg-opacity:.2;
+  background-color:hsla(var(--bc)/var(--tw-bg-opacity,1));
+  --tw-border-opacity:1;
+  --tw-border-opacity:.2;
+  border-color:hsla(var(--bc)/var(--tw-border-opacity,1));
+  border-width:1px;
+  cursor:pointer;
+  height:1.5rem;
+  width:3rem;
+  transition-timing-function:cubic-bezier(.4,0,.2,1);
+  transition-duration:.3s;
+  border-radius:var(--rounded-badge,1.9rem);
+  transition:background,box-shadow var(--animation-input,.2s) ease-in-out;
+  box-shadow:calc(var(--handleoffset)*-1) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
+}
+
+.toggle:focus-visible{
+  --focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--bc))
+}
+
+.toggle:checked{
+  --chkbg:hsl(var(--bc));
+  --tw-bg-opacity:1;
+  --tw-border-opacity:1;
+  box-shadow:var(--handleoffset) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
+}
+
+[dir=rtl] .toggle:checked{
+  box-shadow:calc(var(--handleoffset)*1) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
+}
+
+.toggle-primary:focus-visible{
+  --focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--p))
+}
+
+.toggle-primary:checked{
+  --chkbg:hsl(var(--p));
+  --tw-bg-opacity:1;
+  background-color:hsla(var(--p)/var(--tw-bg-opacity,1));
+  --tw-border-opacity:1;
+  --tw-border-opacity:.1;
+  border-color:hsla(var(--p)/var(--tw-border-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--pc)/var(--tw-text-opacity,1))
+}
+
+.toggle-secondary:focus-visible{
+  --focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--s))
+}
+
+.toggle-secondary:checked{
+  --chkbg:hsl(var(--s));
+  --tw-bg-opacity:1;
+  background-color:hsla(var(--s)/var(--tw-bg-opacity,1));
+  --tw-border-opacity:1;
+  --tw-border-opacity:.1;
+  border-color:hsla(var(--s)/var(--tw-border-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--sc)/var(--tw-text-opacity,1))
+}
+
+.toggle-accent:focus-visible{
+  --focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--a))
+}
+
+.toggle-accent:checked{
+  --chkbg:hsl(var(--a));
+  --tw-bg-opacity:1;
+  background-color:hsla(var(--a)/var(--tw-bg-opacity,1));
+  --tw-border-opacity:1;
+  --tw-border-opacity:.1;
+  border-color:hsla(var(--a)/var(--tw-border-opacity,1));
+  --tw-text-opacity:1;
+  color:hsla(var(--ac)/var(--tw-text-opacity,1))
+}
+
+.toggle:disabled{
+  --tw-bg-opacity:1;
+  --tw-bg-opacity:.2;
+  background-color:hsla(var(--bc)/var(--tw-bg-opacity,1));
+  border-color:transparent;
+  cursor:not-allowed
+}
+
+.toggle:focus{
+  outline:2px solid transparent;
+  outline-offset:2px
+}
+
+/* ring */
 
 *, ::before, ::after {
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);

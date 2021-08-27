@@ -18,7 +18,7 @@
 @import "tailwindcss/utilities";
 
 
-/* add extra style*/
+/* add extra style */
 @import "css/base/_reset.scss";
 @import "css/base/_global.scss";
 @import "css/base/_textColor.scss";
@@ -26,7 +26,11 @@
 @import "css/base/_backgroundGradient.scss";
 @import "css/base/_borderColor.scss";
 
-/* ring*/
+
+/* forms */
+@import "css/form/_toggle.scss";
+
+/* ring */
 @import "css/ring/_ringWidth.scss";
 @import "css/ring/_ringColor.scss";
 @import "css/ring/_ringOpacity.scss";
