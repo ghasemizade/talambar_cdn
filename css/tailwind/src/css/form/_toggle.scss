@@ -1,4 +1,25 @@
-.toggle{
+.toggle2 {
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	padding:.5rem .25rem;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+
+.toggle2 span {
+	font-size:14px;
+	line-height:2.5rem;
+	--tw-text-opacity:1;
+	color:hsla(var(--bc)/var(--tw-text-opacity,1))
+}
+
+
+.toggle2 input{
 	--chkbg:hsla(var(--bc)/.2);
 	--focus-shadow:0 0 0;
 	--handleoffset:1.5rem;
@@ -22,56 +43,16 @@
 	box-shadow:calc(var(--handleoffset)*-1) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
 }
 
-.toggle:focus-visible{
-	--focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--bc))
-}
-
-.toggle:checked{
-	--chkbg:hsl(var(--bc));
-	--tw-bg-opacity:1;
-	--tw-border-opacity:1;
-	box-shadow:var(--handleoffset) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
-}
-
-[dir=rtl] .toggle:checked{
-	box-shadow:calc(var(--handleoffset)*1) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
-}
-
-.toggle-primary:focus-visible{
-	--focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--p))
-}
-
-.toggle-primary:checked{
-	--chkbg:hsl(var(--p));
-	--tw-bg-opacity:1;
-	background-color:hsla(var(--p)/var(--tw-bg-opacity,1));
-	--tw-border-opacity:1;
-	--tw-border-opacity:.1;
-	border-color:hsla(var(--p)/var(--tw-border-opacity,1));
-	--tw-text-opacity:1;
-	color:hsla(var(--pc)/var(--tw-text-opacity,1))
-}
-
-.toggle-secondary:focus-visible{
-	--focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--s))
-}
-
-.toggle-secondary:checked{
-	--chkbg:hsl(var(--s));
-	--tw-bg-opacity:1;
-	background-color:hsla(var(--s)/var(--tw-bg-opacity,1));
-	--tw-border-opacity:1;
-	--tw-border-opacity:.1;
-	border-color:hsla(var(--s)/var(--tw-border-opacity,1));
-	--tw-text-opacity:1;
-	color:hsla(var(--sc)/var(--tw-text-opacity,1))
-}
-
-.toggle-accent:focus-visible{
+.toggle2 input:focus-visible{
 	--focus-shadow:0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--a))
 }
 
-.toggle-accent:checked{
+.toggle2 input:checked{
+	--chkbg:hsl(var(--bc));
+	--tw-bg-opacity:1;
+	--tw-border-opacity:1;
+	box-shadow:var(--handleoffset) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow);
+
 	--chkbg:hsl(var(--a));
 	--tw-bg-opacity:1;
 	background-color:hsla(var(--a)/var(--tw-bg-opacity,1));
@@ -82,7 +63,11 @@
 	color:hsla(var(--ac)/var(--tw-text-opacity,1))
 }
 
-.toggle:disabled{
+[dir=rtl] .toggle2 input:checked{
+	box-shadow:calc(var(--handleoffset)*1) 0 0 2px hsl(var(--b1)) inset,0 0 0 2px hsl(var(--b1)) inset,var(--focus-shadow)
+}
+
+.toggle2 input:disabled{
 	--tw-bg-opacity:1;
 	--tw-bg-opacity:.2;
 	background-color:hsla(var(--bc)/var(--tw-bg-opacity,1));
@@ -90,7 +75,11 @@
 	cursor:not-allowed
 }
 
-.toggle:focus{
+.toggle2 input:focus{
 	outline:2px solid transparent;
 	outline-offset:2px
 }
+.toggle2:active input{
+	--handleoffset:1rem;
+}
+
