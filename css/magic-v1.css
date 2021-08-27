@@ -14604,9 +14604,6 @@ img[src="#"] {
   --su:174 100% 29%;
   --wa:36 100% 50%;
   --er:14 100% 57.1%;
-  --b1:0 0% 100%;
-  --b2:210 20% 98%;
-  --b3:216 12.2% 83.9%;
   --animation-btn:.25s;
   --rounded-box:1rem;
   --rounded-btn:.5rem;
@@ -14618,7 +14615,7 @@ img[src="#"] {
   --glass-reflex-degree:100deg;
   --glass-reflex-opacity:10%;
   --glass-blur:40px;
-  --glass-text-shadow-opacity:5%
+  --glass-text-shadow-opacity:5%;
 }
 
 [class^="jalert-"] {
