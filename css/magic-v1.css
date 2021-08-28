@@ -16097,6 +16097,19 @@ body[data-siteBuilder] > .ck-body-wrapper{
   display: none;
 }
 
+body[data-siteBuilder] .h-full .ck.ck-editor{
+  height: 100%;
+}
+
+body[data-siteBuilder] .h-full .ck.ck-editor__main{
+  height: 90%;
+  height: calc(100% - 38px);
+}
+
+body[data-siteBuilder] .h-full .ck-editor__editable {
+  height: 100%;
+}
+
 .browserFrame[data-size='desktop']{
   width:100%;
   max-width: 100%;
