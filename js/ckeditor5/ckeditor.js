@@ -11,24 +11,24 @@
 
 function runEditor()
 {
-  if(window.pushStateResult && window.pushStateResult.live && parseInt(window.pushStateResult.live) === 1)
-  {
-    // skip on live mode
-    return null;
-  }
+	if(window.pushStateResult && window.pushStateResult.live && parseInt(window.pushStateResult.live) === 1)
+	{
+		// skip on live mode
+		return null;
+	}
 
 	// var editor = new MediumEditor('[data-editor]');
 	$('[data-editor]').each(function(_el)
 	{
-    $this = $(this);
-    if($this.attr('data-editor') === 'simple')
-    {
-      editorSimpleRunner($this);
-    }
-    else
-    {
-		  editorRunner($this);
-    }
+		$this = $(this);
+		if($this.attr('data-editor') === 'simple')
+		{
+			editorSimpleRunner($this);
+		}
+		else
+		{
+			editorRunner($this);
+		}
 	});
 }
 
@@ -36,16 +36,17 @@ function runEditor()
 function editorRunner(_el)
 {
 	var myLang = urlLang();
-  var myEl = _el.get(0);
+	var myEl = _el.get(0);
 
 	ClassicEditor.create( myEl,
-  {
-  	//plugins: [ Autoformat, CodeBlock ],
+	{
+		//plugins: [ Autoformat, CodeBlock ],
 		toolbar:
 		{
 			items:
 			[
 				'heading',
+				// 'fontSize',
 				'|',
 				'bold',
 				'italic',
@@ -74,49 +75,65 @@ function editorRunner(_el)
 				'imageStyle:side'
 			]
 		},
-    heading: {
-      options: [
-        { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-        { model: 'heading1', view: 'h2', title: 'Heading 1', class: 'ck-heading_heading1' },
-        { model: 'heading2', view: 'h3', title: 'Heading 2', class: 'ck-heading_heading2' },
-        { model: 'heading3', view: 'h4', title: 'Heading 3', class: 'ck-heading_heading3' },
-        { model: 'pre', view: 'pre', title: 'Code Block', class: 'ck-pre' },
-        // { model: 'msgInfo', view: { name: 'p', classes: 'msg info2'}, title: 'Msg Info', class: 'ck-msg-info', converterPriority: 'high' },
-        // { model: 'msgSuccess', view: { name: 'p', classes: 'msg success2'}, title: 'Msg Success', class: 'ck-msg-success', converterPriority: 'high' },
-        // { model: 'msgWarn', view: { name: 'p', classes: 'msg warn2'}, title: 'Msg Warn', class: 'ck-msg-warn', converterPriority: 'high' },
-        // { model: 'msgDanger', view: { name: 'p', classes: 'msg danger2'}, title: 'Msg Danger', class: 'ck-msg-danger', converterPriority: 'high' },
-      ]
-    },
-    // allowedContent: 'p(msg)',
+		fontSize: {
+				options: [
+						'xs',
+						'sm',
+						'lg',
+						'xl',
+						'2xl',
+						'3xl',
+						'4xl',
+						'5xl',
+						'6xl',
+						'7xl',
+						'8xl',
+						'9xl',
+				]
+		},
+		heading: {
+			options: [
+				{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+				{ model: 'heading1', view: 'h2', title: 'Heading 1', class: 'ck-heading_heading1' },
+				{ model: 'heading2', view: 'h3', title: 'Heading 2', class: 'ck-heading_heading2' },
+				{ model: 'heading3', view: 'h4', title: 'Heading 3', class: 'ck-heading_heading3' },
+				{ model: 'pre', view: 'pre', title: 'Code Block', class: 'ck-pre' },
+				// { model: 'msgInfo', view: { name: 'p', classes: 'msg info2'}, title: 'Msg Info', class: 'ck-msg-info', converterPriority: 'high' },
+				// { model: 'msgSuccess', view: { name: 'p', classes: 'msg success2'}, title: 'Msg Success', class: 'ck-msg-success', converterPriority: 'high' },
+				// { model: 'msgWarn', view: { name: 'p', classes: 'msg warn2'}, title: 'Msg Warn', class: 'ck-msg-warn', converterPriority: 'high' },
+				// { model: 'msgDanger', view: { name: 'p', classes: 'msg danger2'}, title: 'Msg Danger', class: 'ck-msg-danger', converterPriority: 'high' },
+			]
+		},
+		// allowedContent: 'p(msg)',
 		link: {
-            // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
-            addTargetToExternalLinks: true,
-            decorators: {
-                detectDownloadable: {
-                    mode: 'automatic',
-                    callback: url => url.endsWith( '.pdf' ),
-                    attributes: {
-                        download: 'file.pdf'
-                    }
-                },
-                // toggleDownloadable: {
-                //     mode: 'manual',
-                //     label: 'Downloadable',
-                //     attributes: {
-                //         download: 'file'
-                //     }
-                // },
-                // openInNewTab: {
-                //     mode: 'manual',
-                //     label: 'Open in a new tab',
-                //     defaultValue: true,			// This option will be selected by default.
-                //     attributes: {
-                //         target: '_blank',
-                //         rel: 'noopener noreferrer'
-                //     }
-                // }
-            }
-        },
+						// Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+						addTargetToExternalLinks: true,
+						decorators: {
+								detectDownloadable: {
+										mode: 'automatic',
+										callback: url => url.endsWith( '.pdf' ),
+										attributes: {
+												download: 'file.pdf'
+										}
+								},
+								// toggleDownloadable: {
+								//     mode: 'manual',
+								//     label: 'Downloadable',
+								//     attributes: {
+								//         download: 'file'
+								//     }
+								// },
+								// openInNewTab: {
+								//     mode: 'manual',
+								//     label: 'Open in a new tab',
+								//     defaultValue: true,			// This option will be selected by default.
+								//     attributes: {
+								//         target: '_blank',
+								//         rel: 'noopener noreferrer'
+								//     }
+								// }
+						}
+				},
 		table: {
 			contentToolbar: [
 				'tableColumn',
@@ -124,13 +141,13 @@ function editorRunner(_el)
 				'mergeTableCells'
 			]
 		},
-        ckfinder: {
-            // Upload the images to the server using the CKFinder QuickUpload command.
-            uploadUrl: window.location.href,
-            options: {
-                resourceType: 'Images'
-            },
-        },
+				ckfinder: {
+						// Upload the images to the server using the CKFinder QuickUpload command.
+						uploadUrl: window.location.href,
+						options: {
+								resourceType: 'Images'
+						},
+				},
 		licenseKey: '',
 
 	} )
@@ -147,41 +164,41 @@ function editorRunner(_el)
 
 function editorSimpleRunner(_el)
 {
-  var myLang = urlLang();
-  var myEl = _el.get(0);
-  ClassicEditor.create( myEl,
-  {
+	var myLang = urlLang();
+	var myEl = _el.get(0);
+	ClassicEditor.create( myEl,
+	{
 
-    toolbar: {
-      items: [
-        'bold',
-        // 'italic',
-        'link',
-      ]
-    },
-    language: myLang,
-    link: {
-            // Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
-            addTargetToExternalLinks: true,
-            decorators: {
-                detectDownloadable: {
-                    mode: 'automatic',
-                    callback: url => url.endsWith( '.pdf' ),
-                    attributes: {
-                        download: 'file.pdf'
-                    }
-                },
-            }
-        },
-    licenseKey: '',
+		toolbar: {
+			items: [
+				'bold',
+				// 'italic',
+				'link',
+			]
+		},
+		language: myLang,
+		link: {
+						// Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+						addTargetToExternalLinks: true,
+						decorators: {
+								detectDownloadable: {
+										mode: 'automatic',
+										callback: url => url.endsWith( '.pdf' ),
+										attributes: {
+												download: 'file.pdf'
+										}
+								},
+						}
+				},
+		licenseKey: '',
 
-  } )
-  .then( editor => {
-    window.editor = editor;
-  } )
-  .catch( error => {
-    console.error( 'Oops, something gone wrong for editor!' );
-    console.error( error );
-  } );
+	} )
+	.then( editor => {
+		window.editor = editor;
+	} )
+	.catch( error => {
+		console.error( 'Oops, something gone wrong for editor!' );
+		console.error( error );
+	} );
 
 }
