@@ -85,6 +85,9 @@ body[data-siteBuilder] > #pageFooter:empty{
 body[data-siteBuilder] > .js{
 	@apply hidden;
 }
+body[data-siteBuilder] > .ck-body-wrapper{
+	@apply hidden;
+}
 .browserFrame[data-size='desktop']{
 	width:100%;
 	max-width: 100%;

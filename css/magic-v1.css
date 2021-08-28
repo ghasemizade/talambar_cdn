@@ -16093,6 +16093,10 @@ body[data-siteBuilder] > .js{
   display: none;
 }
 
+body[data-siteBuilder] > .ck-body-wrapper{
+  display: none;
+}
+
 .browserFrame[data-size='desktop']{
   width:100%;
   max-width: 100%;
