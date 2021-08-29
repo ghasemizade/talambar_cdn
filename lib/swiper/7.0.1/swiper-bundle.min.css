@@ -20,4 +20,11 @@
 .swiper-lazy-preloader{
     width:25px;
     height:25px;
+    z-index: -1;
+}
+.swiper [data-magicbox] img{
+    transition: 0.2s;
+}
+.swiper-lazy-preloader img[src=""]{
+    opacity: 0;
 }
