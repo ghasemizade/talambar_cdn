@@ -15809,7 +15809,6 @@ img[src="#"] {
   will-change: transform, filter;
   position: relative;
   margin: 0 auto;
-  width: 100%;
 }
 
 [data-magicbox] picture{
