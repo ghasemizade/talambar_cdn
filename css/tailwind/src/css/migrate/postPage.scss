@@ -54,8 +54,8 @@
 }
 .postBlock header .postTitleBox img{
 	margin-bottom: 0;
-	min-width: 12rem;
-	max-height: 25rem;
+	min-width: 120px;
+	max-height: 250px;
 }
 [data-pwa] .postBlock .postTitleBox img{
 	min-width: 80px;
@@ -176,8 +176,8 @@
 .postBlock blockquote{
 	position: relative;
 	background-color: #f9f9f9;
-	border-left: 0.3rem solid #ccc;
-	border-right: 0.3rem solid #ccc;
+	border-left: 3px solid #ccc;
+	border-right: 3px solid #ccc;
 	padding: 50px 40px 40px;
 	margin: 30px 0 20px;
 	font-size: 14px;
@@ -192,7 +192,7 @@
 	content:"\e009";
 	font-family: "siftal" !important;
   position: absolute;
-  top:-3rem;
+  top:-30px;
   left: 0;
   right: 0;
   display: block;
@@ -303,7 +303,7 @@
 
 .postBlock .infoBox{
 	font-size: 14px;
-	line-height: 3.5rem;
+	line-height: 35px;
 	user-select: none;
 }
 [data-pwa] .postBlock .infoBox{
@@ -316,7 +316,7 @@
 	transition: 0.1s;
 }
 [data-pwa] .postBlock .share1 a{
-	margin: 5px 0.2rem;
+	margin: 5px 2px;
 }
 .postBlock .share1 a:hover{
 	filter: grayscale(0);

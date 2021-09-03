@@ -163,10 +163,10 @@ body .ltr .items li + li::before{
 .items li .mobile{
 	direction: ltr;
 	text-align: left;
-	max-width: 15rem;
+	max-width: 150px;
 }
 [dir='rtl'] .items li .mobile{
-	max-width: 13rem;
+	max-width: 130px;
 }
 .items li.multiLine .key{
 	height: auto!important;
@@ -210,7 +210,7 @@ body .ltr .items li + li::before{
 	min-height: $myItemLineHeight;
 }
 .items li time.value{
-	min-width: 13rem;
+	min-width: 130px;
 	direction: ltr;
 	text-align: left;
 }
@@ -225,7 +225,7 @@ body .ltr .items li + li::before{
 	min-width: 90px;
 }
 .items li .value.datetime{
-	min-width: 13rem;
+	min-width: 130px;
 	direction: ltr;
 	text-align: left;
 }
@@ -238,7 +238,7 @@ body .ltr .items li + li::before{
 	text-align: right;
 }
 .items li .value.humandate{
-	min-width: 13rem;
+	min-width: 130px;
 	text-align: left;
 }
 .items li .value.txtB{

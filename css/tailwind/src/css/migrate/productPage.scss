@@ -1,6 +1,6 @@
 .productPage .box{
 	padding: 15px;
-	border-radius:.5rem;
+	border-radius:5px;
 }
 .productPage .box+.box{
 	margin-top: 20px;
@@ -99,7 +99,7 @@
 .productPage .productQty{
 	width: 100px;
 	margin:0 5px 0;
-	padding: 0.2rem 0;
+	padding: 2px 0;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -111,7 +111,7 @@
 	text-decoration:none;
 	text-align:center;
 	transition:.2s ease-out;
-	border-radius:.7rem;
+	border-radius:7px;
 	white-space:nowrap;
 	vertical-align: middle;
 	user-select:none;
@@ -124,14 +124,14 @@
 	overflow: hidden;
 	font-size:16px;
 	max-width:100%;
-	min-width: 14rem;
+	min-width: 140px;
 	margin: 5px 5px;
 	text-overflow:ellipsis;
 	box-shadow: 0 4px 20px rgba(252, 69, 75, 0.5)
 }
 [dir='rtl'] .productPage .btnBuy{
 	font-size:15px;
-	min-width: 15rem;
+	min-width: 150px;
 }
 [data-pwa] .productPage .btnBuy{
 	display: none;
@@ -192,12 +192,12 @@
 	display: block;
 }
 .productPage .featureImgBlock a img{
-	border-radius:.7rem;
+	border-radius:7px;
 	display: block;
 	margin: 0 auto;
 }
 .productPage .featureImgBlock a video{
-	border-radius:.7rem;
+	border-radius:7px;
 	display: block;
 	margin: 0 auto;
 	max-height: 300px;
@@ -273,8 +273,8 @@
 	padding: 0;
 }
 .productInfo .tbl1 .group th{
-	padding-top: 0.2rem;
-	padding-bottom: 0.2rem;
+	padding-top: 2px;
+	padding-bottom: 2px;
 	border-radius: 10px;
 	background-color: #d1ecf1!important;
 	color: #0c5460!important;
