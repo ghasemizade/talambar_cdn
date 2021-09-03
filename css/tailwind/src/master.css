@@ -27,6 +27,15 @@
 @import "css/base/_borderColor.scss";
 
 
+/*add pwa style*/
+@import 'css/pwa/app.scss';
+@import 'css/pwa/layout.scss';
+@import 'css/pwa/item.scss';
+@import 'css/pwa/footer.scss';
+@import 'css/pwa/header.scss';
+@import 'css/pwa/search.scss';
+
+
 /* forms */
 @import "css/form/_toggle.scss";
 
