@@ -1,7 +1,7 @@
 .radio1{
   padding:8px 0;
   overflow:hidden;
-  @include select-none();
+  user-select:none;;
 }
 
 .radio1 input{
@@ -77,7 +77,7 @@
 
 
 
-.radio3{padding:0;position:relative;min-width: 80px;@include select-none();}
+.radio3{padding:0;position:relative;min-width: 80px;user-select:none;;}
 .radio3 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .radio3 label{display:block;padding:5px 10px;position:relative;cursor:pointer;transition:0.3s;background-color:#f6f8fa;min-width:50px;line-height:24px;height:36px;border-radius:03px;border:1px solid transparent;white-space:nowrap;}
 .radio3 label::before{content:'';margin-right:10px;display:inline-block;vertical-align:middle;width:20px;height:20px;transition:0.3s;border-radius:50%;border:1px solid rgba(0,0,0,0.1);}
@@ -98,7 +98,7 @@
 .radio3.colored label{ border:none!important;}
 .radio3.colored label::before{border-radius: 0;}
 
-.radio4{margin:0 5px;padding-bottom:10px;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;@include select-none();}
+.radio4{margin:0 5px;padding-bottom:10px;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;user-select:none;;}
 .radio4 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .radio4 label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:100%;height:auto;border-radius:03px;padding:10px;}
 .radio4 img{width:100%;height:auto;}
@@ -116,7 +116,7 @@
 
 
 
-.radioGateway{margin:5px;position:relative;cursor:pointer;display:inline-flex;@include select-none();}
+.radioGateway{margin:5px;position:relative;cursor:pointer;display:inline-flex;user-select:none;;}
 .radioGateway input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
 .radioGateway label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:68px;height:68px;border-radius:03px;padding:2px;}
 .radioGateway img{width:100%;height:auto;}
@@ -135,7 +135,7 @@
 @keyframes pulseOn {100% {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
 
 .radioRating{
-  @include select-none();
+  user-select:none;;
 }
 .radioRating .rateBox{
   display:inline-block;
@@ -246,7 +246,7 @@
   min-width:100px;
   min-height:90px;
   position:relative;
-  @include select-none();
+  user-select:none;;
 }
 .radioType input{
   padding:0;

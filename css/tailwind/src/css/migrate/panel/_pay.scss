@@ -1,0 +1,208 @@
+[data-panel][data-in="pay"] .tbox{
+	display: none;
+}
+
+.payTicket{
+  min-width: 280px;
+  height: 120px;
+  overflow: hidden;
+  box-shadow: 0px 0px 4rem 1px #eee;
+  border-radius: 0.5rem;
+  margin: 1em auto;
+  color: #777;
+}
+
+
+.payTicket .topBox .payPriceBox{
+  background: #d7dbde;
+	text-align: center;
+	padding:0 1rem;
+	height: 120px;
+	overflow: hidden;
+  width: 100%;
+}
+.payTicket .topBox .price{
+	display: inline-block;
+  max-width: 100%;
+  height: 120px;
+  vertical-align: middle;
+  font-size: 30px;
+  line-height: 120px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.payTicket .topBox .unit{
+	display: block;
+  position:absolute;
+  bottom:0.5em;
+  left:0.5em;
+  font-size: 1.5em;
+}
+
+
+.payTicket .breakLine {
+  width: 20px;
+  height: 100px;
+  margin: 10px 0;
+  position: relative;
+  box-shadow: 0 1px 0 0 #fff, 0 -1px 0 0 #fff;
+  background-color:#d7dbde;
+}
+.payTicket .breakLine:before, .payTicket .breakLine:after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  border: 5px solid transparent;
+  border-top-color: #d7dbde;
+  border-right-color: #d7dbde;
+  border-radius: 100%;
+  pointer-events: none;
+  -webkit-transform:rotate(-225deg);
+          transform:rotate(-225deg);
+}
+.payTicket .breakLine:before {
+  top: -25px;
+}
+.payTicket .breakLine:after {
+  -webkit-transform:rotate(-45deg);
+          transform:rotate(-45deg);
+  top: 95px;
+}
+.payTicket .breakLine i{
+	display: block;
+	width: 0;
+	height: 100%;
+	margin: 0 auto;
+  	border-right:3px dotted #fff;
+}
+
+
+.payTicket .status{
+  background-color:#d7dbde;
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+}
+.payTicket .status .myStatus{
+	font-size: 60px;
+	min-width: 60px;
+	line-height: 110px;
+	overflow: hidden;
+	height: 120px;
+	display: block;
+	text-align: center;
+}
+.payTicket .status .statusDesc{
+	position:absolute;
+	bottom: 2rem;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-weight: 900;
+}
+
+.payTicket.active{
+  color: #1f8fff;
+}
+.payTicket.active .topBox .payPriceBox{
+  	background: #c5e2ff;
+    transition:0.3s;
+}
+.payTicket.active .breakLine {
+  background-color:#c5e2ff;
+  transition:0.3s;
+}
+.payTicket.active .breakLine:before, .payTicket.active .breakLine:after {
+  border-top-color: #c5e2ff;
+  border-right-color: #c5e2ff;
+  transition:0.3s;
+}
+.payTicket.active .status{
+  background-color:#c5e2ff;
+  transition:0.3s;
+}
+.payTicket.active:hover .topBox .payPriceBox{
+    background: #b0d8ff;
+}
+.payTicket.active:hover .breakLine {
+  background-color:#b0d8ff;
+}
+.payTicket.active:hover .breakLine:before, .payTicket.active:hover .breakLine:after {
+  border-top-color: #b0d8ff;
+  border-right-color: #b0d8ff;
+}
+.payTicket.active:hover .status{
+  background-color:#b0d8ff;
+}
+
+
+.payTicket.positive{
+  color: #2c662d;
+}
+.payTicket.positive .topBox .payPriceBox{
+  	background: #9dd026;
+}
+.payTicket.positive .breakLine {
+  background-color:#9dd026;
+}
+.payTicket.positive .breakLine:before, .payTicket.positive .breakLine:after {
+  border-top-color: #9dd026;
+  border-right-color: #9dd026;
+}
+.payTicket.positive .status{
+  background-color:#9dd026;
+}
+
+.payTicket.negative{
+  color: #9f3a38;
+}
+.payTicket.negative .topBox .payPriceBox{
+  	background: #fff6f6;
+}
+.payTicket.negative .breakLine {
+  background-color:#fff6f6;
+}
+.payTicket.negative .breakLine:before, .payTicket.negative .breakLine:after {
+  border-top-color: #fff6f6;
+  border-right-color: #fff6f6;
+}
+.payTicket.negative .status{
+  background-color:#fff6f6;
+}
+
+.payTicket.warning{
+  color: #573a08;
+}
+.payTicket.warning .topBox .payPriceBox{
+  	background: #eadc2c;
+}
+.payTicket.warning .breakLine {
+  background-color:#eadc2c;
+}
+.payTicket.warning .breakLine:before, .payTicket.warning .breakLine:after {
+  border-top-color: #eadc2c;
+  border-right-color: #eadc2c;
+}
+.payTicket.warning .status{
+  background-color:#eadc2c;
+}
+
+
+
+
+
+
+
+
+.payTicketDetail{
+	color: #555;
+	font-size: 1.2em;
+	margin: 0 auto;
+}
+.payTicketDetail .msg{
+  background-color: #fff;
+}
+

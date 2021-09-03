@@ -85,6 +85,8 @@
 @import 'css/migrate/table1.scss';
 @import 'css/migrate/items.scss';
 @import 'css/migrate/msg.scss';
+@import 'css/migrate/nprogress.scss';
+@import 'css/migrate/spay.scss';
 
 
 @import 'css/migrate/margin.scss';
@@ -109,4 +111,15 @@
 @import 'css/migrate/postPage.scss';
 @import 'css/migrate/tagPage.scss';
 @import 'css/migrate/shippingPage.scss';
+
+@import 'css/migrate/panel/_layout.scss';
+@import 'css/migrate/panel/_header.scss';
+@import 'css/migrate/panel/_titleBox.scss';
+@import 'css/migrate/panel/_aside.scss';
+@import 'css/migrate/panel/_footer.scss';
+@import 'css/migrate/panel/_pay.scss';
+@import 'css/migrate/panel/_ticket.scss';
+@import 'css/migrate/panel/_ermileBadge.scss';
+@import 'css/migrate/panel/_themeNight.scss';
+@import 'css/migrate/panel/_themeLight.scss';
 
