@@ -5,7 +5,7 @@
 	font-style: normal;
 	color: rgba(0,0,0,0.9);
 	width: 100%;
-	border-radius: 0.25rem;
+	border-radius: 03px;
 
 	display: -webkit-box;
 	display: -moz-box;
@@ -46,7 +46,7 @@ span.input{
 	border: 1px solid rgba(0,0,0,0.15);
 	transition-duration:0.3s;
 	transition-property:opacity, background-color, color, border;
-	border-radius: 0.25rem;
+	border-radius: 03px;
 	outline:none;
 	-ms-flex:1 1 auto;
 	flex:1 1 auto;
@@ -116,7 +116,7 @@ span.input{
 	padding: 5px 1em;
 	line-height: 24px;
 	text-align: center;
-	border-radius: 0.25rem;
+	border-radius: 03px;
 	white-space: nowrap;
 	vertical-align: middle;
 	margin: 0;
@@ -132,8 +132,8 @@ span.input{
 }
 .input .addon.small{
 	font-size:10px;
-	padding-right:0.5rem;
-	padding-left:0.5rem;
+	padding-right:5px;
+	padding-left:5px;
 }
 .input .addon:not(.btn)
 {
@@ -210,14 +210,14 @@ span.input{
 .input.ltr > :first-child{
 	border-top-right-radius: 0!important;
 	border-bottom-right-radius: 0!important;
-	border-top-left-radius: 0.25rem!important;
-	border-bottom-left-radius: 0.25rem!important;
+	border-top-left-radius: 03px!important;
+	border-bottom-left-radius: 03px!important;
 }
 .input.ltr > :not(div):last-child{
 	border-top-left-radius: 0!important;
 	border-bottom-left-radius: 0!important;
-	border-top-right-radius: 0.25rem!important;
-	border-bottom-right-radius: 0.25rem!important;
+	border-top-right-radius: 03px!important;
+	border-bottom-right-radius: 03px!important;
 }
 .input.ltr > .addon:first-child{
 	border-right-width: 0!important;
@@ -259,7 +259,7 @@ input.input{
 	background-clip: padding-box;
 	border: 1px solid rgba(0,0,0,0.15);
 	transition: 0.3s;
-	border-radius: 0.25rem;
+	border-radius: 03px;
 	outline:none;
 	width: auto;
 }
@@ -363,7 +363,7 @@ input[type="color"]{
 	direction: ltr;
 	display: inline-block;
 	min-height:35px;
-	border-radius: 0.25rem;
+	border-radius: 03px;
 	overflow: hidden;
 	cursor: pointer;
 }

@@ -24,9 +24,9 @@
 	position: relative;
 	overflow:hidden;
   font-size: 18px;
-  width: 3.6rem;
-  height: 3.6rem;
-  line-height: 3.6rem;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
 	padding:0;
   display: block;
   text-align: center;
@@ -46,11 +46,11 @@
 	cursor:pointer;
 	padding:0;
 	display:block;
-	line-height: 3.6rem;
+	line-height: 36px;
   font-size: 18px;
   transition: 0.3s;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   background-color: #f9f9f9;
   color: #37474f;
 }

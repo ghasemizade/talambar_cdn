@@ -4,7 +4,7 @@
   padding: 10px 15px;
   margin-bottom:1em;
   border: 1px solid transparent;
-  border-radius:0.25rem;
+  border-radius:03px;
   min-height: 1em;
   line-height:1.5;
   opacity: 0.8;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 [data-pwa] .msg{
-  padding: 0.5rem 10px;
+  padding: 5px 10px;
 }
 .msg.glass{opacity: 0.5;}
 [dir="rtl"] .msg{
@@ -26,10 +26,10 @@
   margin-bottom: 0;
 }
 .msg.minimal{
-  padding: 0.5rem 10px;
+  padding: 5px 10px;
 }
 [data-pwa] .msg.minimal{
-  padding: 0.5rem 0.5rem;
+  padding: 5px 5px;
 }
 .msg.h36{
   padding: 5px 1.5em;

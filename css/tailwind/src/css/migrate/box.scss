@@ -10,10 +10,10 @@
   transition: 0.3s;
 }
 [data-pwa] .box{
-  border-radius: .25rem;
+  border-radius: 3px;
 }
 .box:hover{
-  box-shadow: 0px 0px 0.5rem 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
 .box.hasCover{
   margin-top: 100px;
@@ -35,8 +35,8 @@
 }
 .box .cover{
   border-radius: 50%;
-  margin-top: -10rem;
-  width: 20rem;
+  margin-top: -100px;
+  width: 200px;
   border: 10px solid #fff;
   box-shadow: #ddd 0px -5px 10px 0;
 }
@@ -68,14 +68,14 @@
 .box > header h3{
   display: inline-block;
   font-size: 14px;
-  line-height: 3.6rem;
+  line-height: 36px;
   font-weight: 800;
   margin: 0;
 }
 .box > header h4{
   display: inline-block;
   font-size: 13px;
-  line-height: 3.6rem;
+  line-height: 36px;
   font-weight: 700;
   margin: 0;
 }
@@ -100,7 +100,7 @@
   padding: 30px 30px;
 }
 .box .body.lessPad{
-  padding: 0.5rem;
+  padding: 5px;
 }
 .box .body.zeroPad{
   padding: 0;

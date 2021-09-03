@@ -4,7 +4,7 @@
 	font-size:14px;
 	overflow: hidden;
 	margin-bottom:10px;
-	box-shadow: #ddd 0 0 0.5rem;
+	box-shadow: #ddd 0 0 5px;
 	user-select: none;
 }
 .zeroSide .items{
@@ -55,7 +55,7 @@ body .ltr .items li + li::before{
 	-ms-flex-wrap:nowrap;
 	flex-wrap:nowrap;
 
-	padding: 0.5rem;
+	padding: 5px;
 	color: #333!important;
 	transition:0.2s ease-in-out;
 }
@@ -64,20 +64,20 @@ body .ltr .items li + li::before{
 	transition:0.2s ease-in-out;
 }
 .items li > a{
-	padding: 0.5rem;
+	padding: 5px;
 }
 .items li img{
 	overflow:hidden;
 	max-width: $myItemLineHeight;
 	max-height: $myItemLineHeight;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 }
 
 .items li svg{
 	overflow:hidden;
 	max-width: $myItemLineHeight;
 	max-height: $myItemLineHeight;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 }
 .items li img[src=""]{
 	opacity: 0.1;
@@ -90,7 +90,7 @@ body .ltr .items li + li::before{
 	overflow:hidden;
 	max-width: $myItemLineHeight;
 	max-height: $myItemLineHeight;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 }
 .items li .item > i{
 	height:$myItemLineHeight;
@@ -177,10 +177,10 @@ body .ltr .items li + li::before{
 	line-height: 20px!important;
 }
 .items li .item > i + .key{
-	padding:0 0.5rem;
+	padding:0 5px;
 }
 .items li .key + .key{
-	padding: 0 0.5rem;
+	padding: 0 5px;
 }
 .items li .key.fit{
 	flex-basis: 100px;
@@ -192,7 +192,7 @@ body .ltr .items li + li::before{
 .items li [class^="spay-32-"]{
 	min-height: 32px!important;
 	height: 32px!important;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 }
 .items li .value{
 	color:#999;
@@ -202,7 +202,7 @@ body .ltr .items li + li::before{
 	-moz-box-flex:0;
 	flex:0 0 auto;
 	width:auto;
-	padding:0 0.5rem;
+	padding:0 5px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -273,7 +273,7 @@ body .rtl .items li .go::after{
 }
 .items li .go.padLess::after{
 	width:$myItemLineHeight_Long;
-	padding:0 0.5rem;
+	padding:0 5px;
 }
 /* rtl */
 [dir="rtl"] .items li .go::after{

@@ -3,8 +3,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 .no-gutters {
   margin-right: 0;
@@ -17,18 +17,18 @@
 }
 /* pwa */
 [data-pwa] .row{
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 [data-pwa] .row > .c, [data-pwa] .row > [class*=c-]{
-    padding-right: 0.5rem;
-    padding-left: 0.5rem
+    padding-right: 5px;
+    padding-left: 5px
 }
 
 /* padMore */
 .row.padMore{
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 .row.padMore > .c, .row.padMore > [class*=c-]{
     padding-right: 10px;
@@ -36,12 +36,12 @@
 }
 /* padMore PWA */
 [data-pwa] .row.padMore{
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 [data-pwa] .row.padMore > .c, [data-pwa] .row.padMore > [class*=c-]{
-    padding-right: 0.5rem;
-    padding-left: 0.5rem
+    padding-right: 5px;
+    padding-left: 5px
 }
 /* padMore */
 .row.padMore2{
@@ -54,8 +54,8 @@
 }
 /* padMore2 PWA */
 [data-pwa] .row.padMore2{
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 [data-pwa] .row.padMore2 > .c, [data-pwa] .row.padMore2 > [class*=c-]{
     padding-right: 10px;
@@ -73,20 +73,20 @@
 }
 /* high */
 .row[data-space='high']{
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 .row[data-space='high'] > .c, .row[data-space='high'] > [class*=c-]{
     padding-right: 10px;
     padding-left: 10px;
 }
 [data-pwa] .row[data-space='high']{
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 [data-pwa] .row[data-space='high'] > .c, [data-pwa] .row[data-space='high'] > [class*=c-]{
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 /* extra */
 .row[data-space='extra']{
@@ -98,8 +98,8 @@
     padding-left: 15px;
 }
 [data-pwa] .row[data-space='extra']{
-  margin-right: -1rem;
-  margin-left: -1rem;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 [data-pwa] .row[data-space='extra'] > .c, [data-pwa] .row[data-space='extra'] > [class*=c-]{
     padding-right: 10px;
@@ -121,8 +121,8 @@
 .row > .c, .row > [class*=c-]{
     position: relative;
     width: 100%;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem
+    padding-right: 5px;
+    padding-left: 5px
 }
 .c {
   -ms-flex-preferred-size: 0;
