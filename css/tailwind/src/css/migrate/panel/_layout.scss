@@ -26,7 +26,7 @@
 
 [data-panel='clean'] #sidebar {display:block;position:fixed;top:0;bottom:0;left:-250px!important;}
 [dir="rtl"] [data-panel='clean'] #sidebar{right:-250px!important;left:initial;}
-[data-panel='clean'] #sidebar figure{margin:2em 0;}
+[data-panel='clean'] #sidebar figure{margin:20px 0;}
 [data-panel='clean'] #pageHeader .desktop .sidenavHandler{-webkit-box-flex: 0;-webkit-flex: 0 0 auto;-ms-flex: 0 0 auto;-moz-box-flex: 0;flex: 0 0 auto;max-width: initial;display: flex !important;}
 [data-panel='clean'] #pageHeader .desktop{margin:0!important;}
 [data-panel='clean'] #pageContent{margin:0!important;}
@@ -66,7 +66,7 @@ img.profileAvatar{
   margin: 0 0 10px;
   font-size: 12px;
   position: relative;
-  padding: 5px 1em;
+  padding: 5px 10px;
   border: 1px solid transparent;
   border-radius: 3px;
   line-height: 1.25;
@@ -82,10 +82,10 @@ img.profileAvatar{
   border-color:#fff;
 }
 [dir="ltr"] .tbox.pictogram{
-  padding-right:5em;
+  padding-right:50px;
 }
 [dir="rtl"] .tbox.pictogram{
-  padding-left: 5em;
+  padding-left: 50px;
 }
 .tbox p{
   color: #777;
@@ -109,7 +109,7 @@ img.profileAvatar{
   line-height: 1.3;
 }
 .tbox.pictogram > span[class^="sf-"]{
-  font-size:3em;
+  font-size:30px;
   transition:color 0.1s;
   position:absolute;
   line-height:50px;
@@ -199,7 +199,7 @@ img.profileAvatar{
   width: 100%;
   height: 100%;
   direction: ltr;
-  border-radius: 0.5em;
+  border-radius: 5px;
   box-shadow: 30px -40px 0 0 #5bab6e inset;
   transition: 0.3s;
 }
@@ -223,7 +223,7 @@ img.profileAvatar{
 
 
 
-[data-panel][data-in="api"] .cbox ol{margin:0 2em;}
+[data-panel][data-in="api"] .cbox ol{margin:0 20px;}
 [data-panel][data-in="api"] .cbox ol li{padding:0.5em 0 0;}
 
 
@@ -235,7 +235,7 @@ img.profileAvatar{
 }
 [data-panel] .alerty2-popup .langlist a{
   border:1px solid #eee;
-  padding:0.5em 1em;
+  padding:0.5em 10px;
   margin:0 3px;
   transition: 0.3s;
   -webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;-moz-box-flex:1;flex-grow:1;

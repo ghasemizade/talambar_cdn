@@ -113,7 +113,7 @@ span.input{
 
 
 .input .addon{
-	padding: 5px 1em;
+	padding: 5px 10px;
 	line-height: 24px;
 	text-align: center;
 	border-radius: 03px;
@@ -146,7 +146,7 @@ span.input{
 }
 .input .addon.flag{
 	border: none;
-	padding: 2px 1em;
+	padding: 2px 10px;
 	transition: 0.3s;
 	width:auto;
 }
@@ -156,7 +156,7 @@ span.input{
 }
 .input .addon.flag img{
 	display: block;
-	width: 2em;
+	width: 20px;
 	margin:0 5px;
 	transition: 0.3s;
 }

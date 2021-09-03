@@ -8,7 +8,7 @@
 	position: relative;
 	overflow: hidden;
 	line-height: 1.4;
-	margin-bottom: 1em;
+	margin-bottom: 10px;
 	border-collapse: collapse;
 }
 .tbl1.repeatHead{
@@ -39,8 +39,8 @@
 }
 
 .tbl1 th {
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-right: 10px;
 	text-align:left;
 	max-width:600px;
@@ -192,11 +192,11 @@
 /*================================================================== [ Ver2 ]*/
 .tbl1.v2 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 }
 .tbl1.v2 thead {
 	box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
@@ -208,7 +208,7 @@
 	background-color: transparent;
 }
 .tbl1.v2 tbody tr:first-of-type td{
-	padding-top:2em;
+	padding-top:20px;
 }
 .tbl1.v2 tr {
 	border-bottom: 1px solid #f2f2f2;
@@ -218,15 +218,15 @@
 /*================================================================== [ v3 ]*/
 .tbl1.v3 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 	background-color: #393939;
 }
 .tbl1.v3 thead {
-	font-size: 1em;
+	font-size: 10px;
 	text-transform: uppercase;
 }
 .tbl1.v3 thead tr{
@@ -270,12 +270,12 @@
 [dir="ltr"] .tbl1.v4 th.collapsing, [dir="ltr"] .tbl1.v4 td.collapsing{
 	width:1px;
 	white-space: nowrap;
-	padding-right: 1em;
+	padding-right: 10px;
 }
 [dir="rtl"] .tbl1.v4 th.collapsing, [dir="rtl"] .tbl1.v4 td.collapsing{
 	width:1px;
 	white-space: nowrap;
-	padding-left: 1em;
+	padding-left: 10px;
 }
 .tbl1.v4 tbody tr:hover {background-color: #ebebeb;}
 .tbl1 tbody tr[data-selected]{background-color:#daecf9!important;color:#2c662d!important}
@@ -289,7 +289,7 @@
 	padding:0 10px;
 }
 .tbl1.v5 thead {
-	font-size: 1em;
+	font-size: 10px;
 	color: #555555;
 	text-transform: uppercase;
 	background-color: transparent;
@@ -338,11 +338,11 @@
 /*================================================================== [ v6 ]*/
 .tbl1.v6 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 }
 .tbl1.v6 thead {
 	color: #fff;
@@ -362,11 +362,11 @@
 /*================================================================== [ v7 ]*/
 .tbl1.v7 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 }
 .tbl1.v7 thead {
 	color: #fff;
@@ -386,11 +386,11 @@
 /*================================================================== [ v8 ]*/
 .tbl1.v8 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 }
 .tbl1.v8 thead {
 	color: #fff;
@@ -421,11 +421,11 @@
 /*================================================================== [ v9 ]*/
 .tbl1.v9 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 }
 .tbl1.v9 thead {
 	color: #fff;
@@ -447,11 +447,11 @@
 /*================================================================== [ v10 ]*/
 .tbl1.v10 {
 	border-radius: 10px;
-	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 30px 0px rgba(0, 0, 0, 0.15);
 
   background: #7918f2;
   background: -webkit-linear-gradient(-68deg, #ac32e4 , #4801ff);
@@ -463,8 +463,8 @@
 .tbl1.v10 thead {
 	color: #fff;
 	background-color: rgba(255,255,255,0.3);
-	padding-top:2em;
-	padding-bottom:2em;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 .tbl1.v10 th {
 	color:#fff;
@@ -495,7 +495,7 @@
 .tbl1 thead th[data-sort] a{
 	display:inline-block;
 	color: inherit;
-	padding: 0 1em;
+	padding: 0 10px;
 	position:relative;
 }
 .tbl1 thead th[data-sort]::after{
