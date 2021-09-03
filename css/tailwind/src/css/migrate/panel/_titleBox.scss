@@ -4,7 +4,7 @@
   min-height: 48px;
   font-size: 1.2em;
   position: relative;
-  padding: 0.5rem 0 1.4rem;
+  padding: 5px 0 14px;
   opacity: 0.95;
   color: #444;
   transition:0.3s;
@@ -13,20 +13,20 @@
 [data-pwa] .titleBox{display: none;}
 .titleBox .equalPad{padding: 5px;}
 .titleBox:hover{opacity:1;}
-.titleBox h2{font-weight:400;font-size:1.6rem;line-height:36px;height:36px;margin:0;overflow:hidden;text-overflow:ellipsis;}
+.titleBox h2{font-weight:400;font-size:16px;line-height:36px;height:36px;margin:0;overflow:hidden;text-overflow:ellipsis;}
 [data-pwa] .titleBox h2{display: none;}
-.titleBox .actions .btn{font-size: 1.2rem;padding-left:0.5rem;padding-right:0.5rem}
-.titleBox .actions .btn i{font-size: 1.5rem;}
+.titleBox .actions .btn{font-size: 12px;padding-left:5px;padding-right:5px}
+.titleBox .actions .btn i{font-size: 15px;}
 
 .btn.master{font-size:1em;transition: all 150ms ease-out;background-color:#2080d0;color:#fff;background:linear-gradient(to left, #2080d0, #6b7ae0);}
 .btn.master.back{background:#eceff1;color:#333;padding-left:0.5em;padding-right:0.5em;min-width:90px;}
 [data-pwa] .titleBox .btn.master.back{display: none;}
-.btn.master.save{background:#20d087;background:linear-gradient(to left, #20d087, #3fb33d);padding-left:1rem;padding-right:1rem;min-width:100px;font-size: 1.4rem;}
+.btn.master.save{background:#20d087;background:linear-gradient(to left, #20d087, #3fb33d);padding-left:10px;padding-right:10px;min-width:100px;font-size: 14px;}
 [data-pwa] .titleBox .btnSave{display: none;}
-.btn.master.insert{background:#d02092;background:linear-gradient(to left, #d02092, #b33d63);padding-left:1rem;padding-right:1rem;min-width:100px;font-size: 1.4rem;}
-.btn.master:hover{box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.3rem #2080d0;}
-.btn.master:focus{box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #6b7ae0;}
-.btn.master:active {box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem #2080d0;transition-duration: 75ms;}
+.btn.master.insert{background:#d02092;background:linear-gradient(to left, #d02092, #b33d63);padding-left:10px;padding-right:10px;min-width:100px;font-size: 14px;}
+.btn.master:hover{box-shadow: 0 0 0 2px #fff, 0 0 0 3px #2080d0;}
+.btn.master:focus{box-shadow: 0 0 0 2px #fff, 0 0 0 4px #6b7ae0;}
+.btn.master:active {box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2080d0;transition-duration: 75ms;}
 .btn.master kbd{font-size:1em;vertical-align:middle;font-family:monospace, sans-serif}
 
 
@@ -46,41 +46,41 @@
 }
 .applyFilters .btn{
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 .filterBox{
   background-color: #fff;
-  border-radius: 0.25rem;
+  border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   font-size: 1.2em;
-  line-height: 2rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  line-height: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 [dir="rtl"] .filterBox{
-  line-height: 2.5rem;
+  line-height: 25px;
 }
 .filterBox .filterList .btn{
-  margin: 0 0.5rem 1rem;
+  margin: 0 5px 10px;
 }
 .sortBox .select22-results__options{
-  font-size: 1rem;
+  font-size: 10px;
 }
 
 .searchBox .select22{
-  min-width: 14rem;
+  min-width: 140px;
 }
 [data-pwa] .searchBox .select22{
-  min-width: 5.5rem;
+  min-width: 55px;
 }
 .searchBox [data-kerkere=".filterBox"]{
-  min-width: 8rem;
+  min-width: 80px;
 }
 [data-pwa] .searchBox [data-kerkere=".filterBox"]{
-  min-width: 6.5rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  min-width: 65px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 

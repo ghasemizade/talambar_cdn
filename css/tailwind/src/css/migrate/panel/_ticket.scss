@@ -2,45 +2,45 @@
   position: relative;
   text-align: center;
   display: block;
-  font-size: 1.6rem;
+  font-size: 16px;
   background-color: #fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 10px;
+  border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .ticketPage .ticketSidebar .hero img{
-  width: 12rem;
-  height: 12rem;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
   display: block;
   border-radius: 50%;
   overflow: hidden;
 }
 .ticketPage .ticketSidebar .hero h3{
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .ticketPage .chat{
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 .ticketPage .messageLine{
   position: relative;
-  margin-top: 0.5rem;
+  margin-top: 5px;
 }
 
 [data-pwa] .ticketPage .messageLine[data-line-1]{
-  margin-top: 1rem;
+  margin-top: 10px;
 }
 .ticketPage .messageLine[data-line-multi]{
   margin-top: 0;
 }
 .ticketPage .messageLine .profileAvatar{
-  height: 4rem;
-  width: 4rem;
+  height: 40px;
+  width: 40px;
   overflow: hidden;
   border-radius: 50%;
   display: block;
@@ -50,30 +50,30 @@
   display: none;
 }
 [data-pwa] .ticketPage .messageLine img{
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 .ticketPage .messageBox{
   position: relative;
   display: inline-block;
   background-color: #fff;
-  border-radius: 1rem 1rem 1rem 0;
+  border-radius: 10px 10px 10px 0;
   overflow: hidden;
-  padding: 1rem 1.5rem 0;
-  line-height: 3rem;
+  padding: 10px 15px 0;
+  line-height: 30px;
 }
 .ticketPage .messageBox[data-user]{
-  border-radius: 1rem 1rem 0 1rem;
+  border-radius: 10px 10px 0 10px;
 }
 
 [dir="rtl"] .ticketPage .messageBox{
-  border-radius: 1rem 1rem 0 1rem;
+  border-radius: 10px 10px 0 10px;
 }
 [dir="rtl"] .ticketPage .messageBox[data-user]{
-  border-radius: 1rem 1rem 1rem 0;
+  border-radius: 10px 10px 10px 0;
 }
 
 .ticketPage .messageLine[data-line-multi] .messageBox{
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 [data-desktop] .ticketPage .messageBox{
   max-width: 85%;
@@ -103,7 +103,7 @@
   word-break: break-word;
 }
 .ticketPage .messageBox p{
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 .ticketPage .messageBox p:last-child{
   margin-bottom: 0;
@@ -116,15 +116,15 @@
 }
 .ticketPage .messageBox footer{
   color: #444;
-  line-height: 2.5rem;
-  font-size: 1.2rem;
+  line-height: 25px;
+  font-size: 12px;
 }
 .ticketPage .messageBox footer i{
   display: block;
 }
 .ticketPage .messageBox footer i::before{
   display: block;
-  line-height: 2rem;
+  line-height: 20px;
   text-shadow: 0 0 1px #333;
 }
 .ticketPage .messageBox footer a{
@@ -145,17 +145,17 @@
   display: inline-block;
 }
 .ticketPage .attachment.btn{
-  border-radius: 1rem;
-  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 .ticketPage .attachment img{
   position: relative;
   display: block;
   width: 100%;
-  max-width: 25rem;
-  max-height: 50rem;
+  max-width: 250px;
+  max-height: 500px;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 10px;
   margin:0;
   box-shadow: 0 0 0 1px #fff;
 }
@@ -166,16 +166,16 @@
 
 
 .ticketPage .quickReply{
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 2;
   background-color: #fff;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   overflow: hidden;
-  padding: 1rem;
-  margin: 1rem 0;
+  padding: 10px;
+  margin: 10px 0;
 }
 [data-pwa] .ticketPage .quickReply textarea{
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 
