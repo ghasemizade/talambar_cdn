@@ -81,6 +81,11 @@
 @import 'css/migrate/avand.scss';
 @import 'css/migrate/box.scss';
 @import 'css/migrate/starRating.scss';
+@import 'css/migrate/table1.scss';
+
+@import 'css/migrate/margin.scss';
+@import 'css/migrate/padding.scss';
+@import 'css/migrate/others.scss';
 
 @import 'css/migrate/forms/_general.scss';
 @import 'css/migrate/forms/_input.scss';
@@ -91,7 +96,6 @@
 @import 'css/migrate/forms/_select.scss';
 @import 'css/migrate/forms/_rangeslider.scss';
 @import 'css/migrate/forms/_button.scss';
-
 
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';
