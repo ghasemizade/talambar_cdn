@@ -6,7 +6,7 @@
 	display: none;
 }
 .cartPage .box{
-	padding: 1.5rem;
+	padding: 15px;
 }
 .cartPage .cartItem{
 }
@@ -17,11 +17,11 @@
 }
 .cartPage .cartItem .title{
 	line-height: 2rem;
-	font-size: 1.4rem;
+	font-size: 14px;
 	margin-bottom: 1rem;
 }
 [data-pwa] .cartPage .cartItem .title{
-	font-size: 1.2rem;
+	font-size: 12px;
 	margin-bottom: 0rem;
 }
 .cartPage .cartItem .title a{
@@ -116,14 +116,14 @@
 }
 .cartPage .cartEmpty p{
 	text-align: center;
-	font-size: 1.6rem;
+	font-size: 16px;
 }
 [data-pwa] .cartPage .cartEmpty p{
-	font-size: 1.4rem;
+	font-size: 14px;
 	margin-bottom: 1rem;
 }
 [data-pwa] .cartPage .cartEmpty .msg{
-	font-size: 1.2rem;
+	font-size: 12px;
 	margin:0;
 }
 
@@ -146,7 +146,7 @@
   border-top: 1px solid #f2f2f2;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  padding-top: 1.5rem;
+  padding-top: 15px;
 }
 .orderSummary dl.total dt{
 	-ms-flex: 1 1;

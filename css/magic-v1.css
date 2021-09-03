@@ -17467,13 +17467,13 @@ body .rtl .items li .go::after{
 /* padMore */
 
 .row.padMore2{
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .row.padMore2 > .c, .row.padMore2 > [class*=c-]{
-  padding-right: 1.5rem;
-  padding-left: 1.5rem
+  padding-right: 15px;
+  padding-left: 15px
 }
 
 /* padMore2 PWA */
@@ -17525,13 +17525,13 @@ body .rtl .items li .go::after{
 /* extra */
 
 .row[data-space='extra']{
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .row[data-space='extra'] > .c, .row[data-space='extra'] > [class*=c-]{
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 [data-pwa] .row[data-space='extra']{
@@ -18410,8 +18410,8 @@ body .rtl .items li .go::after{
 .avand {
   position: relative;
   width: 100%;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -18419,8 +18419,8 @@ body .rtl .items li .go::after{
 [class^="avand-"]{
   position: relative;
   width: 96%;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -18436,7 +18436,7 @@ body .rtl .items li .go::after{
   overflow: hidden;
   padding: 5rem 2rem;
   margin-bottom:4rem;
-  box-shadow: 0px 1rem 1.4rem -7px rgba(0, 0, 0, 0.08), 0px 2rem 3rem 3px rgba(0, 0, 0, 0.09), 0px 8px 2rem 7px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 1rem 14px -7px rgba(0, 0, 0, 0.08), 0px 2rem 3rem 3px rgba(0, 0, 0, 0.09), 0px 8px 2rem 7px rgba(0, 0, 0, 0.02);
 }
 
 [class^="avand-"].impact{
@@ -18445,7 +18445,7 @@ body .rtl .items li .go::after{
   overflow: hidden;
   padding: 5rem 2rem;
   margin-bottom:4rem;
-  box-shadow: 0px 1rem 1.4rem -7px rgba(0, 0, 0, 0.08), 0px 2rem 3rem 3px rgba(0, 0, 0, 0.09), 0px 8px 2rem 7px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 1rem 14px -7px rgba(0, 0, 0, 0.08), 0px 2rem 3rem 3px rgba(0, 0, 0, 0.09), 0px 8px 2rem 7px rgba(0, 0, 0, 0.02);
 }
 
 [data-pwa] [class^="avand-"].impact{
@@ -18536,8 +18536,8 @@ body .rtl .items li .go::after{
   position: relative;
   background-color: #fff;
   border: 1px solid #eee;
-  box-shadow: 0px 0px 1.5rem 0px rgba(0,0,0,0.05);
-  font-size: 1.4rem;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  font-size: 14px;
   margin:0 auto 1rem;
   display: block;
   border-radius: $myRadius;
@@ -18584,7 +18584,7 @@ body .rtl .items li .go::after{
 }
 
 .box > header{
-  padding: 0 1.5rem;
+  padding: 0 15px;
   min-height: 36px;
   font-weight: 900;
   color: #222;
@@ -18603,7 +18603,7 @@ body .rtl .items li .go::after{
 }
 
 .box > header h2{
-  font-size: 1.5rem;
+  font-size: 15px;
   line-height: 4rem;
   font-weight: 900;
   margin: 0;
@@ -18615,7 +18615,7 @@ body .rtl .items li .go::after{
 
 .box > header h3{
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 3.6rem;
   font-weight: 800;
   margin: 0;
@@ -18623,7 +18623,7 @@ body .rtl .items li .go::after{
 
 .box > header h4{
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 13px;
   line-height: 3.6rem;
   font-weight: 700;
   margin: 0;
@@ -18633,7 +18633,7 @@ body .rtl .items li .go::after{
 }
 
 .box .pad{
-  padding: 1rem 1.5rem;
+  padding: 1rem 15px;
   overflow: hidden;
 }
 
@@ -18651,7 +18651,7 @@ body .rtl .items li .go::after{
 }
 
 [dir="rtl"] .box .body{
-  line-height:2.5rem;
+  line-height:25px;
 }
 
 .box .body.maxPad{
@@ -18682,7 +18682,7 @@ body .rtl .items li .go::after{
 }
 
 .box footer{
-  padding: 1rem 1.5rem;
+  padding: 1rem 15px;
   color: #222;
   transition: 0.3s;
   border-top: 1px solid #efefef;
@@ -18742,7 +18742,7 @@ body .rtl .items li .go::after{
 
 .box.card1{
   border-radius: 1rem;
-  font-size: 1.6rem;
+  font-size: 16px;
   height: 96%;
 }
 
@@ -18773,7 +18773,7 @@ body .rtl .items li .go::after{
 }
 
 [data-pwa] .box.card1 .title{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .box.card1 .imgBox{
@@ -18867,7 +18867,7 @@ body .rtl .items li .go::after{
 [data-pwa] .starRating > fieldset label:before{
   width: 3rem;
   height: 3rem;
-  font-size: 2.7rem;
+  font-size: 27px;
 }
 
 .starRating > fieldset:not(:checked) > label:before {
@@ -18926,7 +18926,7 @@ body .rtl .items li .go::after{
   width: 2rem;
   height: 2rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
 .starRating[data-star^="1"] i:nth-child(1):before{
@@ -19655,7 +19655,7 @@ body .rtl .items li .go::after{
 .items{
   background-color: #fff;
   border-radius:$myRadius;
-  font-size:1.4rem;
+  font-size:14px;
   overflow: hidden;
   margin-bottom:1rem;
   box-shadow: #ddd 0 0 0.5rem;
@@ -19774,11 +19774,11 @@ body .ltr .items li + li::before{
   vertical-align:middle;
   transition:0.2s ease-in-out;
   opacity: 0.8;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 .items li .item > i.sf-mobile::before{
-  font-size: 2.5rem;
+  font-size: 25px;
 }
 
 .item li:hover .item > i::before{
@@ -19801,10 +19801,10 @@ body .ltr .items li + li::before{
   position: absolute;
   top: 0;
   right: 0;
-  min-width: 1.5rem;
-  height: 1.5rem;
+  min-width: 15px;
+  height: 15px;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 15px;
   text-align: center;
   border-radius: 50%;
   background-color: #999;
@@ -19891,11 +19891,11 @@ body .ltr .items li + li::before{
 }
 
 [dir=rtl] .items li time.value{
-  min-width: 11.5rem;
+  min-width: 115px;
 }
 
 [data-pwa] .items li time.value{
-  font-size: 1.1rem;
+  font-size: 11px;
   min-width: 9rem;
 }
 
@@ -19910,7 +19910,7 @@ body .ltr .items li + li::before{
 }
 
 [dir=rtl] .items li .value.datetime{
-  min-width: 11.5rem;
+  min-width: 115px;
 }
 
 .items li .value.fileSize{
@@ -19973,52 +19973,52 @@ body .rtl .items li .go::after{
 /* extra icon */
 
 .items li .go.detail::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e03a"!important;
 }
 
 .items li .go.search::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e03f"!important;
 }
 
 .items li .go.plus::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e03e"!important;
 }
 
 .items li .go.check::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\6b"!important;
 }
 
 .items li .go.times::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e041"!important;
 }
 
 .items li .go.premium::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e0cd"!important;
 }
 
 .items li .go.invalid::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e040"!important;
 }
 
 .items li .go.ban::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e070"!important;
 }
 
 .items li .go.stop::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e24e"!important;
 }
 
 .items li .go.external::after{
-  font-size:1.6rem;
+  font-size:16px;
   content:"\e074"!important;
   color:#777;
 }
@@ -20079,7 +20079,7 @@ body .rtl .items li .go::after{
 /* long mode */
 
 .items.long{
-  font-size:1.2rem;
+  font-size:12px;
 }
 
 .items.long li{
@@ -20131,7 +20131,7 @@ body .rtl .items li .go::after{
 /* big size! */
 
 [data-pwa] .items.big{
-  font-size:1.6rem;
+  font-size:16px;
 }
 
 /* pwa mode */
@@ -20139,7 +20139,7 @@ body .rtl .items li .go::after{
 [data-pwa] .items{
   box-shadow:none;
   border-radius:$myRadiusPWA;
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 [data-pwa] .items li{
@@ -20190,7 +20190,7 @@ body .rtl .items li .go::after{
 }
 
 .items.pwaMultiLine{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .items.pwaMultiLine li{
@@ -20234,7 +20234,7 @@ body .rtl .items li .go::after{
 .msg{
   position:relative;
   transition:0.3s;
-  padding: 1rem 1.5rem;
+  padding: 1rem 15px;
   margin-bottom:1em;
   border: 1px solid transparent;
   border-radius:0.25rem;
@@ -20509,7 +20509,7 @@ span.input{
   position: relative;
   height:36px;
   line-height: 34px;
-  font-size: 1.4rem;
+  font-size: 14px;
   padding: 0 1rem;
   background-color: #fff;
   background-clip: padding-box;
@@ -20525,7 +20525,7 @@ span.input{
 }
 
 [data-pwa] .input input{
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 .input input::-moz-placeholder{
@@ -20899,10 +20899,10 @@ select:-webkit-autofill:focus {
 
 label{
   padding:0;
-  line-height:2.5rem;
+  line-height:25px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 label+.input{
@@ -21133,7 +21133,7 @@ input[type="color"].picker:focus::-webkit-color-swatch{
 .checkIcon{
   position: relative;
   overflow:hidden;
-  font-size: 1.8rem;
+  font-size: 18px;
   width: 3.6rem;
   height: 3.6rem;
   line-height: 3.6rem;
@@ -21159,7 +21159,7 @@ input[type="color"].picker:focus::-webkit-color-swatch{
   padding:0;
   display:block;
   line-height: 3.6rem;
-  font-size: 1.8rem;
+  font-size: 18px;
   transition: 0.3s;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -22523,7 +22523,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   position: relative;
   display: block;
   overflow: hidden;
-  font-size: 1.6rem;
+  font-size: 16px;
   border-radius: 0.5rem;
   transition: 0.3s;
   padding: 2rem 0;
@@ -22605,7 +22605,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .jBlog1 .more:hover{
   background-color: #eee;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 15px;
 }
 
 .jBlog1 .more:focus{
@@ -22614,7 +22614,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .productPage .box{
-  padding: 1.5rem;
+  padding: 15px;
   border-radius:.5rem;
 }
 
@@ -22623,31 +22623,31 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .productPage h1{
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 3rem;
   margin-bottom:1rem;
 }
 
 [data-pwa] .productPage h1{
-  font-size: 1.4rem;
-  line-height:2.5rem;
+  font-size: 14px;
+  line-height:25px;
   font-weight: 700;
   margin-top:1rem;
 }
 
 .productPage h2{
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 2rem;
   margin-bottom:1rem;
   color: #757575;
 }
 
 [data-pwa] .productPage h2{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .productPage h3{
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 700;
   line-height: 2rem;
   margin-bottom:1rem;
@@ -22689,13 +22689,13 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 .priceShow[data-discount]{
   display: inline-block;
   padding: 0.5em 0.7em;
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: bold;
   line-height: 1rem;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border-radius: 1.5rem;
+  border-radius: 15px;
   background-color: #e91e63;
   color: #fff;
   transition: background-color 0.3s;
@@ -22756,7 +22756,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   background-color:#fc464a;
   color:#fff;
   overflow: hidden;
-  font-size:1.6rem;
+  font-size:16px;
   max-width:100%;
   min-width: 14rem;
   margin: 0.5rem 0.5rem;
@@ -22765,7 +22765,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 [dir='rtl'] .productPage .btnBuy{
-  font-size:1.5rem;
+  font-size:15px;
   min-width: 15rem;
 }
 
@@ -22808,7 +22808,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   line-height:1.5em;
   margin:1rem 0;
   max-width:400px;
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 [data-pwa] .featureBullets{
@@ -22933,7 +22933,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 [data-pwa] .productInfo.box{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 [data-pwa] .productInfo .tbl1.v5{
@@ -22942,7 +22942,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .productInfo .tbl1{
   margin: 0;
-  line-height: 1.7rem;
+  line-height: 17px;
 }
 
 [dir='rtl'] .productInfo .tbl1{
@@ -23002,7 +23002,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .cartPage .box{
-  padding: 1.5rem;
+  padding: 15px;
 }
 
 .cartPage .cartItem{
@@ -23016,12 +23016,12 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .cartPage .cartItem .title{
   line-height: 2rem;
-  font-size: 1.4rem;
+  font-size: 14px;
   margin-bottom: 1rem;
 }
 
 [data-pwa] .cartPage .cartItem .title{
-  font-size: 1.2rem;
+  font-size: 12px;
   margin-bottom: 0rem;
 }
 
@@ -23137,16 +23137,16 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .cartPage .cartEmpty p{
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 [data-pwa] .cartPage .cartEmpty p{
-  font-size: 1.4rem;
+  font-size: 14px;
   margin-bottom: 1rem;
 }
 
 [data-pwa] .cartPage .cartEmpty .msg{
-  font-size: 1.2rem;
+  font-size: 12px;
   margin:0;
 }
 
@@ -23167,7 +23167,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   border-top: 1px solid #f2f2f2;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  padding-top: 1.5rem;
+  padding-top: 15px;
 }
 
 .orderSummary dl.total dt{
@@ -23233,12 +23233,12 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 [data-pwa] .postBlock header h2{
-  font-size: 2.5rem;
+  font-size: 25px;
   margin:1rem 0;
 }
 
 [data-pwa][dir="rtl"] .postBlock header h2{
-  font-size: 2.2rem;
+  font-size: 22px;
 }
 
 .postBlock .postTitleBox{
@@ -23276,7 +23276,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   background-color: #f7f7f7;
   color: #333;
   padding: 1rem;
-  font-size: 1.6rem;
+  font-size: 16px;
   margin: 0 0 1rem!important;
   line-height: 3rem;
   transition: 0.3s;
@@ -23287,7 +23287,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 [data-pwa] .postBlock .excerpt{
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 .postBlock .postTitleBox .excerpt{
@@ -23302,14 +23302,14 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 
 .postBlock .text{
   margin: 2rem 0;
-  line-height:2.5rem;
-  font-size: 1.6rem;
+  line-height:25px;
+  font-size: 16px;
   background-color: #fff;
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
   padding: 1rem;
-  box-shadow: 0px 0px 1.5rem 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
 }
 
@@ -23322,13 +23322,13 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .postBlock .text h2{
-  font-size: 2.6rem;
+  font-size: 26px;
   font-weight: 900;
   margin: 1rem 0 1rem;
 }
 
 .postBlock .text h3{
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 700;
   margin: 1rem 0 1rem;
 }
@@ -23340,19 +23340,19 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .postBlock .text h5{
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 700;
   margin: 1rem 0 0.5rem;
 }
 
 .postBlock .text h6{
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 700;
   margin: 1rem 0 0.5rem;
 }
 
 [data-pwa] .postBlock .text{
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 [data-pwa] .postBlock .text h2{
@@ -23360,23 +23360,23 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 [data-pwa] .postBlock .text h3{
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 [data-pwa] .postBlock .text h4{
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 
 [data-pwa] .postBlock .text h5{
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 [data-pwa] .postBlock .text h6{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .postBlock .text p{
-  margin-bottom: 2.5rem;
+  margin-bottom: 25px;
   color: #282828;
 }
 
@@ -23401,7 +23401,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   border-right: 0.3rem solid #ccc;
   padding: 5rem 4rem 4rem;
   margin: 3rem 0 2rem;
-  font-size: 1.4rem;
+  font-size: 14px;
   transition: 0.3s;
   font-style: normal!important;
   overflow: visible!important;
@@ -23434,7 +23434,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .postBlock figure{
@@ -23454,13 +23454,13 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 .postBlock figcaption{
   position: absolute;
   bottom: 0;
-  font-size: 1.4rem;
+  font-size: 14px;
   padding: 0 1rem;
   background-color: rgba(255,255,255,0.7);
 }
 
 [data-pwa] .postBlock figcaption{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .postBlock ul{
@@ -23489,7 +23489,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
   border-radius: 0.5rem;
   overflow: hidden;
   padding: 2rem 1rem;
-  font-size: 1.5rem;
+  font-size: 15px;
   text-align: center;
   transition: 0.3s;
 }
@@ -23540,7 +23540,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .postBlock .infoBox{
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 3.5rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -23549,7 +23549,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 [data-pwa] .postBlock .infoBox{
-  font-size: 1.2rem
+  font-size: 12px
 }
 
 .postBlock .share1 a{
@@ -23568,7 +23568,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .postBlock .similarPost .body{
-  font-size: 1.4rem;
+  font-size: 14px;
   line-height: 3rem;
 }
 
@@ -23578,11 +23578,11 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
       -ms-user-select: none;
           user-select: none;
   margin-top: 3rem;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 [data-pwa] .postBlock .tagLine{
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 [data-desktop] .postList h2{
@@ -23601,22 +23601,22 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 }
 
 .shippingPage .box{
-  padding: 1.5rem;
+  padding: 15px;
 }
 
 .shippingPage h2{
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 700;
   line-height: 3rem;
 }
 
 .shippingPage address{
-  font-size: 1.2rem;
+  font-size: 12px;
   line-height: 2rem;
 }
 
 .shippingPage address .title{
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 700;
 }
 

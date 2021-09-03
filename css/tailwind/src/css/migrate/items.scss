@@ -1,7 +1,7 @@
 .items{
 	background-color: #fff;
 	border-radius:$myRadius;
-	font-size:1.4rem;
+	font-size:14px;
 	overflow: hidden;
 	margin-bottom:1rem;
 	box-shadow: #ddd 0 0 0.5rem;
@@ -112,10 +112,10 @@ body .ltr .items li + li::before{
 	vertical-align:middle;
 	transition:0.2s ease-in-out;
 	opacity: 0.8;
-	font-size: 1.8rem;
+	font-size: 18px;
 }
 .items li .item > i.sf-mobile::before{
-	font-size: 2.5rem;
+	font-size: 25px;
 }
 .item li:hover .item > i::before{
 	opacity: 1;
@@ -134,10 +134,10 @@ body .ltr .items li + li::before{
 	position: absolute;
 	top: 0;
 	right: 0;
-	min-width: 1.5rem;
-	height: 1.5rem;
+	min-width: 15px;
+	height: 15px;
 	font-size: 1rem;
-	line-height: 1.5rem;
+	line-height: 15px;
 	text-align: center;
 	border-radius: 50%;
 	background-color: #999;
@@ -215,10 +215,10 @@ body .ltr .items li + li::before{
 	text-align: left;
 }
 [dir=rtl] .items li time.value{
-	min-width: 11.5rem;
+	min-width: 115px;
 }
 [data-pwa] .items li time.value{
-	font-size: 1.1rem;
+	font-size: 11px;
 	min-width: 9rem;
 }
 [data-pwa][dir=rtl] .items li time.value{
@@ -230,7 +230,7 @@ body .ltr .items li + li::before{
 	text-align: left;
 }
 [dir=rtl] .items li .value.datetime{
-	min-width: 11.5rem;
+	min-width: 115px;
 }
 .items li .value.fileSize{
 	min-width: 6rem;
@@ -283,16 +283,16 @@ body .rtl .items li .go::after{
 	opacity: 1;
 }
 /* extra icon */
-.items li .go.detail::after{font-size:1.6rem;content:"\e03a"!important;}
-.items li .go.search::after{font-size:1.6rem;content:"\e03f"!important;}
-.items li .go.plus::after{font-size:1.6rem;content:"\e03e"!important;}
-.items li .go.check::after{font-size:1.6rem;content:"\6b"!important;}
-.items li .go.times::after{font-size:1.6rem;content:"\e041"!important;}
-.items li .go.premium::after{font-size:1.6rem;content:"\e0cd"!important;}
-.items li .go.invalid::after{font-size:1.6rem;content:"\e040"!important;}
-.items li .go.ban::after{font-size:1.6rem;content:"\e070"!important;}
-.items li .go.stop::after{font-size:1.6rem;content:"\e24e"!important;}
-.items li .go.external::after{font-size:1.6rem;content:"\e074"!important;color:#777;}
+.items li .go.detail::after{font-size:16px;content:"\e03a"!important;}
+.items li .go.search::after{font-size:16px;content:"\e03f"!important;}
+.items li .go.plus::after{font-size:16px;content:"\e03e"!important;}
+.items li .go.check::after{font-size:16px;content:"\6b"!important;}
+.items li .go.times::after{font-size:16px;content:"\e041"!important;}
+.items li .go.premium::after{font-size:16px;content:"\e0cd"!important;}
+.items li .go.invalid::after{font-size:16px;content:"\e040"!important;}
+.items li .go.ban::after{font-size:16px;content:"\e070"!important;}
+.items li .go.stop::after{font-size:16px;content:"\e24e"!important;}
+.items li .go.external::after{font-size:16px;content:"\e074"!important;color:#777;}
 .items li .go.surveillance::after{font-size:2rem;content:"\e24a"!important;}
 .items li .go.star::after{font-size:2rem;content:"\5c"!important;}
 .items li .ok::after{color: #4CC790}
@@ -323,7 +323,7 @@ body .rtl .items li .go::after{
 
 /* long mode */
 .items.long{
-	font-size:1.2rem;
+	font-size:12px;
 }
 .items.long li{
 	min-height: $myItemHeight_Long;
@@ -367,7 +367,7 @@ body .rtl .items li .go::after{
 
 /* big size! */
 [data-pwa] .items.big{
-	font-size:1.6rem;
+	font-size:16px;
 }
 
 
@@ -375,7 +375,7 @@ body .rtl .items li .go::after{
 [data-pwa] .items{
 	box-shadow:none;
 	border-radius:$myRadiusPWA;
-	font-size: 1.2rem;
+	font-size: 12px;
 }
 [data-pwa] .items li{
 	line-height: $myItemLineHeight_PWA;
@@ -418,7 +418,7 @@ body .rtl .items li .go::after{
 
 
 .items.pwaMultiLine{
-	font-size: 1.2rem;
+	font-size: 12px;
 }
 .items.pwaMultiLine li{
 	line-height: 2rem;

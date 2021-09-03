@@ -45,12 +45,12 @@
 }
 /* padMore */
 .row.padMore2{
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .row.padMore2 > .c, .row.padMore2 > [class*=c-]{
-    padding-right: 1.5rem;
-    padding-left: 1.5rem
+    padding-right: 15px;
+    padding-left: 15px
 }
 /* padMore2 PWA */
 [data-pwa] .row.padMore2{
@@ -90,12 +90,12 @@
 }
 /* extra */
 .row[data-space='extra']{
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .row[data-space='extra'] > .c, .row[data-space='extra'] > [class*=c-]{
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 [data-pwa] .row[data-space='extra']{
   margin-right: -1rem;

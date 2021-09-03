@@ -1,32 +1,32 @@
 .productPage .box{
-	padding: 1.5rem;
+	padding: 15px;
 	border-radius:.5rem;
 }
 .productPage .box+.box{
 	margin-top: 2rem;
 }
 .productPage h1{
-	font-size: 1.8rem;
+	font-size: 18px;
 	line-height: 3rem;
 	margin-bottom:1rem;
 }
 [data-pwa] .productPage h1{
-	font-size: 1.4rem;
-	line-height:2.5rem;
+	font-size: 14px;
+	line-height:25px;
 	font-weight: 700;
 	margin-top:1rem;
 }
 .productPage h2{
-	font-size: 1.4rem;
+	font-size: 14px;
 	line-height: 2rem;
 	margin-bottom:1rem;
 	color: #757575;
 }
 [data-pwa] .productPage h2{
-	font-size: 1.2rem;
+	font-size: 12px;
 }
 .productPage h3{
-	font-size: 1.4rem;
+	font-size: 14px;
 	font-weight: 700;
 	line-height: 2rem;
 	margin-bottom:1rem;
@@ -62,13 +62,13 @@
 .priceShow[data-discount]{
   display: inline-block;
   padding: 0.5em 0.7em;
-	font-size: 1.2rem;
+	font-size: 12px;
   font-weight: bold;
   line-height: 1rem;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border-radius: 1.5rem;
+  border-radius: 15px;
   background-color: #e91e63;
   color: #fff;
   transition: background-color 0.3s;
@@ -122,7 +122,7 @@
 	background-color:#fc464a;
 	color:#fff;
 	overflow: hidden;
-	font-size:1.6rem;
+	font-size:16px;
 	max-width:100%;
 	min-width: 14rem;
 	margin: 0.5rem 0.5rem;
@@ -130,7 +130,7 @@
 	box-shadow: 0 4px 2rem rgba(252, 69, 75, 0.5)
 }
 [dir='rtl'] .productPage .btnBuy{
-	font-size:1.5rem;
+	font-size:15px;
 	min-width: 15rem;
 }
 [data-pwa] .productPage .btnBuy{
@@ -161,7 +161,7 @@
 	background-color: #43a047;
 }
 
-.featureBullets{list-style:square inside none;line-height:1.5em;margin:1rem 0;max-width:400px;font-size: 1.2rem;}
+.featureBullets{list-style:square inside none;line-height:1.5em;margin:1rem 0;max-width:400px;font-size: 12px;}
 [data-pwa] .featureBullets{max-width:100%;}
 .featureBullets.ltr{margin-left:2rem;}
 .featureBullets.rtl{margin-right:2rem;}
@@ -257,14 +257,14 @@
 }
 
 [data-pwa] .productInfo.box{
-	font-size: 1.2rem;
+	font-size: 12px;
 }
 [data-pwa] .productInfo .tbl1.v5{
 	padding: 0 0.5rem;
 }
 .productInfo .tbl1{
 	margin: 0;
-	line-height: 1.7rem;
+	line-height: 17px;
 }
 [dir='rtl'] .productInfo .tbl1{
 	line-height: 2rem;
