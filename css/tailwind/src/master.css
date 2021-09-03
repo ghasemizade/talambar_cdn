@@ -80,6 +80,18 @@
 @import 'css/migrate/row.scss';
 @import 'css/migrate/avand.scss';
 @import 'css/migrate/box.scss';
+@import 'css/migrate/starRating.scss';
+
+@import 'css/migrate/forms/_general.scss';
+@import 'css/migrate/forms/_input.scss';
+@import 'css/migrate/forms/_checkbox.scss';
+@import 'css/migrate/forms/_switch.scss';
+@import 'css/migrate/forms/_radio.scss';
+@import 'css/migrate/forms/_textarea.scss';
+@import 'css/migrate/forms/_select.scss';
+@import 'css/migrate/forms/_rangeslider.scss';
+@import 'css/migrate/forms/_button.scss';
+
 
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';
