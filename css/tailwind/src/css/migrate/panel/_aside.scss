@@ -31,18 +31,18 @@ body[data-reloading] #sidebar .avatar:before{animation-duration:1s;-webkit-anima
 
 
 /* sidenav menu */
-[data-panel] #sidebar ul.sidenav{font-size:1.2em;margin-bottom:1em;}
-[data-panel] #sidebar ul.sidenavService{font-size:1.2em;margin-bottom:1em;}
+[data-panel] #sidebar ul.sidenav{font-size:12px;margin-bottom:1em;}
+[data-panel] #sidebar ul.sidenavService{font-size:12px;margin-bottom:1em;}
 [data-panel] #sidebar ul > li{color:#d5d5d5;}
 [data-panel] #sidebar ul > li.title{background-color:#333;transition:0.3s; padding:0.5em 1em;margin-top:0.7em;}
 [data-panel] #sidebar ul > li.title:hover{background-color:#000;}
 [data-panel] #sidebar ul > li.detail{background-color:#333;padding:0.7em 1em;transition:0.3s;}
 [data-panel] #sidebar ul > li.detail:hover{background-color:#222;}
 [data-panel] #sidebar ul > li.detail .progress{background-color:rgba(0, 0, 0, 0.3)}
-[data-panel] #sidebar ul > li.detail .btn{padding:10px 1.2em;line-height:normal}
-[data-panel] #sidebar ul > li > a{position:relative;display:block;padding:1em 1.5em;color:#d5d5d5;transition:background-color 0.3s;cursor:pointer;max-width:300px;margin:0 auto;line-height:1.5em;}
-[data-panel] #sidebar ul > li.item{padding:1em 1.5em;color:#d5d5d5;transition:background-color 0.3s;cursor:pointer;max-width:300px;margin:0 auto;line-height:1.5em;}
-[data-panel] #sidebar ul > li > a > i{font-size:1.4em;display:inline-block;margin:0 0.5em 0 0 ;}
+[data-panel] #sidebar ul > li.detail .btn{padding:10px 12px;line-height:normal}
+[data-panel] #sidebar ul > li > a{position:relative;display:block;padding:1em 15px;color:#d5d5d5;transition:background-color 0.3s;cursor:pointer;max-width:300px;margin:0 auto;line-height:15px;}
+[data-panel] #sidebar ul > li.item{padding:1em 15px;color:#d5d5d5;transition:background-color 0.3s;cursor:pointer;max-width:300px;margin:0 auto;line-height:15px;}
+[data-panel] #sidebar ul > li > a > i{font-size:14px;display:inline-block;margin:0 0.5em 0 0 ;}
 [dir="rtl"] [data-panel] #sidebar ul > li > a > i{margin:0 0 0 0.5em ;}
 [data-panel] #sidebar ul > li > a:hover{background-color:rgba(0,0,0,0.3)}
 [data-panel] #sidebar ul > li > a:focus{background-color:rgba(0,0,0,0.7)}
@@ -50,7 +50,7 @@ body[data-reloading] #sidebar .avatar:before{animation-duration:1s;-webkit-anima
 [data-panel] #sidebar ul > li > ul{background-color: #252525;font-size:0.9em}
 [data-panel] #sidebar ul > li > ul > li{}
 
-[data-panel] #sidebar ul > li > ul > li > a{position:relative;padding:0.7em 2.5em;}
+[data-panel] #sidebar ul > li > ul > li > a{position:relative;padding:0.7em 25px;}
 [dir="ltr"] [data-panel] #sidebar ul > li > ul > li > a{padding-right:0;}
 [dir="rtl"] [data-panel] #sidebar ul > li > ul > li > a{padding-left:0;}
 

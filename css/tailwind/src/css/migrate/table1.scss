@@ -25,7 +25,7 @@
 	table-layout: fixed;
 }
 .tbl1 thead{
-	font-size:1.2em;
+	font-size:12px;
 	display: table-row-group;
 }
 .tbl1.repeatHead thead{
@@ -161,11 +161,11 @@
 /*================================================================== [ v1 ]*/
 .tbl1.v1 {
 	border-radius: 10px;
-	box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
-	-o-box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
-	-ms-box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .tbl1.v1 thead {
 	color: #fff;
@@ -295,8 +295,8 @@
 	background-color: transparent;
 }
 .tbl1.v5 thead th {
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .tbl1.v5 tbody tr {
 	overflow: hidden;
