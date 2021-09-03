@@ -31,8 +31,8 @@
   margin-left: -1rem;
 }
 .row.padMore > .c, .row.padMore > [class*=c-]{
-    padding-right: 1rem;
-    padding-left: 1rem
+    padding-right: 10px;
+    padding-left: 10px
 }
 /* padMore PWA */
 [data-pwa] .row.padMore{
@@ -58,8 +58,8 @@
   margin-left: -1rem;
 }
 [data-pwa] .row.padMore2 > .c, [data-pwa] .row.padMore2 > [class*=c-]{
-    padding-right: 1rem;
-    padding-left: 1rem
+    padding-right: 10px;
+    padding-left: 10px
 }
 
 /* new way to define space of row */
@@ -77,8 +77,8 @@
   margin-left: -1rem;
 }
 .row[data-space='high'] > .c, .row[data-space='high'] > [class*=c-]{
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 [data-pwa] .row[data-space='high']{
   margin-right: -0.5rem;
@@ -102,8 +102,8 @@
   margin-left: -1rem;
 }
 [data-pwa] .row[data-space='extra'] > .c, [data-pwa] .row[data-space='extra'] > [class*=c-]{
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 /* fit */
 .row.fit > .c, .row.fit > [class*=c-]{

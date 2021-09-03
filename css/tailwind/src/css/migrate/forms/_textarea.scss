@@ -38,8 +38,8 @@
 	line-height:1;
 }
 .txt[data-autoResize]{
-	line-height:2rem;
-	padding: 0.7rem 1rem;
+	line-height:20px;
+	padding: 7px 10px;
 	max-height: 50rem;
 	will-change: height;
 }

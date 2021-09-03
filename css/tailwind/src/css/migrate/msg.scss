@@ -1,7 +1,7 @@
 .msg{
   position:relative;
   transition:0.3s;
-  padding: 1rem 15px;
+  padding: 10px 15px;
   margin-bottom:1em;
   border: 1px solid transparent;
   border-radius:0.25rem;
@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 [data-pwa] .msg{
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 10px;
 }
 .msg.glass{opacity: 0.5;}
 [dir="rtl"] .msg{
@@ -26,7 +26,7 @@
   margin-bottom: 0;
 }
 .msg.minimal{
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 10px;
 }
 [data-pwa] .msg.minimal{
   padding: 0.5rem 0.5rem;
@@ -38,7 +38,7 @@
 }
 .msg.special{
   opacity: 1;
-  border-radius:1rem;
+  border-radius:10px;
   box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);

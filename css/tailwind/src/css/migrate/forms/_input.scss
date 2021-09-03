@@ -39,7 +39,7 @@ span.input{
 	height:36px;
 	line-height: 34px;
 	font-size: 14px;
-	padding: 0 1rem;
+	padding: 0 10px;
 	background-color: #fff;
 	background-clip: padding-box;
 
@@ -131,7 +131,7 @@ span.input{
 	text-align: center;
 }
 .input .addon.small{
-	font-size:1rem;
+	font-size:10px;
 	padding-right:0.5rem;
 	padding-left:0.5rem;
 }
@@ -254,7 +254,7 @@ input.input{
 	position: relative;
 	height:36px;
 	line-height: 34px;
-	padding: 0 1rem;
+	padding: 0 10px;
 	background-color: #fff;
 	background-clip: padding-box;
 	border: 1px solid rgba(0,0,0,0.15);
@@ -327,7 +327,7 @@ label+.input{
 }
 label small{
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 10px;
 	color: #666;
 }
 .input label{

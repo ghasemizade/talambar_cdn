@@ -1,5 +1,5 @@
 .starRating {
-  margin: 1rem auto;
+  margin: 10px auto;
   -webkit-touch-callout:none;
   -webkit-user-select:none;
   -khtml-user-select:none;
@@ -29,9 +29,9 @@
 }
 .starRating > fieldset:not(:checked) > label {
   float: right;
-  width: 4rem;
-  height: 4rem;
-  line-height: 4rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   padding: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -41,22 +41,22 @@
 .starRating > fieldset label:before{
   font-family: 'siftal';
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 30px;
 }
 [data-pwa] .starRating > fieldset {
   width: 15rem;
 }
 [data-pwa] .starRating > fieldset:not(:checked) > label {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 [data-pwa] .starRating > fieldset label:before{
-  width: 3rem;
-  height: 3rem;
+  width: 30px;
+  height: 30px;
   font-size: 27px;
 }
 .starRating > fieldset:not(:checked) > label:before {
@@ -82,8 +82,8 @@
   display: block;
   position: relative;
   padding: 0;
-  width: 10rem;
-  height: 2rem;
+  width: 100px;
+  height: 20px;
   margin: 0 auto;
   vertical-align: middle;
 }
@@ -92,9 +92,9 @@
 }
 .starRating[data-star] i {
   float: left;
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   padding: 0;
   font-style: normal;
   overflow: hidden;
@@ -105,8 +105,8 @@
   font-family: 'siftal';
   content: "\e002";
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 20px;
+  height: 20px;
   text-align: center;
   font-size: 15px;
 }

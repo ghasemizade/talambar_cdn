@@ -3,23 +3,23 @@
 	border-radius:.5rem;
 }
 .productPage .box+.box{
-	margin-top: 2rem;
+	margin-top: 20px;
 }
 .productPage h1{
 	font-size: 18px;
-	line-height: 3rem;
-	margin-bottom:1rem;
+	line-height: 30px;
+	margin-bottom:10px;
 }
 [data-pwa] .productPage h1{
 	font-size: 14px;
 	line-height:25px;
 	font-weight: 700;
-	margin-top:1rem;
+	margin-top:10px;
 }
 .productPage h2{
 	font-size: 14px;
-	line-height: 2rem;
-	margin-bottom:1rem;
+	line-height: 20px;
+	margin-bottom:10px;
 	color: #757575;
 }
 [data-pwa] .productPage h2{
@@ -28,8 +28,8 @@
 .productPage h3{
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 2rem;
-	margin-bottom:1rem;
+	line-height: 20px;
+	margin-bottom:10px;
 }
 [data-pwa] .productPage .tbl1.v5 tbody tr{
 	border:none;
@@ -37,18 +37,18 @@
 }
 .productPage .productReviewShort{
 	line-height: 20px;
-	margin: 1rem 0;
+	margin: 10px 0;
 }
 .productPage .productReviewShort > div{
 	display: inline-block;
-	margin: 0 1rem;
+	margin: 0 10px;
 }
 
 .priceShow{
 	position: relative;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 10px;
 	display: inline-block;
-	line-height: 2rem;
+	line-height: 20px;
 }
 .priceShow .price{
 	display: inline-block;
@@ -64,7 +64,7 @@
   padding: 0.5em 0.7em;
 	font-size: 12px;
   font-weight: bold;
-  line-height: 1rem;
+  line-height: 10px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -72,13 +72,13 @@
   background-color: #e91e63;
   color: #fff;
   transition: background-color 0.3s;
-	min-width: 3rem;
-	height: 2rem;
+	min-width: 30px;
+	height: 20px;
 }
 .priceShow[data-final] .price{
-	font-size: 3rem;
+	font-size: 30px;
 	font-weight: 700;
-	line-height: 4rem;
+	line-height: 40px;
 	color: #e91e63;
 }
 .priceShow .unit{
@@ -89,15 +89,15 @@
 	display: block;
 }
 .priceShow[data-cart] .price{
-	font-size: 2rem;
+	font-size: 20px;
 	font-weight: 700;
-	line-height: 3rem;
+	line-height: 30px;
 	color: #000;
 }
 
 
 .productPage .productQty{
-	width: 10rem;
+	width: 100px;
 	margin:0 0.5rem 0;
 	padding: 0.2rem 0;
 	display: inline-block;
@@ -107,7 +107,7 @@
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
-	padding: 0 1rem;
+	padding: 0 10px;
 	text-decoration:none;
 	text-align:center;
 	transition:.2s ease-out;
@@ -116,8 +116,8 @@
 	vertical-align: middle;
 	user-select:none;
 	border: 1px solid transparent;
-	height:4rem;
-	line-height:4rem;
+	height:40px;
+	line-height:40px;
 	font-weight:700;
 	background-color:#fc464a;
 	color:#fff;
@@ -127,7 +127,7 @@
 	min-width: 14rem;
 	margin: 0.5rem 0.5rem;
 	text-overflow:ellipsis;
-	box-shadow: 0 4px 2rem rgba(252, 69, 75, 0.5)
+	box-shadow: 0 4px 20px rgba(252, 69, 75, 0.5)
 }
 [dir='rtl'] .productPage .btnBuy{
 	font-size:15px;
@@ -152,7 +152,7 @@
 	box-shadow: none;
 }
 .productPage .btnBuy[data-update]:hover{
-	box-shadow: 0 2px 1rem #4CAF50;
+	box-shadow: 0 2px 10px #4CAF50;
 }
 .productPage .btnBuy[data-update]:focus{
 	background-color: #4caf50;
@@ -161,15 +161,15 @@
 	background-color: #43a047;
 }
 
-.featureBullets{list-style:square inside none;line-height:1.5em;margin:1rem 0;max-width:400px;font-size: 12px;}
+.featureBullets{list-style:square inside none;line-height:1.5em;margin:10px 0;max-width:400px;font-size: 12px;}
 [data-pwa] .featureBullets{max-width:100%;}
-.featureBullets.ltr{margin-left:2rem;}
-.featureBullets.rtl{margin-right:2rem;}
+.featureBullets.ltr{margin-left:20px;}
+.featureBullets.rtl{margin-right:20px;}
 .featureBullets li{padding:0.5rem 0.5rem;transition: 0.3s}
 .featureBullets li:hover{background-color: #f9f9f9;}
 
 .productPage .globalMsg{
-	margin-top: 1rem;
+	margin-top: 10px;
 }
 .productPage .featureImgBlock{
 	display: inline-block;
@@ -239,7 +239,7 @@
 [data-pwa] .productPage .thumbs{
 	width: 100%;
 	height: 50px;
-	margin: 1rem 0 0.5rem;
+	margin: 10px 0 0.5rem;
 }
 [data-pwa] .productPage .thumbs .thumb{
 	display: inline-block;
@@ -267,7 +267,7 @@
 	line-height: 17px;
 }
 [dir='rtl'] .productInfo .tbl1{
-	line-height: 2rem;
+	line-height: 20px;
 }
 [data-pwa] .tbl1.responsive tr{
 	padding: 0;
@@ -275,11 +275,11 @@
 .productInfo .tbl1 .group th{
 	padding-top: 0.2rem;
 	padding-bottom: 0.2rem;
-	border-radius: 1rem;
+	border-radius: 10px;
 	background-color: #d1ecf1!important;
 	color: #0c5460!important;
 	font-weight: 700;
-	line-height: 4rem;
+	line-height: 40px;
 }
 .productInfo .tbl1 .group th:hover{
 	opacity: 0.9;

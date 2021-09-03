@@ -79,8 +79,8 @@
 
 .radio3{padding:0;position:relative;min-width: 80px;@include select-none();}
 .radio3 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
-.radio3 label{display:block;padding:0.5rem 1rem;position:relative;cursor:pointer;transition:0.3s;background-color:#f6f8fa;min-width:50px;line-height:24px;height:36px;border-radius:0.25rem;border:1px solid transparent;white-space:nowrap;}
-.radio3 label::before{content:'';margin-right:1rem;display:inline-block;vertical-align:middle;width:20px;height:20px;transition:0.3s;border-radius:50%;border:1px solid rgba(0,0,0,0.1);}
+.radio3 label{display:block;padding:0.5rem 10px;position:relative;cursor:pointer;transition:0.3s;background-color:#f6f8fa;min-width:50px;line-height:24px;height:36px;border-radius:0.25rem;border:1px solid transparent;white-space:nowrap;}
+.radio3 label::before{content:'';margin-right:10px;display:inline-block;vertical-align:middle;width:20px;height:20px;transition:0.3s;border-radius:50%;border:1px solid rgba(0,0,0,0.1);}
 .radio3 label::after{content:'';position:absolute;left:16px;top:17px;background-color:#fff;width:2px;height:2px;box-shadow:2px 0 0 white,4px 0 0 white,4px -2px 0 white,4px -4px 0 white,4px -6px 0 white,4px -8px 0 #fff;-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0;transition:0.1s;}
 .radio3.error label{border-color:rgba(255,0,0,0.5);}
 .radio3 label:hover::before{border-color:rgba(0, 0, 0, 0.2)}
@@ -91,16 +91,16 @@
 .radio3 input:checked:focus+label::before{opacity: 0.7}
 .radio3 input:disabled+label{color:#bbb;cursor:auto}
 .radio3 input:disabled+label::before{background-color:#ddd}
-[dir="rtl"] .radio3 label::before{margin-right:0;margin-left:1rem;}
+[dir="rtl"] .radio3 label::before{margin-right:0;margin-left:10px;}
 [dir="rtl"] .radio3 label::after{left:0;right:24px;}
 
 .radio3.colored{min-width: 125px;display: inline-block;margin: 5px;}
 .radio3.colored label{ border:none!important;}
 .radio3.colored label::before{border-radius: 0;}
 
-.radio4{margin:0 0.5rem;padding-bottom:1rem;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;@include select-none();}
+.radio4{margin:0 0.5rem;padding-bottom:10px;position:relative;cursor:pointer;display:inline-flex;height: 100%;width:100%;@include select-none();}
 .radio4 input{padding:0;margin:0;position:absolute;z-index:-1;width:0;height:0;opacity:0}
-.radio4 label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:100%;height:auto;border-radius:0.25rem;padding:1rem;}
+.radio4 label{position:relative;cursor:pointer;border:2px solid #f8f8f8;transition:0.3s;background-color:#f8f8f8;width:100%;height:auto;border-radius:0.25rem;padding:10px;}
 .radio4 img{width:100%;height:auto;}
 .radio4 input:checked+label{border-color:#1f8fff;background-color:#fff;}
 .radio4 input:hover+label{opacity:0.8;border-color:#1f8fff;}
@@ -153,7 +153,7 @@
 }
 .radioRating label {
   float: right;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 10px;
   color: #777;
   transition: all .2s;
   cursor: pointer;

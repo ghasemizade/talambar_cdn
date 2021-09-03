@@ -41,7 +41,7 @@
 .tbl1 th {
 	padding-top: 1em;
 	padding-bottom: 1em;
-	padding-right: 1rem;
+	padding-right: 10px;
 	text-align:left;
 	max-width:600px;
 	text-overflow: ellipsis;
@@ -57,17 +57,17 @@
 [dir="rtl"] .tbl1 th {
 	text-align:right;
 	padding-right: 0;
-	padding-left: 1rem;
+	padding-left: 10px;
 }
 .tbl1.ltr th {
 	text-align:left;
-	padding-right: 1rem;
+	padding-right: 10px;
 	padding-left: 0;
 }
 .tbl1.rtl th {
 	text-align:right;
 	padding-right: 0;
-	padding-left: 1rem;
+	padding-left: 10px;
 }
 .tbl1 tr{
 	transition:0.3s;
@@ -85,9 +85,9 @@
 	background-color:rgba(0,0,0,0.1);
 }
 .tbl1 tbody td {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	padding-right: 1rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
 	color: #808080;
 	transition:0.3s;
 }
@@ -109,37 +109,37 @@
 [dir="rtl"] .tbl1 td {
 	text-align:right;
 	padding-right: 0;
-	padding-left: 1rem;
+	padding-left: 10px;
 }
 [dir="ltr"] .tbl1 tr th:first-of-type, [dir="ltr"] .tbl1 tr td:first-of-type{
-	padding-left: 3rem;
+	padding-left: 30px;
 }
 [dir="rtl"] .tbl1 tr th:first-of-type, [dir="rtl"] .tbl1 tr td:first-of-type{
-	padding-right: 3rem;
+	padding-right: 30px;
 }
 [dir="ltr"][data-pwa] .tbl1 tr th:first-of-type, [dir="ltr"][data-pwa] .tbl1 tr td:first-of-type{
-	padding-left: 1rem;
+	padding-left: 10px;
 }
 [dir="rtl"][data-pwa] .tbl1 tr th:first-of-type, [dir="rtl"][data-pwa] .tbl1 tr td:first-of-type{
-	padding-right: 1rem;
+	padding-right: 10px;
 }
 
 
 .tbl1.ltr tr th:first-of-type, .tbl1.ltr tr td:first-of-type{
-	padding-left: 3rem;
-	padding-right: 1rem;
+	padding-left: 30px;
+	padding-right: 10px;
 }
 .tbl1.rtl tr th:first-of-type, .tbl1.rtl tr td:first-of-type{
-	padding-left: 1rem;
-	padding-right: 3rem;
+	padding-left: 10px;
+	padding-right: 30px;
 }
 [data-pwa] .tbl1.ltr tr th:first-of-type, [data-pwa] .tbl1.ltr tr td:first-of-type{
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 [data-pwa] .tbl1.rtl tr th:first-of-type, [data-pwa] .tbl1.rtl tr td:first-of-type{
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .tbl1.ltr td {
@@ -160,7 +160,7 @@
 
 /*================================================================== [ v1 ]*/
 .tbl1.v1 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 1.5em 0px rgba(0, 0, 0, 0.15);
@@ -191,7 +191,7 @@
 
 /*================================================================== [ Ver2 ]*/
 .tbl1.v2 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
@@ -217,7 +217,7 @@
 
 /*================================================================== [ v3 ]*/
 .tbl1.v3 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
@@ -262,10 +262,10 @@
 	border-bottom: 1px solid #f2f2f2;
 }
 [dir="ltr"] .tbl1.v4 tr td:first-of-type{
-	padding-left: 1rem;
+	padding-left: 10px;
 }
 [dir="rtl"] .tbl1.v4 tr td:first-of-type{
-	padding-right: 1rem;
+	padding-right: 10px;
 }
 [dir="ltr"] .tbl1.v4 th.collapsing, [dir="ltr"] .tbl1.v4 td.collapsing{
 	width:1px;
@@ -285,8 +285,8 @@
 /*================================================================== [ v5 ]*/
 .tbl1.v5 {
 	border-collapse: separate;
-	border-spacing: 0 1rem;
-	padding:0 1rem;
+	border-spacing: 0 10px;
+	padding:0 10px;
 }
 .tbl1.v5 thead {
 	font-size: 1em;
@@ -300,8 +300,8 @@
 }
 .tbl1.v5 tbody tr {
 	overflow: hidden;
-	border-bottom: 1rem solid #fff;
-	border-radius: 1rem;
+	border-bottom: 10px solid #fff;
+	border-radius: 10px;
 	background-color: #f7f7f7;
 }
 .tbl1.v5 tbody tr:hover {
@@ -310,34 +310,34 @@
 .tbl1.v5 tbody td {
 	border: solid 1px transparent;
 	border-style: solid none;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	word-break: break-word;
 }
 [dir="ltr"] .tbl1.v5 tbody td:first-child {
 	border-left-style: solid;
-	border-top-left-radius: 1rem;
-	border-bottom-left-radius: 1rem;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 [dir="ltr"] .tbl1.v5 tbody td:last-child {
 	border-right-style: solid;
-	border-bottom-right-radius: 1rem;
-	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 }
 [dir="rtl"] .tbl1.v5 tbody td:first-child {
 	border-right-style: solid;
-	border-top-right-radius: 1rem;
-	border-bottom-right-radius: 1rem;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 [dir="rtl"] .tbl1.v5 tbody td:last-child {
 	border-left-style: solid;
-	border-bottom-left-radius: 1rem;
-	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
 }
 
 /*================================================================== [ v6 ]*/
 .tbl1.v6 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
@@ -361,7 +361,7 @@
 
 /*================================================================== [ v7 ]*/
 .tbl1.v7 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
@@ -385,7 +385,7 @@
 
 /*================================================================== [ v8 ]*/
 .tbl1.v8 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
@@ -400,7 +400,7 @@
 	text-align:center!important;
 }
 .tbl1.v8 tr th:first-of-type, .tbl1.v8 tr td:first-of-type{
-	padding-left: 1rem;
+	padding-left: 10px;
 }
 .tbl1.v8 tr {
 	border-bottom:1px solid #e5e5e5;
@@ -420,7 +420,7 @@
 
 /*================================================================== [ v9 ]*/
 .tbl1.v9 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
@@ -446,7 +446,7 @@
 
 /*================================================================== [ v10 ]*/
 .tbl1.v10 {
-	border-radius: 1rem;
+	border-radius: 10px;
 	box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);
 	-webkit-box-shadow: 0 0px 3em 0px rgba(0, 0, 0, 0.15);

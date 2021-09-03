@@ -3,7 +3,7 @@
 	border-radius:$myRadius;
 	font-size:14px;
 	overflow: hidden;
-	margin-bottom:1rem;
+	margin-bottom:10px;
 	box-shadow: #ddd 0 0 0.5rem;
 	user-select: none;
 }
@@ -33,16 +33,16 @@
 	height:1px;
 	top:0;
 	right:0;
-	left:4rem;
+	left:40px;
 	background-color:#eee;
 }
 [dir="rtl"] .items li + li::before{
-	right:4rem;
+	right:40px;
 	left:0;
 }
 body .ltr .items li + li::before{
 	right:0;
-	left:4rem;
+	left:40px;
 }
 .items li .item{
 	-webkit-box-align:center;
@@ -136,7 +136,7 @@ body .ltr .items li + li::before{
 	right: 0;
 	min-width: 15px;
 	height: 15px;
-	font-size: 1rem;
+	font-size: 10px;
 	line-height: 15px;
 	text-align: center;
 	border-radius: 50%;
@@ -152,7 +152,7 @@ body .ltr .items li + li::before{
 .items li .key{
 	height:$myItemLineHeight;
 	min-height:$myItemLineHeight;
-	padding:0 1rem;
+	padding:0 10px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -174,7 +174,7 @@ body .ltr .items li + li::before{
 }
 [data-desktop] .items li.multiLine .key{
 	min-height: initial!important;
-	line-height: 2rem!important;
+	line-height: 20px!important;
 }
 .items li .item > i + .key{
 	padding:0 0.5rem;
@@ -183,7 +183,7 @@ body .ltr .items li + li::before{
 	padding: 0 0.5rem;
 }
 .items li .key.fit{
-	flex-basis: 10rem;
+	flex-basis: 100px;
 	flex-shrink: 0;
 }
 .items li .key.grow{
@@ -219,10 +219,10 @@ body .ltr .items li + li::before{
 }
 [data-pwa] .items li time.value{
 	font-size: 11px;
-	min-width: 9rem;
+	min-width: 90px;
 }
 [data-pwa][dir=rtl] .items li time.value{
-	min-width: 9rem;
+	min-width: 90px;
 }
 .items li .value.datetime{
 	min-width: 13rem;
@@ -233,7 +233,7 @@ body .ltr .items li + li::before{
 	min-width: 115px;
 }
 .items li .value.fileSize{
-	min-width: 6rem;
+	min-width: 60px;
 	direction: ltr;
 	text-align: right;
 }
@@ -293,8 +293,8 @@ body .rtl .items li .go::after{
 .items li .go.ban::after{font-size:16px;content:"\e070"!important;}
 .items li .go.stop::after{font-size:16px;content:"\e24e"!important;}
 .items li .go.external::after{font-size:16px;content:"\e074"!important;color:#777;}
-.items li .go.surveillance::after{font-size:2rem;content:"\e24a"!important;}
-.items li .go.star::after{font-size:2rem;content:"\5c"!important;}
+.items li .go.surveillance::after{font-size:20px;content:"\e24a"!important;}
+.items li .go.star::after{font-size:20px;content:"\5c"!important;}
 .items li .ok::after{color: #4CC790}
 .items li .nok::after{color: #ff5722}
 .items li .gold::after{color: #ffd700}
@@ -421,20 +421,20 @@ body .rtl .items li .go::after{
 	font-size: 12px;
 }
 .items.pwaMultiLine li{
-	line-height: 2rem;
-	min-height: 5rem;
-	height: 5rem;
+	line-height: 20px;
+	min-height: 50px;
+	height: 50px;
 }
 .items.pwaMultiLine li img {
-  max-width: 4rem;
-  max-height: 4rem;
+  max-width: 40px;
+  max-height: 40px;
 }
 .items.pwaMultiLine li .key{
-	height: 4rem;
-	min-height: 4rem;
+	height: 40px;
+	min-height: 40px;
 }
 .items.pwaMultiLine li .key div{
-	height: 2rem;
+	height: 20px;
 	min-height: auto;
   text-overflow: ellipsis;
   white-space: nowrap;
