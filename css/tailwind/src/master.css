@@ -77,6 +77,10 @@
 
 
 /*migrate and need to transfer to tailwind*/
+@import 'css/migrate/row.scss';
+@import 'css/migrate/avand.scss';
+@import 'css/migrate/box.scss';
+
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';
 @import 'css/migrate/cartPage.scss';
