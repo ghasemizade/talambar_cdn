@@ -75,3 +75,12 @@
 @import "css/elements/_items.scss";
 
 
+
+/*migrate and need to transfer to tailwind*/
+@import 'css/migrate/blog1.scss';
+@import 'css/migrate/productPage.scss';
+@import 'css/migrate/cartPage.scss';
+@import 'css/migrate/postPage.scss';
+@import 'css/migrate/tagPage.scss';
+@import 'css/migrate/shippingPage.scss';
+
