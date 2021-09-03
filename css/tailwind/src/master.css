@@ -77,6 +77,7 @@
 
 
 /*migrate and need to transfer to tailwind*/
+@import 'css/migrate/grid.scss';
 @import 'css/migrate/row.scss';
 @import 'css/migrate/avand.scss';
 @import 'css/migrate/box.scss';
