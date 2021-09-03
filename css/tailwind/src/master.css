@@ -85,6 +85,7 @@
 @import 'css/migrate/items.scss';
 @import 'css/migrate/msg.scss';
 
+
 @import 'css/migrate/margin.scss';
 @import 'css/migrate/padding.scss';
 @import 'css/migrate/others.scss';
@@ -98,6 +99,8 @@
 @import 'css/migrate/forms/_select.scss';
 @import 'css/migrate/forms/_rangeslider.scss';
 @import 'css/migrate/forms/_button.scss';
+
+@import 'css/migrate/enter.scss';
 
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';
