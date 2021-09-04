@@ -71,10 +71,6 @@
 @import "css/pagebuilder/_pageBuilderAdmin.scss";
 @import "css/pagebuilder/_specialSlider.scss";
 
-/* add extra elements*/
-@import "css/elements/_items.scss";
-
-
 
 /*migrate and need to transfer to tailwind*/
 @import 'css/migrate/grid.scss';

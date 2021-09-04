@@ -1,6 +1,6 @@
 .items{
 	background-color: #fff;
-	border-radius:$myRadius;
+	border-radius:2px;
 	font-size:14px;
 	overflow: hidden;
 	margin-bottom:10px;
@@ -15,9 +15,9 @@
 	margin:0;
 }
 .items li{
-	min-height: $myItemHeight;
-	height: $myItemHeight;
-	line-height: $myItemLineHeight;
+	min-height: 50px;
+	height: 50px;
+	line-height: 40px;
 	position: relative;
 	padding: 0;
 	margin: 0;
@@ -68,15 +68,15 @@ body .ltr .items li + li::before{
 }
 .items li img{
 	overflow:hidden;
-	max-width: $myItemLineHeight;
-	max-height: $myItemLineHeight;
+	max-width: 40px;
+	max-height: 40px;
 	border-radius: 5px;
 }
 
 .items li svg{
 	overflow:hidden;
-	max-width: $myItemLineHeight;
-	max-height: $myItemLineHeight;
+	max-width: 40px;
+	max-height: 40px;
 	border-radius: 5px;
 }
 .items li img[src=""]{
@@ -84,16 +84,16 @@ body .ltr .items li + li::before{
 	background-color: #333;
 }
 .items li img[data-size='16x9']{
-	max-width: $myItemLineHeight16x9;
+	max-width: 71px;
 }
 .items li picture{
 	overflow:hidden;
-	max-width: $myItemLineHeight;
-	max-height: $myItemLineHeight;
+	max-width: 40px;
+	max-height: 40px;
 	border-radius: 5px;
 }
 .items li .item > i{
-	height:$myItemLineHeight;
+	height:40px;
 	-webkit-box-flex:0;
 	-webkit-flex:0 0 auto;
 	-ms-flex:0 0 auto;
@@ -102,9 +102,9 @@ body .ltr .items li + li::before{
 	width:auto;
 }
 .items li .item > i::before{
-	min-width:$myItemLineHeight;
-	max-width:$myItemLineHeight;
-	line-height: $myItemLineHeight;
+	min-width:40px;
+	max-width:40px;
+	line-height: 40px;
 	display: block;
 	padding:0;
 	text-align:center;
@@ -150,8 +150,8 @@ body .ltr .items li + li::before{
 }
 
 .items li .key{
-	height:$myItemLineHeight;
-	min-height:$myItemLineHeight;
+	height:40px;
+	min-height:40px;
 	padding:0 10px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -206,8 +206,8 @@ body .ltr .items li + li::before{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	height: $myItemLineHeight;
-	min-height: $myItemLineHeight;
+	height: 40px;
+	min-height: 40px;
 }
 .items li time.value{
 	min-width: 130px;
@@ -257,8 +257,8 @@ body .ltr .items li + li::before{
 	content: "\e0c2";
 	display: block;
 	padding:0;
-	min-width:$myItemLineHeight;
-	max-width:$myItemLineHeight;
+	min-width:40px;
+	max-width:40px;
 	text-align:center;
 	font-family:siftal!important;
 	vertical-align:middle;
@@ -272,7 +272,7 @@ body .rtl .items li .go::after{
 	content: "\e0c1";
 }
 .items li .go.padLess::after{
-	width:$myItemLineHeight_Long;
+	width:30px;
 	padding:0 5px;
 }
 /* rtl */
@@ -326,37 +326,37 @@ body .rtl .items li .go::after{
 	font-size:12px;
 }
 .items.long li{
-	min-height: $myItemHeight_Long;
-	height: $myItemHeight_Long;
-	line-height: $myItemLineHeight_Long;
+	min-height: 40px;
+	height: 40px;
+	line-height: 30px;
 }
 .items.long li img{
-	max-width: $myItemLineHeight_Long;
-	max-height: $myItemLineHeight_Long;
+	max-width: 30px;
+	max-height: 30px;
 }
 .items.long li .item > i{
-	min-height:$myItemLineHeight_Long;
-	height:$myItemLineHeight_Long;
-	min-width:$myItemLineHeight_Long;
-	width: $myItemLineHeight_Long;
+	min-height:30px;
+	height:30px;
+	min-width:30px;
+	width: 30px;
 }
 .items.long li .item > i::before{
-	min-width:$myItemLineHeight_Long;
-	max-width:$myItemLineHeight_Long;
-	line-height: $myItemLineHeight_Long;
+	min-width:30px;
+	max-width:30px;
+	line-height: 30px;
 }
 .items.long li .go::after{
-	min-width:$myItemLineHeight_Long;
-	max-width:$myItemLineHeight_Long;
+	min-width:30px;
+	max-width:30px;
 	padding: 0;
 }
 .items.long li .key{
-	min-height:$myItemLineHeight_Long;
-	height:$myItemLineHeight_Long;
+	min-height:30px;
+	height:30px;
 }
 .items.long li .value{
-	min-height:$myItemLineHeight_Long;
-	height:$myItemLineHeight_Long;
+	min-height:30px;
+	height:30px;
 }
 
 
@@ -374,45 +374,45 @@ body .rtl .items li .go::after{
 /* pwa mode */
 [data-pwa] .items{
 	box-shadow:none;
-	border-radius:$myRadiusPWA;
+	border-radius:8px;
 	font-size: 12px;
 }
 [data-pwa] .items li{
-	line-height: $myItemLineHeight_PWA;
-	height: $myItemHeight_PWA;
-	min-height: $myItemHeight_PWA;
+	line-height: 35px;
+	height: 45px;
+	min-height: 45px;
 }
 [data-pwa] .items li img{
-	max-width: $myItemLineHeight_PWA;
-	max-height: $myItemLineHeight_PWA;
+	max-width: 35px;
+	max-height: 35px;
 }
 [data-pwa] .items li img[data-size='16x9']{
-	max-width: $myItemLineHeight16x9_PWA;
+	max-width: 62px;
 }
 [data-pwa] .items li picture{
-	max-width: $myItemLineHeight_PWA;
-	max-height: $myItemLineHeight_PWA;
+	max-width: 35px;
+	max-height: 35px;
 }
 [data-pwa] .items li .item i{
-	height:$myItemLineHeight_PWA;
-	min-height:$myItemLineHeight_PWA;
+	height:35px;
+	min-height:35px;
 }
 [data-pwa] .items li .item i::before{
-	min-width:$myItemLineHeight_PWA;
-	max-width:$myItemLineHeight_PWA;
-	line-height: $myItemLineHeight_PWA;
+	min-width:35px;
+	max-width:35px;
+	line-height: 35px;
 }
 [data-pwa] .items li .key{
-	height:$myItemLineHeight_PWA;
-	min-height:$myItemLineHeight_PWA;
+	height:35px;
+	min-height:35px;
 }
 [data-pwa] .items li .value{
-	height:$myItemLineHeight_PWA;
-	min-height:$myItemLineHeight_PWA;
+	height:35px;
+	min-height:35px;
 }
 [data-pwa] .items li .go::after{
-	min-width:$myItemLineHeight_PWA;
-	max-width:$myItemLineHeight_PWA;
+	min-width:35px;
+	max-width:35px;
 	padding: 0;
 }
 
