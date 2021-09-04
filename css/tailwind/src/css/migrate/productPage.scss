@@ -44,22 +44,22 @@
 	margin: 0 10px;
 }
 
-.priceShow{
+.productPage .priceShow{
 	position: relative;
 	padding: 5px 10px;
 	display: inline-block;
 	line-height: 20px;
 }
-.priceShow .price{
+.productPage .priceShow .price{
 	display: inline-block;
 }
-.priceShow[data-first] .price{
+.productPage .priceShow[data-first] .price{
 	text-decoration: line-through;
 	text-decoration-color: #ff5722;
 	color: #999;
 }
 
-.priceShow[data-discount]{
+.productPage .priceShow[data-discount]{
   display: inline-block;
   padding: 5px 7px;
 	font-size: 12px;
@@ -75,20 +75,20 @@
 	min-width: 30px;
 	height: 20px;
 }
-.priceShow[data-final] .price{
+.productPage .priceShow[data-final] .price{
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 40px;
 	color: #e91e63;
 }
-.priceShow .unit{
+.productPage .priceShow .unit{
 	display: inline-block;
 	color: #777;
 }
 .priceShow[data-cart]{
 	display: block;
 }
-.priceShow[data-cart] .price{
+.productPage .priceShow[data-cart] .price{
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 30px;
