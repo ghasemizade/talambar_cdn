@@ -85,8 +85,9 @@
 @import 'css/migrate/table1.scss';
 @import 'css/migrate/items.scss';
 @import 'css/migrate/msg.scss';
-@import 'css/migrate/nprogress.scss';
 @import 'css/migrate/spay.scss';
+@import 'css/migrate/pagination.scss';
+@import 'css/migrate/share.scss';
 
 
 @import 'css/migrate/margin.scss';
@@ -105,12 +106,21 @@
 
 @import 'css/migrate/enter.scss';
 
+@import 'css/migrate/lib/alerty2.scss';
+@import 'css/migrate/lib/iziToast.scss';
+@import 'css/migrate/lib/nprogress.scss';
+
+@import 'css/migrate/new-elements/uploader.scss';
+
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';
 @import 'css/migrate/cartPage.scss';
 @import 'css/migrate/postPage.scss';
 @import 'css/migrate/tagPage.scss';
 @import 'css/migrate/shippingPage.scss';
+
+@import 'css/migrate/product1.scss';
+@import 'css/migrate/product2.scss';
 
 @import 'css/migrate/panel/_layout.scss';
 @import 'css/migrate/panel/_header.scss';
