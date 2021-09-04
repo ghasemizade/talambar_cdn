@@ -18313,11 +18313,11 @@ body[data-siteBuilder] .h-full .ck-editor__editable {
 
 @media (min-width: 1200px) {
   .avand {
-    max-width: 1140px;
+    max-width: 1014px;
   }
 
   .avand-xl {
-    max-width: 1140px;
+    max-width: 1014px;
   }
 }
 
@@ -19453,7 +19453,7 @@ body[data-siteBuilder] .h-full .ck-editor__editable {
 
 .items{
   background-color: #fff;
-  border-radius:$myRadius;
+  border-radius:2px;
   font-size:14px;
   overflow: hidden;
   margin-bottom:10px;
@@ -19937,7 +19937,7 @@ body .rtl .items li .go::after{
 
 [data-pwa] .items{
   box-shadow:none;
-  border-radius:$myRadiusPWA;
+  border-radius:8px;
   font-size: 12px;
 }
 
