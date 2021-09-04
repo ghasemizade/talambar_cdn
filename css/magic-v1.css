@@ -21308,7 +21308,7 @@ body .rtl .items li .go::after{
 .pagination{
   text-align:center;
   position:relative;
-  border-radius:0.25rem;
+  border-radius:3px;
   overflow:hidden;
   transition:0.3s;
   border:1px solid rgba(0,0,0,0.1);
@@ -21317,7 +21317,7 @@ body .rtl .items li .go::after{
       -ms-user-select:none;
           user-select:none;
   background-color:#fff;
-  border-radius: 1rem;
+  border-radius: 10px;
   opacity:0.8;
 }
 
@@ -21332,7 +21332,7 @@ body .rtl .items li .go::after{
 
 .pagination a{
   position:relative;
-  padding:1em 1.5em;
+  padding:10px 15px;
   transition:.3s;
   cursor: pointer;
   background-color:transparent;
@@ -25296,7 +25296,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
   border-radius:.3125em;
   background:#fff;
   font-family:inherit;
-  font-size:1.4rem;
+  font-size:14px;
   box-sizing:border-box
 }
 
@@ -26321,7 +26321,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 }
 
 [data-pwa] .iziToast-wrapper-topCenter{
-  top: 5rem;
+  top: 50px;
 }
 
 .iziToast-wrapper-bottomCenter {
@@ -26332,7 +26332,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 }
 
 [data-pwa] .iziToast-wrapper-bottomCenter{
-  margin-bottom: 5rem;
+  margin-bottom: 50px;
 }
 
 .iziToast-wrapper-center {
@@ -27501,7 +27501,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 [data-uploader]{
   position: relative;
   display: block;
-  font-size: 1rem;
+  font-size: 10px;
   overflow: hidden;
   outline: 2px dashed #92b0b3;
   outline-offset: -10px;
@@ -27510,7 +27510,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
   min-width: 250px;
   max-width: 100%;
   background-color: #fff;
-  box-shadow: 0px 0px 1.5rem 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -27523,7 +27523,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 
 [data-uploader]:not([disabled]):hover{
   background-color: #f6f6f6;
-  box-shadow: 0px 0px 0.5rem 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
 
 [data-uploader]:active{
@@ -27534,7 +27534,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 }
 
 [data-uploader][data-dragover="zone"]{
-  box-shadow: inset 0 0 1.5rem 0 #777;
+  box-shadow: inset 0 0 15px 0 #777;
   outline-offset: -15px;
 }
 
@@ -27568,7 +27568,7 @@ body.dragging{
   display: block;
   font-size: 30px;
   line-height: 30px;
-  padding: 1rem 0;
+  padding: 10px 0;
   text-align: center;
   font-weight: normal;
   vertical-align: middle;
@@ -27598,22 +27598,22 @@ body.dragging{
 [data-uploader]::after{
   content: attr(data-file-size);
   display: block;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-family: monospace;
   direction: ltr;
   color: #eee;
   line-height: 1;
   position: absolute;
-  top: 3rem;
-  left: 3rem;
+  top: 30px;
+  left: 30px;
 }
 
 [data-uploader] input[type='file']+label{
   display: block;
   margin: 0;
-  padding: 2rem 2rem;
-  font-size: 1.4em;
-  line-height: 2rem;
+  padding: 20px 20px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: normal;
   text-align: center;
   color: #4c4e53;
@@ -27633,9 +27633,9 @@ body.dragging{
 }
 
 [data-uploader][data-size='large'] input[type='file'] + label{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  line-height: 4rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  line-height: 40px;
 }
 
 [data-option] [data-uploader] input[type='file']+label{
@@ -27679,7 +27679,7 @@ body.dragging{
 }
 
 [data-uploader][data-uploader-circle]{
-  margin: 2rem auto;
+  margin: 20px auto;
   border-radius: 50%;
   overflow: hidden;
   min-width: 200px;
@@ -27693,16 +27693,16 @@ body.dragging{
 
 [data-uploader][data-uploader-circle] input[type='file'] + label{
   white-space:normal;
-  padding: 2rem 2.5rem;
+  padding: 20px 25px;
 }
 
 [data-uploader][data-uploader-circle] input[type='file'] + label::before{
-  padding: 0 0 2rem;
+  padding: 0 0 20px;
 }
 
 [data-uploader][data-uploader-circle] input[type='file'] + label::after{
   position: relative;
-  top: 1rem;
+  top: 10px;
   left: 0;
   right: 0;
 }
@@ -27723,7 +27723,7 @@ body.dragging{
 }
 
 [data-uploader][data-fill]{
-  padding: 2rem;
+  padding: 20px;
 }
 
 [data-uploader][data-fill] input[type='file'] + label{
@@ -27737,29 +27737,29 @@ body.dragging{
 
 [data-uploader][data-fill] img{
   display: block;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 
 [data-uploader][data-fill] video{
   display: block;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 
 [data-uploader][data-fill] audio{
   display: block;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 
 [data-option] .action[data-uploader][data-fill] img{
-  max-height: 18rem;
+  max-height: 180px;
 }
 
 [data-uploader] .imageDel{
   position: absolute;
-  top: 2rem;
-  right:2rem;
-  width: 3.5rem;
-  height: 3.5rem;
+  top: 20px;
+  right:20px;
+  width: 35px;
+  height: 35px;
   color: #fff;
   text-align: center;
   cursor: not-allowed;
@@ -27769,9 +27769,9 @@ body.dragging{
   content: "";
   border-radius: 50%;
   background-color: rgba(255,255,255,1);
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 1rem;
+  width: 15px;
+  height: 15px;
+  margin: 10px;
   display: block;
   transition: 0.3s;
   position: absolute;
@@ -27798,10 +27798,10 @@ body.dragging{
   margin: 5px;
   border-radius: 50%;
   color: #d32f2f;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  font-size: 2.5rem;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 25px;
   font-weight: normal;
   display: block;
   vertical-align: middle;
@@ -27809,36 +27809,36 @@ body.dragging{
 }
 
 [data-uploader] .previewList{
-  margin: 0 1.5rem 1rem;
+  margin: 0 15px 10px;
 }
 
 [data-uploader][disabled] .previewList{
-  margin: 1.5rem 1.5rem 1rem;
+  margin: 15px 15px 10px;
 }
 
 [data-uploader][data-uploader-count] .previewList{
-  margin: 1.5rem 1.5rem 1rem;
+  margin: 15px 15px 10px;
 }
 
 [data-uploader] .previewList .fileItem{
   position: relative;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 
 [data-uploader] .previewList .fileItem img{
   display: block;
-  min-height: 10rem;
-  max-height: 22rem;
-  border-radius: 1rem;
+  min-height: 100px;
+  max-height: 220px;
+  border-radius: 10px;
   margin: 0 auto;
 }
 
 [data-uploader] .previewList .fileItem video{
   display: block;
-  max-height: 30rem;
+  max-height: 300px;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 
 [data-uploader] .previewList .fileItem audio{
@@ -27849,10 +27849,10 @@ body.dragging{
 [data-uploader] .previewList .fileItem .file{
   background-color: #eee;
   color: #37474f;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   overflow: hidden;
-  padding: 2rem 1rem;
-  font-size: 1.5rem;
+  padding: 20px 10px;
+  font-size: 15px;
   text-align: center;
   transition: 0.3s;
 }
@@ -27862,9 +27862,9 @@ body.dragging{
 }
 
 [data-uploader] .previewList .fileItem i{
-  font-size: 4rem;
+  font-size: 40px;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 [data-uploader] .previewList .fileItem i::before{
@@ -27894,19 +27894,19 @@ body.dragging{
   left:0;
   right: 0;
   width: 100%;
-  max-height: 4rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  max-height: 40px;
+  font-size: 10px;
+  line-height: 15px;
   color: #fff;
   background-color: rgba(0,0,0,0.5);
-  padding: 0.5rem 0.5rem;
+  padding: 5px 5px;
   text-align: center;
   transition: 0.3s;
   cursor: pointer;
 }
 
 [data-desktop] [data-uploader] .previewList .fileItem .setFeatureImg{
-  bottom: -4rem;
+  bottom: -40px;
 }
 
 [data-desktop] [data-uploader] .previewList .fileItem:hover .setFeatureImg{
@@ -29393,9 +29393,9 @@ body.dragging{
   left: 0;
   display: block;
   margin:0 auto;
-  font-size: 1.4rem;
-  line-height: 3rem;
-  margin-top: -1.5rem;
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: -15px;
   text-align: center;
   -webkit-animation: blinkText 1s linear infinite;
           animation: blinkText 1s linear infinite;
@@ -29435,7 +29435,7 @@ body.dragging{
 }
 
 .productBox{
-  padding: 1rem 0.5rem;
+  padding: 10px 5px;
   max-width: 200px;
 }
 
@@ -29445,13 +29445,13 @@ body.dragging{
 
 .jProduct1{
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   margin:0 auto 0;
   position: relative;
   display: block;
   background-color: #fafafa;
-  font-size: 1.4rem;
-  border-radius: 0.5rem;
+  font-size: 14px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -29467,7 +29467,7 @@ body.dragging{
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 5px 5px 0 0;
   max-height: 300px;
 }
 
@@ -29493,43 +29493,43 @@ body.dragging{
 }
 
 .jProduct1 .title{
-  height: 5rem;
-  line-height: 2rem;
-  padding: 1rem 5% 0;
+  height: 50px;
+  line-height: 20px;
+  padding: 10px 5% 0;
   overflow: hidden;
   color: #444;
 }
 
 .jProduct1 footer{
-  padding: 0.5rem 1rem 1rem;
-  line-height: 2.5rem;
+  padding: 5px 10px 10px;
+  line-height: 25px;
   direction: ltr;
 }
 
 [data-pwa] .jProduct1 footer{
-  padding: 0.5rem 0.5rem;
+  padding: 5px 5px;
 }
 
 .jProduct1 .price{
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: 25px;
+  line-height: 25px;
   min-width: 80px;
   text-align: left;
   padding: 0 5%;
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: 700;
   color: #000;
 }
 
 .jProduct1 .unit{
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: 400;
   color: #999;
 }
 
 .jProduct1 .compareAtPrice{
-  font-size: 1.2rem;
+  font-size: 12px;
   color: #999;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -29551,7 +29551,7 @@ body.dragging{
   background-color: #ff4747;
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 15px;
   padding-top: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -29562,12 +29562,12 @@ body.dragging{
 .jProduct1 .btnAddCart{
   position: absolute;
   display: block;
-  top: 1rem;
+  top: 10px;
   bottom: 0;
-  left: 1rem;
-  width: 3.6rem;
-  height: 3.6rem;
-  line-height: 3.6rem;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   font-size: 20px;
   border-radius: 50%;
   overflow: hidden;
@@ -29588,12 +29588,12 @@ body.dragging{
 [data-pwa] .jProduct1 .btnAddCart{
   display: none;
   opacity: 1;
-  top: 0.5rem;
-  left: 0.5rem;
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  border-radius: 0.5rem;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
 }
 
 .avand.productLine{
@@ -29609,7 +29609,7 @@ body.dragging{
 }
 
 [data-pwa] .jProduct1{
-  font-size: 1.2rem;
+  font-size: 12px;
   height: 100%;
 }
 
@@ -29631,10 +29631,10 @@ body.dragging{
 }
 
 .jProduct2{
-  min-height: 14rem;
-  max-height: 25rem;
-  max-width: 25rem;
-  margin: 0 auto 1rem;
+  min-height: 140px;
+  max-height: 250px;
+  max-width: 250px;
+  margin: 0 auto 10px;
   position: relative;
   display: block;
 }
@@ -29643,13 +29643,13 @@ body.dragging{
   position: relative;
   overflow: hidden;
   display: block;
-  border-radius: 1rem;
-  min-height: 14rem;
+  border-radius: 10px;
+  min-height: 140px;
   height: 100%;
 }
 
 [data-pwa] .jProduct2 .overlay{
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .jProduct2 .overlay:after{
@@ -29668,7 +29668,7 @@ body.dragging{
 }
 
 .jProduct2.darker{
-  border-radius: 1rem;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -29704,12 +29704,12 @@ body.dragging{
   right: 0;
   left: 0;
   width: 100%;
-  padding: 0 1rem 0.5em;
+  padding: 0 10px 5px;
   transition: 0.3s;
   z-index: 2;
   color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 12px;
+  line-height: 15px;
   font-weight: 700;
   overflow: hidden;
 }
@@ -29719,14 +29719,14 @@ body.dragging{
 }
 
 .jProduct2 a:hover footer{
-  padding-bottom: 2em;
+  padding-bottom: 20px;
 }
 
 .jProduct2 figcaption{
-  max-height: 6rem;
+  max-height: 60px;
   opacity: 0;
   transition: 0.2s;
-  line-height: 1.5rem;
+  line-height: 15px;
   overflow: hidden;
 }
 
@@ -29736,7 +29736,7 @@ body.dragging{
 
 [data-pwa] .jProduct2 figcaption{
   opacity: 0.8;
-  max-height: 4.5rem;
+  max-height: 45px;
 }
 
 .jProduct2:hover figcaption{
@@ -29744,25 +29744,25 @@ body.dragging{
 }
 
 .jProduct2 .price{
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: 25px;
+  line-height: 25px;
   min-width: 80px;
   text-align: left;
   padding: 0 5%;
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
 }
 
 .jProduct2 .unit{
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: 400;
   color: #ddd;
 }
 
 .jProduct2 .compareAtPrice{
-  font-size: 1.2rem;
+  font-size: 12px;
   color: #ddd;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -29783,15 +29783,15 @@ body.dragging{
 }
 
 [data-pwa] .jProduct2 h2{
-  font-size: 1rem;
+  font-size: 10px;
   -webkit-line-clamp: 2;
   display: none;
 }
 
 .jProduct2 .jSlider1{
   margin: 0;
-  margin-bottom: 0.5rem;
-  border-radius: 1rem;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 [data-desktop] .jProduct2 .jSlider1:hover img{
@@ -29799,7 +29799,7 @@ body.dragging{
 }
 
 [data-pwa] .jProduct2 .jSlider1{
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .jProduct2 .jSlider1 .overlay{
@@ -29808,12 +29808,12 @@ body.dragging{
 }
 
 .jProduct2 .jSlider1 h2{
-  font-size: 1.5em;
+  font-size: 15px;
 }
 
 [data-pwa] .jProduct2 .jSlider1 h2{
   display: block;
-  font-size: 1.2rem;
+  font-size: 12px;
 }
 
 .category .jProduct2 figcaption{
@@ -29836,7 +29836,7 @@ body.dragging{
   background-color: #ff4747;
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 15px;
   padding-top: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -29847,12 +29847,12 @@ body.dragging{
 .jProduct2 .btnAddCart{
   position: absolute;
   display: block;
-  top: 1rem;
+  top: 10px;
   bottom: 0;
-  left: 1rem;
-  width: 3.6rem;
-  height: 3.6rem;
-  line-height: 3.6rem;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   font-size: 20px;
   border-radius: 50%;
   overflow: hidden;
@@ -29873,12 +29873,12 @@ body.dragging{
 [data-pwa] .jProduct2 .btnAddCart{
   display: none;
   opacity: 1;
-  top: 0.5rem;
-  left: 0.5rem;
+  top: 5px;
+  left: 5px;
   width: 30px;
   height: 30px;
   line-height: 30px;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 
 /* siftal layout */

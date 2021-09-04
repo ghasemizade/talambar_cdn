@@ -2,15 +2,15 @@
 .pagination{
 	text-align:center;
 	position:relative;
-	-webkit-border-radius:0.25rem;
-	-moz-border-radius:0.25rem;
-	border-radius:0.25rem;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
 	overflow:hidden;
 	transition:0.3s;
 	border:1px solid rgba(0,0,0,0.1);
 	user-select:none;
 	background-color:#fff;
-	border-radius: 1rem;
+	border-radius: 10px;
 	opacity:0.8;
 }
 .pagination:hover{
@@ -21,7 +21,7 @@
 }
 .pagination a{
 	position:relative;
-	padding:1em 1.5em;
+	padding:10px 15px;
 	-webkit-transition:.3s;
 	-o-transition:.3s;
 	-moz-transition:.3s;

@@ -25,9 +25,9 @@
 	left: 0;
 	display: block;
 	margin:0 auto;
-	font-size: 1.4rem;
-	line-height: 3rem;
-	margin-top: -1.5rem;
+	font-size: 14px;
+	line-height: 30px;
+	margin-top: -15px;
 	text-align: center;
 	animation: blinkText 1s linear infinite;
 	z-index: 12;
@@ -45,7 +45,7 @@
 	display: none;
 }
 .productBox{
-	padding: 1rem 0.5rem;
+	padding: 10px 5px;
 	max-width: 200px;
 }
 [data-desktop] .productBox{
@@ -53,13 +53,13 @@
 }
 .jProduct1{
 	overflow: hidden;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 	margin:0 auto 0;
 	position: relative;
 	display: block;
 	background-color: #fafafa;
-	font-size: 1.4rem;
-	border-radius: 0.5rem;
+	font-size: 14px;
+	border-radius: 5px;
 	transition: 0.3s;
 }
 .jProduct1:hover{
@@ -72,7 +72,7 @@
 	position: relative;
 	display: block;
 	overflow: hidden;
-	border-radius: 0.5rem 0.5rem 0 0;
+	border-radius: 5px 5px 0 0;
 	max-height: 300px;
 }
 .jProduct1 .cover[data-gr] img{
@@ -94,38 +94,38 @@
 	z-index: 1;
 }
 .jProduct1 .title{
-	height: 5rem;
-	line-height: 2rem;
-	padding: 1rem 5% 0;
+	height: 50px;
+	line-height: 20px;
+	padding: 10px 5% 0;
 	overflow: hidden;
 	color: #444;
 }
 .jProduct1 footer{
-	padding: 0.5rem 1rem 1rem;
-	line-height: 2.5rem;
+	padding: 5px 10px 10px;
+	line-height: 25px;
 	direction: ltr;
 }
 [data-pwa] .jProduct1 footer{
-	padding: 0.5rem 0.5rem;
+	padding: 5px 5px;
 }
 .jProduct1 .price{
-	height: 2.5rem;
-	line-height: 2.5rem;
+	height: 25px;
+	line-height: 25px;
 	min-width: 80px;
 	text-align: left;
 	padding: 0 5%;
 	overflow: hidden;
-	font-size: 1.5rem;
+	font-size: 15px;
 	font-weight: 700;
 	color: #000;
 }
 .jProduct1 .unit{
-	font-size: 1rem;
+	font-size: 10px;
 	font-weight: 400;
 	color: #999;
 }
 .jProduct1 .compareAtPrice{
-	font-size: 1.2rem;
+	font-size: 12px;
 	color: #999;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -145,7 +145,7 @@
 	background-color: #ff4747;
 	color: #fff;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 15px;
 	padding-top: 20px;
 	line-height: 20px;
 	font-weight: 700;
@@ -155,12 +155,12 @@
 .jProduct1 .btnAddCart{
 	position: absolute;
 	display: block;
-	top: 1rem;
+	top: 10px;
 	bottom: 0;
-	left: 1rem;
-	width: 3.6rem;
-	height: 3.6rem;
-	line-height: 3.6rem;
+	left: 10px;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
 	font-size: 20px;
 	border-radius: 50%;
 	overflow: hidden;
@@ -179,12 +179,12 @@
 [data-pwa] .jProduct1 .btnAddCart{
 	display: none;
 	opacity: 1;
-	top: 0.5rem;
-	left: 0.5rem;
-	width: 3rem;
-	height: 3rem;
-	line-height: 3rem;
-	border-radius: 0.5rem;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
 }
 .avand.productLine{
 	overflow: hidden;
@@ -199,7 +199,7 @@
 
 
 [data-pwa] .jProduct1{
-	font-size: 1.2rem;
+	font-size: 12px;
 	height: 100%;
 }
 [data-pwa] .jProduct1 .cover img{

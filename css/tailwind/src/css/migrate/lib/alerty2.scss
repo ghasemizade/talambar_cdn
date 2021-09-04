@@ -217,7 +217,7 @@ body.alerty2-no-backdrop .alerty2-shown.alerty2-bottom-end,body.alerty2-no-backd
 
 .alerty2-container.alerty2-fade{transition:background-color .1s}
 .alerty2-container.alerty2-shown{background-color:rgba(0,0,0,0.4)}
-.alerty2-popup{display:none;position:relative;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1.4rem;box-sizing:border-box}
+.alerty2-popup{display:none;position:relative;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border-radius:.3125em;background:#fff;font-family:inherit;font-size:14px;box-sizing:border-box}
 .alerty2-popup:focus{outline:none}
 .alerty2-popup.alerty2-loading{overflow-y:hidden}
 .alerty2-popup .alerty2-header{display:flex;flex-direction:column;align-items:center}
