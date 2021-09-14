@@ -16430,9 +16430,7 @@ body[data-siteBuilder] {
     'footer main';
   grid-template-columns: 25% auto;
   grid-template-rows: 60px auto minmax(0, 60px);
-  font-size: 16px!important;
   height: 100vh;
-  height: 100%!important;
 }
 
 @media (min-width: 1200px) {
@@ -16513,7 +16511,8 @@ body[data-siteBuilder] > #pageContent{
 body[data-siteBuilder] > #pageContent {
   background-color:#EFF6FF;
   grid-area: main;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body[data-siteBuilder] > #pageFooter{

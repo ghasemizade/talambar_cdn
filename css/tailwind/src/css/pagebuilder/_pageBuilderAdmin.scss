@@ -7,9 +7,7 @@ body[data-siteBuilder]{
     'footer main';
   grid-template-columns: 25% auto;
   grid-template-rows: 60px auto minmax(0, 60px);
-  font-size: 16px!important;
   height: 100vh;
-  height: 100%!important;
 }
 @media (min-width: 1200px) {
 	body[data-siteBuilder]{
@@ -64,7 +62,8 @@ body[data-siteBuilder] > #pageContent{
 	@apply pt-2 px-4 pb-4 md:pt-5 md:px-10 md:pb-10;
 	background-color:#EFF6FF;
 	grid-area: main;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 body[data-siteBuilder] > #pageFooter{
 	@apply overflow-hidden;
