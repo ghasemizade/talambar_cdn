@@ -113,6 +113,9 @@ body[data-siteBuilder] .h-full .ck-editor__editable {
 	line-height: 35px;
 	font-size: 24px;
 }
+.browserFrame .resizePreview [data-mode]:hover{
+	background-color:#aaa;
+}
 .browserFrame .resizePreview [data-mode="mobile"]{
 	font-size: 29px;
 }
