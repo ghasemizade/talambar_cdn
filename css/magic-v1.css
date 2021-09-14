@@ -14490,7 +14490,7 @@ img[src="#"] {
 
 .toggle2 input{
   --focus-shadow:0 0 0;
-  --handleoffset:2.5rem;
+  --handleoffset:25px;
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
@@ -14500,9 +14500,9 @@ img[src="#"] {
   border-color:hsla(var(--bc)/var(--tw-border-opacity,1));
   border-width:1px;
   cursor:pointer;
-  height:2.5rem;
-  width:5rem;
-  min-width:5rem;
+  height:25px;
+  width:50px;
+  min-width:50px;
   transition-timing-function:cubic-bezier(.4,0,.2,1);
   transition-duration:.3s;
   border-radius:var(--rounded-badge,1.9rem);
@@ -15773,15 +15773,15 @@ img[src="#"] {
 
 .btn-circle {
   border-radius:9999px;
-  height:3rem;
+  height:30px;
   padding:0;
-  width:3rem
+  width:30px
 }
 
 .btn-wide {
   min-width:10rem;
-  padding-right:3rem;
-  padding-left:3rem;
+  padding-right:30px;
+  padding-left:30px;
 }
 
 .kbd {
@@ -16606,8 +16606,8 @@ body[data-siteBuilder] .h-full .ck-editor__editable {
 }
 
 .filter-switch-item label svg{
-  max-height: 20px;
-  margin: 0 auto;
+  max-height: 22px;
+  margin: 3px auto 0;
 }
 
 .roundedBox{
