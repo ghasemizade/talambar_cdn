@@ -16412,31 +16412,9 @@ img[src="#"] {
 /* add extra layouts*/
 
 body[data-siteBuilder]{
-  display: grid;
-}
-
-body[data-siteBuilder] .swiper [data-magicbox] picture{
-  height: 100%;
-}
-
-body[data-siteBuilder] .swiper{
-  display: none;
-}
-
-body[data-siteBuilder] {
-  grid-template-areas:
-    'header header'
-    'sidebar main'
-    'footer main';
-  grid-template-columns: 25% auto;
-  grid-template-rows: 60px auto minmax(0, 60px);
-  height: 100vh;
-}
-
-@media (min-width: 1200px) {
-  body[data-siteBuilder]{
-    grid-template-columns: 320px auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 [data-pwa] body[data-siteBuilder]{
@@ -16449,7 +16427,6 @@ body[data-siteBuilder] > #sidebar{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   padding: 1.75rem;
   background-color: #fff;
-  grid-area: sidebar;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
@@ -16472,8 +16449,8 @@ body[data-siteBuilder] > #sidebar label{
 body[data-siteBuilder] > #pageHeader{
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  z-index: 10;
   overflow: hidden;
-  grid-area: header;
 }
 
 body[data-siteBuilder] > #pageHeader .desktop{
@@ -16482,14 +16459,21 @@ body[data-siteBuilder] > #pageHeader .desktop{
   line-height: 40px;
 }
 
-body[data-siteBuilder] > #pageHeader .desktop svg{
-  display: inline-block;
-  width:30px;
-  height: 30px;
+[data-desktop] body[data-siteBuilder] > #pageHeader{
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color:#fff;
+  height: 58px;
+  flex:0 0 100%;
+  max-width:100%;
 }
 
-body[data-siteBuilder] .backBtn{
-  line-height: 40px;
+body[data-siteBuilder] > #pageHeader .desktop svg{
+  display: inline-block;
+  width:28px;
+  height: 28px;
 }
 
 body[data-siteBuilder] > #pageContent{
@@ -16510,30 +16494,8 @@ body[data-siteBuilder] > #pageContent{
 
 body[data-siteBuilder] > #pageContent {
   background-color:#EFF6FF;
-  grid-area: main;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-body[data-siteBuilder] > #pageFooter{
-  overflow: hidden;
-  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  background-color:#fff;
-  grid-area: footer;
-  border-top: 1px solid #eee;
-}
-
-body[data-siteBuilder] > #pageFooter .desktop{
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  height: 100%;
-}
-
-body[data-siteBuilder] > #pageFooter:empty{
 }
 
 body[data-siteBuilder] > .js{
