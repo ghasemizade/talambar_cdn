@@ -1,5 +1,3 @@
-@import "master.css";
-
 /*migrate and need to transfer to tailwind*/
 @import 'css/migrate/grid.scss';
 @import 'css/migrate/row.scss';
