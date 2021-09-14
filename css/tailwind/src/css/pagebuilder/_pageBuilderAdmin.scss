@@ -10,12 +10,14 @@ body[data-siteBuilder]{
 }
 body[data-siteBuilder] > #sidebar{
 	@apply shadow;
-	@apply p-7;
+	@apply p-2 md:p-4;
 	background-color: #fff;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: relative;
-	height: 100%;
+	height: calc( 100vh - 58px);
+	min-width: 250px;
+	width: 300px;
 }
 body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
 	@apply flex-grow;
@@ -58,6 +60,8 @@ body[data-siteBuilder] > #pageContent{
 	background-color:#EFF6FF;
 	overflow-x: hidden;
 	overflow-y: auto;
+	flex: 1 1 0%;
+	height: calc( 100vh - 58px);
 }
 body[data-siteBuilder] > .js{
 	@apply hidden;
