@@ -11,6 +11,7 @@ function readPageAllScripts(_force, _page)
   readPageCropper();
   readPageFancyBox();
   readPageJsTree();
+  readPageDatatable();
   readPageCodeEditor();
   readPageSlick();
   readPageSwiper();
@@ -147,6 +148,20 @@ function readPageJsTree()
     StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css?v=1");
     myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js?v=1";
     fileLoader(myUrl, 'runJstree', true);
+  }
+}
+
+
+function readPageDatatable()
+{
+  var myEl = $('[data-datatable]');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    StyleLoader(urlJibres('cdn') + "lib/datatable/1.11.2/datatables.min.css?v=1");
+    myUrl = urlJibres('cdn') + "lib/datatable/1.11.2/datatables.min.js?v=1";
+    fileLoader(myUrl, 'runDatatable', true);
   }
 }
 
