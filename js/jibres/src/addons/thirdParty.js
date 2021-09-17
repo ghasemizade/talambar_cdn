@@ -5,6 +5,7 @@ function loadThirdPartyScripts(_force, _page)
   loadScriptRecaptcha();
   loadScriptGtag();
   loadScriptTawk();
+  loadScriptTidio();
   loadScriptRaychat();
   loadScriptImber();
   loadScriptMediaad();
@@ -51,6 +52,21 @@ function loadScriptTawk()
     myUrl = 'https://embed.tawk.to/' + myTawk + '/default';
 
     fileLoader(myUrl, 'runTawk', false, undefined, 'defer utf8 crossorigin');
+  }
+}
+
+
+function loadScriptTidio()
+{
+  var myEl = $('meta[name="tidio"]');
+  var myTidio = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myTidio)
+  {
+    // load script
+    myUrl = 'https://code.tidio.co/' + myTidio + '.js';
+
+
+    fileLoader(myUrl, 'runTidio', false, undefined, 'defer utf8 crossorigin');
   }
 }
 
