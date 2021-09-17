@@ -275,6 +275,20 @@ $(document).ready(function()
     }
   });
 
+  $(document).on('click', '#pageHeader .pwa .hamburger', function(e)
+  {
+    var $sideBar = $('#sidebar');
+    $this = $(this);
+    if($sideBar.is(":visible"))
+    {
+      // $sideBar.fadeOut('fast');
+      $sideBar.hide(100).attr('data-active', null);
+    }
+    else
+    {
+      $sideBar.show(100).attr('data-active', "");
+    }
+  });
 
   $(document).on("click", '#samandehiCert', function(e){
     var myUrl = $(this).attr('data-open');

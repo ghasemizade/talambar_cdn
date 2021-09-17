@@ -20,6 +20,7 @@ body[data-siteBuilder] > #sidebar{
 	width: 300px;
 }
 [data-pwa] body[data-siteBuilder] > #sidebar{
+	min-width: 0;
 	max-width: 90%;
 	background-color: #eee;
 	position: fixed;
@@ -27,8 +28,8 @@ body[data-siteBuilder] > #sidebar{
 	right: 10px;
 	z-index: 100;
 	height: auto;
-	max-height: 90%;
-	max-height: calc( 100% - 120px );
+	max-height: 100%;
+	max-height: calc( 100% - 70px );
 	border-radius: 8px;
 }
 [data-pwa][dir="rtl"] body[data-siteBuilder] > #sidebar{
@@ -38,9 +39,9 @@ body[data-siteBuilder] > #sidebar{
 [data-pwa] body[data-siteBuilder] > #sidebar[data-active]{
 	display: block!important;
 }
-[data-pwa] body[data-siteBuilder] > #sidebar[data-size="max"]{
-	max-height: 100%;
-	max-height: calc( 100% - 70px );
+[data-pwa] body[data-siteBuilder] > #sidebar[data-size="mini"]{
+	max-height: 90%;
+	max-height: calc( 100% - 120px );
 }
 [data-pwa] body[data-siteBuilder] > #sidebar[data-size="full"]{
 	height: 100%;
