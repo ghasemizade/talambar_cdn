@@ -19,6 +19,22 @@ body[data-siteBuilder] > #sidebar{
 	min-width: 250px;
 	width: 300px;
 }
+[data-pwa] body[data-siteBuilder] > #sidebar{
+	max-width: 90%;
+	background-color: #eee;
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	z-index: 100;
+	height: auto;
+	max-height: 80%;
+	max-height: calc( 100% - 120px );
+	border-radius: 8px;
+}
+[data-pwa][dir="rtl"] body[data-siteBuilder] > #sidebar{
+	right: initial;
+	left: 10px;
+}
 body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
 	@apply flex-grow;
 	overflow: auto;
