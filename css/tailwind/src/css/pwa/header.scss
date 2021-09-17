@@ -53,6 +53,9 @@
 #pageHeader .pwa .square:active{
 	background-color: rgba(0,0,0,0.1);
 }
+#pageHeader .pwa .square[data-active]{
+	background-color: rgba(0,0,0,0.2);
+}
 #pageHeader .pwa svg{
 	max-height: 100%;
 }

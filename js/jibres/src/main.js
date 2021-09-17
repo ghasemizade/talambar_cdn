@@ -275,48 +275,6 @@ $(document).ready(function()
     }
   });
 
-  $(document).off('click.hamburger').on('click.hamburger', '#pageHeader .pwa .hamburger', function(e)
-  {
-    $this = $(this);
-    if($('#sidebar').is(":visible"))
-    {
-      $('#sidebar').hide(100).attr('data-active', null);
-    }
-    else
-    {
-      $('#sidebar').show(100).attr('data-active', "");
-    }
-  });
-
-  $('body').off('mousedown touchmove').on('mousedown touchmove', function(_e)
-  {
-    console.log((_e.target));
-    console.log($(_e.target));
-    if($(_e.target).parents('.sidenavHandler').length || $(_e.target).hasClass('sidenavHandler') )
-    {
-      // click on hanlder, do nothing!
-      $('#sidebar').hide(100).attr('data-active', null);
-    }
-    else if($(_e.target).parents('#sidebar').length)
-    {
-      // do nothing because clicked on sidebar
-    }
-    else if($(_e.target).is('#sidebar'))
-    {
-      // do nothing because clicked on sidebar
-      // sidebar is empty place of back
-      $('#sidebar').hide(100).attr('data-active', null);
-    }
-    else if(!$('#sidebar').is(":visible"))
-    {
-      // do nothing because its hide!
-    }
-    else
-    {
-      $('#sidebar').show(100).attr('data-active', "");
-    }
-  });
-
   $(document).on("click", '#samandehiCert', function(e){
     var myUrl = $(this).attr('data-open');
     if(myUrl)

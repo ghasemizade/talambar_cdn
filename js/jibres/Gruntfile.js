@@ -97,6 +97,8 @@ var myModuleFiles =
 	'src/addons/raychat.js',
 	'src/addons/imber.js',
 
+	// pwa
+	'src/pwa/sidebar.js',
 
 	'src/main.js',
 	'src/load.js',

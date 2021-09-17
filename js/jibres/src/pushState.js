@@ -83,6 +83,8 @@ $(document).ready(function()
   inputChecker();
   // handle drag status
   handleDrag();
+  // handle PWA sidebar
+  handlePWASlideBar();
   // check we are in iframe of not!
   // insideIframe();
   // show iframe after load
