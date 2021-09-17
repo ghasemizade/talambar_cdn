@@ -50,19 +50,10 @@ function loadScriptHotjar()
   var myHotjar = myEl.attr('content');
   if(myEl && myEl.length > 0 && myHotjar)
   {
-    // (function(h,o,t,j,a,r){
-    //     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-    //     h._hjSettings={hjid:2319609,hjsv:6};
-    //     a=o.getElementsByTagName('head')[0];
-    //     r=o.createElement('script');r.async=1;
-    //     r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-    //     a.appendChild(r);
-    // })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
-
     // load script
     myUrl = "https://static.hotjar.com/c/hotjar-" + myHotjar + ".js?sv=6";
     window.hj = window.hj||function(){(window.hj.q=window.hj.q||[]).push(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')};
+    window._hjSettings={hjid:myHotjar,hjsv:6};
 
     fileLoader(myUrl, 'runHotjar', true, undefined, 'defer');
   }
