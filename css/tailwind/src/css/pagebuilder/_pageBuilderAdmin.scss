@@ -22,7 +22,7 @@ body[data-siteBuilder] > #sidebar{
 [data-pwa] body[data-siteBuilder] > #sidebar{
 	max-width: 90%;
 	background-color: #eee;
-	position: absolute;
+	position: fixed;
 	top: 60px;
 	right: 10px;
 	z-index: 100;
@@ -34,6 +34,20 @@ body[data-siteBuilder] > #sidebar{
 [data-pwa][dir="rtl"] body[data-siteBuilder] > #sidebar{
 	right: initial;
 	left: 10px;
+}
+[data-pwa] body[data-siteBuilder] > #sidebar[data-size="full"]{
+	height: 100%;
+	max-height: calc( 100% - 50px );
+	top: 50px;
+	right: 0!important;
+	left: 0!important;
+	bottom: 0;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 0;
+	background-color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 body[data-siteBuilder] > #sidebar #siteBuilderSidebar{
 	@apply flex-grow;
