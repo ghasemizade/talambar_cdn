@@ -14296,10 +14296,15 @@ img[src="#"] {
   border:none;
   border-radius: 5px;
   background-color: transparent;
+  transition: 0.1s;
 }
 
 #pageHeader .pwa .square:active{
   background-color: rgba(0,0,0,0.1);
+}
+
+#pageHeader .pwa svg{
+  max-height: 100%;
 }
 
 #pageHeader .pwa .square svg{
@@ -14308,8 +14313,7 @@ img[src="#"] {
   width:100%;
 }
 
-#pageHeader .pwa .square.minor svg
-{
+#pageHeader .pwa .square.minor svg{
   padding: 6px;
 }
 
@@ -14320,24 +14324,6 @@ img[src="#"] {
   font-family:siftal!important;
   vertical-align:middle;
   display:block;
-}
-
-#pageHeader .pwa .square.add::before{
-  content: "\e03e";
-  color: #6b7ae0;
-}
-
-#pageHeader .pwa .square.plus::before{
-  content: "\e03e";
-  color: #6b7ae0;
-}
-
-#pageHeader .pwa .square.print::before{
-  content: "\e047";
-}
-
-#pageHeader .pwa .square.save::before{
-  content: "\e084";
 }
 
 #pageHeader .pwa .logo{
