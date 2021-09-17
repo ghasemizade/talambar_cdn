@@ -6,6 +6,7 @@ function loadThirdPartyScripts(_force, _page)
   loadScriptGtag();
   loadScriptTawk();
   loadScriptTidio();
+  loadScriptCrisp();
   loadScriptRaychat();
   loadScriptImber();
   loadScriptMediaad();
@@ -67,6 +68,32 @@ function loadScriptTidio()
 
 
     fileLoader(myUrl, 'runTidio', false, undefined, 'defer utf8 crossorigin');
+  }
+}
+
+
+function loadScriptCrisp()
+{
+  var myEl = $('meta[name="crisp"]');
+  var myCrisp = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myCrisp)
+  {
+    // load script
+    myUrl = 'https://client.crisp.chat/l.js';
+    window.$crisp=[];
+    window.CRISP_WEBSITE_ID=myCrisp;
+
+    // window.$crisp=[];
+    // window.CRISP_WEBSITE_ID="d673c8d1-212c-43f5-937b-29779bd0105b";
+
+    // (function(){
+    //   d=document;s=d.createElement("script");
+    //   s.src="https://client.crisp.chat/l.js";
+    //   s.async=1;
+    //   d.getElementsByTagName("head")[0].appendChild(s);
+    // })();
+
+    fileLoader(myUrl, 'runCrisp', false, undefined, 'defer utf8 crossorigin');
   }
 }
 
