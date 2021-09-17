@@ -718,7 +718,7 @@
 
 /* tailwind */
 
-/* ! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com*/
+/* ! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com*/
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -1172,18 +1172,6 @@ button,
   cursor: pointer;
 }
 
-/**
- * Override legacy focus reset from Normalize with modern Firefox focus styles.
- *
- * This is actually an improvement over the new defaults in Firefox in our testing,
- * as it triggers the better focus styles even for links, which still use a dotted
- * outline in Firefox by default.
- */
-
-:-moz-focusring {
-  outline: auto;
-}
-
 table {
   border-collapse: collapse;
 }
@@ -1395,7 +1383,7 @@ video {
   --tw-aspect-h: 16;
 }
 
-[data-debugger]::before::before {
+[data-debugger]::before {
   position: fixed;
   z-index: 2147483647;
   bottom: 0;
@@ -1411,19 +1399,19 @@ video {
 }
 
 @media (min-width: 640px) {
-  [data-debugger]::before::before {
+  [data-debugger]::before {
     content: 'sm';
   }
 }
 
 @media (min-width: 768px) {
-  [data-debugger]::before::before {
+  [data-debugger]::before {
     content: 'md';
   }
 }
 
 @media (min-width: 1024px) {
-  [data-debugger]::before::before {
+  [data-debugger]::before {
     content: 'lg';
   }
 }
@@ -14306,7 +14294,23 @@ img[src="#"] {
   position:relative;
   outline:none;
   border:none;
+  border-radius: 5px;
   background-color: transparent;
+}
+
+#pageHeader .pwa .square:active{
+  background-color: rgba(0,0,0,0.1);
+}
+
+#pageHeader .pwa .square svg{
+  padding: 10px;
+  display: block;
+  width:100%;
+}
+
+#pageHeader .pwa .square.minor svg
+{
+  padding: 6px;
 }
 
 #pageHeader .pwa .square::before{
@@ -14366,14 +14370,6 @@ img[src="#"] {
 
 #pageHeader .pwa .square.help::before{
   content: "\e0f5";
-}
-
-#pageHeader .pwa .square.back::before{
-  content: "\e0c1";
-}
-
-[dir="rtl"]  #pageHeader .pwa .back::before{
-  content: "\e0c2";
 }
 
 #pageHeader .pwa .logo{
