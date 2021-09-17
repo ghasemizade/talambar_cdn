@@ -48,6 +48,7 @@
 	border:none;
 	border-radius: 5px;;
 	background-color: transparent;
+	transition: 0.1s;
 }
 #pageHeader .pwa .square:active{
 	background-color: rgba(0,0,0,0.1);
@@ -70,18 +71,12 @@
 	display:block;
 }
 
-#pageHeader .pwa .square.search::before{content: "\e03f";}
-#pageHeader .pwa .square.cart::before{content: "\e125";}
-#pageHeader .pwa .square.menu::before{content: "\43";}
+
+
 #pageHeader .pwa .square.add::before{content: "\e03e";color: #6b7ae0;}
 #pageHeader .pwa .square.plus::before{content: "\e03e";color: #6b7ae0;}
-#pageHeader .pwa .square.setting::before{content: "\e075";}
-#pageHeader .pwa .square.duplicate::before{content: "\75";}
 #pageHeader .pwa .square.print::before{content: "\e047";}
 #pageHeader .pwa .square.save::before{content: "\e084";}
-#pageHeader .pwa .square.preview::before{content: "\e0af";}
-#pageHeader .pwa .square.view::before{content: "\e1ac";}
-#pageHeader .pwa .square.help::before{content: "\e0f5";}
 
 
 #pageHeader .pwa .logo{
@@ -105,16 +100,19 @@
 	position: absolute;
 	top: 2px;
 	right: 2px;
-	min-width: 1.60px;
-	height: 1.60px;
+	min-width: 16px;
+	height: 16px;
 	font-size: 12px;
-	line-height: 1.60px;
+	line-height: 16px;
 	text-align: center;
 	border-radius: 50%;
 	background-color: #ff4747;
 	color: #fff;
 	padding: 0;
 	margin: 0;
+}
+#pageHeader .pwa .cart[data-item=""]::after{
+	opacity: 0;
 }
 
 #pageHeader .pwa button{
@@ -126,7 +124,7 @@
 	background-color: transparent;
 	font-weight: 700;
 	padding: 0;
-	font-size: 1.60px;
+	font-size: 16px;
 }
 #pageHeader .pwa button.save{
 	color: #0e8654;
