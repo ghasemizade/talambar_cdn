@@ -275,18 +275,45 @@ $(document).ready(function()
     }
   });
 
-  $(document).on('click', '#pageHeader .pwa .hamburger', function(e)
+  $(document).off('click.hamburger').on('click.hamburger', '#pageHeader .pwa .hamburger', function(e)
   {
-    var $sideBar = $('#sidebar');
     $this = $(this);
-    if($sideBar.is(":visible"))
+    if($('#sidebar').is(":visible"))
     {
-      // $sideBar.fadeOut('fast');
-      $sideBar.hide(100).attr('data-active', null);
+      $('#sidebar').hide(100).attr('data-active', null);
     }
     else
     {
-      $sideBar.show(100).attr('data-active', "");
+      $('#sidebar').show(100).attr('data-active', "");
+    }
+  });
+
+  $('body').off('mousedown touchmove').on('mousedown touchmove', function(_e)
+  {
+    console.log((_e.target));
+    console.log($(_e.target));
+    if($(_e.target).parents('.sidenavHandler').length || $(_e.target).hasClass('sidenavHandler') )
+    {
+      // click on hanlder, do nothing!
+      $('#sidebar').hide(100).attr('data-active', null);
+    }
+    else if($(_e.target).parents('#sidebar').length)
+    {
+      // do nothing because clicked on sidebar
+    }
+    else if($(_e.target).is('#sidebar'))
+    {
+      // do nothing because clicked on sidebar
+      // sidebar is empty place of back
+      $('#sidebar').hide(100).attr('data-active', null);
+    }
+    else if(!$('#sidebar').is(":visible"))
+    {
+      // do nothing because its hide!
+    }
+    else
+    {
+      $('#sidebar').show(100).attr('data-active', "");
     }
   });
 
