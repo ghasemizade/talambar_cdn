@@ -16446,7 +16446,7 @@ body[data-siteBuilder] > #sidebar {
   right: 10px;
   z-index: 100;
   height: auto;
-  max-height: 80%;
+  max-height: 90%;
   max-height: calc( 100% - 120px );
   border-radius: 8px;
 }
@@ -16454,6 +16454,15 @@ body[data-siteBuilder] > #sidebar {
 [data-pwa][dir="rtl"] body[data-siteBuilder] > #sidebar{
   right: initial;
   left: 10px;
+}
+
+[data-pwa] body[data-siteBuilder] > #sidebar[data-active]{
+  display: block!important;
+}
+
+[data-pwa] body[data-siteBuilder] > #sidebar[data-size="max"]{
+  max-height: 100%;
+  max-height: calc( 100% - 70px );
 }
 
 [data-pwa] body[data-siteBuilder] > #sidebar[data-size="full"]{
