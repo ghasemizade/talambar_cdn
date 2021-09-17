@@ -16458,7 +16458,7 @@ body[data-siteBuilder] > #sidebar {
 }
 
 [data-pwa] body[data-siteBuilder] > #sidebar > div{
-  background-color: #fff;
+  background-color: #f3f2f8;
   border-radius: 8px;
   padding: 0.5rem;
 }
