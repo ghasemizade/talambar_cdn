@@ -49,7 +49,16 @@ $(document).ready(function()
     if($(this).hasClass('ck')) return;
 
     e.preventDefault();
-    $(this).ajaxify();
+
+    if(needCheckRecaptcha(this))
+    {
+      // check in recaptcha
+      // and call ajaxify from recaptcha
+    }
+    else
+    {
+      $(this).ajaxify();
+    }
 
   });
 

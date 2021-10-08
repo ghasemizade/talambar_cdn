@@ -1,8 +1,33 @@
+
+function needCheckRecaptcha(_form)
+{
+  if($(_form).find('[name="recaptcha_token"]').length === 1)
+  {
+    getRecaptchaToken(_form);
+    return true;
+  }
+
+  return false;
+}
+
+
+function runRecaptcha()
+{
+  // recaptcha is ready
+  //
+  // to improve speed we cat get token and save expire date
+  // then on form submit if token is valid, use it.
+  // else get another token
+  // return getRecaptchaToken();
+}
+
+
+
 /**
  * add captcha to all requests
  * @return {[type]} [description]
  */
-function runRecaptcha()
+function getRecaptchaToken(_form)
 {
   var site_key = $('form [name="recaptcha_sitekey"]').val();
   var gaction  = $('form [name="recaptcha_action"]').val();
@@ -23,7 +48,11 @@ function runRecaptcha()
     {
       // Add your logic to submit to your backend server here.
       tokenEl.val(token);
-      // console.log(token);
+
+      if($(_form).length === 1)
+      {
+        $(_form).ajaxify();
+      }
     });
   });
 }
