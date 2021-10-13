@@ -12228,7 +12228,7 @@ body.dragging{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.6) 100%);
   transition: 0.3s;
   opacity: 0.7;
   z-index: 1;
@@ -12298,7 +12298,7 @@ body.dragging{
 }
 
 [data-desktop] .jProduct2 figcaption{
-  opacity: 0.8;
+  opacity: 1;
 }
 
 [data-pwa] .jProduct2 figcaption{
@@ -12325,12 +12325,12 @@ body.dragging{
 .jProduct2 .unit{
   font-size: 10px;
   font-weight: 400;
-  color: #ddd;
+  color: #eee;
 }
 
 .jProduct2 .compareAtPrice{
   font-size: 12px;
-  color: #ddd;
+  color: #eee;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
