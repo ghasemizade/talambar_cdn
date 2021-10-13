@@ -131,8 +131,8 @@ function readPageFancyBox()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.0-alpha.4.min.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.0-alpha.4.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.5.min.css?v=1");
+    myUrl = urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.5.min.js?v=1";
     fileLoader(myUrl, 'runFancybox', true);
   }
 }
