@@ -16257,6 +16257,7 @@ img[src="#"] {
   transition: 0.2s;
   will-change: transform, filter;
   position: relative;
+  display: block;
 }
 
 [data-magicbox] picture{
