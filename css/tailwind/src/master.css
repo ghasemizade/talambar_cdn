@@ -68,5 +68,6 @@
 
 /* add extra layouts*/
 @import "css/pagebuilder/_pageBuilderAdmin.scss";
+@import "css/pagebuilder/_emptyState.scss";
 @import "css/pagebuilder/_specialSlider.scss";
 
