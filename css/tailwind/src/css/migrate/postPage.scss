@@ -138,6 +138,11 @@
 	font-weight: 700;
 	margin: 10px 0 5px;
 }
+.postBlock .text iframe{
+	min-height: 300px;
+	width: 100%;
+	border: none;
+}
 [data-pwa] .postBlock .text{
 	font-size: 14px;
 }
