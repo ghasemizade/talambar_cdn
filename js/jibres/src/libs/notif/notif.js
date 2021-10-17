@@ -256,7 +256,9 @@ function notifGenerator(_data, $_form)
 
   if($_form)
   {
-    $_form.find('input').removeClass('error warn');
+    $_form.find('input').removeClass('error warn ok').parent().removeClass('error warn ok');
+    $_form.find('select').removeClass('error warn ok');
+    $_form.find('textarea').removeClass('error warn ok');
   }
 
   // reload iframe if requested
