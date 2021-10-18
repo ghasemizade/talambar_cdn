@@ -16598,10 +16598,6 @@ body[data-siteBuilder] > .js{
   display: none;
 }
 
-body[data-siteBuilder] > .ck-body-wrapper{
-  display: none;
-}
-
 body[data-siteBuilder] .h-full .ck.ck-editor{
   height: 100%;
 }

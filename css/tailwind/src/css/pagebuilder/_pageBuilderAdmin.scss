@@ -124,9 +124,6 @@ body[data-siteBuilder] > #pageContent{
 body[data-siteBuilder] > .js{
 	@apply hidden;
 }
-body[data-siteBuilder] > .ck-body-wrapper{
-	@apply hidden;
-}
 body[data-siteBuilder] .h-full .ck.ck-editor{
 	height: 100%;
 }
