@@ -2,6 +2,9 @@
 body[data-siteBuilder]{
   @apply flex flex-wrap;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 [data-pwa] body[data-siteBuilder]{
