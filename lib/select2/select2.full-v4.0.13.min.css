@@ -8,7 +8,6 @@ label+div .select22 {
 }
 .select22-container{
   display:block;
-  width: 100%!important;
 }
 
 .select22-container .select22-selection--single{
@@ -134,9 +133,10 @@ select.select22-country img{
   margin-top: 2px;
   border-radius: 0.5rem
 }
-
+.select22-container .select22-search--inline{
+  display: inline-block;
+}
 .select22-container .select22-search--inline .select22-search__field{
-  min-width: 200px;
   font-family: inherit;
 }
 .select22-search--dropdown .select22-search__field{
@@ -151,3 +151,16 @@ select.select22-country img{
 .select22-container--default.select22-container--disabled .select22-selection--single .select22-selection__arrow{
   display: none;
 }
+
+.select22-container .select22-selection--multiple .select22-selection__rendered{
+	display: inline-block;
+}
+.select22-container--default .select22-selection--multiple{
+	padding-bottom: 0;
+}
+.select22-container--default .select22-selection--multiple .select22-selection__choice{
+	font-size: 12px;
+	padding-right: 5px;
+	margin-top: 4px;
+}
+
