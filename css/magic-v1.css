@@ -15453,8 +15453,9 @@ img[src="#"] {
 
 .btn-light:hover {
   color: #000;
+  background-color: #f9fafb;
+  border-color: #f9fafb;
   background-color: #e2e6ea;
-  border-color: #dae0e5;
 }
 
 .btn-check:focus + .btn-light, .btn-light:focus {
