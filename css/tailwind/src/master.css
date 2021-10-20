@@ -52,6 +52,7 @@
 @import "css/components/_0var.scss";
 @import "css/components/_alert.scss";
 @import "css/components/_button.scss";
+@import "css/components/_button-extra.scss";
 @import "css/components/_kbd.scss";
 @import "css/components/_mask.scss";
 @import "css/components/_progress.scss";

@@ -109,13 +109,6 @@ body[data-siteBuilder] > #pageHeader .desktop{
 	height: 58px;
 	-webkit-box-flex:0;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;-moz-box-flex:0;flex:0 0 100%;max-width:100%;
 }
-
-body[data-siteBuilder] > #pageHeader .desktop svg{
-	display: inline-block;
-	width:28px;
-	height: 28px;
-}
-
 body[data-siteBuilder] > #pageContent{
 	@apply pt-2 px-2 pb-2 md:pt-2 md:px-4 md:pb-4;
 	background-color:#EFF6FF;
