@@ -16622,6 +16622,10 @@ body[data-siteBuilder] > #pageHeader .desktop{
   line-height: 40px;
 }
 
+body[data-siteBuilder] > #pageHeader .desktop .btn-primary{
+  min-width: 100px;
+}
+
 [data-desktop] body[data-siteBuilder] > #pageHeader{
   position: sticky;
   top: 0;
