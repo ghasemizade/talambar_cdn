@@ -163,4 +163,11 @@ select.select22-country img{
 	padding-right: 5px;
 	margin-top: 4px;
 }
+.select22-container--default .select22-results__option--selected{
+	background-color: #ddd;
+}
+.select22-results__option[aria-selected="true"]{
+	background-color: #ddd;
+}
+
 
