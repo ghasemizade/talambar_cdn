@@ -8,6 +8,10 @@ label+div .select22 {
 }
 .select22-container{
   display:block;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 14px;
+  min-height: 36px;
 }
 
 .select22-container .select22-selection--single{
@@ -80,9 +84,45 @@ label+div .select22 {
   white-space:nowrap;
 }
 
+.select22-results__option img{
+  height: 19px;
+  max-width: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.select22-results__option svg{
+  height: 19px;
+  max-width: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.select22-selection img{
+  height: 19px;
+  max-width: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.select22-selection svg{
+  height: 19px;
+  max-width: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.select22-selection__choice img{
+  height: 13px;
+  max-width: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.select22-selection__choice svg{
+  height: 13px;
+  max-width: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+
 .select22-results__option .row img{
   width: 3rem;
-  height: 3rem;
   border-radius: 0.5rem;
   overflow: hidden;
   display: block;
@@ -130,11 +170,13 @@ select.select22-country img{
   border-radius: 0.5rem
 }
 .select22-container .select22-search--inline{
-  display: inline-block;
+  /*display: inline-block;*/
+  display: inline;
 }
 .select22-container .select22-search--inline .select22-search__field{
-  min-width: 200px;
+  min-width: 280px;
   font-family: inherit;
+  display: inline-block;
 }
 .select22-search--dropdown .select22-search__field{
   font-size: 16px;
@@ -150,12 +192,12 @@ select.select22-country img{
 }
 
 .select22-container .select22-selection--multiple .select22-selection__rendered{
-	display: inline-block;
+	/*display: inline-block;*/
 }
 .select22-container--default .select22-selection--multiple .select22-selection__choice{
-	font-size: 12px;
+	/*font-size: 12px;*/
 	padding-right: 5px;
-	margin-top: 4px;
+/*	margin-top: 4px;*/
 }
 .select22-container--default .select22-results__option--selected{
 	background-color: #ddd;
