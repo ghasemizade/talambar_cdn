@@ -111,10 +111,6 @@ select.select22, select.select22-country{
   display: block;
   border: 1px solid rgba(0,0,0,0.1);
 }
-[dir="rtl"] .select22 ul{
-  line-height: 24px;
-  font-size: 1.2rem;
-}
 select.select22-country img{
   box-shadow: 0px 0px 5px #aaa;
 }
@@ -137,6 +133,7 @@ select.select22-country img{
   display: inline-block;
 }
 .select22-container .select22-search--inline .select22-search__field{
+  min-width: 200px;
   font-family: inherit;
 }
 .select22-search--dropdown .select22-search__field{
@@ -154,9 +151,6 @@ select.select22-country img{
 
 .select22-container .select22-selection--multiple .select22-selection__rendered{
 	display: inline-block;
-}
-.select22-container--default .select22-selection--multiple{
-	padding-bottom: 0;
 }
 .select22-container--default .select22-selection--multiple .select22-selection__choice{
 	font-size: 12px;
