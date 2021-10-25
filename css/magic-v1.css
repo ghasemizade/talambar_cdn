@@ -16505,16 +16505,6 @@ body[data-siteBuilder]{
 body[data-siteBuilder] > #sidebar{
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  padding: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  body[data-siteBuilder] > #sidebar {
-    padding: 1rem;
-  }
-}
-
-body[data-siteBuilder] > #sidebar {
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
