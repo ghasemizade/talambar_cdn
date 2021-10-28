@@ -16512,6 +16512,11 @@ body[data-siteBuilder] > #sidebar{
   height: calc( 100vh - 58px);
   min-width: 250px;
   width: 300px;
+  font-size: 14px;
+}
+
+[dir="rtl"] body[data-siteBuilder] > #sidebar{
+  font-size: 13px;
 }
 
 [data-pwa] body[data-siteBuilder] > #sidebar{
@@ -16606,7 +16611,7 @@ body[data-siteBuilder] > #sidebar nav{
 body[data-siteBuilder] > #sidebar li a{
   display: block;
   position: relative;
-  padding: 5px 5px 5px 45px;
+  padding: 5px 5px 5px 50px;
   color: #3f4254;
   cursor: pointer;
   line-height: 28px;
@@ -16617,11 +16622,12 @@ body[data-siteBuilder] > #sidebar li a{
 }
 
 [dir="rtl"] body[data-siteBuilder] > #sidebar li a{
-  padding: 5px 45px 5px 5px;
+  padding: 5px 50px 5px 5px;
 }
 
 body[data-siteBuilder] > #sidebar li li a{
   margin-left:30px;
+  color: #585858;
 }
 
 [dir="rtl"] body[data-siteBuilder] > #sidebar li li a{
@@ -16678,6 +16684,10 @@ body[data-siteBuilder] > #sidebar li a svg path{
 }
 
 body[data-siteBuilder] > #sidebar li a:hover svg path{
+  fill:#009ef7
+}
+
+body[data-siteBuilder] > #sidebar li a:focus svg path{
   fill:#009ef7
 }
 
