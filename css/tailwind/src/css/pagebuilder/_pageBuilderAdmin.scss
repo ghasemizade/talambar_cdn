@@ -92,9 +92,10 @@ body[data-siteBuilder] > #sidebar form > label{
 body[data-siteBuilder] > #sidebar nav{
 	margin: 10px 0;
 }
-body[data-siteBuilder] > #sidebar ul li a{
+body[data-siteBuilder] > #sidebar li a{
 	display: block;
-	padding: 5px 15px;
+	position: relative;
+	padding: 5px 5px 5px 45px;
 	color: #3f4254;
 	cursor: pointer;
 	line-height: 28px;
@@ -103,22 +104,60 @@ body[data-siteBuilder] > #sidebar ul li a{
 	border-radius: 7px;
 	margin: 0 15px;
 }
-body[data-siteBuilder] > #sidebar ul li a:hover{
+[dir="rtl"] body[data-siteBuilder] > #sidebar li a{
+	padding: 5px 45px 5px 5px;
+}
+body[data-siteBuilder] > #sidebar li li a{
+	margin-left:30px;
+}
+[dir="rtl"] body[data-siteBuilder] > #sidebar li li a{
+	margin-left:initial;
+	margin-right:30px;
+}
+body[data-siteBuilder] > #sidebar li li a::before{
+	content: "";
+	display: block;
+	width:5px;
+	height: 5px;
+	border-radius: 100%;
+	background-color: #b5b5c3;
+	transition: 0.2s;
+	position: absolute;
+	top: 16px;
+	left: 22px;
+}
+[dir="rtl"] body[data-siteBuilder] > #sidebar li li a::before{
+	left: initial;
+	right: 22px;
+}
+body[data-siteBuilder] > #sidebar li li a:hover::before{
+	background-color: #009ef7;
+}
+body[data-siteBuilder] > #sidebar li a:hover{
 	background-color: #edf2f7;
 }
-body[data-siteBuilder] > #sidebar ul li a:focus{
+body[data-siteBuilder] > #sidebar li a:focus{
 	color: #009ef7;
 }
-body[data-siteBuilder] > #sidebar ul li a svg{
+body[data-siteBuilder] > #sidebar li a svg{
 	display: inline-block;
 	height: 20px;
 	max-width: 20px;
-	margin-right: 5px;
+	position: absolute;
+	top: 10px;
+	left: 15px;
 }
-[dir="rtl"] body[data-siteBuilder] > #sidebar ul li a svg{
-	margin-right: initial;
-	margin-left: 5px;
+[dir="rtl"] body[data-siteBuilder] > #sidebar li a svg{
+	right: 15px;
+	left: initial;
 }
+body[data-siteBuilder] > #sidebar li a svg path{
+	transition: 0.2s;
+}
+body[data-siteBuilder] > #sidebar li a:hover svg path{
+	fill:#009ef7
+}
+
 body[data-siteBuilder] > #pageHeader{
 	@apply shadow;
 	z-index: 10;
