@@ -16599,6 +16599,42 @@ body[data-siteBuilder] > #sidebar form > label{
   line-height: 30px;
 }
 
+body[data-siteBuilder] > #sidebar nav{
+  margin: 10px 0;
+}
+
+body[data-siteBuilder] > #sidebar ul li a{
+  display: block;
+  padding: 5px 15px;
+  color: #3f4254;
+  cursor: pointer;
+  line-height: 28px;
+  border: 1px solid transparent;
+  transition: 0.2s;
+  border-radius: 5px;
+  margin: 0 15px;
+}
+
+body[data-siteBuilder] > #sidebar ul li a:hover{
+  background-color: #edf2f7;
+}
+
+body[data-siteBuilder] > #sidebar ul li a:focus{
+  color: #009ef7;
+}
+
+body[data-siteBuilder] > #sidebar ul li a svg{
+  display: inline-block;
+  height: 20px;
+  max-width: 20px;
+  margin-right: 5px;
+}
+
+[dir="rtl"] body[data-siteBuilder] > #sidebar ul li a svg{
+  margin-right: initial;
+  margin-left: 5px;
+}
+
 body[data-siteBuilder] > #pageHeader{
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
