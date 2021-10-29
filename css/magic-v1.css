@@ -16612,7 +16612,7 @@ body[data-siteBuilder] > #sidebar li a{
   display: block;
   position: relative;
   padding: 5px 5px 5px 50px;
-  color: #3f4254;
+  color: #4a5568;
   cursor: pointer;
   line-height: 28px;
   border: 1px solid transparent;
@@ -16623,6 +16623,16 @@ body[data-siteBuilder] > #sidebar li a{
 
 [dir="rtl"] body[data-siteBuilder] > #sidebar li a{
   padding: 5px 50px 5px 5px;
+}
+
+body[data-siteBuilder] > #sidebar li a:hover{
+  background-color: #edf2f7;
+  color: #3f4254;
+}
+
+body[data-siteBuilder] > #sidebar li a:focus{
+  background-color: #edf2f7;
+  color: #009ef7;
 }
 
 body[data-siteBuilder] > #sidebar li li a{
@@ -16657,14 +16667,6 @@ body[data-siteBuilder] > #sidebar li li a:hover::before{
   background-color: #009ef7;
 }
 
-body[data-siteBuilder] > #sidebar li a:hover{
-  background-color: #edf2f7;
-}
-
-body[data-siteBuilder] > #sidebar li a:focus{
-  color: #009ef7;
-}
-
 body[data-siteBuilder] > #sidebar li a svg{
   display: inline-block;
   height: 20px;
@@ -16683,12 +16685,17 @@ body[data-siteBuilder] > #sidebar li a svg path{
   transition: 0.2s;
 }
 
+body[data-siteBuilder] > #sidebar li a svg path{
+  fill:#777777;
+  transition: 0.2s;
+}
+
 body[data-siteBuilder] > #sidebar li a:hover svg path{
-  fill:#009ef7
+  fill:#009ef7;
 }
 
 body[data-siteBuilder] > #sidebar li a:focus svg path{
-  fill:#009ef7
+  fill:#009ef7;
 }
 
 body[data-siteBuilder] > #pageHeader{
