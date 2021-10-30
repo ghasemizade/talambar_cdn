@@ -16612,7 +16612,7 @@ body[data-siteBuilder] > #sidebar .asideM2{
   margin: 10px 0;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item]{
   display: block;
   position: relative;
   padding: 5px 5px 5px 50px;
@@ -16624,11 +16624,11 @@ body[data-siteBuilder] > #sidebar .asideM2 li a{
   margin: 0 15px 2px;
 }
 
-[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li a{
+[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li [data-item]{
   padding: 5px 50px 5px 5px;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a[data-heading]{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item="heading"]{
   color: #000;
   padding: 5px 5px 5px 15px;
   line-height: 20px;
@@ -16636,42 +16636,52 @@ body[data-siteBuilder] > #sidebar .asideM2 li a[data-heading]{
   margin-bottom: 0;
 }
 
-[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li a[data-heading]{
+[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li [data-item="heading"]{
   padding: 5px 15px 5px 5px;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a[data-heading] svg{
-  display: none;
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item="heading"] svg{
+  display: none!important;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a[data-selected]{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item="seperator"]{
+  display: block;
+  height: 0;
+  border-bottom: 1px solid #eff5f5;
+  margin-top:25px;
+  margin-bottom:25px;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item][data-selected]{
   background-color: #edf2f7;
   color: #3f4254;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a[href]:hover{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item][href]:hover{
   background-color: #edf2f7;
   color: #3f4254;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a[href]:focus{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item][href]:focus{
   background-color: #edf2f7;
   color: #009ef7;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li li a{
+body[data-siteBuilder] > #sidebar .asideM2 li li [data-item]{
   margin-left:30px;
   color: #585858;
   padding: 5px 5px 5px 35px;
 }
 
-[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li li a{
+[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li li [data-item]{
   margin-left:15px;
   margin-right:30px;
   padding: 5px 35px 5px 5px;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li li a::before{
+body[data-siteBuilder] > #sidebar .asideM2 li li [data-item]::before{
   content: "";
   display: block;
   width:5px;
@@ -16684,16 +16694,16 @@ body[data-siteBuilder] > #sidebar .asideM2 li li a::before{
   left: 15px;
 }
 
-[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li li a::before{
+[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li li [data-item]::before{
   left: initial;
   right: 15px;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li li a:hover::before{
+body[data-siteBuilder] > #sidebar .asideM2 li li [data-item]:hover::before{
   background-color: #009ef7;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a svg{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item] svg{
   display: inline-block;
   height: 20px;
   max-width: 20px;
@@ -16702,20 +16712,20 @@ body[data-siteBuilder] > #sidebar .asideM2 li a svg{
   left: 15px;
 }
 
-[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li a svg{
+[dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li [data-item] svg{
   right: 15px;
   left: initial;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a svg path{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item] svg path{
   transition: 0.2s;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a:hover svg path{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item]:hover svg path{
   fill:#009ef7;
 }
 
-body[data-siteBuilder] > #sidebar .asideM2 li a:focus svg path{
+body[data-siteBuilder] > #sidebar .asideM2 li [data-item]:focus svg path{
   fill:#009ef7;
 }
 
