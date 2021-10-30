@@ -16629,7 +16629,7 @@ body[data-siteBuilder] > #sidebar .asideM2 li a{
 }
 
 body[data-siteBuilder] > #sidebar .asideM2 li a[data-heading]{
-  color: #111;
+  color: #000;
   padding: 5px 5px 5px 15px;
   line-height: 20px;
   font-weight: 700;
@@ -16666,7 +16666,7 @@ body[data-siteBuilder] > #sidebar .asideM2 li li a{
 }
 
 [dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li li a{
-  margin-left:initial;
+  margin-left:15px;
   margin-right:30px;
   padding: 5px 35px 5px 5px;
 }
@@ -16680,13 +16680,13 @@ body[data-siteBuilder] > #sidebar .asideM2 li li a::before{
   background-color: #b5b5c3;
   transition: 0.2s;
   position: absolute;
-  top: 16px;
+  top: 17px;
   left: 15px;
 }
 
 [dir="rtl"] body[data-siteBuilder] > #sidebar .asideM2 li li a::before{
   left: initial;
-  right: 22px;
+  right: 15px;
 }
 
 body[data-siteBuilder] > #sidebar .asideM2 li li a:hover::before{
@@ -16698,7 +16698,7 @@ body[data-siteBuilder] > #sidebar .asideM2 li a svg{
   height: 20px;
   max-width: 20px;
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 15px;
 }
 
