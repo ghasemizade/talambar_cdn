@@ -13,6 +13,11 @@
 @import 'css/migrate/share.scss';
 @import 'css/migrate/share1.scss';
 
+@import 'css/migrate/grid/grid.scss';
+@import 'css/migrate/grid/gridLarge.scss';
+@import 'css/migrate/grid/gridMobile.scss';
+@import 'css/migrate/grid/gridPhablet.scss';
+@import 'css/migrate/grid/gridTablet.scss';
 
 @import 'css/migrate/margin.scss';
 @import 'css/migrate/padding.scss';
@@ -36,6 +41,7 @@
 
 @import 'css/migrate/new-elements/uploader.scss';
 @import 'css/migrate/new-elements/circleChart.scss';
+@import 'css/migrate/new-elements/option.scss';
 
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';
