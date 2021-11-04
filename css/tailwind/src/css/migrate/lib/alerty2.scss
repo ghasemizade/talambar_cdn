@@ -93,10 +93,10 @@ body.alerty2-toast-column .alerty2-toast .alerty2-loading{justify-content:center
 body.alerty2-toast-column .alerty2-toast .alerty2-input{height:2em;margin:.3125em auto;font-size:1em}
 body.alerty2-toast-column .alerty2-toast .alerty2-validation-message{font-size:1em}
 
-body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-start,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-left{top:50px;}
-body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-end,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-top-right{top:50px;}
-body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-start,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-left{bottom:50px;}
-body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-end,body[data-panel].alerty2-toast-shown .alerty2-container.alerty2-bottom-right{bottom:50px;}
+body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-top-start,body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-top-left{top:50px;}
+body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-top-end,body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-top-right{top:50px;}
+body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-bottom-start,body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-bottom-left{bottom:50px;}
+body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-bottom-end,body[data-m2].alerty2-toast-shown .alerty2-container.alerty2-bottom-right{bottom:50px;}
 
 [dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-end,[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-right{right:auto;left:0;}
 [dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-start,[dir="rtl"] body.alerty2-toast-shown .alerty2-container.alerty2-top-left{right:0;left:auto}

@@ -47,14 +47,6 @@
 @import 'css/migrate/product1.scss';
 @import 'css/migrate/product2.scss';
 
-@import 'css/migrate/panel/_layout.scss';
-@import 'css/migrate/panel/_header.scss';
-@import 'css/migrate/panel/_titleBox.scss';
-@import 'css/migrate/panel/_aside.scss';
-@import 'css/migrate/panel/_footer.scss';
+
 @import 'css/migrate/panel/_pay.scss';
-@import 'css/migrate/panel/_ticket.scss';
-@import 'css/migrate/panel/_ermileBadge.scss';
-@import 'css/migrate/panel/_themeNight.scss';
-@import 'css/migrate/panel/_themeLight.scss';
 
