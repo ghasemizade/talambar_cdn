@@ -43,6 +43,7 @@
 @import 'css/migrate/new-elements/option.scss';
 @import 'css/migrate/new-elements/stat.scss';
 @import 'css/migrate/new-elements/seo.scss';
+@import 'css/migrate/new-elements/checklist.scss';
 
 @import 'css/migrate/jibres-store-panel/priceBox.scss';
 @import 'css/migrate/jibres-store-panel/storePanel.scss';

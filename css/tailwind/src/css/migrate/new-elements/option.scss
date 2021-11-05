@@ -32,7 +32,7 @@
 	align-items: center;
 	justify-content: center;
 }
-[data-m2] [data-option] .action .btn{
+[data-m2] [data-option] .action [class^="btn-"]{
 	min-width: 180px;
 }
 [data-m2] [data-option] .action .radio1{
@@ -103,7 +103,7 @@
 	font-size: 10px;
 	color: #777;
 }
-[data-m2] [data-option] .btn.primary{
+[data-m2] [data-option] .btn-primary{
 	border-radius: 5px;
 	font-size: 14px;
 	font-weight: normal;
@@ -170,7 +170,7 @@ html[lang=fa] [data-m2] [data-option] .switch1 input:checked+label:first-of-type
 	display: inline-block;
 	line-height: 40px;
 }
-[data-m2] [data-option] footer .btn.link{
+[data-m2] [data-option] footer .btn-link{
 	line-height: 24px;
 	padding-right: 5px;
 	padding-left: 5px;
