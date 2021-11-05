@@ -27,6 +27,9 @@
 @import "css/base/_borderColor.scss";
 
 
+/*add lib style*/
+@import 'css/lib/kerkere.scss';
+
 /*add pwa style*/
 @import 'css/pwa/app.scss';
 @import 'css/pwa/layout.scss';
