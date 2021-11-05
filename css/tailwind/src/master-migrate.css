@@ -41,6 +41,7 @@
 @import 'css/migrate/new-elements/uploader.scss';
 @import 'css/migrate/new-elements/circleChart.scss';
 @import 'css/migrate/new-elements/option.scss';
+@import 'css/migrate/new-elements/stat.scss';
 
 @import 'css/migrate/blog1.scss';
 @import 'css/migrate/productPage.scss';

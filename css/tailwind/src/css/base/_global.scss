@@ -33,4 +33,16 @@ img[src="#"] {
   visibility: hidden;
 }
 
+[dir="ltr"] .txtRa{
+	text-align: right!important;
+}
+[dir="rtl"] .txtRa{
+	text-align: left!important;
+}
 
+[dir="ltr"] .txtLa{
+	text-align: left!important;
+}
+[dir="rtl"] .txtLa{
+	text-align: right!important;
+}
