@@ -68,6 +68,7 @@
 
 /* responsive*/
 @import "css/responsive/_switchResponsive.scss";
+@import "css/responsive/_print.scss";
 @import "css/responsive/_dev.scss";
 
 
