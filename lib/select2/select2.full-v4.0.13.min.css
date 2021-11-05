@@ -154,14 +154,7 @@ select.select22, select.select22-country{
 select.select22-country img{
   box-shadow: 0px 0px 5px #aaa;
 }
-#select22-country-container img{
-  display: block;
-  height: 3.4rem;
-  padding: 7px 0;
-  width: auto;
-  margin:0 auto;
-}
-.select22 img{
+.select22 .select22-selection__rendered > img{
   display: inline-block;
   vertical-align: top;
   max-height: 28px;
