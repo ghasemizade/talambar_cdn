@@ -17314,6 +17314,10 @@ body .rtl .items li .go::after{
     color:#000;
   }
 
+  .iziToast-wrapper{
+    display: none!important;
+  }
+
   body #sidebar {
     display: none!important;
   }
