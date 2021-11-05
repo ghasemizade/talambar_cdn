@@ -5,12 +5,14 @@
 @import 'css/migrate/box.scss';
 @import 'css/migrate/starRating.scss';
 @import 'css/migrate/table1.scss';
+@import 'css/migrate/table2.scss';
 @import 'css/migrate/kerkere.scss';
 @import 'css/migrate/msg.scss';
 @import 'css/migrate/spay.scss';
 @import 'css/migrate/pagination.scss';
 @import 'css/migrate/share.scss';
 @import 'css/migrate/share1.scss';
+@import 'css/migrate/welcome.scss';
 
 @import 'css/migrate/grid/grid.scss';
 @import 'css/migrate/grid/gridLarge.scss';
