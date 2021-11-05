@@ -64,6 +64,7 @@
 
 /* customized elements*/
 @import "css/custom/_magicBox.scss";
+@import 'css/custom/items.scss';
 
 /* responsive*/
 @import "css/responsive/_switchResponsive.scss";

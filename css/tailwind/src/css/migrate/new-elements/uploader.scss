@@ -105,10 +105,8 @@ body.dragging{
   transition: 0.3s;
 }
 [data-uploader][data-uploader-count] input[type='file']+label{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+  padding: 1rem 1rem 0;
+  line-height: 1.5rem;
 }
 [data-uploader][data-size='large'] input[type='file'] + label{
   padding-top: 50px;
