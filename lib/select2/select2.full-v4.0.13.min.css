@@ -84,25 +84,25 @@ label+div .select22 {
   white-space:nowrap;
 }
 
-.select22-results__option img{
+.select22-results__option > img{
   height: 19px;
   max-width: 50px;
   overflow: hidden;
   display: inline-block;
 }
-.select22-results__option svg{
+.select22-results__option > svg{
   height: 19px;
   max-width: 50px;
   overflow: hidden;
   display: inline-block;
 }
-.select22-selection img{
+.select22-selection .select22-selection__rendered > img{
   height: 19px;
   max-width: 50px;
   overflow: hidden;
   display: inline-block;
 }
-.select22-selection svg{
+.select22-selection .select22-selection__rendered > svg{
   height: 19px;
   max-width: 50px;
   overflow: hidden;
@@ -164,10 +164,9 @@ select.select22-country img{
 .select22 img{
   display: inline-block;
   vertical-align: top;
-  max-height: 40px;
-  width: 40px;
-  margin-top: 2px;
-  border-radius: 0.5rem
+  max-height: 28px;
+  width: 28px;
+  border-radius: 5px;
 }
 .select22-container .select22-search--inline{
   /*display: inline-block;*/
