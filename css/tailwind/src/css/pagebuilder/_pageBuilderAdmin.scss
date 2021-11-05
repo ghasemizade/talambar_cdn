@@ -133,8 +133,8 @@ body[data-m2] > #sidebar .asideM2 li [data-item="seperator"]{
 	display: block;
 	height: 0;
 	border-bottom: 1px solid #eff5f5;
-	margin-top:25px;
-	margin-bottom:25px;
+	margin-top:15px;
+	margin-bottom:15px;
 	padding-top:0;
 	padding-bottom:0;
 }
@@ -150,13 +150,13 @@ body[data-m2] > #sidebar .asideM2 li [data-item][href]:focus{
 	color: #009ef7;
 }
 body[data-m2] > #sidebar .asideM2 li li [data-item]{
-	margin-left:60px;
+	margin-left:45px;
 	color: #585858;
 	padding: 5px 5px 5px 20px;
 }
 [dir="rtl"] body[data-m2] > #sidebar .asideM2 li li [data-item]{
 	margin-left:15px;
-	margin-right:60px;
+	margin-right:45px;
 	padding: 5px 20px 5px 5px;
 }
 [dir="rtl"] body[data-m2] > #sidebar .asideM2 li li [data-item]::before{
