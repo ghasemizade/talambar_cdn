@@ -16934,8 +16934,9 @@ body .rtl .items li .go::after{
 }
 
 .items.long li svg{
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
 }
 
 .items.long li img{
