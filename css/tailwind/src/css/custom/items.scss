@@ -328,6 +328,10 @@ body .rtl .items li .go::after{
 	height: 40px;
 	line-height: 30px;
 }
+.items.long li svg{
+	max-width: 20px;
+	max-height: 20px;
+}
 .items.long li img{
 	max-width: 30px;
 	max-height: 30px;
