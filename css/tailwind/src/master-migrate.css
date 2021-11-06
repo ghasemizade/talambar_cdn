@@ -39,6 +39,7 @@
 @import 'css/migrate/lib/alerty2.scss';
 @import 'css/migrate/lib/iziToast.scss';
 @import 'css/migrate/lib/nprogress.scss';
+@import 'css/migrate/lib/ck.scss';
 
 @import 'css/migrate/new-elements/uploader.scss';
 @import 'css/migrate/new-elements/circleChart.scss';
