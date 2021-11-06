@@ -14243,6 +14243,10 @@ a.stat:active{
   display: none;
 }
 
+body[data-in="pay"]{
+  background-color: #F9F7F7;
+}
+
 .payTicket{
   min-width: 280px;
   height: 120px;
@@ -14262,13 +14266,28 @@ a.stat:active{
   width: 100%;
 }
 
-.payTicket .topBox .price{
-  display: inline-block;
+.payTicket .topBox .priceBlock{
+  position: relative;
+  top: 20px;
+  display: block;
   max-width: 100%;
-  height: 120px;
+  height: 80px;
   vertical-align: middle;
   font-size: 30px;
-  line-height: 120px;
+  line-height: 80px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.payTicket .topBox .priceBlock .price2{
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  max-width: 100%;
+  height: 80px;
+  vertical-align: middle;
+  font-size: 30px;
+  line-height: 80px;
   overflow: hidden;
   transition: 0.2s;
 }
@@ -14293,11 +14312,12 @@ a.stat:active{
 .payTicket .breakLine:before, .payTicket .breakLine:after {
   content: '';
   position: absolute;
-  right: -5px;
-  width: 20px;
-  height: 20px;
+  right: -4px;
+  width: 30px;
+  height: 30px;
   top: 50%;
-  border: 5px solid transparent;
+  z-index: 1;
+  border: 7px solid transparent;
   border-top-color: #d7dbde;
   border-right-color: #d7dbde;
   border-radius: 100%;
@@ -14337,6 +14357,12 @@ a.stat:active{
   height: 120px;
   display: block;
   text-align: center;
+}
+
+.payTicket .status .myStatus svg{
+  width: 45px;
+  height: 45px;
+  margin: 20px auto;
 }
 
 .payTicket .status .statusDesc{
@@ -14457,6 +14483,13 @@ a.stat:active{
   color: #555;
   font-size: 12px;
   margin: 0 auto;
+  background-color: #DBE2EF;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.payTicketDetail .tbl1{
+  border-radius: 5px
 }
 
 .payTicketDetail .msg{
@@ -14476,8 +14509,8 @@ a.stat:active{
 }
 
 .ticketPage .ticketSidebar .hero img{
-  width: 12px;
-  height: 12px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
   display: block;
   border-radius: 50%;
