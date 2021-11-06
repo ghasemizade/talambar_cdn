@@ -15854,6 +15854,7 @@ img[src="#"] {
 .btn-icon{
   position: relative;
   overflow: hidden;
+  min-height: 31px;
 }
 
 [dir="ltr"] .btn-icon{
@@ -15907,6 +15908,14 @@ img[src="#"] {
 
 .btn-icon span{
   display: inline-block;
+}
+
+[class^="btn-"] svg{
+  min-height: 30px;
+}
+
+.btn-sm svg{
+  min-height: 28px;
 }
 
 .kbd {

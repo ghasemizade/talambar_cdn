@@ -8,6 +8,7 @@
 .btn-icon{
   position: relative;
   overflow: hidden;
+  min-height: 31px;
 }
 [dir="ltr"] .btn-icon{
   padding-left: 3rem;
@@ -52,3 +53,11 @@
 .btn-icon span{
   display: inline-block;
 }
+
+[class^="btn-"] svg{
+  min-height: 28px;
+}
+.btn-sm svg{
+  min-height: 28px;
+}
+
