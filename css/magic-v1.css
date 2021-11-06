@@ -15911,7 +15911,7 @@ img[src="#"] {
 }
 
 [class^="btn-"] svg{
-  min-height: 28px;
+  min-height: 24px;
 }
 
 .btn-sm svg{
