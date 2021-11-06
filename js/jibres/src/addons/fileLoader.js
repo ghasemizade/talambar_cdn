@@ -214,8 +214,8 @@ function readPageSelect2()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.css?v=5");
-    myUrl = urlJibres('cdn') + "lib/select2/src/select2.full-v4.0.13.js?v=5";
+    StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.css?v=6");
+    myUrl = urlJibres('cdn') + "lib/select2/src/select2.full-v4.0.13.js?v=6";
     fileLoader(myUrl, 'runPageSelect2', true);
   }
 }
@@ -230,7 +230,7 @@ function readPageUploader()
     // load style
     // StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
     // load script
-    myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=5";
+    myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=6";
     fileLoader(myUrl, 'runUploader', true);
   }
 }
