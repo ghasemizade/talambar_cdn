@@ -31,7 +31,7 @@
   position: relative;
   margin-top: 5px;
 }
-// multi line
+
 [data-pwa] .ticketPage .messageLine[data-line-1]{
   margin-top: 10px;
 }
@@ -64,14 +64,14 @@
 .ticketPage .messageBox[data-user]{
   border-radius: 10px 10px 0 10px;
 }
-// rtl
+
 [dir="rtl"] .ticketPage .messageBox{
   border-radius: 10px 10px 0 10px;
 }
 [dir="rtl"] .ticketPage .messageBox[data-user]{
   border-radius: 10px 10px 10px 0;
 }
-// show rounded for multi
+
 .ticketPage .messageLine[data-line-multi] .messageBox{
   border-radius: 10px;
 }
@@ -164,7 +164,7 @@
   margin:0 auto;
 }
 
-// answer box
+
 .ticketPage .quickReply{
   font-size: 14px;
   line-height: 2;

@@ -118,12 +118,12 @@
 [data-pwa] [data-m2] [data-option] footer{
 	padding: 0 10px;
 }
-// switch
+
 
 [data-m2] [data-option] .switch1 label:first-of-type{
 	min-width: 90px;
 }
-// switch on fa
+
 html[lang=fa] [data-m2] [data-option] .switch1 label:first-of-type{
 	min-width: 100px;
 }
@@ -135,7 +135,7 @@ html[lang=fa] [data-m2] [data-option] .switch1 input:checked+label:first-of-type
 	font-size: 14px;
 }
 
-// table
+
 [data-m2] [data-option] table{
 	margin: 0;
 	border-radius: 0;

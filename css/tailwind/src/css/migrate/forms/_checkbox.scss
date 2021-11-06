@@ -47,12 +47,18 @@
 	padding:0;
 	display:block;
 	line-height: 36px;
+	height: 36px;
   font-size: 18px;
   transition: 0.3s;
   overflow: hidden;
   border-radius: 5px;
   background-color: #f9f9f9;
   color: #37474f;
+}
+.checkIcon label svg{
+	padding: 7px;
+	width: 36px;
+	height: 36px;
 }
 .checkIcon input:checked+label::after{
 	content:'';

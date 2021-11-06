@@ -17,25 +17,25 @@
 .stat.nok{
   background-color: #ffe082;
 }
-// available
+
 .stat.available h3{
   color: #2e7d32;
 }
 .stat.available .val{
 	border-bottom: 2px solid #20b040;
 }
-// unavailable
+
 .stat.unavailable h3{
   color: #fa4444;
 }
 .stat.unavailable .val{
 	border-bottom: 2px solid #fa4444;
 }
-// colors
+
 .stat.green .val{
   color: #016936;
 }
-// active
+
 .stat.active{
 	transform: scale(0.97);
 }
@@ -75,14 +75,14 @@
 	color: #777;
 	line-height: 30px;
 }
-// reaction
+
 a.stat:hover{transform: scale(0.95);}
 .stat:hover{background-color: #f7f7f7;}
 .stat:focus{box-shadow: 0 0 10px #ddd;}
 .stat:focus h3{opacity: 1;}
 a.stat:active{transform: scale(0.9);}
 .stat:active{background-color: #e6e5eb;}
-// size x70
+
 .stat.x70{
   height: 70px;
   font-size: 12px;
@@ -98,7 +98,7 @@ a.stat:active{transform: scale(0.9);}
 	padding-bottom: 5px;
 	height: 40px;
 }
-// size x50
+
 .stat.x50{
   height: 50px;
   font-size: 10px;
@@ -115,7 +115,7 @@ a.stat:active{transform: scale(0.9);}
 	padding-bottom: 5px;
 	height: 30px;
 }
-// size x120
+
 .stat.x120{
   height: 120px;
   font-size: 18px;

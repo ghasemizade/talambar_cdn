@@ -34,7 +34,7 @@
   .printArea[data-height='auto']{height: auto;}
 }
 
-// print all printArea with color
+
 .printArea{
 	-webkit-print-color-adjust: exact;
 }
@@ -42,7 +42,7 @@
 .pageBreakBefore{page-break-before: always;}
 .keepTogether{page-break-inside: avoid;}
 
-// minimum padding
+
 .printArea[data-size='A4']               { padding: 3mm;}
 .printArea[data-size='A4.landscape']     { padding: 3mm;}
 

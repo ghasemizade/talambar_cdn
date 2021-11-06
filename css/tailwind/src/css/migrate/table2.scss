@@ -50,26 +50,26 @@
 	width: 200px;
 }
 
-// fix align center
+
 .tbl2.txtC th, .tbl2.txtC td {
 	text-align: center;
 }
 
-// repeatHead
+
 .tbl2.repeatHead{
 	-fs-table-paginate: paginate;
 }
 .tbl2.repeatHead thead{
 	display: table-header-group;
 }
-// repeatFoot
+
 .tbl1.repeatFoot tfoot{
 	display: table-footer-group;
 }
 .tbl1 tfoot.dontRepeatFoot{
 	display: table-row-group;
 }
-// minimal
+
 .tbl2.minimal thead tr{
 	font-size: 10px;
 }
@@ -81,7 +81,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 }
-// break
+
 .tbl2 td.breakWord {
 	word-break:break-word;
 }
