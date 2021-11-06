@@ -48,6 +48,7 @@
 @import 'css/migrate/new-elements/seo.scss';
 @import 'css/migrate/new-elements/checklist.scss';
 @import 'css/migrate/new-elements/chart.scss';
+@import 'css/migrate/new-elements/items2.scss';
 
 @import 'css/migrate/jibres-store-panel/priceBox.scss';
 @import 'css/migrate/jibres-store-panel/storePanel.scss';
