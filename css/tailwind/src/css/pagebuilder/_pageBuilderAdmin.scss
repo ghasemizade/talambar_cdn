@@ -52,7 +52,7 @@ body[data-m2] > #sidebar{
 [data-pwa] body[data-m2] > #sidebar[data-active]{
 	display: block!important;
 }
-[data-pwa] body[data-m2] > #sidebar::before{
+[data-pwa] body::before{
 	content: "";
 	position: fixed;
 	top: 0;
@@ -63,7 +63,8 @@ body[data-m2] > #sidebar{
 	opacity: 0;
 	z-index: -1;
 }
-[data-pwa] body[data-m2] > #sidebar[data-active]::before{
+[data-pwa] body[data-aside]::before{
+	z-index: 100;
 	opacity: 1;
 }
 [data-pwa] body[data-m2] > #sidebar[data-size="mini"]{
