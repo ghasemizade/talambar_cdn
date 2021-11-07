@@ -17511,7 +17511,7 @@ body[data-m2] > #sidebar{
 
 [data-pwa][dir="rtl"] body[data-m2] > #sidebar{
   right: initial;
-  left: 10px;
+  left: 5px;
 }
 
 [data-pwa] body[data-m2] > #sidebar[data-active]{
@@ -17598,11 +17598,6 @@ body[data-m2] > #sidebar .asideM2 li li [data-item]{
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 1px;
-  line-height: 20px;
-}
-
-[data-pwa] body[data-m2] > #sidebar .asideM2 li [data-item] svg{
-  top: 5px;
 }
 
 body[data-m2] > #sidebar .asideM2 li [data-item="heading"]{
