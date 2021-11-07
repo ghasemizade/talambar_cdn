@@ -14111,6 +14111,10 @@ img[src="#"] {
   transition:0.3s;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.24);
   touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #pageFooter .pwa:empty{
@@ -17598,6 +17602,11 @@ body[data-m2] > #sidebar .asideM2 li li [data-item]{
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 1px;
+  line-height: 25px;
+}
+
+[data-pwa] body[data-m2] > #sidebar .asideM2 li [data-item] svg{
+  top: 7px;
 }
 
 body[data-m2] > #sidebar .asideM2 li [data-item="heading"]{
@@ -17695,6 +17704,10 @@ body[data-m2] > #sidebar .asideM2 li [data-item]:focus svg path{
 body[data-m2] > #pageHeader{
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   z-index: 10;
   overflow: hidden;
 }

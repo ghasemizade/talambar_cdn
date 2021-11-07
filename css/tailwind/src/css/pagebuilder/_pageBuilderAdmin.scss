@@ -121,6 +121,10 @@ body[data-m2] > #sidebar .asideM2 li li [data-item]{
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-bottom: 1px;
+	line-height: 25px;
+}
+[data-pwa] body[data-m2] > #sidebar .asideM2 li [data-item] svg{
+	top: 7px;
 }
 body[data-m2] > #sidebar .asideM2 li [data-item="heading"]{
 	color: #000;
@@ -199,6 +203,7 @@ body[data-m2] > #sidebar .asideM2 li [data-item]:focus svg path{
 }
 body[data-m2] > #pageHeader{
 	@apply shadow;
+	@apply select-none;
 	z-index: 10;
 	overflow: hidden;
 }
