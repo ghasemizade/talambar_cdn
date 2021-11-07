@@ -47,15 +47,6 @@ function handlePWASlideBar()
       }
     }
   });
-
-  $('#sidebar a[href]').on('click', function()
-  {
-      setTimeout(function()
-      {
-        console.log('hide after click');
-        pwaSidebarHide();
-      }, 200);
-  });
 }
 
 

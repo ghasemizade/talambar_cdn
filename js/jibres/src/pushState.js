@@ -4,6 +4,7 @@ function pushStateSiftal(_direct)
   runDataResponse();
   runInputFileFunc();
   responsiveSidebar();
+  pwaSidebarHide();
   // setLanguageURL(_direct);
   runLazyLoad();
   // runSortable();
