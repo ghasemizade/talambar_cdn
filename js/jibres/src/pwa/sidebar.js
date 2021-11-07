@@ -4,7 +4,7 @@ function handlePWASlideBar()
 {
   $('body').off('mousedown.hamburger touchmove.hamburger').on('mousedown touchmove', function(_e)
   {
-    if($(_e.target).parents('html[data-pwa]').length === 1)
+    if(isPagePWA())
     {
       if($(_e.target).parents('.hamburger').length || $(_e.target).hasClass('hamburger') )
       {
@@ -53,7 +53,10 @@ function pwaSidebarShow()
 
 function pwaSidebarHide()
 {
-  $('body').attr('data-aside', null);
-  $('#sidebar').hide(100).attr('data-active', null);
-  $('#pageHeader .pwa .hamburger').attr('data-active', null);
+  if(isPagePWA())
+  {
+    $('body').attr('data-aside', null);
+    $('#sidebar').hide(100).attr('data-active', null);
+    $('#pageHeader .pwa .hamburger').attr('data-active', null);
+  }
 }
