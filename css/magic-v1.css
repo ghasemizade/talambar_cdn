@@ -14144,11 +14144,13 @@ img[src="#"] {
   margin: 0 auto;
 }
 
-#pageFooter .pwa .icon i{
-  font-style: normal;
+#pageFooter .pwa .icon svg{
   position: relative;
   display: inline-block;
-  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 #pageFooter .pwa .title{
