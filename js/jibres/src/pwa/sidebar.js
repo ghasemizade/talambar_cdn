@@ -43,6 +43,7 @@ function handlePWASlideBar()
 
 function pwaSidebarShow()
 {
+  $('body').attr('data-aside', '');
   $('#sidebar').show(100).attr('data-active', "");
   $('#pageHeader .pwa .hamburger').attr('data-active', "");
 }
@@ -50,6 +51,7 @@ function pwaSidebarShow()
 
 function pwaSidebarHide()
 {
+  $('body').attr('data-aside', null);
   $('#sidebar').hide(100).attr('data-active', null);
   $('#pageHeader .pwa .hamburger').attr('data-active', null);
 }

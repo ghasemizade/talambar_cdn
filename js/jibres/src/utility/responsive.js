@@ -28,6 +28,11 @@ function responsiveSidebar()
     {
       $("body").attr('data-sidebar', null);
     }
+    // if($('body #sidebar').is(':visible'))
+    // {
+    //   console.log('hide dada');
+    //   $("body").attr('data-sidebar', null);
+    // }
   });
 
   $('#sidebar a[href]').on('click', function()
@@ -35,7 +40,7 @@ function responsiveSidebar()
       setTimeout(function()
       {
         $("body").attr('data-sidebar', null);
-      }, 500);
+      }, 100);
   });
 
   $('.toggleClean').off('click');
