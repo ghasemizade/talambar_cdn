@@ -22,6 +22,17 @@
 [dir="rtl"] .btn-icon.btn-sm{
   padding-right: 2.5rem;
 }
+
+[class^="btn-"] svg{
+  height: 24px;
+}
+.btn-sm svg{
+  height: 21px;
+}
+.btn-lg svg{
+  height: 30px;
+}
+
 .btn-icon svg{
   position: absolute;
   top: 0;
@@ -36,9 +47,17 @@
   transition: 0.2s;
   background-color: rgba(0,0,0,0.05);
   opacity: 0.5;
+  height: 36px;
 }
 .btn-icon.btn-sm svg{
   padding: 3px;
+  height: 29px;
+  color: #5C5F62;
+}
+.btn-icon.btn-lg svg{
+  padding: 3px;
+  height: 46px;
+  color: #5C5F62;
 }
 [dir="rtl"] .btn-icon svg{
   left: inherit;
@@ -53,11 +72,3 @@
 .btn-icon span{
   display: inline-block;
 }
-
-[class^="btn-"] svg{
-  min-height: 24px;
-}
-.btn-sm svg{
-  min-height: 28px;
-}
-
