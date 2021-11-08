@@ -1,7 +1,7 @@
 /* sortable list styles*/
 [data-sortable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 [data-sortable] [data-handle]{cursor:grab!important;transition: 0.3s;}
-[data-sortable] .sortHanle{cursor:grab!important;transition: 0.3s;}
+[data-sortable] .sortHandle{cursor:grab!important;transition: 0.3s;}
 [data-sortable] .isChoosen{opacity:0.8;}
 [data-sortable] .sortable-ghost{opacity: 0.5;}
 [data-sortable] > li.disabled{opacity:.5}
@@ -9,29 +9,26 @@
 [data-sortable] > li.sortable-placeholder{border-color:#CCC}
 [data-sortable] > li .title{cursor:move;cursor: -webkit-grabbing;}
 
-// dragable item style
-.sortable-drag{list-style: none;padding: 0 1rem;opacity: 0.3;}
+.sortable-drag{list-style: none;padding: 0 10px;opacity: 0.3;}
 .sortable-drag li{list-style: none;}
 .sortable-drag i{opacity: 0;}
 .sortable-drag .value{opacity: 0;}
 
-
-// sortable for roundedBox
 [data-sortable] .roundedBox{
 	display: inline-block;
-	max-width: 15rem;
-	max-height: 20rem;
-	margin: 0.5rem;
+	max-width: 150px;
+	max-height: 200px;
+	margin: 5px;
 }
 [data-sortable][data-ratio='16x9'] .roundedBox{
-	max-width: 12.5rem;
-	height: 7rem;
-	margin: 0.5rem;
+	max-width: 125px;
+	height: 70px;
+	margin: 5px;
 }
 [data-sortable][data-ratio='1x1'] .roundedBox{
-	max-width: 10rem;
-	height: 10rem;
-	margin: 0.5rem;
+	max-width: 100px;
+	height: 100px;
+	margin: 5px;
 }
 [data-sortable] .roundedBox .overlay{
 	margin: 0;
@@ -40,8 +37,6 @@
 [data-sortable] .roundedBox.sortable-ghost .overlay:after{
 	background: linear-gradient(to bottom, transparent 31%, rgba(0,0,0,0.32) 55%, #9c4f4f 100%)
 }
-
-
 
 [data-sortable][data-willy] .roundedBox:nth-child(2n) {
   animation-name: willy1;
@@ -59,7 +54,6 @@
   animation-delay: -.4s;
   animation-duration: .25s;
 }
-
 
 @keyframes willy1 {
   0% {
