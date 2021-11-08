@@ -6231,7 +6231,7 @@ html[lang=fa] .switch1.gender input:checked + label:first-of-type:before {
 .txt[data-autoResize]{
   line-height:20px;
   padding: 7px 10px;
-  max-height: 50px;
+  max-height: 500px;
   will-change: height;
 }
 
