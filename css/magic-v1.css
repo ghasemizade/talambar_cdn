@@ -16599,7 +16599,7 @@ img[src="#"] {
 }
 
 [data-magicbox="zoom"]:hover{
-  transform: scale(1.03);
+  transform: scale(1.02);
   filter: brightness(110%);
   z-index: 9;
 }
