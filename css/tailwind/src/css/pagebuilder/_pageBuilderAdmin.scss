@@ -26,6 +26,9 @@ body[data-m2] > #sidebar{
 [dir="rtl"] body[data-m2] > #sidebar{
 	font-size: 13px;
 }
+body[data-m2="wide"] > #sidebar{
+	display: none;
+}
 [data-pwa] body[data-m2] > #sidebar{
 	min-width: 0;
 	max-width: 90%;

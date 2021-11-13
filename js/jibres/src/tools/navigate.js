@@ -132,6 +132,8 @@
     $('body').attr('data-panel', obj.panel);
     // set siteBuilder
     $('body').attr('data-siteBuilder', obj.siteBuilder);
+    // set m2
+    $('body').attr('data-m2', obj.m2);
 
     $window.trigger('navigate:render:filter:before', obj.filter);
 
