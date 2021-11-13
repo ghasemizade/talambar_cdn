@@ -13,18 +13,6 @@
   color: red;
   width: 180px;
 }
-.printArea .invoice[data-theme="1"] .logo img{
-  max-height: 60px;
-  display: block;
-  margin: 5px 10px;
-}
-.printArea .invoice[data-theme="1"] h1{
-  font-size: 30px;
-  line-height: 65px;
-  margin: 0;
-  font-weight: 900;
-  color: #0d47a1;
-}
 .printArea .invoice[data-theme="1"] .oneSide{
   font-size: 11px;
   line-height: 20px;
@@ -41,7 +29,6 @@
   font-size: 15px;
   font-weight: 700;
   text-align: center;
-  padding-top: 5px;
   line-height: 25px;
   height: 100%;
   background-color: #ddd;
