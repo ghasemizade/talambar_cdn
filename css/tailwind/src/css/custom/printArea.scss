@@ -27,6 +27,7 @@
   .printArea[data-size='legal']            { width: 216mm; min-height: 356mm; height: 356mm; }
   .printArea[data-size='legal.landscape']  { width: 357mm; min-height: 215mm; height: 215mm; }
   .printArea[data-size='receipt8']         { width: 84mm;  padding:10mm 4mm 1mm; }
+  .printArea[data-size='receipt8']         { width: 79mm;  padding:5mm 4mm 1mm; }
 
   .printArea[data-size='A4'] .invoice{width: 204mm;}
   .printArea[data-size='A4.landscape'] .invoice{width: 291mm;}
