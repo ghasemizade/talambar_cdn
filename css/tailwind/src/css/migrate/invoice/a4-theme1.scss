@@ -13,40 +13,7 @@
   color: red;
   width: 180px;
 }
-.printArea .invoice[data-theme="1"] .oneSide{
-  font-size: 11px;
-  line-height: 20px;
-  border: 1px solid #777;
-  border-radius: 2px;
-  background-color: #f1f1f1;
-  margin-bottom: 5px;
-}
-.printArea .invoice[data-theme="1"] .oneSide .title{
-  font-weight: 900;
-}
-.printArea .invoice[data-theme="1"] .oneSide h2{
-  margin: 0;
-  font-size: 15px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 25px;
-  height: 100%;
-  background-color: #ddd;
-}
-.printArea .invoice[data-theme="1"] .oneSide code{
-  float: right;
-  line-height: 20px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  direction: ltr;
-  text-align: left;
-}
-[dir="rtl"] .printArea .invoice[data-theme="1"] .oneSide code{
-  float: left;
-}
-.printArea .invoice[data-theme="1"] .oneSide b{
 
-}
 
 .printArea .invoice[data-theme="1"] table{
   margin-top: 15px;
