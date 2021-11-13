@@ -1,5 +1,5 @@
 /* Design for print */
-
+@media print {
   html{
     height:auto;
     min-height:initial;
@@ -55,8 +55,8 @@
 
   body .tbl1.v1 thead{color:#000;background-color:#aaa;}
   body .tbl1 tbody td{color:#000;}
-  body table td{color:#000;}
-  body table td code{color:#000;}
+  body .tbl1 td{color:#000;}
+  body .tbl1 td code{color:#000;}
 
   #main {overflow: auto;}
   #content {overflow: auto;}
@@ -133,7 +133,7 @@
     font-size: 10px!important;
   }
 
-
+}
 
 @page {
   margin:0.2cm;
