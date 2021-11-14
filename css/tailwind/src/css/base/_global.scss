@@ -50,4 +50,10 @@ img[src="#"] {
 video[data-clickable]{
 	cursor: pointer;
 }
+video[data-clickable]::after{
+	content: "";
+	background-color: red;
+	width: 100px;
+	height: 100px;
+}
 
