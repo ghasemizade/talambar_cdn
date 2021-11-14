@@ -12594,6 +12594,10 @@ img[src="#"] {
   text-align: right!important;
 }
 
+video[data-clickable]{
+  cursor: pointer;
+}
+
 .text-transparent{
   color: transparent;
 }

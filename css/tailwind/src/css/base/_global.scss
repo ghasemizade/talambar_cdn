@@ -46,3 +46,8 @@ img[src="#"] {
 [dir="rtl"] .txtLa{
 	text-align: right!important;
 }
+
+video[data-clickable]{
+	cursor: pointer;
+}
+

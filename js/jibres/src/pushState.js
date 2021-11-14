@@ -30,6 +30,8 @@ function pushStateSiftal(_direct)
   dataCopy();
   // add typed
   typeTitles();
+  // add player
+  mPlayer();
   // Run draw barcode lib
   JsBarcodeRunner();
   // run form tools

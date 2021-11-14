@@ -71,6 +71,7 @@ var myModuleFiles =
 	'src/utility/handleDrag.js',
 	'src/utility/resizeDetector.js',
 	'src/utility/timezoneDetector.js',
+	'src/utility/mPlayer.js',
 
 	'src/utility/input-files.js',
 	'src/utility/language.js',
