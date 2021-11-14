@@ -16780,6 +16780,7 @@ body .ltr .items li + li::before{
   overflow:hidden;
   max-width: 40px;
   max-height: 40px;
+  padding: 7px;
   border-radius: 5px;
 }
 
@@ -17389,6 +17390,9 @@ body .rtl .items li .go::after{
 
 .keepTogether{
   page-break-inside: avoid;
+}
+
+.printArea[data-size='A5']               { padding: 3mm;
 }
 
 .printArea[data-size='A4']               { padding: 3mm;
