@@ -18,6 +18,7 @@ function readPageAllScripts(_force, _page)
   readPageSelect2();
   readPageUploader();
   readPageRangeSlider();
+  readPageVideoPlyr();
 
   // bootstrap accordion
   readBootstrapAccordion();
@@ -246,6 +247,20 @@ function readPageRangeSlider()
     StyleLoader(urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.css?v=1");
     myUrl = urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.js?v=1";
     fileLoader(myUrl, 'runRangeSlider', true);
+  }
+}
+
+
+function readPageVideoPlyr()
+{
+  var myEl = $('.plyr');
+
+  if(myEl && myEl.length > 0)
+  {
+    // load script
+    StyleLoader(urlJibres('cdn') + "lib/plyr/3.6.9/plyr.css?v=1");
+    myUrl = urlJibres('cdn') + "lib/plyr/3.6.9/plyr.polyfilled.js?v=1";
+    fileLoader(myUrl, 'runVideoPlyr', true);
   }
 }
 
