@@ -10,6 +10,7 @@ function loadThirdPartyScripts(_force, _page)
   loadScriptCrisp();
   loadScriptRaychat();
   loadScriptImber();
+  loadScriptGoftino();
   loadScriptMediaad();
 }
 
@@ -141,7 +142,7 @@ function loadScriptImber()
   {
     // load script
     myUrl = "https://widget.imber.live/imber?id=" + myImber;
-    if(localStorage && localStorage.getItem("imber_token")) + '?jibres=' + urlEnv();
+    if(localStorage && localStorage.getItem("imber_token"))
     {
       myUrl += '&token=' + localStorage.getItem("imber_token");
     }
@@ -158,6 +159,33 @@ function loadScriptImber()
     fileLoader(myUrl, 'runImber', true, undefined, 'defer utf8 crossorigin');
   }
 }
+
+
+function loadScriptGoftino()
+{
+  console.log(11);
+  var myEl = $('meta[name="goftino"]');
+  var myGoftino = myEl.attr('content');
+  if(myEl && myEl.length > 0 && myGoftino)
+  {
+  console.log(12);
+    // load script
+    myUrl = "https://www.goftino.com/widget/" + myGoftino;
+    if(localStorage)
+    {
+  console.log(13);
+      myStorage = localStorage.getItem("goftino_" + myGoftino);
+      if(myStorage)
+      {
+        myUrl += '?o=' + myStorage;
+      }
+    }
+  console.log(14);
+    console.log(myUrl);
+    fileLoader(myUrl, 'runGoftino', true, undefined, 'defer utf8 crossorigin');
+  }
+}
+
 
 function loadScriptMediaad()
 {
