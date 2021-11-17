@@ -11471,6 +11471,7 @@ a.circularChartBox:focus{
 
 [data-m2] [data-option] .action [class^="btn-"]{
   min-width: 180px;
+  font-size: 14px;
 }
 
 [data-m2] [data-option] .action .radio1{
