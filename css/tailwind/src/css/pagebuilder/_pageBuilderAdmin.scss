@@ -282,6 +282,10 @@ body[data-m2] > #pageContent{
 	flex: 1 1 0%;
 	height: calc( 100vh - 58px);
 }
+[data-pwa] body[data-m2] > #pageContent{
+	height: 100%;
+	height: calc( 100vh - 100px);
+}
 body[data-m2] > .js{
 	@apply hidden;
 }
