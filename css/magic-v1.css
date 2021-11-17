@@ -16119,6 +16119,20 @@ video[data-clickable]{
   display: inline-block;
 }
 
+.btn-link-danger {
+  font-weight: 400;
+  color: #dc3545;
+}
+
+.btn-link-danger:hover {
+  color: #bb2d3b;
+  text-decoration: underline;
+}
+
+.btn-link-danger:disabled, .btn-link-danger.disabled {
+  color: #b02a37;
+}
+
 .kbd {
   display:inline-flex;
   align-items:center;
