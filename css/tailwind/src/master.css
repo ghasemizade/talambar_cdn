@@ -51,17 +51,18 @@
 
 
 
+/* bootstrap*/
+@import "css/bootstrap/_alerts.scss";
+@import "css/bootstrap/_button.scss";
+@import "css/bootstrap/_button-extra.scss";
+@import "css/bootstrap/_coloredLinks.scss";
 
 /* components*/
 @import "css/components/_0var.scss";
-@import "css/components/_alert.scss";
-@import "css/components/_button.scss";
-@import "css/components/_button-extra.scss";
 @import "css/components/_kbd.scss";
 @import "css/components/_mask.scss";
 @import "css/components/_progress.scss";
 @import "css/components/_steps.scss";
-@import "css/components/_coloredLinks.scss";
 
 /* customized elements*/
 @import "css/custom/_magicBox.scss";
