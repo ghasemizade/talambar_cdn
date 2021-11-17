@@ -1,9 +1,9 @@
 [class^="alert-"] {
   position: relative;
-  padding: 1rem 1rem;
-  margin-bottom: 1rem;
+  padding: 10px 10px;
+  margin-bottom: 10px;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 3px;
 }
 
 .alert-heading {
@@ -15,14 +15,14 @@
 }
 
 .alert-dismissible {
-  padding-right: 3rem;
+  padding-right: 30px;
 }
 .alert-dismissible .btn-close {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 2;
-  padding: 1.25rem 1rem;
+  padding: 12px 10px;
 }
 
 .alert-primary {
