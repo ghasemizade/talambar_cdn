@@ -25,7 +25,7 @@ function calcProductMargin()
   var grossProfitEl       = $('.grossProfitMargin');
   var discountEl          = $('#discount').parent();
   var finalPriceEl        = $('#finalPrice');
-  var finalPriceMsgEl     = $('#finalPrice').parents('.msg');
+  var finalPriceMsgEl     = $('#finalPrice').parents('[data-desc]');
 
   // calc final price
   if(discount)
@@ -115,60 +115,60 @@ function calcProductMargin()
   // change design based on change
   if(grossProfitMargin > 10)
   {
-    grossProfitEl.find('.msg').removeClass('danger2')
-    grossProfitEl.find('.msg').removeClass('info2')
-    grossProfitEl.find('.msg').addClass('success2')
+    grossProfitEl.find('[data-desc]').removeClass('alert2-danger')
+    grossProfitEl.find('[data-desc]').removeClass('alert2-info')
+    grossProfitEl.find('[data-desc]').addClass('alert2-success')
   }
   else if(grossProfitMargin > 0)
   {
-    grossProfitEl.find('.msg').removeClass('danger2')
-    grossProfitEl.find('.msg').addClass('info2')
-    grossProfitEl.find('.msg').removeClass('success2')
+    grossProfitEl.find('[data-desc]').removeClass('alert2-danger')
+    grossProfitEl.find('[data-desc]').addClass('alert2-info')
+    grossProfitEl.find('[data-desc]').removeClass('alert2-success')
   }
   else
   {
-    grossProfitEl.find('.msg').addClass('danger2')
-    grossProfitEl.find('.msg').removeClass('info2')
-    grossProfitEl.find('.msg').removeClass('success2')
+    grossProfitEl.find('[data-desc]').addClass('alert2-danger')
+    grossProfitEl.find('[data-desc]').removeClass('alert2-info')
+    grossProfitEl.find('[data-desc]').removeClass('alert2-success')
   }
 
   // check discount and percent
   if(discountRate > 100 || discountRate < 0)
   {
-    discountEl.addClass('danger2');
-    discountEl.removeClass('warn');
-    discountEl.removeClass('info2');
-    discountEl.removeClass('success2');
+    discountEl.addClass('alert2-danger');
+    discountEl.removeClass('alert2-warning');
+    discountEl.removeClass('alert2-info');
+    discountEl.removeClass('alert2-success');
   }
   else if(discountRate == 0)
   {
-    discountEl.removeClass('danger2');
-    discountEl.removeClass('warn');
-    discountEl.removeClass('info2');
-    discountEl.removeClass('success2');
+    discountEl.removeClass('alert2-danger');
+    discountEl.removeClass('alert2-warning');
+    discountEl.removeClass('alert2-info');
+    discountEl.removeClass('alert2-success');
   }
   else
   {
     if(cost < price && cost + discount > price)
     {
-      discountEl.removeClass('danger2');
-      discountEl.addClass('warn');
-      discountEl.removeClass('info2');
-      discountEl.removeClass('success2');
+      discountEl.removeClass('alert2-danger');
+      discountEl.addClass('alert2-warning');
+      discountEl.removeClass('alert2-info');
+      discountEl.removeClass('alert2-success');
     }
     else if(discountRate < 30 )
     {
-      discountEl.removeClass('danger2');
-      discountEl.removeClass('warn');
-      discountEl.removeClass('info2');
-      discountEl.addClass('success2');
+      discountEl.removeClass('alert2-danger');
+      discountEl.removeClass('alert2-warning');
+      discountEl.removeClass('alert2-info');
+      discountEl.addClass('alert2-success');
     }
     else
     {
-      discountEl.removeClass('danger2');
-      discountEl.removeClass('warn');
-      discountEl.addClass('info2');
-      discountEl.removeClass('success2');
+      discountEl.removeClass('alert2-danger');
+      discountEl.removeClass('alert2-warning');
+      discountEl.addClass('alert2-info');
+      discountEl.removeClass('alert2-success');
     }
 
   }
@@ -177,27 +177,27 @@ function calcProductMargin()
   // all check for final price
   if(finalPrice === 0)
   {
-    finalPriceMsgEl.removeClass('danger');
-    finalPriceMsgEl.removeClass('warn');
-    finalPriceMsgEl.removeClass('success');
+    finalPriceMsgEl.removeClass('alert2-danger');
+    finalPriceMsgEl.removeClass('alert2-warning');
+    finalPriceMsgEl.removeClass('alert2-success');
   }
   else if(finalPrice < 0)
   {
-    finalPriceMsgEl.addClass('danger');
-    finalPriceMsgEl.removeClass('warn');
-    finalPriceMsgEl.removeClass('success');
+    finalPriceMsgEl.addClass('alert2-danger');
+    finalPriceMsgEl.removeClass('alert2-warning');
+    finalPriceMsgEl.removeClass('alert2-success');
   }
   else if(finalPrice <= cost)
   {
-    finalPriceMsgEl.removeClass('danger');
-    finalPriceMsgEl.addClass('warn');
-    finalPriceMsgEl.removeClass('success');
+    finalPriceMsgEl.removeClass('alert2-danger');
+    finalPriceMsgEl.addClass('alert2-warning');
+    finalPriceMsgEl.removeClass('alert2-success');
   }
   else
   {
-    finalPriceMsgEl.removeClass('danger');
-    finalPriceMsgEl.removeClass('warn');
-    finalPriceMsgEl.addClass('success');
+    finalPriceMsgEl.removeClass('alert2-danger');
+    finalPriceMsgEl.removeClass('alert2-warning');
+    finalPriceMsgEl.addClass('alert2-success');
   }
 
 }
