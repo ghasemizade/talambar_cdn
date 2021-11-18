@@ -30,6 +30,7 @@
 /*add lib style*/
 @import 'css/lib/kerkere.scss';
 @import 'css/lib/sortable.scss';
+@import "css/lib/alert2.scss";
 
 /*add pwa style*/
 @import 'css/pwa/app.scss';
