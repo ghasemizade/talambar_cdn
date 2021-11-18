@@ -5,7 +5,9 @@
   border: 1px solid transparent;
   border-radius: 3px;
 }
-
+[class^="alert-"]:empty{
+  display:none
+}
 .alert-heading {
   color: inherit;
 }

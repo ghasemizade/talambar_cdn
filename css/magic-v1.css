@@ -15350,6 +15350,10 @@ video[data-clickable]{
   border-radius: 3px;
 }
 
+[class^="alert-"]:empty{
+  display:none
+}
+
 .alert-heading {
   color: inherit;
 }
