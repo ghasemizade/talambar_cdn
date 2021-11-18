@@ -53,6 +53,7 @@
 
 /* bootstrap*/
 @import "css/bootstrap/_alerts.scss";
+@import "css/bootstrap/_alerts-extra.scss";
 @import "css/bootstrap/_button.scss";
 @import "css/bootstrap/_button-extra.scss";
 @import "css/bootstrap/_coloredLinks.scss";
