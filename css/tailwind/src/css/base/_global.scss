@@ -83,6 +83,10 @@ body [data-magicbox][data-playing="play"]:hover .videoFrame[data-player="default
 [data-magicbox][data-playing="play"] [data-magic-caption]{
 	display: none;
 }
+[data-magicbox][data-playing] [data-magic-caption]{
+	top: 0;
+	bottom: initial;
+}
 
 [data-magicbox] .videoFrame .plyr{
 	width: 100%;

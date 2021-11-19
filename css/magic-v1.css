@@ -12637,6 +12637,11 @@ body [data-magicbox][data-playing="play"]:hover .videoFrame[data-player="default
   display: none;
 }
 
+[data-magicbox][data-playing] [data-magic-caption]{
+  top: 0;
+  bottom: initial;
+}
+
 [data-magicbox] .videoFrame .plyr{
   width: 100%;
   height: 100%;
