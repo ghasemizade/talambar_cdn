@@ -163,25 +163,20 @@ function loadScriptImber()
 
 function loadScriptGoftino()
 {
-  console.log(11);
   var myEl = $('meta[name="goftino"]');
   var myGoftino = myEl.attr('content');
   if(myEl && myEl.length > 0 && myGoftino)
   {
-  console.log(12);
     // load script
     myUrl = "https://www.goftino.com/widget/" + myGoftino;
     if(localStorage)
     {
-  console.log(13);
       myStorage = localStorage.getItem("goftino_" + myGoftino);
       if(myStorage)
       {
         myUrl += '?o=' + myStorage;
       }
     }
-  console.log(14);
-    console.log(myUrl);
     fileLoader(myUrl, 'runGoftino', true, undefined, 'defer utf8 crossorigin');
   }
 }

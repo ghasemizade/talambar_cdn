@@ -16,4 +16,14 @@ function mPlayer()
 			videoFrame.attr('data-playing', 'pause');
 		}
 	});
+
+	// check duration of video and show inside magicBox
+	$('[data-magicbox] video').on('loadedmetadata', function(index)
+	{
+		var myDuration = parseInt(this.duration);
+		var videoFrame = $(this).parents('[data-magicbox]');
+
+		videoFrame.find('[data-magic-caption] .duration').attr('data-duration', myDuration).html(myDuration);
+		console.log(this.duration);
+	});
 }
