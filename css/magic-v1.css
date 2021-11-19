@@ -14194,7 +14194,7 @@ video[data-clickable]{
   flex: none;
 }
 
-[class^="alert2"].xs{
+[class^="alert2"].lg{
   padding: 10px;
   margin-bottom: 10px;
 }
