@@ -9,6 +9,7 @@ label+div .select22 {
 .select22-container{
   display:block;
   width: 100%;
+  max-width: 100%;
   line-height: 1.6;
   font-size: 14px;
   min-height: 36px;
