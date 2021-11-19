@@ -32,6 +32,8 @@ function pushStateSiftal(_direct)
   typeTitles();
   // add player
   mPlayer();
+  // init textarea
+  autosizeTextareaInit();
   // Run draw barcode lib
   JsBarcodeRunner();
   // run form tools
