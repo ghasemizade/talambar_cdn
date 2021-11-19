@@ -1,3 +1,91 @@
+body[data-m2] > #sidebar{
+	@apply shadow;
+	@apply select-none;
+	background-color: #fff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	height: calc( 100vh - 58px);
+	min-width: 250px;
+	width: 300px;
+	font-size: 14px;
+}
+[dir="rtl"] body[data-m2] > #sidebar{
+	font-size: 13px;
+}
+body[data-m2="wide"] > #sidebar{
+	display: none;
+}
+[data-pwa] body[data-m2] > #sidebar{
+	min-width: 0;
+	max-width: 90%;
+	background-color: #fff;
+	position: fixed;
+	top: 55px;
+	right: 5px;
+	z-index: 100;
+	height: auto;
+	max-height: 100%;
+	max-height: calc( 100% - 110px );
+	border-radius: 8px;
+	padding: 0;
+}
+[data-pwa] body[data-m2] > #sidebar > div{
+	background-color: #f3f2f8;
+	border-radius: 8px;
+	@apply p-2 md:p-4;
+}
+[data-pwa][dir="rtl"] body[data-m2] > #sidebar{
+	right: initial;
+	left: 5px;
+}
+[data-pwa] body[data-m2] > #sidebar[data-active]{
+	display: block!important;
+}
+[data-pwa] body::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.1);
+	opacity: 0;
+	z-index: -1;
+}
+[data-pwa] body[data-aside]::before{
+	z-index: 100;
+	opacity: 1;
+}
+[data-pwa] body[data-m2] > #sidebar[data-size="mini"]{
+	max-height: 90%;
+	max-height: calc( 100% - 120px );
+}
+[data-pwa] body[data-m2] > #sidebar[data-size="full"]{
+	height: 100%;
+	max-height: calc( 100% - 50px );
+	top: 50px;
+	right: 0!important;
+	left: 0!important;
+	bottom: 0;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 0;
+	background-color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+body[data-m2] > #sidebar #siteBuilderSidebar{
+	@apply flex-grow;
+	overflow: auto;
+}
+body[data-m2] > #sidebar form + form{
+	margin-top: 5px;
+}
+body[data-m2] > #sidebar form > label{
+	line-height: 30px;
+}
+
 body[data-m2] > #sidebar .asideM2{
 	margin: 10px 0;
 }
