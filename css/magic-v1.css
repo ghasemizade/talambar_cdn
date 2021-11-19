@@ -12594,11 +12594,11 @@ img[src="#"] {
   text-align: right!important;
 }
 
-video[data-clickable]{
+.videoFrame video{
   cursor: pointer;
 }
 
-.videoFrame[data-play]::after{
+.videoFrame[data-player="default"]::after{
   content: "";
   position: absolute;
   width: 64px;
@@ -12622,7 +12622,7 @@ video[data-clickable]{
   height: 100%;
 }
 
-.videoFrame[data-play]:hover::after{
+.videoFrame[data-player="default"]:hover::after{
   filter: grayscale(0);
   opacity: 0.7;
 }
