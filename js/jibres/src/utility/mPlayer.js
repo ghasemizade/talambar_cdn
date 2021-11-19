@@ -8,12 +8,12 @@ function mPlayer()
 		if(this.paused)
 		{
 			this.play()
-			videoFrame.attr('data-playing', '');
+			videoFrame.attr('data-playing', 'play');
 		}
 		else
 		{
 			this.pause()
-			videoFrame.attr('data-playing', null);
+			videoFrame.attr('data-playing', 'pause');
 		}
 	});
 }
