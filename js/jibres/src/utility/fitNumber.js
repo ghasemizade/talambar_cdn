@@ -39,3 +39,14 @@ function fitNumber(_num, _seperator)
   return _num;
 }
 
+function humanMin(s)
+{
+    s = Math.floor( s );
+    m = Math.floor( s / 60 );
+    // m = m >= 10 ? m : '0' + m;
+    s = Math.floor( s % 60 );
+    s = s >= 10 ? s : '0' + s;
+    r = fitNumber(m) + ':' + fitNumber(s);
+    return r;
+}
+
