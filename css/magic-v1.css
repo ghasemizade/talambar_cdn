@@ -12634,13 +12634,13 @@ body [data-magicbox][data-playing="play"]:hover .videoFrame[data-clickable][data
   opacity: 0.8;
 }
 
-[data-magicbox][data-playing="play"] [data-magic-caption]{
-  display: none;
-}
-
-[data-magicbox][data-playing="pause"] [data-magic-caption]{
+[data-magicbox][data-playing] [data-magic-caption]{
   top: 0;
   bottom: initial;
+}
+
+[data-magicbox][data-playing="play"] [data-magic-caption]{
+  display: none;
 }
 
 [data-magicbox] .videoFrame .plyr{

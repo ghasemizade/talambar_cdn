@@ -1,7 +1,7 @@
 
 function mPlayer()
 {
-	$('[data-magicbox] video').off('click.video').on('click.video', function()
+	$('[data-magicbox] video').off('click.magicBoxVideo').on('click.magicBoxVideo', function()
 	{
 		var videoFrame = $(this).parents('[data-magicbox]');
 
@@ -18,7 +18,7 @@ function mPlayer()
 	});
 
 	// check duration of video and show inside magicBox
-	$('[data-magicbox] video').on('loadedmetadata', function(index)
+	$('[data-magicbox] video').off('loadedmetadata.magicBoxVideo').on('loadedmetadata.magicBoxVideo', function(index)
 	{
 		var myDuration = parseInt(this.duration);
 		var videoFrame = $(this).parents('[data-magicbox]');
