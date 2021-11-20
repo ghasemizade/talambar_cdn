@@ -3,17 +3,23 @@ function mPlayer()
 {
 	$('[data-magicbox] video').off('click.magicBoxVideo').on('click.magicBoxVideo', function()
 	{
-		var videoFrame = $(this).parents('[data-magicbox]');
+		var videoMagicBox = $(this).parents('[data-magicbox]');
+		var videoFrame = $(this).parents('.videoFrame');
 
 		if(this.paused)
 		{
 			this.play()
-			videoFrame.attr('data-playing', 'play');
+			videoMagicBox.attr('data-playing', 'play');
+			if(videoFrame && videoFrame.attr('data-controls') !== undefined)
+			{
+				// allow to show control, show it
+				$(this).attr('controls', true);
+			}
 		}
 		else
 		{
 			this.pause()
-			videoFrame.attr('data-playing', 'pause');
+			videoMagicBox.attr('data-playing', 'pause');
 		}
 	});
 
@@ -21,8 +27,8 @@ function mPlayer()
 	$('[data-magicbox] video').off('loadedmetadata.magicBoxVideo').on('loadedmetadata.magicBoxVideo', function(index)
 	{
 		var myDuration = Math.round(this.duration);
-		var videoFrame = $(this).parents('[data-magicbox]');
+		var videoMagicBox = $(this).parents('[data-magicbox]');
 
-		videoFrame.find('[data-magic-caption] [data-duration]').attr('data-duration', myDuration).html(humanMin(myDuration));
+		videoMagicBox.find('[data-magic-caption] [data-duration]').attr('data-duration', myDuration).html(humanMin(myDuration));
 	});
 }

@@ -39,7 +39,6 @@ function autosizeTextareaInit()
 {
   $('textarea.txt[data-autoResize]').each(function()
   {
-    console.log(this);
     autosizeTextarea(this);
     textareaTypedChar(this);
   });
