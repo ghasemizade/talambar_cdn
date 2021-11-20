@@ -87,3 +87,23 @@
 .btn-link-danger:disabled, .btn-link-danger.disabled {
   color: #b02a37;
 }
+
+[class^="btn-"].rounded-none{
+  border-radius: 0px;
+}
+[class^="btn-"].rounded-lg{
+  border-radius: 0.75rem;
+}
+[class^="btn-"].rounded-xl{
+  border-radius: 1rem;
+}
+[class^="btn-"].rounded-2xl{
+  border-radius: 1rem;
+}
+[class^="btn-"].rounded-3xl{
+  border-radius: 1.5rem;
+}
+[class^="btn-"].rounded-full{
+  border-radius: 9999px;
+}
+
