@@ -16887,15 +16887,14 @@ img[src="#"] {
 .videoFrame[data-clickable][data-player="default"]::after{
   content: "";
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   top: 50%;
   left: 50%;
-  margin-left: -32px;
-  margin-top: -32px;
+  transform: translate(-50%,-50%);
   border-radius: 3px;
   transition: 0.2s;
-  opacity: 0.7;
+  opacity: 1;
   pointer-events: none;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16903,7 +16902,9 @@ img[src="#"] {
 }
 
 .videoFrame[data-clickable][data-player="default"]:hover::after{
-  opacity: 1;
+  opacity: 0.9;
+  width: 120px;
+  height: 120px;
 }
 
 [data-magicbox][data-playing="play"] .videoFrame[data-clickable][data-player="default"]::after{
