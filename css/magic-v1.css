@@ -16764,6 +16764,10 @@ img[src="#"] {
   will-change: transform, filter;
   position: relative;
   display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 [data-magicbox] picture{
@@ -16870,6 +16874,10 @@ img[src="#"] {
   border-radius: 9999px;
 }
 
+[data-magicbox] [data-magic-caption]{
+  pointer-events: none;
+}
+
 /* magicbox inside slider */
 
 .grid .swiper [data-magicbox] picture{
@@ -16927,7 +16935,7 @@ body [data-magicbox][data-playing="play"]:hover .videoFrame[data-clickable][data
 }
 
 [data-magicbox][data-playing="play"] [data-magic-caption]{
-  display: none;
+  display: none!important;
 }
 
 [data-magicbox] .videoFrame .plyr{

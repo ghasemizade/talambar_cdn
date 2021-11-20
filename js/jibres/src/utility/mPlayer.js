@@ -23,7 +23,6 @@ function mPlayer()
 		var myDuration = Math.round(this.duration);
 		var videoFrame = $(this).parents('[data-magicbox]');
 
-		videoFrame.find('[data-magic-caption] .duration').attr('data-duration', myDuration).html(humanMin(myDuration));
-		console.log(this.duration);
+		videoFrame.find('[data-magic-caption] [data-duration]').attr('data-duration', myDuration).html(humanMin(myDuration));
 	});
 }

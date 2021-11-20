@@ -3,6 +3,7 @@
 	will-change: transform, filter;
     position: relative;
     display: block;
+    user-select: none;
 }
 [data-magicbox] picture{
     position: relative;
@@ -92,6 +93,9 @@
     border-radius: 9999px;
 }
 
+[data-magicbox] [data-magic-caption]{
+    pointer-events: none;
+}
 
 /* magicbox inside slider */
 .grid .swiper [data-magicbox] picture{
@@ -142,7 +146,7 @@ body [data-magicbox][data-playing="play"]:hover .videoFrame[data-clickable][data
     bottom: initial;
 }
 [data-magicbox][data-playing="play"] [data-magic-caption]{
-    display: none;
+    display: none!important;
 }
 
 [data-magicbox] .videoFrame .plyr{
