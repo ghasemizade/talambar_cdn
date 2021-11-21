@@ -39,3 +39,12 @@ img[data-fancybox] {
     transform: scale3d(0.8, 0.8, 0.8);
   }
 }
+
+.fancybox__slide.has-iframe iframe{
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fancybox__slide.has-iframe .fancybox__content{
+  border-radius: 5px;
+  padding: 0;
+}
