@@ -79,10 +79,11 @@
 
 
 /* add extra layouts*/
-@import "css/pagebuilder/_pageBuilderAdmin.scss";
-@import "css/pagebuilder/_header.scss";
-@import "css/pagebuilder/_aside.scss";
-@import "css/pagebuilder/_emptyState.scss";
-@import "css/pagebuilder/_browserFrame.scss";
-@import "css/pagebuilder/_specialSlider.scss";
+@import "css/pagebuilder/pageBuilderAdmin.css";
+@import "css/pagebuilder/header.css";
+@import "css/pagebuilder/aside.css";
+@import "css/pagebuilder/emptyState.css";
+@import "css/pagebuilder/browserFrame.css";
+@import "css/pagebuilder/specialSlider.css";
+@import "css/pagebuilder/iframe.css";
 
