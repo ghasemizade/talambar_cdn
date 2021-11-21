@@ -1,5 +1,5 @@
 {
-  "name": "jibres-tw-v2",
+  "name": "jibres",
   "version": "1.0.0",
   "description": "Tailwind css for Jibres Page Builder",
   "main": "postcss.config.js",
