@@ -18791,6 +18791,18 @@ body[data-m2="dark"] > #sidebar .asideM2 li [data-item] svg path{
   display: block;
 }
 
+body[data-m2][data-iframe] > #sidebar{
+  display: none!important;
+}
+
+body[data-m2][data-iframe] > #pageHeader{
+  display: none!important;
+}
+
+body[data-m2][data-iframe] > #pageContent{
+  height: initial;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
