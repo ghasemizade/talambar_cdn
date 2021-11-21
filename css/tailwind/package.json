@@ -1,5 +1,5 @@
 {
-  "name": "jibres",
+  "name": "@jibres/siftal-style",
   "version": "1.3.0",
   "description": "Tailwind css for Jibres Page Builder",
   "main": "postcss.config.js",
