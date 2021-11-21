@@ -10,7 +10,6 @@ desktop.ini
 /tmp/*
 node_modules
 .sass-cache
-package-lock.json
 *crontab.txt
 *sftp-config.json
 *.me.php
