@@ -1,4 +1,4 @@
-
+const boomVer = 7;
 
 function readPageAllScripts(_force, _page)
 {
@@ -57,7 +57,7 @@ function readPageChart()
   if(myChartURL && myChartURL.length > 0)
   {
     var fnName       = myChartURL;
-    var highChartUrl = urlJibres('cdn') + 'lib/highcharts/highcharts-8.2.0.js?v=3';
+    var highChartUrl = urlJibres('cdn') + 'lib/highcharts/highcharts-8.2.0.js?v=' + boomVer;
     myChartURL       = urlJibres('cdn') + "js/chart/" + myChartURL + '.js';
     if(myChartURLVer)
     {
@@ -81,7 +81,7 @@ function readPageEditor()
 
   if(myEl && myEl.length > 0)
   {
-    myUrl = urlJibres('cdn') + "lib/ckeditor5/29.1.0/ckeditor.js?v=3";
+    myUrl = urlJibres('cdn') + "lib/ckeditor5/29.1.0/ckeditor.js?v=" + boomVer;
     fileLoader(myUrl, 'runEditor', true);
   }
 }
@@ -93,7 +93,7 @@ function readDigikalaCrawler()
 
   if(myEl && myEl.length > 0)
   {
-    myUrl = urlJibres('cdn') + "lib/digikalaCrawlMaster/digikalaCrawlMaster.js?v=4";
+    myUrl = urlJibres('cdn') + "lib/digikalaCrawlMaster/digikalaCrawlMaster.js?v=" + boomVer;
     fileLoader(myUrl, 'runDigiKalaCrawlMaster', true);
   }
 }
@@ -106,7 +106,7 @@ function readPageSortable()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "lib/sortable/sortable-1.13.0.min.js?v=3";
+    myUrl = urlJibres('cdn') + "lib/sortable/sortable-1.13.0.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runSortable', true);
   }
 }
@@ -119,8 +119,8 @@ function readPageCropper()
   if(myEl && myEl.length > 0)
   {
     // load style
-    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css?v=2");
-    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js?v=2";
+    StyleLoader(urlJibres('cdn') + "css/lib/cropperjs-2.0.0.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "js/cropperjs/cropper-2.0.0.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runCropper', true);
   }
 }
@@ -133,8 +133,8 @@ function readPageFancyBox()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.5.min.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.5.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.5.min.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/fancyapps/fancybox-4.0.5.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runFancybox', true);
   }
 }
@@ -147,8 +147,8 @@ function readPageJsTree()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/jstree/jstree-3.3.10.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/jstree/jstree-3.3.10.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runJstree', true);
   }
 }
@@ -161,8 +161,8 @@ function readPageDatatable()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/datatable/1.11.2/datatables.min.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/datatable/1.11.2/datatables.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/datatable/1.11.2/datatables.min.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/datatable/1.11.2/datatables.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runDatatable', true);
   }
 }
@@ -175,7 +175,7 @@ function readPageCodeEditor()
   if(myEl && myEl.length > 0)
   {
     // load script
-    myUrl = urlJibres('cdn') + "lib/ace/1.4.12/ace-runner.js?v=1";
+    myUrl = urlJibres('cdn') + "lib/ace/1.4.12/ace-runner.js?v=" + boomVer;
     fileLoader(myUrl, 'runACE', true);
   }
 }
@@ -188,8 +188,8 @@ function readPageSlick()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/slick/1.8.1/slick-final.css?v=2");
-    myUrl = urlJibres('cdn') + "lib/slick/1.8.1/slick.min.js?v=2";
+    StyleLoader(urlJibres('cdn') + "lib/slick/1.8.1/slick-final.css?v=") + boomVer;
+    myUrl = urlJibres('cdn') + "lib/slick/1.8.1/slick.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runPageSlickSlider', true);
   }
 }
@@ -202,8 +202,8 @@ function readPageSwiper()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/swiper/7.0.1/swiper-bundle.min.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/swiper/7.0.1/swiper-bundle.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/swiper/7.0.1/swiper-bundle.min.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/swiper/7.0.1/swiper-bundle.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runPageSwiperSlider', true);
   }
 }
@@ -216,8 +216,8 @@ function readPageSelect2()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.css?v=6");
-    myUrl = urlJibres('cdn') + "lib/select2/src/select2.full-v4.0.13.js?v=6";
+    StyleLoader(urlJibres('cdn') + "lib/select2/select2.full-v4.0.13.min.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/select2/src/select2.full-v4.0.13.js?v=" + boomVer;
     fileLoader(myUrl, 'runPageSelect2', true);
   }
 }
@@ -232,7 +232,7 @@ function readPageUploader()
     // load style
     // StyleLoader(urlJibres('cdn') + "css/lib/uploader-1-min.css");
     // load script
-    myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=6";
+    myUrl = urlJibres('cdn') + "lib/uploader/uploader-1-min.js?v=" + boomVer;
     fileLoader(myUrl, 'runUploader', true);
   }
 }
@@ -245,8 +245,8 @@ function readPageRangeSlider()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/rangeSlider/rangeSlider-ion-v2.3.1.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runRangeSlider', true);
   }
 }
@@ -259,8 +259,8 @@ function readPageVideoJs()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/vjs/7.15.4/video-js.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/vjs/7.15.4/video.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/vjs/7.15.4/video-js.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/vjs/7.15.4/video.min.js?v=" + boomVer;
     fileLoader(myUrl, 'runVideoJs', true);
   }
 }
@@ -273,8 +273,8 @@ function readPageVideoPlyr()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/plyr/3.6.9/plyr.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/plyr/3.6.9/plyr.polyfilled.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/plyr/3.6.9/plyr.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/plyr/3.6.9/plyr.polyfilled.js?v=" + boomVer;
     fileLoader(myUrl, 'runVideoPlyr', true);
   }
 }
@@ -287,8 +287,8 @@ function readBootstrapAccordion()
   if(myEl && myEl.length > 0)
   {
     // load script
-    StyleLoader(urlJibres('cdn') + "lib/bootstrap/5.1.0/bootstrap-accordion.css?v=1");
-    myUrl = urlJibres('cdn') + "lib/bootstrap/5.1.0/bootstrap.min.js?v=1";
+    StyleLoader(urlJibres('cdn') + "lib/bootstrap/5.1.0/bootstrap-accordion.css?v=" + boomVer);
+    myUrl = urlJibres('cdn') + "lib/bootstrap/5.1.0/bootstrap.min.js?v=" + boomVer;
     fileLoader(myUrl);
   }
 }
