@@ -56,6 +56,8 @@ function resizeDetector(_data, _forceArray)
 
       // check pwa sidebar
       resetSidebarStatus();
+      // simulate press mouse to close select2 or something else
+      $('body').trigger('mousedown');
     }
     else
     {
