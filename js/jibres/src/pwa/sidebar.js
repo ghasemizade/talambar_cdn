@@ -2,7 +2,7 @@
 
 function handlePWASlideBar()
 {
-  $('body').off('mousedown.hamburger touchmove.hamburger').on('mousedown touchmove', function(_e)
+  $('body').off('mousedown.hamburger touchmove.hamburger').on('mousedown.hamburger touchmove.hamburger', function(_e)
   {
     if(isPagePWA())
     {
@@ -42,6 +42,22 @@ function handlePWASlideBar()
   });
 }
 
+function resetSidebarStatus()
+{
+  if(urlM2() === 'wide')
+  {
+    // do nothing
+  }
+  else if(isPagePWA())
+  {
+    // hide on pwa
+    pwaSidebarHide();
+  }
+  else
+  {
+    pwaSidebarShow();
+  }
+}
 
 function pwaSidebarShow()
 {

@@ -53,6 +53,9 @@ function resizeDetector(_data, _forceArray)
     if (window.innerWidth !== windowInitWidth)
     {
       $('html').attr('data-resized', '');
+
+      // check pwa sidebar
+      resetSidebarStatus();
     }
     else
     {

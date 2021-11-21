@@ -86,6 +86,18 @@ function urlEnv()
 }
 
 
+function urlM2()
+{
+  if($('body[data-m2]') !== undefined)
+  {
+    var myEnv = $('body').attr('data-m2');
+
+    return myEnv;
+  }
+
+  return null;
+}
+
 function urlCorrect(_url)
 {
   if(!_url)
@@ -193,6 +205,11 @@ function urlDir()
 function isPagePWA()
 {
   if($('html').attr('data-pwa') !== undefined)
+  {
+    return true
+  }
+  var myWidth = document.body.clientWidth || window.innerWidth;
+  if(myWidth < 830)
   {
     return true
   }
