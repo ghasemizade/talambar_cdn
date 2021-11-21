@@ -142,7 +142,7 @@ module.exports = {
     },
     debugScreens: {
       prefix: '',
-      selector: '[data-debugger]::before',
+      selector: '[data-debugger]',
     },
     extend: {
       lineHeight: {

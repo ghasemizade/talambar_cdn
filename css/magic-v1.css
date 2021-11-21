@@ -718,7 +718,7 @@
 
 /* tailwind */
 
-/* ! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com*/
+/* ! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com*/
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -1172,6 +1172,18 @@ button,
   cursor: pointer;
 }
 
+/**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */
+
+:-moz-focusring {
+  outline: auto;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -1518,6 +1530,7 @@ video {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -18173,6 +18186,7 @@ body[data-m2] > #pageHeader .desktop .btn-primary{
 }
 
 [data-desktop] body[data-m2] > #pageHeader{
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   right: 0;
@@ -19006,6 +19020,7 @@ body[data-m2][data-iframe] > #pageContent{
   }
 
   .sm\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -30108,6 +30123,7 @@ body[data-m2][data-iframe] > #pageContent{
   }
 
   .md\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
@@ -41210,6 +41226,7 @@ body[data-m2][data-iframe] > #pageContent{
   }
 
   .lg\:sticky {
+    position: -webkit-sticky;
     position: sticky;
   }
 
