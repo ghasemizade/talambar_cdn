@@ -129,6 +129,6 @@ $(document).ready(function()
 function beforePushStateSiftal()
 {
   callFunc('removeAmcharts4');
-
+  callFunc('closeSelect22');
 }
 
