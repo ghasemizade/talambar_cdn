@@ -1,12 +1,12 @@
 
 body[data-m2]{
-  @apply flex flex-wrap;
-  min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  position: relative;
 }
-
+[data-desktop] body[data-m2]{
+  @apply flex flex-wrap;
+  min-height: 100vh;
+}
 [data-pwa] body[data-m2]{
 	display: initial;
 	height: initial;

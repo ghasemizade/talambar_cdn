@@ -18057,12 +18057,14 @@ body .rtl .items li .go::after{
 /* add extra layouts*/
 
 body[data-m2]{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+[data-desktop] body[data-m2]{
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-  position: relative;
 }
 
 [data-pwa] body[data-m2]{
