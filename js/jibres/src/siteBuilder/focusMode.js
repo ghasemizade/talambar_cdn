@@ -1,15 +1,24 @@
 
 function handleFocusModePushState()
 {
-  $('#sidebar .items .item').on('mouseenter', function(_e){
-    console.log(12333);
+
+  $('#sidebar .items[data-postMsg] .item').on('mouseenter.liveIframeSelect', function(_a){
+    var myId = $(this).attr('id');
+    var myLiveIframe = document.getElementById('liveIframe');
+
+    postMsg(myLiveIframe, {type:'focus', el:myId});
+
+  }).on('mouseleave.liveIframeSelect', function(_b){
+    var myId = $(this).attr('id');
+    var myLiveIframe = document.getElementById('liveIframe');
+
+    postMsg(myLiveIframe, {type:'blur', el:myId});
   });
 }
 
 
 function handleFocusMode()
 {
-
   if(urlJibres('zone') === 'business-website')
   {
     // inside business websites
@@ -19,16 +28,11 @@ function handleFocusMode()
   {
     // inside jibres
     setTimeout(() => {
+      var myLiveIframe = document.getElementById('liveIframe');
       console.log('post data to iframe fn');
-      const myLivePreview = document.getElementById('liveIframe');
-      postMsg(myLivePreview, {a1:1, a2:2});
+      postMsg(myLiveIframe, {a1:1, a2:2});
     }, 1000);
   }
-
-
-
-
-
 }
 
 
@@ -39,7 +43,6 @@ function getMessageFromJibres()
     // (_event.origin.startsWith('https://jibres.com'))
 
     console.log(_event.data);
-
 
   });
 }
