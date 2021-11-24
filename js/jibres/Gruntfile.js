@@ -89,6 +89,9 @@ var myModuleFiles =
 	'src/utility/playAudio.js',
 	'src/utility/serviceWorker.js',
 
+	// siteBuilder
+	'src/siteBuilder/focusMode.js',
+
 	// addons
 	'src/addons/fileLoader.js',
 	'src/addons/thirdParty.js',

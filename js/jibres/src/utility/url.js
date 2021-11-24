@@ -16,6 +16,18 @@ function urlJibres(_type)
 }
 
 
+function jibresZone()
+{
+  var myZone = urlJibres('zone');
+
+  if(myZone)
+  {
+    return myZone;
+  }
+  return null;
+}
+
+
 function jibresUID()
 {
   var myUID = $('meta[name="user-Jibres"]').attr('content');
