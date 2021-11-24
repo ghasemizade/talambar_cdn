@@ -1,0 +1,25 @@
+[data-type]{
+	position: relative;
+}
+[data-type][data-focus]::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	transition: 0.2s;
+	z-index: -1;
+	opacity: 0;
+	outline: 5px solid transparent;
+	outline-offset: -5px;
+}
+[data-type][data-focus]:hover::after{
+	outline-color:#0d6efd;
+}
+[data-type][data-focus="no"]::after{
+	z-index: 99;
+	opacity: 1;
+}
+
