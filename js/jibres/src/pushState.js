@@ -32,8 +32,8 @@ function pushStateSiftal(_direct)
   typeTitles();
   // add player
   mPlayer();
-  // handle focusMode
-  handleFocusMode();
+  // handle focusMode for pushState
+  handleFocusModePushState();
   // init textarea
   autosizeTextareaInit();
   // Run draw barcode lib
@@ -111,6 +111,9 @@ $(document).ready(function()
   pingiRunner();
   // try to register service worker
   registerServiceWorker();
+
+  // handle focusMode
+  handleFocusMode();
 
   if($('body').attr('data-panel') !== undefined)
   {
