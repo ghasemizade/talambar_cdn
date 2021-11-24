@@ -190,6 +190,10 @@ body.dragging{
   opacity: 0;
   display: none;
 }
+[data-uploader] img[src=""]{
+  opacity: 0;
+  display: none;
+}
 [data-uploader][data-fill] img{
   display: block;
   border-radius: 5px;
