@@ -16811,16 +16811,21 @@ img[src=""] {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   transition: 0.2s;
-  z-index: -1;
-  opacity: 0;
-  outline: 5px solid transparent;
-  outline-offset: -5px;
+  outline: 3px solid transparent;
+  outline-offset: -3px;
+  z-index: 99;
+}
+
+body:hover [data-type][data-focus]::after{
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 [data-type][data-focus]:hover::after{
+  background-color: transparent!important;
   outline-color:#0d6efd;
+  pointer-events: none;
 }
 
 [data-type][data-focus="no"]::after{
