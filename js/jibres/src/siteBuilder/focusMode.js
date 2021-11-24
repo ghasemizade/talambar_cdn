@@ -41,14 +41,16 @@ function getMessageFromJibres()
   {
     // (_event.origin.startsWith('https://jibres.com'))
     var response = JSON.parse(_event.data);
-    console.log(response);
 
     if(response && response.value && response.value.type === 'focus')
     {
       if(response.value.el)
       {
+        var focusEl = '#' + response.value.el;
         $('[data-type][data-focus]').attr('data-focus', 'no');
-        $('#' + response.value.el).attr('data-focus', 'yes');
+        $(focusEl).attr('data-focus', 'yes');
+        console.log(focusEl);
+        scrollSmooth(focusEl);
       }
     }
 
