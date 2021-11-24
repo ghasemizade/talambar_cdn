@@ -16822,15 +16822,14 @@ body:hover [data-type][data-focus]::after{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-[data-type][data-focus]:hover::after{
+[data-type][data-focus]:hover::after, [data-type][data-focus="yes"]::after{
   background-color: transparent!important;
   outline-color:#0d6efd;
   pointer-events: none;
 }
 
-[data-type][data-focus="no"]::after{
-  z-index: 99;
-  opacity: 1;
+[data-type][data-focus]:hover .focusAction, [data-type][data-focus="yes"] .focusAction{
+  display: block!important;
 }
 
 /* customized elements*/
