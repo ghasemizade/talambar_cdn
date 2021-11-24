@@ -46,10 +46,10 @@ function getMessageFromJibres()
     {
       if(response.value.el)
       {
-        var focusEl = '#' + response.value.el;
+        var focusEl = $('#' + response.value.el);
         $('[data-type][data-focus]').attr('data-focus', 'no');
-        $(focusEl).attr('data-focus', 'yes');
-        console.log(focusEl);
+        focusEl.attr('data-focus', 'yes');
+
         scrollSmooth(focusEl);
       }
     }
