@@ -29,7 +29,6 @@ function handleFocusMode()
     // inside jibres
     setTimeout(() => {
       var myLiveIframe = document.getElementById('liveIframe');
-      console.log('post data to iframe fn');
       postMsg(myLiveIframe, {a1:1, a2:2});
     }, 1000);
   }
@@ -41,8 +40,17 @@ function getMessageFromJibres()
   window.addEventListener('message', _event =>
   {
     // (_event.origin.startsWith('https://jibres.com'))
+    var response = JSON.parse(_event.data);
+    console.log(response);
 
-    console.log(_event.data);
+    if(response && response.value && response.value.type === 'focus')
+    {
+      if(response.value.el)
+      {
+        $('[data-type][data-focus]').attr('data-focus', 'no');
+        $('#' + response.value.el).attr('data-focus', 'yes');
+      }
+    }
 
   });
 }

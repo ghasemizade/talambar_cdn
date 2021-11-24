@@ -16818,7 +16818,7 @@ img[src=""] {
   z-index: 99;
 }
 
-body:hover [data-type][data-focus]::after{
+body:hover [data-type][data-focus]::after, [data-type][data-focus="no"]::after{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
