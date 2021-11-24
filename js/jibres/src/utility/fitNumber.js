@@ -47,7 +47,7 @@ function humanMin(s)
     s = Math.floor( s % 60 );
     s = s >= 10 ? s : '0' + s;
     r = fitNumber(m) + ':' + fitNumber(s);
-    console.log(s);
+
     if(s === '00' && urlLangFa())
     {
       r += fitNumber(s);
