@@ -12591,6 +12591,10 @@ img[src="#"] {
   visibility: hidden;
 }
 
+img[src=""] {
+  visibility: hidden;
+}
+
 [dir="ltr"] .txtRa{
   text-align: right!important;
 }
@@ -16913,6 +16917,7 @@ img[src="#"] {
 
 [data-magicbox] [data-magic-caption]{
   pointer-events: none;
+  max-height: 100%;
 }
 
 /* magicbox inside slider */

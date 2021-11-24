@@ -32,6 +32,9 @@ svg g[opacity="0.4"][style][filter]{
 img[src="#"] {
   visibility: hidden;
 }
+img[src=""] {
+  visibility: hidden;
+}
 
 [dir="ltr"] .txtRa{
 	text-align: right!important;
