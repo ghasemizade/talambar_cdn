@@ -15,7 +15,7 @@ function handleFocusModePushState()
     postMsg(myLiveIframe, {type:'blur', el:myId});
   });
 
-  $("[data-postMsg-href]").on('click.postMsg', function(_e){
+  $("[data-postMsg-href]").on('click.postMsgHref', function(_e){
     var opt = {
       type: 'href',
       href: $(this).attr('data-postMsg-href')
@@ -23,6 +23,17 @@ function handleFocusModePushState()
 
     postMsg(postMsgCompany(this), opt);
   });
+
+  $("[data-postMsg-ajaxify]").on('click.postMsgAjaxify', function(_e){
+    var opt = {
+      type: 'ajaxify',
+      data: $(this).attr('data-postMsg-ajaxify'),
+      action: $(this).attr('data-postMsg-action'),
+    };
+
+    postMsg(postMsgCompany(this), opt);
+  });
+
 }
 
 
@@ -77,6 +88,7 @@ function getMessageFromIframe()
     // if(_event.origin.startsWith('https://jibres.com'))
     var response = JSON.parse(_event.data);
 
+    // handle href
     if(response && response.value && response.value.type === 'href')
     {
       if(response.value.href)
@@ -84,6 +96,21 @@ function getMessageFromIframe()
         Navigate({ url: response.value.href });
       }
     }
+    console.log(response.value);
+
+    if(response && response.value && response.value.type === 'ajaxify')
+    {
+      if(response.value.data && response.value.action)
+      {
+         var myEl = $('<div></div>');
+         myEl.attr('data-action', response.value.action);
+         myEl.attr('data-data', response.value.data);
+
+        // ajaxify this data
+        myEl.ajaxify({link: true});
+      }
+    }
+
   });
 }
 
