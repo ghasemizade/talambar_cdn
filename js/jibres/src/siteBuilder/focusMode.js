@@ -2,20 +2,20 @@
 function handleFocusModePushState()
 {
 
-  $('#sidebar .items[data-postMsg] .item').on('mouseenter.liveIframeSelect', function(_a){
+  $('#sidebar .items[data-postMsg] .item').off('mouseenter.liveIframeSelect').on('mouseenter.liveIframeSelect', function(_a){
     var myId = $(this).attr('id');
     var myLiveIframe = document.getElementById('liveIframe');
 
     postMsg(myLiveIframe, {type:'focus', el:myId});
 
-  }).on('mouseleave.liveIframeSelect', function(_b){
+  }).off('mouseleave.liveIframeSelect').on('mouseleave.liveIframeSelect', function(_b){
     var myId = $(this).attr('id');
     var myLiveIframe = document.getElementById('liveIframe');
 
     postMsg(myLiveIframe, {type:'blur', el:myId});
   });
 
-  $("[data-postMsg-href]").on('click.postMsgHref', function(_e){
+  $("[data-postMsg-href]").off('click.postMsgHref').on('click.postMsgHref', function(_e){
     var opt = {
       type: 'href',
       href: $(this).attr('data-postMsg-href')
@@ -24,7 +24,7 @@ function handleFocusModePushState()
     postMsg(postMsgCompany(this), opt);
   });
 
-  $("[data-postMsg-ajaxify]").on('click.postMsgAjaxify', function(_e){
+  $("[data-postMsg-ajaxify]").off('click.postMsgAjaxify').on('click.postMsgAjaxify', function(_e){
     var opt = {
       type: 'ajaxify',
       data: $(this).attr('data-postMsg-ajaxify'),
