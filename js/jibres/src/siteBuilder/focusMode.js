@@ -93,7 +93,6 @@ function getMessageFromIframe()
           Navigate({ url: response.value.href });
         }
       }
-      console.log(response.value);
 
       if(response && response.value && response.value.type === 'ajaxify')
       {
