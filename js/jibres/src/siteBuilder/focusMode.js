@@ -148,7 +148,7 @@ function postMsg(_to, _value)
       else
       {
         var targetOrigin = $(_to).attr('data-src');
-        _to.contentWindow.postMessage(msg, targetOrigin);
+        _to.contentWindow.postMessage(msg, '*');
       }
     }
   }
