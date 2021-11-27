@@ -17017,6 +17017,11 @@ body [data-magicbox][data-playing="play"]:hover .videoFrame[data-clickable][data
   display: none!important;
 }
 
+[data-pwa] .videoFrame[data-clickable][data-player="default"]::after{
+  width: 64px;
+  height: 64px;
+}
+
 [data-magicbox] .videoFrame .plyr{
   width: 100%;
   height: 100%;
