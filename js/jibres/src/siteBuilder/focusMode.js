@@ -16,7 +16,6 @@ function handleFocusModePushState()
   });
 
   $("[data-postMsg-href]").off('click.postMsgHref').on('click.postMsgHref', function(_e){
-    console.log('click on href inside iframe');
     var opt = {
       type: 'href',
       href: $(this).attr('data-postMsg-href')
@@ -82,9 +81,6 @@ function getMessageFromIframe()
   {
     var iframeOrigin = $('#liveIframe').attr('data-origin');
 
-    console.log('get message from iframe');
-    console.log(iframeOrigin);
-    console.log(_event.origin);
     if(_event.origin.startsWith(iframeOrigin))
     {
       var response = JSON.parse(_event.data);
@@ -133,9 +129,6 @@ function postMsgCompany(_this)
 
 function postMsg(_to, _value)
 {
-  console.log('post msg to ' + _to);
-  console.log(_value);
-
   var data = {
     method: 'post'
   };
