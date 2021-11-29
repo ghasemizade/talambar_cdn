@@ -26,6 +26,7 @@
     "dev": "NODE_ENV=development postcss ./src/master.css -o ../magic-v1.css -w",
     "build": "NODE_ENV=development postcss ./src/master.css -o ../magic-v1.css",
     "migrate": "NODE_ENV=development postcss ./src/master-migrate.css -o ../magic-migrate-v1.css",
+    "fonts": "NODE_ENV=development postcss ./src/master-fonts.css -o ../magic-fonts-v1.css",
     "production": "NODE_ENV=production postcss ./src/master.css -o ../magic-v1.min.css"
   }
 }
