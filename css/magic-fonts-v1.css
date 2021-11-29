@@ -262,6 +262,8 @@
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -277,6 +279,8 @@
   font-weight: bold;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -292,6 +296,8 @@
   font-weight: 900;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -307,6 +313,8 @@
   font-weight: 500;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -322,6 +330,8 @@
   font-weight: 300;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -337,6 +347,8 @@
   font-weight: 100;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -352,6 +364,8 @@
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -367,6 +381,8 @@
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -382,6 +398,8 @@
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -394,6 +412,8 @@
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
@@ -408,6 +428,8 @@
   font-weight: normal;
 
   font-style: normal;
+
+  font-display: swap;
 }
 
 /* lato fontface for en text*/
