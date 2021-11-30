@@ -118,6 +118,13 @@ function scrollSmoothTo(_target, _hashtag, _timing, _arg)
     {
       targetOffset -= 60;
     }
+    else if($('body').attr('data-m2') !== undefined)
+    {
+      targetOffset -= 68;
+    }
+    else if(isPagePWA()){
+      targetOffset -= 60;
+    }
     else
     {
       targetOffset -= 10;
