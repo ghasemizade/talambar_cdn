@@ -18023,6 +18023,7 @@ body[data-m2="dark"] > #sidebar .asideM2 li [data-item] svg path{
   max-width:375px;
   min-height: 300px;
   height: 700px;
+  height: 100%;
   max-height: 100%;
 }
 
