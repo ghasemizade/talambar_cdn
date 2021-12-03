@@ -13,10 +13,11 @@
 }
 a.circularChartBox{
 	cursor: pointer;
+	will-change: transform;
 }
 // reaction
 a.circularChartBox:hover{
-	// transform: scale(0.95);
+	transform: scale(0.95);
 	background-color: #f9f9f9;
 }
 a.circularChartBox:focus{
@@ -97,9 +98,6 @@ a.circularChartBox:focus{
   text-anchor: middle;
   text-align: center;
   transition:0.2s
-}
-a.circularChartBox:hover svg{
-	transform: scale(0.95);
 }
 a.circularChartBox:hover .percentage {
   fill: #444;
