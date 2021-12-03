@@ -5,7 +5,7 @@
   margin:0 auto 1rem;
   display: block;
   border-radius: $myRadius;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s;
   overflow: hidden;
   padding: 0.5rem;
   will-change: transform;
@@ -16,7 +16,7 @@ a.circularChartBox{
 }
 // reaction
 a.circularChartBox:hover{
-	transform: scale(0.95);
+	// transform: scale(0.95);
 	background-color: #f9f9f9;
 }
 a.circularChartBox:focus{
@@ -43,7 +43,7 @@ a.circularChartBox:focus{
 	text-overflow: ellipsis;
   white-space: nowrap;
 	text-align: center;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 [dir='rtl'] .circularChartBox h3{
 	font-size: 1.2rem;
@@ -58,7 +58,7 @@ a.circularChartBox:focus{
 .circularChartBox p{
 	color: #aaa;
 	text-align: center;
-	transition:0.3s;
+	transition:0.2s;
 	margin: 1rem 0 0;
 	font-size: 1.2rem;
 	padding: 0 3%;
@@ -89,12 +89,20 @@ a.circularChartBox:focus{
 .circularChart svg {
   display: block;
   margin: 0 auto;
+  transition:0.2s
 }
 .circularChart .percentage {
   fill: #aaa;
   font-size: 0.5em;
   text-anchor: middle;
   text-align: center;
+  transition:0.2s
+}
+a.circularChartBox:hover svg{
+	transform: scale(0.95);
+}
+a.circularChartBox:hover .percentage {
+  fill: #444;
 }
 .circularChart .circle-bg {
   fill: none;
