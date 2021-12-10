@@ -67,3 +67,6 @@ body[data-m2] > #pageHeader .desktop .btn-primary{
 	opacity: 0;
 	visibility: hidden;
 }
+[data-m2] #pageHeader .select22-container{
+	width: 100%;
+}
