@@ -1,0 +1,20 @@
+{
+  "name": "@jibres/magic",
+  "version": "2.0",
+  "description": "Tailwind css for Jibres",
+  "main": "",
+  "dependencies": {
+    "tailwindcss": "^3.0.0",
+    "@tailwindcss/line-clamp": "^0.2.1",
+  },
+  "keywords": [
+    "jibres",
+    "tailwind"
+  ],
+  "author": "Javad Adib",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "scripts": {
+  }
+}
