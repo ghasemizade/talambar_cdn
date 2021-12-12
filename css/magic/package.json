@@ -2,16 +2,13 @@
   "name": "@jibres/magic",
   "version": "2.0.0",
   "description": "Tailwind css for Jibres",
-  "main": "",
+  "main": "tailwind.config.js",
   "dependencies": {
     "postcss-import": "^14.0.2",
     "postcss-clean": "^1.2.1",
     "postcss-nesting": "^10.0.2",
-    "postcss-preset-env": "^7.0.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:jibres/talambar_cdn.git"
+    "postcss-preset-env": "^7.0.1",
+    "fsevents": "^2.3.2"
   },
   "keywords": [
     "jibres",
@@ -37,5 +34,13 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/v3/magic.css --watch",
     "min": "npx tailwindcss -i ./src/input.css -o ./dist/v3/magic.min.css --watch --minify"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jibres/talambar_cdn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jibres/talambar_cdn/issues"
+  },
+  "homepage": "https://github.com/jibres/talambar_cdn#readme"
 }
