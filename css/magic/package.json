@@ -20,5 +20,8 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4"
   },
-  "scripts": {}
+  "scripts": {},
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
 }
