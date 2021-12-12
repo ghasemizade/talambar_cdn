@@ -17,7 +17,9 @@
     "rimraf": "^3.0.2",
     "uglify-js": "^3.14.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "trim-newlines": ">=3.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
