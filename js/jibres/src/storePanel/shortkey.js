@@ -190,15 +190,22 @@ function event_corridor(_e, _self, _key)
     case '191':             // divider
       if(check_factor())
       {
-        if($(":focus").parents('#searchInProducts'))
+        var RowDiscountEl = getSelectedRow();
+        if(RowDiscountEl)
         {
-          $('#searchInProducts input[type="search"]').trigger("select");
+          var RowDiscountEl = RowDiscountEl.find('input.price');
+          RowDiscountEl.trigger("select");
         }
-        else
-        {
-          $('#searchInProducts input[type="search"]').trigger("select");
-          _e.preventDefault();
-        }
+
+        // if($(":focus").parents('#searchInProducts'))
+        // {
+        //   $('#searchInProducts input[type="search"]').trigger("select");
+        // }
+        // else
+        // {
+        //   $('#searchInProducts input[type="search"]').trigger("select");
+        //   _e.preventDefault();
+        // }
       }
       break;
 

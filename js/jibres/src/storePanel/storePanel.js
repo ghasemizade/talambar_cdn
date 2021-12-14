@@ -34,11 +34,13 @@ function calcFooterValues(_table)
     {
       tmpBuy = parseInt(tmpBuy.toEnglish());
     }
-    var tmpPrice = $(this).find('td.cellPrice').attr('data-val');
-    if(tmpPrice)
-    {
-      tmpPrice = parseInt(tmpPrice);
-    }
+    // var tmpPrice = $(this).find('td.cellPrice').attr('data-val');
+    // if(tmpPrice)
+    // {
+    //   tmpPrice = parseInt(tmpPrice);
+    // }
+    tmpPrice = $(this).find('.price').val();
+
     var tmpDiscount = $(this).find('.discount').val();
     if(tmpDiscount)
     {
@@ -243,6 +245,16 @@ function bindBtnOnFactor()
   });
 
   $(document).on('blur', 'input.count', function()
+  {
+    calcFooterValues();
+  });
+
+  $(document).on('input', 'input.price', function()
+  {
+    calcFooterValues();
+  });
+
+  $(document).on('blur', 'input.price', function()
   {
     calcFooterValues();
   });
@@ -537,6 +549,7 @@ function addNewRecord_ProductList(_table, _product, _append)
       htmlPCount = '<input class="input count" type="number" name="count[]" autocomplete="off" min="0" max="1000000000" step="any" placeholder="-" >';
     }
 
+    var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + _product.price +'">';
     var htmlPBuy      = '<input class="input buy" type="number" name="buy[]" autocomplete="off" min="0" max="1000000000" value="' + _product.buyprice +'">';
     var htmlPDiscount = '<div class="input discountCn">';
     htmlPDiscount    += '<input class="discount" type="number" name="discount[]" autocomplete="off" title="%" min="0" max="1000000000"';
@@ -566,7 +579,8 @@ function addNewRecord_ProductList(_table, _product, _append)
     }
     else
     {
-      newRecord.find('td.cellPrice').text(fitNumber(_product.price)).attr('data-val', _product.price);
+      // newRecord.find('td.cellPrice').text(fitNumber(_product.price)).attr('data-val', _product.price);
+      newRecord.find('td.cellPrice').html(htmlPPrice);
       newRecord.find('td.cellDiscount').html(htmlPDiscount);
     }
 
@@ -644,6 +658,10 @@ function navigateonFactorAddInputs(_type, _e)
   {
     nextField = 'discount';
   }
+  else if($focus.is('.price'))
+  {
+    nextField = 'price';
+  }
 
   switch(_type)
   {
@@ -658,15 +676,24 @@ function navigateonFactorAddInputs(_type, _e)
       break;
 
     case 'left':
-    case 'right':
-
-      if(nextField == 'count')
+      if(urlDirRtl())
       {
-        nextField = 'discount';
+        nextField = nextCellRight(nextField);
       }
-      else if(nextField == 'discount')
+      else
       {
-        nextField = 'count';
+        nextField = nextCellLeft(nextField);
+      }
+      break;
+
+    case 'right':
+      if(urlDirRtl())
+      {
+        nextField = nextCellLeft(nextField);
+      }
+      else
+      {
+        nextField = nextCellRight(nextField);
       }
       break;
   }
@@ -691,6 +718,39 @@ function navigateonFactorAddInputs(_type, _e)
   }, 10);
 }
 
+
+function nextCellRight(_current)
+{
+  if(_current == 'count')
+  {
+    return 'price';
+  }
+  else if(_current == 'price')
+  {
+    return 'discount';
+  }
+  else if(_current == 'discount')
+  {
+    return 'count';
+  }
+}
+
+
+function nextCellLeft(_current)
+{
+  if(_current == 'count')
+  {
+    return 'discount';
+  }
+  else if(_current == 'price')
+  {
+    return 'count';
+  }
+  else if(_current == 'discount')
+  {
+    return 'price';
+  }
+}
 
 function navigationFactorAddSetSelected(_tr, _focus)
 {
