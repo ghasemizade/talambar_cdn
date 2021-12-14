@@ -517,7 +517,9 @@ function addNewRecord_ProductList(_table, _product, _append)
     {
       myQuantity = 1;
     }
-    var htmlPName     = _product.title + '<input type="hidden" name="products[]" class="hidden" value="' + _product.id + '">';
+    var htmlPName     = '<a data-fancybox data-type="iframe" target="_blank" href="' + _product.editlink + '">' + _product.title + '</a>';
+    htmlPName         += '<input type="hidden" name="products[]" class="hidden" value="' + _product.id + '">';
+
     var htmlPCount    = '<input class="input count" type="number" name="count[]" autocomplete="off" min="0" max="1000000000" step="any" placeholder="-" value="'+ myQuantity +'">';
     var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + _product.price +'">';
     var htmlPDiscount = '<div class="input discountCn">';
