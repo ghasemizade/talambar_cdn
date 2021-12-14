@@ -499,12 +499,12 @@ function addNewRecord_ProductList(_table, _product, _append)
   var factorType = $('body').attr('data-page');
 
   var trEmpty   = '<tr>';
-  trEmpty       += '<td class="cellIndex"></td>';
-  trEmpty       += '<td class="cellTitle"></td>';
+  trEmpty       += '<td class="cellIndex text-xs"></td>';
+  trEmpty       += '<td class="cellTitle text-xs"></td>';
   trEmpty       += '<td class="cellCount"></td>';
   trEmpty       += '<td class="cellPrice"></td>';
   trEmpty       += '<td class="cellDiscount"></td>';
-  trEmpty       += '<td class="cellTotal"></td>';
+  trEmpty       += '<td class="cellTotal text-sm"></td>';
   trEmpty       += '</tr>';
   var newRecord = $(trEmpty);
   var cuRow     = _table.find('tr').length;
