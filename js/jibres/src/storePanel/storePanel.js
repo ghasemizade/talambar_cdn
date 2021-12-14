@@ -518,6 +518,10 @@ function addNewRecord_ProductList(_table, _product, _append)
       myQuantity = 1;
     }
     var htmlPName = _product.title;
+    if(_product.stock)
+    {
+      htmlPName += ' <span class="bg-green-100 rounded p-1 mx-1">' + _product.stock + '</span>';
+    }
     // if allow to edit, use iframe to edit link
     if(_product.editlink)
     {
