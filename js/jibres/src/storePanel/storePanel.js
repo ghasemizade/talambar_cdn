@@ -29,11 +29,7 @@ function calcFooterValues(_table)
     {
       tmpCount = parseFloat(tmpCount.toEnglish());
     }
-    var tmpBuy = $(this).find('td.cellBuy input').val();
-    if(tmpBuy)
-    {
-      tmpBuy = parseInt(tmpBuy.toEnglish());
-    }
+
     // var tmpPrice = $(this).find('td.cellPrice').attr('data-val');
     // if(tmpPrice)
     // {
@@ -47,10 +43,6 @@ function calcFooterValues(_table)
       tmpDiscount = parseInt(tmpDiscount.toEnglish());
     }
     var tmpDiscountPercent = 0;
-    if(factorType === 'buy')
-    {
-      tmpPrice = tmpBuy;
-    }
 
     // check NaN values
     if(isNaN(tmpCount))
@@ -255,16 +247,6 @@ function bindBtnOnFactor()
   });
 
   $(document).on('blur', 'input.price', function()
-  {
-    calcFooterValues();
-  });
-
-  $(document).on('input', 'input.buy', function()
-  {
-    calcFooterValues();
-  });
-
-  $(document).on('blur', 'input.buy', function()
   {
     calcFooterValues();
   });
@@ -520,15 +502,8 @@ function addNewRecord_ProductList(_table, _product, _append)
   trEmpty       += '<td class="cellIndex"></td>';
   trEmpty       += '<td class="cellTitle"></td>';
   trEmpty       += '<td class="cellCount"></td>';
-  if(factorType === 'buy')
-  {
-    trEmpty       += '<td class="cellBuy"></td>';
-  }
-  else
-  {
-    trEmpty       += '<td class="cellPrice"></td>';
-    trEmpty       += '<td class="cellDiscount"></td>';
-  }
+  trEmpty       += '<td class="cellPrice"></td>';
+  trEmpty       += '<td class="cellDiscount"></td>';
   trEmpty       += '<td class="cellTotal"></td>';
   trEmpty       += '</tr>';
   var newRecord = $(trEmpty);
@@ -544,13 +519,7 @@ function addNewRecord_ProductList(_table, _product, _append)
     }
     var htmlPName     = _product.title + '<input type="hidden" name="products[]" class="hidden" value="' + _product.id + '">';
     var htmlPCount    = '<input class="input count" type="number" name="count[]" autocomplete="off" min="0" max="1000000000" step="any" placeholder="-" value="'+ myQuantity +'">';
-    if(factorType === 'buy')
-    {
-      htmlPCount = '<input class="input count" type="number" name="count[]" autocomplete="off" min="0" max="1000000000" step="any" placeholder="-" >';
-    }
-
     var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + _product.price +'">';
-    var htmlPBuy      = '<input class="input buy" type="number" name="buy[]" autocomplete="off" min="0" max="1000000000" value="' + _product.buyprice +'">';
     var htmlPDiscount = '<div class="input discountCn">';
     htmlPDiscount    += '<input class="discount" type="number" name="discount[]" autocomplete="off" title="%" min="0" max="1000000000"';
     if(_product.discount)
@@ -573,16 +542,10 @@ function addNewRecord_ProductList(_table, _product, _append)
     newRecord.attr('data-barcode2', _product.barcode2);
     newRecord.find('td.cellTitle').html(htmlPName);
     newRecord.find('td.cellCount').html(htmlPCount);
-    if(factorType === 'buy')
-    {
-      newRecord.find('td.cellBuy').html(htmlPBuy);
-    }
-    else
-    {
-      // newRecord.find('td.cellPrice').text(fitNumber(_product.price)).attr('data-val', _product.price);
-      newRecord.find('td.cellPrice').html(htmlPPrice);
-      newRecord.find('td.cellDiscount').html(htmlPDiscount);
-    }
+
+    // newRecord.find('td.cellPrice').text(fitNumber(_product.price)).attr('data-val', _product.price);
+    newRecord.find('td.cellPrice').html(htmlPPrice);
+    newRecord.find('td.cellDiscount').html(htmlPDiscount);
 
     newRecord.find('td.cellTotal').text(fitNumber(_product.finalprice)).attr('data-val', _product.finalprice);
   }
