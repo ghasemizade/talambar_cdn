@@ -99,17 +99,10 @@ function getMessageFromIframe()
         }
 
         // show notif
-        var myNotif = response.value.notif;
-        if(myNotif)
+        if(response.value.notif)
         {
-          notif(myNotif.type, myNotif.msg, myNotif.title, myNotif.timeout, myNotif.opt);
-        }
-
-        // show alerty
-        var myAlerty = response.value.alerty;
-        if(myAlerty)
-        {
-          notifAlerty(myAlerty.type, myAlerty.msg, myAlerty.title, myAlerty.timeout, myAlerty.opt);
+          var myMsg = {msg:response.value.notif};
+          notifGenerator(myMsg);
         }
       }
 
