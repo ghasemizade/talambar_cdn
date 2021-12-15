@@ -332,6 +332,12 @@ function addProductByID(_id)
 }
 
 
+function updateProductByID(_id)
+{
+  searchForProduct('id', _id);
+}
+
+
 /**
  * check conditions after finding barcode
  * @param  {[type]} _barcode [description]
