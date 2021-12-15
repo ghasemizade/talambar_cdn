@@ -81,9 +81,23 @@ function getMessageFromIframe()
   {
     var iframeOrigin = $('#liveIframe').attr('data-origin');
 
-    if(_event.origin.startsWith(iframeOrigin))
+    // if(_event.origin.startsWith(iframeOrigin))
     {
       var response = JSON.parse(_event.data);
+
+      if(response && response.value && response.value.type === 'closeAndRun')
+      {
+        // close iframe
+        if(Fancybox)
+        {
+          Fancybox.close();
+        }
+        // try to run fn
+        if(response.value.fn)
+        {
+          callFunc(response.value.fn, response.value.args);
+        }
+      }
 
       // handle href
       if(response && response.value && response.value.type === 'href')

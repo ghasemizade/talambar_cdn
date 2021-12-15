@@ -77,9 +77,6 @@
     return result;
   };
 
-  window.jibres = 'Yes Sir ❤️';
-  // window.Jibres = 'Yes Sir ❤️';
-
   // Find the right method, call on correct element
   function launchFullscreen(element) {
     if(element.requestFullscreen) {element.requestFullscreen();
