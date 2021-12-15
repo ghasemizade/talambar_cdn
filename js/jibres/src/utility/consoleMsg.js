@@ -19,3 +19,8 @@ function Jibres(_arg)
 
   return window.jibres;
 }
+
+function echo(_arg)
+{
+	console.log(_arg);
+}
