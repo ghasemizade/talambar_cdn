@@ -123,6 +123,13 @@ function postMsgCompany(_this)
     return document.getElementById('liveIframe');
   }
 
+  // try to get el from backend
+  var selectEl = $(_this);
+  if(selectEl.length === 1)
+  {
+    return $(_this).get(0);
+  }
+
   return null;
 }
 
