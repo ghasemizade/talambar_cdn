@@ -322,6 +322,17 @@ function checkProductExist(_key, _value)
 
 
 /**
+ * add product by ID
+ * @param  {[type]} _barcode [description]
+ * @return {[type]}          [description]
+ */
+function addProductByID(_id)
+{
+  searchForProduct('id', _id);
+}
+
+
+/**
  * check conditions after finding barcode
  * @param  {[type]} _barcode [description]
  * @return {[type]}          [description]
