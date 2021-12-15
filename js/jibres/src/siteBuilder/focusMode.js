@@ -97,6 +97,20 @@ function getMessageFromIframe()
         {
           callFunc(response.value.fn, response.value.args);
         }
+
+        // show notif
+        var myNotif = response.value.notif;
+        if(myNotif)
+        {
+          notif(myNotif.type, myNotif.msg, myNotif.title, myNotif.timeout, myNotif.opt);
+        }
+
+        // show alerty
+        var myAlerty = response.value.alerty;
+        if(myAlerty)
+        {
+          notifAlerty(myAlerty.type, myAlerty.msg, myAlerty.title, myAlerty.timeout, myAlerty.opt);
+        }
       }
 
       // handle href
