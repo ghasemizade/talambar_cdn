@@ -261,6 +261,17 @@ function notifGenerator(_data, $_form)
     $_form.find('textarea').removeClass('error warn ok');
   }
 
+  if(_data && _data.postMsg)
+  {
+    var target = 'parent';
+    if(_data.postMsg.target)
+    {
+      target = _data.postMsg.target;
+    }
+
+    postMsg(target, _data.postMsg);
+  }
+
   // reload iframe if requested
   if(_data && _data.reloadIframe)
   {
