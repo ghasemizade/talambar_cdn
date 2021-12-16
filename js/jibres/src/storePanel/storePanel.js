@@ -307,7 +307,7 @@ function bindBtnOnFactor()
 
   $('[data-quick-addProduct]').on('click', function(_e, _selectedProduct)
   {
-    var productID = $(this).attr('data-quickadd-product');
+    var productID = $(this).attr('data-quick-addProduct');
     // add product by id
     addProductByID(productID);
   });
