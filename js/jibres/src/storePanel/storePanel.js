@@ -13,7 +13,12 @@ function calcFooterValues(_table)
   var calcDtSumCount        = 0;
   var calcDtSumPrice        = 0;
   var calcDtSumDiscount     = 0;
+  var calcDtSumVat          = 0;
+
   var calcDtDiscountPercent = 0;
+  var calcDtVat             = 0;
+  var calcDtVatPercent      = 0;
+
   var calcDtSumTotal        = 0;
   var factorType            = $('body').attr('data-page');
   // calc total of column
@@ -40,7 +45,7 @@ function calcFooterValues(_table)
     var tmpDiscount = $(this).find('.discount').val();
     if(tmpDiscount)
     {
-      tmpDiscount = parseInt(tmpDiscount.toEnglish());
+      tmpDiscount = parseFloat(tmpDiscount.toEnglish());
     }
     var tmpDiscountPercent = 0;
 
@@ -63,9 +68,22 @@ function calcFooterValues(_table)
       tmpDiscount = 0;
     }
 
+    var tmpVatPercent = $(this).find('.cellVat').attr('data-vat-percent');
+    if(tmpVatPercent)
+    {
+      tmpVatPercent = parseFloat(tmpVatPercent);
+    }
+    if(isNaN(tmpVatPercent))
+    {
+      tmpVatPercent = 0;
+    }
+
+    var tmpVat = (tmpPrice - tmpDiscount) * tmpVatPercent;
+
     var tmpPriceCol    = tmpCount * tmpPrice;
     var tmpDiscountCol = tmpCount * tmpDiscount;
-    var tmpFinalCol    = tmpCount * (tmpPrice - tmpDiscount);
+    var tmpVatCol      = tmpCount * tmpVat;
+    var tmpFinalCol    = tmpCount * (tmpPrice - tmpDiscount + tmpVat);
 
     // count of row
     calcDtCountRow    += 1;
@@ -73,6 +91,7 @@ function calcFooterValues(_table)
     calcDtSumCount    += tmpCount;
     calcDtSumPrice    += tmpPriceCol;
     calcDtSumDiscount += tmpDiscountCol;
+    calcDtSumVat      += tmpVatCol;
     calcDtSumTotal    += tmpFinalCol;
 
     // set discount percent
@@ -518,6 +537,10 @@ function addNewRecord_ProductList(_table, _product, _append)
   trEmpty       += '<td class="cellCount"></td>';
   trEmpty       += '<td class="cellPrice"></td>';
   trEmpty       += '<td class="cellDiscount"></td>';
+  if($('.headVat[data-vat-percent]').length === 1)
+  {
+    trEmpty += '<td class="cellVat"></td>';
+  }
   trEmpty       += '<td class="cellTotal"></td>';
   trEmpty       += '</tr>';
   var newRecord = $(trEmpty);
@@ -543,25 +566,27 @@ function addNewRecord_ProductList(_table, _product, _append)
     }
     htmlPName += '<input type="hidden" name="products[]" class="hidden" value="' + _product.id + '">';
 
+    var productPrice    = _product.price;
+    var productDiscount = _product.discount;
+
     var htmlPCount    = '<input class="input count" type="number" name="count[]" autocomplete="off" min="0" max="1000000000" step="any" placeholder="-" value="'+ myQuantity +'">';
-    var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + _product.price +'">';
+    var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + productPrice +'">';
     var htmlPDiscount = '<div class="input discountCn">';
     htmlPDiscount    += '<input class="discount" type="number" name="discount[]" autocomplete="off" title="%" min="0" max="1000000000"';
-    if(_product.discount)
+    if(productDiscount)
     {
       var removeDiscount = !(_table.attr('data-woDiscount') !== undefined);
       if(removeDiscount)
       {
-        htmlPDiscount += ' value="' + _product.discount + '"';
+        htmlPDiscount += ' value="' + productDiscount + '"';
       }
       // set data-discount on all condition
-      htmlPDiscount += ' data-discount="' + _product.discount + '"';
+      htmlPDiscount += ' data-discount="' + productDiscount + '"';
     }
     htmlPDiscount    += '>';
     // htmlPDiscount    += '<span class="addon small">0%</span>'+ '</div>';
 
     // fill with product details
-    // logy(_product);
     newRecord.attr('data-id', _product.id);
     newRecord.attr('data-barcode', _product.barcode);
     newRecord.attr('data-barcode2', _product.barcode2);
@@ -571,7 +596,7 @@ function addNewRecord_ProductList(_table, _product, _append)
     // newRecord.find('td.cellPrice').text(fitNumber(_product.price)).attr('data-val', _product.price);
     newRecord.find('td.cellPrice').html(htmlPPrice);
     newRecord.find('td.cellDiscount').html(htmlPDiscount);
-
+    newRecord.find('td.cellVat').text(fitNumber(_product.vat)).attr('data-val', _product.vat).attr('data-vat-percent', _product.vatPercent);
     newRecord.find('td.cellTotal').text(fitNumber(_product.finalprice)).attr('data-val', _product.finalprice);
   }
   else
