@@ -303,8 +303,15 @@ function bindBtnOnFactor()
     {
       addFindedProduct(_selectedProduct);
     }
-
   });
+
+  $('[data-quick-addProduct]').on('click', function(_e, _selectedProduct)
+  {
+    var productID = $(this).attr('data-quickadd-product');
+    // add product by id
+    addProductByID(productID);
+  });
+
 }
 
 
