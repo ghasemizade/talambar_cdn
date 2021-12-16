@@ -68,7 +68,7 @@ function calcFooterValues(_table)
       tmpDiscount = 0;
     }
 
-    var tmpVatPercent = $(this).find('.cellVat').attr('data-vat-percent');
+    var tmpVatPercent = $('.headVat').attr('data-vat-percent');
     if(tmpVatPercent)
     {
       tmpVatPercent = parseFloat(tmpVatPercent);
@@ -78,7 +78,11 @@ function calcFooterValues(_table)
       tmpVatPercent = 0;
     }
 
-    var tmpVat = (tmpPrice - tmpDiscount) * tmpVatPercent;
+    var tmpVat = 0;
+    if($(this).find('.cellVat').attr('data-vat-included') === 'true')
+    {
+      tmpVat = (tmpPrice - tmpDiscount) * tmpVatPercent;
+    }
 
     var tmpPriceCol    = tmpCount * tmpPrice;
     var tmpDiscountCol = tmpCount * tmpDiscount;
@@ -106,6 +110,9 @@ function calcFooterValues(_table)
       $(this).find('td.cellDiscount input').attr('title', '00');
       // $(this).find('td.cellDiscount .addon').text('');
     }
+
+    // set vat value
+    $(this).find('td.cellVat').text(fitNumber(tmpVat)).attr('data-val', tmpVat);
 
     // set final price
     if(tmpFinalCol === 0 && !tmpPrice)
@@ -136,6 +143,7 @@ function calcFooterValues(_table)
   // remove decimal value from total price
   // in future get option from store setting to round this value
   calcDtSumPrice    = Math.round(calcDtSumPrice);
+  calcDtSumVat      = Math.round(calcDtSumVat);
   calcDtSumDiscount = Math.round(calcDtSumDiscount);
   calcDtSumTotal    = Math.round(calcDtSumTotal);
 
@@ -165,6 +173,7 @@ function calcFooterValues(_table)
   $('.priceBox .item span').text(fitNumber(calcDtCountRow)).attr('data-val', calcDtCountRow);
   $('.priceBox .count span').text(fitNumber(calcDtSumCount)).attr('data-val', calcDtSumCount);
   $('.priceBox .sum span').text(fitNumber(calcDtSumPrice)).attr('data-val', calcDtSumPrice);
+  $('.priceBox .vat span').text(fitNumber(calcDtSumVat)).attr('data-val', calcDtSumVat);
   $('.priceBox .discountPercent span').text(fitNumber(calcDtDiscountPercent)+ "%").attr('data-val', calcDtDiscountPercent);
   $('.priceBox .discount span').text(fitNumber(calcDtSumDiscount)).attr('data-val', calcDtSumDiscount);
   // update count of item in table
@@ -596,7 +605,7 @@ function addNewRecord_ProductList(_table, _product, _append)
     // newRecord.find('td.cellPrice').text(fitNumber(_product.price)).attr('data-val', _product.price);
     newRecord.find('td.cellPrice').html(htmlPPrice);
     newRecord.find('td.cellDiscount').html(htmlPDiscount);
-    newRecord.find('td.cellVat').text(fitNumber(_product.vat)).attr('data-val', _product.vat).attr('data-vat-percent', _product.vatPercent);
+    newRecord.find('td.cellVat').text(fitNumber(_product.vat)).attr('data-val', _product.vat).attr('data-vat-included', _product.vatIncluded);
     newRecord.find('td.cellTotal').text(fitNumber(_product.finalprice)).attr('data-val', _product.finalprice);
   }
   else
