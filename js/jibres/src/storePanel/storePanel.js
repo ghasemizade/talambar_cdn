@@ -299,13 +299,9 @@ function bindBtnOnFactor()
   // add event to handle dropdown selected value
   $('body').on('dropdown:selected:datalist', function(_e, _selectedProduct)
   {
-    if(_selectedProduct)
+    if(_selectedProduct && _selectedProduct.isProduct)
     {
       addFindedProduct(_selectedProduct);
-    }
-    else
-    {
-      logy('datalist is not exist');
     }
 
   });
