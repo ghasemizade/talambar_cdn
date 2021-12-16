@@ -273,10 +273,7 @@ function bindBtnOnFactor()
   {
     if(_selectedProduct)
     {
-      if(_selectedProduct.price)
-      {
-        addFindedProduct(_selectedProduct);
-      }
+      addFindedProduct(_selectedProduct);
     }
     else
     {
