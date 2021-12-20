@@ -12819,7 +12819,6 @@ body .rtl .items2 li .go::after{
 [data-m2] .tbl1.productList .input.discountCn input.discount{
   padding:5px 1px;
   text-align:center;
-  background-color:transparent;
 }
 
 [data-m2] .tbl1.productList .input.discountCn .addon.small{
