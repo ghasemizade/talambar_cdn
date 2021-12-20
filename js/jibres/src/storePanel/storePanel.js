@@ -582,9 +582,20 @@ function addNewRecord_ProductList(_table, _product, _append)
     var productDiscount = _product.discount;
 
     var htmlPCount    = '<input class="input count" type="number" name="count[]" autocomplete="off" min="0" max="1000000000" step="any" placeholder="-" value="'+ myQuantity +'">';
-    var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + productPrice +'">';
+    var htmlPPrice    = '<input class="input price" type="number" name="price[]" autocomplete="off" min="0" max="1000000000" value="' + productPrice +'"';
+    var PriceReadonly = $('.headPrice').attr('data-readonly') !== undefined;
+    if(PriceReadonly)
+    {
+      htmlPPrice += ' disabled';
+    }
+    htmlPPrice += '>';
     var htmlPDiscount = '<div class="input discountCn">';
     htmlPDiscount    += '<input class="discount" type="number" name="discount[]" autocomplete="off" title="%" min="0" max="1000000000"';
+    var DiscountReadonly = $('.headDiscount').attr('data-readonly') !== undefined;
+    if(DiscountReadonly)
+    {
+      htmlPDiscount += ' disabled';
+    }
     if(productDiscount)
     {
       var removeDiscount = !(_table.attr('data-woDiscount') !== undefined);
