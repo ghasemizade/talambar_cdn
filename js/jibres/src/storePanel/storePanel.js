@@ -301,7 +301,8 @@ function bindBtnOnFactor()
   {
     if(_dropdownData && _dropdownData.isProduct)
     {
-      addFindedProduct(_dropdownData);
+      // on select from dropdonw DO NOT update record, add new Line
+      addFindedProduct(_dropdownData, false);
     }
     if(_dropdownData && _dropdownData.isCustomer)
     {
@@ -360,13 +361,15 @@ function checkProductExist(_key, _value)
  */
 function addProductByID(_id)
 {
-  searchForProduct('id', _id);
+  // on add by id with quick add DO NOT update, add New line
+  searchForProduct('id', _id, false);
 }
 
 
 function updateProductByID(_id)
 {
-  searchForProduct('id', _id);
+  // on update, update it
+  searchForProduct('id', _id, true);
 }
 
 
@@ -386,7 +389,8 @@ function productBarcodeFinded(_barcode)
   }
   else
   {
-    searchForProduct('barcode', _barcode);
+    // if record not exist, DO NOT update, add New line
+    searchForProduct('barcode', _barcode, false);
   }
 }
 
@@ -397,7 +401,7 @@ function productBarcodeFinded(_barcode)
  * @param  {[type]} _value [description]
  * @return {[type]}        [description]
  */
-function searchForProduct(_key, _value)
+function searchForProduct(_key, _value, _updateLineIfExist)
 {
   if(!urlStore())
   {
@@ -418,11 +422,11 @@ function searchForProduct(_key, _value)
     // if have error show error message
     if(myMsg)
     {
-      addFindedProduct(null, myMsg, _value);
+      addFindedProduct(null, _updateLineIfExist, myMsg, _value);
     }
     else
     {
-      addFindedProduct(pData);
+      addFindedProduct(pData, _updateLineIfExist);
     }
   });
 }
@@ -435,14 +439,15 @@ function searchForProduct(_key, _value)
  * final function to add record of product
  * @param {[type]} _product [description]
  */
-function addFindedProduct(_product, _msg, _searchedValue)
+function addFindedProduct(_product, _updateLineIfExist, _msg, _searchedValue)
 {
   if(_product)
   {
     if(_product.id)
     {
       var existRecord = checkProductExist('id', _product.id);
-      if(existRecord)
+
+      if(_updateLineIfExist && existRecord)
       {
         if(_product.scale)
         {
