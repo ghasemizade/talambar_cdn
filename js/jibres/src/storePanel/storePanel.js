@@ -502,9 +502,24 @@ function addFindedProduct(_product, _msg, _searchedValue)
 
 function updateCustomerDetail(_data)
 {
-  if(_data && _data.balance)
+  if(_data)
   {
-    $('.customerBalance span').text(fitNumber(_data.balance)).attr('data-val', _data.balance);
+    var customerBalanceEl = $('.customerBalance span');
+    var myBalance = _data.balance;
+    if(isNaN(myBalance))
+    {
+      myBalance = 0;
+    }
+    // set text
+    customerBalanceEl.text(fitNumber(myBalance)).attr('data-val', myBalance);
+    if(parseFloat(myBalance) < 0)
+    {
+      $('.customerBalance').addClass('text-yellow-800');
+    }
+    else
+    {
+      $('.customerBalance').removeClass('text-yellow-800');
+    }
   }
 }
 
