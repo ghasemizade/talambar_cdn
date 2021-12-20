@@ -297,11 +297,15 @@ function bindBtnOnFactor()
   sendToPcPos();
 
   // add event to handle dropdown selected value
-  $('body').on('dropdown:selected:datalist', function(_e, _selectedProduct)
+  $('body').on('dropdown:selected:datalist', function(_e, _dropdownData)
   {
-    if(_selectedProduct && _selectedProduct.isProduct)
+    if(_dropdownData && _dropdownData.isProduct)
     {
-      addFindedProduct(_selectedProduct);
+      addFindedProduct(_dropdownData);
+    }
+    if(_dropdownData && _dropdownData.isCustomer)
+    {
+      updateCustomerDetail(_dropdownData);
     }
   });
 
@@ -495,6 +499,14 @@ function addFindedProduct(_product, _msg, _searchedValue)
   }
 }
 
+
+function updateCustomerDetail(_data)
+{
+  if(_data && _data.balance)
+  {
+    $('.customerBalance span').text(fitNumber(_data.balance)).attr('data-val', _data.balance);
+  }
+}
 
 
 /**
