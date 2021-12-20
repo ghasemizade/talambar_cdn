@@ -6,6 +6,11 @@
  */
 function fitNumber(_num, _seperator)
 {
+  if(_num === null)
+  {
+    return null;
+  }
+
   // if needed do not show as local string
   if(_seperator !== false)
   {
