@@ -24,7 +24,7 @@ function resizeDetector(_data, _forceArray)
     // window.innerWidth
     // window.innerHeight
 
-    if(myWidth < 830)
+    if(myWidth < 768)
     {
       var is_iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
       var is_android = /android/i.test(navigator.userAgent);
