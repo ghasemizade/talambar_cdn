@@ -362,7 +362,7 @@ function checkProductExist(_key, _value)
 function addProductByID(_id)
 {
   // on add by id with quick add DO NOT update, add New line
-  searchForProduct('id', _id, false);
+  searchForProduct('id', _id, true);
 }
 
 
