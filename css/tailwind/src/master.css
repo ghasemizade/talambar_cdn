@@ -45,6 +45,7 @@
 @import "css/bootstrap/_button.scss";
 @import "css/bootstrap/_button-extra.scss";
 @import "css/bootstrap/_coloredLinks.scss";
+@import "css/bootstrap/_nav.scss";
 
 /* components*/
 @import "css/components/_0var.scss";
