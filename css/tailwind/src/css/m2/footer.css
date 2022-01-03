@@ -8,3 +8,7 @@ body[data-m2] > #pageFooter .desktop{
 	line-height: 40px;
 	background-color:#eff6fe;
 }
+
+body[data-m2] > #pageFooter{
+	width: 100%;
+}

@@ -17528,7 +17528,6 @@ body .rtl .items li .go::after{
 body[data-m2]{
   width: 100%;
   overflow-x: hidden;
-  flex-direction: column;
 }
 
 [data-desktop] body[data-m2]{
@@ -17563,7 +17562,8 @@ body[data-m2] > #pageContent {
   overflow-x: hidden;
   overflow-y: auto;
   flex: 1 1 0%;
-  height: calc( 100vh - 58px);
+  min-height: calc( 100vh - 260px);
+  max-height: calc( 100vh - 58px);
 }
 
 body[data-m2] > #pageContent #content{
@@ -17998,6 +17998,10 @@ body[data-m2] > #pageFooter .desktop{
   overflow-y: auto;
   line-height: 40px;
   background-color:#eff6fe;
+}
+
+body[data-m2] > #pageFooter{
+  width: 100%;
 }
 
 .emptyState{
