@@ -13,6 +13,7 @@ function kerkere(_this)
 {
     var myTarget = null;
     var $target  = null;
+    var singleMode = _this.attr('data-kerkere-single');
     if(_this)
     {
       myTarget = _this.attr('data-kerkere');
@@ -50,11 +51,20 @@ function kerkere(_this)
         }
       }
 
-      //Expand or collapse this panel
-      $target.slideToggle('fast');
+      // don't close this one
+      if(singleMode === 'forceOpen')
+      {
+        // only Open
+        $target.slideDown('fast');
+      }
+      else
+      {
+        //Expand or collapse this panel
+        $target.slideToggle('fast');
+      }
     }
 
-    if(_this.attr('data-kerkere-single') !== undefined)
+    if(singleMode !== undefined)
     {
       //Hide the other panels
       $('[data-kerkere-content]').not($target).slideUp('fast');
@@ -62,6 +72,10 @@ function kerkere(_this)
       $('[data-kerkere]').not(_this).attr('data-kerkere-status', 'close');
       // change icon of all other
       $('[data-kerkere][data-kerkere-icon]').not(_this).attr('data-kerkere-icon', 'close');
+
+      // inside tab design, only set focus on this one
+      $('[data-kerkere] .nav-link').removeClass('active');
+      $(_this).find('.nav-link').addClass('active');
     }
 }
 
