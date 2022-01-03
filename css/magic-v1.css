@@ -17466,6 +17466,7 @@ body .rtl .items li .go::after{
 body[data-m2]{
   width: 100%;
   overflow-x: hidden;
+  flex-direction: column;
 }
 
 [data-desktop] body[data-m2]{
@@ -17921,6 +17922,17 @@ body[data-m2="dark"] > #sidebar .asideM2 li [data-item="seperator"]{
 
 body[data-m2="dark"] > #sidebar .asideM2 li [data-item] svg path{
   fill: #9899ac;
+}
+
+body[data-m2] > #pageFooter .desktop{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: 0 0 #0000, 0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 -1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  height: 100%;
+  line-height: 40px;
 }
 
 .emptyState{

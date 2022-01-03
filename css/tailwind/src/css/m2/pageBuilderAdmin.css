@@ -2,6 +2,7 @@
 body[data-m2]{
   width: 100%;
   overflow-x: hidden;
+  flex-direction: column;
 }
 [data-desktop] body[data-m2]{
   @apply flex flex-wrap;
