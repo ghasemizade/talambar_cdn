@@ -1,9 +1,9 @@
-body[data-m2][data-iframe] > #sidebar{
+body[data-m2][data-iframe] #sidebar{
 	display: none!important;
 }
-body[data-m2][data-iframe] > #pageHeader{
+body[data-m2][data-iframe] #pageHeader{
 	display: none!important;
 }
-body[data-m2][data-iframe] > #pageContent{
+body[data-m2][data-iframe] #pageContent{
 	height: initial;
 }
