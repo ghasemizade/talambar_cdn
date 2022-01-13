@@ -923,7 +923,7 @@ function prevFactor(_type, _all)
 
 function sendToPcPos()
 {
-  $(document).on('click', '.pcPos', function()
+  $(document).off('click.pcPos').on('click.pcPos', '.pcPos', function()
   {
     var myLink    = $(this).attr('data-link');
     var lastPrice = $('.priceBox .final span').attr('data-val');
