@@ -297,7 +297,7 @@ function bindBtnOnFactor()
   sendToPcPos();
 
   // add event to handle dropdown selected value
-  $('body').on('dropdown:selected:datalist', function(_e, _dropdownData)
+  $('body').off('dropdown:selected:datalist').on('dropdown:selected:datalist', function(_e, _dropdownData)
   {
     if(_dropdownData && _dropdownData.isProduct)
     {
@@ -310,7 +310,7 @@ function bindBtnOnFactor()
     }
   });
 
-  $('[data-quick-addProduct]').on('click', function(_e, _selectedProduct)
+  $(document).off('click.quickAddProduct').on('click.quickAddProduct', '[data-quick-addProduct]', function(_e, _selectedProduct)
   {
     var productID = $(this).attr('data-quick-addProduct');
     // add product by id
