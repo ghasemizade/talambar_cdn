@@ -226,7 +226,7 @@ function calcFooterValues(_table)
 
 function bindBtnOnFactor()
 {
-  $('body').on('barcode:detect', function(_e, _barcode)
+  $('body').off('barcode:detect').on('barcode:detect', function(_e, _barcode)
   {
     if($('#searchInProducts').length < 1)
     {
@@ -239,7 +239,7 @@ function bindBtnOnFactor()
     $('#searchInProducts #productSearch').select22('close');
   });
 
-  $(document).on('focus', '#factorAdd table input', function()
+  $(document).off('focus.selectTr').on('focus.selectTr', '#factorAdd table input', function()
   {
     var myTr = $(this).parents('tr');
     if(myTr.attr('data-selected') === undefined)
@@ -248,48 +248,48 @@ function bindBtnOnFactor()
     }
   });
 
-  $(document).on('blur', '#factorAdd table input', function()
+  $(document).off('blur.selectTr').on('blur.selectTr', '#factorAdd table input', function()
   {
     $(this).parents('tr').attr('data-selected', null);
   });
 
 
-  $(document).on('focus', '#searchInProducts #select22-search__field', function()
+  $(document).off('focus.calcFooterVal').on('focus.calcFooterVal', '#searchInProducts #select22-search__field', function()
   {
     calcFooterValues();
   });
 
-  $(document).on('input', 'input.count', function()
+  $(document).off('input.calcFooterVal').on('input.calcFooterVal', 'input.count', function()
   {
     calcFooterValues();
   });
 
-  $(document).on('blur', 'input.count', function()
+  $(document).off('blur.calcFooterVal').on('blur.calcFooterVal', 'input.count', function()
   {
     calcFooterValues();
   });
 
-  $(document).on('input', 'input.price', function()
+  $(document).off('input.calcFooterVal').on('input.calcFooterVal', 'input.price', function()
   {
     calcFooterValues();
   });
 
-  $(document).on('blur', 'input.price', function()
+  $(document).off('blur.calcFooterVal').on('blur.calcFooterVal', 'input.price', function()
   {
     calcFooterValues();
   });
 
-  $(document).on('click', '.priceBox .discount', function()
+  $(document).off('click.toggleDiscount').on('click.toggleDiscount', '.priceBox .discount', function()
   {
     shortkey_toggleDiscount();
   });
 
-  $(document).on('input', 'input.discount', function()
+  $(document).off('input.calcFooterVal').on('input.calcFooterVal', 'input.discount', function()
   {
     calcFooterValues();
   });
 
-  $(document).on('blur', 'input.discount', function()
+  $(document).off('blur.calcFooterVal').on('blur.calcFooterVal', 'input.discount', function()
   {
     calcFooterValues();
   });
