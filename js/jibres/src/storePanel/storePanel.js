@@ -254,42 +254,41 @@ function bindBtnOnFactor()
   });
 
 
-  $(document).off('focus.calcFooterVal').on('focus.calcFooterVal', '#searchInProducts #select22-search__field', function()
+  $(document).off('focus.calcFooterValSearch').on('focus.calcFooterValSearch', '#searchInProducts #select22-search__field', function()
+  {
+    calcFooterValues();
+  });
+  $(document).off('input.calcFooterValCount').on('input.calcFooterValCount', 'input.count', function()
   {
     calcFooterValues();
   });
 
-  $(document).off('input.calcFooterVal').on('input.calcFooterVal', 'input.count', function()
+  $(document).off('blur.calcFooterValCount').on('blur.calcFooterValCount', 'input.count', function()
   {
     calcFooterValues();
   });
 
-  $(document).off('blur.calcFooterVal').on('blur.calcFooterVal', 'input.count', function()
+  $(document).off('input.calcFooterValPrice').on('input.calcFooterValPrice', 'input.price', function()
   {
     calcFooterValues();
   });
 
-  $(document).off('input.calcFooterVal').on('input.calcFooterVal', 'input.price', function()
+  $(document).off('blur.calcFooterValPrice').on('blur.calcFooterValPrice', 'input.price', function()
   {
     calcFooterValues();
   });
 
-  $(document).off('blur.calcFooterVal').on('blur.calcFooterVal', 'input.price', function()
-  {
-    calcFooterValues();
-  });
-
-  $(document).off('click.toggleDiscount').on('click.toggleDiscount', '.priceBox .discount', function()
+  $(document).off('click.toggleDiscountDiscount').on('click.toggleDiscountDiscount', '.priceBox .discount', function()
   {
     shortkey_toggleDiscount();
   });
 
-  $(document).off('input.calcFooterVal').on('input.calcFooterVal', 'input.discount', function()
+  $(document).off('input.calcFooterValDiscount').on('input.calcFooterValDiscount', 'input.discount', function()
   {
     calcFooterValues();
   });
 
-  $(document).off('blur.calcFooterVal').on('blur.calcFooterVal', 'input.discount', function()
+  $(document).off('blur.calcFooterValDiscount').on('blur.calcFooterValDiscount', 'input.discount', function()
   {
     calcFooterValues();
   });
