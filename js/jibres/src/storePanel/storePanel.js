@@ -169,7 +169,7 @@ function calcFooterValues(_table)
 
   $('.priceBox .final span').text(fitNumber(calcDtSumTotal)).attr('data-val', calcDtSumTotal);
   $(".priceBox .final").shrink(60);
-  $('.priceBox .desc').text(wordifyTomans(calcDtSumTotal));
+  $('.priceBox .desc').text(wordifyUnit(calcDtSumTotal, $('.priceBox .final abbr').text()));
   $('.priceBox .item span').text(fitNumber(calcDtCountRow)).attr('data-val', calcDtCountRow);
   $('.priceBox .count span').text(fitNumber(calcDtSumCount)).attr('data-val', calcDtSumCount);
   $('.priceBox .sum span').text(fitNumber(calcDtSumPrice)).attr('data-val', calcDtSumPrice);
