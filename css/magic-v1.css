@@ -17850,7 +17850,7 @@ body[data-m2] #sidebar .asideM2 li [data-item]{
   position: relative;
   padding: 5px 5px 5px 50px;
   color: #4a5568;
-  line-height: 30px;
+  line-height: 28px;
   border: none;
   transition: 0.2s;
   border-radius: 7px;
@@ -17859,7 +17859,7 @@ body[data-m2] #sidebar .asideM2 li [data-item]{
 }
 
 body[data-m2] #sidebar .asideM2 li li [data-item]{
-  line-height: 25px;
+  line-height: 22px;
   font-weight: 400;
 }
 
@@ -17898,8 +17898,8 @@ body[data-m2] #sidebar .asideM2 li [data-item="seperator"]{
   display: block;
   height: 0;
   border-bottom: 1px solid #eff5f5;
-  margin-top:15px;
-  margin-bottom:15px;
+  margin-top:0px;
+  margin-bottom:10px;
   padding-top:0;
   padding-bottom:0;
 }
