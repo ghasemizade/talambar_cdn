@@ -9,7 +9,7 @@
   overflow: hidden;
   padding: 5px;
   will-change: transform;
-  @include select-none();
+  @apply select-none;
 }
 a.circularChartBox{
 	cursor: pointer;
