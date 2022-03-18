@@ -1,8 +1,6 @@
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
-*/
-
-/*
+*//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
@@ -10,14 +8,10 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
 }
 
 ::before,
@@ -33,17 +27,12 @@
 */
 
 html {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
-  /* 3 */
-  font-family: "LatoLatinWeb", IRANYekan, ui-sans-serif, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  /* 4 */
+     tab-size: 4; /* 3 */
+  font-family: "LatoLatinWeb", IRANYekan, ui-sans-serif, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* 4 */
 }
 
 /*
@@ -52,10 +41,8 @@ html {
 */
 
 body {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
 }
 
 /*
@@ -65,12 +52,9 @@ body {
 */
 
 hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
 }
 
 /*
@@ -123,10 +107,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /*
@@ -164,12 +146,9 @@ sup {
 */
 
 table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
 }
 
 /*
@@ -183,18 +162,12 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
 }
 
 /*
@@ -215,12 +188,9 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
 }
 
 /*
@@ -262,10 +232,8 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /*
@@ -282,10 +250,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*
@@ -347,25 +313,19 @@ textarea {
 */
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
 }
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
 }
 
 /*
@@ -380,7 +340,6 @@ button,
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
-
 :disabled {
   cursor: default;
 }
@@ -399,10 +358,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
 }
 
 /*
@@ -473,30 +430,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
+
   .container {
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px) {
+
   .container {
     max-width: 768px;
   }
 }
 
 @media (min-width: 1024px) {
+
   .container {
     max-width: 1024px;
   }
 }
 
 @media (min-width: 1280px) {
+
   .container {
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1536px) {
+
   .container {
     max-width: 1536px;
   }
@@ -1793,265 +1755,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Fonts */
-
-@import "./fonts/iranyekan.css";
-
-@import "./fonts/_iransansx.scss";
-
-@import "./fonts/_vazir.scss";
-
-@import "./fonts/_ganjnameh.scss";
-
-@import "./fonts/_nika.scss";
-
-@import "./fonts/_behdadweb.scss";
-
-@import "./fonts/_webnastaliq.scss";
-
-@import "./fonts/_lalezar.scss";
-
-@import "./fonts/_lato.scss";
-
-@import "./fonts/_siftal.scss";
-
-/* add tailwind styles */
-
-@import "../dist/tw-personalised-v3.scss";
-
-/* add extra style */
-
-@import "css/base/_reset.scss";
-
-@import "css/base/_global.scss";
-
-@import "css/base/_textColor.scss";
-
-@import "css/base/_backgroundColor.scss";
-
-@import "css/base/_backgroundGradient.scss";
-
-@import "css/base/_borderColor.scss";
-
-/*add lib style*/
-
-@import 'css/lib/kerkere.scss';
-
-@import 'css/lib/sortable.scss';
-
-@import "css/lib/alert2.scss";
-
-/*add pwa style*/
-
-@import 'css/pwa/app.scss';
-
-@import 'css/pwa/layout.scss';
-
-@import 'css/pwa/item.scss';
-
-@import 'css/pwa/footer.scss';
-
-@import 'css/pwa/header.scss';
-
-@import 'css/pwa/search.scss';
-
-/* forms */
-
-/*@import "css/form/_toggle.scss";*/
-
-/* ring */
-
-/*@import "css/ring/_ringWidth.scss";*/
-
-/*@import "css/ring/_ringColor.scss";*/
-
-/*@import "css/ring/_ringOpacity.scss";*/
-
-/*@import "css/ring/_ringOffsetWidth.scss";*/
-
-/* bootstrap*/
-
-@import "css/bootstrap/_alerts.scss";
-
-@import "css/bootstrap/_alerts-extra.scss";
-
-@import "css/bootstrap/_button.scss";
-
-@import "css/bootstrap/_button-extra.scss";
-
-@import "css/bootstrap/_coloredLinks.scss";
-
-@import "css/bootstrap/_nav.scss";
-
-/* components*/
-
-@import "css/components/_0var.scss";
-
-/*@import "css/components/_kbd.scss";*/
-
-@import "css/components/_mask.scss";
-
-/*@import "css/components/_progress.scss";*/
-
-/*@import "css/components/_steps.scss";*/
-
-/* siteBuilder*/
-
-@import "css/siteBuilder/liveMode.scss";
-
-/* customized elements*/
-
-@import "css/custom/_magicBox.scss";
-
-@import 'css/custom/items.scss';
-
-@import 'css/custom/animation.scss';
-
-@import 'css/custom/printArea.scss';
-
-/* responsive*/
-
-@import "css/responsive/_switchResponsive.scss";
-
-@import "css/responsive/_print.scss";
-
-@import "css/responsive/_dev.scss";
-
-/* add extra layouts*/
-
-@import "css/m2/pageBuilderAdmin.scss";
-
-@import "css/m2/header.scss";
-
-@import "css/m2/aside.scss";
-
-@import "css/m2/footer.scss";
-
-@import "css/m2/emptyState.scss";
-
-@import "css/m2/browserFrame.scss";
-
-@import "css/m2/specialSlider.scss";
-
-@import "css/m2/iframe.scss";
-
-/* migrate and need to transfer to tailwind */
-
-@import 'migrate/grid.scss';
-
-@import 'migrate/row.scss';
-
-@import 'migrate/avand.scss';
-
-@import 'migrate/box.scss';
-
-@import 'migrate/starRating.scss';
-
-@import 'migrate/table1.scss';
-
-@import 'migrate/table2.scss';
-
-@import 'migrate/kerkere.scss';
-
-@import 'migrate/msg.scss';
-
-@import 'migrate/spay.scss';
-
-@import 'migrate/pagination.scss';
-
-@import 'migrate/share.scss';
-
-@import 'migrate/share1.scss';
-
-@import 'migrate/welcome.scss';
-
-@import 'migrate/grid/grid.scss';
-
-@import 'migrate/grid/gridLarge.scss';
-
-@import 'migrate/grid/gridMobile.scss';
-
-@import 'migrate/grid/gridPhablet.scss';
-
-@import 'migrate/grid/gridTablet.scss';
-
-@import 'migrate/margin.scss';
-
-@import 'migrate/padding.scss';
-
-@import 'migrate/others.scss';
-
-@import 'migrate/forms/_general.scss';
-
-@import 'migrate/forms/_input.scss';
-
-@import 'migrate/forms/_checkbox.scss';
-
-@import 'migrate/forms/_switch.scss';
-
-@import 'migrate/forms/_radio.scss';
-
-@import 'migrate/forms/_textarea.scss';
-
-@import 'migrate/forms/_select.scss';
-
-@import 'migrate/forms/_rangeslider.scss';
-
-@import 'migrate/forms/_button.scss';
-
-@import 'migrate/enter.scss';
-
-@import 'migrate/lib/alerty2.scss';
-
-@import 'migrate/lib/iziToast.scss';
-
-@import 'migrate/lib/nprogress.scss';
-
-@import 'migrate/lib/ck.scss';
-
-@import 'migrate/new-elements/uploader.scss';
-
-@import 'migrate/new-elements/circleChart.scss';
-
-@import 'migrate/new-elements/option.scss';
-
-@import 'migrate/new-elements/stat.scss';
-
-@import 'migrate/new-elements/seo.scss';
-
-@import 'migrate/new-elements/checklist.scss';
-
-@import 'migrate/new-elements/chart.scss';
-
-@import 'migrate/new-elements/items2.scss';
-
-@import 'migrate/jibres-store-panel/priceBox.scss';
-
-@import 'migrate/jibres-store-panel/storePanel.scss';
-
-@import 'migrate/blog1.scss';
-
-@import 'migrate/productPage.scss';
-
-@import 'migrate/cartPage.scss';
-
-@import 'migrate/postPage.scss';
-
-@import 'migrate/tagPage.scss';
-
-@import 'migrate/shippingPage.scss';
-
-@import 'migrate/product1.scss';
-
-@import 'migrate/product2.scss';
-
-@import 'migrate/panel/_pay.scss';
-
-@import 'migrate/panel/_ticket.scss';
-
-@import 'migrate/panel/_titleBox.scss';
+.salam{
+   background-color: red;
+}
 
 @media (min-width: 640px) {
+
   .sm\:col-span-6 {
     grid-column: span 6 / span 6;
   }
@@ -2170,6 +1879,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+
   .md\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -2358,7 +2068,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
+
   @media (min-width: 768px) {
+
     .sm\:md\:leading-normal {
       line-height: 1.5;
     }
@@ -2366,6 +2078,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px) {
+
   .lg\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -2527,6 +2240,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1280px) {
+
   .xl\:max-w-5xl {
     max-width: 64rem;
   }
