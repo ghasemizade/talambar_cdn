@@ -26,7 +26,7 @@
     "magic-dev": "sass --watch magic/magic.scss:dist/magic-v3.css",
     "magic-build": "sass --watch magic/magic.scss:dist/magic-v3.min.css --style compressed",
 
-    "dev": "NODE_ENV=development postcss ./tw/tailwind.css -o ./dist/siftal-v3.css --watch --verbose",
+    "dev": "postcss ./tw/tailwind.css -o ./dist/siftal-v3.css --watch --verbose",
     "build": "postcss --env production ./tw/tailwind.css -o ./dist/siftal-v3.min.css --watch --verbose --minify "
   },
   "repository": {
