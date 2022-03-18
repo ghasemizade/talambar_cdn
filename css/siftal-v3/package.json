@@ -20,8 +20,8 @@
     "postcss-cli": "^8.3.1"
   },
   "scripts": {
-    "tw-dev": "NODE_ENV=development npx tailwindcss -i ./tw/tailwind.css -o ./dist/siftal-v3.css --watch",
-    "tw-build": "NODE_ENV=production npx tailwindcss -i ./tw/tailwind.css -o ./dist/siftal-v3.min.css --watch --minify",
+    "tw-dev": "NODE_ENV=development npx tailwindcss -i ./tw/tailwind.css -o ./dist/tw-personalised-v3.css --watch",
+    "tw-build": "NODE_ENV=production npx tailwindcss -i ./tw/tailwind.css -o ./dist/tw-personalised-v3.min.css --watch --minify",
     "magic-dev": "sass --watch magic/magic.scss:dist/magic-v3.css",
     "magic-build": "sass --watch magic/magic.scss:dist/magic-v3.min.css --style compressed"
   },
