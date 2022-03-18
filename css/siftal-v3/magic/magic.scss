@@ -1,8 +1,8 @@
 /*
-	Description   Jibres Styles
-	Author        Javad Adib
-	Author URI    Jibres.com
-	Version       3.0.0
+  Description   Jibres Styles
+  Author        Javad Adib
+  Author URI    Jibres.com
+  Version       3.0.0
 */
 
 
@@ -43,13 +43,13 @@
 
 
 /* forms */
-@import "css/form/_toggle.scss";
+// @import "css/form/_toggle.scss";
 
 /* ring */
-@import "css/ring/_ringWidth.scss";
-@import "css/ring/_ringColor.scss";
-@import "css/ring/_ringOpacity.scss";
-@import "css/ring/_ringOffsetWidth.scss";
+// @import "css/ring/_ringWidth.scss";
+// @import "css/ring/_ringColor.scss";
+// @import "css/ring/_ringOpacity.scss";
+// @import "css/ring/_ringOffsetWidth.scss";
 
 
 
@@ -63,13 +63,13 @@
 
 /* components*/
 @import "css/components/_0var.scss";
-@import "css/components/_kbd.scss";
+// @import "css/components/_kbd.scss";
 @import "css/components/_mask.scss";
-@import "css/components/_progress.scss";
-@import "css/components/_steps.scss";
+// @import "css/components/_progress.scss";
+// @import "css/components/_steps.scss";
 
 /* siteBuilder*/
-@import "css/siteBuilder/liveMode.css";
+@import "css/siteBuilder/liveMode.scss";
 
 /* customized elements*/
 @import "css/custom/_magicBox.scss";
@@ -84,12 +84,12 @@
 
 
 /* add extra layouts*/
-@import "css/m2/pageBuilderAdmin.css";
-@import "css/m2/header.css";
-@import "css/m2/aside.css";
-@import "css/m2/footer.css";
-@import "css/m2/emptyState.css";
-@import "css/m2/browserFrame.css";
-@import "css/m2/specialSlider.css";
-@import "css/m2/iframe.css";
+@import "css/m2/pageBuilderAdmin.scss";
+@import "css/m2/header.scss";
+@import "css/m2/aside.scss";
+@import "css/m2/footer.scss";
+@import "css/m2/emptyState.scss";
+@import "css/m2/browserFrame.scss";
+@import "css/m2/specialSlider.scss";
+@import "css/m2/iframe.scss";
 
