@@ -21,8 +21,13 @@
     "tailwindcss": "^3.0.23"
   },
   "scripts": {
+    "tw-dev": "NODE_ENV=development npx tailwindcss -i ./tw/tailwind.css -o ./dist/tw-personalised-v3.scss --watch",
+    "tw-build": "NODE_ENV=production npx tailwindcss -i ./tw/tailwind.css -o ./dist/tw-personalised-v3.min.scss --watch --minify",
+    "magic-dev": "sass --watch magic/magic.scss:dist/magic-v3.css",
+    "magic-build": "sass --watch magic/magic.scss:dist/magic-v3.min.css --style compressed",
+
     "dev": "NODE_ENV=development postcss ./tw/tailwind.css -o ./dist/siftal-v3.css --watch --verbose",
-    "build": "NODE_ENV=production postcss ./tw/tailwind.css -o ./dist/siftal-v3.min.css --watch --verbose --minify"
+    "build": "postcss --env production ./tw/tailwind.css -o ./dist/siftal-v3.min.css --watch --verbose --minify "
   },
   "repository": {
     "type": "git",
