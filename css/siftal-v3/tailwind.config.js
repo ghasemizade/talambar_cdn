@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./tw/**/*.{html,js}"],
+  content: ["./styles/**/*.{html,js}"],
   theme: {
     fontFamily: {
       'sans': '"LatoLatinWeb", IRANYekan, ui-sans-serif, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
