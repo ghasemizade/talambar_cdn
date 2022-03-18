@@ -6,8 +6,6 @@
 
 
 
-@import "./test.css";
-
 
 /* Fonts */
 @import "./fonts/iranyekan.css";
@@ -26,10 +24,6 @@
 /* add extra style */
 @import "css/base/_reset.scss";
 @import "css/base/_global.scss";
-@import "css/base/_textColor.scss";
-@import "css/base/_backgroundColor.scss";
-@import "css/base/_backgroundGradient.scss";
-@import "css/base/_borderColor.scss";
 
 
 /*add lib style*/
