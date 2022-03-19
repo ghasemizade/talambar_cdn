@@ -2,6 +2,11 @@
 
 function resizeDetector(_data, _forceArray)
 {
+  if(urlJibres('sitebuilder:preview'))
+  {
+    return null;
+  }
+
   var windowInitWidth = window.innerWidth;
 
   $(window).resize(function()
@@ -65,7 +70,7 @@ function resizeDetector(_data, _forceArray)
     }
 
 
-    if($('html').attr('data-pwa') !== undefined)
+    if(isPagePWA())
     {
       // in pwa
     }
