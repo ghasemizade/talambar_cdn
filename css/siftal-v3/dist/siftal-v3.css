@@ -2812,12 +2812,56 @@ Ensure the default browser behavior of the `hidden` attribute.
   vertical-align: middle;
 }
 
-.font-Vazir {
-  font-family: Vazir;
+.font-IRANSansX {
+  font-family: IRANSansX;
 }
 
 .font-IRANYekan {
   font-family: IRANYekan;
+}
+
+.font-LatoLatinWeb {
+  font-family: LatoLatinWeb;
+}
+
+.font-Vazir {
+  font-family: Vazir;
+}
+
+.font-tahoma {
+  font-family: tahoma;
+}
+
+.font-GanjNamehSans {
+  font-family: GanjNamehSans;
+}
+
+.font-NikaWeb {
+  font-family: NikaWeb;
+}
+
+.font-BehdadWeb {
+  font-family: BehdadWeb;
+}
+
+.font-WebNastaliq {
+  font-family: WebNastaliq;
+}
+
+.font-Lalezar {
+  font-family: Lalezar;
+}
+
+.font-sans {
+  font-family: "LatoLatinWeb", IRANYekan, ui-sans-serif, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.font-siftal {
+  font-family: siftal;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .text-sm {
@@ -19242,6 +19286,11 @@ body[data-in="pay"]{
   min-width: 65px;
   padding-right: 5px;
   padding-left: 5px;
+}
+
+.hover\:bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-opacity-20:hover {
