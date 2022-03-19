@@ -621,6 +621,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2.5rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -881,6 +886,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 20rem;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -991,6 +1000,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 6rem;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -1033,6 +1046,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-prose {
   max-width: 65ch;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1180,6 +1197,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2795,6 +2816,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: Vazir;
 }
 
+.font-IRANYekan {
+  font-family: IRANYekan;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -2849,6 +2874,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-black {
   font-weight: 900;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .not-italic {
@@ -19219,6 +19248,10 @@ body[data-in="pay"]{
   --tw-bg-opacity: 0.2;
 }
 
+.hover\:bg-opacity-70:hover {
+  --tw-bg-opacity: 0.7;
+}
+
 .hover\:opacity-100:hover {
   opacity: 1;
 }
@@ -19227,14 +19260,35 @@ body[data-in="pay"]{
   opacity: 0.8;
 }
 
+.hover\:opacity-70:hover {
+  opacity: 0.7;
+}
+
 .hover\:shadow-md:hover {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-sm:hover {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus\:bg-opacity-30:focus {
   --tw-bg-opacity: 0.3;
+}
+
+.focus\:text-blue-800:focus {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
 .focus\:opacity-100:focus {
@@ -19243,6 +19297,10 @@ body[data-in="pay"]{
 
 .focus\:opacity-80:focus {
   opacity: 0.8;
+}
+
+.focus\:opacity-50:focus {
+  opacity: 0.5;
 }
 
 @media (min-width: 640px) {
@@ -19632,6 +19690,12 @@ body[data-in="pay"]{
   .md\:shadow-xl {
     --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:hover\:shadow-lg:hover {
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
