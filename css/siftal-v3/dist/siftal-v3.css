@@ -749,12 +749,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 4 / 3;
 }
 
+.aspect-\[16\/9\] {
+  aspect-ratio: 16 / 9;
+}
+
 .aspect-\[32\/9\] {
   aspect-ratio: 32 / 9;
 }
 
 .aspect-\[64\/9\] {
   aspect-ratio: 64 / 9;
+}
+
+.aspect-\[1\/1\] {
+  aspect-ratio: 1 / 1;
 }
 
 .aspect-\[2\/1\] {
