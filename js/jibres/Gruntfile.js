@@ -122,27 +122,24 @@ module.exports = function (grunt)
 {
 	grunt.initConfig(
 	{
-		uglify:
-		{
-			options:
-			{
+		terser: {
+			options: {
 				sourceMap: false,
 				mangle: false
 			},
-			jibres:
-			{
+			jibres: {
 				files:
 				{
 					'../jibres.min.js': myModuleFiles,
 				}
-			}
+			},
 		},
 		watch:
 		{
 			jibres:
 			{
 				files: myModuleFiles,
-				tasks: ['uglify:jibres']
+				tasks: ['terser:jibres']
 			},
 			scripts:
 			{
@@ -152,8 +149,10 @@ module.exports = function (grunt)
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-uglify-es');
+	// grunt.loadNpmTasks('grunt-contrib-uglify-es');
+	grunt.loadNpmTasks('grunt-terser');
 
-	grunt.registerTask('default', ['uglify', 'watch']);
+
+	grunt.registerTask('default', ['terser', 'watch']);
 };
 
