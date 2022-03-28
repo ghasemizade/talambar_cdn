@@ -16,7 +16,15 @@ body[data-m2="dark"] #sidebar .asideM2 li [data-item][href]:hover{
 
 body[data-m2="dark"] #sidebar{
 	background-color: #1e1e2d;
+	height: calc( 100vh - 58px - 6vh);
+	margin: 3vh 0;
+	@apply rounded-l-lg;
 }
+[dir="ltr"] body[data-m2="dark"] #sidebar{
+	@apply rounded-l-none;
+	@apply rounded-r-lg;
+}
+
 body[data-m2="dark"] #sidebar .asideM2 li [data-item]{
 	color: #9899ac;
 }
