@@ -68,6 +68,7 @@
 
 /* siteBuilder*/
 @import "css/siteBuilder/liveMode.scss";
+@import "css/siteBuilder/quote.scss";
 
 /* customized elements*/
 @import "css/custom/_magicBox.scss";
