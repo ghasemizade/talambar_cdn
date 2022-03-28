@@ -35,7 +35,7 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 
 /* support line */
-#jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 10rem 0 0;color:$jibres;text-align: center;font-size: 14px;}
+#jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 100px 0 0;color:$jibres;text-align: center;font-size: 14px;}
 #jibresSupportLine .btn{margin: 20px auto 70px;font-weight:900;}
 #jibresSupportLine svg{display:block;background-color: #f7fafc;position:relative;overflow:hidden;width:100%;}
 
@@ -46,7 +46,7 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 #jibresFooter{position:relative;font-size: 14px;overflow:hidden;background-color:#fff;color: #444;padding: 70px 0 0;line-height:30px;}
 [data-pwa] #jibresFooter {padding-top: 20px;}
 /* footer jibres info */
-#jibresFooter figure{overflow: hidden;margin-bottom: 4rem;}
+#jibresFooter figure{overflow: hidden;margin-bottom: 40px;}
 #jibresFooter figure img{height: 120px;display:block;padding:10px; margin: 0 auto;}
 #jibresFooter figure svg{height: 120px;display:block;padding:10px; margin: 0 auto;}
 #jibresFooter figure figcaption{padding: 0 15px;}
@@ -56,7 +56,7 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 #jibresFooter a:focus{color: $jibresMono;}
 #jibresFooter a:active{color: $jibresDark;}
 /* footer nav links */
-#jibresFooter #footerMenu nav{margin-bottom: 4rem;background-color:transparent;}
+#jibresFooter #footerMenu nav{margin-bottom: 40px;background-color:transparent;}
 [data-pwa] #jibresFooter #footerMenu nav{margin-bottom: 20px;}
 #jibresFooter #footerMenu nav li.title{border-bottom: 1px solid #eee;display: block;color: #555;padding:5px 0;font-weight:900;font-size:10px;margin:0 0 10px; }
 #jibresFooter .items li+li::before{display: none;}

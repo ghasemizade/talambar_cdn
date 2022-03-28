@@ -19,7 +19,7 @@
 }
 #homeLanding{
 	color: #fff;
-	min-height: 35rem;
+	min-height: 350px;
 	padding: 70px 0 0;
 	position: relative;
 	font-size: 16px;
@@ -29,24 +29,24 @@
 #homeLanding::before{
 	content: "";
 	position: absolute;
-	width: 24rem;
-	height: 24rem;
+	width: 240px;
+	height: 240px;
 	background-color: rgba(0,0,0,0.1);
 	opacity: 0.5;
 	border-radius: 50%;
-	left: -15rem;
-	top: 10rem;
+	left: -150px;
+	top: 100px;
 }
 #homeLanding::after{
 	content: "";
 	position: absolute;
-	width: 24rem;
-	height: 24rem;
+	width: 240px;
+	height: 240px;
 	background-color: rgba(0,0,0,0.1);
 	opacity: 0.5;
 	border-radius: 50%;
-	right: -15rem;
-	top: 10rem;
+	right: -150px;
+	top: 100px;
 }
 #homeLanding [class^="avand-"]{
 	z-index: 1;
@@ -54,19 +54,19 @@
 #homeLanding .input{
 	width: 100%;
 	height: 50px;
-	line-height: 4.8rem;
+	line-height: 48px;
 	box-shadow: 0 0 0 1px #6b7177;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 	margin-bottom: 10px;
 }
 #homeLanding h2{
 	min-height: 70px;
-	font-size: 4.2rem;
+	font-size: 42px;
 	line-height: 50px;
 	margin: 0 0 10px;
 }
 [dir='rtl'] #homeLanding h2{
-	font-size: 3.5rem;
+	font-size: 35px;
 }
 
 /* pwa */
@@ -74,7 +74,7 @@
 	padding: 50px 0 0;
 }
 [data-pwa] #homeLanding h2{
-	font-size: 3.5rem;
+	font-size: 35px;
 }
 [data-pwa][dir='rtl'] #homeLanding h2{
 	font-size: 25px;
@@ -84,7 +84,7 @@
 	height: 50px;
 	display: block;
 	width: 100%;
-	padding: 10px 1.8rem;
+	padding: 10px 18px;
 	margin-bottom: 10px;
 	border-radius: 4px;
 	font-weight: 900;
@@ -94,7 +94,7 @@
 	transition: 1.5s ease;
 	text-align: center;
 	cursor: pointer;
-	box-shadow: 0 0.5rem 15px 0 rgba(0,0,0,0.15);
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
 	background-color: #c8095a;
 	color: #fff;
 	border: 1px solid transparent;
@@ -103,7 +103,7 @@
 	box-shadow: 0 5px 25px 0 rgba(0,0,0,0.25);
 }
 #homeLanding .btn3:focus{
-	box-shadow: 0 0 0.18em 0.18em rgba(0,128,96,0.5);
+	box-shadow: 0 0 2px 2px rgba(0,128,96,0.5);
 }
 #homeLanding .btn3:active{
 	background-color: #002e25;
@@ -116,8 +116,8 @@
 
 
 #jibresChannel{
-	font-size: 1.8rem;
-	padding: 0rem 0 70px;
+	font-size: 18px;
+	padding: 0 0 70px;
 }
 [dir='rtl'] #jibresChannel{
 	font-size: 14px;
@@ -130,7 +130,7 @@
 	display: block;
 	overflow: hidden;
 	height: 100%;
-	padding: 4rem;
+	padding: 40px;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
@@ -184,7 +184,7 @@
 	font-size: 20px;
 }
 #jibresChannel .channel:hover h2{
-	margin: 0.5rem 0;
+	margin: 5px 0;
 }
 
 
@@ -197,9 +197,9 @@
 	min-height: 300px;
 }
 
-#jibresDomain{position:relative;overflow: hidden;font-size: 15px;padding: 50px 0 10rem;background-color: #f7f7f9;color: #415161}
-#jibresDomain h2{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 50px;position: relative;line-height: 50px}
-#jibresDomain h2:after{content: "";width: 7%;min-width:50px; border-top:3px solid #ff5151;display:block;margin: 2.2rem auto 0;transition:0.3s}
+#jibresDomain{position:relative;overflow: hidden;font-size: 15px;padding: 50px 0 100px;background-color: #f7f7f9;color: #415161}
+#jibresDomain h2{text-align: center;font-weight: 900;font-size: 32px;margin-bottom: 50px;position: relative;line-height: 50px}
+#jibresDomain h2:after{content: "";width: 7%;min-width:50px; border-top:3px solid #ff5151;display:block;margin: 22px auto 0;transition:0.3s}
 #jibresDomain h2 a{transition:0.3s;font-weight: 900;}
 #jibresDomain:hover h2:after{width: 10%;}
 #jibresDomain:active h2:after{width: 15%;}
@@ -207,7 +207,7 @@
 
 
 #saleChannels{padding-top:0;font-size: 14px;text-align: center;position:relative;}
-#saleChannels h3{font-size: 4rem;color:#444;font-weight: 900;margin-bottom: 20px;}
+#saleChannels h3{font-size: 40px;color:#444;font-weight: 900;margin-bottom: 20px;}
 [data-pwa] #saleChannels h3{font-size: 15px;}
 #saleChannels h4{font-size: 16px;color: #333;margin:0;}
 [data-pwa] #saleChannels h4{font-size: 14px;}
@@ -228,16 +228,16 @@
 
 
 #keepitsimple{background:#3850cc;background:-webkit-linear-gradient(left,#3230a0, #4895ff 70%,#aabbff);background:linear-gradient(90deg,#3230a0, #4895ff 70%,#aabbff);color:#fff;position:relative;}
-#keepitsimple .title{font-size:20px;text-align:center;padding:10rem 5px 15rem;}
-#keepitsimple .title h3{font-weight:900;font-size:4em;line-height:2;position:relative;margin-bottom:30px;}
+#keepitsimple .title{font-size:20px;text-align:center;padding:100px 5px 150px;}
+#keepitsimple .title h3{font-weight:900;font-size:40px;line-height:2;position:relative;margin-bottom:30px;}
 [data-pwa] #keepitsimple .title h3{font-size:30px;}
 #keepitsimple .title h3:after{content:"";position:absolute;bottom:0;right:0;left:0;width:50px;height:1px;margin:0 auto;background-color:#ddd;transition:0.3s;}
-#keepitsimple:hover .title h3:after{background-color:#fff;width:10rem;}
-#keepitsimple:active .title h3:after{background-color:#fff;width:15rem;}
+#keepitsimple:hover .title h3:after{background-color:#fff;width:100px;}
+#keepitsimple:active .title h3:after{background-color:#fff;width:150px;}
 #keepitsimple .title p{font-size:10px;color:#eee;margin:0 0 10px;}
 #keepitsimple .title p span{opacity:0;transition:0.3s}
 #keepitsimple .title p:hover span{opacity:1}
-#keepitsimple .waves {position: absolute;right: 0;left: 0;bottom: 0px;width: 100%;margin-bottom:-7px;height:10rem;}
+#keepitsimple .waves {position: absolute;right: 0;left: 0;bottom: 0px;width: 100%;margin-bottom:-7px;height:100px;}
 #keepitsimple .parallax > use {animation: simpleWave 25s cubic-bezier(.55,.5,.45,.5) infinite;}
 #keepitsimple .parallax > use:nth-child(1) {animation-delay: -2s;animation-duration: 7s;}
 #keepitsimple .parallax > use:nth-child(2) {animation-delay: -5s;animation-duration: 10s;}
@@ -250,7 +250,7 @@
 
 
 
-#statistic{padding:7em 0;background-color:#333;color:#eee}
+#statistic{padding:70px 0;background-color:#333;color:#eee}
 #statistic .statistic{margin-bottom: 20px;}
 #statistic .value{color:#fff}
 #statistic h3 span{opacity:0;transition:0.3s}
@@ -260,7 +260,7 @@
 #jibresInvoice{
 	font-size: 16px;
 	background-color: #eff7fe;
-	padding: 10rem 0;
+	padding: 100px 0;
 	position: relative;
 }
 [dir='rtl'] #jibresInvoice{
@@ -276,10 +276,10 @@
 	font-weight: 900;
 }
 [data-pwa] #jibresInvoice h3{
-	font-size: 1.9rem;
+	font-size: 19px;
 }
 #jibresInvoice h2{
-	font-size: 2.8rem;
+	font-size: 28px;
 	color: #1565c0;
 	font-weight: 900;
 }
@@ -290,10 +290,10 @@
 
 
 #jibresForm{
-	font-size: 1.8rem;
+	font-size: 18px;
 	background-color: #ffcc00;
 	background-color: #F4EDF8;
-	padding: 10rem 0;
+	padding: 100px 0;
 	position: relative;
 }
 [dir='rtl'] #jibresForm{
@@ -304,7 +304,7 @@
 	padding: 50px 0;
 }
 #jibresForm h2{
-	font-size: 4rem;
+	font-size: 40px;
 	font-weight: 900;
 	text-align: center;
 }
@@ -312,7 +312,7 @@
 	font-size: 20px;
 }
 #jibresForm h3{
-	font-size: 2.8rem;
+	font-size: 28px;
 	/* color: #1565c0; */
 	font-weight: 900;
 }
@@ -325,7 +325,7 @@
 
 
 #jibresFeatures{
-	padding: 10rem 0 15rem;
+	padding: 100px 0 150px;
 	font-size: 14px;
 	background-color: #f9fbff;
 }
@@ -333,9 +333,9 @@
 	padding: 50px 0;
 }
 
-#jibresFeatures h3{text-align: center;font-weight: 900;font-size: 3.2rem;margin-bottom: 50px;position: relative;line-height: 50px;color: #091c4d;}
-[data-pwa] #jibresFeatures h3{font-size: 20px;line-height: 4rem;}
-#jibresFeatures h3:after{content: "";width: 7%;min-width:50px; border-top:3px solid #ff5151;display:block;margin: 2.2rem auto 0;transition:0.3s}
+#jibresFeatures h3{text-align: center;font-weight: 900;font-size: 32px;margin-bottom: 50px;position: relative;line-height: 50px;color: #091c4d;}
+[data-pwa] #jibresFeatures h3{font-size: 20px;line-height: 40px;}
+#jibresFeatures h3:after{content: "";width: 7%;min-width:50px; border-top:3px solid #ff5151;display:block;margin: 22px auto 0;transition:0.3s}
 #jibresFeatures h3 a{transition:0.3s;}
 #jibresFeatures:hover h3:after{width: 10%;}
 #jibresFeatures:active h3:after{width: 15%;}
@@ -350,21 +350,21 @@
 	position: relative;
 	display: block;
 	height: 100%;
-	max-height: 30rem;
-	margin: 0 0.5rem;
+	max-height: 300px;
+	margin: 0 5px;
 	border-radius: 10px;
 	background-color: #fff;
-	box-shadow: 0 20px 25px -0.5rem rgba(0,0,0,.1), 0 10px 10px -0.5rem rgba(0,0,0,.04);
+	box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
 	transition: 0.3s;
 }
 #jibresFeatures a:hover{
-	box-shadow: 0 20px 25px -0.5rem rgba(0,0,0,.15), 0 10px 10px -0.5rem rgba(0,0,0,.06);
+	box-shadow: 0 20px 25px -5px rgba(0,0,0,.15), 0 10px 10px -5px rgba(0,0,0,.06);
 }
 #jibresFeatures a:hover i{
 	color: #c8095a
 }
 #jibresFeatures a:focus{
-	box-shadow: 0 20px 25px -0.5rem rgba(0,0,0,.2), 0 10px 10px -0.5rem rgba(0,0,0,0.1);
+	box-shadow: 0 20px 25px -5px rgba(0,0,0,.2), 0 10px 10px -5px rgba(0,0,0,0.1);
 }
 #jibresFeatures a:active{
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
@@ -372,7 +372,7 @@
 }
 #jibresFeatures a i{
 	position: absolute;
-	top: -3.5rem;
+	top: -35px;
 	width: 70px;
 	height: 70px;
 	border: 1px solid #dfeafd;
@@ -397,15 +397,15 @@
 }
 #jibresFeatures p{
 	color: #4a5565;
-	margin-bottom: 0.5rem;
+	margin-bottom: 5px;
 }
 
 
 
 #jibresApp{
-	/* margin-top: 15rem; */
-	/* margin-bottom: 10rem; */
-	/* height: 40rem; */
+	/* margin-top: 150px; */
+	/* margin-bottom: 100px; */
+	/* height: 400px; */
   background-image: -moz-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
   background-image: -webkit-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
   background-image: -ms-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
@@ -414,13 +414,13 @@
 	font-size: 16px;
 }
 #jibresApp figure{
-	margin-top: -12rem;
-	margin-bottom: -8rem;
+	margin-top: -120px;
+	margin-bottom: -80px;
 }
 #jibresApp figure img{
 	display: block;
 	margin: 0 auto;
-	height: 60rem;
+	height: 600px;
 	position: relative;
 	z-index: 1;
 	transition: 0.3s;
@@ -430,18 +430,18 @@
 	transform: scale(0.9);
 }
 #jibresApp .text{
-	padding-top: 10rem;
+	padding-top: 100px;
 }
 [data-pwa] #jibresApp .text{
 	padding: 70px 0;
 	text-align: center;
 }
 #jibresApp h2{
-	font-size: 4rem;
+	font-size: 40px;
 	font-weight: 900;
 }
 [dir="rtl"] #jibresApp h2{
-	font-size: 3.5rem;
+	font-size: 35px;
 }
 [data-pwa] #jibresApp h2{
 	font-size: 25px;
@@ -453,17 +453,17 @@
 	display: inline-block;
 	background-color: rgba(0,0,0,0.1);
 	/* border:1px solid #fff; */
-	border-radius: 0.5rem;
-	max-width: 18rem;
-	margin: 0.5rem;
+	border-radius: 5px;
+	max-width: 180px;
+	margin: 5px;
 	transition: 0.3s;
 }
 [data-pwa] #jibresApp .dl a{
-	max-width: 15rem;
+	max-width: 150px;
 }
 #jibresApp .dl a img{
 	display: block;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 	width: 100%;
 	transition: 0.3s;
 	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.07);
@@ -474,22 +474,22 @@
 }
 #jibresApp .dl a:focus img{
 	transform: scale(1.07);
-	box-shadow: 0 20px 25px -0.5rem rgba(0,0,0,0.15), 0 10px 10px -0.5rem rgba(0,0,0,0.06);
+	box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.06);
 }
 
 #jibresPrivacy{
 	background-color: #171717;
 	color: #a1a1a7;
 	text-align: center;
-	padding: 10rem 0;
+	padding: 100px 0;
 	font-size: 16px;
 }
 #jibresPrivacy .securitySign{
-	width: 20rem;
-	height: 20rem;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	display: block;
-	margin: 0 auto 5rem;
+	margin: 0 auto 50px;
 	background-color: #f7fafc;
 	overflow: hidden;
 }
@@ -498,8 +498,8 @@
 	font-family: "siftal","tahoma" !important;
 	display: block;
 	margin: 0 auto;
-	line-height: 20rem;
-	font-size: 10rem;
+	line-height: 200px;
+	font-size: 100px;
 	color: #171717;
 	border-radius: 50%;
 	transition: transform .2s;
@@ -520,7 +520,7 @@
 }
 
 [dir="rtl"] #jibresPrivacy h3{
-	font-size: 4rem;
+	font-size: 40px;
 }
 [data-pwa] #jibresPrivacy h3{
 	font-size: 25px!important;
@@ -533,7 +533,7 @@
 	margin: 0;
 }
 [dir="rtl"] #jibresPrivacy p{
-	font-size: 1.8rem;
+	font-size: 18px;
 }
 [data-pwa] #jibresPrivacy p{
 	font-size: 14px!important;
