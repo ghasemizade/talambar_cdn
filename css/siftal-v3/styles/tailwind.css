@@ -157,6 +157,7 @@
 @import 'migrate/new-elements/chart.scss';
 @import 'migrate/new-elements/items2.scss';
 @import 'migrate/new-elements/hey.scss';
+@import 'migrate/new-elements/domainQuickBuy.scss';
 
 @import 'migrate/jibres-store-panel/priceBox.scss';
 @import 'migrate/jibres-store-panel/storePanel.scss';
