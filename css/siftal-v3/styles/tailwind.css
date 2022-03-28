@@ -155,6 +155,7 @@
 @import 'migrate/new-elements/checklist.scss';
 @import 'migrate/new-elements/chart.scss';
 @import 'migrate/new-elements/items2.scss';
+@import 'migrate/new-elements/hey.scss';
 
 @import 'migrate/jibres-store-panel/priceBox.scss';
 @import 'migrate/jibres-store-panel/storePanel.scss';
