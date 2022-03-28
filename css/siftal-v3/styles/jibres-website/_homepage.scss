@@ -229,12 +229,11 @@
 
 #keepitsimple{background:#3850cc;background:-webkit-linear-gradient(left,#3230a0, #4895ff 70%,#aabbff);background:linear-gradient(90deg,#3230a0, #4895ff 70%,#aabbff);color:#fff;position:relative;}
 #keepitsimple .title{font-size:20px;text-align:center;padding:100px 5px 150px;}
-#keepitsimple .title h3{font-weight:900;font-size:40px;line-height:2;position:relative;margin-bottom:30px;}
-[data-pwa] #keepitsimple .title h3{font-size:30px;}
+#keepitsimple .title h3{font-weight:900;line-height:2;position:relative;margin-bottom:30px;}
 #keepitsimple .title h3:after{content:"";position:absolute;bottom:0;right:0;left:0;width:50px;height:1px;margin:0 auto;background-color:#ddd;transition:0.3s;}
 #keepitsimple:hover .title h3:after{background-color:#fff;width:100px;}
 #keepitsimple:active .title h3:after{background-color:#fff;width:150px;}
-#keepitsimple .title p{font-size:10px;color:#eee;margin:0 0 10px;}
+#keepitsimple .title p{color:#eee;margin:0 0 10px;}
 #keepitsimple .title p span{opacity:0;transition:0.3s}
 #keepitsimple .title p:hover span{opacity:1}
 #keepitsimple .waves {position: absolute;right: 0;left: 0;bottom: 0px;width: 100%;margin-bottom:-7px;height:100px;}
