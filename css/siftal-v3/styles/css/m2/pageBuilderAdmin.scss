@@ -12,6 +12,7 @@ body[data-m2]{
 	display: flex!important;
 	flex: 2;
 	flex-grow: 1;
+	background-color:#EFF6FF;
 }
 [data-pwa] body[data-m2]{
 	display: initial;
@@ -21,7 +22,6 @@ body[data-m2]{
 
 body[data-m2] #pageContent{
 	@apply pt-2 px-2 pb-2 md:pt-2 md:px-4 md:pb-4;
-	background-color:#EFF6FF;
 	overflow-x: hidden;
 	overflow-y: auto;
 	flex: 1 1 0%;

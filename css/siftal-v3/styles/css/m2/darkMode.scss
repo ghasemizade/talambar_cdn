@@ -16,13 +16,17 @@ body[data-m2="dark"] #sidebar .asideM2 li [data-item][href]:hover{
 
 body[data-m2="dark"] #sidebar{
 	background-color: #1e1e2d;
+	height: 100%;
 	height: calc( 100vh - 58px - 6vh);
-	margin: 3vh 0;
-	@apply rounded-l-lg;
+	margin-top: 3vh;
+	@apply rounded-l-3xl;
 }
 [dir="ltr"] body[data-m2="dark"] #sidebar{
 	@apply rounded-l-none;
-	@apply rounded-r-lg;
+	@apply rounded-r-3xl;
+}
+body[data-m2="dark"] #sidebar .asideM2{
+	padding: 20px 0
 }
 
 body[data-m2="dark"] #sidebar .asideM2 li [data-item]{
