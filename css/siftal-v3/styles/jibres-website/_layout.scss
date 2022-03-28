@@ -1,4 +1,4 @@
-body[data-in="site"] {background-color:$jibresBack;}
+body[data-in="site"] {background-color:#f7f7f9;}
 body[data-env="Jibres"][data-in="site"] .jibresBanner img{
   -webkit-border-radius: 10px;border-radius: 10px;
 }
@@ -8,11 +8,11 @@ body[data-env="Jibres"][data-in="site"] .jibresBanner video{
 
 /* block iframe of jibres */
 html[data-iframe="block"]{overflow:hidden;}
-html[data-iframe="block"]::after{content: "";position: fixed;top: 0;bottom: 0;right: 0;left: 0;width: 100%;background-color: $jibres;background: $jibres url(../logo/icon-white/svg/Jibres-Logo-icon-white.svg) no-repeat center center;background-size: 70vh}
+html[data-iframe="block"]::after{content: "";position: fixed;top: 0;bottom: 0;right: 0;left: 0;width: 100%;background-color: #c80a5a;background: #c80a5a url(../logo/icon-white/svg/Jibres-Logo-icon-white.svg) no-repeat center center;background-size: 70vh}
 html[data-iframe]::-webkit-scrollbar{width: 0px;background: transparent;}
 
 
-.jibresBanner{position: relative;min-height:300px;padding: 20px 0 70px;font-size:16px;}
+.jibresBanner{position: relative;min-height:300px;padding: 20px 0 70px;font-size:16px;overflow:hidden}
 [data-pwa] .jibresBanner{padding-bottom: 20px;}
 [dir='rtl'] .jibresBanner{font-size:14px;}
 .jibresBanner::after{
@@ -24,8 +24,8 @@ html[data-iframe]::-webkit-scrollbar{width: 0px;background: transparent;}
   width: 150%;
   z-index: -1;
   display: block;
-  background: $jibres;
-  background: linear-gradient(to bottom, $jibres 0%, $jibresDark 100%);
+  background: #c80a5a;
+  background: linear-gradient(to bottom, #c80a5a 0%, #A00848 100%);
   border-radius: 0 0 50% 50%;
   position: absolute;
   overflow: hidden;

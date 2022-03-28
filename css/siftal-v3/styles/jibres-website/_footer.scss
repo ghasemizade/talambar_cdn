@@ -3,7 +3,7 @@
 }
 
 /* certificates */
-#jibresCertificates{position: relative;overflow: hidden;background-color: #24292e;color:$white;font-size: 14px;padding: 50px 0;border-radius2: 0 0 100px 100px;transition: 0.3s;}
+#jibresCertificates{position: relative;overflow: hidden;background-color: #24292e;color:#fff;font-size: 14px;padding: 50px 0;border-radius2: 0 0 100px 100px;transition: 0.3s;}
 #jibresCertificates h3{color:#fff;text-align: center;border-bottom: 1px solid #fff;line-height: 50px;margin-bottom: 50px;}
 [data-pwa] #jibresCertificates h3{font-size: 15px;margin-bottom:20px;}
 #jibresCertificates h3 a{margin: 0;font-weight:900;}
@@ -35,12 +35,12 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 
 /* support line */
-#jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 100px 0 0;color:$jibres;text-align: center;font-size: 14px;}
+#jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 100px 0 0;color:#c80a5a;text-align: center;font-size: 14px;}
 #jibresSupportLine .btn{margin: 20px auto 70px;font-weight:900;}
 #jibresSupportLine svg{display:block;background-color: #f7fafc;position:relative;overflow:hidden;width:100%;}
 
 /* jibres bottom line */
-#jibresBottomLine{height:20px;background-color:$jibres;overflow:hidden;transition:0.3s;}
+#jibresBottomLine{height:20px;background-color:#c80a5a;overflow:hidden;transition:0.3s;}
 
 /* jibres Footer */
 #jibresFooter{position:relative;font-size: 14px;overflow:hidden;background-color:#fff;color: #444;padding: 70px 0 0;line-height:30px;}
@@ -52,9 +52,9 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 #jibresFooter figure figcaption{padding: 0 15px;}
 [data-pwa] #jibresFooter figure figcaption{padding:0;font-size: 12px;}
 #jibresFooter a{color: #555;transition:0.3s;}
-#jibresFooter a:hover{color: $jibres;}
-#jibresFooter a:focus{color: $jibresMono;}
-#jibresFooter a:active{color: $jibresDark;}
+#jibresFooter a:hover{color: #c80a5a;}
+#jibresFooter a:focus{color: #F31271;}
+#jibresFooter a:active{color: #A00848;}
 /* footer nav links */
 #jibresFooter #footerMenu nav{margin-bottom: 40px;background-color:transparent;}
 [data-pwa] #jibresFooter #footerMenu nav{margin-bottom: 20px;}
@@ -89,7 +89,7 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 /* xaccess*/
 #tfooter #xaccess{position:fixed;left:0;bottom:17%;z-index:3;}
-#tfooter #xaccess a{display:block;background-color:$black;opacity:0.3;padding:5px 10px;transition:0.3s;margin-top:2px;margin-right:20px;color:#fff;}
+#tfooter #xaccess a{display:block;background-color:#000;opacity:0.3;padding:5px 10px;transition:0.3s;margin-top:2px;margin-right:20px;color:#fff;}
 #tfooter #xaccess a:hover{opacity:0.8;padding:5px 20px;margin-right:0;}
 [dir="rtl"] #tfooter #xaccess{right:0;left:initial;}
 [dir="rtl"] #tfooter #xaccess a{right:0;left:initial;margin-right:0;margin-left:20px;}
