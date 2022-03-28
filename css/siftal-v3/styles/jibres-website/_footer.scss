@@ -3,13 +3,13 @@
 }
 
 /* certificates */
-#jibresCertificates{position: relative;overflow: hidden;background-color: #24292e;color:$white;font-size: 1.4rem;padding: 5rem 0;border-radius2: 0 0 100px 100px;transition: 0.3s;}
-#jibresCertificates h3{color:#fff;text-align: center;border-bottom: 1px solid #fff;line-height: 5rem;margin-bottom: 5rem;}
-[data-pwa] #jibresCertificates h3{font-size: 1.5rem;margin-bottom:2rem;}
+#jibresCertificates{position: relative;overflow: hidden;background-color: #24292e;color:$white;font-size: 14px;padding: 50px 0;border-radius2: 0 0 100px 100px;transition: 0.3s;}
+#jibresCertificates h3{color:#fff;text-align: center;border-bottom: 1px solid #fff;line-height: 50px;margin-bottom: 50px;}
+[data-pwa] #jibresCertificates h3{font-size: 15px;margin-bottom:20px;}
 #jibresCertificates h3 a{margin: 0;font-weight:900;}
 #jibresCertificates h3 a:hover{color:#efefef;}
 #jibresCertificates h3 a:focus{color:#eee;}
-#jibresCertificates a{display: block;overflow: hidden;margin-bottom: 2rem;}
+#jibresCertificates a{display: block;overflow: hidden;margin-bottom: 20px;}
 #jibresCertificates img{display: block;margin:0 auto;transition:0.2s;}
 #jibresCertificates img:hover{transform: scale(1.05);};
 #jibresCertificates img:focus{transform: scale(1.1);};
@@ -35,30 +35,30 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 
 /* support line */
-#jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 10rem 0 0;color:$jibres;text-align: center;font-size: 1.4rem;}
-#jibresSupportLine .btn{margin: 2rem auto 7rem;font-weight:900;}
+#jibresSupportLine{background-color: #f7fafc;position:relative;overflow:hidden;padding: 10rem 0 0;color:$jibres;text-align: center;font-size: 14px;}
+#jibresSupportLine .btn{margin: 20px auto 70px;font-weight:900;}
 #jibresSupportLine svg{display:block;background-color: #f7fafc;position:relative;overflow:hidden;width:100%;}
 
 /* jibres bottom line */
-#jibresBottomLine{height:2rem;background-color:$jibres;overflow:hidden;transition:0.3s;}
+#jibresBottomLine{height:20px;background-color:$jibres;overflow:hidden;transition:0.3s;}
 
 /* jibres Footer */
-#jibresFooter{position:relative;font-size: 1.4em;overflow:hidden;background-color:#fff;color: #444;padding: 7rem 0 0;line-height:30px;}
-[data-pwa] #jibresFooter {padding-top: 2rem;}
+#jibresFooter{position:relative;font-size: 14px;overflow:hidden;background-color:#fff;color: #444;padding: 70px 0 0;line-height:30px;}
+[data-pwa] #jibresFooter {padding-top: 20px;}
 /* footer jibres info */
 #jibresFooter figure{overflow: hidden;margin-bottom: 4rem;}
 #jibresFooter figure img{height: 120px;display:block;padding:10px; margin: 0 auto;}
 #jibresFooter figure svg{height: 120px;display:block;padding:10px; margin: 0 auto;}
-#jibresFooter figure figcaption{padding: 0 1.5em;}
-[data-pwa] #jibresFooter figure figcaption{padding:0;font-size: 1.2rem;}
+#jibresFooter figure figcaption{padding: 0 15px;}
+[data-pwa] #jibresFooter figure figcaption{padding:0;font-size: 12px;}
 #jibresFooter a{color: #555;transition:0.3s;}
 #jibresFooter a:hover{color: $jibres;}
 #jibresFooter a:focus{color: $jibresMono;}
 #jibresFooter a:active{color: $jibresDark;}
 /* footer nav links */
 #jibresFooter #footerMenu nav{margin-bottom: 4rem;background-color:transparent;}
-[data-pwa] #jibresFooter #footerMenu nav{margin-bottom: 2rem;}
-#jibresFooter #footerMenu nav li.title{border-bottom: 1px solid #eee;display: block;color: #555;padding:5px 0;font-weight:900;font-size:1em;margin:0 0 1rem; }
+[data-pwa] #jibresFooter #footerMenu nav{margin-bottom: 20px;}
+#jibresFooter #footerMenu nav li.title{border-bottom: 1px solid #eee;display: block;color: #555;padding:5px 0;font-weight:900;font-size:10px;margin:0 0 10px; }
 #jibresFooter .items li+li::before{display: none;}
 #jibresFooter .items a{padding-right: 0;padding-left: 0;}
 
@@ -66,10 +66,10 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 /* last line */
 #jibresLastLine{position:relative;overflow:hidden;line-height:30px;padding: 20px 0 30px;border-top:1px solid rgba(14,19,24,.15);}
-[data-pwa] #jibresLastLine #jibresCopyright{margin-bottom: 1rem;text-align: center}
+[data-pwa] #jibresLastLine #jibresCopyright{margin-bottom: 10px;text-align: center}
 #jibresLastLine .langlist a{background-color: rgba(0,0,0,0.03);border-radius:3px;display:inline-block;padding:5px 10px;min-width:70px;text-align: center;margin:0 10px;}
 [data-pwa] #jibresLastLine .langlist{text-align: center;}
-[data-pwa] #jibresLastLine .langlist a{margin-bottom: 1rem;}
+[data-pwa] #jibresLastLine .langlist a{margin-bottom: 10px;}
 #jibresLastLine nav.share1 a{display: inline-block;border-radius:50%;}
 [data-pwa] #jibresLastLine nav.share1{text-align: center;}
 /* share links */
@@ -89,10 +89,10 @@ svg.circle-bottom-right{width: 400px;height:400px;fill:#f7f7f9;position:absolute
 
 /* xaccess*/
 #tfooter #xaccess{position:fixed;left:0;bottom:17%;z-index:3;}
-#tfooter #xaccess a{display:block;background-color:$black;opacity:0.3;padding:0.5em 1em;transition:0.3s;margin-top:0.2em;margin-right:2em;color:#fff;}
-#tfooter #xaccess a:hover{opacity:0.8;padding:0.5em 2em;margin-right:0;}
+#tfooter #xaccess a{display:block;background-color:$black;opacity:0.3;padding:5px 10px;transition:0.3s;margin-top:2px;margin-right:20px;color:#fff;}
+#tfooter #xaccess a:hover{opacity:0.8;padding:5px 20px;margin-right:0;}
 [dir="rtl"] #tfooter #xaccess{right:0;left:initial;}
-[dir="rtl"] #tfooter #xaccess a{right:0;left:initial;margin-right:0;margin-left:2em;}
+[dir="rtl"] #tfooter #xaccess a{right:0;left:initial;margin-right:0;margin-left:20px;}
 [dir="rtl"] #tfooter #xaccess a:hover{margin-right:0;margin-left:0;}
 
 [data-page="homepage"] #tfooter .link_home{display:none;}
