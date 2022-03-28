@@ -174,3 +174,18 @@
 @import 'migrate/panel/_pay.scss';
 @import 'migrate/panel/_ticket.scss';
 @import 'migrate/panel/_titleBox.scss';
+
+
+
+
+/* jibres website  */
+@import 'jibres-website/_header.scss';
+@import 'jibres-website/_footer.scss';
+@import 'jibres-website/_layout.scss';
+@import 'jibres-website/_homepage.scss';
+@import 'jibres-website/_page_logo.scss';
+@import 'jibres-website/_page_domains.scss';
+@import 'jibres-website/_page_pricing.scss';
+@import 'jibres-website/_page_team.scss';
+@import 'jibres-website/_page_bug.scss';
+
