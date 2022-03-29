@@ -7,6 +7,11 @@
 	box-shadow: #ddd 0 0 5px;
 	user-select: none;
 }
+.items.insideBox{
+	box-shadow: none;
+	margin: 0;
+	border-radius: .5rem;
+}
 .zeroSide .items{
 	border-radius:0;
 }
