@@ -25,7 +25,6 @@
     "tw-build": "NODE_ENV=production npx tailwindcss -i ./styles/tailwind.css -o ./dist/styles-personalised-v3.min.scss --watch --minify",
     "magic-dev": "sass --watch magic/magic.scss:dist/magic-v3.css",
     "magic-build": "sass --watch magic/magic.scss:dist/magic-v3.min.css --style compressed",
-
     "dev": "postcss ./styles/tailwind.css -o ./dist/siftal-v3.css --watch --verbose",
     "build": "postcss --env production ./styles/tailwind.css -o ./dist/siftal-v3.min.css --watch --verbose --minify",
     "export": "postcss --env production ./styles/tailwind.css -o ../siftal-v3.min.css --watch --verbose --minify"
