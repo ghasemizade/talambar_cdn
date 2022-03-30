@@ -71,7 +71,7 @@
 @import "css/siteBuilder/quote.scss";
 
 /* customized elements*/
-@import "css/custom/_magicBox.scss";
+@import "css/custom/_magicbox.scss";
 @import 'css/custom/items.scss';
 @import 'css/custom/animation.scss';
 @import 'css/custom/printArea.scss';
