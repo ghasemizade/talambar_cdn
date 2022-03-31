@@ -24,7 +24,7 @@
 [data-in=enter] .logo a:active img{background-color:rgba(0,0,0,0.3);}
 [data-in=enter] .logo img{display:block;max-width:100%;height:90px;width:90px;margin:0 auto;transition:0.3s;overflow:hidden;text-align:center;background-color:rgba(0,0,0,0.05);padding:2px;border-radius:50%;}
 [data-in=enter] .logo span{display:none !important}
-[data-in=enter] #enterBox h2{font-size:13px;overflow:hidden;margin:10px 0;text-align:center;color:#fff;line-height:17px;}
+[data-in=enter] #enterBox h2{font-size:12px;overflow:hidden;margin:10px 0;text-align:center;color:#fff;line-height:18px;}
 [data-in=enter] #enterBox h2 abbr{cursor:pointer;}
 [data-in=enter] #enterBox .msg{font-size: 11px;}
 [data-pwa] [data-in=enter] #enterBox .msg{font-size: 10px;padding:5px 5px;}
@@ -50,10 +50,10 @@
 
 /* form new styles*/
 [data-in=enter] form{line-height:30px;font-size:18px;}
-[data-in=enter] form p{font-size:8px;}
+[data-in=enter] form p{font-size:10px;}
 [data-in=enter] form .flex{border-radius:3px;height:50px;margin:10px 0;}
 [data-in=enter] form .flex.hide{display:none!important;}
-[data-in=enter] form .flex label{padding:0;border:none;direction:ltr;min-width:50px;width:50px;background-color:rgba(0,0,0,0.2);color:#ddd;transition:0.3s;text-align:center;font-size:8px;line-height:50px;outline:none;}
+[data-in=enter] form .flex label{padding:0;border:none;direction:ltr;min-width:50px;width:50px;background-color:rgba(0,0,0,0.2);color:#ddd;transition:0.3s;text-align:center;font-size:10px;line-height:50px;outline:none;}
 [data-in=enter] form .flex label:hover{background-color:rgba(0,0,0,0.3);}
 [data-in=enter] form .flex label a:active{background-color:rgba(0,0,0,0.3);}
 [data-in=enter] form .flex label i{margin:0;display:block;}
@@ -65,8 +65,8 @@
 [data-in=enter] form .flex input:focus{background-color:rgba(0,0,0,0.25);}
 [data-in=enter] form .flex input::-webkit-outer-spin-button, [data-in=enter] form .flex input::-webkit-inner-spin-button{-webkit-appearance:none;}
 [data-in=enter] form .flex ::-webkit-input-placeholder{color:#ccc;}
-[data-in=enter] label{padding:10px 0;display:block;font-size:8px;}
-[data-in=enter] form textarea{min-height:120px;max-height:200px;padding:10px;line-height:20px;background-color:rgba(0,0,0,0.1);color:#eee;font-size:8px;min-width:100%;}
+[data-in=enter] label{padding:10px 0;display:block;font-size:10px;}
+[data-in=enter] form textarea{min-height:120px;max-height:200px;padding:10px;line-height:20px;background-color:rgba(0,0,0,0.1);color:#eee;font-size:10px;min-width:100%;}
 /* custom style for some inputs*/
 [data-in=enter] form #emobile label{
 	font-size:30px;
@@ -90,7 +90,7 @@
 [data-in=enter] .agreement a{color: #fff;font-weight: 700;}
 [data-in=enter] .agreement a:focus{color:#c80a5a;}
 
-[data-in=enter] form #email, [data-in=enter] form #emailNew{font-size:8px;}
+[data-in=enter] form #email, [data-in=enter] form #emailNew{font-size:10px;}
 
 /* change style of autocomplete*/
 [data-in=enter] input:-webkit-autofill,[data-in=enter] input:-webkit-autofill:hover,[data-in=enter] input:-webkit-autofill:focus,[data-in=enter] input:-webkit-autofill{border: none;-webkit-text-fill-color: #fff;-webkit-box-shadow: 0 0 0px 1000px #000 inset;transition: background-color 0.3 ease-in-out 0s;}
