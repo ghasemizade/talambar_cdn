@@ -7801,9 +7801,9 @@ body[data-m2] #pageContent{
 	max-height: calc( 100vh - 58px);
 }
 
-/* body[data-m2] #pageContent #content{
-	height: 100%;
-} */
+body[data-m2] #pageContent #content{
+	min-height: 100%;
+}
 
 [data-pwa] body[data-m2] #pageContent{
 	height: 100%;

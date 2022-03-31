@@ -22,15 +22,17 @@ body[data-m2]{
 
 body[data-m2] #pageContent{
 	@apply pt-2 px-2 pb-2 md:pt-2 md:px-4 md:pb-4;
+	@apply flex flex-col;
 	overflow-x: hidden;
 	overflow-y: auto;
 	flex: 1 1 0%;
 	/*min-height: calc( 100vh - 260px);*/
 	max-height: calc( 100vh - 58px);
 }
-/* body[data-m2] #pageContent #content{
-	height: 100%;
-} */
+body[data-m2] #pageContent #content{
+	@apply grow;
+	/* min-height: 100%; */
+}
 [data-pwa] body[data-m2] #pageContent{
 	height: 100%;
 	height: calc( 100vh - 100px);
