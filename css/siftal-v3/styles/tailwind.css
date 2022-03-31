@@ -40,8 +40,6 @@
 @import 'css/pwa/search.scss';
 
 
-/* forms */
-/*@import "css/form/_toggle.scss";*/
 
 /* ring */
 /*@import "css/ring/_ringWidth.scss";*/
@@ -141,6 +139,7 @@
 @import 'migrate/forms/_select.scss';
 @import 'migrate/forms/_rangeslider.scss';
 @import 'migrate/forms/_button.scss';
+@import "migrate/forms/_toggle.scss";
 
 @import 'migrate/enter.scss';
 
