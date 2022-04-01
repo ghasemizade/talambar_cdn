@@ -285,9 +285,23 @@ function notifGenerator(_data, $_form)
         // $(myIframe).hide();
         myIframe.src = _data.reloadIframeSrc;
       }
+      else if(_data.reloadIframeSrc === null)
+      {
+        // copy current iframe and update src
+        var newIframe = $(myIframe).clone();
+        newIframe.src = _data.reloadIframeSrc;
+        // append after current iframe
+        $(myIframe).parent().append(newIframe);
+
+        // after load, remove old ones and show new one
+        newIframe.on("load", function() {
+          console.log('loaded iframe');
+          $(myIframe).remove();
+        });
+      }
       else
       {
-        // replace with clone
+        // replace with clone, work!
         myIframe.parentNode.replaceChild(myIframe.cloneNode(), myIframe);
 
         // another way, update src
