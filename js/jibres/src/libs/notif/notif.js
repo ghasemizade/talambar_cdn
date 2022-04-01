@@ -272,6 +272,25 @@ function notifGenerator(_data, $_form)
     postMsg(target, _data.postMsg);
   }
 
+  // check tada and if need, replace something on page
+  if(_data && _data.tadaSelector)
+  {
+    var tadaSelector = $(_data.tadaSelector);
+
+    if(tadaSelector.length)
+    {
+      if(_data.tadaReplace)
+      {
+        tadaSelector.replaceWith(_data.tadaReplace);
+      }
+      else
+      {
+        tadaSelector.html(_data.tadaHtml);
+      }
+    }
+  }
+
+
   // reload iframe if requested
   if(_data && _data.reloadIframe)
   {
