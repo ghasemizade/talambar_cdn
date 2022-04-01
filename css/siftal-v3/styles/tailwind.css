@@ -195,3 +195,8 @@
 @import 'jibres-website/_page_team.scss';
 @import 'jibres-website/_page_bug.scss';
 
+/* special pages */
+@import 'special/_ipBlock.scss';
+@import 'special/_ipProtection.scss';
+@import 'special/_recaptcha.scss';
+
