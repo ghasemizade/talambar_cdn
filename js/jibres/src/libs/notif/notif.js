@@ -287,6 +287,7 @@ function notifGenerator(_data, $_form)
       }
       else if(_data.reloadIframeSrc === null)
       {
+        // new way and less flash
         // copy current iframe and update src
         var newIframe = $(myIframe).clone();
         newIframe.src = _data.reloadIframeSrc;
@@ -295,7 +296,6 @@ function notifGenerator(_data, $_form)
 
         // after load, remove old ones and show new one
         newIframe.on("load", function() {
-          console.log('loaded iframe');
           $(myIframe).remove();
         });
       }
