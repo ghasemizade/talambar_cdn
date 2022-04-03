@@ -8,6 +8,9 @@ body[data-m2]{
   min-height: 100vh;
   flex-direction: column;
 }
+body[data-m2] #pageCenter{
+	max-width: 100%;
+}
 [data-desktop] body[data-m2] #pageCenter{
 	display: flex!important;
 	flex: 2;
